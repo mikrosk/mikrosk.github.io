@@ -5,8 +5,8 @@ This is a collection of articles I have written. It's easier to maintain one sit
 
 The list of articles:
 
-- [Summary & drivers for various extended Atari XBIOS implementations](ct2/index.md)
+- [Summary & drivers for various extended Atari XBIOS implementations](xbios/index.md)
 - [Clock patch for the Atari Falcon explained in layman's terms](clockpatch/index.md) (work in progress)
-- [All resources related to the CENTurbo II (a.k.a. CT2) accelerator card at one place](xbios/index.md)
+- [All resources related to the CENTurbo II (a.k.a. CT2) accelerator card at one place](ct2/index.md)
 
 -- Miro Kropáček (a.k.a. mikro)
