@@ -1,37 +1,10 @@
-## Welcome to GitHub Pages
+This is a collection of articles I have written. It's easier to maintain one wiki than create a github repository every time I start a new "research" project.
 
-You can use the [editor on GitHub](https://github.com/mikrosk/mikrosk.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+My main website: http://mikro.atari.org
+My hopefully-soon-to-be website: https://mikrosk.github.io (this page)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The list of articles:
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mikrosk/mikrosk.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- [Summary & drivers for various extended Atari XBIOS implementations](ct2/index.md)
+- [Clock patch for the Atari Falcon explained in layman's terms](clockpatch/index.md)
+- [All resources related to the CENTurbo II (a.k.a. CT2) accelerator card at one place](xbios/index.md)
