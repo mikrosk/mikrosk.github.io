@@ -4,7 +4,7 @@
 
 This is a collection of articles I have written. It's easier to maintain one site than creating github repository every time I start a new "research" project.
 
-If you find an error, please mention it in the [issues](https://github.com/mikrosk/mikrosk.github.io/issues) or fork the [repository](https://github.com/mikrosk/ct2) and provide a [pull request](https://github.com/mikrosk/mikrosk.github.io/pulls) (you can edit these files directly in the web editor).
+If you find an error, please mention it in the [issues](https://github.com/mikrosk/mikrosk.github.io/issues) or fork the [repository](https://github.com/mikrosk/mikrosk.github.io) and provide a [pull request](https://github.com/mikrosk/mikrosk.github.io/pulls) (you can edit these files directly in the web editor).
 
 In order of appearance:
 
