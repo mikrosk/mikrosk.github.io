@@ -12,12 +12,6 @@ A total of 242 units had been sold from September '98 to January '00 in 14 count
 
 This is a website trying to gather all publicly available information about the CENTurbo II accelerator card. This hasn't been an easy task, not only due to the time which has passed (20 years) since its inception. In the 90s, Centek didn't provide much information in general and if it did, it was first in French and then after a long pause in English (or "English"). To complicate things futher, Rodolphe Czuba (the main creator) had left Centek in 2000 and created his own website about CT2, now defunct http://www.czuba-tech.com while Centek's website was still up and updated. This all had lead to an incredible mess where French and English documentation and tools were independently updated and distributed by all parties (and later mirrored, at random times, by 3rd parties). I've tried to collect latest versions, clean it all up and provide for everyone.
 
-If you find an error, please mention it in the [issues](https://github.com/mikrosk/ct2/issues) or fork the [repository](https://github.com/mikrosk/ct2) and provide a [pull request](https://github.com/mikrosk/ct2/pulls) (you can edit these files directly in the web editor).
-
-Assembled by Miro Kropáček a.k.a. MiKRO / Mystic Bytes
-
-XX/07/2018, Košice / Slovakia, Europe
-
 # Overview
 
 CENTurbo II offers quite an unique set of features even to today's (Atari) standards:
