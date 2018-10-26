@@ -1,7 +1,7 @@
-This is a collection of articles I have written. It's easier to maintain one site than create a github repository every time I start a new "research" project.
+This is a collection of articles I have written. It's easier to maintain one site than creating github repository every time I start a new "research" project.
 
-- My main website: http://mikro.atari.org
-- My hopefully-soon-to-be website: https://mikrosk.github.io (this page)
+- My main website: [http://mikro.atari.org](http://mikro.atari.org)
+- My hopefully-soon-to-be website: [https://mikrosk.github.io](https://mikrosk.github.io) (this page)
 
 The list of articles:
 
