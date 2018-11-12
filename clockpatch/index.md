@@ -42,7 +42,7 @@ The problematic parts of Falcon's design are demonstrated here (right-click on t
 
 ![Image of PCB without clock patch](BaseFalcon.svg)
 
-We can see that the main clock signal (16.1079525 on NTSC machines, 16.042494 MHz on PAL/Péritel) goes from the Combel (also known as the Combo IC :)) via **R21** (27 Ω, back side of PCB), having **C208** (10 pF, back side of PCB; not present on PCB since rev.H) as a low pass filter and finally through **R217** (0 Ω) right into three resistors: **R216** (33 Ω), **R221** (33 Ω, changed to 0 Ω in PCB rev.H) and **R222** (33 Ω).
+We can see that the main clock signal (16.1079525 on NTSC machines, 16.042494 MHz on PAL/Péritel) goes from the Combel (also known as the Combo IC :)) via **R217** (27 Ω, back side of PCB), having **C208** (10 pF, back side of PCB; not present on PCB since rev.H) as a low pass filter and finally into three resistors: **R216** (33 Ω), **R221** (33 Ω, changed to 0 Ω in PCB rev.H) and **R222** (33 Ω).
 
 Why there has to be a 0 Ω resistor (R217) I have no clue but it's not that what causes trouble. The problem are those three clock signals branching from it, esp. the one going to the SDMA (*Sound and SCSI Direct Memory Access*, did you know?) where the clock travels first to the FPU and then to the other end of the PCB.
 
