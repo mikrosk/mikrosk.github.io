@@ -15,7 +15,7 @@ As far as I know, only rev.2 PCB had its case available. The cases I have been a
 - A3 26 13 0010 35
 - A3 26 13 0010 45
 
-When you take a look at the list of rev.2 PCBs below, you can easily deduce that rev.2 PCBs had been manufactured two months after the cases. The fourth number (from the right) serves as an ID for the PCB (x=0) and case (x=1).
+The fourth number (from the right) serves as an ID for the PCB (x=0) and case (x=1), as does the eighth number (1 = case, 3 = PCB).
 
 #### rev.1 ("rev.1" not explicitly written on the PCB as such):
 - A3 22 23 0000 04
