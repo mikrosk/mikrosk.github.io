@@ -17,7 +17,7 @@ As far as I know, only rev.2 PCB had its case available. The cases I have been a
 
 The fourth number (from the right) serves as an ID for the PCB (x=0) and case (x=1), as does the eighth number (1 = case, 3 = PCB).
 
-#### rev.1 ("rev.1" not explicitly written on the PCB as such):
+#### rev.1:
 - A3 22 23 0000 04
 - A3 22 23 0200 06
 - A3 2? 23 0000 07 (? is missing, perhaps a typo as it's hand written?)
