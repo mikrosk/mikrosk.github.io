@@ -201,11 +201,11 @@ Credit where credit's due! Sorted by volume of information taken from there:
 
 [Atari Falcon030 Service Guide](http://dev-docs.atariforge.org/files/Atari_Falcon030_Service_Guide.pdf) hosted by Lonny Pursell
 
-[Clock patch explanation in JoyAIP](http://phoenix.inf.upol.cz/~opichals/libhyp/hypview.cgi?url=http://joy.sophics.cz/joyaip.hyp&dstenc=latin2&index=93) by Petr Stehlík
+[Clock patch explanation in JoyAIP](http://www.tho-otto.de/hypview/hypview.cgi?url=http://joy.sophics.cz/joyaip.hyp&dstenc=latin2&index=93) by Petr Stehlík
 
-[Chip'n Chips](http://phoenix.inf.upol.cz/~opichals/libhyp/hypview.cgi?url=http://dev-docs.atariforge.org/files/chips.hyp) by Michael Ruge and hosted by Lonny Pursell
+[Chip'n Chips](http://www.tho-otto.de/hypview/hypview.cgi?url=http://dev-docs.atariforge.org/files/chips.hyp) by Michael Ruge and hosted by Lonny Pursell
 
-[DoIt Falcon030](http://dev-docs.atariforge.org/files/Doit_Archives-ELiTE_2006.zip) by Robert Schaffner, published by ELiTE and hosted by Lonny Pursell
+[DoIt Falcon030](https://mikrosk.github.io/doitarchive/doitf030/doitf030.htm) by Robert Schaffner, published by ELiTE
 
 [Falcon troubleshooting](http://www.holmerup.com/trouble.html) by Claes Holmerup (found on the [website](http://members.optusnet.com.au/~startreks/falccct.html) by Mark Bedingfield)
 
