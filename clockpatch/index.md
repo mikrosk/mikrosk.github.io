@@ -199,11 +199,11 @@ Well, the first good sign is that the Falcon still boots. :) Then you can do var
 
 Credit where credit's due! Sorted by volume of information taken from there:
 
-[Atari Falcon030 Service Guide](http://dev-docs.atariforge.org/files/Atari_Falcon030_Service_Guide.pdf) hosted by Lonny Pursell
+[Atari Falcon030 Service Guide](https://docs.dev-docs.org/htm/search.php?find=Falcon030+Service+Guide) hosted by Lonny Pursell
 
 [Clock patch explanation in JoyAIP](http://www.tho-otto.de/hypview/hypview.cgi?url=http://joy.sophics.cz/joyaip.hyp&dstenc=latin2&index=93) by Petr Stehlík
 
-[Chip'n Chips](http://www.tho-otto.de/hypview/hypview.cgi?url=http://dev-docs.atariforge.org/files/chips.hyp) by Michael Ruge and hosted by Lonny Pursell
+[Chip'n Chips](http://www.tho-otto.de/hypview/hypview.cgi?url=%2Fhyp%2Fchips_x.hyp&hideimages=0&hidemenu=0&charset=utf8) by Michael Ruge and hosted by Thorsten Otto
 
 [DoIt Falcon030](https://mikrosk.github.io/doitarchive/doitf030/doitf030.htm) by Robert Schaffner, published by ELiTE
 
