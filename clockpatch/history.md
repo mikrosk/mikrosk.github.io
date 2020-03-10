@@ -9,6 +9,9 @@ The main PCB has following production numbers:
 - **CA401332-003** ASSY PCB FALCON030 PAL-B (UK, generally UK, Ireland, Hong Kong, South Africa, and Macau; last Atari revision: H)
 - **CA401332-004** ASSY PCB FALCON030 PERITEL (FRANCE; last Atari revision: A)
 
+- **700015-003** (C-Lab MK II)
+- **700015-005** (C-Lab MK X)
+
 ### Manufacturers
 
 There had been two large Falcon manufacturers: ATMC and EFA. ATMC had used two sub-contractors, "Golden Horse" (B3) and "ECS Tamsui" (B5), EFA just one, "Ta Yuan" (Y4). EFA had been developing all Falcons since PCB rev. B. List of all Atari manufacturers [here](500277ra.pdf).
@@ -33,7 +36,8 @@ From all the serial numbers I've seen so far one can conclude:
 2. Second batch happend in 02/1993 in **B3** and during 01-02/1993 in **Y4**
 3. Third batch happend in 04/1993 in **B3** (s/n numbering reset) and during 03-09/1993 in **Y4** (s/n numbering reset)
 4. Fourth batch happend in 01/1994 in **Y4** (s/n numbering reset)
-5. Fifth and the last batch happened in 09/1994 in **Y4** for C-Lab MK II and MK X models
+5. Fifth batch happened in 09/1994 in **Y4** for C-Lab MK II (and maybe MK X) models
+6. Sixth and the last batch in 12/1995 in **Y4** for C-Lab MK X models
 
 If we can trust the ECO statistics document, the last approval activity for Falcon stuff had happend around 06-07/1993. My guess would be that C-Lab Falcons have reused many older motherboards as well so it's not surprising to see a MK I from 06/1993 for instance.
 
@@ -51,9 +55,9 @@ Highest s/n values per factory:
 
 - B5: 546 (12/1992)
 - B3: 402 (02/1993) & 192 (04/1993)
-- Y4: 1381 (02/1993) & 11903 (09/1993) & 1477 (09/1994)
+- Y4: 1381 (02/1993) & 11903 (09/1993) & 1477 (09/1994) && 211 (12/1995)
 
-That gives us **14,424** known original Falcon030 units and **1,477** known C-Lab units. Therefore it's safe to assume the number isn't higher than 20,000 and the counts are quite close to Rodolphe Czuba's statement.
+That gives us **14,424** known original Falcon030 units and **1,688** known C-Lab units. Therefore it's safe to assume the number isn't higher than 20,000 and the counts are quite close to Rodolphe Czuba's statement.
 
 Still the question whether C-Lab had ordered something from EKA remains -- the ST Computer article mentions MKII models still from the Atari batch but quoting C-Lab representatives about a C-Lab batch ordered from EFA directly, for later MKII and MKX models, so who knows? Altough it's hard to understand why they would order another batch if they had 8,000 semi-completed units in stock?
 
