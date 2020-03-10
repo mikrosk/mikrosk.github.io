@@ -36,8 +36,8 @@ From all the serial numbers I've seen so far one can conclude:
 2. Second batch happend in 02/1993 in **B3** and during 01-02/1993 in **Y4**
 3. Third batch happend in 04/1993 in **B3** (s/n numbering reset) and during 03-09/1993 in **Y4** (s/n numbering reset)
 4. Fourth batch happend in 01/1994 in **Y4** (s/n numbering reset)
-5. Fifth batch happened in 09/1994 in **Y4** for C-Lab MK II (and maybe MK X) models
-6. Sixth and the last batch in 12/1995 in **Y4** for C-Lab MK X models
+5. Fifth batch happened in 09/1994 in **Y4** for C-Lab MK II (and maybe MK X) models (s/n numbering reset)
+6. Sixth and the last batch in 12/1995 in **Y4** for C-Lab MK X models (s/n numbering reset)
 
 If we can trust the ECO statistics document, the last approval activity for Falcon stuff had happend around 06-07/1993. My guess would be that C-Lab Falcons have reused many older motherboards as well so it's not surprising to see a MK I from 06/1993 for instance.
 
