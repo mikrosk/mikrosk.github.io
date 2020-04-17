@@ -55,9 +55,9 @@ Highest s/n values per factory:
 
 - B5: 546 (12/1992)
 - B3: 402 (02/1993) & 192 (04/1993)
-- Y4: 1381 (02/1993) & 11903 (09/1993) & 1477 (09/1994) & 211 (12/1995)
+- Y4: 2442 (02/1993) & 11903 (09/1993) & 1477 (09/1994) & 211 (12/1995)
 
-That gives us **14,424** known original Falcon030 units and **1,688** known C-Lab units. Therefore it's safe to assume the number isn't higher than 20,000 and the counts are quite close to Rodolphe Czuba's statement.
+That gives us **15,485** known original Falcon030 units and **1,688** known C-Lab units. Therefore it's safe to assume the number isn't higher than 20,000 and the counts are quite close to Rodolphe Czuba's statement.
 
 Still the question whether C-Lab had ordered something from EKA remains -- the ST Computer article mentions MKII models still from the Atari batch but quoting C-Lab representatives about a C-Lab batch ordered from EFA directly, for later MKII and MKX models, so who knows? Altough it's hard to understand why they would order another batch if they had 8,000 semi-completed units in stock?
 
