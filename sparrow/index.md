@@ -42,7 +42,7 @@ The fourth number (from the right) serves as an ID for the PCB (x=0) and case (x
 - A3 26 34 0000 50
 - A3 26 34 0000 53
 
-It would seem there were three batches of both rev.1 (02/1992, 03/1992 and 04/1992) and rev.2 (04/1992, 05/1992 and 06/1992). The meaning of the second digit in "3x" is not clear, perhaps NTSC/PAL-I/PAL-B/PERITEL but that's just a guess.
+It would seem there were three batches of both rev.1 (02/1992, 03/1992 and 04/1992) and rev.2 (04/1992, 05/1992 and 06/1992). Meaning of the second digit in "3x" is not clear, perhaps NTSC/PAL-I/PAL-B/PERITEL but that's just a guess.
 
 ### Number of Sparrows produced
 This makes only 17 (rev.1) + 59 (rev.2) = 76 publicly known Sparrows in the world (assuming the numbering had restarted for rev.2). Actually, there was one Sparrow board without any serial number for sale, so that makes it 77.
