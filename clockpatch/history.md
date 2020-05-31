@@ -39,7 +39,7 @@ From all the serial numbers I've seen so far one can conclude:
 5. Fifth batch happened in 09/1994 in **Y4** for C-Lab MK II (and maybe MK X) models (s/n numbering reset)
 6. Sixth and the last batch in 12/1995 in **Y4** for C-Lab MK X models (s/n numbering reset)
 
-If we can trust the ECO statistics document, the last approval activity for Falcon stuff had happend around 06-07/1993. My guess would be that C-Lab Falcons have reused many older motherboards as well so it's not surprising to see a MK I from 06/1993 for instance.
+If we can trust the ECO statistics document, the last approval activity for Falcon stuff had happend around 06-07/1993.
 
 Sometime in 09/1994 (judging from MK II serial numbers) C-Lab had ordered by EFA another batch for the MK II/X models which were delivered around 08/1995 according to [this article](http://www.stcarchiv.de/stc1995/05_sylvie.php) in ST-Computer.
 
@@ -57,9 +57,11 @@ Highest s/n values per factory:
 - B3: 402 (02/1993) + 192 (04/1993)
 - Y4: 3015 (01-02/1993) + 11903 (03-09/1993) + 266 (01/1994) + 1477 (09/1994) + 211 (12/1995)
 
-That gives us **16,324** known original Falcon030 units and **1,688** known C-Lab units. Therefore it's safe to assume the number isn't higher than 20,000 and the counts are quite close to Rodolphe Czuba's statement.
+That gives us **16,324** known original Falcon030 units and **1,688** known C-Lab units. Therefore it's safe to assume the number isn't higher than 20,000.
 
 Still the question whether C-Lab had ordered something from EKA remains -- the ST Computer article mentions MKII models still from the Atari batch but quoting C-Lab representatives about a C-Lab batch ordered from EFA directly, for later MKII and MKX models, so who knows? Altough it's hard to understand why they would order another batch if they had 8,000 semi-completed units in stock?
+
+Anyway, it has been verified on multiple occasions that C-Lab did reuse older boards for their "new" products -- i.e. it's normal to find a MKX with motherboard from 05/1993. So while Bob Gleadow's numbers would put us somewhere between 17,000 - 18,000 built units (which is quite close to ~16,000 from serial numbers in 10/1993) I think the real count is closer to Rodolphe Czuba's statement and many MKI/MKII/MKX simply reused already existing PCBs.
 
 ### PCB revisions
 
