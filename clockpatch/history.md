@@ -33,7 +33,7 @@ it should be pretty straightforward but it is not. There are several discrepanci
 From all the serial numbers I've seen so far one can conclude:
 
 1. First batch happened during 10-12/1992 in **B5**, this was also the only batch producing Peritel models
-2. Second batch happend in 02/1993 in **B3** and during 01-02/1993 in **Y4**
+2. Second batch happend in 02/1993 in **B3** and during 12/1992-02/1993 in **Y4**
 3. Third batch happend in 04/1993 in **B3** (s/n numbering reset) and during 03-09/1993 in **Y4** (s/n numbering reset)
 4. Fourth batch happend in 01/1994 in **Y4** (s/n numbering reset)
 5. Fifth batch happened in 09/1994 in **Y4** for C-Lab MK II (and maybe MK X) models (s/n numbering reset)
