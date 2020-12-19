@@ -608,7 +608,7 @@ controller is
 Bits 0-4 of this I/O address are not used.
 
 
-3.   - Device Subsystems -
+# 3. Device Subsystems
 
 The Sparrow architecture supports the following device 
 subsystems:
@@ -616,49 +616,30 @@ subsystems:
 -    Standard SCSI Port
 
 -    floppy disk interface sharing the ST "ACSI" DMA channel
-
-
-
-
 ```
 SPARROW SPEC. REV A10                                       page 8
 ```
+-    serial port and  an   external   interrupt  port  connected to  MFP controller
 
--    serial port and  an   external   interrupt  port  connected 
-to  MFP
-     controller
+-    a  Centronics  parallel  printer  port driven by the Yamaha YM-2149 sound chip
 
--    a  Centronics  parallel  printer  port driven by the
-YamahaYM-2149
-     sound chip
-
--    a ST/MEGA compatible intelligent  keyboard,   mouse,   and 
-joystick
-     interface and option for interfacing to the new Atari
-Universal
+-    a ST/MEGA compatible intelligent  keyboard,   mouse,   and joystick
+     interface and option for interfacing to the new Atari Universal 
      Keyboard Controller.
 
 -    a port supporting application and diagnostic cartridges
 
--    two  controller  ports  for  additional  joysticks as well
-as
-light
+-    two  controller  ports  for  additional  joysticks as well as light
      pen/gun and paddle controllers.
 
-
-3.1.  SCSI
+## 3.1. SCSI
 
 The hard disk drive  interface  is  provided  through  a 
-standard 
-SCSI
-    Interface  using  the  5380  NCR SCSI Controller. Transfers
-can
-take
-    place at up to 1.5Mb/s.
+standard SCSI Interface  using  the  5380  NCR SCSI Controller. Transfers
+can take place at up to 1.5Mb/s.
 
 The   SCSI  interface  uses  a  50 pin  connector  with  the 
-following  pin
-    assignment:
+following  pin assignment:
 
            1,3,5,7,9,11,13,15,17,19,21,23,27,29,
            31,33,35,37,39,41,43,45,47,49,20,22,
@@ -675,70 +656,42 @@ following  pin
            48 - REQ
            50 - IO
 
-
-3.3.   - Floppy Disk  (FDD) -
+## 3.3. Floppy Disk (FDD)
 
 The Sparrow floppy disk subsystem is designed  around the  AJAX
-(WD1772)
-    Floppy  Disk  Controller  supporting  one floppy disk drive. 
+(WD1772) Floppy  Disk  Controller  supporting  one floppy disk drive. 
 
 It is    a higher speed  version  of the 1772 and
-supports 1.44Mb
-(formatted)
-    capacity drives.
+supports 1.44Mb (formatted) capacity drives.
 
 The  subsystem  interfaces  to  the  dual-purpose   RAM through
-the
-ACSI
-    DMA controller.  Commands and arguments are sent to the FDC
-by
-first
-    writing  to   the  DMA  Mode  Control Register to select the
-desired
-    FDC register and then writing the data bytes.
-
-
-
-
+the ACSI DMA controller.  Commands and arguments are sent to the FDC
+by first writing  to   the  DMA  Mode  Control Register to select the
+desired FDC register and then writing the data bytes.
 ```
 SPARROW SPEC. REV A10                                       page 9
 ```
-
 The standard floppy for the Sparrow is the  3.5  inch floppy 
-disk 
-with
-    the  capacity  of 720 Kbyte (formatted).   The 1.44Mb drives
-will be
-    available as an option.  Also, since the AJAX floppy disk
-controller
-    supports quad density floppies, this is also available as an
+disk with the  capacity  of 720 Kbyte (formatted).   The 1.44Mb drives
+will be available as an option.  Also, since the AJAX floppy disk
+controller supports quad density floppies, this is also available as an
 option.
 
+## 3.4. MFP
 
-
-3.4.   - MFP -
-
-A  68901  Multi-Function  Peripheral   (MFP)   controller  is  
-used  to
-    provide  system  timers,  low  speed  RS232C  serial  port, 
-and  an
-    interrupt   controller. The  MFP is used in a way that is
-compatible
-    with the ST.  It provides both a serial port and interrupt
+A  68901  Multi-Function  Peripheral   (MFP)   controller  is
+used  to provide  system  timers,  low  speed  RS232C  serial  port, 
+and  an interrupt   controller. The  MFP is used in a way that is
+compatible with the ST.  It provides both a serial port and interrupt
 control.
 
 The baud rate clock for the MFPs serial  transmitter  and 
-receiver 
- is
-    derived  from  the timer D output of the MFP. Given the MFP's
-2.4576
-    MHz clock,  baud  rates  up  to  19.2Kbaud can be supported
-on
-these    serial ports.
+receiver is derived  from  the timer D output of the MFP. Given the MFP's
+2.4576 MHz clock,  baud  rates  up  to  19.2Kbaud can be supported
+on these    serial ports.
 
 The  RS232  port  uses  a  DB  25 pin P connector with the
-following pin
-    assignments:
+following pin assignments:
 
         1 - protective ground
         2 - transmitted data
@@ -751,58 +704,31 @@ following pin
        22 - ring indicator
 
 Request to send and Data terminal ready are issued by I/O port A
-in 
-the
-PSG.
+in the PSG.
 
-3.5.   - Parallel Printer Port -
+## 3.5. Parallel Printer Port
 
 The  Sparrow   architecture  includes  a  bi-directional  8-bit
-parallel
-    printer  port that implements a subset of the  Centronics 
-standard.
-    This  interface  is  through  the  General Instruments 
-AY-3-8910  /
-    Yamaha YM-2149 Programmable  Sound  Generator  (PSG)  chip.  
-It  is
-    pinned  out  in  a  DB25S in a  way that  is  a  subset of
-the
-Atari
-    PC4.   The Centronics STROBE signal is generated from  a  PSG
-
- bit.
-    The   Centronics   BUSY signal  from  the  printer  connects 
-to one
-    of the parallel input lines of the MFP to  permit  interrupt 
-driven
-    printing. Eight bits of read/write data are handled through
-I/O
-port
-    B  on  the  PSG  at  a  typical data transfer  rate 
-exceeding 
-4000
-    bytes/second.
-
-
-
-
-
-
-
+parallel printer  port that implements a subset of the  Centronics 
+standard. This  interface  is  through  the  General Instruments 
+AY-3-8910  / Yamaha YM-2149 Programmable  Sound  Generator  (PSG)  chip.
+It  is pinned  out  in  a  DB25S in a  way that  is  a  subset of
+the Atari PC4.   The Centronics STROBE signal is generated from  a  PSG
+ bit. The   Centronics   BUSY signal  from  the  printer  connects 
+to one of the parallel input lines of the MFP to  permit  interrupt 
+driven printing. Eight bits of read/write data are handled through
+I/O port B  on  the  PSG  at  a  typical data transfer  rate 
+exceeding 4000 bytes/second.
 ```
 SPARROW SPEC. REV A10                                       page 10
 ```
-
 The Sparrow also supports  the  Acknowledge  signal  from  the 
-parallel
-    printer  port,  but  it  is an input pin which does not
-generate any
-    interrupt. It is connected to the COMBO device.
+parallel printer  port,  but  it  is an input pin which does not
+generate any interrupt. It is connected to the COMBO device.
 
- The parallel port uses a DB 25 pin S connector with the 
-following 
-pin
-    assignments:
+The parallel port uses a DB 25 pin S connector with the 
+following pin assignments:
+
          1 - centronics strobe
          2 - data 0
          3 - data 1
@@ -816,73 +742,38 @@ pin
         11 - centronics busy
      18-25 - ground
 
-
-
-3.6.   - Keyboard Interface -
+## 3.6. Keyboard Interface
 
 The  SP  keyboard  interface  is  completely compatible with the
-ST/MEGA
-    computers.    The   keyboard   is   equipped   with   a 
-combination
-    mouse/joystick  port  and  a  joystick  only  port.    The 
-keyboard
-    transmits   encoded  make/break  key  scan  codes  (with  
-two 
- key
-    rollover),  mouse/trackball  data,  joystick data,  and
-time-of-day.
-    The keyboard receives commands  and  sends  data  via 
-bidirectional
-    communication    implemented     with     a    MC6850  
-Asynchronous
-    Communications  Interface Adapter (ACIA).   The data 
-transfer 
-rate
-    is   7812.5  bits/second.    All  keyboard functions,  such 
-as key
-    scanning, mouse tracking, command parsing, etc. are performed
+ST/MEGA computers.    The   keyboard   is   equipped   with   a 
+combination mouse/joystick  port  and  a  joystick  only  port.    The 
+keyboard transmits   encoded  make/break  key  scan  codes  (with  
+two key rollover),  mouse/trackball  data,  joystick data,  and
+time-of-day. The keyboard receives commands  and  sends  data  via 
+bidirectional communication    implemented     with     a    MC6850
+Asynchronous Communications  Interface Adapter (ACIA).   The data 
+transfer rate is   7812.5  bits/second.    All  keyboard functions,  such 
+as key scanning, mouse tracking, command parsing, etc. are performed
+by  a HD6301V1   8-bit    microcomputer    unit.     (See    the 
+Atari Intelligent Keyboard (ikbd) Protocol, February 26, 1985.)
 
-by  a
-    HD6301V1   8-bit    microcomputer    unit.     (See    the   
-Atari,
-    Intelligent Keyboard (ikbd) Protocol, February 26, 1985.)
-    Sparrow also has hooks to  interface  to  the  new  Atari 
-Universal
-    Keyboard  Controller by incorporating the option to inhibit
-the
-host
-    UART clock until the keyboard is ready.
+Sparrow also has hooks to  interface  to  the  new  Atari 
+Universal Keyboard  Controller by incorporating the option to inhibit
+the host UART clock until the keyboard is ready.
 
-3.6.1.   - Mouse and Joystick Interface -
+### 3.6.1. Mouse and Joystick Interface
 
 The  Atari   two-button   mouse   is  a  mechanical, 
-optomechanical, or
-    optical   mouse   with    the    following    minimal   
-performance
-    characteristics:  a  resolution  of  100  counts/inch,   a  
-maximum
-    velocity   of   10  inches/second,  and maximum pulse phase
-error of
-    50%.    The  joystick  is  a  four  direction  switch-type 
-joystick
-    with one fire button.
-
-
-
-
-
-
-
-
-
-
+optomechanical, or optical   mouse   with    the    following    minimal
+performance characteristics:  a  resolution  of  100  counts/inch,   a
+maximum velocity   of   10  inches/second,  and maximum pulse phase
+error of 50%.    The  joystick  is  a  four  direction  switch-type 
+joystick with one fire button.
 ```
 SPARROW SPEC. REV A10                                       page 11
 ```
-
 Mouse/joystick0  uses  a  DB9  pin  P  connector  with the
-following pin
-    assignment:
+following pin assignment:
 
        1 - xb pulse/ up switch
        2 - xa pulse/ down switch
@@ -890,8 +781,8 @@ following pin
        4 - yb pulse/ right switch
        6 - left button/ fire button
        7 - power
-       8 - ground       9 - right button/ joy1
-fire
+       8 - ground
+       9 - right button/ joy1 fire
 
 Joystick1 uses a DB 9 pin P connector with the following pin
 assignment:
@@ -904,27 +795,18 @@ assignment:
        7 - power
        8 - ground
 
-3.7    - ROM Cartridge -
+## 3.7 ROM Cartridge
 
 The Sparrow cartridge port is  fully  compatible   with   ST 
-cartridge.
-    The  cartridge  is  physically  connected through a 40 pin
-card
-edge
-    connector ROM  cartridge  slot.   Cartridge ROMs  are  mapped
-
-to  a
-    128K   memory   region   starting   at  0x00FA0000,  
-extending 
- to
-    0x00FBFFFF.
-
+cartridge. The  cartridge  is  physically  connected through a 40 pin
+card edge connector ROM  cartridge  slot.   Cartridge ROMs  are  mapped
+to  a 128K   memory   region   starting   at  0x00FA0000, extending to
+0x00FBFFFF.
 
 The cartridge must be installed with the chips facing down.
 
 The cartridge uses a 40 pin card edge S connector with the
-following pin
-    assignment:
+following pin assignment:
 
        1 - power +5VDC
        2 - power +5VDC
@@ -942,13 +824,9 @@ following pin
       14 - data 5
       15 - data 2
       16 - data 3
-
-
-
 ```
 SPARROW SPEC. REV A10                                       page 12
 ```
-
       17 - data 0
       18 - data 1
       19 - address 13
