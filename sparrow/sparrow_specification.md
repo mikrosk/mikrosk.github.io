@@ -972,280 +972,156 @@ SPARROW SPEC. REV A10                                       page 12
       37 - lower data strobe
    38-40 - ground
 
-4.   - Video Subsystem -
+# 4. Video Subsystem
 
 The  Sparrow  video  subsystem  is  designed  to extend the
-existing STe
-    modes.   Additional modes are available on the  Sparrow  that
+existing STe modes.   Additional modes are available on the  Sparrow  that
+allow more  colors  and  larger  screen  sizes.     The  Sparrow 
+enhances functionality by permitting video display memory  to  start 
+at any even  word  boundary (provided that each line also starts on
+even-word boundary). This  enables  scrolling.   Also,  it  adds the
+capability of scrolling horizontally on a one pixel  basis.  It  also
+supports  interlace on  TV's   with  all  its necessary 
+controls like Field sync and Equalization pulses. This enables  higher 
+resolution video  diplays  (400 lines and more) on TV's. Interlace is
+supported also on color monitors to support display of 400 lines or 
+more. The    Sparrow  also supports overscan and a color pallet of 256
+colors out of 262144  possible colors. In addition it  supports  the 
+XGA high color  mode  which gives up to 65536 direct colors. In 16
+bits video bus the overscan is supported in steps  of  16  pixels. In 
+32 bits video bus the overscan is supported in steps of 32 pixels.
 
-allow
-    more  colors  and  larger  screen  sizes.     The  Sparrow 
-enhances
-    functionality by permitting video display memory  to  start 
-at 
-any
-    even  word  boundary (provided that each line also starts on
-even-word
-    boundary). This  enables  scrolling.   Also,  it  adds the
-capability
-    of scrolling horizontally on a one pixel  basis.  It  also
-    supports  interlace on  TV's   with  all  its necessary
-controls like
-    Field sync and Equalization pulses. This enables  higher 
-resolution
-    video  diplays  (400 lines and more) on TV's. Interlace is
-supported
-    also on color monitors to support display of 400 lines or 
-more. The    Sparrow  also supports overscan and
-a color pallet of 256
-colors out
-    of 262144  possible colors. In addition it  supports  the 
-XGA 
-high
-    color  mode  which gives up to 65536 direct colors. In 16
-bits
-video
-    bus the overscan is supported in steps  of  16  pixels. In 
-32 
-bits
-    video bus the overscan is supported in steps of 32 pixels.
-
-
-
-
-
-4.1.   - Video Configuration -
+## 4.1. Video Configuration
 
 The Sparrow supports 3 video modes in ST and programmable video
-modes in
-    SP mode.
-
-
-
-
-
-
+modes in SP mode.
 ```
 SPARROW SPEC. REV A10                                       page 13
 ```
      STe mode
+
      mode      resolution   bit      palette          colors
      bits                   planes   (CLUT entries)   DACs
-      00       320x200      4        16              4096/4-bits
-      01       640x200      2        4               4096/4-bits
+      00       320x200      4        16               4096/4-bits
+      01       640x200      2        4                4096/4-bits
       10       640x400      1        -                Monochrome
 
      SP mode
-     resolution     planes          palette            colors
-                                    (CLUT entries)     DACs
-     programmable   prog. (4/8)     prog. (16/256)   
-262144/6-bits
+
+     resolution     planes          palette           colors
+                                    (CLUT entries)    DACs
+     programmable   prog. (4/8)     prog. (16/256)    262144/6-bits
 
 The machine will switch to either ST or SP mode automatically
-when
-the
-    corresponding shift mode register (ST or SP) is written.
+when the corresponding shift mode register (ST or SP) is written.
 
 In  addition a bit in the SP shift mode register switches the
-Sparrow to
-    the XGA high color mode. The TOS Operating System is
-responsible for    updating the various video
-shifter register after power up 
-or 
-mode
-    change.
-As  the  table  indicates,  the  modes  are  set  through either
-the STe
-    Shift Mode Register (address FF8260) or the SP shift  mode 
-register
-    (address  FF8266).   16 word-wide registers comprise  the 
-STe
-Color
-    Palette (also known as the Color Look Up Table -  CLUT). 256
-double
-    word-wide registers comprise the SP color look up table.  
-Contained
-    in  each  entry  are 12 bits (in STe mode) or 18 bits (in SP
-mode) of
-    color:   4-bits (STe) or 6-bits (SP) each for  red, green,
-and 
-blue.
-    Therefore,  a  total  of 4096 possible color combinations
-(16x16x16)
-    are selectable  in STe mode and 262144  possible  color 
-combinations
-    (64x64x64)  are  selectable  in  SP  mode. In  order   to  
-maintain
-    compatibility  with  the  ST (which had 3 bits for each
-color,
-right
-    aligned within nibbles), the high order bit of each color in
-STe mode
-    is actually the least  significant  bit  of  color 
-information. The
-    following compares the CLUT entries for the ST and STe:
+Sparrow to the XGA high color mode. The TOS Operating System is
+responsible for    updating the various video shifter register after power up 
+or mode change.
 
+As  the  table  indicates,  the  modes  are  set  through either
+the STe Shift Mode Register (address FF8260) or the SP shift  mode 
+register (address  FF8266).   16 word-wide registers comprise  the 
+STe Color Palette (also known as the Color Look Up Table -  CLUT). 256
+double word-wide registers comprise the SP color look up table.
+Contained in  each  entry  are 12 bits (in STe mode) or 18 bits (in SP
+mode) of color:   4-bits (STe) or 6-bits (SP) each for  red, green,
+and blue.
+
+Therefore,  a  total  of 4096 possible color combinations
+(16x16x16) are selectable  in STe mode and 262144  possible  color 
+combinations (64x64x64)  are  selectable  in  SP  mode. In  order   to
+maintain compatibility  with  the  ST (which had 3 bits for each
+color, right aligned within nibbles), the high order bit of each color in
+STe mode is actually the least  significant  bit  of  color 
+information. The following compares the CLUT entries for the ST and STe:
+```
 ST:  XXXX  X210  X210  X210
             red  green blue
 
 STe: XXXX  0321  0321  0321
            red  green blue
-
+```
 The  monochrome  mode bypasses the color palette and is instead
-provided
-    with an inverter for inverse video controlled by bit  0  of 
-palette
-    register 0.
+provided with an inverter for inverse video controlled by bit  0  of 
+palette register 0.
 
-4.2.   - Video RAM/Controller/Display Interface -
+## 4.2. Video RAM/Controller/Display Interface
 
 Video  display memory is configured  as  logical  planes (1,  2, 
-4,  or
-    8) of interwoven 16-bit words  of  contiguous  memory  to 
-form 
-one    physical  plane  starting at any even word
-boundary (in
-dual-purpose
-    RAM only). The size of this plane depends on the  screen 
-resolution
-    and  the  number  of  color planes. For  example,   for  
-320x200
-    resolution  and  4 color planes it is 32000 bytes.   The 
-starting
-    address of  display memory is loaded into the Video Base
-High,
-Video
-
-
-
-
+4,  or 8) of interwoven 16-bit words  of  contiguous  memory  to 
+form one    physical  plane  starting at any even word
+boundary (in dual-purpose RAM only). The size of this plane depends on the  screen 
+resolution and  the  number  of  color planes. For  example,   for
+320x200 resolution  and  4 color planes it is 32000 bytes.   The 
+starting address of  display memory is loaded into the Video Base
+High, Video Base Mid, or Video Base Low Registers. This   register   is
 ```
 SPARROW SPEC. REV A10                                       page 14
 ```
-    Base Mid, or Video Base Low Registers. This   register   is  
-loaded
-    into   the Video  Address  Counter  (High/Mid/Low)  at the
-beginning
-    of each frame.   The address counter is incremented as  the  
-BitMap
-    planes are read.
+loaded into   the Video  Address  Counter  (High/Mid/Low)  at the
+beginning of each frame.   The address counter is incremented as  the
+BitMap planes are read.
 
 BitMap  planes  are transferred to  the  video  chip  buffer 
-16-bits or
-    32-bits at a time.   The shifter then loads the video shift
-register
-    where one bit from  each  plane  is shifted  out  and  
-collectively
-    used   as  the  index (plane 0 appears first in RAM and
-provides the
-    least significant  bit of  each  pixel)  to  a  specific STe
-or 
-SP
-    Palette Register.
+16-bits or 32-bits at a time.   The shifter then loads the video shift
+register where one bit from  each  plane  is shifted  out  and
+collectively used   as  the  index (plane 0 appears first in RAM and
+provides the least significant  bit of  each  pixel)  to  a  specific STe
+or SP Palette Register.
 
 In XGA color mode each video memory word corresponds to one pixel
-with 6
-    bits  color resolution for green, 5 for red and 5 for blue.
-Thus, the
-    video memory has to be organized differently compared to  the
-
-other
-    video  modes,  where  the  video  data is organized in color
+with 6 bits  color resolution for green, 5 for red and 5 for blue.
+Thus, the video memory has to be organized differently compared to  the
+other video  modes,  where  the  video  data is organized in color
 planes.
-    Here, the video memory, starting at any even word boundary, 
-contains
-    the  representation  of  one  pixel  in  each memory word.
-Thus, for
-    representing a row of 320 pixels , 320 contiguous memory
-words 
-are
-    used,  each word contains all the information necessary to
-represent
-    the   color  of  one  pixel,  out  of  65536  possible 
-colors.
-This
-    organization enables automatic pixel scrolling capability, 
-just  by
-    changing  the starting address of the first memory word in
-the
-video
-    memory space (however, when in 32bit video bus mode,
-scrolling
-will
-    be done in 2 pixel steps).
+
+Here, the video memory, starting at any even word boundary, 
+contains the  representation  of  one  pixel  in  each memory word.
+Thus, for representing a row of 320 pixels , 320 contiguous memory
+words are used,  each word contains all the information necessary to
+represent the   color  of  one  pixel,  out  of  65536  possible 
+colors. This organization enables automatic pixel scrolling capability, 
+just  by changing  the starting address of the first memory word in
+the video memory space (however, when in 32bit video bus mode,
+scrolling will be done in 2 pixel steps).
 
 In case of Genlock and XGA the Green is reduced to only 5 bits 
-(instead
-    of  6) if the pixel control bit in SP shift mode register is
-set, and
-    the remaining bit is used as a Genlock key  to  enable 
-programmable
-    switching  between  external  or  internal video data on 
-each
-pixel.
-    This switching will be done by the external Genlock hardware.
+(instead of  6) if the pixel control bit in SP shift mode register is
+set, and the remaining bit is used as a Genlock key  to  enable 
+programmable switching  between  external  or  internal video data on 
+each pixel. This switching will be done by the external Genlock hardware.
 
-4.2.1.  - Horizontal Scrolling -
+### 4.2.1. Horizontal Scrolling
 
 Two additional registers serve to implement a horizontal  smooth 
-scroll
-    capability. The  horizontal  pixel scroll register specifies
-a
-pixel
-    offset of 0 to 15 at which to begin display. Increasing  this
-
-value
-    by  one  will  have  the  effect of scrolling the entire
-display one
-    pixel to the left. The  other  register  is  the  extra  line
-
-width
-    register. This  register contains a number of words that is
-added to
-    the ending address of each display line to get the beginning
-address
-    of   the  next  display  line. It  has  the  effect  of 
-putting  an
-    undisplayed area to the right of the video  screen. By 
-varying 
-the
-    horizontal  pixel  scroll register and the video base
+scroll capability. The  horizontal  pixel scroll register specifies
+a pixel offset of 0 to 15 at which to begin display. Increasing  this
+value by  one  will  have  the  effect of scrolling the entire
+display one pixel to the left. The  other  register  is  the  extra  line
+width register. This  register contains a number of words that is
+added to the ending address of each display line to get the beginning
+address of   the  next  display  line. It  has  the  effect  of 
+putting  an undisplayed area to the right of the video  screen. By 
+varying the horizontal  pixel  scroll register and the video base
 registers, the    display video screen  can  be 
-used  as  a  horizontally 
-scrollable
-    "window"  into  that  area. As  mentioned already, in XGA
-high
-color
-    mode the pixel scroll option is achieved  automatically,  by 
-simply
-    changing  the  starting address of the video memory. So, in
-XGA
-mode
-    the pixel scroll register has to be loaded with zeroes.
+used  as  a  horizontally scrollable "window"  into  that  area. As  mentioned already, in XGA
+high color mode the pixel scroll option is achieved  automatically,  by 
+simply changing  the  starting address of the video memory. So, in
+XGA mode the pixel scroll register has to be loaded with zeroes.
 
 Since all the video parameters  timing  of  the  HSYNC,  VSYNC, 
-Display
-    Enable,    Blank,   Field   SYNC,   Equalization   pulses  
-etc. are
-    programmable, the Sparrow can support a wide range  of 
-monitors,  a
-
-
-
-
+Display Enable,    Blank,   Field   SYNC,   Equalization   pulses
+etc. are programmable, the Sparrow can support a wide range  of 
+monitors,  a variety  of  TV standards as well as programmable overscan.
 ```
 SPARROW SPEC. REV A10                                       page 15
 ```
-    variety  of  TV standards as well as programmable overscan.
-The
-full
-    interlace   capability  supported  by  the  Sparrow  enables 
-higher
-    resolution video displays (400 lines or more) on TV's.
+The full interlace   capability  supported  by  the  Sparrow  enables 
+higher resolution video displays (400 lines or more) on TV's.
 
-
-The  video  use  a  19 pin  connector with the following pin
-    assignments:
+The  video  use  a  19 pin  connector with the following pin assignments:
 
             1 - red
             2 - green
@@ -1263,23 +1139,20 @@ The  video  use  a  19 pin  connector with the following pin
            14 - vertical sync
            15 - external clock input (for GENLOCK)
            16 - EXT for GENLOCK
-           17 - +12V for peritel           18 -
-v1
+           17 - +12V for peritel
+           18 - v1
            19 - v0
 
-* v0 and v1 correspond to the vv bits in VMC.
+           * v0 and v1 correspond to the vv bits in VMC.
 
 The audio in case of VGA monitor will be supplied by an internal
-speaker
-    in the Sparrow, enabled by signals from the PSG.
+speaker in the Sparrow, enabled by signals from the PSG.
 
 In addition there is an RCA Phone Jack for TV interface with the
-following
-    assignment:
+following assignment:
 
          core - RF modulated video
          shield - ground
-
 
 # 5. Music Subsystem
 
@@ -1399,9 +1272,9 @@ assume:
 
 and
 
-- X's  are  don't  cares.    Then  all  of  the   following register
-    combinations will provide the same information to the device:
+- X's  are  don't  cares.
 
+Then  all  of  the   following register combinations will provide the same information to the device:
 
                 1110 0000 0000 0000  Mask
                 01DX XXXX XXXX XXXX  Data
