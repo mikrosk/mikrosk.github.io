@@ -1281,68 +1281,40 @@ following
          shield - ground
 
 
-5.   - Music Subsystem -
+# 5. Music Subsystem
 
 The  Sparrow  architecture  extends  the   music    subsystem 
-presently
-    available on the ST/MEGA computers.  The Sparrow mixes the
-output of
-    the  existing  ST  PSG  sound system  with  a  new DMA-driven
+presently available on the ST/MEGA computers.  The Sparrow mixes the
+output of the  existing  ST  PSG  sound system  with  a  new DMA-driven
+dual-channel  D-to-A subsystem (RASCAL  device).   The  Sparrow
+combines these  two  sources   for  simple beeps,  and can be
+connected to an external stereo amplifier for high-fidelity sound. In 
+addition the resulting  audio  is sent  to an on-board speaker which is
+controlled by a port on the PSG.
 
-dual-
-    channel  D-to-A subsystem (RASCAL  device).   The  Sparrow 
-combines
-    these  two  sources   for  simple beeps,  and can be
-connected
-to an
-    external stereo amplifier for high-fidelity sound. In 
-addition 
-the
-    resulting  audio  is sent  to an on-board speaker which is
-controlled
-    by a port on the PSG.
 The   Sparrow  is  also  equipped  with  a  Musical  Instrument 
-Digital
-    Interface  (MIDI) which provides high speed serial
-communication  of
-    musical data to and  from  more  sophisticated synthesizer
+Digital Interface  (MIDI) which provides high speed serial
+communication  of musical data to and  from  more  sophisticated synthesizer
 devices.
-
-
-
-
 ```
 SPARROW SPEC. REV A10                                       page 16
 ```
-5.1.   - Programmable Sound Generator -
+## 5.1. Programmable Sound Generator
 
 The ST sound system using the General  Instruments  AY-3-8910  /
-Yamaha
-    YM-2149   Programmable   Sound  Generator is present in the
+Yamaha YM-2149   Programmable   Sound  Generator is present in the
 Sparrow.
-    The YM-2149 Programmable Sound Generator produces  music 
-synthesis,
-    sound  effects, and audio feedback. With an applied clock
-input
-of 2
-    MHz, the PSG is capable  of providing  a  frequency  response
 
-range
-    between 30 Hz (audible) and 124 KHz (post-audible).   The 
-generator
-    places   minimal  amount   of   processing burden on the main
-system
-    (which acts as the sequencer) and has the ability to  perform
-
-using
-    three  independent voice channels.   The three sound channel
-outputs
-    are mixed, along  with  Audio  In,  and   sent   to   the  
-external
-    television   or  monitor  speaker  (the  PSG has built in
-digital to
-    analog converters).
-
+The YM-2149 Programmable Sound Generator produces  music 
+synthesis, sound  effects, and audio feedback. With an applied clock
+input of 2 MHz, the PSG is capable  of providing  a  frequency  response
+range between 30 Hz (audible) and 124 KHz (post-audible).   The 
+generator places   minimal  amount   of   processing burden on the main
+system (which acts as the sequencer) and has the ability to  perform
+using three  independent voice channels.   The three sound channel
+outputs are mixed, along  with  Audio  In,  and   sent   to   the
+external television   or  monitor  speaker  (the  PSG has built in
+digital to analog converters).
 
 ## 5.2. DMA Sound
 
@@ -1428,7 +1400,8 @@ assume:
 and
 
 - X's  are  don't  cares.    Then  all  of  the   following register
-    combinations will provide the same information to the device.
+    combinations will provide the same information to the device:
+
 
                 1110 0000 0000 0000  Mask
                 01DX XXXX XXXX XXXX  Data
