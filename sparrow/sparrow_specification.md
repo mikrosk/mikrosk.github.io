@@ -15,47 +15,47 @@ SPARROW SPEC. REV A10                                       page 1
 
 # REV A10   10/22/91  changes:
 
-## page 2
+### [page 2](#1-introduction)
 
 - 68000 changed to 68030.
 
-## page 3
+### [page 3](#1-introduction)
 
 - 68881 FPU & 56001 DSP added.
 
-## page 3&10
+### [page 3&10](#1-introduction)
 
 - added "hooks to connect to the new Atari Universal Keyboard Controller."
 
 - changed ACSI to SCSI
 
-## page 4
+### [page 4](#22-rom)
 
 - change default from 250ns to 125ns EPROMs/ROMs
 
-## page 6
+### [page 6](#242-bus-error-circuitry)
 
-- bus error timeout set to 16us for both 8MHz and 16MHz. programmable to 32us.
+- bus error timeout set to   for both 8MHz and 16MHz. programmable to 32us.
 
-## page 7
+### [page 7](#26-configuration-switch-control)
 
 - changed confi. switch bit 5 from 0 to 1 for not quad density and from 1 to 0 for quad density floppy.
 
 - changed ACSI to SCSI 50pin connector.
 
-## page 8
+### [page 8](#33-floppy-disk-fdd)
 
 - omit external FDD.
 
-## page 9
+### [page 9](#35-parallel-printer-port)
 
 - Parallel port. ACK goes to COMBO device, not PSG IOA7.
 
-## page 11
+### [page 11](#4-video-subsystem)
 
 - added "each line also starts on even-word boundary"
 
-## page 14
+### [page 14](#421-horizontal-scrolling)
 
 - change Video connectors to a single VGA type connector. Audio is not sent out to the monitor. The Sparrow has an internal speaker.
 
@@ -64,11 +64,11 @@ SPARROW SPEC. REV A10                                       page 1
     - Bit R in FF8266 added.
     - Bits vv in VMC changed.
 
-## page 15
+### [page 15](#521-overview)
 
 - Change Audio out connector from RCA Phono to "Walkman" micro-stereo connector.
 
-## pages 18 - 22
+### [pages 18 - 22](#6-memory-io--interrupt-map)
 
 Memory map changes:
 
@@ -79,7 +79,6 @@ FA40 - FA5F  Assigned to FP Co-Proc
 8266 - VGA bit removed
 8288 - Vsync rise corrected to Hsync rise
 82C0 - bit assignments inverted, burst time option added
-
 ```
 SPARROW SPEC. REV A10                                       page 2
 ```
