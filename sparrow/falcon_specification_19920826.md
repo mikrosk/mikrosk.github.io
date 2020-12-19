@@ -89,60 +89,60 @@ Some highlights of the FALCON architecture:
 
 # Section 2   MAIN SYSTEM
 
-    The FALCON architecture is designed to be a high performance
+The FALCON architecture is designed to be a high performance
 computing platform. By including the VMEbus and facilities for
 multi-processing the system can be expanded for future needs.
 
-2.1 Processor and MMU
+## 2.1 Processor and MMU
 
-    FALCON accepts the Motorola MC68030 or MC68040 32-bit
+FALCON accepts the Motorola MC68030 or MC68040 32-bit
 microprocessor. Each processor contains a paged memory management
 unit, and independent instruction and data caches. The 68030 and
 68040 are complex instruction set computers (CISCs) that extend
 the 68000 instruction set and enhance the addressing modes. The
 processor can operate at clock speeds up to 33 MHz.
 
-    Both processors contain internal memory management units.
+Both processors contain internal memory management units.
 Refer to the respective user manual for a complete description.
 
-    The on-chip instruction and data caches maximize processor
+The on-chip instruction and data caches maximize processor
 throughput while reducing the bus bandwidth necessary to fuel the
 processor.
 
-2.2 Floating Point Coprocessor
+## 2.2 Floating Point Coprocessor
 
-    FALCON designs using MC68030 processors may include an
+FALCON designs using MC68030 processors may include an
 external MC68882 floating point coprocessor. The MC68040 contains
 an internal FPU and does not support the coprocessor interface..
 
-    The floating point operations are performed in accordance
+The floating point operations are performed in accordance
 with IEEE Standard 754, with both 32-bit (single) and 64-bit
 (double) precision external access.
 
-    The external floating point coprocessor in FALCON designs
+The external floating point coprocessor in FALCON designs
 using the MC68030 is run at the same clock speed as the main
 processor. It appears as the "standard" floating point
 coprocessor ID of 01h in the 68030 CPU address space.
 
-2.3 System Read only Memory (ROM)
+## 2.3 System Read only Memory (ROM)
 
-    The system includes 32 bit wide ROM providing up to 512Kb of
+The system includes 32 bit wide ROM providing up to 512Kb of
 ROM space. ROM cycle time is software selectable allowing use of
 ROMs with access times of 300ns to 100ns.
 
-    An image of the first eight bytes of ROM appears at
+An image of the first eight bytes of ROM appears at
 0x00000000-0x00000007 accessible only in supervisor mode for
 system reset. Attempts to read from this area in user mode or any
 write results in a bus error. A VMEbus master would have to do
 privileged accesses to read the ROM at these locations. The full
 ROM begins at memory location FFE00000h.
 
-    Among the tasks this ROM must perform are system
+Among the tasks this ROM must perform are system
 initialization, power-on diagnostics, and operating system boot. 
 
-2.4 System Random Access Memory (RAM)
+## 2.4 System Random Access Memory (RAM)
 
-    The basic system must include one bank (0.5, 2, or 8 Mb) of
+The basic system must include one bank (0.5, 2, or 8 Mb) of
 dual-purpose RAM used for both video and system memory.
 Dual-purpose or video memory uses fast page mode DRAMs. Fast page
 mode is used to support both video refresh and system burst
@@ -156,114 +156,41 @@ on system performance will depend on the specific application.
 Code which avoids dual-purpose RAM or maintains a high cache hit
 rate will show less effect.
 
-    The memory control unit (MCU) supports two banks of
+The memory control unit (MCU) supports two banks of
 dual-purpose RAM. Each bank can be 64Kbit, 256Kbit, or 1Mbit deep
 depending on the type DRAMs used. Each bank is 64 bits wide and
 all 64 bits must be installed. Either of the banks can support
 any of the three sizes of DRAMs. The following combinations are
 therefore possible:
 
+#### Table 2.1 (Video RAM Configuration)
 
+Memory Depth: Bank 0| Bank 1 | Total RAM
+--------------------|--------|-----------
+64Kb                | none   | 512Kb
+none                | 64Kb   | 512Kb
+64Kb                | 64Kb   | 512Kb+512Kb
+256Kb               | none   | 2Mb
+none                | 256Kb  | 2Mb
+256Kb               | 64Kb   | 2Mb+512Kb
+64Kb                | 256Kb  | 512Kb+2Mb
+256Kb               | 256Kb  | 2Mb+2Mb
+1Mb                 | none   | 8Mb
+none                | 1Mb    | 8Mb
+1Mb                 | 64Kb   | 8Mb+512Kb
+64Kb                | 1Mb    | 512Kb+8Mb
+1Mb                 | 256Kb  | 8Mb+2Mb
+256Kb               | 1Mb    | 2Mb+8Mb
+1Mb                 | 1Mb    | 8Mb+7Mb (1)
 
-
-Video RAM Configuration
-
-
-Memory Depth
-
-Total RAM
-
-
-Bank 0
-Bank 1
-
-
-
-64Kb
-none
-512Kb
-
-
-none
-64Kb
-512Kb
-
-
-64Kb
-64Kb
-512Kb+512Kb
-
-
-256Kb
-none
-2Mb
-
-
-none
-256Kb
-2Mb
-
-
-256Kb
-64Kb
-2Mb+512Kb
-
-
-64Kb
-256Kb
-512Kb+2Mb
-
-
-256Kb
-256Kb
-2Mb+2Mb
-
-
-1Mb
-none
-8Mb
-
-
-none
-1Mb
-8Mb
-
-
-1Mb
-64Kb
-8Mb+512Kb
-
-
-64Kb
-1Mb
-512Kb+8Mb
-
-
-1Mb
-256Kb
-8Mb+2Mb
-
-
-256Kb
-1Mb
-2Mb+8Mb
-
-
-1Mb
-1Mb
-8Mb+7Mb 1
-
-
-                                 Table 2.1
-
-1 Note that IO space occupies the upper 1Mb of the 16Mb address
+(1) Note that IO space occupies the upper 1Mb of the 16Mb address
 space RAM would occupy so that 15Mb is the maximum amount of
 dual-purpose RAM possible. The upper 1Mb of 16Mb RAM cannot be
 used. Also note that in the high ST image (FF000000h-FFFFFFFFh),
 ROM will occupy an additional 1Mb limiting RAM in that image to
 14Mb (see memory map).
 
-    Optional RAM modules allow additional single purpose
+Optional RAM modules allow additional single purpose
 expansion RAM. By eliminating the video timing constraints on
 this RAM, the memory appears faster, on average, to the
 processor. A maximum of 64 Mb total expansion RAM has been
@@ -272,280 +199,162 @@ practical limit of 32 MB (using 4Mb deep parts). The
 single-purpose memory system will support FBUS line transfers but
 not FBUS wide mode.
 
-    Additional memory can be installed in the system by plugging
+Additional memory can be installed in the system by plugging
 in VME memory cards (in systems so equipped). If A32/D32 cards
 are used, the VME RAM can be contiguous with single purpose
 expansion RAM. The VME RAM cards will appear slower than the
 expansion RAM as all VME accesses incur extra wait states per bus
 cycle and do not support line transfers.
 
-    There is no provision for parity or ECC protection on the
+There is no provision for parity or ECC protection on the
 RAM. The reliability of current DRAM technology makes this
 unnecessary. However, such features could be included in VME
 cards.
 
-    RAM on the system board is accessible from the VMEbus as
+RAM on the system board is accessible from the VMEbus as
 bytes, words, or double words.
 
-    The first 800h bytes (2Kb) of RAM (00000008h-000007FFh, and
+The first 800h bytes (2Kb) of RAM (00000008h-000007FFh, and
 FF000000h-FF0007FFh) are accessible only in supervisor mode.
 Attempts to read or write to this area in user mode results in a
 bus error. VMEbus masters must do privileged accesses to use this
 RAM.
 
-2.4.1   Memory Control and Configuration Registers
+### 2.4.1   Memory Control and Configuration Registers
 
-Main Configuration Register
+#### 2.4.1.1 Main Configuration Register
 
-    Address xxFF8001:
+##### Address xxFF8001:
 
     D7 - ROM cycle time
 
-    0 = slow
-    1 = fast
+        0 = slow
+        1 = fast
 
-
-
-
-ROM
-Access
-Time
-System Clock Frequency
-
-
-
-25Mhz
-33Mhz
-40Mhz
-50Mhz
-
-
-300ns
-slow
-na
-na
-na
-
-
-250ns
-slow
-slow
-na
-na
-
-
-200ns
-slow
-slow
-slow
-na
-
-
-150ns
-fast
-slow
-slow
-slow
-
-
-120ns
-fast
-fast
-slow
-slow
-
-
-100ns
-fast
-fast
-slow
-slow
-
+ROM Access Time | System Clock Frequency: 25Mhz | 33Mhz | 40Mhz | 50Mhz
+----------------|-------|-------|-------|------
+300ns           | slow  | na    | na    | na
+250ns           | slow  | slow  | na    | na
+200ns           | slow  | slow  | slow  | na
+150ns           | fast  | slow  | slow  | slow
+120ns           | fast  | fast  | slow  | slow
+100ns           | fast  | fast  | slow  | slow
 
     D6 - Video Memory DRAM Access Speed
 
-    0 = slow
-    1 = fast
+        0 = slow
+        1 = fast
 
-
-
-
-DRAM
-Access
-Time
-System Clock Frequency
-
-
-
-25Mhz
-33Mhz
-40Mhz
-50Mhz
-
-
-100ns
-fast
-slow
-slow
-na
-
-
-80ns
-fast
-fast
-slow
-slow
-
-
-70ns
-fast
-fast
-fast
-slow
-
-
-60ns
-fast
-fast
-fast
-fast
-
-
+DRAM Access Time | System Clock Frequency: 25Mhz | 33Mhz | 40Mhz | 50Mhz
+-----------------|------|------|--------|-------
+100ns            | fast | slow | slow   | na
+80ns             | fast | fast | slow   | slow
+70ns             | fast | fast | fast   | slow
+60ns             | fast | fast | fast   | fast
 
     D5 - Fast Memory DRAM Access Speed
 
-    0 = slow
-    1 = fast
+        0 = slow
+        1 = fast
 
-
-
-
-DRAM
-Access
-Time
-System Clock Frequency
-
-
-
-25Mhz
-33Mhz
-40Mhz
-50Mhz
-
-
-100ns
-fast
-slow
-slow
-na
-
-
-80ns
-fast
-fast
-slow
-slow
-
-
-70ns
-fast
-fast
-fast
-slow
-
-
-60ns
-fast
-fast
-fast
-fast
-
+DRAM Access Time | System Clock Frequency: 25Mhz | 33Mhz | 40Mhz | 50Mhz
+-----------------|------|------|--------|--------
+100ns            | fast | slow | slow   | na
+80ns             | fast | fast | slow   | slow
+70ns             | fast | fast | fast   | slow
+60ns             | fast | fast | fast   | fast
 
     D4 - Bus timeout interval
-    1 - 128 bus clock cycles
-    0 - 8192 bus clock cycles
+
+        1 - 128 bus clock cycles
+        0 - 8192 bus clock cycles
+
     D3   Not used (reserved read/write bit)
+
     D2   Not used (reserved read/write bit)
+
     D1 - Fast memory burst enable
-    1 - on
-    0 - off
+
+        1 - on
+        0 - off
+
     D0 - Video memory burst enable
-    1 - on
-    0 - off
 
+        1 - on
+        0 - off
 
-Refresh Control Registers
+#### 2.4.1.2 Refresh Control Registers
 
-    The MCU defaults to a 15.5 us maximum refresh interval after
+The MCU defaults to a 15.5 us maximum refresh interval after
 a reset. This corresponds to the most common refresh rate for
 currently available DRAMs, e.g. 512 row/8 ms for 256k deep parts,
 and 1024 row/16 ms for 1M deep parts. Refresh cycles can then be
 customized under software control. When the counter is enabled
 with a time constant of zero, refresh is turned off. There are
 seperate registers for video and fast memory.
-    The fixed clock to the refresh control counter runs at 2
+
+The fixed clock to the refresh control counter runs at 2
 MHz. The default refresh interval corresponds to a value of 001Dh
 loaded into the counter. The minimum value of 1 in the counter
 provides a refresh interval of 1500ns. The maximum value of 7FFFh
 provides a refresh interval of 16.384 ms.
 
 
-    Address = xxFF8003 (video), xxFF800D (fast):
+##### Address = xxFF8003 (video), xxFF800D (fast):
 
     D7 - Refresh Interval Control
-    0 = Default Interval
-    1 = Counter
+
+        0 = Default Interval
+        1 = Counter
+
     D6 - D0   Refresh Time Constant Bits 14-8
 
-    Address = xxFF8005 (video), xxFF800F (fast):
+##### Address = xxFF8005 (video), xxFF800F (fast):
 
     D7 - D0   Refresh Time Constant Bits 7-0
 
-External Cache Control Register
+#### 2.4.1.3 External Cache Control Register
 
-    Address = xxFF8007:
+##### Address = xxFF8007:
 
     D7 - Reset Cache Tag SRAM
-    1 = Cache enabled
-    0 = Reset cache
+
+        1 = Cache enabled
+        0 = Reset cache
+
     D6 - D4   Not used (always reads 0)
+
     D3 - VME area cachable
-    1 = yes
-    0 = no
+
+        1 = yes
+        0 = no
+
     D2 - Cache freeze
-    1 = cache frozen
-    0 = normal
+
+        1 = cache frozen
+        0 = normal
+
     D1 - Capture Data Cache Push Access
-    1 = yes
-    0 = no
+
+        1 = yes
+        0 = no
+
     D0 - Clear Cache on Change of Bus Master
-    1 = no
-    0 = yes
 
-Video Memory Configuration Register
+        1 = no
+        0 = yes
 
-    Address = xxFF8009:
+#### 2.4.1.4 Video Memory Configuration Register
+
+##### Address = xxFF8009:
 
     D7 - D4   SIMM Speed Select bits (read only)
 
-
-
-
-SIMM Speed Select
-DRAM access time
-
-
-0001
-80ns
-
-
-0101
-70ns
-
-
-1101
-100ns
-
+SIMM Speed Select | DRAM access time
+------------------|-----------------
+0001              | 80ns
+0101              | 70ns
+1101              | 100ns
 
 Other select bit patterns are not currently defined.
 
@@ -553,53 +362,24 @@ Other select bit patterns are not currently defined.
 
     D1 - D0   Bank 0 Size Select
 
+Size Select Bits | Bank Size (DRAM Depth)
+-----------------|-----------------------
+00               | not installed
+01               | 512Kb (64K)
+10               | 2Mb (256K)
+11               | 8Mb (1M)
 
+#### 2.4.1.5 Expansion (fast) Memory Configuration Register
 
-
-Size Select Bits
-Bank Size (DRAM Depth)
-
-
-00
-not installed
-
-
-01
-512Kb (64K)
-
-
-10
-2Mb (256K)
-
-
-11
-8Mb (1M)
-
-
-Expansion (fast) Memory Configuration Register
-
-    Address = xxFF800B:
+##### Address = xxFF800B:
 
     D7 - D4   SIMM Speed Select bits (read only)
 
-
-
-
-SIMM Speed Select
-DRAM access time
-
-
-0001
-80ns
-
-
-0101
-70ns
-
-
-1101
-100ns
-
+SIMM Speed Select | DRAM access time
+------------------|-----------------
+0001              | 80ns
+0101              | 70ns
+1101              | 100ns
 
 Other select bit patterns are not currently defined.
 
@@ -607,33 +387,16 @@ Other select bit patterns are not currently defined.
 
     D1 - D0   Bank 0 Size Select
 
+Size Select Bits | Bank Size (DRAM Depth)
+-----------------|-----------------------
+00               | not installed
+01               | 1Mb (256K)
+10               | 4Mb (1M)
+11               | 16Mb (4M)
 
+## 2.5 Interrupt Control
 
-
-Size Select Bits
-Bank Size (DRAM Depth)
-
-
-00
-not installed
-
-
-01
-1Mb (256K)
-
-
-10
-4Mb (1M)
-
-
-11
-16Mb (4M)
-
-
-
-2.5 Interrupt Control
-
-    The IO Control Unit (IOCU) provides an additional level of
+The IO Control Unit (IOCU) provides an additional level of
 interrupt control for the system as well as the interface for an
 internal IO bus and decoding for the internal peripheral
 circuits. It contains registers that allow the software
@@ -641,9 +404,9 @@ generation of interrupts. All of the IOCU registers are reset at
 power-on, but not by the reset push button or a processor reset
 instruction.
 
-2.5.1  Interrupt Mask and Current Status
+### 2.5.1  Interrupt Mask and Current Status
 
-    The IOCU contains two mask registers that permit independent
+The IOCU contains two mask registers that permit independent
 control over which interrupt levels will be seen by the
 processor. One register masks interrupts generated on the system
 board and the other masks VMEbus interrupts. On systems not
@@ -652,28 +415,28 @@ inactive. These registers are cleared at power-up, disabling all
 interrupts. The state of these registers is not affected by the
 reset button.
 
-    There are also system and VME interrupt request registers
+   There are also system and VME interrupt request registers
 that show the current state of the seven interrupt request levels
 from each. These registers show the physical state of the
 interrupt lines before they are AND'd with the IOCU's mask
 registers.
 
-    The system board sources for IRQ5 (SCC) and IRQ6 (MFP) can
+   The system board sources for IRQ5 (SCC) and IRQ6 (MFP) can
 be serviced by either the CPU or a VMEbus master. IRQ5 and IRQ6
 look to the CPU like VME interrupts, and can not be masked
 independently of VME level 5 and 6 interrupts by the IOCU system
 board interrupt mask register.
 
-2.5.2  System Control Registers
+### 2.5.2  System Control Registers
 
-    The IOCU also contains two read/write registers (xxFF8E09h
+The IOCU also contains two read/write registers (xxFF8E09h
 and xxFF8E0B) that can be used for system configuration
 information. Since these registers are only reset at power-on,
 their contents can be used across system resets.
 
-2.5.3  Interrupt Generator
+### 2.5.3  Interrupt Generator
 
-    The system can write to I/O address xxFF8E05h to generate a
+The system can write to I/O address xxFF8E05h to generate a
 low priority (level 1) interrupt to the CPU. This I/O address
 contains a read/write status/control port, only the least
 significant bit is defined. When set to 1, it generates an
@@ -682,42 +445,42 @@ request is taken away.
 
 The IOCU is configured so that:
 
--   only system interrupts 5 and 6 and VME interrupts are
+- only system interrupts 5 and 6 and VME interrupts are
     capable of generating vectored interrupts to the CPU
 
--   IOCU generated level 1 and 3 interrupts are always
+- IOCU generated level 1 and 3 interrupts are always
     autovectored
 
--   The IOCU generated level 1 interrupt can be detected only by
+- The IOCU generated level 1 interrupt can be detected only by
     the CPU, not by a VMEbus master
 
--   VMEbus SYSFAIL generates a system level 7 interrupt, but
+- VMEbus SYSFAIL generates a system level 7 interrupt, but
     does not generate a VME level 7 interrupt. There is no
     source for system interrupt 7 in a non-VME system.
 
-2.6 Bus Timer
+## 2.6 Bus Timer
 
-    The MCU implements a system bus timer. Bus cycles not
+The MCU implements a system bus timer. Bus cycles not
 terminated within the the number of bus clocks specified by bit 4
 of the memory configuration register will cause a bus error. A
 fairly short (128~) and long (8192~) are provided.
 
-2.7 Real Time Clock
+## 2.7 Real Time Clock
 
-    The FALCON system includes a Motorola MC146818A like real
+The FALCON system includes a Motorola MC146818A like real
 time clock function. This provides time of day (down to one
 second resolution), date, and a programmable periodic interrupt. 
 The RTC is provided with a 32.768 kHz oscillator that is
 independent of all other system clocks.
 
-    The interrupt output of the real time clock chip connects to
+The interrupt output of the real time clock chip connects to
 the MFP-2 GPIP6 input.
 
-    The circuit also includes 50 bytes of battery backed up
+The circuit also includes 50 bytes of battery backed up
 (non-volatile) RAM that is used for storing diagnostic and
 configuration data.
 
-    The control registers are accessed through two byte ports.
+The control registers are accessed through two byte ports.
 The first byte (xxFF8961) is write-only and used to set the
 register address desired. The other byte (xxFF8963) is the
 read/write data port. When doing a write to a register, it is
@@ -725,59 +488,57 @@ possible to do a long word write; the long word would contain
 both the address and the data. The IOCU will break the write into
 two transfers in the correct order for the RTC circuit.
 
+# Section 3   IO Channels
 
+The FALCON architecture supports the following IO channels:
 
-Section 3   IO Channels
+- SCSI (as defined by the ANSI X3T9.2 committee)
 
-    The FALCON architecture supports the following IO channels:
+- floppy disk interface with DMA channel
 
--   SCSI (as defined by the ANSI X3T9.2 committee)
+- a serial port and LAN port through the SCC chip
 
--   floppy disk interface with DMA channel
+- a slot for a network card
 
--   a serial port and LAN port through the SCC chip
-
--   a slot for a network card
-
--   one (opt.) asynchronous serial port and an interrupt control
+- one (opt.) asynchronous serial port and an interrupt control
     through two MFP controllers (MC68901)
 
--   a parallel printer port
+- a parallel printer port
 
--   a ST/MEGA compatible intelligent keyboard, mouse, and
+- a ST/MEGA compatible intelligent keyboard, mouse, and
     joystick interface
 
--   serial data input and output in via the DSP port
+- serial data input and output in via the DSP port
 
-3.1 DMA Controllers
+## 3.1 DMA Controllers
 
-    The FALCON design includes four independent DMA channels:
+The FALCON design includes four independent DMA channels:
 
-1)  the AUX port (includes the SCC and network)
+1. the AUX port (includes the SCC and network)
 
-2)  the SCSI port
+2. the SCSI port
 
-3)  the ST floppy disk port
+3. the ST floppy disk port
 
-4)  digital sound playback and record.
+4. digital sound playback and record.
 
-    In VME equipped systems, the VMEbus interface permits a
+In VME equipped systems, the VMEbus interface permits a
 VMEbus master to perform DMA into system memory. The following is
 the DMA bus mastership priorities:
 
-priority function
-highest  SCSI DMA Channel
-         Aux DMA Channel
-         Floppy disk DMA channel
-         Digital sound DMA channel
-         VMEbus Masters
-    Graphics Co-processor
-lowest   CPU
+priority | function
+---------|---------
+highest  | SCSI DMA Channel
+   .     | Aux DMA Channel
+   .     | Floppy disk DMA channel
+   .     | Digital sound DMA channel
+   .     | VMEbus Masters
+   .     | Graphics Co-processor
+lowest   | CPU
 
+### 3.1.1  AUX/SCC and SCSI DMA Channels
 
-3.1.1  AUX/SCC and SCSI DMA Channels
-
-    The AUX/SCC and SCSI DMA controllers assemble the bytes from
+The AUX/SCC and SCSI DMA controllers assemble the bytes from
 the peripheral into longwords for writing to the system bus. DMA
 can be done to any byte boundary, either on the main system board
 or on the VMEbus. DMA is done in physical address space.
