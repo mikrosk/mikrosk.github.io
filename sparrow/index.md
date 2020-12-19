@@ -50,7 +50,7 @@ This makes only 17 (rev.1) + 59 (rev.2) = 76 publicly known Sparrows in the worl
 
 ### Sparrow resources
 
-It seems that there had been two 32-bit Atari machines in development at the same time: the Falcon (designed by John D. Horton Jr. in Dallas, Texas) and the [Sparrow](https://www.maedicke.de/atari/hardware/sparrow.htm) (designed by Moshe Segal and Eran Dariel in Israel). The latter became the "real" [Falcon 030](https://www.maedicke.de/atari/hardware/falcon.htm) as we know it. What happened to the former one, nobody knows. Some of its features resemble the [Microbox](https://www.maedicke.de/atari/hardware/microbox.htm), due to lack of any mention of PCI slots it perhaps wouldn't meant to be the [Falcon 040](https://www.maedicke.de/atari/hardware/falcon040.htm).
+It seems that there had been two 32-bit Atari machines in development at the same time: the Falcon (designed by John D. Horton Jr. in Dallas, Texas) and the [Sparrow](https://www.maedicke.de/atari/hardware/sparrow.htm) (designed by Moshe Segal and Eran Dariel in Israel). The latter became the "real" [Falcon 030](https://www.maedicke.de/atari/hardware/falcon.htm) as we know it. What happened to the former one, nobody knows. Some of its features resemble the [Microbox](https://www.maedicke.de/atari/hardware/microbox.htm), however [another source](http://www.atarimuseum.com/computers/16bits/falcon030/microbox/index.htm) claims to be a separate project led by the [former ST/FM designer](http://www.computinghistory.org.uk/det/587/Atari-520-STM) Ira Valenski. Due to lack of any mention of PCI slots it perhaps wouldn't meant to be the [Falcon 040](https://www.maedicke.de/atari/hardware/falcon040.htm).
 
 The following documents were found & rescued by [Christian Zietz](https://www.chzsoft.de) and first published at [atari-home.de](https://forum.atari-home.de/index.php/topic,13380.msg214172.html#msg214172):
 
@@ -59,4 +59,4 @@ The following documents were found & rescued by [Christian Zietz](https://www.ch
 - [Falcon specification (dated Dec 3 1991)](falcon_specification_19911203.pdf) (converted into PDF by Christian)
 - [Falcon specification (dated Aug 26 1992)](falcon_specification_19920826.txt)
 
-The Falcon must have been pretty close to a finished state as it was in development since the beginning of January 1991 and the last specification refers to it as "Prorotype B **release**". As you can see, in its latest specification it got also the DSP which was present only in the Sparrow prototype so far.
+The Falcon must have been pretty close to a finished state as it was in development since the beginning of January 1991 and the last specification refers to it as "Prorotype B **release**". As you can see, in its latest specification it got also the DSP which was present only in the Sparrow prototype so far. See also the related thread on [atari-forum.com](https://www.atari-forum.com/viewtopic.php?p=310452).
