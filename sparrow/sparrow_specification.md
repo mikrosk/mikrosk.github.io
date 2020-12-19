@@ -1344,54 +1344,31 @@ digital to
     analog converters).
 
 
-5.2.   - DMA Sound -
+## 5.2. DMA Sound
 
-The Sparrow also  includes  a  new  DMA-driven   sound  
-subsystem 
-that
-    allows   the playback or synthesis of complex waveforms at a
-variety
-    of sampling rates. This feature  is  supported  by  the  new 
-RASCAL
-    device  which  is  driven  from the new DMA device  (same DMA
-device
-    that controls the disk DMA cycles).
+The Sparrow also  includes  a  new  DMA-driven   sound
+subsystem that allows   the playback or synthesis of complex waveforms at a
+variety of sampling rates. This feature  is  supported  by  the  new 
+RASCAL device  which  is  driven  from the new DMA device  (same DMA
+device that controls the disk DMA cycles).
 
-5.2.1.   - Overview -
+### 5.2.1. Overview
 
-Sound in the form of digitized  samples  is  stored  in system  
-memory.
-    These samples are fetched from dual-purpose memory during
-horizontal
-    blanking  (transparent  to   the   processor)   and  provided
+Sound in the form of digitized  samples  is  stored  in system
+memory. These samples are fetched from dual-purpose memory during
+horizontal blanking  (transparent  to   the   processor)   and  provided
+to digital-to-analog converters (DAC's) in the RASCAL device at
+a constant sample frequency specified by the  user. The outputs
+of the DAC's are then low pass filtered into a "walkman"
+type,micro-stereo connector and to the on-board speaker.
 
-to
-    digital-to-analog converters (DAC's) in the RASCAL device at
-a
-    constant sample frequency specified by the  user. The outputs
-of the
-    DAC's are then low pass filtered into a "walkman"
-type,micro-stereo
-    connector and to the on-board speaker.
-
-Two channels are provided.    They are  intended  to  be  used  
-as 
-the
-    left  and right channels of a stereo system when using the
-raw
-audio
-    outputs from the machine. They  are mixed together when fed 
-to 
-the
-    on board speaker.          A MONO mode is provided which 
-will 
-feed
-    the   same  data   to  both  channels  simultaneously.    The
-
- only
-    restriction placed on MONO mode is that there must be an even
-number
-    of samples (see data format section for details).
+Two channels are provided.    They are  intended  to  be  used
+as the left  and right channels of a stereo system when using the
+raw audio outputs from the machine. They  are mixed together when fed 
+to the on board speaker.          A MONO mode is provided which 
+will feed the   same  data   to  both  channels  simultaneously.    The
+only restriction placed on MONO mode is that there must be an even
+number of samples (see data format section for details).
 
 ### 5.2.2. Data Format
 
