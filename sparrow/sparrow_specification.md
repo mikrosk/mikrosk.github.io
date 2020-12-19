@@ -1,11 +1,12 @@
+```
 Date         : 12-18-91                        ****
 Ver          : A10                             ****
-Written by   :Moshe Segal, Eran Dariel         ****
+Written by   : Moshe Segal, Eran Dariel        ****
                                               ******
                                              ** ** **
                                             **  **  **
                                            **   **   **
-
+```
 
 
 
