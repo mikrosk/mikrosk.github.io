@@ -1449,7 +1449,7 @@ current
     frame.
 
 
-###### 5.2.3. MICROWIRE Interface
+### 5.2.3. MICROWIRE Interface
 
 The  MICROWIRE  interface  provided  to  talk  to  the RASCAL's
 software controlled Volume / Tone Control  is  a  general  purpose 
@@ -1515,7 +1515,7 @@ the mask register   does  not  need to be rewritten if it is already
 correct. That is, when sending a series of commands the  mask 
 register only needs to be written once.
 
-###### 5.2.4. Volume and Tone Control
+### 5.2.4. Volume and Tone Control
 
 The  RASCAL is used to provide volume, tone, and mixing control. 
 This part is talked to using the MICROWIRE interface.   The device
@@ -1574,7 +1574,7 @@ SPARROW SPEC. REV A10                                       page 19
             Note:  The volume controls attenuate in  2  dB steps. 
                    The tone controls attenuate in 2 dB steps at 50 Hz and 15 kHz.
 
-##### 5.3. Musical Instrument Digital Interface (MIDI)
+## 5.3. Musical Instrument Digital Interface (MIDI)
 
 The  MIDI  allows  the  integration  of  the  Sparrow series 
 withmusic synthesizers,  sequencers, drum boxes, and other devices 
@@ -1604,7 +1604,7 @@ following pin assignment:
         4 - in receive data
         5 - in loop return
 
-####  6. Memory, I/O, & Interrupt Map
+#  6. Memory, I/O, & Interrupt Map
 
             address         size            use
 
@@ -1629,7 +1629,7 @@ following pin assignment:
 
             FF8000-FFFFFF   W               SP & ST I/O Space
 
-##### SP/ST I/O MAP   (Offset within SP image FF8000)
+## SP/ST I/O MAP   (Offset within SP image FF8000)
 
             - Offset -         - Use -
 
@@ -1671,9 +1671,9 @@ SPARROW SPEC. REV A10                                       page 21
             FC04-FC07          MIDI ACIA
             FC08-FFFF          <reserved>
 
-##### LOCAL I/O DEVICES
+## LOCAL I/O DEVICES
 
-###### MEMORY CONTROLLER & GENERAL CONTROL
+### MEMORY CONTROLLER & GENERAL CONTROL
 
             8001   RW    Memory Configuration
 
@@ -1721,7 +1721,7 @@ SPARROW SPEC. REV A10                                       page 22
 
                                     * After power up this register is cleared to 0's.
 
-###### SP/ST VIDEO SUBSYSTEM
+### SP/ST VIDEO SUBSYSTEM
 
             8200   RW   ---- ----  xxxx xxxx   Video Base High
             8202   RW   ---- ----  xxxx xxxx   Video Base Mid
@@ -1848,7 +1848,7 @@ SPARROW SPEC. REV A10                                       page 24
 ```
 SPARROW SPEC. REV A10                                       page 25
 ```
-###### ST  DMA
+### ST  DMA
 
             8600                               <reserved>
             8602                               <reserved>
@@ -1880,7 +1880,7 @@ SPARROW SPEC. REV A10                                       page 25
                                                     0 - 8Mhz (reset)
                                                     1 - 16Mhz
 
-###### PROGRAMMABLE SOUND GENERATOR
+### PROGRAMMABLE SOUND GENERATOR
 
             (also provides bi-directional parallel printer port and mis-
             cellaneous output latch)
@@ -1920,7 +1920,7 @@ SPARROW SPEC. REV A10                                       page 26
                         |___________________   reserved
                                                I/O PORT B - Parallel I/O Data
 
-###### DMA SOUND SUBSYSTEM
+### DMA SOUND SUBSYSTEM
 
             8900   RW   ---- ----  0000 00re   Sound DMA Control
                                                r - Repeat
@@ -1955,12 +1955,12 @@ SPARROW SPEC. REV A10                                       page 27
             8922   RW   xxxx xxxx  xxxx xxxx   MICROWIRE Data register
             8924   RW   xxxx xxxx  xxxx xxxx   MICROWIRE Mask register
 
-###### REAL TIME CLOCK
+### REAL TIME CLOCK
 
             8960   RW   xxxx xxxx  ---- ----  Real Time Clock Addr Register
             8962   RW   xxxx xxxx  ---- ----  Real Time Clock Data Register
 
-###### BLiTTER
+### BLiTTER
 
             8A00    W   xxxx xxxx  xxxx xxxx   Halftone Ram Start
             ...         ...  ...   ...  ...           ...
@@ -1988,7 +1988,7 @@ SPARROW SPEC. REV A10                                       page 27
                                                n    - NFSR
                                                kkkk - SKEW
 
-###### SCC
+### SCC
 
             8C80   RW   ---- ----  xxxx xxxx  SCC A Control
             8C82   RW   ---- ----  xxxx xxxx  SCC A Data
@@ -1997,7 +1997,7 @@ SPARROW SPEC. REV A10                                       page 27
 ```
 SPARROW SPEC. REV A10                                       page 28
 ```
-###### JOYSTICK AND CONFIGURATION SWITCH CONTROL
+### JOYSTICK AND CONFIGURATION SWITCH CONTROL
 
             9200    R   dfq- ---- ---- 3120   d  0 - No sound DMA
                                                  1 - Sound DMA
@@ -2011,19 +2011,19 @@ SPARROW SPEC. REV A10                                       page 28
                         JOY0 JOY1 JOY2 JOY3   l - LEFT , r - RIGHT
                                               JOY0,JOY2 - RW
 
-###### PADDLE
+### PADDLE
 
             9210    R   ---- ---- xxxx xxxx   X Paddle 0
             9212    R   ---- ---- xxxx xxxx   Y Paddle 0
             9214    R   ---- ---- xxxx xxxx   X Paddle 1
             9216    R   ---- ---- xxxx xxxx   Y Paddle 1
 
-###### LIGHT GUN/PEN
+### LIGHT GUN/PEN
 
             9220    R   ---- --xx xxxx xxxx   X Position
             9222    R   ---- --xx xxxx xxxx   Y Position
 
-###### MFP-SP (ST compatible)
+### MFP-SP (ST compatible)
 
             FA00    RW   ---- ---- xxxx xxxx   General purpose I/O - GPIO
             FA02    RW   ---- ---- xxxx xxxx   Active Edge - AER
@@ -2053,12 +2053,12 @@ SPARROW SPEC. REV A10                                       page 29
             FA2C    RW   ---- ---- xxxx xxxx   Transmitter Status - TSR
             FA2E    RW   ---- ---- xxxx xxxx   USART Data - UDR
 
-###### IKBD ACIA
+### IKBD ACIA
 
             FC00    RW   xxxx xxxx ---- ----   Keyboard ACIA Control
             FC02    RW   xxxx xxxx ---- ----   Keyboard ACIA Data
 
-###### MIDI ACIA
+### MIDI ACIA
 
             FC04    RW   xxxx xxxx ---- ----   MIDI ACIA Contorl
             FC06    RW   xxxx xxxx ---- ----   MIDI ACIA Data
