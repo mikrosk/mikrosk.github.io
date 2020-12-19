@@ -9,11 +9,8 @@ Written by   : Moshe Segal, Eran Dariel        ****
 ```
 
 # SPARROW SPECIFICATION
-```
-SPARROW SPEC. REV A10                                       page 1
-```
 
-# REV A10   10/22/91  changes:
+## REV A10   10/22/91  changes:
 
 ### [page 2](#1-introduction)
 
@@ -79,9 +76,7 @@ FA40 - FA5F  Assigned to FP Co-Proc
 8266 - VGA bit removed
 8288 - Vsync rise corrected to Hsync rise
 82C0 - bit assignments inverted, burst time option added
-```
-SPARROW SPEC. REV A10                                       page 2
-```
+
 # 1. INTRODUCTION
 
 The  Sparrow  is  the  newest  enhancement  in  the  series  of
@@ -128,9 +123,6 @@ future addition of an Internal Hard Disk (IDE Interface).
 support full implementation of Interlace on TV's. This includes  Field 
 sync and Equalization pulses for TV. This feature enables enhanced TV
 display by  enabling  the  display of 400 lines or more on TV's. The
-```
-SPARROW SPEC. REV A10                                       page 3
-```
 Sparrow also supports interlace on monitors, to enable display of 400
 lines on color monitors.
 
@@ -179,9 +171,7 @@ internal clock to an external sync signal. In case of  Genlock  and XGA
 the Sparrow  outputs  a  special  control  bit  for each pixel to
 enable programmable switching between internal or external video
 source. In this case the number of possible colors is reduced to 32768.
-```
-SPARROW SPEC. REV A10                                       page 4
-```
+
 -  The Sparrow contains interface to the following peripherals: a
 set  of additional joysticks, paddles and light gun/pen.
 
@@ -237,9 +227,6 @@ diagnostics will be provided.
 The basic system includes 512Kb to 14Mb of dual-purpose  RAM 
 which is used   for   both   video  and system memory. This is
 implemented by using 8 bit wide SIMMS (Single In line Memory Modules),
-```
-SPARROW SPEC. REV A10                                       page 5
-```
 which must be used in pairs.
 
 The  DRAM  devices  used  can  have one of the following
@@ -295,9 +282,7 @@ The DMA arbitration has higher priority than the Blitter arbitration.
 Thus, a  DMA arbitration will interrupt the Blitter operation. The
 Blitter will resume control of the system bus when  the  DMA 
 releases the bus.
-```
-SPARROW SPEC. REV A10                                       page 6
-```
+
 In  Sparrow,  video  accesses  use  page  mode  and  thus  the
 timeshare machanism used in STe cannot be employed. Instead, any video
 request for memory access will stall the current  bus  cycle  if  it 
@@ -345,9 +330,7 @@ There  is also hardware for enabling use of Level 5 as external
 negative edge regular interrupt. This  feature  can  be  used  by 
 SCCINT  by strapping  it  to EXTINT5.  EXTINT7 is also encoded
 as negative edge interrupt.
-```
-SPARROW SPEC. REV A10                                       page 7
-```
+
 ### 2.4.2. Bus Error Circuitry
 
 The SCU also implements  a  system  bus  error  circuitry.   If 
@@ -396,9 +379,7 @@ subsystems:
 -    Standard SCSI Port
 
 -    floppy disk interface sharing the ST "ACSI" DMA channel
-```
-SPARROW SPEC. REV A10                                       page 8
-```
+
 -    serial port and  an   external   interrupt  port  connected to  MFP controller
 
 -    a  Centronics  parallel  printer  port driven by the Yamaha YM-2149 sound chip
@@ -448,9 +429,7 @@ The  subsystem  interfaces  to  the  dual-purpose   RAM through
 the ACSI DMA controller.  Commands and arguments are sent to the FDC
 by first writing  to   the  DMA  Mode  Control Register to select the
 desired FDC register and then writing the data bytes.
-```
-SPARROW SPEC. REV A10                                       page 9
-```
+
 The standard floppy for the Sparrow is the  3.5  inch floppy 
 disk with the  capacity  of 720 Kbyte (formatted).   The 1.44Mb drives
 will be available as an option.  Also, since the AJAX floppy disk
@@ -499,9 +478,7 @@ to one of the parallel input lines of the MFP to  permit  interrupt
 driven printing. Eight bits of read/write data are handled through
 I/O port B  on  the  PSG  at  a  typical data transfer  rate 
 exceeding 4000 bytes/second.
-```
-SPARROW SPEC. REV A10                                       page 10
-```
+
 The Sparrow also supports  the  Acknowledge  signal  from  the 
 parallel printer  port,  but  it  is an input pin which does not
 generate any interrupt. It is connected to the COMBO device.
@@ -549,9 +526,7 @@ performance characteristics:  a  resolution  of  100  counts/inch,   a
 maximum velocity   of   10  inches/second,  and maximum pulse phase
 error of 50%.    The  joystick  is  a  four  direction  switch-type 
 joystick with one fire button.
-```
-SPARROW SPEC. REV A10                                       page 11
-```
+
 Mouse/joystick0  uses  a  DB9  pin  P  connector  with the
 following pin assignment:
 
@@ -604,9 +579,6 @@ following pin assignment:
       14 - data 5
       15 - data 2
       16 - data 3
-```
-SPARROW SPEC. REV A10                                       page 12
-```
       17 - data 0
       18 - data 1
       19 - address 13
@@ -653,9 +625,7 @@ bits video bus the overscan is supported in steps  of  16  pixels. In
 
 The Sparrow supports 3 video modes in ST and programmable video
 modes in SP mode.
-```
-SPARROW SPEC. REV A10                                       page 13
-```
+
      STe mode
 
      mode      resolution   bit      palette          colors
@@ -715,9 +685,6 @@ resolution and  the  number  of  color planes. For  example,   for
 320x200 resolution  and  4 color planes it is 32000 bytes.   The 
 starting address of  display memory is loaded into the Video Base
 High, Video Base Mid, or Video Base Low Registers. This   register   is
-```
-SPARROW SPEC. REV A10                                       page 14
-```
 loaded into   the Video  Address  Counter  (High/Mid/Low)  at the
 beginning of each frame.   The address counter is incremented as  the
 BitMap planes are read.
@@ -773,9 +740,6 @@ Since all the video parameters  timing  of  the  HSYNC,  VSYNC,
 Display Enable,    Blank,   Field   SYNC,   Equalization   pulses
 etc. are programmable, the Sparrow can support a wide range  of 
 monitors,  a variety  of  TV standards as well as programmable overscan.
-```
-SPARROW SPEC. REV A10                                       page 15
-```
 The full interlace   capability  supported  by  the  Sparrow  enables 
 higher resolution video displays (400 lines or more) on TV's.
 
@@ -827,9 +791,7 @@ The   Sparrow  is  also  equipped  with  a  Musical  Instrument
 Digital Interface  (MIDI) which provides high speed serial
 communication  of musical data to and  from  more  sophisticated synthesizer
 devices.
-```
-SPARROW SPEC. REV A10                                       page 16
-```
+
 ## 5.1. Programmable Sound Generator
 
 The ST sound system using the General  Instruments  AY-3-8910  /
@@ -882,9 +844,7 @@ sample, the  upper  byte contains the left channel sample and the
 lower byte contains the right channel  sample.   In  the MONO  scheme
 bytes are accessed sequentially.   However, they are still fetched a
 word at a time.  Therefore,  there  must be an even number of samples.
-```
-SPARROW SPEC. REV A10                                       page 17
-```
+
 A group of samples is called a frame.   A frame may  be played 
 once  or    can    automatically    be repeated    forever. Frames 
 occupy  a contiguous block of memory and are specified by  their
@@ -942,9 +902,6 @@ Then  all  of  the   following register combinations will provide the same infor
 
                 0000 0001 1100 0000  Mask
                 XXXX XXX0 1DXX XXXX  Data
-```
-SPARROW SPEC. REV A10                                       page 18
-```
                 0000 1111 1111 0000  Mask
                 XXXX 01XX XXXD 0000  Data
 
@@ -993,9 +950,7 @@ switching.
                      00 000  -40 dB
                      01 010  -20 dB
                      10 1XX    0 dB
-```
-SPARROW SPEC. REV A10                                       page 19
-```
+
                 100 XDD DDD  Set Right Channel Volume
                      || |||
                      00 000  -40 dB
@@ -1045,9 +1000,7 @@ with the following pin assignment:
         3 - thru loop return
         4 - out transmit data
         5 - out loop return
-```
-SPARROW SPEC. REV A10                                       page 20
-```
+
 The MIDI IN uses a circular DIN 5 pin S connector with the
 following pin assignment:
 
@@ -1097,9 +1050,6 @@ following pin assignment:
             8926-895F          <reserved>
             8960-8963          RTC
             8964-89FF          <reserved>
-```
-SPARROW SPEC. REV A10                                       page 21
-```
             8A00-8A3F          BLiTTER
             8A40-8C7F          <reserved>
             8C80-8C87          SCC
@@ -1151,9 +1101,7 @@ SPARROW SPEC. REV A10                                       page 21
                                           11 - TV
 
                                     **  vv are supplied by videoconnector
-```
-SPARROW SPEC. REV A10                                       page 22
-```
+
             8007   RW   dvim bs_c   CPU Clock Select and misc controls
                                     c - 0 - 8 Mhz
                                         1 - 16 Mhz
@@ -1205,9 +1153,7 @@ SPARROW SPEC. REV A10                                       page 22
                                                01 640x200, 2 plane
                                                10 640x400, 1 plane
                                                11 <reserved>
-```
-SPARROW SPEC. REV A10                                       page 23
-```
+
             8264   RW   ---- ----  0000 xxxx   Horizontal Pixel Scroll
 
             8266   RW   ---- -oct  Rhvm bbbb   SP Shift Mode:
@@ -1250,9 +1196,6 @@ SPARROW SPEC. REV A10                                       page 23
             * LSB of VFT determines if interlace is on. 0 - 0n , 1 - off.
 
             82AE - 82BF                        <reserved>
-```
-SPARROW SPEC. REV A10                                       page 24
-```
 
             82C0   RW   ---- ---o  bhvc esvv   Video Master Control
                                 |  |||| ||||___00 - ST monochrome monitor
@@ -1295,9 +1238,7 @@ SPARROW SPEC. REV A10                                       page 24
              ...             ...        ...              ...
             9BFC   RW   rrrr rr--  gggg gg--   SP  Color Pallete Reg 255
             9BFE   RW   ---- ----  bbbb bb--   SP  Color Pallete Reg 255
-```
-SPARROW SPEC. REV A10                                       page 25
-```
+
 ### ST  DMA
 
             8600                               <reserved>
@@ -1346,9 +1287,6 @@ SPARROW SPEC. REV A10                                       page 25
                                                0100 - Channel C Fine Tune
                                                0101 - Channel C Coarse Tune
                                                0110 - Noise Generator Control
-```
-SPARROW SPEC. REV A10                                       page 26
-```
                                                0111 - Mixer Control-I/O enable
                                                1000 - Channel A Amplitude
                                                1001 - Channel B Amplitude
@@ -1399,9 +1337,7 @@ SPARROW SPEC. REV A10                                       page 26
                                                   01 = 12517 Hz
                                                   10 = 25033 Hz
                                                   11 = 50066 Hz
-```
-SPARROW SPEC. REV A10                                       page 27
-```
+
             8922   RW   xxxx xxxx  xxxx xxxx   MICROWIRE Data register
             8924   RW   xxxx xxxx  xxxx xxxx   MICROWIRE Mask register
 
@@ -1444,9 +1380,7 @@ SPARROW SPEC. REV A10                                       page 27
             8C82   RW   ---- ----  xxxx xxxx  SCC A Data
             8C84   RW   ---- ----  xxxx xxxx  SCC B Control
             8C86   RW   ---- ----  xxxx xxxx  SCC B Data
-```
-SPARROW SPEC. REV A10                                       page 28
-```
+
 ### JOYSTICK AND CONFIGURATION SWITCH CONTROL
 
             9200    R   dfq- ---- ---- 3120   d  0 - No sound DMA
@@ -1489,9 +1423,6 @@ SPARROW SPEC. REV A10                                       page 28
             FA16    RW   ---- ---- xxxx xxxx   Vector - VR
             FA18    RW   ---- ---- xxxx xxxx   Timer A Control - TACR
             FA1A    RW   ---- ---- xxxx xxxx   Timer B Control - TBCR
-```
-SPARROW SPEC. REV A10                                       page 29
-```
             FA1C    RW   ---- ---- xxxx xxxx   Timers C,D Control - TCDCR
             FA1E    RW   ---- ---- xxxx xxxx   Timer A Data - TADR
             FA20    RW   ---- ---- xxxx xxxx   Timer B Data - TBDR
