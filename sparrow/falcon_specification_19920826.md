@@ -543,22 +543,21 @@ the peripheral into longwords for writing to the system bus. DMA
 can be done to any byte boundary, either on the main system board
 or on the VMEbus. DMA is done in physical address space.
 
-    The programmer's model of each of these DMA channel consists
-    of:
+The programmer's model of each of these DMA channel consists of:
 
--   a byte wide read/write status/control register that contains
+- a byte wide read/write status/control register that contains
     direction, enable and bus error bits
 
--   four bytes forming a 32-bit DMA pointer
+- four bytes forming a 32-bit DMA pointer
 
--   data residue register that must be merged with RAM contents
+- data residue register that must be merged with RAM contents
     under CPU control if the DMA input is done to a point in RAM
     that is not on a longword boundary or if DMA is not done in
     multiples of four bytes
 
--   four bytes forming a 32-bit wide DMA byte count 
+- four bytes forming a 32-bit wide DMA byte count 
 
-    The software that sets up the DMAC for DMA transfers must
+The software that sets up the DMAC for DMA transfers must
 account for the DMA registers being a byte-wide and appearing at
 odd byte addresses. This requires the CPU either to use the MOVEP
 instruction or to do rotates and four separate byte output
@@ -567,21 +566,21 @@ operations to put out a 32-bit address or byte count.
     DMA Controller Registers
     offset   width   function
     ---------------------------------------
-    00   OB   DMA Pointer Upper
-    02   OB   DMA Pointer Upper-Middle
-    04   OB   DMA Pointer Lower-Middle
-    06   OB   DMA Pointer Lower
-    08   OB   Byte Count Upper
-    0A   OB   Byte Count Upper-Middle
-    0C   OB   Byte Count Lower-Middle
-    0E   OB   Byte Count Lower
-    10   W    Data Residue Register High
-    12   W    Data Residue Register Low
-    14   OB   Control Register
+    00h       OB   DMA Pointer Upper
+    02h       OB   DMA Pointer Upper-Middle
+    04h       OB   DMA Pointer Lower-Middle
+    06h       OB   DMA Pointer Lower
+    08h       OB   Byte Count Upper
+    0Ah       OB   Byte Count Upper-Middle
+    0Ch       OB   Byte Count Lower-Middle
+    0Eh       OB   Byte Count Lower
+    10h       W    Data Residue Register High
+    12h       W    Data Residue Register Low
+    14h       OB   Control Register
 
-    The control register bit-map:
+The control register bit-map:
 
-    bit   function
+    bit  function
     __________________________________________
     0    DMA Direction Out (1 = out to port)
     1    Enable (0 = off, 1 = on)
@@ -593,14 +592,14 @@ operations to put out a 32-bit address or byte count.
     7    Bus Error (1 = Bus Error occurred during DMA by this
          channel)
 
-    To perform DMA:
+To perform DMA:
 
-1)  set the DMA controller direction
-2)  set the base address
-3)  set up the peripheral for DMA
-4)  then set the enable bit
+1. set the DMA controller direction
+2. set the base address
+3. set up the peripheral for DMA
+4. then set the enable bit
 
-    The direction and enable bits should not be set in the same
+The direction and enable bits should not be set in the same
 operation. If DMA input is done to anything but a longword
 aligned destination, or if the length is not a multiple of four,
 the final byte(s) of the transfer will not be written to the
@@ -613,7 +612,7 @@ best system performance, software should try to maintain DMA
 operations on longword boundaries and keep byte counts in
 multiples of four.
 
-    If an attempted DMA operation generates a bus error, DMA
+If an attempted DMA operation generates a bus error, DMA
 operation is immediately disabled and the bus error bit set in
 the Control/Status register. The bus error status bit generates
 an interrupt. The interrupt output of both of the SCSI and SCC
@@ -622,393 +621,189 @@ input bits where they can be read or optionally used to generate
 a processor interrupt. The bus error status for a channel is
 automatically cleared by reading the channel's control register.
 
-    The DMA byte count register generates an interrupt when the
+The DMA byte count register generates an interrupt when the
 byte count reaches 0. The DMA is automatically disabled by
 reaching the terminal count.
 
-    The 5380 SCSI Interface Chip must not be used in its BLOCK
+The 5380 SCSI Interface Chip must not be used in its BLOCK
 MODE DMA. The SCC should be in programmed to use the WAIT/*REQ
 pin in *REQ mode when doing DMA.
 
-    The AUX channel controls the SCC and network slot. DMA can
+The AUX channel controls the SCC and network slot. DMA can
 transfer data to the SCC A port, SCC B port, or network slot.
 Only one of the ports can be accessed via DMA at a time.
 
-3.1.2  SCSI Output
+### 3.1.2  SCSI Output
 
-    FALCON implements the complete single-ended
+FALCON implements the complete single-ended
 (non-differential) SCSI bus using a 5380 SCSI Controller. The
 5380 is used in its 8-bit asynchronous data transfer mode up to
 4.0 Mb/second, adequate for current disk drives.
-    The external SCSI connector provides for connection of SCSI
+
+The external SCSI connector provides for connection of SCSI
 compatible devices through a 50 pin SCSI II connector.
 
+#### Table 3.1 (External SCSI Connector)
 
+Pin | Signal | Pin | Signal | Pin | Signal
+----|--------|-----|--------|-----|-------
+1   | GND    | 2   | GND    | 3   | GND
+4   | GND    | 5   | GND    | 6   | GND
+7   | GND    | 8   | GND    | 9   | GND
+10  | GND    | 11  | GND    | 12  | reserved
+13  | nc     | 14  | reserved|15  | GND
+16  | GND    | 17  | GND    | 18  | GND
+19  | GND    | 20  | GND    | 21  | GND
+22  | GND    | 23  | GND    | 24  | GND
+25  | GND    | 26  | DB0*   | 27  | DB1*
+28  | DB2*   | 29  | DB3*   | 30  | DB4*
+31  | DB5*   | 32  | DB6*   | 33  | DB7*
+34  | DBP*   | 35  | GND    | 36  | GND
+37  | reserved|38  | termpwr| 39  | reserved
+40  | GND    | 41  | ATN*   | 42  | GND
+43  | BSY*   | 44  | ACK*   | 45  | RST*
+46  | MSG*   | 47  | SEL*   | 48  | C/D
+49  | REQ*   |     |        | 50  | I/O
 
-
-External SCSI Connector
-
-
-Pin
-Signal
-Pin
-Signal
-Pin
-Signal
-
-
-1
-GND
-2
-GND
-3
-GND
-
-
-4
-GND
-5
-GND
-6
-GND
-
-
-7
-GND
-8
-GND
-9
-GND
-
-
-10
-GND
-11
-GND
-12
-reserved
-
-
-13
-nc
-14
-reserved
-15
-GND
-
-
-16
-GND
-17
-GND
-18
-GND
-
-
-19
-GND
-20
-GND
-21
-GND
-
-
-22
-GND
-23
-GND
-24
-GND
-
-
-25
-GND
-26
-DB0*
-27
-DB1*
-
-
-28
-DB2*
-29
-DB3*
-30
-DB4*
-
-
-31
-DB5*
-32
-DB6*
-33
-DB7*
-
-
-34
-DBP*
-35
-GND
-36
-GND
-
-
-37
-reserved
-38
-termpwr
-39
-reserved
-
-
-40
-GND
-41
-ATN*
-42
-GND
-
-
-43
-BSY*
-44
-ACK*
-45
-RST*
-
-
-46
-MSG*
-47
-SEL*
-48
-C/D
-
-
-49
-REQ*
-
-
-50
-I/O
-
-
-                                 Table 3.1
-
-    Devices connected to the external SCSI connector should
+Devices connected to the external SCSI connector should
 provide standard SCSI bus termination in the last physical
 device. Terminators should also be installed in the internal SCSI
 device that is farthest (in terms of cable length) from the main
 pcb.
 
-    In a typical configuration, the SCSI bus will be used to
+In a typical configuration, the SCSI bus will be used to
 provide the main mass storage elements of the system. The SCSI
 bus can also be used for removable media devices such as the
 Syquest cartridge drives and magnetic tape controllers.
 
-3.2 Floppy Interface
+## 3.2 Floppy Interface
 
-    The floppy disk DMA channel is fully ST compatible. It
+The floppy disk DMA channel is fully ST compatible. It
 provides a port to the 1772 like floppy disk controller (FDC).
 The DMA channel operates identically with the ACSI/Floppy DMA
 channel of previous ST architectures, except there is no ACSI
 port and therefore no external devices accessible. For a further
-description of this DMA channel, see the Atari ACSI/DMA
-Integration Guide.
+description of this DMA channel, see the **Atari ACSI/DMA
+Integration Guide**.
 
-    A register is provided to control the floppy density similar
+A register is provided to control the floppy density similar
 to the TT. FALCON enhances the function of this register to
 enable sensing and control of extended (quad) density floppy
 drives.
 
-    The floppy disk density select register (xxFF860Fh) provides
+The floppy disk density select register (xxFF860Fh) provides
 control of disk density. Bits 4 and 0 are used to select the
 frequency of the clock sent to the floppy controller circuit. The
 remaining bits control two outputs and provide two inputs which
 may be used (TBD) in the density selection process. The disk
 change signal has also been added.
 
-    The FALCON floppy disk subsystem is designed around a WD1772
+The FALCON floppy disk subsystem is designed around a WD1772
 like Floppy Disk Controller supporting up to two daisy-chained
 floppy disk drives. The interface can support double, high, and
 quad density drives.
 
-    The internal drive cabling supports the disk change signal
+The internal drive cabling supports the disk change signal
 from the floppy drive(s). The signal is asserted when power is
 applied or a diskette is removed from the drive. The signal is
 cleared by issuing a step command to the drive with a disk
 inserted.
 
-3.3 Serial and LAN Ports
+## 3.3 Serial and LAN Ports
 
-    The Zilog 85C30 SCC, a dual channel multi-protocol data
+The Zilog 85C30 SCC, a dual channel multi-protocol data
 communications peripheral, is included in FALCON to provide
 serial and LAN ports.
 
-    The input/output of SCC channel A is routed through RS-423
+The input/output of SCC channel A is routed through RS-423
 level converters to the LAN connector, an 8-pin mini-DIN
 connector (see table 3.4).
 
-    The SCC handles both asynchronous formats and synchronous
+The SCC handles both asynchronous formats and synchronous
 byte-oriented protocols such as HDLC and IBM's SDLC.
 
-    The SCC port B is connected to serial port 1 (see table
+The SCC port B is connected to serial port 1 (see table
 3.3). Modem control signals are derived directly from the 85C30
 port B control lines. This port can operate with split transmit
 and receive baud rates.
 
-    The PCLK input to the SCC is 8 MHz. The RTxCA input is
+The PCLK input to the SCC is 8 MHz. The RTxCA input is
 provided with a 3.6864 MHz clock. The input to TRxCA comes from
 the low speed LAN connector. RTxCB is run at 2.4576 MHz. TRxCB is
 generated by the Timer C output of the second MFP. Refer to the
 Z85C30 data sheet or programming manual for formula on
 determining baud rates.
 
-3.3.1    MFP
-    Two 68901 Multi-Function Peripheral (MFP) controllers are
+### 3.3.1    MFP
+
+Two 68901 Multi-Function Peripheral (MFP) controllers are
 used to provide system timers, serial port 2 (opt.), and
 interrupt controllers.
-    The baud rate clock for MFP-2 serial transmitter and
+
+The baud rate clock for MFP-2 serial transmitter and
 receiver is derived from the timer D output. Given the MFPs'
 2.4576 MHz clock, baud rates up to 19.2 Kbaud can be supported on
 this serial port.
 
-3.3.2  Serial Port Pinouts
+### 3.3.2  Serial Port Pinouts
 
-    Two serial ports are pinned out on DB-9P connectors in a way
+Two serial ports are pinned out on DB-9P connectors in a way
 that is compatible with most PCs.
 
+#### Table 3.2 (Serial Port Pinouts)
 
+Pin	| Port 1 | 	Port 2
+----|--------|--------
+1   | Carrier Detect (CD,input) | Carrier Detect (CD,input)
+2   | Receive Data (RD,input)   | Receive Data (RD,input)
+3   | Transmit Data (TD,output) | Transmit Data (TD,output)
+4   | Data Terminal Ready (DTR,output) | Data Terminal Ready (DTR,output)
+5   | ground | ground
+6   | Data Set Ready (DSR, input) | Data Set Ready (DSR, input)
+7   | Request to Send (RTS,output) | Request to Send (RTS,output)
+8   | Clear to Send (CTS,input) | Clear to Send (CTS,input)
+9   | Ring Indicator (RI,input) (1) | Ring Indicator (RI,input)
 
-
-Serial Port Pinouts
-
-
-Pin	Port 1		Port 2
-
-
-1
-Carrier Detect (CD,input)
-Carrier Detect (CD,input)
-
-
-2
-Receive Data (RD,input)
-Receive Data (RD,input)
-
-
-3
-Transmit Data (TD,output)
-Transmit Data (TD,output)
-
-
-4
-Data Terminal Ready
-(DTR,output)
-Data Terminal Ready
-(DTR,output)
-
-
-5
-ground
-ground
-
-
-6
-Data Set Ready
-(DSR, input)
-Data Set Ready
-(DSR, input)
-
-
-7
-Request to Send (RTS,output)
-Request to Send
-(RTS,output)
-
-
-8
-Clear to Send (CTS,input)
-Clear to Send (CTS,input)
-
-
-9
-Ring Indicator (RI,input) 1
-Ring Indicator (RI,input)
-
-
-                                 Table 3.3
-
-1 The Ring Indicator (RI) signal is connected to bit 6 of the
+(1) The Ring Indicator (RI) signal is connected to bit 6 of the
 MFP-ST General Purpose I/O Port (GPIP).
 
 The GP IO (xxFF8204) register serial port bits are defined as
 follows:
 
-bit 8    ro   CD   state of serial port 2 pin 1
-bit 9    rw        reserved
-bit 10   ro   DSR  state of serial port 2 pin 6
-bit 11   ro   CTS  state of serial port 2 pin 8
-bit 12   ro   RI   state of serial port 2 pin 9
-bit 13   wo   DTR  sets serial port 2 pin 4
-bit 14   wo   RTS  sets serial port 2 pin 7
+    bit 8    ro   CD   state of serial port 2 pin 1
+    bit 9    rw        reserved
+    bit 10   ro   DSR  state of serial port 2 pin 6
+    bit 11   ro   CTS  state of serial port 2 pin 8
+    bit 12   ro   RI   state of serial port 2 pin 9
+    bit 13   wo   DTR  sets serial port 2 pin 4
+    bit 14   wo   RTS  sets serial port 2 pin 7
 
-3.3.3  LAN Connector Pinout
+### 3.3.3  LAN Connector Pinout
 
-    The LAN connector is an 8 pin female mini-DIN.
+The LAN connector is an 8 pin female mini-DIN.
 
+#### Table 3.3 (SCC Port A LAN Pinout)
 
+Pin | Signal
+----|-------
+1   | Output Handshake (DTR, RS-423)
+2   | Input Handshake/External Clock
+3   | Transmit Data -
+4   | Ground
+5   | Receive Data -
+6   | Transmit Data +
+7   | <reserved>
+8   | Receive Data +
 
+## 3.4 Expansion IO Port with DMA
 
-SCC Port A LAN Pinout
-
-
-Pin
-Signal
-
-
-1
-Output Handshake (DTR, RS-423)
-
-
-2
-Input Handshake/External Clock
-
-
-3
-Transmit Data -
-
-
-4
-Ground
-
-
-5
-Receive Data -
-
-
-6
-Transmit Data +
-
-
-7
-<reserved>
-
-
-8
-Receive Data +
-
-
-                                 Table 3.4
-
-3.4 Expansion IO Port with DMA
-
-    The auxiliary DMA channel provides an interface for a
+The auxiliary DMA channel provides an interface for a
 expansion IO port to accept high speed data transfer modules
 (such as ethernet). The interface allows the module to transfer
 data via the DMA channel to or from the Falcon bus and provides
 memory mapped access from the Falcon bus to the module.
-    Data transfer takes place via an eight bit bi-directional
+
+Data transfer takes place via an eight bit bi-directional
 data bus. The transfer structure and timing are very similar to
 the 5380 SCSI controller chip. Familiarity with the 5380 or 53C80
 data sheet will aid in using this port. There are two types of
@@ -1027,488 +822,124 @@ driven low as it may be part of a wire-or structure. The device
 should drive the data lines ONLY when IOR* AND either (CS* or
 DACK*) are true.
 
-3.4.1  Expansion IO/DMA Port Pinout
+### 3.4.1  Expansion IO/DMA Port Pinout
 
+#### Table 3.4 (Expansion IO/DMA Port)
 
+pin | signal | pin | signal
+----|--------|-----|-------
+2   | GND    | 1   | GND
+4   | A0     | 3   | GND
+6   | A1     | 5   | VCC
+8   | A2     | 7   | VCC
+10  | A3     | 9   | VCC
+12  | CS*    | 11  | DRQ
+14  | IOR*   | 13  | DACK*
+16  | IOW*   | 15  | IOACK*
+18  | D0     | 17  | D1
+20  | D2     | 19  | D3
+22  | D4     | 21  | D5
+24  | D6     | 23  | D7
+26  | RESET* | 25  | IRQ*
+28  |        | 27  | +12V
+30  |        | 29  | +12V
+32  | GND    | 31  | -12V
+34  | GND    | 33  | GND
+36  | GND    | 35  | GND
 
+The connector will be a 36 pin card edge.
 
-Expansion IO/DMA Port
+### 3.4.2  Signal Description
 
+    A0-A3    Outputs from Falcon select one of sixteen registers
+             during IO cycles.
 
-pin
-signal
-pin
-signal
+    CS*      Output from Falcon is low during IO cycles. Devices
+             should ignore IOR* and IOW* when CS* and DACK* are
+             high.
 
+    IOR*     Output from Falcon is low during IO and DMA cycles when
+             data is transferred from the device to Falcon. The data
+             lines are input by Falcon when IOR* is low.
 
-2
-GND
-1
-GND
+    IOW*     Output from Falcon is low during IO and DMA cycles when
+             data is transferred to the device from Falcon. The data
+             lines are output by Falcon when IOW* is low.
 
+    D0-D7    Bi-directional data lines are used to transfer data
+             between Falcon and the device. The direction is
+             indicated by IOR* and IOW*.
 
-4
-A0
-3
-GND
+    DRQ      Input to Falcon requests a DMA transfer when high.
 
+    DACK*    Output from Falcon is low during DMA cycles. Devices
+             should ignore IOR* and IOW* when CS* and DACK* are
+             high.
 
-6
-A1
-5
-VCC
+    RESET*   Output from Falcon is low during system reset. (minimum
+             width of reset pulse is 10us)
 
+    IRQ*     Input to Falcon can generate an interrupt to the
+             processor when driven low. Should only be driven low.
+             There will be a 2.2K pull up in Falcon.
 
-8
-A2
-7
-VCC
+    IOACK*   Input to Falcon for handshake of IO cycles. IO cycles
+             are extended indefinitely while IOACK* is high. IO
+             cycles terminate when IOACK* is low.
 
+    VCC      +5 volts +/- 5% 1a
 
-10
-A3
-9
-VCC
+    GND      Logic ground
 
+    SGND     Shield ground
 
-12
-CS*
-11
-DRQ
+    +12V     +12 volts +/- 5% 100ma
 
+    -12V     -12 volts +/- 5% 50ma
 
-14
-IOR*
-13
-DACK*
+### 3.4.3  Expansion IO Slot 
 
-
-16
-IOW*
-15
-IOACK*
-
-
-18
-D0
-17
-D1
-
-
-20
-D2
-19
-D3
-
-
-22
-D4
-21
-D5
-
-
-24
-D6
-23
-D7
-
-
-26
-RESET*
-25
-IRQ*
-
-
-28
-
-27
-+12V
-
-
-30
-
-29
-+12V
-
-
-32
-GND
-31
--12V
-
-
-34
-GND
-33
-GND
-
-
-36
-GND
-35
-GND
-
-
-                                 Table 3.5
-
-    The connector will be a 36 pin card edge.
-
-3.4.2  Signal Description
-
-A0-A3    Outputs from Falcon select one of sixteen registers
-         during IO cycles.
-
-CS*      Output from Falcon is low during IO cycles. Devices
-         should ignore IOR* and IOW* when CS* and DACK* are
-         high.
-
-IOR*     Output from Falcon is low during IO and DMA cycles when
-         data is transferred from the device to Falcon. The data
-         lines are input by Falcon when IOR* is low.
-
-IOW*     Output from Falcon is low during IO and DMA cycles when
-         data is transferred to the device from Falcon. The data
-         lines are output by Falcon when IOW* is low.
-
-D0-D7    Bi-directional data lines are used to transfer data
-         between Falcon and the device. The direction is
-         indicated by IOR* and IOW*.
-
-DRQ      Input to Falcon requests a DMA transfer when high.
-
-DACK*    Output from Falcon is low during DMA cycles. Devices
-         should ignore IOR* and IOW* when CS* and DACK* are
-         high.
-
-RESET*   Output from Falcon is low during system reset. (minimum
-         width of reset pulse is 10us)
-
-IRQ*     Input to Falcon can generate an interrupt to the
-         processor when driven low. Should only be driven low.
-         There will be a 2.2K pull up in Falcon.
-
-IOACK*   Input to Falcon for handshake of IO cycles. IO cycles
-         are extended indefinitely while IOACK* is high. IO
-         cycles terminate when IOACK* is low.
-
-VCC      +5 volts +/- 5% 1a
-
-GND      Logic ground
-
-SGND     Shield ground
-
-+12V     +12 volts +/- 5% 100ma
-
--12V-12 volts +/- 5% 50ma
-
-3.4.3  Expansion IO Slot 
-
-    In addition to the IO/DMA expansion slot, there is also a
+In addition to the IO/DMA expansion slot, there is also a
 more general purpose IO slot. This slot is suitable for IO
 expansion cards which do not require DMA, need more IO space, or
 need 16 bit access.
 
-
-
-
-IO Expansion Connector
-
-
-pin
-signal
-pin
-signal
-pin
-signal
-pin
-signal
-
-
-2
-GND
-4
-+5v
-1
-GND
-3
-+5v
-
-
-6
-+5v
-8
-+5v
-5
-+5v
-7
-+5v
-
-
-10
-GND
-12
-+12V
-9
-GND
-11
-AUXIRQ*
-
-
-14
-+12V
-16
-GND
-13
-GND
-15
-POR*
-
-
-18
--12V
-20
-GND
-17
-RESET*
-19
-GND
-
-
-22
-SP1RI
-24
-GND
-21
-GND
-23
-TCCLK
-
-
-26
-EXTINT*
-28
-DSPRES*
-25
-GND
-27
-BRCLK
-
-
-30
-DSPIEI*
-32
-GND
-29
-GND
-31
-SCSIINT
-
-
-34
-IOD0
-36
-IOD1
-33
-GND
-35
-IOA1
-
-
-38
-IOD2
-40
-IOD3
-37
-IOA2
-39
-IOA3
-
-
-42
-IOD4
-44
-IOD5
-41
-IOA4
-43
-IOA5
-
-
-46
-IOD6
-48
-IOD7
-45
-IOA6
-47
-IOA7
-
-
-50
-IOD8
-52
-IOD9
-49
-IOA8
-51
-IOA9
-
-
-54
-IOD10
-56
-IOD11
-53
-IOA10
-55
-IOA11
-
-
-58
-IOD12
-60
-IOD13
-57
-IOA12
-59
-IOA13
-
-
-62
-IOD14
-64
-IOD15
-61
-IOA14
-63
-IOA15
-
-
-66
-GND
-68
-RTCAS
-65
-GND
-67
-IOAS*
-
-
-70
-RTCDS
-72
-GPIORD*
-69
-IOLDS*
-71
-IOUDS*
-
-
-74
-GPIOWR*
-76
-CLK05
-73
-IORW
-75
-IODTACK*
-
-
-78
-ACIACS
-80
-ECLK
-77
-IOCLK
-79
-GND
-
-
-82
-KBDTCLK
-84
-KBDTXD
-81
-CARTA*
-83
-CARTB*
-
-
-86
-KBDRXD
-88
-SCFG*
-85
-IOCS1*
-87
-IOCS2*
-
-
-90
-KBDIRQ*
-92
-MFP1*
-89
-GND
-91
-MFPCLK
-
-
-94
-MFP2*
-96
-MFPIACK*
-93
-PSGCLK
-95
-GIBC1
-
-
-98
-MFPIRQ*
-100
-OLDDE
-97
-GIDIR
-99
-DIRQSCSI*
-
-
-102
-GPUIRQ*
-104
-D0SEL
-101
-DIRQSCC*
-103
-DSKIRQ*
-
-
-106
-D1SEL
-108
-SCNT
-105
-S0SEL
-107
-SINT
-
-
-110
-SPKON*
-112
-GND
-109
-GND
-111
-PSGAUDIO
-
-
-                                 Table 3.6
-
-3.5 Parallel Printer Port
-
-    The FALCON includes a bi-directional 8-bit parallel printer
+#### Table 3.5 (IO Expansion Connector)
+
+pin | signal | pin | signal | pin | signal | pin | signal
+----|--------|-----|--------|-----|--------|-----|-------
+2   | GND    | 4   | +5v    | 1   | GND    | 3   | +5v
+6   | +5v    | 8   | +5v    | 5   | +5v    | 7   | +5v
+10  | GND    | 12  | +12V   | 9   | GND    | 11  | AUXIRQ*
+14  | +12V   | 16  | GND    | 13  | GND    | 15  | POR*
+18  | -12V   | 20  | GND    | 17  | RESET* | 19  | GND
+22  | SP1RI  | 24  | GND    | 21  | GND    | 23  | TCCLK
+26  | EXTINT*| 28  | DSPRES*| 25  | GND    | 27  | BRCLK
+30  | DSPIEI*| 32  | GND    | 29  | GND    | 31  | SCSIINT
+34  | IOD0   | 36  | IOD1   | 33  | GND    | 35  | IOA1
+38  | IOD2   | 40  | IOD3   | 37  | IOA2   | 39  | IOA3
+42  | IOD4   | 44  | IOD5   | 41  | IOA4   | 43  | IOA5
+46  | IOD6   | 48  | IOD7   | 45  | IOA6   | 47  | IOA7
+50  | IOD8   | 52  | IOD9   | 49  | IOA8   | 51  | IOA9
+54  | IOD10  | 56  | IOD11  | 53  | IOA10  | 55  | IOA11
+58  | IOD12  | 60  | IOD13  | 57  | IOA12  | 59  | IOA13
+62  | IOD14  | 64  | IOD15  | 61  | IOA14  | 63  | IOA15
+66  | GND    | 68  | RTCAS  | 65  | GND    | 67  | IOAS*
+70  | RTCDS  | 72  | GPIORD*| 69  | IOLDS* | 71  | IOUDS*
+74  | GPIOWR*| 76  | CLK05  | 73  | IORW   | 75  | IODTACK*
+78  | ACIACS | 80  | ECLK   | 77  | IOCLK  | 79  | GND
+82  | KBDTCLK| 84  | KBDTXD | 81  | CARTA* | 83  | CARTB*
+86  | KBDRXD | 88  | SCFG*  | 85  | IOCS1* | 87  | IOCS2*
+90  | KBDIRQ*| 92  | MFP1*  | 89  | GND    | 91  | MFPCLK
+94  | MFP2*  | 96  | MFPIACK*|93  | PSGCLK | 95  | GIBC1
+98  | MFPIRQ*| 100 | OLDDE  | 97  | GIDIR  | 99  | DIRQSCSI*
+102 | GPUIRQ*| 104 | D0SEL  | 101 | DIRQSCC*|103 | DSKIRQ*
+106 | D1SEL  | 108 | SCNT   | 105 | S0SEL  | 107 | SINT
+110 | SPKON* | 112 | GND    | 109 | GND    | 111 | PSGAUDIO
+
+## 3.5 Parallel Printer Port
+
+The FALCON includes a bi-directional 8-bit parallel printer
 port similar to most PCs. The data interface is through the
 programmable sound generator (PSG) chip IO port B. It is pinned
 out to a DB-25 connector. The Centronics STROBE signal is
