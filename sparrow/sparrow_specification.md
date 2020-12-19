@@ -9,72 +9,76 @@ Written by   : Moshe Segal, Eran Dariel        ****
 ```
 
 # SPARROW SPECIFICATION
-
 ```
 SPARROW SPEC. REV A10                                       page 1
 ```
 
-REV A10   10/22/91  changes:
+# REV A10   10/22/91  changes:
 
-page 3&10 -added "hooks to connect to the new Atari Universal
-Keyboard Controller."
--changed ACSI to SCSI
+## page 2
 
-page 4-change default from 250ns to 125ns EPROMs/ROMs
+- 68000 changed to 68030.
 
-page 6-bus error timeout set to 16us for both 8MHz and
-16MHz. programmable to 32us.
+## page 3
 
-page 7-changed confi. switch bit 5 from 0 to 1 for - not
-quad density and from 1 to 0 for  -  quad density
-floppy.
+- 68881 FPU & 56001 DSP added.
 
-page 7-changed ACSI to SCSI 50pin connector.
+## page 3&10
 
-page 8-omit external FDD.
+- added "hooks to connect to the new Atari Universal Keyboard Controller."
 
-page 11-added "each line also starts on even-word
-boundary"
+- changed ACSI to SCSI
 
-page 14-change Video connectors to a single VGA type
-connector. Audio is not sent out to the monitor.
-The Sparrow has an internal speaker.
+## page 4
 
-page 15-Change Audio out connector from RCA Phono to
-"Walkman" micro-stereo connector.
+- change default from 250ns to 125ns EPROMs/ROMs
 
-pages 18 - 22Memory map changes:
-F00000 - F0000F  (IDE)  corrected to F00000 -
-F0003F
+## page 6
+
+- bus error timeout set to 16us for both 8MHz and 16MHz. programmable to 32us.
+
+## page 7
+
+- changed confi. switch bit 5 from 0 to 1 for not quad density and from 1 to 0 for quad density floppy.
+
+- changed ACSI to SCSI 50pin connector.
+
+## page 8
+
+- omit external FDD.
+
+## page 9
+
+- Parallel port. ACK goes to COMBO device, not PSG IOA7.
+
+## page 11
+
+- added "each line also starts on even-word boundary"
+
+## page 14
+
+- change Video connectors to a single VGA type connector. Audio is not sent out to the monitor. The Sparrow has an internal speaker.
+
+- I/O map
+    - vv bits in FF8006 changed.
+    - Bit R in FF8266 added.
+    - Bits vv in VMC changed.
+
+## page 15
+
+- Change Audio out connector from RCA Phono to "Walkman" micro-stereo connector.
+
+## pages 18 - 22
+
+Memory map changes:
+
+F00000 - F0000F  (IDE)  corrected to F00000 - F0003F
 FA40 - FA5F  Assigned to FP Co-Proc
 8001 - changed
 8007 - Bus error and power-fail options added
 8266 - VGA bit removed
 8288 - Vsync rise corrected to Hsync rise
-82C0 - bit assignments inverted, burst time option
-added
-
-
-page 2-68000 changed to 68030.
-
-page 3-68881 FPU & 56001 DSP added.
-
-page 9-Parallel port. ACK goes to COMBO device, not PSG
-IOA7.
-
-page 14-Video connector changed.
-
-
-
-
-I/O map-vv bits in FF8006 changed.
-          Bit R in FF8266 added.
-          Bits vv in VMC changed.
-
-
-
-
-
+82C0 - bit assignments inverted, burst time option added
 
 ```
 SPARROW SPEC. REV A10                                       page 2
