@@ -948,104 +948,42 @@ printer is routed to MFP-1 GPIP0 to permit interrupt driven
 printing. The GP IO register at IO+8805h provides the remaining
 signals.
 
+#### Table 3.6 (Parallel Port Pinout)
 
-
-
-Parallel Port Pinout
-
-
-Pin
-Signal
-
-
-1
-Strobe (STB-)
-
-
-2
-Data0
-
-
-3
-Data1
-
-
-4
-Data2
-
-
-5
-Data3
-
-
-6
-Data4
-
-
-7
-Data5
-
-
-8
-Data6
-
-
-9
-Data7
-
-
-10
-Acknowledge (ACK-)
-
-
-11
-Busy (BUSY-)
-
-
-12
-Paper out (PE)
-
-
-13
-Select (SLCT)
-
-
-14
-Autofeed (AFD-)
-
-
-15
-Error (ERROR-)
-
-
-16
-Init (INIT-)
-
-
-17
-Select In (SLCTIN-)
-
-
-18-25
-Ground
-
-
-                                 Table 3.7
-
+Pin | Signal
+----|-------
+1   | Strobe (STB-)
+2   | Data0
+3   | Data1
+4   | Data2
+5   | Data3
+6   | Data4
+7   | Data5
+8   | Data6
+9   | Data7
+10  | Acknowledge (ACK-)
+11  | Busy (BUSY-)
+12  | Paper out (PE)
+13  | Select (SLCT)
+14  | Autofeed (AFD-)
+15  | Error (ERROR-)
+16  | Init (INIT-)
+17  | Select In (SLCTIN-)
+18-25 | Ground
 
 The GP IO register parallel port bits are defined as follows:
 
-bit 0    ro   ERROR-   state of pin 15
-bit 1    ro   SLCT state of pin 13
-bit 2    ro   PE       state of pin 12
-bit 3    rw            reserved
-bit 4    wo   AFD- sets the output state of pin 14
-bit 5    wo   INIT-    sets the output state of pin 16
-bit 6    rw            reserved
+    bit 0    ro   ERROR-    state of pin 15
+    bit 1    ro   SLCT      state of pin 13
+    bit 2    ro   PE        state of pin 12
+    bit 3    rw             reserved
+    bit 4    wo   AFD-      sets the output state of pin 14
+    bit 5    wo   INIT-     sets the output state of pin 16
+    bit 6    rw             reserved
 
-3.6 Keyboard Interface
+## 3.6 Keyboard Interface
 
-    The FALCON keyboard interface is completely compatible with
+The FALCON keyboard interface is completely compatible with
 the ST/MEGA computers. The keyboard is equipped with a
 combination mouse/joystick port and a joystick only port. The
 keyboard transmits encoded make/break key scan codes (with two
@@ -1056,181 +994,54 @@ Asynchronous Communications Interface Adapter (ACIA). The data
 transfer rate is 7812.5 bits/second. (See the Atari, Intelligent
 Keyboard (ikbd) Protocol, February 26, 1985.)
 
-    Additional circuitry has been included to support flow
+Additional circuitry has been included to support flow
 control of keyboard data. The keyboard may monitor the IKBD UART
 receive interrupt to inhibit sending data when it is active. The
 keyboard may also inhibit the IKBD uart transmit clock via a
 control signal to pause the data flow from FALCON.
 
+# Section 4   Video Subsystem
 
-
-Section 4   Video Subsystem
-
-    The FALCON video subsystem is designed to extend the
+The FALCON video subsystem is designed to extend the
 existing ST and TT modes.  Additional modes are available on the
 FALCON that allow more colors and larger screen sizes. This
 subsystem is one of the basic components required to support the
 industry standard X Windows windowing system allowing the FALCON
 to exist as a fully-compatible X Windows workstation.
 
-4.1 Video Configuration
+## 4.1 Video Configuration
 
+#### Table 4.1 (Compatible Video Modes)
 
+mode register | resolution | planes | palette | colors/DAC
+--------------|------------|--------|---------|-----------
+xxFF8260      | ST modes
+00            | 320x200    | 4      | 16      | 512/3bit
+01            | 640x200    | 2      | 4       | 512/3bit
+10            | 640x400    | 1      | 2       | 512/3bit
+xxFF8262      | TT modes   |
+000           | 320x200    | 4      | 16      | 4096/4bit
+001           | 640x200    | 2      | 4       | 4096/4bit
+010           | 640x400    | 1      | 2       | 4096/4bit
+100           | 640x480    | 4      | 16      | 4096/4bit
+110           | 1280x960   | 1      |monochrome|4096/4bit
+111           | 320x480    | 8      | 256     | 4096/4bit
 
-
-mode
-register
-resolution
-planes
-palette
-colors/DAC
-
-
-xxFF8260
-ST modes
-
-
-00
-320x200
-4
-16
-512/3bit
-
-
-01
-640x200
-2
-4
-512/3bit
-
-
-10
-640x400
-1
-2
-512/3bit
-
-
-xxFF8262
-TT modes
-
-
-000
-320x200
-4
-16
-4096/4bit
-
-
-001
-640x200
-2
-4
-4096/4bit
-
-
-010
-640x400
-1
-2
-4096/4bit
-
-
-100
-640x480
-4
-16
-4096/4bit
-
-
-110
-1280x960
-1
-monochrome
-4096/4bit
-
-
-111
-320x480
-8
-256
-4096/4bit
-
-
-                     Table 4.1 Comapatible Video Modes
-
-
-
-
-mode
-register
+#### Table 4.2 (Falcon Video Modes)
+                     
+mode register | resolution | bits/pixel | palette | colors/DAC
+--------------|------------|------------|---------|-----------
 (xxFF8268)
-resolution
-bits/
-pixel
-palette
-colors/DAC
+000           | XxY        | 1          |monochrome|16M/8bit
+001           | XxY        | 2          | 2       | 16M/8bit
+010           | XxY        | 4          | 16      | 16M/8bit
+011           | XxY        | 8          | 256     | 16M/8bit
+101           | XxY        | 24         | --      | 16M/8bit
+110           | XxY        | 8/24       | --      | 16M/8bit
+100           | XxY        | 4          | 16      | 4096/4bit
+111           | XxY        | 1          |monochrome|4096/4bit
 
-
-000
-XxY
-1
-monochrome
-16M/8bit
-
-
-001
-XxY
-2
-2
-16M/8bit
-
-
-010
-XxY
-4
-16
-16M/8bit
-
-
-011
-XxY
-8
-256
-16M/8bit
-
-
-101
-XxY
-24
---
-16M/8bit
-
-
-110
-XxY
-8/24
---
-16M/8bit
-
-
-100
-XxY
-4
-16
-4096/4bit
-
-
-111
-XxY
-1
-monochrome
-4096/4bit
-
-
-                       Table 4.2 Falcon Video Modes
-
-    The modes are set through the respective (ST, TT, or FALCON)
+The modes are set through the respective (ST, TT, or FALCON)
 video mode register. In the ST mode, 16 word-wide registers
 comprise the ST color palette (also known as the Color LookUp
 Table - CLUT). Contained in each entry are nine-bits of color:
@@ -1240,7 +1051,7 @@ entry. Through bank select bits in the TT mode register, 16 banks
 of 16 ST CLUT registers can be mapped into the ST CLUT address
 space.
 
-    Mode 00 (320x200x4) can index all sixteen ST palette colors,
+Mode 00 (320x200x4) can index all sixteen ST palette colors,
 while mode 01 (640x200x2) can index just the first four (Reg0 -
 Reg3) palette colors. The duochrome mode (10 - 640x400x1) uses
 two entries of the TT color palette (foreground, Reg255 and
@@ -1249,7 +1060,7 @@ video controlled by bit 0 of the ST palette Reg 0 or bit 1 of the
 TT palette register 0. Color palette 0 is also used to assign a
 border color while in multi-plane mode.
 
-    Additional resolution modes are available by programming the
+Additional resolution modes are available by programming the
 video through the TT shift mode register. In these modes, there
 are a maximum of 256 TT color palette registers each containing
 12-bits of color: 4-bits each for red, green, and blue.
@@ -1261,12 +1072,12 @@ the TT color palette for use in ST modes. This allows modes 000,
 simply setting the palette bank. Only mode 111 (320x480x8) can
 index all 256 registers.
 
-    All accesses to either the ST or TT shift mode registers
+All accesses to either the ST or TT shift mode registers
 will program the RAMDAC for the appropriate video mode  Likewise,
 all accesses to either ST or TT color palettes will update the
 RAMDAC color look-up tables appropriately.
 
-    It should be noted that even though the ST, TT, and FALCON
+It should be noted that even though the ST, TT, and FALCON
 color palettes are referenced as if they are separate entities,
 they are actually implemented as different access paths to the
 same physical storage. The color palette memory physically exists
@@ -1284,25 +1095,24 @@ of the three paths change the same physical memory so a screen
 displayed in a FALCON video mode would be affected by writes to
 the ST palette.
 
-    Falcon modes 0,1,2,3,4, and 7 support compatible (i.e., ST
+Falcon modes 0,1,2,3,4, and 7 support compatible (i.e., ST
 and TT) video modes of 2,4,16, and 256 color screen depths.
 Because all ST and TT modes require that data be stored in planar
 format, Falcon supports storage of video data in either planar or
 packed format. The new screen depths Falcon supports must be have
 data stored in packed pixel format as specified in Section 4.2.1. 
 
+   Note: Modes 000 and 111 as well as 010 and 100 are identical
+   with respect to palette access, i.e., the same addresses are
+   used for foreground and background. However, modes 111 and
+   100, which are high res modes, only allow 4096 (16x16x16)
+   different possible values for background and foreground
+   colors while the low res modes 000 and 010 allow 16M
+   (256x256x256). High res modes must program the upper and
+   lower nybbles of each CLUT entry with identical values,
+   hence 4096 colors instead of 16M.
 
-    Note: Modes 000 and 111 as well as 010 and 100 are identical
-    with respect to palette access, i.e., the same addresses are
-    used for foreground and background. However, modes 111 and
-    100, which are high res modes, only allow 4096 (16x16x16)
-    different possible values for background and foreground
-    colors while the low res modes 000 and 010 allow 16M
-    (256x256x256). High res modes must program the upper and
-    lower nybbles of each CLUT entry with identical values,
-    hence 4096 colors instead of 16M.
-
-     Falcon mode 000 and 111 access only two palette entries:
+Falcon mode 000 and 111 access only two palette entries:
 entries 254 and 255. This not affected by the bank select. Video
 inversion can be turned on and off by setting or clearing either
 ST palette entry 0 bit 0 or TT palette entry 0 bit 1. The table
@@ -1315,14 +1125,14 @@ below defines how inversion affects access to the palette.
 
     This is identical to ST and TT duochrome modes.
 
-    Border color selection from the palette is identical to that
+Border color selection from the palette is identical to that
 in the corresponding TT modes. Modes which allow bank selection
 use the first entry in the selected bank. Eight bit and true
 color modes use palette entry 0 for borders. Duochrome modes use
 palette entry 254 for border color regardless of whether or not
 inverse video is enabled.
 
-    Four new video modes are supported in FALCON: a true color
+Four new video modes are supported in FALCON: a true color
 mode (16M colors) and a separate true color mode with 256-color
 overlays are supported in resolutions up to and including VGA in
 33 Mhz systems; a 16 color high resolution mode (1280 x 960); and
@@ -1330,19 +1140,20 @@ an XGA mode which provides 65K colors with half the memory
 bandwidth of the true color modes. Note the XGA and true color
 modes only support packed pixel formats. 
 
-    XGA mode provides 65,536 colors. The data format consists of
+XGA mode provides 65,536 colors. The data format consists of
 5 bits of red, 6 bits of green, and 5 of blue. A 64 bit "phrase"
 of data from video memory is expanded into 4, 32-bit true color
 pixels in the Funnel ASIC. Therefore, display of XGA images,
 including CLUT access, are identical to that of mode 5 true color
 except that the number of accessible palette entries is less.
 
-    The true color mode, mode 101, requires 24 bits of data for
+The true color mode, mode 101, requires 24 bits of data for
 each pixel displayed; one byte for each color. This data provides
 an 8 bit address for each of the three CLUTs in the RAMDAC. The
 CLUTs can be programmed to provide gamma correction for a
 specific monitor.
-    The "pseudo/true color" mode, Falcon mode 110, requires 32
+
+The "pseudo/true color" mode, Falcon mode 110, requires 32
 bits of data per pixel. Eight bits per color provide data
 directly to the DACs for the generation of 16 million colors. 
 The extra byte of data provides for one of 256 colors of overlay.
@@ -1356,57 +1167,59 @@ the overhead of altering the true color data which comprises the
 background. It also provides a way to turn overlays off and on
 with a single write to alter the mask value.
 
-4.1.1  Compatible Mode Support
+### 4.1.1  Compatible Mode Support
 
-    Video compatibility support for ST and TT applications
+Video compatibility support for ST and TT applications
 involves two areas of Falcon's video subsystem.
-    Video images which are stored in RAM in planar fashion are
+
+Video images which are stored in RAM in planar fashion are
 "packed" by hardware in the Funnel ASIC into 32-bit pixel words.
 Thus, pixel data going into the RAMDAC is always organized as n
 packed pixels within each pixel word.
-    Within the RAMDAC, data steering within the processor port
+
+Within the RAMDAC, data steering within the processor port
 maps data bits to the CLUTS in the following manner:
 
-    In the  ST Color Palette, only three bits per color are
-    defined. Therefore, each three bit color pattern is written
-    to bit ranges 7-5, 4-2, and 1-0 of the appropriate CLUT
-    entry within the selected bank as determined by control
-    register bits 3 through 0. For example, a bit pattern of 101
-    will be written as 10110110. This mapping ensures true black
-    and white levels on the DACs. Thus, if the processor
-    initializes an entry as full scale, which is 7h in this
-    mode, a value of FF will be entered.
+   In the  ST Color Palette, only three bits per color are
+   defined. Therefore, each three bit color pattern is written
+   to bit ranges 7-5, 4-2, and 1-0 of the appropriate CLUT
+   entry within the selected bank as determined by control
+   register bits 3 through 0. For example, a bit pattern of 101
+   will be written as 10110110. This mapping ensures true black
+   and white levels on the DACs. Thus, if the processor
+   initializes an entry as full scale, which is 7h in this
+   mode, a value of FF will be entered.
 
-    For accesses to the TT Color Palette, four bits/entry are
-    defined and must be written to both nybbles of each
-    byte-wide entry. This configuration will support true black
-    and white levels for TT modes. Since the TT palette is 256
-    colors, bank select values in the control register do not
-    affect programming of CLUTs within this address space.
+   For accesses to the TT Color Palette, four bits/entry are
+   defined and must be written to both nybbles of each
+   byte-wide entry. This configuration will support true black
+   and white levels for TT modes. Since the TT palette is 256
+   colors, bank select values in the control register do not
+   affect programming of CLUTs within this address space.
 
-    Initializing the CLUTs for operation in the high resolution
-    FALCON modes requires that each color value written to the
-    FALCON palette have identical upper and lower nybbles. This
-    can be more easily done through the TT palette address
-    range. Because of the nybble duplication used for TT palette
-    initialization in the RAMDAC , the two 4 bit DACs in each
-    color pair can be initialized with the same value, as
-    required in high resolution modes. Thus, one word write will
-    initialize all three colors within a specific entry when
-    using the TT palette, whereas two words (and two bus cycles)
-    would be required when writing to the FALCON palette. 
+   Initializing the CLUTs for operation in the high resolution
+   FALCON modes requires that each color value written to the
+   FALCON palette have identical upper and lower nybbles. This
+   can be more easily done through the TT palette address
+   range. Because of the nybble duplication used for TT palette
+   initialization in the RAMDAC , the two 4 bit DACs in each
+   color pair can be initialized with the same value, as
+   required in high resolution modes. Thus, one word write will
+   initialize all three colors within a specific entry when
+   using the TT palette, whereas two words (and two bus cycles)
+   would be required when writing to the FALCON palette. 
 
-    Accesses to Falcon color palette are direct one-to-one
-    mapped.
+   Accesses to Falcon color palette are direct one-to-one
+   mapped.
 
-    Switching color banks or changing palette values "on the
-    fly" during active video will probably cause the video to
-    "sparkle" as the CLUT rams are single ported. To avoid this,
-    palette changes should be made during blanking intervals.
+   Switching color banks or changing palette values "on the
+   fly" during active video will probably cause the video to
+   "sparkle" as the CLUT rams are single ported. To avoid this,
+   palette changes should be made during blanking intervals.
 
-4.2 Video RAM
+## 4.2 Video RAM
 
-    In ST and TT video modes, display memory is configured as
+In ST and TT video modes, display memory is configured as
 logical planes (1, 2, 4, or 8) of interwoven contiguous words
 forming a 32,000 byte (for ST modes) or 153,600 byte (for TT
 modes) physical plane. The starting address can be set to any 8
