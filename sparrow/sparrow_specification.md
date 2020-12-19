@@ -1634,79 +1634,52 @@ steps.
 kHz.
 
 
-5.3.   - Musical Instrument Digital Interface (MIDI) -
+##### 5.3. Musical Instrument Digital Interface (MIDI)
 
 The  MIDI  allows  the  integration  of  the  Sparrow series 
-withmusic
-    synthesizers,  sequencers, drum boxes, and other devices 
-possessing
-    MIDI  interfaces.   High speed  (31.25  Kbaud) serial 
-communication
-    of keyboard and program information is provided by two 
-ports, 
-MIDI
-    OUT and MIDI IN  (the  MIDI  OUT also includes MIDI THRU
+withmusic synthesizers,  sequencers, drum boxes, and other devices 
+possessing MIDI  interfaces.   High speed  (31.25  Kbaud) serial 
+communication of keyboard and program information is provided by two 
+ports, MIDI OUT and MIDI IN  (the  MIDI  OUT also includes MIDI THRU
 data).
 
 The  MIDI  communicates through the MC6850  Asynchronous 
-Communications
-    Interface Adapter (ACIA) to the system bus.   The data
-transfer
-rate
-    is a constant 31.25 Kbaud of 8-bit  asynchronous data.
+Communications Interface Adapter (ACIA) to the system bus.   The data
+transfer rate is a constant 31.25 Kbaud of 8-bit  asynchronous data.
 
 The MIDI OUT/THRU uses a  circular  DIN  5  pin  S  connector 
-with 
-the
-    following pin assignment:
+with the following pin assignment:
 
         1 - thru transmit data
         2 - shield ground
         3 - thru loop return
         4 - out transmit data
         5 - out loop return
-
-
-
-
-
-
-
-
 ```
 SPARROW SPEC. REV A10                                       page 20
 ```
-
 The MIDI IN uses a circular DIN 5 pin S connector with the
-following pin
-    assignment:
+following pin assignment:
 
         4 - in receive data
         5 - in loop return
 
-
-
-
- 6.     - Memory, I/O, & Interrupt Map  -
+####  6. Memory, I/O, & Interrupt Map
 
             address         size            use
-            000000-000007   W               ROM (image of first 8
-bytes of
-                                            main ROM, supervisor
-mode, read
+
+            000000-000007   W               ROM (image of first 8 bytes of
+                                            main ROM, supervisor mode, read
                                             only)
 
             000008-DFFFFF   DW              "dual-purpose" RAM
-                                            (memory in the range
-000008-
-                                             0007FF is only
-accessible in
+                                            (memory in the range 000008-
+                                             0007FF is only accessible in
                                              supervisor mode)
 
             E00000-EFFFFF   W               Main ROM
 
-            F00000-F0003F   W               IDE (Inernal Hard
-Disk)
+            F00000-F0003F   W               IDE (Inernal Hard Disk)
 
             F00010-F9FFFF   -               <reserved>
 
@@ -1716,11 +1689,9 @@ Disk)
 
             FF8000-FFFFFF   W               SP & ST I/O Space
 
+##### SP/ST I/O MAP   (Offset within SP image FF8000)
 
-
-              SP/ST I/O MAP   (Offset within SP image FF8000)
-
-             - Offset -               - Use -
+             - Offset -        - Use -
 
             8000-8001          Memory Controller
             8002-8005          <reserved>
@@ -1736,9 +1707,6 @@ Disk)
             8926-895F          <reserved>
             8960-8963          RTC
             8964-89FF          <reserved>
-
-
-
 ```
 SPARROW SPEC. REV A10                                       page 21
 ```
@@ -1746,8 +1714,7 @@ SPARROW SPEC. REV A10                                       page 21
             8A40-8C7F          <reserved>
             8C80-8C87          SCC
             8C88-91FF          <reserved>
-            9200-9201          Configuration Switches + Fire
-Buttons
+            9200-9201          Configuration Switches + Fire Buttons
             9202-9203          Joystick ports
             9204-920F          <reserved>
             9210-9217          Paddle
@@ -1764,531 +1731,314 @@ Buttons
             FC04-FC07          MIDI ACIA
             FC08-FFFF          <reserved>
 
+##### LOCAL I/O DEVICES
 
-               - LOCAL I/O DEVICES  -
+###### MEMORY CONTROLLER & GENERAL CONTROL
 
-             - MEMORY CONTROLLER & GENERAL CONTROL -
+            8001   RW    Memory Configuration
 
-            8001  RW    Memory Configuration
+                         B3-B0 Memory control
 
-                        B3-B0 Memory control
+                         (Dummy register, has no effect)
 
-                        (Dummy register, has no effect)
+            8006   R    vvmm rrbf   Configuration Switches
 
-            8006   R    vvmm rrbf  Configuration Switches
+                                    f -  0 - 0 wait state DRAMs
+                                         1 - 1 wait state DRAMs
+                                    b -  0 - 16 bits video bus
+                                         1 - 32 bit video bus
+                                    rr -  00 - 0 wait state ROMs
+                                          01 - 1 wait state ROMs
+                                          10 - 2 wait state ROMs
+                                          11 - reserved
+                                    mm -  00 - 256K type DRAMs
+                                          01 - 1M type DRAMs
+                                          10 - 4M type DRAMs
+                                          11 - <reserved>
+                                    vv -  00 - ST monochrome monitor
+                                          01 - ST color
+                                          10 - VGA monitor
+                                          11 - TV
 
-                                f -  0 - 0 wait state DRAMs
-                                     1 - 1 wait state DRAMs
-                                b -  0 - 16 bits video bus
-                                     1 - 32 bit video bus
-                               rr -  00 - 0 wait state ROMs
-                                     01 - 1 wait state ROMs
-                                     10 - 2 wait state ROMs
-                                     11 - reserved
-                               mm -  00 - 256K type DRAMs
-                                     01 - 1M type DRAMs
-                                     10 - 4M type DRAMs
-                                     11 - <reserved>
-                               vv -  00 - ST monochrome monitor
-                                     01 - ST color
-                                     10 - VGA monitor
-                                     11 - TV
-
-                              **  vv are supplied by
-videoconnector
-
-
-
-
+                                    **  vv are supplied by videoconnector
 ```
 SPARROW SPEC. REV A10                                       page 22
 ```
+            8007   RW   dvim bs_c   CPU Clock Select and misc controls
+                                    c - 0 - 8 Mhz
+                                        1 - 16 Mhz
+                                    s - 0 - Blitter clock 8Mhz
+                                        1 - Blitter clock CPUCLK
+                                    b - 0 - Blitter Enabled
+                                        1 - Blitter Disabled
+                                    m - 0 - MCUG Enabled
+                                        1 - MCUG Disabled (only if COMBO TEST pin HI)
+                                    i - 0 - ADDR BUS ERROR Disabled (default)
+                                        1 - ADDR BUS ERROR Enabled
+                                    v - PWF (Powerfail) - Reset by POR only
+                                    d - 0 - Bus Error timeout = 16us
+                                        1 - Bus Error timeout = 32us
 
-            8007   RW   dvim bs_c   CPU Clock Select and misc
-controls
+                                    * After power up this register is cleared to 0's.
 
-                          c - 0 - 8 Mhz
-                              1 - 16 Mhz
-                          s - 0 - Blitter clock 8Mhz
-                              1 - Blitter clock CPUCLK
-                          b - 0 - Blitter Enabled
-                              1 - Blitter Disabled
-                          m - 0 - MCUG Enabled
-                              1 - MCUG Disabled (only if COMBO
-TEST
-pin HI)
-                          i - 0 - ADDR BUS ERROR Disabled
-(default)
-                              1 - ADDR BUS ERROR Enabled
-                          v - PWF (Powerfail) - Reset by POR only
-                          d - 0 - Bus Error timeout = 16us
-                              1 - Bus Error timeout = 32us
-
-                          * After power up this register is
-cleared
-to 0's.
-
-             - SP/ST VIDEO SUBSYSTEM -
+###### SP/ST VIDEO SUBSYSTEM
 
             8200   RW   ---- ----  xxxx xxxx   Video Base High
             8202   RW   ---- ----  xxxx xxxx   Video Base Mid
-            8204   RW   ---- ----  xxxx xxxx   Video Address
-Counter High
-            8206   RW   ---- ----  xxxx xxxx   Video Address
-Counter Mid
-            8208   RW   ---- ----  xxxx xxx0   Video Address
-Counter Low
+            8204   RW   ---- ----  xxxx xxxx   Video Address Counter High
+            8206   RW   ---- ----  xxxx xxxx   Video Address Counter Mid
+            8208   RW   ---- ----  xxxx xxx0   Video Address Counter Low
+
             820A   RW   ---- --ts              SP  Sync Mode
-                                               t : 0 - # of equal
-pulses set
-for NTSC
-                                                   1 - # of equal
-pulses set
-for PAL
-                                               s : 0 - INT  1 -
-EXT
-                                                   (Genlock
-32MHzclock)
+                                               t : 0 - # of equal pulses set for NTSC
+                                                   1 - # of equal pulses set for PAL
+                                               s : 0 - INT ,  1 - EXT
+                                                   (Genlock 32MHz clock)
+
             820B   WO              0000 0000   <reserved>
             820C   RW   ---- ----  xxxx xxx0   Video Base Low
             820E   RW   ---- ---x  xxxx xxxx   Horz. offset
-            8210   RW   ---- --xx  xxxx xxxx   Displayed Line
-Width
-Register
+            8210   RW   ---- --xx  xxxx xxxx   Displayed Line Width Register
 
             8212 - 823F                        <reserved>
 
-            8240   RW   ---- Rrrr  Gggg Bbbb    STE  Color
-Palette
-Reg0
+            8240   RW   ---- Rrrr  Gggg Bbbb   STE  Color Palette Reg0
                                                (bit0 is mono inv)
 
-            8242   RW   ---- Rrrr  Gggg Bbbb    STE  Color
-Palette
-Reg1
-            ...                                 ....
-            ...                                 ....
-            825E   RW   ---- Rrrr  Gggg Bbbb    STE  Color
-Palette
-Reg15
+            8242   RW   ---- Rrrr  Gggg Bbbb   STE  Color Palette Reg1
+            ...                                ....
+            ...                                ....
+            825E   RW   ---- Rrrr  Gggg Bbbb   STE  Color Palette Reg15
 
-            8260   RW   ---- --ss  ---- ----    ST  Shift Mode:
-                                               00 320x200, 4
-plane
-                                               01 640x200, 2
-plane
-                                               10 640x400, 1
-plane
+            8260   RW   ---- --ss  ---- ----   ST Shift Mode:
+                                               00 320x200, 4 plane
+                                               01 640x200, 2 plane
+                                               10 640x400, 1 plane
                                                11 <reserved>
-
-
-
-
 ```
 SPARROW SPEC. REV A10                                       page 23
 ```
+            8264   RW   ---- ----  0000 xxxx   Horizontal Pixel Scroll
 
-
-            8264   RW   ---- ----  0000 xxxx   Horizontal Pixel
-Scroll
-
-            8266   RW   ---- -oct  Rhvm bbbb   SP  Shift Mode:
+            8266   RW   ---- -oct  Rhvm bbbb   SP Shift Mode:
                                                t - 1 XGA  Color
-                                               h - 0 - internal
-hsync
-                                                   1 - external
-hsync
-                                               v - 0 - internal
-vsync
-                                                   1 -
-externalvsync
-                                               m - bits/pixel 0-4
-bits/pxl
-                                                              1-8
-nits/pxl
-                                               c - Pixel control
-in
-XGA
-                                               bbbb : SP palette
-bank
-                                               o - Mono VGA
-monitor
-                                               R - RAM access
-inhibit during
-                                               video display
+                                               h - 0 - internal hsync
+                                                   1 - external hsync
+                                               v - 0 - internal vsync
+                                                   1 - externalvsync
+                                               m - bits/pixel 0-4 bits/pxl
+                                                              1-8 bits/pxl
+                                               c - Pixel control in XGA
+                                               bbbb - SP palette bank
+                                               o - Mono VGA monitor
+                                               R - RAM access inhibit during video display
 
             826A - 827F                        <reserved>
 
-            8280   R    ---- ---x  xxxx xxxx   Horizontal Counter
-(HC)
-            8282   RW   ---- ---x  xxxx xxxx   Horz. Half line
-total (HHT)
-            8284   RW   ---- ---x  xxxx xxxx   Horz. Blank Begin
-(HBB)
-            8286   RW   ---- ---x  xxxx xxxx   Horz. Blank End  
-(HBE)
-            8288   RW   ---- --hx  xxxx xxxx   Horz. Display
-Begin
-(HDB)
-                                                     h=0 - VREQ
-occurs
-                                                     after Hsync
-rise.
-                                                     h=1 - VREQ
-occurs
-                                                     before Hsync
-rise.
-            828A   RW   ---- ---x  xxxx xxxx   Horz. Display End
-(HDE)
-            828C   RW   ---- ---x  xxxx xxxx   Horz. Sync Start
-(HSS)
-            828E   RW   ---- ---x  xxxx xxxx   Horz. Field Sync
-End
-(HFS)
-            8290   RW   ---- ---x  xxxx xxxx   Horz. Equalization
-End (HEE)
+            8280   R    ---- ---x  xxxx xxxx   Horizontal Counter (HC)
+            8282   RW   ---- ---x  xxxx xxxx   Horz. Half line total (HHT)
+            8284   RW   ---- ---x  xxxx xxxx   Horz. Blank Begin (HBB)
+            8286   RW   ---- ---x  xxxx xxxx   Horz. Blank End (HBE)
+            8288   RW   ---- --hx  xxxx xxxx   Horz. Display Begin (HDB)
+                                                     h=0 - VREQ occurs after Hsync rise.
+                                                     h=1 - VREQ occurs before Hsync rise.
+            828A   RW   ---- ---x  xxxx xxxx   Horz. Display End (HDE)
+            828C   RW   ---- ---x  xxxx xxxx   Horz. Sync Start (HSS)
+            828E   RW   ---- ---x  xxxx xxxx   Horz. Field Sync End (HFS)
+            8290   RW   ---- ---x  xxxx xxxx   Horz. Equalization End (HEE)
 
             8292 - 829F                        <reserved>
 
-            82A0   R    ---- -xxx  xxxx xxxx   Vertical Counter
-(VC)
-            82A2   RW   ---- -xxx  xxxx xxxx   Vertical Field
-Total
-(VFT)            82A4   RW   ---- -xxx  xxxx xxxx 
- Vert. Blank Begin 
-(VBB)
-            82A6   RW   ---- -xxx  xxxx xxxx   Vert. Blank End   
-(VBE)
-            82A8   RW   ---- -xxx  xxxx xxxx   Vert. Display
-Begin
-(VDBO)
-            82AA   RW   ---- -xxx  xxxx xxxx   Vert. Display End 
+            82A0   R    ---- -xxx  xxxx xxxx   Vertical Counter (VC)
+            82A2   RW   ---- -xxx  xxxx xxxx   Vertical Field Total (VFT)
+            82A4   RW   ---- -xxx  xxxx xxxx   Vert. Blank Begin  (VBB)
+            82A6   RW   ---- -xxx  xxxx xxxx   Vert. Blank End (VBE)
+            82A8   RW   ---- -xxx  xxxx xxxx   Vert. Display Begin (VDB)
+            82AA   RW   ---- -xxx  xxxx xxxx   Vert. Display End (VDE)
+            82AC   RW   ---- -xxx  xxxx xxxx   Vert. Sync Begin (VSS)
 
-(VDEO)
-            82AC   RW   ---- -xxx  xxxx xxxx   Vert. Sync Begin 
-(VSS)
-
-            * LSB of VFT determines if interlace is on. 0 - 0n ,
-1
-- off.
+            * LSB of VFT determines if interlace is on. 0 - 0n , 1 - off.
 
             82AE - 82BF                        <reserved>
-
-
-
-
-
-
-
-
-
-
 ```
 SPARROW SPEC. REV A10                                       page 24
 ```
 
-            82C0   RW   ---- ---o  bhvc esvv   Video Master
-Control
-                                |  |||| ||||_ 00 - ST monochrome
-monitor
-                                |  |||| |||__ 01 - ST color
-                                |  |||| ||    10 - VGA monitor
-                                |  |||| ||    11 - TV
+            82C0   RW   ---- ---o  bhvc esvv   Video Master Control
+                                |  |||| ||||___00 - ST monochrome monitor
+                                |  |||| |||____01 - ST color
+                                |  |||| ||     10 - VGA monitor
+                                |  |||| ||     11 - TV
                                 |  |||| ||
-                                |  |||| ||___ 0 - Primary clock
-normally 32MHz
-                                |  |||| |     1 - Secondary clock
-normally
-                                25MHz
+                                |  |||| ||_____0 - Primary clock normally 32MHz
+                                |  |||| |      1 - Secondary clock normally 25MHz
                                 |  |||| |
                                 |  |||| |
-                                |  |||| | ____ 0 - equalization
-pulses on
-                                |  ||||        1 - equalization
-pulses off
-                                |  ||||________0 -
-Csync=Hsync*Vsync                               
-|  |||         1 -
-Csync=/(Hsync*Vsync)
+                                |  |||| | ____ 0 - equalization pulses on
+                                |  ||||        1 - equalization pulses off
+                                |  ||||________0 - Csync=Hsync*Vsync                               
+                                |  |||         1 - Csync=/(Hsync*Vsync)
                                 |  |||_________0 - Vsync=Vs
                                 |  ||          1 - Vsync=/(Vs)
                                 |  ||__________0 - Hsync=Hs
                                 |  |           1 - Hsync=/(Hs)
                                 |  |
-                                |  |__________ 0 - 16 bit video
-bus
-                                |              1 - 32 bit video
-bus
+                                |  |___________0 - 16 bit video bus
+                                |              1 - 32 bit video bus
                                 |
-                                |_____________ 0 - 4us Burst Time
+                                |______________0 - 4us Burst Time
                                                1 - 2us    - " -
 
-            82C2   RW   ---- ----  ---- mmir   Video timing
-control 
-(VC0)
-                                        ||||___1 - Repeat Lines
-once
+            82C2   RW   ---- ----  ---- mmir   Video timing control (VC0)
+                                        ||||___1 - Repeat Lines once
                                         |||    0 - Do not repeat
-                                        |||____1 - Skip lines
-Mode
-on
-                                        ||     0 - Skip lines
-Mode
-off
+                                        |||____1 - Skip lines Mode on
+                                        ||     0 - Skip lines Mode off
                                         ||_____00 - 8MHz Dotclk
-                                        |______01 - 16/12.5MHz
-Dotclk
-                                               10 - 32/25MHz
-Dotclk
+                                        |______01 - 16/12.5MHz Dotclk
+                                               10 - 32/25MHz Dotclk
 
-            * In STe mode, writing into ST shift mode register
-after writing
-into the VMC will update the VTC.
+            * In STe mode, writing into ST shift mode register after writing into the VMC will update the VTC.
 
-
-
-            9800   RW   rrrr rr--  gggg gg--   SP  Color Pallete
-Reg 0
-            9802   RW   ---- ----  bbbb bb--   SP  Color Pallete
-Reg 0
+            9800   RW   rrrr rr--  gggg gg--   SP  Color Pallete Reg 0
+            9802   RW   ---- ----  bbbb bb--   SP  Color Pallete Reg 0
              ...             ...        ...              ...
-            9BFC   RW   rrrr rr--  gggg gg--   SP  Color Pallete
-Reg 255
-            9BFE   RW   ---- ----  bbbb bb--   SP  Color Pallete
-Reg 255
-
-
-
-
-
-
-
-
-
-
+            9BFC   RW   rrrr rr--  gggg gg--   SP  Color Pallete Reg 255
+            9BFE   RW   ---- ----  bbbb bb--   SP  Color Pallete Reg 255
 ```
 SPARROW SPEC. REV A10                                       page 25
 ```
-
-             - ST  DMA -
+###### ST  DMA
 
             8600                               <reserved>
             8602                               <reserved>
-            8604   RW   ---- ----  xxxx xxxx   Disk Data Path
-(WDC)
+            8604   RW   ---- ----  xxxx xxxx   Disk Data Path (WDC)
             8606   RO   ---- ----  ---- -esd   DMA Status
-                                              e - Error Status
-                                              s - Sector Count
-Zero
-Status
-                                              d - Data Request
-Intact Status
+                                               e - Error Status
+                                               s - Sector Count Zero Status
+                                               d - Data Request Intact Status
 
-
-            8606   WO   ---- ---x  xx0x xxx-   DMA Mode Control
-(WDL)
+            8606   WO   ---- ---x  xx0x xxx-   DMA Mode Control (WDL)
                                 |  |||| |||_   A0
                                 |  |||| ||__   A1
-                                |  |||| |___   HDC/_FDC Register
-Select
-                                |  ||||_____   Sector Count
-Register Select
+                                |  |||| |___   HDC/_FDC Register Select
+                                |  ||||_____   Sector Count Register Select
                                 |  |||______   Reserved
-                                |  ||_______   Disable/_Enable
-DMA
+                                |  ||_______   Disable/Enable DMA
                                 |  |________   FDC/_HDC
                                 |___________   Write/_Read
+
             8608   RW   ---- ----  xxxx xxxx   DMA Pointer High
             860A   RW   ---- ----  xxxx xxxx   DMA Pointer Mid
             860C   RW   ---- ----  xxxx xxx0   DMA Pointer Low
 
-            860E   RW   ---- ----  0000 00dc   Floppy Density
-Select
-                                                d - FDDS (output)
-pin
-                                                    0 - low
-(reset)
+            860E   RW   ---- ----  0000 00dc   Floppy Density Select
+                                                d - FDDS (output) pin
+                                                    0 - low (reset)
                                                     1 - high
                                                 c - FCCLK pin
-                                                    0 - 8Mhz
-(reset)
+                                                    0 - 8Mhz (reset)
                                                     1 - 16Mhz
 
+###### PROGRAMMABLE SOUND GENERATOR
 
-             - PROGRAMMABLE SOUND GENERATOR -
-
-            (also provides bi-directional parallel printer port
-and
-mis-
+            (also provides bi-directional parallel printer port and mis-
             cellaneous output latch)
 
-            8800   RO   xxxx xxxx  ---- ----   PSG Read Data
-                                               I/O Port B -
-Parallel I/F D
+            8800   RO   xxxx xxxx  ---- ----   PSG Read Data 
+                                               I/O Port B - Parallel I/O Data
 
-            8800   WO   0000 xxxx  ---- ----   PSG Register
-Select
-                                            0000 - Channel A Fine
-Tune
-                                            0001 - Channel A
-Coarse
-Tune
-                                            0010 - Channel B Fine
-Tune
-                                            0011 - Channel B
-Coarse
-Tune
-                                            0100 - Channel C Fine
-Tune
-                                            0101 - Channel C
-Coarse
-Tune
-                                            0110 - Noise
-Generator
-Control
-
-
-
-
-
-
+            8800   WO   0000 xxxx  ---- ----   PSG Register Select
+                                               0000 - Channel A Fine Tune
+                                               0001 - Channel A Coarse Tune
+                                               0010 - Channel B Fine Tune
+                                               0011 - Channel B Coarse Tune
+                                               0100 - Channel C Fine Tune
+                                               0101 - Channel C Coarse Tune
+                                               0110 - Noise Generator Control
 ```
 SPARROW SPEC. REV A10                                       page 26
 ```
-
-                                            01110- Mixer Control-
-I/O enable
-                                            1000 - Channel A
-Amplitude
-                                            1001 - Channel B
-Amplitude
-                                            1010 - Channel C
-Amplitude
-                                            1011 - Envelope
-PeriodFine Tune
-                                            1100 - Envelope
-period
-Coarse Tune
-                                            1101 - I/O PORT A
-(Output only)
-                                            1111 - I/O PORT B
+                                               0111 - Mixer Control-I/O enable
+                                               1000 - Channel A Amplitude
+                                               1001 - Channel B Amplitude
+                                               1010 - Channel C Amplitude
+                                               1011 - Envelope Period Fine Tune
+                                               1100 - Envelope period Coarse Tune
+                                               1101 - I/O PORT A (Output only)
+                                               1111 - I/O PORT B 
 
             8802   WO   xxxx xxxx  ---- ----   PSG Write Data
-                        |||| ||||            I/O PORT A
-                        |||| ||||___________   Floppy
-Side0/_Side1
-Select
-                        |||| |||____________   Floppy _Drive 0
-select
-                        |||| ||_____________   Floppy _Drive 1
-select
-                        |||| |______________   RS232 Request To
-Send
-                        ||||________________   RS232 Data
-Terminal
-Ready
-                        |||_________________   Centronix _Strobe
-                        ||__________________   General Purpose
-Output
+                        |||| ||||              I/O PORT A
+                        |||| ||||___________   Floppy Side0/Side1 Select
+                        |||| |||____________   Floppy _Drive 0 select
+                        |||| ||_____________   Floppy _Drive 1 select
+                        |||| |______________   RS232 Request To Send
+                        ||||________________   RS232 Data Terminal Ready
+                        |||_________________   Centronix Strobe
+                        ||__________________   General Purpose Output
                         |___________________   reserved
-                                             I/O PORT B -
-Parallel
-I/F Data
+                                               I/O PORT B - Parallel I/O Data
 
-
-             - DMA SOUND SUBSYSTEM -
+###### DMA SOUND SUBSYSTEM
 
             8900   RW   ---- ----  0000 00re   Sound DMA Control
                                                r - Repeat
                                                  0 = Single Frame
                                                  1 = Repeat
                                                e - Enable
-                                                 0 = Off (reset
-state)
+                                                 0 = Off (reset state)
                                                  1 = On
 
-            8902   RW   ---- ----  xxxx xxxx   Frame Base Address
-(high)
-            8904   RW   ---- ----  xxxx xxxx   Frame Base Address
-(med)
-            8906   RW   ---- ----  xxxx xxxx   Frame Base Address
-(low)
-            8908   RW   ---- ----  xxxx xxxx   Frame Address
-Counter (high)
-            890A   RW   ---- ----  xxxx xxxx   Frame Address
-Counter (med)
-            890C   RW   ---- ----  xxxx xxxx   Frame Address
-Counter (low)
-            890E   RW   ---- ----  xxxx xxxx   Frame End Address
-(high)
-            8910   RW   ---- ----  xxxx xxxx   Frame End Address
-(med)
-            8912   RW   ---- ----  xxxx xxxx   Frame End Address
-(low)
+            8902   RW   ---- ----  xxxx xxxx   Frame Base Address (high)
+            8904   RW   ---- ----  xxxx xxxx   Frame Base Address (med)
+            8906   RW   ---- ----  xxxx xxxx   Frame Base Address (low)
+            8908   RW   ---- ----  xxxx xxxx   Frame Address Counter (high)
+            890A   RW   ---- ----  xxxx xxxx   Frame Address Counter (med)
+            890C   RW   ---- ----  xxxx xxxx   Frame Address Counter (low)
+            890E   RW   ---- ----  xxxx xxxx   Frame End Address (high)
+            8910   RW   ---- ----  xxxx xxxx   Frame End Address (med)
+            8912   RW   ---- ----  xxxx xxxx   Frame End Address (low)
 
             8920   RW   0000 0000  a000 00bb   Sound Mode Control
                                                a - Mode
-                                                   0 = Stereo
-(reset state)
-                                                   1 = Mono
+                                                 0 = Stereo (reset state)
+                                                 1 = Mono
                                                bb - Sample Rate
-                                                   00 =  6258 Hz
-                                                   01 = 12517 Hz
-                                                   10 = 25033 Hz
-                                                   11 = 50066 Hz
-
-
-
-
+                                                  00 =  6258 Hz
+                                                  01 = 12517 Hz
+                                                  10 = 25033 Hz
+                                                  11 = 50066 Hz
 ```
 SPARROW SPEC. REV A10                                       page 27
 ```
+            8922   RW   xxxx xxxx  xxxx xxxx   MICROWIRE Data register
+            8924   RW   xxxx xxxx  xxxx xxxx   MICROWIRE Mask register
 
-            8922   RW   xxxx xxxx  xxxx xxxx   MICROWIRE Data
-register
-            8924   RW   xxxx xxxx  xxxx xxxx   MICROWIRE Mask
-register
+###### REAL TIME CLOCK
 
+            8960   RW   xxxx xxxx  ---- ----  Real Time Clock Addr Register
+            8962   RW   xxxx xxxx  ---- ----  Real Time Clock Data Register
 
-             -   REAL TIME CLOCK  -
-
-            8960   RW   xxxx xxxx  ---- ----  Real Time Clock
-Addr
-Register
-            8962   RW   xxxx xxxx  ---- ----  Real Time Clock
-Data
-Register
-
-
-             - BLiTTER -
+###### BLiTTER
 
             8A00    W   xxxx xxxx  xxxx xxxx   Halftone Ram Start
             ...         ...  ...   ...  ...           ...
             8A1E    W   xxxx xxxx  xxxx xxxx   Halftone Ram End
-            8A20    W   xxxx xxxx  xxxx xxx-   Source X
-Increments
-            8A22    W   xxxx xxxx  xxxx xxx-   Source Y
-Increments
-            8A24    W   ---- ----  xxxx xxxx   Source Address
-High            8A26    W   xxxx xxxx  xxxx xxx- 
- Source Address Low
+            8A20    W   xxxx xxxx  xxxx xxx-   Source X Increments
+            8A22    W   xxxx xxxx  xxxx xxx-   Source Y Increments
+            8A24    W   ---- ----  xxxx xxxx   Source Address High
+            8A26    W   xxxx xxxx  xxxx xxx-   Source Address Low
             8A28    W   xxxx xxxx  xxxx xxxx   Endmask 1
             8A2A    W   xxxx xxxx  xxxx xxxx   Endmask 2
             8A2C    W   xxxx xxxx  xxxx xxxx   Endmask 3
-            8A2E    W   xxxx xxxx  xxxx xxx-   Destination X
-Increments
-            8A30    W   xxxx xxxx  xxxx xxx-   Destination Y
-Increments
-            8A32    W   ---- ----  xxxx xxxx   Destination
-address
-High
-            8A34    W   xxxx xxxx  xxxx xxx-   Destination
-address
-Low
+            8A2E    W   xxxx xxxx  xxxx xxx-   Destination X Increments
+            8A30    W   xxxx xxxx  xxxx xxx-   Destination Y Increments
+            8A32    W   ---- ----  xxxx xxxx   Destination address High
+            8A34    W   xxxx xxxx  xxxx xxx-   Destination address Low
             8A36    W   xxxx xxxx  xxxx xxxx   X Count
             8A38    W   xxxx xxxx  xxxx xxxx   Y Count
-            8A3A    W   ---- --oo  xxxx hhhh   oo - OP  , hhhh -
-HOP
+            8A3A    W   ---- --oo  xxxx hhhh   oo - OP, hhhh - HOP
 
             8A3C    W   bhs- llll  fn-- kkkk   b    - BUSY
                                                h    - HOG
@@ -2298,158 +2048,77 @@ HOP
                                                n    - NFSR
                                                kkkk - SKEW
 
-             - SCC -
+###### SCC
 
             8C80   RW   ---- ----  xxxx xxxx  SCC A Control
             8C82   RW   ---- ----  xxxx xxxx  SCC A Data
             8C84   RW   ---- ----  xxxx xxxx  SCC B Control
             8C86   RW   ---- ----  xxxx xxxx  SCC B Data
-
-
-
-
-
-
-
-
-
-
-
-
 ```
 SPARROW SPEC. REV A10                                       page 28
 ```
-
-             - JOYSTICK -   - AND CONFIGURATION SWITCH CONTROL -
+###### JOYSTICK AND CONFIGURATION SWITCH CONTROL
 
             9200    R   dfq- ---- ---- 3120   d  0 - No sound DMA
-                                                  1 - Sound
-DMA                                              
-f  0 - High speed
-floppy
-                                                  1 - Low speed
-Floppy
-                                               q  0 - Quad
-density
-floppy
-                                                  1 - not Quad
-density floppy
-
-
-                                             3210 - Fire Buttons
-
-
+                                                 1 - Sound DMA
+                                              f  0 - High speed floppy
+                                                 1 - Low speed Floppy
+                                              q  0 - Quad density 
+                                                 1 - not Quad density floppy
+                                           3210    - Fire Buttons
 
             9202    R   udlr udlr udlr udlr   u - UP   , d - DOWN
-                        JOY0 JOY1 JOY2 JOY3   l - LEFT , r -
-RIGHT
+                        JOY0 JOY1 JOY2 JOY3   l - LEFT , r - RIGHT
                                               JOY0,JOY2 - RW
 
-             - PADDLE -
+###### PADDLE
 
             9210    R   ---- ---- xxxx xxxx   X Paddle 0
             9212    R   ---- ---- xxxx xxxx   Y Paddle 0
             9214    R   ---- ---- xxxx xxxx   X Paddle 1
             9216    R   ---- ---- xxxx xxxx   Y Paddle 1
 
-             - LIGHT GUN/PEN -
+###### LIGHT GUN/PEN
 
             9220    R   ---- --xx xxxx xxxx   X Position
             9222    R   ---- --xx xxxx xxxx   Y Position
 
+###### MFP-SP (ST compatible)
 
-             - MFP-SP -  (ST compatible)
-
-            FA00    RW   ---- ---- xxxx xxxx   General purpose
-I/O 
--GPIP
-            FA02    RW   ---- ---- xxxx xxxx   Active Edge       
-
- -AER
-            FA04    RW   ---- ---- xxxx xxxx   Data Direction    
-
- -DDR
-            FA06    RW   ---- ---- xxxx xxxx   Interupt Enable A 
-
- -IERA
-            FA08    RW   ---- ---- xxxx xxxx   Interupt Enable B 
-
- -IERB
-            FA0A    RW   ---- ---- xxxx xxxx   Interupt Pending A
-
- -IPRA
-            FA0C    RW   ---- ---- xxxx xxxx   Interupt Pending
-B
- -IPRB
-            FA0E    RW   ---- ---- xxxx xxxx   Interupt in
-service
-A - ISRA
-            FA10    RW   ---- ---- xxxx xxxx   Interupt in
-service
-B - ISRB
-            FA12    RW   ---- ---- xxxx xxxx   Interupt Mask A   
-
-  - IMRA
-            FA14    RW   ---- ---- xxxx xxxx   Interupt Mask B   
-
-  - IMRB
-            FA16    RW   ---- ---- xxxx xxxx   Vector            
-
-  - VR
-            FA18    RW   ---- ---- xxxx xxxx   Timer A Control   
-
-  - TACR
-            FA1A    RW   ---- ---- xxxx xxxx   Timer B Control   
-
-  - TBCR
-
-
-
-
-
-
-
-
-
+            FA00    RW   ---- ---- xxxx xxxx   General purpose I/O - GPIO
+            FA02    RW   ---- ---- xxxx xxxx   Active Edge - AER
+            FA04    RW   ---- ---- xxxx xxxx   Data Direction - DDR
+            FA06    RW   ---- ---- xxxx xxxx   Interupt Enable A - IERA
+            FA08    RW   ---- ---- xxxx xxxx   Interupt Enable B - IERB
+            FA0A    RW   ---- ---- xxxx xxxx   Interupt Pending A - IPRA
+            FA0C    RW   ---- ---- xxxx xxxx   Interupt Pending B - IPRB
+            FA0E    RW   ---- ---- xxxx xxxx   Interupt in service A - ISRA
+            FA10    RW   ---- ---- xxxx xxxx   Interupt in service B - ISRB
+            FA12    RW   ---- ---- xxxx xxxx   Interupt Mask A - IMRA
+            FA14    RW   ---- ---- xxxx xxxx   Interupt Mask B - IMRB
+            FA16    RW   ---- ---- xxxx xxxx   Vector - VR
+            FA18    RW   ---- ---- xxxx xxxx   Timer A Control - TACR
+            FA1A    RW   ---- ---- xxxx xxxx   Timer B Control - TBCR
 ```
 SPARROW SPEC. REV A10                                       page 29
 ```
+            FA1C    RW   ---- ---- xxxx xxxx   Timers C,D Control - TCDCR
+            FA1E    RW   ---- ---- xxxx xxxx   Timer A Data - TADR
+            FA20    RW   ---- ---- xxxx xxxx   Timer B Data - TBDR
+            FA22    RW   ---- ---- xxxx xxxx   Timer C Data - TCDR
+            FA24    RW   ---- ---- xxxx xxxx   Timer D Data - TDDR
+            FA26    RW   ---- ---- xxxx xxxx   Sync Character - SCR
+            FA28    RW   ---- ---- xxxx xxxx   Usart Control - UCR
+            FA2A    RW   ---- ---- xxxx xxxx   Receiver Status - RSR
+            FA2C    RW   ---- ---- xxxx xxxx   Transmitter Status - TSR
+            FA2E    RW   ---- ---- xxxx xxxx   USART Data - UDR
 
-FA1C    RW   ---- ---- xxxx xxxx   Timers C,D Control    - TCDCR
-            FA1E    RW   ---- ---- xxxx xxxx   Timer A Data      
-
-  - TADR
-            FA20    RW   ---- ---- xxxx xxxx   Timer B Data      
-
-  - TBDR
-            FA22    RW   ---- ---- xxxx xxxx   Timer C Data      
-
-  - TCDR
-            FA24    RW   ---- ---- xxxx xxxx   Timer D Data      
-
-  - TDDR
-            FA26    RW   ---- ---- xxxx xxxx   Sync Character    
-
-  - SCR
-            FA28    RW   ---- ---- xxxx xxxx   Usart Control    
-
-  - UCR
-            FA2A    RW   ---- ---- xxxx xxxx   Receiver Status   
-
-  - RSR
-            FA2C    RW   ---- ---- xxxx xxxx   Transmitter Status
-
-  - TSR
-            FA2E    RW   ---- ---- xxxx xxxx   USART Data        
-
-  - UDR
-
-            - ikbd ACIA -
+###### IKBD ACIA
 
             FC00    RW   xxxx xxxx ---- ----   Keyboard ACIA Control
             FC02    RW   xxxx xxxx ---- ----   Keyboard ACIA Data
 
-            - MIDI ACIA -
+###### MIDI ACIA
 
             FC04    RW   xxxx xxxx ---- ----   MIDI ACIA Contorl
             FC06    RW   xxxx xxxx ---- ----   MIDI ACIA Data
