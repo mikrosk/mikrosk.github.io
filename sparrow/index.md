@@ -45,4 +45,18 @@ The fourth number (from the right) serves as an ID for the PCB (x=0) and case (x
 It would seem there were three batches of both rev.1 (02/1992, 03/1992 and 04/1992) and rev.2 (04/1992, 05/1992 and 06/1992). Meaning of the second digit in "3x" is not clear, perhaps NTSC/PAL-I/PAL-B/PERITEL but that's just a guess.
 
 ### Number of Sparrows produced
+
 This makes only 17 (rev.1) + 59 (rev.2) = 76 publicly known Sparrows in the world (assuming the numbering had restarted for rev.2). Actually, there was one Sparrow board without any serial number for sale, so that makes it 77.
+
+### Sparrow resources
+
+It seems that there had been two 32-bit Atari machines in development at the same time: the Falcon (designed by John D. Horton Jr. in Dallas, Texas) and the [Sparrow](https://www.maedicke.de/atari/hardware/sparrow.htm) (designed by Moshe Segal and Eran Dariel in Israel). The latter became the "real" [Falcon 030](https://www.maedicke.de/atari/hardware/falcon.htm) as we know it. What happened to the former one, nobody knows. Some of its features resemble the [Atari Microbox](https://www.maedicke.de/atari/hardware/microbox.htm), due to lack of any mention of PCI slots it perhaps wouldn't mean to be the [Falcon 040](https://www.maedicke.de/atari/hardware/falcon040.htm).
+
+The following documents were found & rescued by [Christian Zietz](https://www.chzsoft.de) and first published at [atari-home.de](https://forum.atari-home.de/index.php/topic,13380.msg214172.html#msg214172):
+
+- [Sparrow specification (dated Dec 18 1991)](sparrow_specification_19911218.md) (converted into markdown by me)
+- [Page 3 of Sparrow schematics (dated March 12 1991)](sparrow-schematic-march91-page3.pdf)
+- [Falcon specification (dated Dec 3 1991)](falcon_specification_19911203.pdf) (converted into PDF by Christian)
+- [Falcon specification (dated Aug 26 1992)](falcon_specification_19920826.txt)
+
+The Falcon must have been pretty close to a finished state as it was in development since the beginning of January 1991 and the last specification refers to it as "Prorotype B **release**". As you can see, in its latest specification it got also the DSP which was present only in the Sparrow prototype so far.
