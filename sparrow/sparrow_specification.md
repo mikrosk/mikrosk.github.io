@@ -262,351 +262,201 @@ set  of
 85C30 SCC.
 -  Sparrow has on board the 56001 DSP and 68881 FPU.
 
-
-
-2.  - MAIN SYSTEM -
+# 2. MAIN SYSTEM
 
 The  Sparrow  is intended to be a compatible, high-performance
-extension
-    of the Atari STe architecture.
+extension of the Atari STe architecture.
 
-2.1.   - PROCESSOR -
+## 2.1. PROCESSOR
 
 The Sparrow uses the Motorola 16 Mhz MC68030  32-bit 
-microprocessor.
-    Support  circuitry  built  around  the  68030  allows 
-switching the
-    processor clock between 16 Mhz and 8 Mhz. Processor clock
-control is
-    provided by control  bit  in  a  configuration  switch  I/O 
-address
-    (FF8006).
+microprocessor. Support  circuitry  built  around  the  68030  allows 
+switching the processor clock between 16 Mhz and 8 Mhz. Processor clock
+control is provided by control  bit  in  a  configuration  switch  I/O 
+address (FF8006).
 
-2.2.   - ROM -
+## 2.2. ROM
 
 The  system  includes  on-board  sockets  for  a  set of  2 1Mbit
+ROMs, providing  a total of 256Kbytes ROM.  Since system bus access
+is 16-bits wide, both ROMs must  be  present.
 
-ROMs,
-    providing  a total of 256Kbytes ROM.  Since system bus access
-is 16-
-    bits wide, both ROMs must  be  present.
 Jumpers    are    provided    to   allow   the   use  of  27256, 
-27512,
-    27010/27C1001, and  57101/27C1000  EPROMs,  in  addition   to
-
-53100
-    ROMs.    The  default jumper position allows the use of 27512
-EPROMs
-    (for a total of 128Kb  of  ROM)  as  well  as 571001/27C1000 
-EPROMs
-    or 531000 ROMs (for a total of 256Kb of ROM).  32  pin 
-sockets 
-are
-    provided,  although  27256, 27512, and 531000 only use the
-bottom 28
-    pins. The Sparrow supports by default  125ns EPROMs/ROMs. It
-can  be
-    programmed to support  250ns devices.
+27512, 27010/27C1001, and  57101/27C1000  EPROMs,  in  addition   to
+53100 ROMs.    The  default jumper position allows the use of 27512
+EPROMs (for a total of 128Kb  of  ROM)  as  well  as 571001/27C1000 
+EPROMs or 531000 ROMs (for a total of 256Kb of ROM).  32  pin sockets 
+are provided,  although  27256, 27512, and 531000 only use the
+bottom 28 pins. The Sparrow supports by default  125ns EPROMs/ROMs. It
+can  be programmed to support  250ns devices.
 
 An  image of the first 8 bytes of  ROM  resides  in  the first  8
+bytes of  the  RAM memory. These first 8 bytes (0x00000000-0x000007)  are
+accessible only in supervisor mode.  Attempts to read from this
+area in user mode or any write are generate bus error. The  full 
+ROM resides at the memory location 0x00E00000 - 0x00EFFFFF.
 
-bytes
-    of  the  RAM memory. These first 8 bytes
-(0x00000000-0x000007)  are
-    accessible only in supervisor mode.  Attempts to read from
-this
-area
-    in user mode or any write are generate bus error. The  full 
-ROM
-    resides at the memory location 0x00E00000 - 0x00EFFFFF.
 Among the tasks this ROM perform are system initialization and
-boot
-code
-    that  can  boot from a floppy or SCSI device.   The ROM  is
-expected
-    to  contain a  multi-lingual  implementation  of  TOS.
-Moreover,  if
-    sufficient  space is available,  ROM-based  service
-diagnostics
-will
-    be provided.
+boot code that  can  boot from a floppy or SCSI device.   The ROM  is
+expected to  contain a  multi-lingual  implementation  of  TOS.
+Moreover,  if sufficient  space is available,  ROM-based  service
+diagnostics will be provided.
 
-2.3.   - RAM -
+## 2.3. RAM
 
 The basic system includes 512Kb to 14Mb of dual-purpose  RAM 
-which 
- is
-    used   for   both   video  and system memory. This is
-implemented by
-
-
-
-
+which is used   for   both   video  and system memory. This is
+implemented by using 8 bit wide SIMMS (Single In line Memory Modules),
 ```
 SPARROW SPEC. REV A10                                       page 5
 ```
-
-    using 8 bit wide SIMMS (Single In line Memory Modules), 
-which 
-must
-    be used in pairs.
+which must be used in pairs.
 
 The  DRAM  devices  used  can  have one of the following
-configurations:
-    256Kbitx1, 256Kbitx4, 1Mbitx1, 1Mbitx4, or 4Mbitx1. Each SIMM
-module
-    is 8 bit (byte) wide and can be 256K, 1M or 4M  deep. The 
-following
-    schematics  show  the  possible configuration for 16 bits
-wide
-video
-    bus, using 256K type DRAMs:
+configurations: 256Kbitx1, 256Kbitx4, 1Mbitx1, 1Mbitx4, or 4Mbitx1. Each SIMM
+module is 8 bit (byte) wide and can be 256K, 1M or 4M  deep. The 
+following schematics  show  the  possible configuration for 16 bits
+wide video bus, using 256K type DRAMs:
 
-
-    - Total RAM -          - SIMM  -                  
--SIMM-   512Kbytes          |---- 256Kbytes----| 
-   
-|------256Kbytes-----|
-
+    Total RAM       - SIMM  -             - SIMM -
+    
+    512Kbytes |----256Kbytes----| |------256Kbytes-----|
 
 using two pairs of the same type of SIMMs gives 1Mbytes as
 follows:
 
-     1Mbytes          |-----256Kbytes----|     
-|-------256Kbyes-----|
-                      |-----256Kbyes-----|     
-|-------256Kbytes----|
+     1Mbytes  |----256Kbytes----| |------256Kbytes-----|
+              |----256Kbyes-----| |------256Kbytes-----|
 
 Using 1M type DRAM devices instead of 256K type  devices  gives 
-2Mbytes
-    using  the  first  scheme  (one pair of SIMMs), or 4Mbytes
-using the
-    second scheme (two pairs of  SIMMs). Using  4M  type  devices
-
-gives
-    8Mbytes  with  one  pair of SIMMs or 16Mbytes for two pairs
-of
-which
-    only the lower 14Mbytes are used.
+2Mbytes using  the  first  scheme  (one pair of SIMMs), or 4Mbytes
+using the second scheme (two pairs of  SIMMs). Using  4M  type  devices
+gives 8Mbytes  with  one  pair of SIMMs or 16Mbytes for two pairs
+of which only the lower 14Mbytes are used.
 
 For 32 bits wide video bus  the  basic  configuration  using 
-256k 
-type
-    devices would be:
-- Total RAM     - SIMM -      - SIMM -         - SIMM -        
--SIMM-
+256k type devices would be:
 
-  1Mbytes   |--256Kbytes--| |--256Kbyes--| |--256Kbytes--|
-|--256Kbytes--|
+    Total RAM     - SIMM -        - SIMM -        - SIMM -        - SIMM -
+
+    1Mbytes   |--256Kbytes--| |--256Kbytes--| |--256Kbytes--| |--256Kbytes--|
 
 Using 1M type devices would give 4Mbytes and using 4M type
-devices
-would
-    give 16Mbytes of which only the lower 14Mbytes are used.
+devices would give 16Mbytes of which only the lower 14Mbytes are used.
 
 There are four resources that compete for the memory apart from
-the
-CPU.
-    These  resources,  in  decreasing order of priority are:
-Video,
-DMA,
-    Refresh and  Blitter.  Actually,  only  two  of  these 
-resources
-    arbitrate  for  the  system bus in a normal arbitration
-process: the
-    DMA and the Blitter. In STe the Video does not really
-arbitrate 
-for
-    the bus but use a timeshare scheme to share memory accesses
-with CPU    cycles. Also,  in  STe  the  DMA 
-arbitration  for disk
-transfers is
-    controlled by the DMA device READY line, while the
-arbitration
-logic
-    resides in the MCUG. In STe, the  sound  DMA  shares  the 
-timeshare
-    mechanism with the video and does not really arbitrate for
-the
-bus.
+the CPU. These  resources,  in  decreasing order of priority are:
+Video, DMA, Refresh and  Blitter.  Actually,  only  two  of  these 
+resources arbitrate  for  the  system bus in a normal arbitration
+process: the DMA and the Blitter.
+
+In STe the Video does not really
+arbitrate for the bus but use a timeshare scheme to share memory accesses
+with CPU    cycles. Also,  in  STe  the  DMA arbitration  for disk
+transfers is controlled by the DMA device READY line, while the
+arbitration logic resides in the MCUG. In STe, the  sound  DMA  shares  the 
+timeshare mechanism with the video and does not really arbitrate for
+the bus.
+
 In Sparrow the situation is different. The new DMA chip contains
-the DMA
-    arbitration  logic  that was in the MCUG (in STe). It
-arbitrates for
-    the bus either for DMA disk transfers or sound DMA accesses.
-The DMA
-    arbitration has higher priority than the Blitter 
-arbitration.
-Thus,
-    a  DMA arbitration will interrupt the Blitter operation. The
-Blitter
-    will resume control of the system bus when  the  DMA  
-releases 
-the
-    bus.
-
-
-
-
-
+the DMA arbitration  logic  that was in the MCUG (in STe). It
+arbitrates for the bus either for DMA disk transfers or sound DMA accesses.
+The DMA arbitration has higher priority than the Blitter arbitration.
+Thus, a  DMA arbitration will interrupt the Blitter operation. The
+Blitter will resume control of the system bus when  the  DMA 
+releases the bus.
 ```
 SPARROW SPEC. REV A10                                       page 6
 ```
 In  Sparrow,  video  accesses  use  page  mode  and  thus  the
-timeshare
-    machanism used in STe cannot be employed. Instead, any video
-request
-    for memory access will stall the current  bus  cycle  if  it 
-is  an
-    access  to the DRAM (be it a CPU cycle or another bus master:
-DMA or
-    Blitter). This is done by inserting wait states into the
-current bus
-    cycle (by not activating DTACK). While the current bus cycle 
-is  in
-    wait  states,  the  memory  bus (which is separate from the
-CPU
-data
-    bus) is used for video accesses. When video access 
-terminates, 
-the
-    DTACK  is activated which enables the current bus cycle
-tocomplete.
-    Same scheme is used for refresh request. Thus, video and
-refresh can
-    access the memory without being delayed by any bus master or
-by 
-the
-    CPU.
-The  MC68030 accesses to on-board RAM typically  require 4 clock
-cycles.
-    There is no provision for parity or ECC  protection  on the  
-system
-    RAM.    The  reliability  of  current  DRAM  technology 
-makes 
-this
-    unnecessary.
+timeshare machanism used in STe cannot be employed. Instead, any video
+request for memory access will stall the current  bus  cycle  if  it 
+is  an access  to the DRAM (be it a CPU cycle or another bus master:
+DMA or Blitter). This is done by inserting wait states into the
+current bus cycle (by not activating DTACK). While the current bus cycle 
+is  in wait  states,  the  memory  bus (which is separate from the
+CPU data bus) is used for video accesses. When video access 
+terminates,  the DTACK  is activated which enables the current bus cycle
+tocomplete. 
 
-The  first  0x800  bytes  (2K)  of   RAM  
-(0x00000008-0x000007FF) 
- are
-    accessible  only in supervisor mode.    Attempts  to  read 
-or
-write
-    to  this  area  in  user mode generate bus error.
+Same scheme is used for refresh request. Thus, video and
+refresh can access the memory without being delayed by any bus master or
+by the CPU. The  MC68030 accesses to on-board RAM typically  require 4 clock
+cycles. There is no provision for parity or ECC  protection  on the
+system RAM.    The  reliability  of  current  DRAM  technology 
+makes this unnecessary.
 
+The  first  0x800  bytes  (2K)  of   RAM (0x00000008-0x000007FF) 
+ are accessible  only in supervisor mode.    Attempts  to  read 
+or write to  this  area  in  user mode generate bus error.
 
-2.4.   - System Control Unit -
+## 2.4. System Control Unit
 
-2.4.1.   - Interrupt Mask and Current Status -
+### 2.4.1. Interrupt Mask and Current Status
 
 The Sparrow interrupt priority assignments are as follows:
 
-   Level          Definition
+    Level          Definition
 
-   7 (highest)    NMI
-   6              MFP interrupts
-   5
-   4              Vertical blanking (sync)
-   3
-   2              Horizontal blanking (sync)
-   1 (lowest)
+    7 (highest)    NMI
+    6              MFP interrupts
+    5
+    4              Vertical blanking (sync)
+    3
+    2              Horizontal blanking (sync)
+    1 (lowest)
 
 There is hardware for enabling use of Level 1 and Level  3  as 
-external
-    positive  edge  VPA  type  interrupts.  This  feature can be
-used for
-    parallel port ACK by srapping the external ACK to EXTINT (1 
-or 
-3).
+external positive  edge  VPA  type  interrupts.  This  feature can be
+used for parallel port ACK by srapping the external ACK to EXTINT (1 
+or 3).
 
 There  is also hardware for enabling use of Level 5 as external
-negative
-    edge regular interrupt. This  feature  can  be  used  by 
-SCCINT  by
-    strapping  it  to EXTINT5.  EXTINT7 is also encoded
-asnegative
-edge
-    interrupt.
-
-
-
-
-
-
-
-
-
-
-
+negative edge regular interrupt. This  feature  can  be  used  by 
+SCCINT  by strapping  it  to EXTINT5.  EXTINT7 is also encoded
+as negative edge interrupt.
 ```
 SPARROW SPEC. REV A10                                       page 7
 ```
-
-2.4.2.   - Bus Error Circuitry -
+### 2.4.2. Bus Error Circuitry
 
 The SCU also implements  a  system  bus  error  circuitry.   If 
-nothing
-    concludes a bus cycle within a 16us timeout (programmable to
-32us)
-    the SCU will signal  a bus error.   Bus  error  is  also 
-asserted
-    if  certain conditions are violated, such as writing to ROM,
-writing
-    byte sized data to a word sized register, or writing to
-system
-memory
-    when the processor is in user mode.
+nothing concludes a bus cycle within a 16us timeout (programmable to
+32us) the SCU will signal  a bus error.   Bus  error  is  also 
+asserted if  certain conditions are violated, such as writing to ROM,
+writing byte sized data to a word sized register, or writing to
+system memory when the processor is in user mode.
 
-2.5.   - Floppy/ACSI Interface -
+## 2.5. Floppy/ACSI Interface
 
 The   ST   compatible  Floppy/ACSI  subsystem  interfaces between
+dual-purpose  RAM  and  the  internal floppy disk controller. 
+Also, the standard SCSI Port interfaces to devices  such  as  laser 
+printers, hard  disk drives,  and CD-ROMs.
 
-dual-
-    purpose  RAM  and  the  internal floppy disk controller. 
-Also,
-the
-    standard SCSI Port interfaces to devices  such  as  laser 
-printers,
-    hard  disk drives,  and CD-ROMs.
-
-2.6.   - Configuration Switch Control -
+## 2.6. Configuration Switch Control
 
 The Sparrow implements an 8 bit configuration switch register at
-address
-    FF9200  to indicate the presence or absence of options.
-Depending on
-    printed circuit board layout, the register may be
-implemented
-using
-    an 8 bit DIP switch, solder pads, or double "row of stacks"
-jumpers.
-    A  bit will read as a "1" if the circuit is open. The
-following
-bits
-    have been assigned meanings:
+address FF9200  to indicate the presence or absence of options.
+Depending on printed circuit board layout, the register may be
+implemented using an 8 bit DIP switch, solder pads, or double "row of stacks"
+jumpers. A  bit will read as a "1" if the circuit is open. The
+following bits have been assigned meanings:
 
+    Bit           Meaning
 
+    7             0 - no DMA sound hardware is installed.
+                  1 - DMA sound hardware is available.
 
+    6             0 -  high  speed  (16  Mhz)  Floppy  disk controller is
+                       installed.
+                  1  - only  low  speed (8 Mhz) Floppy disk controller is
+                       installed.
 
+    5             1  -  don't care.
+                  0  -  quad density floppy.
 
-  Bit           Meaning
-
-  7             0 - no DMA sound hardware is installed.
-                1 - DMA sound hardware is available.
-
-  6             0 -  high  speed  (16  Mhz)  Floppy  disk 
-controller  is
-                          installed.
-                1  -  only  low  speed (8 Mhz) Floppy disk
-controller is
-                          installed.
-
-  5             1  -  don't care.
-                0  -  quad density floppy.
-
-Bits 0-4 of this I/O address are not used.
-
+    Bits 0-4 of this I/O address are not used.
 
 # 3. Device Subsystems
 
