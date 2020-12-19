@@ -1336,7 +1336,8 @@ counter will only be reset by the vertical sync input. Of course,
 all other timing parameters must be initialized exactly as if the
 VTG was running on internal syncs. This includes the HHT
 register.
-     A typical frame grab should proceed in the following
+
+A typical frame grab should proceed in the following
 manner. At the beginning of the vertical blank interval preceding
 the frame to be stored, the external card must assert EVSEL1*
 and/or EVSEL2*. Assertion of both EVSELs does two things: it
@@ -1377,10 +1378,11 @@ for the next frame. In such cases, the display will be allowed to
 flicker, and the system will recover by requesting a video burst
 from main memory during the following VBLNK interval.
 
+*(perhaps missing Figure 4.1 here?)*
 
-4.3.2  Graphic Overlays on External Video
+### 4.3.2  Graphic Overlays on External Video
 
-    Falcon also supports overlay of video in screen memory onto 
+Falcon also supports overlay of video in screen memory onto 
 external video in Falcon mode 110 (see section 4.1). This
 operation requires that the external video source and Falcon be
 genlocked. Two modes of operation are supported. For external 24
@@ -1392,7 +1394,7 @@ allowing the FNL chip to drive the top byte of the video bus to
 the RAMDAC. For an external overlay on internal true color data,
 EVSEL2* must be asserted and EVSEL1* negated.
 
-    Assertion of EVSEL1* configures the video port to input the
+Assertion of EVSEL1* configures the video port to input the
 lower 24 data lines from the connector and disables the FNL
 output buffers that normally drive this section of the video bus
 to the RAMDAC. Assertion of EVSEL2* likewise configures the upper
@@ -1400,9 +1402,9 @@ to the RAMDAC. Assertion of EVSEL2* likewise configures the upper
 internal video data and configures the port for external data
 input as noted in the previous section.
 
-4.3.3  Alternate Display Support
+### 4.3.3  Alternate Display Support
 
-    The red(R), green(G), and blue(B) outputs from the RAMDAC as
+The red(R), green(G), and blue(B) outputs from the RAMDAC as
 well as horizontal and vertical sync signals are available on the
 external video connector. Cards for this port should contain a
 clock driver to supply a pixel clock if the available 25.175 Mhz
@@ -1411,7 +1413,7 @@ appropriate. The MUXSEL connector pin controls the pixel clock
 multiplexor located on the motherboard. For expansion cards
 supplying an alternate clock, this pin should be tied to ground.
 
-    Use of this port for driving an external shifter is only
+Use of this port for driving an external shifter is only
 necessary when extremely high resolution displays are desired. A
 shifter card attached to this port must only supply two signals
 to the Falcon motherboard. The GRAFX* input must be driven low to
@@ -1421,519 +1423,136 @@ read pulse to the video buffer, EVSTRB. The external device may
 read the buffer at any rate up to about 32 MHz, the memory
 refresh bandwidth limit.
 
+*(perhaps missing Figure 4.2 here?)*
 
-Note: R, G, and B signal traces on the daughter board must not be
-terminated. Keep traces to the monitor connector as short as
-possible.
+Note: R, G, and B signal traces on the daughter board **must not be terminated.** *Keep traces to the monitor connector as short as
+possible.*
 
-4.3.4  External Video Interface Description
+### 4.3.4  External Video Interface Description
 
-     The expansion card interface is composed of the following:
+The expansion card interface is composed of the following:
 
-    -    a 32 bit bidirectional video data bus
-    -    bidirectional video timing signals 
-    -    an 8 bit I/O bus for accessing control registers
-    -    various control signals.
-    -    analog R,G, and B outputs
-    -    a dot clock input to the system
-    -    +/- 5 and 12 volt supplies
+- a 32 bit bidirectional video data bus
+- bidirectional video timing signals 
+- an 8 bit I/O bus for accessing control registers
+- various control signals.
+- analog R,G, and B outputs
+- a dot clock input to the system
+- +/- 5 and 12 volt supplies
 
-    The 32 bit data bus is a bidirectional bus for transfer of
+The 32 bit data bus is a bidirectional bus for transfer of
 video data onto and off of the expansion card. The expansion card
 should use transceivers to drive this bus. The following
 directional controls must be pinned out to the connector for
 controlling corresponding tristate buffers on the motherboard:
 
+    EVSEL1*  in   External video select 1. Active low. Controls the
+                  source of video vdata[23:0] on the motherboard.
+                  Source is expansion card, when active.
 
-EVSEL1*  in   External video select 1. Active low. Controls the
-              source of video vdata[23:0] on the motherboard.
-              Source is expansion card, when active.
+    EVSEL2*  in   External video select 2. Active low. Controls the
+                  source of video vdata[31:24] on the motherboard.
+                  Source is expansion card, when active.
 
-EVSEL2*  in   External video select 2. Active low. Controls the
-              source of video vdata[31:24] on the motherboard.
-              Source is expansion card, when active.
+    EVSTRB   in   External Video Strobe. Active high. Read or write
+                  strobe to the video data buffer (see the truth
+                  table to follow.)
 
-EVSTRB   in   External Video Strobe. Active high. Read or write
-              strobe to the video data buffer (see the truth
-              table to follow.)
+    NXT      out  RAMDAC output read strobe to the active source of
+                  video data. Monitored by the external card when
+                  supplying any or all video data to the RAMDAC.
 
-NXT      out  RAMDAC output read strobe to the active source of
-              video data. Monitored by the external card when
-              supplying any or all video data to the RAMDAC.
-
-GRAFX*   in   When active, the video data buffer supplies
-              instruction list to external device on the rising
-              edge of EVSTRB. All analog video signals must be
-              supplied by external device to a monitor connector
-              located on the external card.
+    GRAFX*   in   When active, the video data buffer supplies
+                  instruction list to external device on the rising
+                  edge of EVSTRB. All analog video signals must be
+                  supplied by external device to a monitor connector
+                  located on the external card.
 
 The following truth table describes all combinations of control
 signals and the corresponding function implemented by them:
 
-
-
-
-EVSEL1*
-EVSEL2*
-GRAFX*
-FUNCTION
-
-
-0
-0
-0
-Invalid
-
-
-0
-0
-1
-EV card driving all video data
-lines for frame store and/or
-display through RAMDAC. EVSTRB
-writes data into buffer.
-
-
-
-0
-1
-0
-Invalid
-
-
-0
-1
-1
-EV card supplies the lower 24 video
-data bits for true color
-background. The video data buffer
-supplies upper 8 bits of overlay
-data. Falcon mode 6 only
-
-
-
-1
-0
-0
-Invalid
-
-
-1
-0
-1
-EV card drives upper byte of video
-data for overlays onto true color
-background as supplied by the video
-data buffer. Falcon mode 6 only
-
-
-
-1
-1
-0
-EV card reading 32 bit instruction
-list words from video data buffer.
-EVSTRB reads data from buffer. 
-
-
-
-1
-1
-1
-All video data supplied by video
-data buffer. All EV card video data
-buffer outputs are high impedance.
-
-
-
-                                 Table 4.3
-
-
-
-
-Video Expansion Connector
-
-
-pin
-signal
-pin
-signal
-pin
-signal
-pin
-signal
-
-
-2
-GND
-4
-PXD0
-1
-GND
-3
-PXD1
-
-
-6
-PXD2
-8
-PXD4
-5
-PXD3
-7
-PXD5
-
-
-10
-PXD6
-12
-PXD8
-9
-PXD7
-11
-PXD9
-
-
-14
-PXD10
-16
-PXD12
-13
-PXD11
-15
-PXD13
-
-
-18
-PXD14
-20
-PXD16
-17
-PXD15
-19
-PXD17
-
-
-22
-PXD18
-24
-PXD20
-21
-PXD19
-23
-PXD21
-
-
-26
-PXD22
-28
-PXD24
-25
-PXD23
-27
-PXD25
-
-
-30
-PXD26
-32
-PXD28
-29
-PXD27
-31
-PXD29
-
-
-34
-PXD30
-36
-GND
-33
-PXD31
-35
-GND
-
-
-38
-EVSEL1*
-40
-GND
-37
-EVSEL2*
-39
-GRAFX*
-
-
-42
-EVSTRB
-44
-GND
-41
-GND
-43
--5V
-
-
-46
-HBLANK
-48
-HSYNC
-45
-GND
-47
-+12V
-
-
-50
-VBLANK
-52
-VSYNC
-49
-+12V
-51
-GND
-
-
-54
-FIELD
-56
-DEN
-53
--12V
-55
-GND
-
-
-58
-GND
-60
-NC
-57
-+5V
-59
-+5V
-
-
-62
-NC
-64
-GND
-61
-+5V
-63
-+5V
-
-
-66
-XVRD*
-68
-XVWR*
-65
-GND
-67
-RESET*
-
-
-70
-GND
-72
-IOA0
-69
-GND
-71
-IOD0
-
-
-74
-IOA1
-76
-IOA2
-73
-IOD1
-75
-IOD2
-
-
-78
-IOA3
-80
-IOA4
-77
-IOD3
-79
-IOD4
-
-
-82
-IOA5
-84
-IOA6
-81
-IOD5
-83
-IOD6
-
-
-86
-IOA7
-88
-GND
-85
-IOD7
-87
-GND
-
-
-90
-GND
-92
-GND
-89
-GND
-91
-GND
-
-
-94
-EXTCLK
-96
-GND
-93
-GND
-95
-GND
-
-
-98
-NXT
-100
-GND
-97
-XMUXSEL
-99
-GND
-
-
-102
-GND
-104
-AGND
-101
-GND
-103
-AGND
-
-
-106
-AGND
-108
-RED
-105
-AGND
-107
-AGND
-
-
-110
-GREEN
-112
-BLUE
-109
-AGND
-111
-AGND
-
-
-                                 Table 4.4
-
-    A slot is provided for a video expansion pcb. The connector
+#### Table 4.3
+
+EVSEL1* | EVSEL2* | GRAFX* | FUNCTION
+--------|---------|--------|---------
+0       | 0       | 0      | Invalid
+0       | 0       | 1      | EV card driving all video data lines for frame store and/or display through RAMDAC. EVSTRB writes data into buffer.
+0       | 1       | 0      | Invalid
+0       | 1       | 1      | EV card supplies the lower 24 video data bits for true color background. The video data buffer supplies upper 8 bits of overlay data. Falcon mode 6 only
+1       | 0       | 0      | Invalid
+1       | 0       | 1      | EV card drives upper byte of video data for overlays onto true color background as supplied by the video data buffer. Falcon mode 6 only
+1       | 1       | 0      | EV card reading 32 bit instruction list words from video data buffer. EVSTRB reads data from buffer. 
+1       | 1       | 1      | All video data supplied by video data buffer. All EV card video data buffer outputs are high impedance.
+
+#### Table 4.4 (Video Expansion Connector)
+
+pin | signal | pin | signal | pin | signal | pin | signal
+----|--------|-----|--------|-----|--------|-----|-------
+2   | GND    | 4   | PXD0   | 1   | GND    | 3   | PXD1
+6   | PXD2   | 8   | PXD4   | 5   | PXD3   | 7   | PXD5
+10  | PXD6   | 12  | PXD8   | 9   | PXD7   | 11  | PXD9
+14  | PXD10  | 16  | PXD12  | 13  | PXD11  | 15  | PXD13
+18  | PXD14  | 20  | PXD16  | 17  | PXD15  | 19  | PXD17
+22  | PXD18  | 24  | PXD20  | 21  | PXD19  | 23  | PXD21
+26  | PXD22  | 28  | PXD24  | 25  | PXD23  | 27  | PXD25
+30  | PXD26  | 32  | PXD28  | 29  | PXD27  | 31  | PXD29
+34  | PXD30  | 36  | GND    | 33  | PXD31  | 35  | GND
+38  | EVSEL1*| 40  | GND    | 37  | EVSEL2*| 39  | GRAFX*
+42  | EVSTRB | 44  | GND    | 41  | GND    | 43  | -5V
+46  | HBLANK | 48  | HSYNC  | 45  | GND    | 47  | +12V
+50  | VBLANK | 52  | VSYNC  | 49  | +12V   | 51  | GND
+54  | FIELD  | 56  | DEN    | 53  | -12V   | 55  | GND
+58  | GND    | 60  | NC     | 57  | +5V    | 59  | +5V
+62  | NC     | 64  | GND    | 61  | +5V    | 63  | +5V
+66  | XVRD*  | 68  | XVWR*  | 65  | GND    | 67  | RESET*
+70  | GND    | 72  | IOA0   | 69  | GND    | 71  | IOD0
+74  | IOA1   | 76  | IOA2   | 73  | IOD1   | 75  | IOD2
+78  | IOA3   | 80  | IOA4   | 77  | IOD3   | 79  | IOD4
+82  | IOA5   | 84  | IOA6   | 81  | IOD5   | 83  | IOD6
+86  | IOA7   | 88  | GND    | 85  | IOD7   | 87  | GND
+90  | GND    | 92  | GND    | 89  | GND    | 91  | GND
+94  | EXTCLK | 96  | GND    | 93  | GND    | 95  | GND
+98  | NXT    | 100 | GND    | 97  | XMUXSEL| 99  | GND
+102 | GND    | 104 | AGND   | 101 | GND    | 103 | AGND
+106 | AGND   | 108 | RED    | 105 | AGND   | 107 | AGND
+110 | GREEN  | 112 | BLUE   | 109 | AGND   | 111 | AGND
+
+A slot is provided for a video expansion pcb. The connector
 is a 112 pin board edge type.
 
-    The I/O port consists of an 8 bit bidirectional data bus
+The I/O port consists of an 8 bit bidirectional data bus
 (IOD7 through IOD0), 8 address lines (IOA7 through IOA0), a read
 strobe, and a write strobe. Data buffers on the expansion card
 are enabled by an active low level on the read strobe, and data
 can be latched off the IO bus on the rising edge of the write
 strobe.
 
-4.3.5  Monitor Connector
+### 4.3.5  Monitor Connector
 
-    Standard video output is provided on a 3 row 15 pin VGA
+Standard video output is provided on a 3 row 15 pin VGA
 compatible connector.
 
+#### Table 4.5 (VGA Connector Pinout)
 
+Pin | Signal
+----|-------
+1   | Red
+2   | Green
+3   | Blue
+4   | Monitor ID 2
+5   | Ground
+6   | Red return
+7   | Green return
+8   | Blue return
+9   | key
+10  | Ground
+11  | Monitor ID 0
+12  | Monitor ID 1
+13  | Horizontal sync
+14  | Vertical sync
+15  | 
 
-
-VGA Connector Pinout
-
-
-Pin
-Signal
-
-
-1
-Red
-
-
-2
-Green
-
-
-3
-Blue
-
-
-4
-Monitor ID 2
-
-
-5
-Ground
-
-
-6
-Red return
-
-
-7
-Green return
-
-
-8
-Blue return
-
-
-9
-key
-
-
-10
-Ground
-
-
-11
-Monitor ID 0
-
-
-12
-Monitor ID 1
-
-
-13
-Horizontal sync
-
-
-14
-Vertical sync
-
-
-15
-
-
-
-                                 Table 4.5
-
-4.4 Video Timing Control
+## 4.4 Video Timing Control
 
     All video timing control signals are generated by the Video
 Timing Generator chip (VTG) except when the video is genlocked to
