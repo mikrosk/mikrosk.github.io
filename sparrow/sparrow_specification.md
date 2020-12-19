@@ -1393,61 +1393,30 @@ feed
 number
     of samples (see data format section for details).
 
-5.2.2.   - Data Format -
+### 5.2.2. Data Format
 
 Each  sample  is  stored  as  an   eight   bit   quantity,    the
-
- most
-    significant   bit   is  the  sign  and  the  other  seven 
-bits 
-are
-    magnitude.   In  the  stereo scheme there is one  word  per 
-sample,
-    the  upper  byte contains the left channel sample and the
-lower
-byte
-    contains the right channel  sample.   In  the MONO  scheme
-bytes are
-    accessed sequentially.   However, they are still fetched a
-word
-at a
-    time.  Therefore,  there  must be an even number of samples.
-
-
-
-
-
-
+most significant   bit   is  the  sign  and  the  other  seven 
+bits are magnitude.   In  the  stereo scheme there is one  word  per 
+sample, the  upper  byte contains the left channel sample and the
+lower byte contains the right channel  sample.   In  the MONO  scheme
+bytes are accessed sequentially.   However, they are still fetched a
+word at a time.  Therefore,  there  must be an even number of samples.
 ```
 SPARROW SPEC. REV A10                                       page 17
 ```
-
 A group of samples is called a frame.   A frame may  be played 
-once  or    can    automatically    be   
-repeated    forever. Frames 
-occupy  a
-    contiguous block of memory and are specified by  their
-starting 
-and
-    ending  addresses.   The  ending  address is the address of
-the
-last
-    sample + 2.  An external clock is provided  to timer A of the
-ST MFP
-    at the end of each frame. This  can  be  used   as   an  
-interrupt.
-    This   pulse   is   also  exclusive   OR'ed   with   the 
-monochrome
-    monitor detect bit, whose transition can generate  an 
-interrupt  on
-    bit 7 of  the MFP-ST  General  Purpose  I/O  Port.    Frames 
-may be
-    linked  together by defining a new frame while the current
-frame  is
-    being  played.   The  new frame will begin at the end of the
-current
-    frame.
-
+once  or    can    automatically    be repeated    forever. Frames 
+occupy  a contiguous block of memory and are specified by  their
+starting and ending  addresses.   The  ending  address is the address of
+the last sample + 2.  An external clock is provided  to timer A of the
+ST MFP at the end of each frame. This  can  be  used   as   an
+interrupt. This   pulse   is   also  exclusive   OR'ed   with   the 
+monochrome monitor detect bit, whose transition can generate  an 
+interrupt  on bit 7 of  the MFP-ST  General  Purpose  I/O  Port.    Frames 
+may be linked  together by defining a new frame while the current
+frame  is being  played.   The  new frame will begin at the end of the
+current frame.
 
 ### 5.2.3. MICROWIRE Interface
 
