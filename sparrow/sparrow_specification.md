@@ -79,187 +79,114 @@ I/O map-vv bits in FF8006 changed.
 ```
 SPARROW SPEC. REV A10                                       page 2
 ```
-
- 1.   - INTRODUCTION -
+# 1. INTRODUCTION
 
 The  Sparrow  is  the  newest  enhancement  in  the  series  of
-Atari ST
-    compatible 68000 - based computers. It is upward compatible
-with the
-    Atari STe, and includes a number of enhanced features.
+Atari ST compatible 68000 - based computers. It is upward compatible
+with the Atari STe, and includes a number of enhanced features.
 
 The hardware specifications of the computer is as follows:
 
--    Motorola MC68030 at 8Mhz (default)  or 16MHz, software
-selectable.
+-    Motorola MC68030 at 8Mhz (default)  or 16MHz, software selectable.
 
--    RAM:    Dual-purpose   (video/system)   RAM,  configuration 
-is  as
-    follows:
+- RAM: Dual-purpose (video/system) RAM, configuration is  as follows:
+    - For  16  bit  wide  video  bus  possible  configurations are: 512Kbytes, 1Mbytes, 2Mbytes, 4Mbytes, 8Mbytes and 14Mbytes.
+    - For 32 bit wide video bus possible configurations are: 1Mbytes, 4Mbytes and 14Mbytes.
 
-For  16  bit  wide  video  bus  possible  configurations are:
-512Kbytes,
-    1Mbytes, 2Mbytes, 4Mbytes, 8Mbytes and 14Mbytes.
-
-For 32 bit wide video bus possible configurations are: 1Mbytes,
-4Mbytes
-    and 14Mbytes.
-
--    ROM:  2  socketed  ROMs,  providing  256Kbytes or 512Kbytes
-of 
-ROM
-    space (strappable).
+-    ROM:  2  socketed  ROMs,  providing  256Kbytes or 512Kbytes of ROM space (strappable).
 
 -    The Sparrow supports 3 video modes in STe mode as follows:
 
-    H X V         # of pallet bits         color resolution
-(bits)
+    H X V           # of pallet bits         color resolution (bits)
 
     320 x 200            4                        4
     640 x 200            2                        4
     640 x 400            1                        N/A
 
--    The Sparrow  supports  programmable  video  modes  in  SP 
-mode  as
-    follows:
+-    The Sparrow  supports  programmable  video  modes  in  SP mode  as follows:
 
-    H X V           # of pallet bits         color resolution
-(bits)
+    H X V           # of pallet bits         color resolution (bits)
 
-    Programmable    Programmable (4/8)             6
+    Programmable    Programmable (4/8)            6
 
--     The Sparrow also supports the XGA high color mode which
-enables up
-    to  65536  possible  direct  color  combinations. This 
-option 
-also
-    supports  automatic  pixel scroll capability since each video
-memory
-    word corresponds to one pixel.
+-    The Sparrow also supports the XGA high color mode which
+enables up to  65536  possible  direct  color  combinations. This 
+option also supports  automatic  pixel scroll capability since each video
+memory word corresponds to one pixel.
 
 -    The video shifter supports both 16 or 32 bit wide data  bus 
-width.
-    It  retrieves  video  data  by  page  mode  from  DRAM. It 
-supports
-    programmable overscan and pixel scrolling.
+width. It  retrieves  video  data  by  page  mode  from  DRAM. It 
+supports programmable overscan and pixel scrolling.
 
--      The Sparrow  supports  the  necessary  logic  to  support 
-future
-    addition of an Internal Hard Disk (IDE Interface).
+-    The Sparrow  supports  the  necessary  logic  to  support 
+future addition of an Internal Hard Disk (IDE Interface).
 
--      The  Sparrow  supports all the necessary controls to
-support
-full
-    implementation of Interlace on TV's. This includes  Field 
-sync 
-and
-    Equalization pulses for TV. This feature enables enhanced TV
-display
-
-
-
+-    The  Sparrow  supports all the necessary controls to
+support full implementation of Interlace on TV's. This includes  Field 
+sync and Equalization pulses for TV. This feature enables enhanced TV
+display by  enabling  the  display of 400 lines or more on TV's. The
 ```
 SPARROW SPEC. REV A10                                       page 3
 ```
-
-    by  enabling  the  display of 400 lines or more on TV's. The
-Sparrow
-    also supports interlace on monitors, to enable display of 400
-
-lines
-    on color monitors.
+Sparrow also supports interlace on monitors, to enable display of 400
+lines on color monitors.
 
 -   The Sparrow contains a built in Blitter.
 
 -   The  Sparrow supports the industry standard analog RGB color
-monitor
-    interface as well as monochrome  interface  and  a  composite
-
-video
-    interface  for  PAL,  SECAM  and  NTSC  TV   standards. It 
-supports
-    monochrome monitors, color monitors and the VGA monitor.
-
+monitor interface as well as monochrome  interface  and  a  composite
+video interface  for  PAL,  SECAM  and  NTSC  TV   standards. It 
+supports monochrome monitors, color monitors and the VGA monitor.
 
 -  The Sparrow has a Parallel I/O port, implemented using   one 
-of 
-the
-    parallel   ports   on the General Instruments AY-3-8910 /
-Yamaha YM-
-    2149 sound chip.
+of the parallel   ports   on the General Instruments AY-3-8910 /
+Yamaha YM-2149 sound chip.
 
 -  The Sparrow has  one low-speed  async  serial  I/O  port 
-(implemented
-    using the 68901 MFP).
+(implemented using the 68901 MFP).
 
 -  The  Sparrow  has  an   ST/MEGA compatible intelligent
-keyboard,
-with
-    mouse and joystick ports.  It also has the hooks to connect
-to
-the
-    new Atari Universal Keyboard Controller.
+keyboard, with mouse and joystick ports.  It also has the hooks to connect
+to the new Atari Universal Keyboard Controller.
 
 -  The Sparrow supports the standard SCSI Interface (for Hard
-Disk,
-Laser
-   Printer, CD-ROM, etc).
+Disk, Laser Printer, CD-ROM, etc).
 
 -  The Sparrow has a  Floppy disk controller and interface that
-supports
-   720 Kbytes or 1.44Mbytes floppies, sharing  the  DMA 
-channel.It has
-   also an option for quad density floppies.
+supports 720 Kbytes or 1.44Mbytes floppies, sharing  the  DMA 
+channel.It has also an option for quad density floppies.
 
 -  The Sparrow has a  Musical Instrument Digital Interface (MIDI)
 
 -  The  Sparrow  has  an   Atari ST compatible cartridge port
-(128
-Kbyte
-    storage).
+(128 Kbyte storage).
 
 -  The Sparrow has enhanced quad channel sound capabilities:
-     12 bit, stereo DAC with parallel (8bit) or serial (16bit)
-I/F.
-      8 bit, stereo ADC with 16bit serial output.
-      Digitally controlled tone, volume and fade via microwire
-I/F
-   The  sound chip (RASCAL) interfaces with the new Sparrow DMA
-chip
+    - 12 bit, stereo DAC with parallel (8bit) or serial (16bit) I/F.
+    - 8 bit, stereo ADC with 16bit serial output.
+    - Digitally controlled tone, volume and fade via microwire 
+    - The  sound chip (RASCAL) interfaces with the new Sparrow DMA chip
       (which also contains the DMA support for disk transfers).
 
 -  The Sparrow contains  the  PSG  Yamaha  YM-2149  for 
-producing 
-music
-    synthesis, sound effects and audio feedback.
+producing  music synthesis, sound effects and audio feedback.
 
 -  The  Sparrow  contains  a  GENLOCK option to synchronize the
-internal
-    clock to an external sync signal. In case of  Genlock  and 
-XGA 
-the
-    Sparrow  outputs  a  special  control  bit  for each pixel to
-enable
-    programmable switching between internal or external video
-source. In
-    this case the number of possible colors is reduced to 32768.
-
-
-
-
-
-
+internal clock to an external sync signal. In case of  Genlock  and XGA 
+the Sparrow  outputs  a  special  control  bit  for each pixel to
+enable programmable switching between internal or external video
+source. In this case the number of possible colors is reduced to 32768.
 ```
 SPARROW SPEC. REV A10                                       page 4
 ```
 -  The Sparrow contains interface to the following peripherals: a
-set  of
-    additional joysticks, paddles and light gun/pen.
+set  of additional joysticks, paddles and light gun/pen.
 
 -  The Sparrow has a built in Real Time Clock.
 
 -  The Sparrow has a built in networking capability through the
 85C30 SCC.
+
 -  Sparrow has on board the 56001 DSP and 68881 FPU.
 
 # 2. MAIN SYSTEM
