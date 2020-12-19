@@ -1120,8 +1120,8 @@ below defines how inversion affects access to the palette.
 
     Invert         Background    Foreground    Border
 
-      0    254           255           254
-      1    255           254           254
+      0             254           255           254
+      1             255           254           254
 
     This is identical to ST and TT duochrome modes.
 
@@ -1233,7 +1233,7 @@ the BitMap is read. Note that there are two Video Base Registers
 for even and odd fields. Only the even register set need be used
 for non-interlace modes.
 
-    BitMap planes are transferred from RAM to data steering
+BitMap planes are transferred from RAM to data steering
 ahead of the video FIFO where the planes are translated into
 packed pixels for video processing. The translated data proceeds
 through the video FIFO to the RAMDAC where one bit from each
@@ -1241,9 +1241,9 @@ plane is collectively used as the index (plane 0 appears first in
 RAM and provides the least significant bit of each pixel) to a
 specific ST or TT palette register (depending on the Shift Mode).
 
-4.2.1  Video Data Word Formats
+### 4.2.1  Video Data Word Formats
 
-    Video data stored in RAM in planar fashion must comply with
+Video data stored in RAM in planar fashion must comply with
 ST/TT format. Data stored in packed form must comply to the
 formats defined below.
 
@@ -1253,42 +1253,41 @@ formats defined below.
     
     2 bits/pxl     |10101010|10101010|10101010|10101010|
     
-    1 bit/pxl |00000000|00000000|00000000|00000000|
+    1 bit/pxl      |00000000|00000000|00000000|00000000|
 
-    Pixels always go left to right
+Pixels always go left to right
 
-
-    True Color Mode
+#### True Color Mode
 
        --------------------------------------------
       | XXXX XXXX | R7....R0 | G7....G0 | B7....B0 | 
        --------------------------------------------
-        ^     ^
-        ||
+        ^                                       ^
+        |                                       |
 
-        Data31                            Data0
+        Data31                                  Data0
     
 
-    Psuedo/True Color Mode
+#### Pseudo/True Color Mode
 
        --------------------------------------------
       | PC7...PC0 | R7....R0 | G7....G0 | B7....B0 |
        --------------------------------------------
 
-    XGA Color Mode
+#### XGA Color Mode
 
        ------------------------------------------------------
       | R4...R0G5..G3|G2..G0B4..B0|R4...R0G5..G3|G2..G0B4..B0|
        ------------------------------------------------------
 
+## 4.3 External Video Interface
 
-4.3 External Video Interface
-
-    Because of the wide range of video resolutions supported by
+Because of the wide range of video resolutions supported by
 Falcon, some display devices will have to be driven by a daughter
 card connected to the motherboard at the video expansion
 connector.
-    The motherboard will support VGA and super VGA monitors. The
+    
+The motherboard will support VGA and super VGA monitors. The
 RAMDAC is capable of generating RGB signals for a variety of
 video modes which are not displayable on a VGA or super VGA
 monitor. Separate horizontal and vertical outputs are supplied to
@@ -1301,7 +1300,7 @@ control register. An external dot clock input from the expansion
 card is multiplexed through to the RAMDAC by grounding the MUXSEL
 pin on the connector.
 
-    The external video port also provides a bidirectional
+The external video port also provides a bidirectional
 parallel data interface to the Falcon video subsystem for
 external devices such as video digitizers and shifters. As an
 input port, this port supports direct display of incoming video
@@ -1313,15 +1312,15 @@ bus on the interface can also be used for transfer of display
 lists from the video buffer for such devices as polygon rendering
 engines.
 
-    A simple IO interface is also provided to allow programming
+A simple IO interface is also provided to allow programming
 of an external card. Eight address lines provide for selection of
 256 byte locations. Read and write strobes on the connector are
 used to qualify the address and data flow. The first byte
 location appears at IO address xxFF8301 and the last at xxFF83FF.
 
-4.3.1  Frame Grabbing
+### 4.3.1  Frame Grabbing
 
-    The Falcon architecture allows a frame storage operation to
+The Falcon architecture allows a frame storage operation to
 occur as the frame is displayed through the RAMDAC. In order to
 perform frame storage operations, Falcon and the external
 digitizer must be genlocked. This can be done in one of two ways.
