@@ -1449,56 +1449,39 @@ current
     frame.
 
 
-5.2.3.   - MICROWIRE Interface -
+###### 5.2.3. MICROWIRE Interface
 
 The  MICROWIRE  interface  provided  to  talk  to  the RASCAL's
-software
-    controlled Volume / Tone Control  is  a  general  purpose 
-MICROWIRE
-    interface to allow the future addition  of  other MICROWIRE
+software controlled Volume / Tone Control  is  a  general  purpose 
+MICROWIRE interface to allow the future addition  of  other MICROWIRE
 devices.
-    For this reason, the following description of its use will 
-make  no
-    assumptions about the device being addressed.
+    
+For this reason, the following description of its use will 
+make  no assumptions about the device being addressed.
 
 The  MICROWIRE  bus  is  a  three  wire  serial  connection and
-protocol
-    designed to allow multiple devices to be individually 
-addressed  by
-    the  controller.   The  length of the  serial data stream
-depends on
-    the destination device.    In general, the stream consists of
-N bits
-    of address, followed  by  zero or  more  don't  care bits, 
-followed
-    by  M bits of data.   The hardware interface which has been
-provided
-    consists  of  two 16  bit  read/write registers.   One data
-register
-    which contains the actual bit stream to  be  shifted  out 
-and 
- one    mask register which indicates which bits
-are valid.
+protocol designed to allow multiple devices to be individually 
+addressed  by the  controller.   The  length of the  serial data stream
+depends on the destination device.    In general, the stream consists of
+N bits of address, followed  by  zero or  more  don't  care bits, 
+followed by  M bits of data.   The hardware interface which has been
+provided consists  of  two 16  bit  read/write registers.   One data
+register which contains the actual bit stream to  be  shifted  out 
+and one    mask register which indicates which bits are valid.
 
 Let's  consider  a  mythical  device  which  requires  two
-address 
-bits
-    and one data bit.    For this device the total bit stream  is
-
-three
-    bits  (minimum).    Any   contiguous   three bits  of  the 
-register
-    pair may be used.    However,  since the most   significant 
-bit  is
-    shifted   first,    the   command will  be  received  by  the
-device
-    soonest if the three most significant bits are used.   Let's
+address bits and one data bit.    For this device the total bit stream  is
+three bits  (minimum).    Any   contiguous   three bits  of  the 
+register pair may be used.    However,  since the most   significant 
+bit  is shifted   first,    the   command will  be  received  by  the
+device soonest if the three most significant bits are used.   Let's
 assume:
-    01 is the device's address,  D  is  the  data  to  be 
-written, 
+
+- 01 is the device's address,  D  is  the  data  to  be written,
+
 and
-    X's  are  don't  cares.    Then  all  of  the   following  
-register
+
+- X's  are  don't  cares.    Then  all  of  the   following register
     combinations will provide the same information to the device.
 
                 1110 0000 0000 0000  Mask
@@ -1509,70 +1492,42 @@ register
 
                 0000 0001 1100 0000  Mask
                 XXXX XXX0 1DXX XXXX  Data
-
-
-
-
-
-
 ```
 SPARROW SPEC. REV A10                                       page 18
 ```
-
                 0000 1111 1111 0000  Mask
                 XXXX 01XX XXXD 0000  Data
 
                 1111 1111 1111 1111  Mask
                 01XX XXXX XXXX XXXD  Data
 
-
 The  mask  register  needs  to  be  written  before  the  data
 register.
-    Sending commences when  the  data  register  is  written  and
+    
+Sending commences when  the  data  register  is  written  and
+takes    approximately  16uS.   Subsequent writes  to   the  data 
+and mask registers are blocked  until  sending  is  complete.
+Reading the registers while sending is in  progress will  return  a 
+snapshot of the shift register shifting the data and mask out.   This
+means that you  know it is safe to send  the  next command when these
+registers (or either one) return to their original state.   Note that
+the mask register   does  not  need to be rewritten if it is already
+correct. That is, when sending a series of commands the  mask 
+register only needs to be written once.
 
-takes    approximately  16uS.   Subsequent 
-writes  to   the  data 
-and 
-mask
-    registers are blocked  until  sending  is  complete.   
-Reading 
-the
-    registers while sending is in  progress will  return  a 
-snapshot of
-    the shift register shifting the data and mask out.   This
-means
-that
-    you  know it is safe to send  the  next command when these
-registers
-    (or either one) return to their original state.   Note that
-the
-mask
-    register   does  not  need to be rewritten if it is already
-correct.
-    That is, when sending a series of commands the  mask 
-register 
-only
-    needs to be written once.
-
-
-5.2.4.   - Volume and Tone Control -
+###### 5.2.4. Volume and Tone Control
 
 The  RASCAL is used to provide volume, tone, and mixing control. 
+This part is talked to using the MICROWIRE interface.   The device
+has  a two bit address  field, address  = 10,  and a nine bit data
+field. 
 
- This
-    part is talked to using the MICROWIRE interface.   The device
-has  a
-    two bit address  field,   address  = 10,  and a nine bit data
-field.
-    There is no way of reading the current settings.
+There is no way of reading the current settings.
 
 The  input selector is used to enable and disable mixing the 
-output  of
-    the GI PSG with the DMA sound.   After reset, the input is
-grounded,
-    and  should  be  switched  to  either states    1    or   2  
-during
-    initialization  to  avoid  level mismatches during later
+output  of the GI PSG with the DMA sound.   After reset, the input is
+grounded, and  should  be  switched  to  either states 1 or 2
+during tialization  to  avoid  level mismatches during later
 switching.
 
                 Data Field
@@ -1585,20 +1540,9 @@ switching.
 
                 101 XDD DDD  Set Left Channel Volume
                      || |||                    
-00 000  -40 dB
+                     00 000  -40 dB
                      01 010  -20 dB
                      10 1XX    0 dB
-
-
-
-
-
-
-
-
-
-
-
 ```
 SPARROW SPEC. REV A10                                       page 19
 ```
@@ -1627,12 +1571,8 @@ SPARROW SPEC. REV A10                                       page 19
                          01  enabled
                          10  disabled, biased
 
-            Note:  The volume controls attenuate in  2  dB 
-steps. 
- The
-            tone controls attenuate in 2 dB steps at 50 Hz and 15
-kHz.
-
+            Note:  The volume controls attenuate in  2  dB steps. 
+                   The tone controls attenuate in 2 dB steps at 50 Hz and 15 kHz.
 
 ##### 5.3. Musical Instrument Digital Interface (MIDI)
 
@@ -1691,7 +1631,7 @@ following pin assignment:
 
 ##### SP/ST I/O MAP   (Offset within SP image FF8000)
 
-             - Offset -        - Use -
+            - Offset -         - Use -
 
             8000-8001          Memory Controller
             8002-8005          <reserved>
