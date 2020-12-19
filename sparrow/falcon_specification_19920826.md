@@ -1,11 +1,11 @@
-Section 1   INTRODUCTION
+# Section 1   INTRODUCTION
 
-    FALCON is the base design of a series of Atari computers
+FALCON is the base design of a series of Atari computers
 extending the TOS compatible product line which began with the
 ST. FALCON provides enhanced video, graphics, and sound as well
 as greater bus bandwidth and operating speeds.
 
-    The FALCON architecture accepts 32-bit Motorola MC68030 or
+The FALCON architecture accepts 32-bit Motorola MC68030 or
 MC68040 family processors at clock speeds up to 33 MHz. Both
 processor families feature on-chip data and instruction caches
 which can be filled in bursts of 32 bit data fetches. The MC68040
@@ -13,84 +13,81 @@ also includes an internal floating point coprocessor. MC68030
 based designs may include an external MC68882 floating point
 coprocessor.
 
-    The architecture also includes VMEbus to facilitate
+The architecture also includes VMEbus to facilitate
 expansion. The system supports revision (C.1) of the VMEbus
 specification.
 
-    A FALCON will contain an on-board moderate speed LAN port
+A FALCON will contain an on-board moderate speed LAN port
 and an IO expansion port with DMA capability. Additionally, each
 FALCON will provide one or two RS-232C serial ports.
 
-    Some highlights of the FALCON architecture:
+Some highlights of the FALCON architecture:
 
--   Motorola MC68030 or MC68040 up to 33 MHz
+- Motorola MC68030 or MC68040 up to 33 MHz
 
--   Motorola MC68882 Floating Point Coprocessor (68030 only) at
-    the CPU speed
+- Motorola MC68882 Floating Point Coprocessor (68030 only) at the CPU speed
 
--   Two banks of dual-purpose (video/system) RAM, each bank
+- Two banks of dual-purpose (video/system) RAM, each bank 
     consisting of 0.5, 2, or 8 megabytes, allowing up to 15 Mb
     (this memory appears 64-bits wide to the video logic and
     32-bits wide to the system bus)
 
--   Up to 32 Mb of fast expansion RAM
+- Up to 32 Mb of fast expansion RAM
 
--   512Kb of 32 bit wide ROM 
+- 512Kb of 32 bit wide ROM 
 
--   Video modes that are a superset of those in the Atari ST and
+- Video modes that are a superset of those in the Atari ST and
     TT series-- Color: 320x200x16, 320x480x256, 640x200x4,
     640x480x16  DuoChrome: 640x400x2.  Monochrome: 1280x960x1
 
--   New programmable video modes XxYxN where N can be 1,2,4,8 or
+- New programmable video modes XxYxN where N can be 1,2,4,8 or
     24 bits/pixel (ST and TT compatible modes are planar bit
     mapped while new modes are packed pixel)
 
--   Programmable video timing to allow complete software control
+- Programmable video timing to allow complete software control
     over sync rates and screen widths
 
--   True broadcast (NTSC/PAL/SECAM) timing, true VGA, and higher
+- True broadcast (NTSC/PAL/SECAM) timing, true VGA, and higher
     resolution capability
 
--   Powerful graphics coprocessor
+- Powerful graphics coprocessor
 
--   On board DSP, 16 bit stereo DAC, and 16 bit stereo ADC with
+- On board DSP, 16 bit stereo DAC, and 16 bit stereo ADC with
     a versitile interconnect matrix
 
--   External connection for digital audio devices with standard
+- External connection for digital audio devices with standard
     serial data interface
 
--   Parallel I/O port
+- Parallel I/O port
 
--   Internal audio amp and speaker
+- Internal audio amp and speaker
 
--   Two asynchronous serial I/O ports (up to 19.2 Kbaud)
+- Two asynchronous serial I/O ports (up to 19.2 Kbaud)
 
--   High-speed SDLC serial modem and LAN ports (interface
+- High-speed SDLC serial modem and LAN ports (interface
     through a proprietary DMA channel)
 
--   Real time clock (RTC) with 50 bytes of non-volatile RAM
+- Real time clock (RTC) with 50 bytes of non-volatile RAM
 
--   ST/MEGA compatible intelligent keyboard, with mouse and
+- ST/MEGA compatible intelligent keyboard, with mouse and
     joystick ports
 
--   Floppy disk controller and interface on a proprietary DMA
+- Floppy disk controller and interface on a proprietary DMA
     channel (double, high, and quad density)
 
--   Musical Instrument Digital Interface (MIDI)
+- Musical Instrument Digital Interface (MIDI)
 
--   Atari ST compatible cartridge port (128 Kb storage)
+- Atari ST compatible cartridge port (128 Kb storage)
 
--   SCSI interface on a proprietary DMA channel
+- SCSI interface on a proprietary DMA channel
 
--   Expansion IO port with DMA
+- Expansion IO port with DMA
 
--   Provision for a multi-slot VME bus (full multi-master VME
+- Provision for a multi-slot VME bus (full multi-master VME
     with the address space divided into A32/D32, A24/D16, and
     A16/D16 areas) [not included on all models]
 
-
-
-Section 2   MAIN SYSTEM
+# Section 2   MAIN SYSTEM
 
     The FALCON architecture is designed to be a high performance
 computing platform. By including the VMEbus and facilities for
