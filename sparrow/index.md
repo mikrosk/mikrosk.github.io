@@ -52,6 +52,8 @@ This makes only 17 (rev.1) + 59 (rev.2) = 76 publicly known Sparrows in the worl
 
 It seems that there had been two 32-bit Atari machines in development at the same time: the Falcon (designed by John D. Horton Jr. in Dallas, Texas) and the [Sparrow](https://www.maedicke.de/atari/hardware/sparrow.htm) (designed by Moshe Segal and Eran Dariel in Israel). The latter became the "real" [Falcon 030](https://www.maedicke.de/atari/hardware/falcon.htm) as we know it. What happened to the former one, nobody knows. Some of its features resemble the [Microbox](https://www.maedicke.de/atari/hardware/microbox.htm), however [another source](http://www.atarimuseum.com/computers/16bits/falcon030/microbox/index.htm) claims to be a separate project led by the [former ST/FM designer](http://www.computinghistory.org.uk/det/587/Atari-520-STM) Ira Valenski. Due to lack of any mention of PCI slots it perhaps wouldn't meant to be the [Falcon 040](https://www.maedicke.de/atari/hardware/falcon040.htm).
 
+Anyway, both the Microbox and Falcon040 were designed by the Dallas team, hinting that the "1991 Falcon" had something to do with them. In this [magazine](91_falcon1.jpg) [excerpt](91_falcon2.jpg) dated July 13 1991 one can clearly recognise the TT/VME-based Falcon which had been in the works.
+
 The following documents were found & rescued by [Christian Zietz](https://www.chzsoft.de) and first published at [atari-home.de](https://forum.atari-home.de/index.php/topic,13380.msg214172.html#msg214172):
 
 - [Sparrow specification (dated Dec 18 1991)](sparrow_specification_19911218.md) (converted into markdown by me)
