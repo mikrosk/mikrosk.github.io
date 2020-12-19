@@ -8,53 +8,11 @@ Written by   : Moshe Segal, Eran Dariel        ****
                                            **   **   **
 ```
 
+# SPARROW SPECIFICATION
 
-
-
-
-
-
-                          SPARROW SPECIFICATION
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPARROW SPEC. REV A10                                   page 1
-
+```
+SPARROW SPEC. REV A10                                       page 1
+```
 
 REV A10   10/22/91  changes:
 
@@ -118,11 +76,9 @@ I/O map-vv bits in FF8006 changed.
 
 
 
-
-SPARROW SPEC. REV A10                                        
-page
-2
-
+```
+SPARROW SPEC. REV A10                                       page 2
+```
 
  1.   - INTRODUCTION -
 
@@ -202,10 +158,9 @@ display
 
 
 
-
-SPARROW SPEC. REV A10                                            
-page 3
-
+```
+SPARROW SPEC. REV A10                                       page 3
+```
 
     by  enabling  the  display of 400 lines or more on TV's. The
 Sparrow
@@ -294,11 +249,9 @@ source. In
 
 
 
-
-SPARROW SPEC. REV A10                                        
-page
-4
-
+```
+SPARROW SPEC. REV A10                                       page 4
+```
 -  The Sparrow contains interface to the following peripherals: a
 set  of
     additional joysticks, paddles and light gun/pen.
@@ -389,11 +342,9 @@ implemented by
 
 
 
-
-SPARROW SPEC. REV A10                                        
-page
-5
-
+```
+SPARROW SPEC. REV A10                                       page 5
+```
 
     using 8 bit wide SIMMS (Single In line Memory Modules), 
 which 
@@ -498,11 +449,9 @@ the
 
 
 
-
-SPARROW SPEC. REV A10                                        
-page
-6
-
+```
+SPARROW SPEC. REV A10                                       page 6
+```
 In  Sparrow,  video  accesses  use  page  mode  and  thus  the
 timeshare
     machanism used in STe cannot be employed. Instead, any video
@@ -590,11 +539,9 @@ edge
 
 
 
-
-SPARROW SPEC. REV A10                                        
-page
-7
-
+```
+SPARROW SPEC. REV A10                                       page 7
+```
 
 2.4.2.   - Bus Error Circuitry -
 
@@ -673,11 +620,9 @@ subsystems:
 
 
 
-
-SPARROW SPEC. REV A10                                        
-page
-8
-
+```
+SPARROW SPEC. REV A10                                       page 8
+```
 
 -    serial port and  an   external   interrupt  port  connected 
 to  MFP
@@ -755,11 +700,9 @@ desired
 
 
 
-
-SPARROW SPEC. REV A10                                        
-page
-9
-
+```
+SPARROW SPEC. REV A10                                       page 9
+```
 
 The standard floppy for the Sparrow is the  3.5  inch floppy 
 disk 
@@ -846,10 +789,9 @@ exceeding
 
 
 
-
-SPARROW SPEC. REV A10                                        
-page
-10
+```
+SPARROW SPEC. REV A10                                       page 10
+```
 
 The Sparrow also supports  the  Acknowledge  signal  from  the 
 parallel
@@ -934,11 +876,9 @@ joystick
 
 
 
-
-SPARROW SPEC. REV A10                                        
-page
-11
-
+```
+SPARROW SPEC. REV A10                                       page 11
+```
 
 Mouse/joystick0  uses  a  DB9  pin  P  connector  with the
 following pin
@@ -1005,10 +945,9 @@ following pin
 
 
 
-
-SPARROW SPEC. REV A10                                       page
-12
-
+```
+SPARROW SPEC. REV A10                                       page 12
+```
 
       17 - data 0
       18 - data 1
@@ -1086,10 +1025,9 @@ modes in
 
 
 
-
-SPARROW SPEC. REV A10                                       page
-13
-
+```
+SPARROW SPEC. REV A10                                       page 13
+```
      STe mode
      mode      resolution   bit      palette          colors
      bits                   planes   (CLUT entries)   DACs
@@ -1181,10 +1119,9 @@ Video
 
 
 
-
-SPARROW SPEC. REV A10                                       page
-14
-
+```
+SPARROW SPEC. REV A10                                       page 14
+```
     Base Mid, or Video Base Low Registers. This   register   is  
 loaded
     into   the Video  Address  Counter  (High/Mid/Low)  at the
@@ -1296,10 +1233,9 @@ monitors,  a
 
 
 
-
-SPARROW SPEC. REV A10                                       page
-15
-
+```
+SPARROW SPEC. REV A10                                       page 15
+```
     variety  of  TV standards as well as programmable overscan.
 The
 full
@@ -1375,10 +1311,9 @@ devices.
 
 
 
-
-SPARROW SPEC. REV A10                                       page
-16
-
+```
+SPARROW SPEC. REV A10                                       page 16
+```
 5.1.   - Programmable Sound Generator -
 
 The ST sound system using the General  Instruments  AY-3-8910  /
@@ -1483,10 +1418,9 @@ at a
 
 
 
-
-SPARROW SPEC. REV A10                                       page
-17
-
+```
+SPARROW SPEC. REV A10                                       page 17
+```
 
 A group of samples is called a frame.   A frame may  be played 
 once  or    can    automatically    be   
@@ -1581,10 +1515,9 @@ register
 
 
 
-
-SPARROW SPEC. REV A10                                       page
-18
-
+```
+SPARROW SPEC. REV A10                                       page 18
+```
 
                 0000 1111 1111 0000  Mask
                 XXXX 01XX XXXD 0000  Data
@@ -1666,10 +1599,9 @@ switching.
 
 
 
-
-SPARROW SPEC. REV A10                                       page
-19
-
+```
+SPARROW SPEC. REV A10                                       page 19
+```
                 100 XDD DDD  Set Right Channel Volume
                      || |||
                      00 000  -40 dB
@@ -1741,10 +1673,9 @@ the
 
 
 
-
-SPARROW SPEC. REV A10                                       page
-20
-
+```
+SPARROW SPEC. REV A10                                       page 20
+```
 
 The MIDI IN uses a circular DIN 5 pin S connector with the
 following pin
@@ -1808,10 +1739,9 @@ Disk)
 
 
 
-
-SPARROW SPEC. REV A10                                       page
-21
-
+```
+SPARROW SPEC. REV A10                                       page 21
+```
             8A00-8A3F          BLiTTER
             8A40-8C7F          <reserved>
             8C80-8C87          SCC
@@ -1870,10 +1800,9 @@ videoconnector
 
 
 
-
-SPARROW SPEC. REV A10                                       page
-22
-
+```
+SPARROW SPEC. REV A10                                       page 22
+```
 
             8007   RW   dvim bs_c   CPU Clock Select and misc
 controls
@@ -1955,10 +1884,9 @@ plane
 
 
 
-
-SPARROW SPEC. REV A10                                       page
-23
-
+```
+SPARROW SPEC. REV A10                                       page 23
+```
 
 
             8264   RW   ---- ----  0000 xxxx   Horizontal Pixel
@@ -2055,10 +1983,9 @@ Begin
 
 
 
-
-SPARROW SPEC. REV A8                                       page
-24
-
+```
+SPARROW SPEC. REV A10                                       page 24
+```
 
             82C0   RW   ---- ---o  bhvc esvv   Video Master
 Control
@@ -2139,10 +2066,9 @@ Reg 255
 
 
 
-
-SPARROW SPEC. REV A10                                       page
-25
-
+```
+SPARROW SPEC. REV A10                                       page 25
+```
 
              - ST  DMA -
 
@@ -2226,10 +2152,9 @@ Control
 
 
 
-
-SPARROW SPEC. REV A10                                       page
-26
-
+```
+SPARROW SPEC. REV A10                                       page 26
+```
 
                                             01110- Mixer Control-
 I/O enable
@@ -2315,10 +2240,9 @@ Counter (low)
 
 
 
-
-SPARROW SPEC. REV A10                                       page
-27
-
+```
+SPARROW SPEC. REV A10                                       page 27
+```
 
             8922   RW   xxxx xxxx  xxxx xxxx   MICROWIRE Data
 register
@@ -2392,10 +2316,9 @@ HOP
 
 
 
-
-SPARROW SPEC. REV A10                                       page
-28
-
+```
+SPARROW SPEC. REV A10                                       page 28
+```
 
              - JOYSTICK -   - AND CONFIGURATION SWITCH CONTROL -
 
@@ -2488,10 +2411,9 @@ B - ISRB
 
 
 
-
-SPARROW SPEC. REV A10                                       page
-29
-
+```
+SPARROW SPEC. REV A10                                       page 29
+```
 
 FA1C    RW   ---- ---- xxxx xxxx   Timers C,D Control    - TCDCR
             FA1E    RW   ---- ---- xxxx xxxx   Timer A Data      
@@ -2524,8 +2446,7 @@ FA1C    RW   ---- ---- xxxx xxxx   Timers C,D Control    - TCDCR
 
             - ikbd ACIA -
 
-            FC00    RW   xxxx xxxx ---- ----   Keyboard ACIA
-Control
+            FC00    RW   xxxx xxxx ---- ----   Keyboard ACIA Control
             FC02    RW   xxxx xxxx ---- ----   Keyboard ACIA Data
 
             - MIDI ACIA -
