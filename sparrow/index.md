@@ -61,6 +61,6 @@ The following documents were found & rescued by [Christian Zietz](https://www.ch
 - [Sparrow specification (dated Dec 18 1991)](sparrow_specification_19911218.md) (converted into markdown by me)
 - [Page 3 of Sparrow schematics (dated March 12 1991)](sparrow-schematic-march91-page3.pdf)
 - [Falcon specification (dated Dec 3 1991)](falcon_specification_19911203.pdf) (converted into PDF by Christian)
-- [Falcon specification (dated Aug 26 1992)](falcon_specification_19920826.txt)
+- [Falcon specification (dated Aug 26 1992)](falcon_specification_19920826.md) (converted into markdown by me)
 
 The Falcon must have been pretty close to a finished state as it was in development since the beginning of January 1991 and the last specification refers to it as "Prorotype B **release**", several months after the "real" Falcon 030's release! As you can see, in its latest specification it got also the DSP which was present only in the Sparrow/Falcon 030 so far. See also the related thread on [atari-forum.com](https://www.atari-forum.com/viewtopic.php?p=310452).
