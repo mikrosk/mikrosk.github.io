@@ -2110,26 +2110,26 @@ cleared (enabled).
 
 # Section 6   Sound Subsystem
 
-    The FALCON architecture extends the music subsystem
+The FALCON architecture extends the music subsystem
 presently available on the ST/MEGA/TT computers. New features
 include:
 
--   16 bit stereo
+- 16 bit stereo
 
--   record as well as playack
+- record as well as playack
 
--   integral DSP
+- integral DSP
 
--   fully digital external interface
+- fully digital external interface
 
-    FALCON is also equipped with a Musical Instrument Digital
+FALCON is also equipped with a Musical Instrument Digital
 Interface (MIDI) which provides high speed serial communication
 of musical data to and from more sophisticated synthesizer
 devices.
 
-6.1 DSP
+## 6.1 DSP
 
-    The Motorola DSP56001 Digital Signal Processor has been
+The Motorola DSP56001 Digital Signal Processor has been
 added to the Falcon architecture to facilitate applications which
 require high speed signal processing capability. The DSP host
 interface is memory mapped to the Falcon IO space from xxFFA201-
@@ -2141,97 +2141,23 @@ MFP 2, then DSP. The DSP reset signal is controlled by the PSG
 port a bit 4. Software should configure this pin for output.
 Setting this bit high resets the DSP.
 
-    The DSP is connected to 32K x 24 bits of static ram which is
+The DSP is connected to 32K x 24 bits of static ram which is
 not shared with any other system resource. This DSP ram appears
 in the DSP's address space as follows:
 
+#### Table 6.1 (DSP External Memory Map)
 
-
-
-FFFF
-
-
-
-
-<reserved>
-
-
-
-
-
-
-
-
-<reserved>
-
-
-
-
-
-
-
-
-<reserved>
-
-
-
-
-
-
-
-7FFF
-
-16K
-shadow
-
-
-16K
-shadow
-
-
-
-
-32K
-program
-RAM
-
-Overlaps X
-memory
-
-
-3FFF
-16K
-external
-RAM
-
-16K
-external
-RAM
-
-
-
-Overlaps Y
-memory
-
-
-01FF
-Internal
-RAM/ROM
-Internal
-RAM/ROM
-Internal
-RAM
-
-
-
-0000
-X memory
-Y memory
-P memory
-
-
-
-                     Table 6.1 DSP External Memory Map
+addr| X memory       | Y memory       | P memory      | note
+----|----------------|----------------|---------------|-----
+FFFF| \<reserved\>   | \<reserved\>   | \<reserved\>  |
+:   |    :           |    :           |    :          |
+7FFF|16K shadow      |16K shadow      |32K program RAM|Overlaps X memory
+:   |    :           |    :           |    :          |         :
+3FFF|16K external RAM|16K external RAM|    :          |Overlaps Y memory 
+:   |    :           |    :           |    :          |         :
+01FF|Internal RAM/ROM|Internal RAM/ROM|Internal RAM   |
+:   |    :           |    :           |    :          |
+0000|    :           |    :           |    :          |
 
 The DSP contains internal RAM and ROM which overlap parts of the
 external memory space. Note that since program space overlaps X
@@ -2239,15 +2165,16 @@ and Y data space, DSP software must be careful to avoid having
 program and data memory collide. X:1K, X:17K, and P:17K are the
 same physical memory location as are Y:1k, Y:17K, and P:1K.
 
-    The DSP signals on port C used for the Synchronous Serial
+The DSP signals on port C used for the Synchronous Serial
 Interface (SSI) are connected to the External Digital Sound
 Connector (see Table 6.2) and the switching matrix.
-    For further information on programming the DSP, see the
+
+For further information on programming the DSP, see the
 DSP56000/DSP56001 Digital Signal Processor User's Manual.
 
-6.2 Switching Matrix
+## 6.2 Switching Matrix
 
-    A 4x4 switching matrix and format converter connects the
+A 4x4 switching matrix and format converter connects the
 external sound peripherals and the DMA channels. There are four
 sources of sound data, the playback DMA, the DSP SSI port, the
 external SSI like port, and the CODEC ADC. There are also four
@@ -2267,24 +2194,24 @@ select the same source. There are, however, certain invalid
 combinations. Handshake mode, for example, is only valid with the
 SSI stlye ports and not with the CODEC.
 
-    All the data connections shown are actually serial data
+All the data connections shown are actually serial data
 paths which include a bit clock, data, and synchronization
 signal.
 
-6.2.1  Clock Sources
+### 6.2.1  Clock Sources
 
 There are three possible clock sources in the system:
     
-    CLK25 (25.175 MHz)
-    CLK32 (32 MHz)
-    EXTCLK (external clock)
+- CLK25 (25.175 MHz)
+- CLK32 (32 MHz)
+- EXTCLK (external clock)
 
 Each source device must select one of these clocks as its master
 clock. The CODEC can use the Internal 25.175MHz, or External
 clock. The bit clock is taken from the master clock divided by 4
 to 24. The Sample rate is then the bit rate, divided by 128:
 
-    The Sound Mode Control register (IO+8920h) was used to
+The Sound Mode Control register (IO+8920h) was used to
 select the sample rate clock prescale in previous systems. Bits 0
 and 1 selected the prescale value. With the internal clock (8
 Mhz) selected and the prescale value set to 160, the sample rate
@@ -2294,9 +2221,9 @@ Register (xxFF8934) is programmed to turn off the internal clock.
 Falcon applications should use the Prescale Control Register at
 xxFF8934 to set the master clock prescaler.
 
-6.2.2  Serial Data Formats and DMA Flow Control
+### 6.2.2  Serial Data Formats and DMA Flow Control
 
-    The maximum data rate of the DMA record or playback channels
+The maximum data rate of the DMA record or playback channels
 is one Megabyte per second each. Since the FIFOs are 32 bytes
 deep each sound DMA channel will require bus access approximately
 every 32us. Communication between the DMA ports and the SSI style
@@ -2310,39 +2237,22 @@ synchronization signal is output to the port. Data overflow or
 underruns can occur in non-handshake mode. The CODEC can only
 operate in non-handshake mode.
 
-    The SSI style ports use a three wire serial interface to
+The SSI style ports use a three wire serial interface to
 transfer data. Data transfers use either continuous mode or a
 handshaked (gated clock) mode:
 
+#### Table 6.2
 
-
-
-Signal
-Non-handshake
-Handshake
-
-
-DATA
-output
-output
-
-
-CLOCK
-output
-output
-
-
-SYNC
-output
-input
-
-
-                                 Table 6.2
+Signal | Non-handshake | Handshake
+-------|---------------|----------
+DATA   | output        | output
+CLOCK  | output        | output
+SYNC   | output        | input
 
 In either mode, data changes on the rising edge of the clock.
 Data should be sampled on the falling edge of the clock.
 
-    In continuous clock (non-handshake) mode there are 128 clock
+In continuous clock (non-handshake) mode there are 128 clock
 cycles per sample period or frame. SYNC will go high for the
 first 16 bits of a sample period and then low for the remaining
 96 bits. In each sample period eight 16 bit words or samples are
@@ -2350,7 +2260,7 @@ transferred. Data words are transmitted MSB first, end-on-end,
 with no gaps in between them. All eight samples may not contain
 valid data depending on the source.
 
-    The CODEC DAC is a stereo circuit and can only process two
+The CODEC DAC is a stereo circuit and can only process two
 tracks simultaneously. Bits 12 and 13 of the Sound Mode Control
 register are used to select a pair of samples from each group of
 eight to be sent to the DAC. Note that not all samples in the
@@ -2359,7 +2269,7 @@ playback DMA and less than 8 track playback is selected, tracks 7
 and 8 are not valid. The DAC port cannot operate in gated clock
 mode.
 
-    In Handshaked mode SYNC becomes an input. The external
+In Handshaked mode SYNC becomes an input. The external
 device will pull SYNC high, and if the source device is ready,
 CLOCK will become active for 16 cycles (or one word) together
 with DATA. SYNC is sampled by the source device at the end of
@@ -2368,8 +2278,7 @@ CLOCK and DATA will become active for another 16 cycles. A
 minimum of two clock periods will always be inserted between data
 words.
 
-
-    The CODEC port has 256 bit-clock cycles per frame. There are
+The CODEC port has 256 bit-clock cycles per frame. There are
 four sub-frames per frame. Each sub-frame consists of two 32 bit
 words. The first half of each word is the 16 bit sample (left
 sample first). The second half of each word is a control field
@@ -2380,17 +2289,17 @@ the channel sent to the CODEC DAC. The contents of the control
 fields from the CODEC ADC input channel can be read in the AUX A
 and AUX B input registers.
 
-    The conversion of one format to another is handled
+The conversion of one format to another is handled
 automaticaly by the matrix.
 
-6.3 DMA Channels
+## 6.3 DMA Channels
 
-    There are two uni-directional DMA channels in the sound sub-
+There are two uni-directional DMA channels in the sound sub-
 system. The Playback channel transfers data from system memory to
 the switching matrix. The Record channel stores data received
 from the switching matrix into system memory.
 
-    Two channels of DAC are provided. They are intended to be
+Two channels of DAC are provided. They are intended to be
 used as the left and right channels of a stereo system. Of
 course, they are mixed together when fed to the internal speaker.
 A mono mode is provided which will feed the same data to both
@@ -2398,9 +2307,9 @@ channels simultaneously (STE/TT compatible 8 bit modes only). The
 only restriction placed on mono mode is that there must be an
 even number of samples (see data format section for details).
 
-6.3.1  Memory Data Format and Organization
+### 6.3.1  Memory Data Format and Organization
 
-    In the 8-bit modes (playback only) each sample is stored as
+In the 8-bit modes (playback only) each sample is stored as
 an eight bit quantity. The most significant bit is the sign and
 the other seven bits are magnitude. In the stereo 8-bit modes
 there is one word per sample, the upper byte contains the left
@@ -2409,14 +2318,14 @@ sample. In the 8-bit mono mode bytes are accessed sequentially.
 However, they are still fetched a word at a time. Therefore,
 there must be an even number of samples in a frame of mono data.
 
-    In the 16-bit stereo mode each sample is stored as a word in
+In the 16-bit stereo mode each sample is stored as a word in
 memory. The most significant bit is the sign and the other
 fifteen bits are magnitude. The left channel word is first with
 the remaining words alternating right-left-right etc. The DMA
 channel into memory (record) can only store samples in the 16 bit
 form.
 
-    A group of samples in contiguous memory is called a frame
+A group of samples in contiguous memory is called a frame
 (not to be confused with a group of eight samples on the SSI port
 also referred to as a frame). A frame may be played once or can
 automatically be repeated forever.  Frames occupy a contiguous
@@ -2428,7 +2337,7 @@ be linked together by defining a new frame while the current
 frame is being played. The new frame will begin at the end of the
 current frame.
 
-    SINT and SCNT are similiar signals which indicate frame
+SINT and SCNT are similiar signals which indicate frame
 boundaries. Both signals are low while the selected DMA channel
 is transferring a frame and go high between frames or when the
 DMA channel is inactive. Each signal can be independently
@@ -2437,47 +2346,39 @@ channels. SINT connects to the MFP-1 GPIP7 so can be used to
 generate an interrupt or polled. SCNT feeds the MFP-1 timer A
 input so can be used to count frames.
 
-    As an example, suppose you have three frames (A, B, and C)
+As an example, suppose you have three frames (A, B, and C)
 and we want to play frame A once, then play frame B five times,
 and finally play frame C twice. To accomplish this you can do the
 following:
 
 1.  Setup frame A.
-
 2.  Write 03h to the sound DMA control register to start playing
     with repeat.
-
 3.  Setup timer A to use an external clock, initialize its count
     to 05h, and have it interrupt when count = 0.
-
 4.  Setup frame B.
-
 5.  Go do something else until interrupted.
-
 6.  Setup frame C.
-
 7.  Setup timer A count to 03h.
-
 8.  Go do something else until interrupted.
-
 9.  Write 1 to the sound DMA control register to cause playing
     to stop at the end of the frame.
 
-    Note If we had loaded the sound DMA control register with a
+Note If we had loaded the sound DMA control register with a
 1 in step 2, frame A would have been played once and sound would
 have been disabled. A zero can be written to the sound DMA
 control register at any time to stop playback immediately.
 
-    The DMA channel does not determine how the samples are
+The DMA channel does not determine how the samples are
 defined, only their location in memory and the order in which
 they are handled. The data need not be digitized sound at all. If
 the data is to be monitored by the internal DAC or if the track
 select function is to be used, then the samples must conform to
 the structure of digitized sound.
 
-6.3.2  Multitrack Playback
+### 6.3.2  Multitrack Playback
 
-    When operating in continuous clock mode the SSI style ports
+When operating in continuous clock mode the SSI style ports
 transfer data in 128 bit units called frames (not to be confused
 with a block of contiguous memory also called a frame). Each SSI
 frame consists of a group of eight 16 bit samples. The eight
@@ -2497,7 +2398,7 @@ transfer the same memory frame of data when 4 track playback is
 selected as it does when 8 track playback is selected. Track
 selection does not function when gated clock mode is used.
 
-    The DMA hardware always fetches the samples sequentially
+The DMA hardware always fetches the samples sequentially
 from memory. The meaning of the samples is up to external
 hardware. For example, if four tracks are selected then the first
 four samples of each group of eight samples are output. The four
@@ -2506,9 +2407,9 @@ maximum of eight tracks (four stereo channels) can be selected.
 Note that selecting more tracks for a given sample rate increases
 both the memory required and the memory bandwidth used by DMA.
 
-6.3.3  DMA Sound Record
+### 6.3.3  DMA Sound Record
 
-    Digital sound data can be recorded into memory. Any data
+Digital sound data can be recorded into memory. Any data
 present in the area of memory defined by the frame will be
 replaced with incoming samples. The frame is defined for record
 exactly as it is for playback. Bit 7 in the DMA Sound Control
@@ -2516,7 +2417,7 @@ register (IO+8900h) selects whether the playback or record
 register set is addressed. The two independent register sets are
 identical and occupy the same IO locations.
 
-    DMA stores the first left channel sample received after the
+DMA stores the first left channel sample received after the
 DMA has been enabled then alternating right and left samples
 (same format as 16-bit stereo playback). Multiple frames can be
 combined just as during playback. However, if the frame is
@@ -2526,16 +2427,16 @@ probably use the frame repeat to alternate between two buffers so
 that one buffer can be written to disk while the other is
 filling.
 
-    Track selection via the Record Control Register selects
+Track selection via the Record Control Register selects
 samples from each group of eight to be stored in memory in a way
 simlilar to track selection in playback (see the previous
 section). Selecting tracks to record should only be done when
 recording from a SSI style port operating in continuous clock
 mode. The data from tracks not selected is lost. 
 
-6.3.4  External Digital Sound Data
+### 6.3.4  External Digital Sound Data
 
-    FALCON will have a rear panel connector for input and output
+FALCON will have a rear panel connector for input and output
 of the digital sound data. Both the DSP SSI port and an
 auxilliary SSI like port appear on the connector. SSI like means
 that the signal functions and timing are the same as for the DSP
@@ -2543,137 +2444,46 @@ SSI port. A master clock may be generated by the external device
 to produce specific sample rates or to synchronize data
 transmission.
 
+#### Table 6.3 (Digital Sound Data Connector)
 
+pin | signal | pin | signal
+----|--------|-----|-------
+1   | GPIO0  | 14  | ground
+2   | GPIO2  | 15  | DSP SRD
+3   | GPIO1  | 16  | ground
+4   | Ext data out|17| +12 VDC (100ma max)
+5   | Ext data out clock|18| ground
+6   | Ext data out sync|19| Ext data in
+7   | not connected|20|Ext data in clock
+8   | ground | 21  | Ext data in sync
+9   | +12 VDC| 22  | INT (interrupt)
+10  | ground | 23  | DSP STD
+11  | DSP SC0| 24  | DSP SCK
+12  | DSP SC1| 25  | ground
+13  | DSP SC2| 26  | External Clock
 
-
-Digital Sound Data Connector
-
-
-pin
-signal
-pin
-signal
-
-
-1
-GPIO0
-14
-ground
-
-
-2
-GPIO2
-15
-DSP SRD
-
-
-3
-GPIO1
-16
-ground
-
-
-4
-Ext data out
-17
-+12 VDC (100ma max)
-
-
-5
-Ext data out clock
-18
-ground
-
-
-6
-Ext data out sync
-19
-Ext data in
-
-
-7
-not connected
-20
-Ext data in clock
-
-
-8
-ground
-21
-Ext data in sync
-
-
-9
-+12 VDC
-22
-INT (interrupt)
-
-
-10
-ground
-23
-DSP STD
-
-
-11
-DSP SC0
-24
-DSP SCK
-
-
-12
-DSP SC1
-25
-ground
-
-
-13
-DSP SC2
-26
-External Clock
-
-
-                                 Table 6.3
-
-    Three general purpose I/O signals have been added. These are
+Three general purpose I/O signals have been added. These are
 programmable as inputs or outputs via the registers at xxFF8940h-
 xxFF8943h.
 
-6.4 Matrix and Sound DMA Control Registers
+## 6.4 Matrix and Sound DMA Control Registers
 
+#### xxFF8900 - Sound DMA Control Register (RW)
 
-
-
-xxFF8900 - Sound DMA Control Register (RW)
-
-
- D15              D8 
- D7D0 
-
-
-0000
-sc
-si
-rs
-0
-rf
-re
-00
-pf
-pe
-
+    D15     D8 D7               D0
+    0000 sc si rs 0 rf re 00 pf pe
 
     si - SINT source select
-    00 - SINT high
-    01 - play (default)
-    10 - record
-    11 - play OR record
+         00 - SINT high
+         01 - play (default)
+         10 - record
+         11 - play OR record
 
     sc - SCNT source select
-    00 - SCNT high
-    01 - play (default)
-    10 - record
-    11 - play OR record
+         00 - SCNT high
+         01 - play (default)
+         10 - record
+         11 - play OR record
 
     rs - register set select (0=playback register set)
 
@@ -2685,56 +2495,39 @@ pe
 
 Sound DMA address pointers:
 
-xxFF8915 rw   Sound frame base addr upper-upper byte
-xxFF8903 rw   Sound frame base addr upper-middle byte
-xxFF8905 rw   Sound frame base addr lower-middle byte
-xxFF8907 rw   Sound frame base addr lower-lower (7 bits)
+    xxFF8915 rw   Sound frame base addr upper-upper byte
+    xxFF8903 rw   Sound frame base addr upper-middle byte
+    xxFF8905 rw   Sound frame base addr lower-middle byte
+    xxFF8907 rw   Sound frame base addr lower-lower (7 bits)
 
-xxFF8917 r    Sound frame addr upper-upper byte
-xxFF8909 r    Sound frame addr upper-middle byte
-xxFF890B r    Sound frame addr lower-middle byte
-xxFF890D r    Sound frame addr lower-lower (7 bits)
+    xxFF8917 r    Sound frame addr upper-upper byte
+    xxFF8909 r    Sound frame addr upper-middle byte
+    xxFF890B r    Sound frame addr lower-middle byte
+    xxFF890D r    Sound frame addr lower-lower (7 bits)
 
-xxFF8919 rw   Sound frame top addr upper-upper byte
-xxFF890F rw   Sound frame top addr upper-middle byte
-xxFF8911 rw   Sound frame top addr lower-middle byte
-xxFF8913 rw   Sound frame top addr lower-lower (7 bits)
+    xxFF8919 rw   Sound frame top addr upper-upper byte
+    xxFF890F rw   Sound frame top addr upper-middle byte
+    xxFF8911 rw   Sound frame top addr lower-middle byte
+    xxFF8913 rw   Sound frame top addr lower-lower (7 bits)
 
-Note:    The sound frame address registers exist on the odd
-         bytes only.
+Note: The sound frame address registers exist on the odd bytes only.
 
+#### xxFF8920 Playback Mode Control Register (RW)
 
-
-
-
-
-xxFF8920 Playback Mode Control Register (RW)
-
-
-D15              D8
-D7D0
-
-
-00
-pms
-00
-pts
-md
-0000
-pc
-
+    D15       D8  D7      D0
+    00 pms 00 pts md 0000 pc
 
     pms - Playback monitor select
-    00 - tracks 1 & 2
-    01 - tracks 3 & 4
-    10 - tracks 5 & 6
-    11 - tracks 7 & 8
+          00 - tracks 1 & 2
+          01 - tracks 3 & 4
+          10 - tracks 5 & 6
+          11 - tracks 7 & 8
     
     pts - Playback track select
-    00 - 2 tracks
-    01 - 4 tracks
-    10 - 6 tracks
-    11 - 8 tracks
+          00 - 2 tracks
+          01 - 4 tracks
+          10 - 6 tracks
+          11 - 8 tracks
 
     md - play mode
          00 - 8 bit stereo
@@ -2742,13 +2535,13 @@ pc
          X1 - 16 bit stereo
 
     pc - sample rate prescaler select1
-    00 - /1280
-    01 - /640
-    10 - /320
-    11 - /160
+         00 - /1280
+         01 - /640
+         10 - /320
+         11 - /160
 
-FF8922   rw   MicroWire data register2
-FF8924   rw   MicroWire mask register
+    FF8922   rw   MicroWire data register2
+    FF8924   rw   MicroWire mask register
 
 Note 1:  Only effective if the internal clock prescaler is off.
          (xxFF8935 - D0-D3=0000)
@@ -2756,28 +2549,12 @@ Note 1:  Only effective if the internal clock prescaler is off.
 Note 2:  The Microwire registers are dummy registers existing
          for compatibility only and must be accessed as words.
 
+#### xxFF8930 Data Path and Clock Matrix Source: SRC (RW)
 
-
-
-     xxFF8930 Data Path and Clock Matrix Source: SRC (RW)
-
-
-D15 D8
-D7D0
-
-
-CODEC xmit1
-Ext. transmit
-DSP transmit
-Playback
-
-
-00b0
-0abhe
-dabhd
-sabg
-
-
+    D15               D8        D7                 D0
+    0 ab 0       0 ab he        d ab hd       s ab g
+    ++++++       +++++++        +++++++       ++++++
+    CODEC xmit1  Ext. transmit  DSP transmit  Playback
 
     ab - Clock Selector
          00 - 25.175MHz
@@ -2788,11 +2565,10 @@ sabg
     d  - DSP Transmit Clock Direction2
          1  - The DSP transmit clock (SCLK) is output.
                                     
-                                    
-    he  - Sync direction (RECSYNC)3
+    he - Sync direction (RECSYNC)3
          1  - Output enabled
                                     
-    hd  - Sync direction (SC2)3
+    hd - Sync direction (SC2)3
          1  - Output enabled
                                     
     g  - Gated clock (handshake) disable4
@@ -2802,52 +2578,34 @@ sabg
          0  - DSP Receive
          1  - External Output
                                     
-Note 1:  The CODEC may only select the 25.175Mhz or external
-                                  clocks.
+Note 1:  The CODEC may only select the 25.175Mhz or external clocks.
 
-                                 Note 2:  SCLK should normally be configured as an output. This
-          bit is provided to be used in conjunction with bit 4 to
-           disable both the clock and sync outputs when the DSP
-             SSI port is controlled exclusively by an external
-                                  source.
+Note 2:  SCLK should normally be configured as an output. This
+         bit is provided to be used in conjunction with bit 4 to
+         disable both the clock and sync outputs when the DSP
+         SSI port is controlled exclusively by an external source.
 
-                                 Note 3:  These bits should only be set to 0 if the corresponding
-             port is directed via the matrix to the record DMA
-           channel and the record DMA channel is configured for
-           gated clock mode. Bit 4 (hd) can also be set to zero
-           for the condition outlined in note 2 above. Otherwise
-                      these bits should be set to 1.
+Note 3:  These bits should only be set to 0 if the corresponding
+         port is directed via the matrix to the record DMA
+         channel and the record DMA channel is configured for
+         gated clock mode. Bit 4 (hd) can also be set to zero
+         for the condition outlined in note 2 above. Otherwise
+         these bits should be set to 1.
 
-                                 Note 4:  When bit 0 (g)is set to 0, the clock to the receiving
-           port is gated off when no data is available, when the
-          sync signal from the port selected by bit 3 (s) is low,
-            or when the DMA channel is not active. The selected
-           port sync signal should be configured as an input in
-           this case. When this bit is set to a 1, the receiving
-                     port is sent a continuous clock.
+Note 4:  When bit 0 (g)is set to 0, the clock to the receiving
+         port is gated off when no data is available, when the
+         sync signal from the port selected by bit 3 (s) is low,
+         or when the DMA channel is not active. The selected
+         port sync signal should be configured as an input in
+         this case. When this bit is set to a 1, the receiving
+         port is sent a continuous clock.
 
-                                 
+#### xxFF8932 DATA and Clock Matrix: Receive (RW) 
 
-                                
-xxFF8932 DATA and Clock Matrix :Receive (RW) 
-
-
-D15D8
-D7D0
-
-
-CODEC rcv.
-Ext. receive
-DSP receive
-Record
-
-
-0ab0
-0abhe
-dabhd
-sabg
-
-
+    D15              D8       D7                D0
+    0 ab 0      0 ab he       d ab hd      s ab g
+    ++++++      +++++++       +++++++      ++++++
+    CODEC rcv.  Ext. receive  DSP receive  Record
 
     ab - Source Device Data and Clock
          00 - DMA Out (Playback)
@@ -2858,10 +2616,10 @@ sabg
     d  - DSP Receive Clock Direction1
          1  - The DSP receive clock (SC0) is output.
                                     
-    he  - Sync direction (PLYSYNC)2
+    he - Sync direction (PLYSYNC)2
          1  - Output enabled
                                     
-    hd  - Sync direction (SC1)2
+    hd - Sync direction (SC1)2
          1  - Output enabled
                                     
     g  - Gated clock (handshake) disable3
@@ -2872,79 +2630,45 @@ sabg
          1  - External Input
                                     
 Note 1:  SC0 should normally be configured as an output. This
-          bit is provided to be used in conjuction with bit 4 to
-           disable both the clock and sync outputs when the DSP
-             SSI port is controlled exclusively by an external
-                                  source.
+         bit is provided to be used in conjuction with bit 4 to
+         disable both the clock and sync outputs when the DSP
+         SSI port is controlled exclusively by an external source.
 
-                                 Note 2:  These bits should only be set to 0 if the corresponding
-          port is receiving via the matrix from the playback DMA
-          channel and the playback DMA channel is configured for
-           gated clock mode. Bit 4 (hd) can also be set to zero
-           for the condition outlined in note 1 above. Otherwise
-                      these bits should be set to 1.
+Note 2:  These bits should only be set to 0 if the corresponding
+         port is receiving via the matrix from the playback DMA
+         channel and the playback DMA channel is configured for
+         gated clock mode. Bit 4 (hd) can also be set to zero
+         for the condition outlined in note 1 above. Otherwise
+         these bits should be set to 1.
 
-                                 Note 3:  When bit 0 (g)is set to 0, the clock to the
-           transmitting port is gated off when the input FIFO is
-           full, when the sync signal from the port selected by
-             bit 3 (s) is low, or when the DMA channel is not
-              active. The selected port sync signal should be
-           configured as an input in this case. When this bit is
-          set to a 1, the transmitting port is sent a continuous
-                                  clock.
-
-                                 
-                                 
-
+Note 3:  When bit 0 (g)is set to 0, the clock to the
+         transmitting port is gated off when the input FIFO is
+         full, when the sync signal from the port selected by
+         bit 3 (s) is low, or when the DMA channel is not
+         active. The selected port sync signal should be
+         configured as an input in this case. When this bit is
+         set to a 1, the transmitting port is sent a continuous clock.
                                 
-xxFF8934 Prescaler for Internal and External Clocks (RW)
+#### xxFF8934 Prescaler for Internal and External Clocks (RW)
 
-
-D15D8
-D7D0
-
-
-External Clock
-Internal Clock
-
-
- 0000
-dddd
-0000
-dddd
-
+    D15     D8      D7      D0
+    0000 dddd       0000 dddd
+         ++++            ++++
+         External Clock  Internal Clock
 
     dddd - Prescaler for  Internal and External Clocks
-                                    
-         0000 - off1
-    0001 - Divide by 2
-     .
-         1011 - Divide by 12
+           0000 - off1
+           0001 - Divide by 2
+           1011 - Divide by 12
 
-                                  Note 1:  When the internal clock is prescale value is set to
-           0000, the prescale value selected by bits 0 and 1 of
-          the Playback Mode Control Register (xxFF8920) will take
-                                  effect.
+Note 1:  When the internal clock is prescale value is set to
+         0000, the prescale value selected by bits 0 and 1 of
+         the Playback Mode Control Register (xxFF8920) will take effect.
 
-                                 
+#### xxFF8936 DAC and Record Control (RW)
 
-                                
-xxFF8936 DAC and Record Control (RW)
-
-
-D15D8
-D7D0
-
-
-000000
-rr
-0000
-r
-p
-e
-a
-
-
+    D15     D8 D7         D0
+    000000 rr  0000 r p e a
 
     rr - Record Channel Select
          00 - Record tracks 1 and 2
@@ -2956,7 +2680,7 @@ a
          1  - Reset Sound Subsection
          ( Not self clearing )
 
-                                      p  - Input Select1
+    p  - Input Select1
          0  - CODEC ADC
          1  - PSG
                                     
@@ -2967,111 +2691,70 @@ a
          1  - Enable PSG data output to CODEC
                                     
 Note 1:  Bit 2 selects either data from the PSGIN pin or the
-          CDDIN pin. That is data from the PSG or from the CODEC
-           ADC. The selected data is presented to the matrix and
-           to the adder described in note 2. The prototypes and
-          early systems will not have the digital PSG available.
-            In that case the PSGIN and CDDIN pins are connected
-          together and the analog PSG output is fed to the CODEC
-                             channel 2 input.
+         CDDIN pin. That is data from the PSG or from the CODEC
+         ADC. The selected data is presented to the matrix and
+         to the adder described in note 2. The prototypes and
+         early systems will not have the digital PSG available.
+         In that case the PSGIN and CDDIN pins are connected
+         together and the analog PSG output is fed to the CODEC channel 2 input.
 
-                                 Note 2:  There are two sources of data for the CODEC DAC. Data
-           coming from the matrix is enabled into an adder by a
-          setting bit 1. The output of the adder is the data sent
-           to the CODEC DAC. The other input to the adder is the
-                   data selected by bit 2 (see note 1).
+Note 2:  There are two sources of data for the CODEC DAC. Data
+         coming from the matrix is enabled into an adder by a
+         setting bit 1. The output of the adder is the data sent
+         to the CODEC DAC. The other input to the adder is the
+         data selected by bit 2 (see note 1).
 
-                                 
+#### xxFF8938 AUX A Control Field (RW)
 
-                                
-xxFF8938 AUX A Control Field (RW)
-
-
-D15D8
-D7D0
-
-
-L16-L19
-expn
-mute
-mux
-left gain
-right gain
-
+    D15               D8  D7        D0
+    L16-L19 expn mute mux left gain right gain
 
     L16-L19 - Left sample 4 least significant bits
                                     
     expn  - Expand
 
-                                    mute  - Mute
-       1 - Mute output
+    mute  - Mute
+            1 - Mute output
 
-                                      mux   - Input Mux1
-     00 - Channel 1 (microphone)
-     11 - Channel 2 (PSG input)
+    mux   - Input Mux1
+            00 - Channel 1 (microphone)
+            11 - Channel 2 (PSG input)
 
-                                      left gain , right gain
-                                    
+    left gain , right gain
     0000 - 0 dB gain for ADC
        .
-            .     ( 1.5dB increments )
+       .     ( 1.5dB increments )
        .
-         1111 - 22.5 dB gain for ADC
+    1111 - 22.5 dB gain for ADC
                                     
 Note 1:  Prototypes and early systems will have an analog PSG
-            which will be connected to the CODEC ADC channel 2
-           input as indicated. Eventually, a digital PSG will be
-            used and connected as described under DAC control.
-                   Future use of channel 2 is reserved.
-
-                                 
-
+         which will be connected to the CODEC ADC channel 2
+         input as indicated. Eventually, a digital PSG will be
+         used and connected as described under DAC control.
+         Future use of channel 2 is reserved.
                                 
-xxFF893A AUX B Control Field (RW) 
+#### xxFF893A AUX B Control Field (RW) 
 
-
-D15D8
-D7D0
-
-
-R16-R19
-Left Attn
-Right Attn
-OPort
-
-
+    D15     D8        D7         D0
+    R16-R19 Left Attn Right Attn OPort
 
     R16-R19 - 4 least significant bits for right sample
                                     
     Left Attn - Left Channel D/A Attenuation
+                0000 - No attenuation
+                .
+                .     ( 1.5 dB steps )
+                .
+                1111 - 22.5 dB attenuation
+
+    Right attn - Right Attenuation in 1.5dB steps
                                     
-    0000 - No attenuation
-      .
-      .     ( 1.5 dB steps )
-      .
-    1111 - 22.5 dB attenuation
+    OPort - Output Port Control
 
-                                      Right attn - Right Attenuation in 1.5dB steps
-                                    
-    OPort- Output Port Control
+#### xxFF893C AUX A Input Field (R)
 
-                                
-
-                               
-xxFF893C AUX A Input Field (R)
-
-
-D15D8
-D7D0
-
-
-L16-L19
-Exp
-Vld
-Oflw
- sts
-rev
-
+    D15             D8   D7  D0
+    L16-L19 Exp Vld Oflw sts rev
 
     Ls - Left Sample L16-L19
      
@@ -3095,96 +2778,38 @@ rev
                                     
     iport - Input Port
           - not supported
-                                    
-                                    
-                                    
-                                    
-                                   
 
+#### xxFF893E AUX B Input Field (R)
 
-xxFF893E AUX B Input Field (R)
-
-
-D15D8
-D7D0
-
-
-R16-R19
-0000
-0000
-iport
-
+    D15        D8 D7   D0
+    R16-R19 0000  0000 iport
 
     R16 - R19 Right Sample Least significant bits
                                     
     iport - Input Port
-        - Not supported
-                                    
-                                   
+          - Not supported
 
+#### xxFF8940 General Purpose I/O Control (R)
 
-xxFF8940 General Purpose I/O Control (R)
+    D15  D8   D7   D0
+    0000 xddd 0000 xccc
 
+#### xxFF8940 General Purpose I/O Control (W)
 
-D15D8
-D7D0
+    D15    D8 D7   D0
+    XXXXXXXX  XXXX xccc 
 
+#### xxFF8942 General Purpose I/O Data (R)
 
-0000
-xddd
-0000
-xccc
+    D15  D8   D7   D0
+    0000 xddd 0000 xiii
 
+#### xxFF8942 General Purpose I/O Data (W)
 
-
-
-
-           xxFF8940 General Purpose I/O Control (W)
-
-
-D15       D8
-D7D0
-
-
-XXXXXXXX
-XXXX
-xccc
-
-
-
-
-
-             xxFF8942 General Purpose I/O Data (R)
-
-
-D15        D8
-D7D0
-
-
-0000
-xddd
-0000
-xiii
-
-
-
-
-
-             xxFF8942 General Purpose I/O Data (W)
-
-
-D15        D8
-D7D0
-
-
-XXXXXXXX
-XXXX
-xddd
-
-
+    D15    D8 D7   D0
+    XXXXXXXX  XXXX xddd
 
     ccc - General Purpose I/O Control Register
-                                    
           1 - Corresponding bit is an output
                                     
     iii - GPIOx pin state
@@ -3194,71 +2819,67 @@ xddd
     x   - reserved
                                     
 Note 1:  The value of the data register bit is driven out when
-          the corresponding bit of the control register is 1. The
-           GPIO pin is an input when the control register bit is
-           0. The least significant 3 bits of the data register
-          read the state of the pin regardless of its programmed
-                                direction.
+         the corresponding bit of the control register is 1. The
+         GPIO pin is an input when the control register bit is
+         0. The least significant 3 bits of the data register
+         read the state of the pin regardless of its programmed direction.
 
-                                 6.5 Programmable Sound Generator
+## 6.5 Programmable Sound Generator
 
-                                       FALCON contains a PSG circuit compatible with the ST sound
-      system. The PSG produces music synthesis, sound effects, and
-    audio feedback. With an applied clock input of 2 MHz, the PSG is
-      capable of providing a frequency response range between 30 Hz
-       (audible) and 124 KHz (post-audible). The generator places
-      minimal amount of processing burden on the main system (which
-    acts as the sequencer) and has the ability to perform using three
-     independent voice channels. The three sound channel outputs are
-     combined and fed to both the left and right channel 2 inputs of
-     the ADC. The resulting 16-bit digital data stream is available
-          for processing or to be recorded via DMA into memory.
+FALCON contains a PSG circuit compatible with the ST sound
+system. The PSG produces music synthesis, sound effects, and
+audio feedback. With an applied clock input of 2 MHz, the PSG is
+capable of providing a frequency response range between 30 Hz
+(audible) and 124 KHz (post-audible). The generator places
+minimal amount of processing burden on the main system (which
+acts as the sequencer) and has the ability to perform using three
+independent voice channels. The three sound channel outputs are
+combined and fed to both the left and right channel 2 inputs of
+the ADC. The resulting 16-bit digital data stream is available
+for processing or to be recorded via DMA into memory.
                                     
-      (Reference Engineering Hardware Specification of the Atari ST
-                       Computer System, page 10.)
+(Reference Engineering Hardware Specification of the Atari ST Computer System, page 10.)
                                     
-6.6 Musical Instrument Digital Interface (MIDI)
+## 6.6 Musical Instrument Digital Interface (MIDI)
 
-                                       The MIDI allows the control of music synthesizers,
-        sequencers, drum boxes, and other devices possessing MIDI
-      interfaces. High speed (31.25 Kbaud) serial communication of
-     keyboard and program information is provided by two ports, MIDI
-     OUT and MIDI IN (the MIDI OUT also includes MIDI through data).
+The MIDI allows the control of music synthesizers,
+sequencers, drum boxes, and other devices possessing MIDI
+interfaces. High speed (31.25 Kbaud) serial communication of
+keyboard and program information is provided by two ports, MIDI
+OUT and MIDI IN (the MIDI OUT also includes MIDI through data).
                                     
-    The MIDI communicates through the MC6850 Asynchronous
-     Communications Interface Adapter (ACIA) to the system. The data
-      transfer rate is a constant 31.25 Kbaud of 8-bit asynchronous
-    data.  (Reference Engineering Hardware Specification of the Atari
-     ST Computer System, pages 11 and 17 for more information on the
-                             MIDI and ACIA.)
+The MIDI communicates through the MC6850 Asynchronous
+Communications Interface Adapter (ACIA) to the system. The data
+transfer rate is a constant 31.25 Kbaud of 8-bit asynchronous
+data.  (Reference Engineering Hardware Specification of the Atari
+ST Computer System, pages 11 and 17 for more information on the
+MIDI and ACIA.)
                                     
-                        6.7  MICROWIRE Interface
+## 6.7  MICROWIRE Interface
                                     
-    The MICROWIRE interface has been deleted from the current
-      design. The Microwire registers are simulated in the current
-      circuit only to prevent older software attempting to use the
-                       interface from locking up.
+The MICROWIRE interface has been deleted from the current
+design. The Microwire registers are simulated in the current
+circuit only to prevent older software attempting to use the
+interface from locking up.
                                     
-                                    
-                                    
-Section 7VME Bus
+# Section 7 VME Bus
 
-                                    Some FALCON systems provide for expansion by implementing
-        the industry standard VMEbus, revision C.1. A FALCON VME
-    interface can also accommodate alternate bus masters such as DMA
-                                 cards.
+Some FALCON systems provide for expansion by implementing
+the industry standard VMEbus, revision C.1. A FALCON VME
+interface can also accommodate alternate bus masters such as DMA
+cards.
                                     
-7.1 System Controller
+## 7.1 System Controller
 
-                                       The main system board serves as the VMEbus system controller
-        (a slot 1 "card") and implements the following functions:
+The main system board serves as the VMEbus system controller
+(a slot 1 "card") and implements the following functions:
                                     
-    * VMEbus master interface
-    * VMEbus slave interface
-    * VMEbus interrupt handler
-    * VMEbus interrupter
-    * VMEbus arbiter
-    * VMEbus utility bus driver
+* VMEbus master interface
+* VMEbus slave interface
+* VMEbus interrupt handler
+* VMEbus interrupter
+* VMEbus arbiter
+* VMEbus utility bus driver
                                     
 7.2 VME Bus Master Address Partitioning
 
