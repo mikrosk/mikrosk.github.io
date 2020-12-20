@@ -3703,20 +3703,18 @@ interface built on the X-Windows (Version 11.4) package.
 
 # Section 10  Mechanical Considerations
 
-    Questions and comments on mechanical aspects of FALCON
+Questions and comments on mechanical aspects of FALCON
 systems should be directed to Steven Chan and Ira Valenski.
 
-10.1 Power Supply
+## 10.1 Power Supply
 
-    See Atari specification C302695-001.
+See Atari specification C302695-001.
 
-    Approx 150 watts, 5V@22A, +12V@1.2A, -12V@500ma
+Approx 150 watts, 5V@22A, +12V@1.2A, -12V@500ma
 
-     The power supply MUST generate a "power good" signal (active
+The power supply MUST generate a "power good" signal (active
 high) that is asserted after the supply voltages are stable, and
 is removed before the supply voltages are removed.
-
-
 
 Section 11  Memory, I/O, and Interrupt Map
 
