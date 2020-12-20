@@ -69,13 +69,13 @@ Written by   : Moshe Segal, Eran Dariel        ****
 
 Memory map changes:
 
-F00000 - F0000F  (IDE)  corrected to F00000 - F0003F
-FA40 - FA5F  Assigned to FP Co-Proc
-8001 - changed
-8007 - Bus error and power-fail options added
-8266 - VGA bit removed
-8288 - Vsync rise corrected to Hsync rise
-82C0 - bit assignments inverted, burst time option added
+    F00000 - F0000F (IDE) corrected to F00000 - F0003F
+    FA40 - FA5F  Assigned to FP Co-Proc
+    8001 - changed
+    8007 - Bus error and power-fail options added
+    8266 - VGA bit removed
+    8288 - Vsync rise corrected to Hsync rise
+    82C0 - bit assignments inverted, burst time option added
 
 # 1. INTRODUCTION
 
