@@ -3710,1036 +3710,965 @@ systems should be directed to Steven Chan and Ira Valenski.
 
 See Atari specification C302695-001.
 
-Approx 150 watts, 5V@22A, +12V@1.2A, -12V@500ma
+Approx 150 watts, `5V@22A`, `+12V@1.2A`, `-12V@500ma`
 
 The power supply MUST generate a "power good" signal (active
 high) that is asserted after the supply voltages are stable, and
 is removed before the supply voltages are removed.
 
-Section 11  Memory, I/O, and Interrupt Map
+# Section 11  Memory, I/O, and Interrupt Map
 
-11.1 MEMORY MAP as seen by the CPU
+## 11.1 MEMORY MAP as seen by the CPU
 
-permissible access s - supervisor mode
-                   u - user mode
-                   r - read
-                   w - write
-                   b - burst
-                   c - cachable
+    permissible access s - supervisor mode
+                       u - user mode
+                       r - read
+                       w - write
+                       b - burst
+                       c - cachable
 
-address  access    description
+    address            access description
+    
+    00000000-00000007  src    First 8 bytes of ROM bank 0
+                              (Initial SP & PC)
 
+    00000008-000007FF  srwbc  Video RAM (protected)
 
-00000000-00000007  src First 8 bytes of ROM bank 0
-    (Initial SP & PC)
+    00000800-0007FFFF  surwbc Video RAM 512 kB
+             000FFFFF                   512 kB + 512 kB
+             001FFFFF                   2 MB
+             0027FFFF                   2 MB + 512 kB
+             003FFFFF                   2 MB + 2 MB
+             007FFFFF                   8 MB
+             0087FFFF                   8 MB + 512 kB
+             009FFFFF                   8 MB + 2 MB
+             00EFFFFF                   8 MB + 8 MB (15 MB usable)
 
-00000008-000007FF  srwbc    Video RAM (protected)
+    00F00000-00F9FFFF  --     reserved
+    
+    00FA0000-00FAFFFF  sur    cartridge port A
+    00FB0000-00FBFFFF  sur    cartridge port B
 
-00000800-0007FFFF  surwbc   Video RAM 512 kB
-        000FFFFF          512 kB + 512 kB
-        001FFFFF          2 MB
-        0027FFFF          2 MB + 512 kB
-        003FFFFF          2 MB + 2 MB
-        007FFFFF          8 MB
-        0087FFFF          8 MB + 512 kB
-        009FFFFF          8 MB + 2 MB
-        00EFFFFF          8 MB + 8 MB (15 MB usable)
+    00FC0000-00FDFFFF  --     reserved
 
-00F00000-00F9FFFF  --  reserved
+    00FE0000-00FEFFFF  srw    Graphics Coprocessor
 
-00FA0000-00FAFFFF  sur cartridge port A
-00FB0000-00FBFFFF  sur cartridge port B
+    00FF0000-00FF7FFF  --     reserved
 
-00FC0000-00FDFFFF  --  reserved
+    00FF8000-00FFFFFF  sr/srw IO
 
-00FE0000-00FEFFFF  srw Graphics Coprocessor
+    01000000-010FFFFF  surwbc Fast RAM (optional) 1 MB
+             011FFFFF                             1 MB + 1 MB
+             013FFFFF                             4 MB
+             014FFFFF                             4 MB + 1 MB
+             017FFFFF                             4 MB + 4 MB
+             01FFFFFF                             16 MB
+             020FFFFF                             16 MB + 1 MB
+             023FFFFF                             16 MB + 4 MB
+             02FFFFFF                             16 MB + 16 MB
 
-00FF0000-00FF7FFF  --  reserved
+    01000000-7FFFFFFF  surwc  VME A32/D32
+    01100000-
+    01200000-
+    01400000-
+    01500000-
+    01800000-
+    02000000-
+    02100000-
+    02400000-
+    03000000-
 
-00FF8000-00FFFFFF  sr/srw   IO
+    80000000-BFFFFFFF  surw   VME A32/D32
 
-01000000-010FFFFF  surwbc   Fast RAM (optional) 1 MB
-         011FFFFF      1 MB + 1 MB
-         013FFFFF      4 MB
-         014FFFFF      4 MB + 1 MB
-         017FFFFF      4 MB + 4 MB
-         01FFFFFF      16 MB
-         020FFFFF      16 MB + 1 MB
-         023FFFFF      16 MB + 4 MB
-         02FFFFFF      16 MB + 16 MB
+    C0000000-FCFFFFFF  surw   VME A32/D16
 
-01000000-7FFFFFFF  surwc    VME A32/D32
-01100000-
-01200000-
-01400000-
-01500000-
-01800000-
-02000000-
-02100000-
-02400000-
-03000000-
+    FD000000-FDFFFFFF  surw   VME A24/D32
 
-80000000-BFFFFFFF  surwVME A32/D32
+    FE000000-FEFEFFFF  surw   VME A24/D16
 
-C0000000-FCFFFFFF  surwVME A32/D16
+    FEFF0000-FEFFFFFF  surw   VME A16/D16
 
-FD000000-FDFFFFFF  surwVME A24/D32
+    FF000000-FFFFFFFF  --  image of 00000000-00FFFFFF
+    *** except! ***
+    FFE00000-FFE7FFFF  surc   TOS rom bank0
+    FFE80000-FFEFFFFF  surc   TOS rom bank1
 
-FE000000-FEFEFFFF  surwVME A24/D16
+    FFFFFF80 ro   xxxx xxxx   IOC ID byte
+    FFFFFF81 ro   xxxx xxxx   MCU ID byte
+    FFFFFF82 ro   xxxx xxxx   DMA-A ID byte
+    FFFFFF83 ro   xxxx xxxx   DMA-B ID byte
+    FFFFFF84 ro   xxxx xxxx   VMEC ID byte
+    FFFFFF85 ro   xxxx xxxx   GPU ID byte
 
-FEFF0000-FEFFFFFF  surwVME A16/D16
-
-
-
-FF000000-FFFFFFFF  --  image of 00000000-00FFFFFF
-*** except! ***
-FFE00000-FFE7FFFF  surcTOS rom bank0
-FFE80000-FFEFFFFF  surcTOS rom bank1
-
-FFFFFF80 ro   xxxx xxxxIOC ID byte
-FFFFFF81 ro   xxxx xxxxMCU ID byte
-FFFFFF82 ro   xxxx xxxxDMA-A ID byte
-FFFFFF83 ro   xxxx xxxxDMA-B ID byte
-FFFFFF84 ro   xxxx xxxxVMEC ID byte
-FFFFFF85 ro   xxxx xxxxGPU ID byte
-
-
-11.1.1 Detail of IO Section
+### 11.1.1 Detail of IO Section
 
 Addr 00FF0000 + N
 
-N   acc  byte      use
-
-
-
-8001srw  abc0 dxef Memory Configuration Register
-    a - ROM cycle speed select
-    0=slow
-    1=fast
-    b - Video DRAM access speed
-    0=slow
-    1=fast
-    c - Expansion DRAM access speed
-    0=slow
-    1=fast
-    d - Bus timeout interval
-    0=8192 clock ~
-    1=128 clock ~
-    x - reserved
-    e - Fast memory burst enable
-    0=off
-    1=on
-    f - Video memory burst enable
-    0=off
-    1=on
-
-8003srw  axxx xxxx Refresh Time Constant high byte
-    (video memory)
-    a - Refresh interval control
-    0=default
-    1=counter
-
-8005srw  xxxx xxxx Refresh Time Constant low byte
-8007srw  a000 00bc External Cache Control Register
-    a - Reset tag
-    0=reset
-    1=enable
-    b - Capture data cache push
-    0=no
-    1=yes
-    c - Clear on bus arbitration
-    0=yes
-    1=no
-
-8009srw  ssss bbBB Video Memory Configuration Register
-    ssss - SIMM speed select
-    bb   - Bank 1 size select
-    BB   - Bank 2 size select
-
-800Bsrw  ssss bbBB Fast Memory Configuration Register
-    ssss - SIMM speed select
-    bb   - Bank 1 size select
-    BB   - Bank 2 size select
-
-800Dsrw  axxx xxxx Refresh Time Constant high byte
-    (fast memory)
-    a - Refresh interval control
-    0=default
-    1=counter
-
-800Fsrw  xxxx xxxx Refresh Time Constant low byte
-8080srw  abcd efgh VME Interface Configuration Register
-    a - A32 slave interface enable (0=no 1=yes)
-    b - A24 slave interface enable (0=no 1=yes)
-    c - A32 master interface enable (0=no 1=yes)
-    d - A24 master interface enable (0=no 1=yes)
-    e - A16 master interface enable (0=no 1=yes)
-    f - Bus Requester mode (0=Release on Request
-       1=Release when Done)
-    g - reserved
-    h - Cache Inhibit Signal for A32/D32 space
-    (0=yes 1=no)
-8083srw  abcd efgh VME Utility Control Register
-    a - SYSRESET* width (0=200ms, 1=1us)
-    b - reserved
-    c - reserved
-    d - reserved
-    e - reserved
-    f - reserved
-    g - Bus Timeout enable (0=no 1=yes)
-    h - SYSFAIL* (0=assert)
-
-8097srw  xxxx xxxx VME Interrupt Vector
-8098srw  xxxx xxxx VME Slave Start Address Register
-
-8201srw  xxxx xxxx Video Base Address Even high byte
-8203srw  xxxx xxxx Video Base Address Even mid byte
-8205srw  xxxx xxxx Video Address Counter Even high byte
-8207srw  xxxx xxxx Video Address Counter Even mid byte
-8209srw  xxxx x000 Video Address Counter Even low byte
-820Asrw  ---- ---- Old ST shift mode, no register
-    is here but address is acknowledged
-820Dsrw  xxxx x000 Video Base Address Even low byte
-
-8213srw  xxxx xxxx Video Base Address Odd high byte
-8215srw  xxxx xxxx Video Base Address Odd mid byte
-8217srw  xxxx x000 Video Base Address Odd low byte
-821Bsrw  xxxx xxxx Video Address Counter Odd high byte
-821Dsrw  xxxx xxxx Video Address Counter Odd mid byte
-821Fsrw  xxxx x000 Video Address Counter Odd low
-8221srw  a000 0bcd Video Mode Control
-    a - disable video refresh
-    0=no
-    1=yes
-    b - Overwrite byte 0
-    0=yes
-    1=no
-    c - skip line enable
-    0=no
-    1=yes
-    d - skip phrase
-    0=no
-    1=yes
-
-8240rw   ---- -rrr ST Color Palette Reg0 (RAMDAC)
-8241-ggg -bbb
-8242rw   ---- -rrr ST Color Palette Reg1 (RAMDAC)
-8243-ggg -bbb
- ||
-825Erw   ---- -rrr ST Color Palette Reg15 (RAMDAC)
-825F-ggg -bbb
-
-8260rw   ---- --ss ST Video Mode (VTG)
-    ss - mode select
-    00 320x200, 4 plane
-    01 640x200, 2 plane
-    10 640x400, 1 plane
-    11 <reserved>
-
-8262rw   s--h -mmm TT Video Mode (VTG)
-8263---- bbbb s - sample and hold mode
-    0 - off, 1 - on
-    h - hyper mono mode
-    0 - off, 1 - on
-    mmm - mode select
-    000 320x200x4
-    001 640x200x2
-    010 640x400x1
-    100 640x480x4
-    110 1280x960x1
-    111 320x480x8
-    bbbb - ST palette bank
-
-8268rw   mmmm mmmm Psuedo Color Mask (RAMDAC)
-
-8269rw   smmm bbbb FALCON shift mode (RAMDAC/VTG)
-    s - Sync on green enabled
-    0=yes
-    1=no
-
-    mmm - Mode select
-    000 =  1 bit per pixel (low res duochrome)
-    001 =  2 bit  "     "
-    010 =  4 bit  "     "  (low res)
-    011 =  8 bit  "     "
-    100 =  4 bit  "     "  (high res)
-    101 =  True color
-    110 =  Psuedo/True color 
-    111 =  1 bit per pixel (high res duochrome)
-
-           bbbb    Bank select
-
-
-8280rw   0000 xxxx xxxx xxxx     HC   Horizontal counter
-8282rw   0000 xxxx xxxx xxxx     HHT  Horizontal half line
-total
-8284rw   0000 xxxx xxxx xxxx     HBB  Horizontal blank begin
-8286rw   0000 xxxx xxxx xxxx     HBE  Horizontal Blank end
-8288rw   000h xxxx xxxx xxxx     HDB  Horiz. display begin
-    h - Line half.
-    0=First half line
-    1=Second half
-828Arw   000h xxxx xxxx xxxx     HDE  Horizontal display end
-    h - Line half.
-    0=First half line
-    1=Second half
-828Crw   0000 xxxx xxxx xxxx     HSS  Horizontal sync start
-828Erw   0000 xxxx xxxx xxxx     HFS  Horizontal field sync
-8290rw   0000 xxxx xxxx xxxx     HEE  Horiz. Equal. End
-8292rw   000h xxxx xxxx xxxx     VBT  Video Burst time
-    h - Line Half
-    0=VBT on 1st half of line
-    (after Hsync end and before HDE)
-    1=VBT on 2nd half of line
-    (after HDE and before HHT)
-8294rw   0000 xxxx xxxx xxxx     Video Data Xfers (NUMREQ)
-8296rw   0000 xxxx xxxx xxxx     HWC  Horizontal word count
-
-82A0rw   0000 xxxx xxxx xxxx     VC   Vertical counter
-82A2rw   0000 xxxx xxxx xxxi     VFT  Vertical Field Total
-    i - Interlace
-    0=Interlaced
-    1=Non interlaced
-82A4rw   0000 xxxx xxxx xxxx     VBB  Vertical Blank Begin
-82A6rw   0000 xxxx xxxx xxxx     VBE  Vertical Blank End
-82A8rw   0000 xxxx xxxx xxxx     VDB0,VDB1 Vert. Disp. Begin
-82AArw   0000 xxxx xxxx xxxx     VDE0,VDB1 Vert. Display End
-82ACrw   0000 xxxx xxxx xxxx     VSS  Vertical Sync Start
-
-82C0rw   abcd efgh ijkl mnop     VMC  Video Master Control
-    p    Hsync source  0=Internal
-    1=External
-    o    Hsync level   0=Active high
-    1=Active low
-    n    Hsync enable  0=Disable
-    1=Enable
-    m    H-counter on  0=Reset to 0
-    1=Count
-    l    Vsync source  0=Internal
-    1=External
-    k    Vsync level   0=Active high
-    1=Active low
-    j    Vsync enable  0=Disable
-    1=Enable
-    i    V-counter on  0=Reset to 0
-    1=Count
-    h    Csync type    0 = hsync or vsync
-    1 = hsync xor vsync
-    g    Csync enable  0=Disable
-    1=Enable
-    f    Dotclk select 0=VGA
-    1=Super VGA
-    e    Video data transfer counter on
-    0=Reset to 0
-    1=Count
-    d    Alternate fields*
-    0=disabled
-    1=enabled
-    c    Equalization  0=Disabled
-    1=Enabled
-    b    Wide Equ'n    0=Disable
-    1=Enable
-    a    PAL/NTSC      0=PAL (5 pulses)
-    1=NTSC (6 pulses)
-
-82C2rw   0000 0000 psmm mvnr     VCO  Video control register
-    r - Repeat lines
-    0=Disabled
-    1=Enabled
-              Doesn't work correctly in
-              interlaced mode
-    n - Prescale dotclk
-    0=No prescale
-    1=Divide by 2
-    v - Register select
-    0=VDB0/VDE0        
-                                      1=VDB1/VDE1
-    mmm - Video mode*
-    000 1bpp Duochrome
-         001 2  bpp
-    010 4  bpp
-    011 8  bpp
-    100 4  bpp hi-res
-    101 24 bpp
-    110 8/24 bpp
-    111 1  bpp hi-res monochrome
-    s - Line skip
-    0=Disabled
-    1=Skip alt' lines
-    p - packed/planar pixel mode
-    0=packed
-    1=planar
-
-*Note:   The Video Mode lines are read only in the Video Control
-         Register. They are set by writes to the ST, TT, or
-         Falcon Video Mode Registers.
-
-82E0rw   0000 0000 0smm mvnr     VC1  Video control for TT
-                                      mode 0
-82E2rw   0000 0000 0smm mvnr     VC2  Video control for TT
-                                      mode 1
-82E4rw   0000 0000 0smm mvnr     VC3  Video control for TT
-                                      mode 2
-82E6rw   0000 0000 0smm mvnr     VC4  Video control for TT
-                                      mode 4
-82E8rw   0000 0000 0smm mvnr     VC5  Video control for TT
-                                      mode 6
-82EArw   0000 0000 0smm mvnr     VC6  Video control for TT
-                                      mode 7
-
-82ECr    ---- ---- ---- -mmm     MID  Monitor ID bits
-    mmm  Currently undefined
-
-8300-    rw   xxxx xxxxExternal Video IO port
-  83FF
-
-
-8400rw   ---- rrrr TT Palette Reg0 (RAMDAC)
-8401gggg bbbb
-8402rw   ---- rrrr TT Palette Reg1 (RAMDAC)
-8403gggg bbbb
- ||
-85FErw   ---- rrrr TT Palette Reg255 (RAMDAC)
-85FFgggg bbbb
-
-8601rw   xxxx xxxx ACSI base upper upper byte (DMAC)
-
-8604rw   --yy yyyy xxxx xxxx     DMA Data -wdc- (DMAC)
-    y*x - sector counter (WO)
-    x   - peripheral data (RW)
-
-8606w    ---- ---a bcde fghi     DMA Mode -wdl- (DMAC)
-
-    a - ACSI direction bit (DMAC)
-    0 - port into memory
-    1 - memory out to port
-    b - DMA request source
-    0 - not used
-    1 - FDC
-    c - reserved
-    d - fifo flush
-    e - Block count register select
-    f - CS out select
-    0 - FDC
-    1 - not used
-    ghi - peripheral address (i not used)
-
-8606r    ---- ---- ---f drae     DMA Status (DMAC)
-    f - fifo status
-    d - DIR
-    r - port DRQ active
-    a - DMA active
-    e - DMA error
-
-8609rw   xxxx xxxx ACSI base upper middle byte (DMAC) 1
-860Brw   xxxx xxxx ACSI base lower middle byte (DMAC) 1
-860Drw   xxxx xxx0 ACSI base lower lower byte (DMAC) 1
-860Frw   abcd sefg Floppy density select
-
-    a - Disk change (input) pin (read only)
-    b - Media detect 2 (input) pin (read only)
-    c - Mode select 2 (output) pin
-    0 = low (reset)
-    1 = high
-    s - ACSI DMA status flag
-    0 = no DMA has occured (since last read)
-    1 = DMA has or is occuring
-    e - Media detect 1 (input) pin (read only)
-    f - Mode select 1 (output) pin
-    0 = low (reset)
-    1 = high
-    dg - FCCLK Frequency
-    00 = 8MHz (reset)
-    01 = 16MHz
-    10 = 32Mhz
-    11 = FCCLK Off
-
-8701rw   xxxx xxxx SCSI DMA pointer upper
-8703rw   xxxx xxxx SCSI DMA pointer upper-middle
-8705rw   xxxx xxxx SCSI DMA pointer lower-middle
-8707rw   xxxx xxxx SCSI DMA pointer lower
-
-8709rw   xxxx xxxx SCSI DMA byte count upper
-870Brw   xxxx xxxx SCSI DMA byte count upper-middle
-870Drw   xxxx xxxx SCSI DMA byte count lower-middle
-870Frw   xxxx xxxx SCSI DMA byte count lower
-
-8710r    xxxx xxxx SCSI Data Residue Register (UU)
-8711r    xxxx xxxx SCSI Data Residue Register (UM)
-8712r    xxxx xxxx SCSI Data Residue Register (LM)
-8713r    xxxx xxxx SCSI Data Residue Register (LL)
-
-8715rw   bzu0 00ed SCSI DMA Control Register
-
-    b - bus error during DMA
-        (read only, cleared by read)
-    z - byte count zero
-        (read only, cleared by read)
-    u - data underrun
-        (read only, cleared by read)
-    e - DMA enable 0=off, 1=on
-    d - DMA direction:
-    0=in from port
-    1=out to port
-
-8781rw   xxxx xxxx 5380 Data Register
-8783rw   xxxx xxxx 5380 Initiator Command Register
-8785rw   xxxx xxxx 5380 Mode Register
-8787rw   xxxx xxxx 5380 Target Command Register
-8789rw   xxxx xxxx 5380 ID Select/SCSI Control Register
-878Brw   xxxx xxxx 5380 DMA Start/DMA Status Register
-878Drw   xxxx xxxx 5380 DMA Target Receive/Input Data
-878Frw   xxxx xxxx 5380 DMA Initiator Receive/Reset
-
-8800r    xxxx xxxx PSG Read Data
-8800w    0000 xxxx PSG Register Select
-8802w    xxxx xxxx PSG Write Data
-
-    PSG Port A Bit Assignments
-    7   <reserved>
-    6   SPKON (internal speaker on when low)
-    5   Printer Port Strobe
-    4   DSP reset
-    3   Printer Port SLCTIN*
-    2   *Floppy 1 Select
-    1   *Floppy 0 Select
-    0   *Floppy Side 0 Select
-
-    PSG Port B Bit Assignments
-    7-0  Printer Port bits 7-0
-
-8804r/rw zabc defg xhij klmn     GPIO port
-    z - <reserved>
-    a - Serial port 2 RTS
-    b -    "     "  " DTR
-    c -    "     "  " RI
-    d -    "     "  " CTS
-    e -    "     "  " DSR
-    f - <reserved>
-    g - Serial port 2 CD
-
-    h - <reserved>
-    i - Parallel port INIT*
-    j -   "       "  AFD*
-    k -   "       "  ACK*
-    l -   "       "  PE
-    m -   "       "  SLCT
-    n -   "       "  ERROR*
-
-
-8900rw   0000 abcd Sound DMA Control
-
-    ab - SCNT control
-    00 - high
-    01 - playback channel
-    10 - record channel
-    11 - playback OR record
-    cd - SINT control
-    00 - high
-    01 - playback channel
-    10 - record channel
-    11 - playback OR record
-
-8901rw   a0bc 00de Sound DMA Control
-    a - Register Set Select
-    0 = playback registers
-    1 = record registers
-    b - Record Frame Repeat Select
-    0 = Single Frame
-    1 = Repeat
-    c - Record Enable
-    0 = Off (reset state)
-    1 = On
-    d - Playback Frame Repeat Select
-    0 = Single Frame
-    1 = Repeat
-    e - Playback Enable
-    0 = Off (reset state)
-    1 = On
-
-8903rw   xxxx xxxx Frame Base Address upper-middle byte
-8905rw   xxxx xxxx Frame Base Address lower-middle byte
-8907rw   xxxx xxxx Frame Base Address lower-lower byte
-
-8909r    xxxx xxxx Frame Address Counter upper-middle
-byte
-890Br    xxxx xxxx Frame Address Counter lower-middle
-byte
-890Dr    xxxx xxxx Frame Address Counter lower-lower
-byte
-
-890Frw   xxxx xxxx Frame End Address upper-middle byte
-8911rw   xxxx xxxx Frame End Address lower-middle byte
-8913rw   xxxx xxxx Frame End Address lower-lower byte
-
-8915rw   xxxx xxxx Frame Base Address upper-upper byte
-8917r    xxxx xxxx Frame Address Counter upper-upper
-byte
-8919rw   xxxx xxxx Frame End Address upper-upper byte
-
-8920rw   0xab 0xcd gh00 00ij Playback Mode Control
-    x - <reserved>
-    ab Monitor Select
-    000 - tracks 1 & 2
-    001 - tracks 3 & 4
-    010 - tracks 5 & 6
-    011 - tracks 7 & 8
-    cd Active Tracks Select
-    000 - 2 tracks
-    001 - 4 tracks
-    010 - 6 tracks
-    011 - 8 tracks
-    g - Mode (8 bit only)
-    0 = Stereo (reset state)
-    1 = Mono
-    h - Mode
-    0 = 8 bit samples (reset state)
-    1 = 16 bit samples
-    ij - Sample Rate Prescale
-    00 =  1280
-    01 =  640
-    10 =  320
-    11 =  160
-
-8922rw   xxxx xxxx xxxx xxxx MICROWIRE Data register
-    (dummy register)
-8924rw   xxxx xxxx xxxx xxxx MICROWIRE Mask register
-    (dummy register)
-
-8930rw   00b0 0abh dabh sabg SRC register
-    ab - clock select
-    00 - 25.175 Mhz
-    01 - external from DSP connector
-    10 - 32.000 Mhz
-    11 - reserved
-    d  - DSP clock direction
-    1 - SCLK is output
-    h  - SYNC direction
-    1 - output
-    g  - handshake mode
-    0 - gated clock
-    1 - continuous clock
-    s  - handshake control source
-    0 - DSP
-    1 - External
-
-8932rw   0ab0 0abh dabh sabg SRC register
-    ab - source select
-    00 - DMA (playback)
-    01 - DSP
-    10 - External
-    11 - CODEC
-    d  - DSP clock direction
-    1 - SC0 is output
-    h  - SYNC direction
-    1 - output
-    g  - handshake mode
-    0 - gated clock
-    1 - continuous clock
-    s  - handshake control source
-    0 - DSP
-    1 - External
-
-8934rw   0000 eeee 0000 iiii Prescale select
-    eeee - External clock prescale
-    iiii - Internal clock prescale
-    0000 - off
-    0001 - /2
-     :
-    1011 - /12
-
-8936rw   0000 00rr Record Control register
-    rr - Record channels select
-    00 - 1-2
-    01 - 1-4
-    10 - 1-6
-    11 - 1-8
-
-8937rw   0000 rpea DAC Control register
-    r - Global sound reset
-    p - Input select
-    0 - Codec ADC
-    1 - PSG
-    e - Matrix output to CODEC
-    a - Alternate data output to CODEC
-
-8938rw   xxxx xxxx xxxx xxxx Aux A Control Field
-893Arw   xxxx xxxx xxxx xxxx Aux B Control Field
-893Cro   xxxx xxxx xxxx xxxx Aux A Input Field
-893Ero   xxxx xxxx xxxx xxxx Aux B Input Field
-
-8940rw   0000 xxxx 0000 xxxx General Purpose IO Control
-8942rw   0000 xxxx 0000 xxxx General Purpose IO Data
-
-8961w    xxxx xxxx Real Time Clock Address Register
-8963rw   xxxx xxxx Real Time Clock Data Register
-
-8C01rw   xxxx xxxx SCC DMA pointer upper
-8C03rw   xxxx xxxx SCC DMA pointer upper-middle
-8C05rw   xxxx xxxx SCC DMA pointer lower-middle
-8C07rw   xxxx xxxx SCC DMA pointer lower
-
-8C09rw   xxxx xxxx SCC DMA byte count upper
-8C0Brw   xxxx xxxx SCC DMA byte count upper-middle
-8C0Drw   xxxx xxxx SCC DMA byte count lower-middle
-8C0Frw   xxxx xxxx SCC DMA byte count lower
-
-8C10r    xxxx xxxx SCC Data Residue Reg UU byte
-8C11r    xxxx xxxx SCC Data Residue Reg UM byte
-8C12r    xxxx xxxx SCC Data Residue Reg LM byte
-8C13r    xxxx xxxx SCC Data Residue Reg LL byte
-
-8C15rw   bzu0 rsed SCC DMA Control Register
-
-    b - bus error during DMA
-    (read only, cleared by read)
-    z - byte count zero
-    (read only, cleared by read)
-    u - data underrun
-        (read only, cleared by read)
-    r - Aux/SCC select
-    0=SCC
-    1=AUX
-    s - SCC channel
-    0=A
-    1=B
-    e - DMA enable 0=off, 1=on
-    d - DMA direction:
-    0=in from port
-    1=out to port
-
-8C81rw   xxxx xxxx SCC A control register
-8C83rw   xxxx xxxx SCC A data register
-8C85rw   xxxx xxxx SCC B control register
-8C87rw   xxxx xxxx SCC B data register
-
-8CA0-8CBF(odd bytes)   DMA expansion IO port
-
-8E01rw   xxxx xxx0 System Interrupt Mask (B7 - B1; B0
-                   unused)
-8E03r    xxxx xxx0 System Interrupt State (before mask
-                   register)
-8E05rw   xxxx xxxa System Interrupter (a=1 generate
-                   interrupt 1)
-8E07rw   xxxx xxxb VME Interrupter (b=1 generate VME
-                   IRQ3)
-8E09rw   xxxx xxxx General Purpose Reg 1
-8E0Brw   xxxx xxxx General Purpose Reg 2
-8E0Drw   xxxx xxx0 VME Interrupt Mask (B7 - B1; B0
-                   unused)
-8E0Fr    xxxx xxx0 VME Interrupt State (before mask
-                   register)
-
-9200r    xxxx xxxx System Configuration Straps
-
-9800--   XXXX XXXX FALCON palette register 0
-9801rw   rrrr rrrr
-9802rw   gggg gggg
-9803rw   bbbb bbbb
-9804--   XXXX XXXX FALCON palette register 1
-9805rw   rrrr rrrr
-9806rw   gggg gggg
-9807rw   bbbb bbbb
- ||
-9BFC--   XXXX XXXX FALCON palette register 255
-9BFDrw   rrrr rrrr
-9BFErw   gggg gggg
-9BFFrw   bbbb bbbb
-
-A000-A1FFIO expansion area 1 (IOCS1) 2
-A200-A207 rw           DSP Host interface
-A208-A3FFIO expansion area 2 (DSP) 2
-
-FA01rw   xxxx xxxx MFP-1   GPIP
-FA03rw   xxxx xxxx MFP-1   AER
-FA05rw   xxxx xxxx MFP-1   DDR
-FA07rw   xxxx xxxx MFP-1   IERA
-FA09rw   xxxx xxxx MFP-1   IERB
-FA0Brw   xxxx xxxx MFP-1   IPRA
-FA0Drw   xxxx xxxx MFP-1   IPRB
-FA0Frw   xxxx xxxx MFP-1   ISRA
-FA11rw   xxxx xxxx MFP-1   ISRB
-FA13rw   xxxx xxxx MFP-1   IMRA
-FA15rw   xxxx xxxx MFP-1   IMRB
-FA17rw   xxxx xxxx MFP-1   VR
-FA19rw   xxxx xxxx MFP-1   TACR
-FA1Brw   xxxx xxxx MFP-1   TBCR
-FA1Drw   xxxx xxxx MFP-1   TCDCR
-FA1Frw   xxxx xxxx MFP-1   TADR
-FA21rw   xxxx xxxx MFP-1   TBDR
-FA23rw   xxxx xxxx MFP-1   TCDR
-FA25rw   xxxx xxxx MFP-1   TDDR
-FA27rw   xxxx xxxx MFP-1   SCR
-FA29rw   xxxx xxxx MFP-1   UCR
-FA2Brw   xxxx xxxx MFP-1   RSR
-FA2Drw   xxxx xxxx MFP-1   TSR
-FA2Frw   xxxx xxxx MFP-1   UDR
-
-FA81rw   xxxx xxxx MFP-2   GPIP
-FA83rw   xxxx xxxx MFP-2   AER
-FA85rw   xxxx xxxx MFP-2   DDR
-FA87rw   xxxx xxxx MFP-2   IERA
-FA89rw   xxxx xxxx MFP-2   IERB
-FA8Brw   xxxx xxxx MFP-2   IPRA
-FA8Drw   xxxx xxxx MFP-2   IPRB
-FA8Frw   xxxx xxxx MFP-2   ISRA
-FA91rw   xxxx xxxx MFP-2   ISRB
-FA93rw   xxxx xxxx MFP-2   IMRA
-FA95rw   xxxx xxxx MFP-2   IMRB
-FA97rw   xxxx xxxx MFP-2   VR
-FA99rw   xxxx xxxx MFP-2   TACR
-FA9Brw   xxxx xxxx MFP-2   TBCR
-FA9Drw   xxxx xxxx MFP-2   TCDCR
-FA9Frw   xxxx xxxx MFP-2   TADR
-FAA1rw   xxxx xxxx MFP-2   TBDR
-FAA3rw   xxxx xxxx MFP-2   TCDR
-FAA5rw   xxxx xxxx MFP-2   TDDR
-FAA7rw   xxxx xxxx MFP-2   SCR
-FAA9rw   xxxx xxxx MFP-2   UCR
-FAABrw   xxxx xxxx MFP-2   RSR
-FAADrw   xxxx xxxx MFP-2   TSR
-FAAFrw   xxxx xxxx MFP-2   UDR
-
-FC00rw   xxxx xxxx Keyboard ACIA Control
-FC02rw   xxxx xxxx Keyboard ACIA Data
-
-FC04rw   xxxx xxxx MIDI ACIA Control
-FC06rw   xxxx xxxx MIDI ACIA Data
-
-1 A write to the ACSI DMA base upper middle, lower middle, or
+    N     acc  byte       use
+
+    8001  srw  abc0 dxef  Memory Configuration Register
+                          a - ROM cycle speed select
+                                0=slow
+                                1=fast
+                          b - Video DRAM access speed
+                                0=slow
+                                1=fast
+                          c - Expansion DRAM access speed
+                                0=slow
+                                1=fast
+                          d - Bus timeout interval
+                                0=8192 clock ~
+                                1=128 clock ~
+                          x - reserved
+                          e - Fast memory burst enable
+                                0=off
+                                1=on
+                          f - Video memory burst enable
+                                0=off
+                                1=on
+
+    8003  srw  axxx xxxx  Refresh Time Constant high byte (video memory)
+                          a - Refresh interval control
+                                0=default
+                                1=counter
+    8005  srw  xxxx xxxx  Refresh Time Constant low byte
+
+    8007  srw  a000 00bc  External Cache Control Register
+                          a - Reset tag
+                                0=reset
+                                1=enable
+                          b - Capture data cache push
+                                0=no
+                                1=yes
+                          c - Clear on bus arbitration
+                                0=yes
+                                1=no
+
+    8009  srw  ssss bbBB  Video Memory Configuration Register
+                          ssss - SIMM speed select
+                          bb   - Bank 1 size select
+                          BB   - Bank 2 size select
+
+    800B  srw  ssss bbBB  Fast Memory Configuration Register
+                          ssss - SIMM speed select
+                          bb   - Bank 1 size select
+                          BB   - Bank 2 size select
+
+    800D  srw  axxx xxxx  Refresh Time Constant high byte (fast memory)
+                          a - Refresh interval control
+                                0=default
+                                1=counter
+    800F  srw  xxxx xxxx  Refresh Time Constant low byte
+
+    8080  srw  abcd efgh  VME Interface Configuration Register
+                          a - A32 slave interface enable (0=no 1=yes)
+                          b - A24 slave interface enable (0=no 1=yes)
+                          c - A32 master interface enable (0=no 1=yes)
+                          d - A24 master interface enable (0=no 1=yes)
+                          e - A16 master interface enable (0=no 1=yes)
+                          f - Bus Requester mode (0=Release on Request 1=Release when Done)
+                          g - reserved
+                          h - Cache Inhibit Signal for A32/D32 space (0=yes 1=no)
+
+    8083  srw  abcd efgh  VME Utility Control Register
+                          a - SYSRESET* width (0=200ms, 1=1us)
+                          b - reserved
+                          c - reserved
+                          d - reserved
+                          e - reserved
+                          f - reserved
+                          g - Bus Timeout enable (0=no 1=yes)
+                          h - SYSFAIL* (0=assert)
+
+    8097  srw  xxxx xxxx  VME Interrupt Vector
+    8098  srw  xxxx xxxx  VME Slave Start Address Register
+
+    8201  srw  xxxx xxxx  Video Base Address Even high byte
+    8203  srw  xxxx xxxx  Video Base Address Even mid byte
+    8205  srw  xxxx xxxx  Video Address Counter Even high byte
+    8207  srw  xxxx xxxx  Video Address Counter Even mid byte
+    8209  srw  xxxx x000  Video Address Counter Even low byte
+    820A  srw  ---- ----  Old ST shift mode, no register is here but address is acknowledged
+    820D  srw  xxxx x000 Video Base Address Even low byte
+
+    8213  srw  xxxx xxxx  Video Base Address Odd high byte
+    8215  srw  xxxx xxxx  Video Base Address Odd mid byte
+    8217  srw  xxxx x000  Video Base Address Odd low byte
+    821B  srw  xxxx xxxx  Video Address Counter Odd high byte
+    821D  srw  xxxx xxxx  Video Address Counter Odd mid byte
+    821F  srw  xxxx x000  Video Address Counter Odd low
+    8221  srw  a000 0bcd  Video Mode Control
+                          a - disable video refresh
+                                0=no
+                                1=yes
+                          b - Overwrite byte 0
+                                0=yes
+                                1=no
+                          c - skip line enable
+                                0=no
+                                1=yes
+                          d - skip phrase
+                                0=no
+                                1=yes
+
+    8240  rw   ---- -rrr  ST Color Palette Reg0 (RAMDAC)
+    8241       -ggg -bbb
+    8242  rw   ---- -rrr  ST Color Palette Reg1 (RAMDAC)
+    8243       -ggg -bbb
+     ||
+    825E  rw   ---- -rrr  ST Color Palette Reg15 (RAMDAC)
+    825F       -ggg -bbb
+
+    8260  rw   ---- --ss  ST Video Mode (VTG)
+                          ss - mode select
+                                00 320x200, 4 plane
+                                01 640x200, 2 plane
+                                10 640x400, 1 plane
+                                11 <reserved>
+
+    8262  rw   s--h -mmm  TT Video Mode (VTG)
+    8263       ---- bbbb  s - sample and hold mode
+                                0 - off, 1 - on
+                          h - hyper mono mode
+                                0 - off, 1 - on
+                          mmm - mode select
+                                000 320x200x4
+                                001 640x200x2
+                                010 640x400x1
+                                100 640x480x4
+                                110 1280x960x1
+                                111 320x480x8
+                          bbbb - ST palette bank
+
+    8268  rw   mmmm mmmm  Psuedo Color Mask (RAMDAC)
+
+    8269  rw   smmm bbbb  FALCON shift mode (RAMDAC/VTG)
+                          s - Sync on green enabled
+                                0=yes
+                                1=no
+
+                          mmm - Mode select
+                                000 =  1 bit per pixel (low res duochrome)
+                                001 =  2 bit  "     "
+                                010 =  4 bit  "     "  (low res)
+                                011 =  8 bit  "     "
+                                100 =  4 bit  "     "  (high res)
+                                101 =  True color
+                                110 =  Psuedo/True color 
+                                111 =  1 bit per pixel (high res duochrome)
+
+                          bbbb  Bank select
+
+    8280  rw   0000 xxxx xxxx xxxx  HC   Horizontal counter
+    8282  rw   0000 xxxx xxxx xxxx  HHT  Horizontal half line total
+    8284  rw   0000 xxxx xxxx xxxx  HBB  Horizontal blank begin
+    8286  rw   0000 xxxx xxxx xxxx  HBE  Horizontal Blank end
+    8288  rw   000h xxxx xxxx xxxx  HDB  Horiz. display begin
+                                    h - Line half.
+                                        0=First half line
+                                        1=Second half
+    828A  rw   000h xxxx xxxx xxxx  HDE  Horizontal display end
+                                    h - Line half.
+                                        0=First half line
+                                        1=Second half
+    828C  rw   0000 xxxx xxxx xxxx  HSS  Horizontal sync start
+    828E  rw   0000 xxxx xxxx xxxx  HFS  Horizontal field sync
+    8290  rw   0000 xxxx xxxx xxxx  HEE  Horiz. Equal. End
+    8292  rw   000h xxxx xxxx xxxx  VBT  Video Burst time
+                                    h - Line Half
+                                        0=VBT on 1st half of line
+                                          (after Hsync end and before HDE)
+                                        1=VBT on 2nd half of line
+                                          (after HDE and before HHT)
+    8294  rw   0000 xxxx xxxx xxxx       Video Data Xfers (NUMREQ)
+    8296  rw   0000 xxxx xxxx xxxx  HWC  Horizontal word count
+
+    82A0  rw   0000 xxxx xxxx xxxx  VC   Vertical counter
+    82A2  rw   0000 xxxx xxxx xxxi  VFT  Vertical Field Total
+                                    i - Interlace
+                                        0=Interlaced
+                                        1=Non interlaced
+    82A4  rw   0000 xxxx xxxx xxxx  VBB  Vertical Blank Begin
+    82A6  rw   0000 xxxx xxxx xxxx  VBE  Vertical Blank End
+    82A8  rw   0000 xxxx xxxx xxxx  VDB0,VDB1 Vert. Disp. Begin
+    82AA  rw   0000 xxxx xxxx xxxx  VDE0,VDB1 Vert. Display End
+    82AC  rw   0000 xxxx xxxx xxxx  VSS  Vertical Sync Start
+
+    82C0  rw   abcd efgh ijkl mnop  VMC  Video Master Control
+                                    p - Hsync source
+                                        0=Internal
+                                        1=External
+                                    o - Hsync level
+                                        0=Active high
+                                        1=Active low
+                                    n - Hsync enable
+                                        0=Disable
+                                        1=Enable
+                                    m - H-counter on
+                                        0=Reset to 0
+                                        1=Count
+                                    l - Vsync source
+                                        0=Internal
+                                        1=External
+                                    k - Vsync level
+                                        0=Active high
+                                        1=Active low
+                                    j - Vsync enable
+                                        0=Disable
+                                        1=Enable
+                                    i - V-counter on
+                                        0=Reset to 0
+                                        1=Count
+                                    h - Csync type
+                                        0 = hsync or vsync
+                                        1 = hsync xor vsync
+                                    g - Csync enable
+                                        0=Disable
+                                        1=Enable
+                                    f - Dotclk select
+                                        0=VGA
+                                        1=Super VGA
+                                    e - Video data transfer counter on
+                                        0=Reset to 0
+                                        1=Count
+                                    d - Alternate fields*
+                                        0=disabled
+                                        1=enabled
+                                    c - Equalization
+                                        0=Disabled
+                                        1=Enabled
+                                    b - Wide Equ'n
+                                        0=Disable
+                                        1=Enable
+                                    a - PAL/NTSC
+                                        0=PAL (5 pulses)
+                                        1=NTSC (6 pulses)
+
+    82C2  rw   0000 0000 psmm mvnr  VCO  Video control register
+                                    r - Repeat lines
+                                        0=Disabled
+                                        1=Enabled
+                                        Doesn't work correctly in interlaced mode
+                                    n - Prescale dotclk
+                                        0=No prescale
+                                        1=Divide by 2
+                                    v - Register select
+                                        0=VDB0/VDE0        
+                                        1=VDB1/VDE1
+                                    mmm Video mode*
+                                        000 1bpp Duochrome
+                                        001 2  bpp
+                                        010 4  bpp
+                                        011 8  bpp
+                                        100 4  bpp hi-res
+                                        101 24 bpp
+                                        110 8/24 bpp
+                                        111 1  bpp hi-res monochrome
+                                    s - Line skip
+                                        0=Disabled
+                                        1=Skip alt' lines
+                                    p - packed/planar pixel mode
+                                        0=packed
+                                        1=planar
+
+(*) Note: The Video Mode lines are read only in the Video Control
+          Register. They are set by writes to the ST, TT, or
+          Falcon Video Mode Registers.
+
+    82E0  rw   0000 0000 0smm mvnr  VC1  Video control for TT mode 0
+    82E2  rw   0000 0000 0smm mvnr  VC2  Video control for TT mode 1
+    82E4  rw   0000 0000 0smm mvnr  VC3  Video control for TT mode 2
+    82E6  rw   0000 0000 0smm mvnr  VC4  Video control for TT mode 4
+    82E8  rw   0000 0000 0smm mvnr  VC5  Video control for TT mode 6
+    82EA  rw   0000 0000 0smm mvnr  VC6  Video control for TT mode 7
+
+    82EC  r    ---- ---- ---- -mmm  MID  Monitor ID bits
+                                    mmm  Currently undefined
+
+    8300- rw   xxxx xxxx                 External Video IO port
+    83FF
+
+    8400  rw   ---- rrrr                 TT Palette Reg0 (RAMDAC)
+    8401       gggg bbbb
+    8402  rw   ---- rrrr                 TT Palette Reg1 (RAMDAC)
+    8403       gggg bbbb
+     ||
+    85FE  rw   ---- rrrr                 TT Palette Reg255 (RAMDAC)
+    85FF       gggg bbbb
+
+    8601  rw   xxxx xxxx                 ACSI base upper upper byte (DMAC)
+
+    8604  rw   --yy yyyy xxxx xxxx       DMA Data -wdc- (DMAC)
+                                         y*x - sector counter (WO)
+                                         x   - peripheral data (RW)
+
+    8606  w    ---- ---a bcde fghi       DMA Mode -wdl- (DMAC)
+                                         a - ACSI direction bit (DMAC)
+                                             0 - port into memory
+                                             1 - memory out to port
+                                         b - DMA request source
+                                             0 - not used
+                                             1 - FDC
+                                         c - reserved
+                                         d - fifo flush
+                                         e - Block count register select
+                                         f - CS out select
+                                             0 - FDC
+                                             1 - not used
+                                        ghi - peripheral address (i not used)
+
+    8606  r    ---- ---- ---f drae      DMA Status (DMAC)
+                                        f - fifo status
+                                        d - DIR
+                                        r - port DRQ active
+                                        a - DMA active
+                                        e - DMA error
+
+    8609  rw   xxxx xxxx                ACSI base upper middle byte (DMAC) (1)
+    860B  rw   xxxx xxxx                ACSI base lower middle byte (DMAC) (1)
+    860D  rw   xxxx xxx0                ACSI base lower lower byte (DMAC) (1)
+    860F  rw   abcd sefg                Floppy density select
+                                        a - Disk change (input) pin (read only)
+                                        b - Media detect 2 (input) pin (read only)
+                                        c - Mode select 2 (output) pin
+                                            0 = low (reset)
+                                            1 = high
+                                        s - ACSI DMA status flag
+                                            0 = no DMA has occured (since last read)
+                                            1 = DMA has or is occuring
+                                        e - Media detect 1 (input) pin (read only)
+                                        f - Mode select 1 (output) pin
+                                            0 = low (reset)
+                                            1 = high
+                                        dg  FCCLK Frequency
+                                            00 = 8MHz (reset)
+                                            01 = 16MHz
+                                            10 = 32Mhz
+                                            11 = FCCLK Off
+
+    8701  rw   xxxx xxxx                SCSI DMA pointer upper
+    8703  rw   xxxx xxxx                SCSI DMA pointer upper-middle
+    8705  rw   xxxx xxxx                SCSI DMA pointer lower-middle
+    8707  rw   xxxx xxxx                SCSI DMA pointer lower
+
+    8709  rw   xxxx xxxx                SCSI DMA byte count upper
+    870B  rw   xxxx xxxx                SCSI DMA byte count upper-middle
+    870D  rw   xxxx xxxx                SCSI DMA byte count lower-middle
+    870F  rw   xxxx xxxx                SCSI DMA byte count lower
+
+    8710  r    xxxx xxxx                SCSI Data Residue Register (UU)
+    8711  r    xxxx xxxx                SCSI Data Residue Register (UM)
+    8712  r    xxxx xxxx                SCSI Data Residue Register (LM)
+    8713  r    xxxx xxxx                SCSI Data Residue Register (LL)
+
+    8715  rw   bzu0 00ed                SCSI DMA Control Register
+                                        b - bus error during DMA
+                                            (read only, cleared by read)
+                                        z - byte count zero
+                                            (read only, cleared by read)
+                                        u - data underrun
+                                            (read only, cleared by read)
+                                        e - DMA enable 0=off, 1=on
+                                        d - DMA direction:
+                                            0=in from port
+                                            1=out to port
+
+    8781  rw   xxxx xxxx                5380 Data Register
+    8783  rw   xxxx xxxx                5380 Initiator Command Register
+    8785  rw   xxxx xxxx                5380 Mode Register
+    8787  rw   xxxx xxxx                5380 Target Command Register
+    8789  rw   xxxx xxxx                5380 ID Select/SCSI Control Register
+    878B  rw   xxxx xxxx                5380 DMA Start/DMA Status Register
+    878D  rw   xxxx xxxx                5380 DMA Target Receive/Input Data
+    878F  rw   xxxx xxxx                5380 DMA Initiator Receive/Reset
+
+    8800  r    xxxx xxxx                PSG Read Data
+    8800  w    0000 xxxx                PSG Register Select
+    8802  w    xxxx xxxx                PSG Write Data
+
+                                        PSG Port A Bit Assignments
+                                        7   <reserved>
+                                        6   SPKON (internal speaker on when low)
+                                        5   Printer Port Strobe
+                                        4   DSP reset
+                                        3   Printer Port SLCTIN*
+                                        2   *Floppy 1 Select
+                                        1   *Floppy 0 Select
+                                        0   *Floppy Side 0 Select
+
+                                        PSG Port B Bit Assignments
+                                        7-0  Printer Port bits 7-0
+
+    8804  r/rw zabc defg xhij klmn      GPIO port
+                                        z - <reserved>
+                                        a - Serial port 2 RTS
+                                        b -    "     "  " DTR
+                                        c -    "     "  " RI
+                                        d -    "     "  " CTS
+                                        e -    "     "  " DSR
+                                        f - <reserved>
+                                        g - Serial port 2 CD
+
+                                        h - <reserved>
+                                        i - Parallel port INIT*
+                                        j -   "       "  AFD*
+                                        k -   "       "  ACK*
+                                        l -   "       "  PE
+                                        m -   "       "  SLCT
+                                        n -   "       "  ERROR*
+
+
+    8900  rw   0000 abcd                Sound DMA Control
+                                        ab - SCNT control
+                                             00 - high
+                                             01 - playback channel
+                                             10 - record channel
+                                             11 - playback OR record
+                                        cd - SINT control
+                                             00 - high
+                                             01 - playback channel
+                                             10 - record channel
+                                             11 - playback OR record
+
+    8901  rw   a0bc 00de                Sound DMA Control
+                                        a - Register Set Select
+                                            0 = playback registers
+                                            1 = record registers
+                                        b - Record Frame Repeat Select
+                                            0 = Single Frame
+                                            1 = Repeat
+                                        c - Record Enable
+                                            0 = Off (reset state)
+                                            1 = On
+                                        d - Playback Frame Repeat Select
+                                            0 = Single Frame
+                                            1 = Repeat
+                                        e - Playback Enable
+                                            0 = Off (reset state)
+                                            1 = On
+
+    8903  rw   xxxx xxxx                Frame Base Address upper-middle byte
+    8905  rw   xxxx xxxx                Frame Base Address lower-middle byte
+    8907  rw   xxxx xxxx                Frame Base Address lower-lower byte
+
+    8909  r    xxxx xxxx                Frame Address Counter upper-middle byte
+    890B  r    xxxx xxxx                Frame Address Counter lower-middle byte
+    890D  r    xxxx xxxx                Frame Address Counter lower-lower byte
+
+    890F  rw   xxxx xxxx                Frame End Address upper-middle byte
+    8911  rw   xxxx xxxx                Frame End Address lower-middle byte
+    8913  rw   xxxx xxxx                Frame End Address lower-lower byte
+
+    8915  rw   xxxx xxxx                Frame Base Address upper-upper byte
+    8917  r    xxxx xxxx                Frame Address Counter upper-upper byte
+    8919  rw   xxxx xxxx                Frame End Address upper-upper byte
+
+    8920  rw   0xab 0xcd gh00 00ij      Playback Mode Control
+                                        x - <reserved>
+                                        ab  Monitor Select
+                                            000 - tracks 1 & 2
+                                            001 - tracks 3 & 4
+                                            010 - tracks 5 & 6
+                                            011 - tracks 7 & 8
+                                        cd  Active Tracks Select
+                                            000 - 2 tracks
+                                            001 - 4 tracks
+                                            010 - 6 tracks
+                                            011 - 8 tracks
+                                        g - Mode (8 bit only)
+                                            0 = Stereo (reset state)
+                                            1 = Mono
+                                        h - Mode
+                                            0 = 8 bit samples (reset state)
+                                            1 = 16 bit samples
+                                        ij  Sample Rate Prescale
+                                            00 =  1280
+                                            01 =  640
+                                            10 =  320
+                                            11 =  160
+
+    8922  rw   xxxx xxxx xxxx xxxx      MICROWIRE Data register (dummy register)
+    8924  rw   xxxx xxxx xxxx xxxx      MICROWIRE Mask register (dummy register)
+
+    8930  rw   00b0 0abh dabh sabg      SRC register
+                                        ab - clock select
+                                             00 - 25.175 Mhz
+                                             01 - external from DSP connector
+                                             10 - 32.000 Mhz
+                                             11 - reserved
+                                        d  - DSP clock direction
+                                             1 - SCLK is output
+                                        h  - SYNC direction
+                                             1 - output
+                                        g  - handshake mode
+                                             0 - gated clock
+                                             1 - continuous clock
+                                        s  - handshake control source
+                                             0 - DSP
+                                             1 - External
+
+    8932  rw   0ab0 0abh dabh sabg      SRC register
+                                        ab - source select
+                                             00 - DMA (playback)
+                                             01 - DSP
+                                             10 - External
+                                             11 - CODEC
+                                        d  - DSP clock direction
+                                             1 - SC0 is output
+                                        h  - SYNC direction
+                                             1 - output
+                                        g  - handshake mode
+                                             0 - gated clock
+                                             1 - continuous clock
+                                        s  - handshake control source
+                                             0 - DSP
+                                             1 - External
+
+    8934  rw   0000 eeee 0000 iiii      Prescale select
+                                        eeee - External clock prescale
+                                        iiii - Internal clock prescale
+                                               0000 - off
+                                               0001 - /2
+                                                :
+                                               1011 - /12
+
+    8936  rw   0000 00rr                Record Control register
+                                        rr - Record channels select
+                                             00 - 1-2
+                                             01 - 1-4
+                                             10 - 1-6
+                                             11 - 1-8
+
+    8937  rw   0000 rpea                DAC Control register
+                                        r - Global sound reset
+                                        p - Input select
+                                            0 - Codec ADC
+                                            1 - PSG
+                                        e - Matrix output to CODEC
+                                        a - Alternate data output to CODEC
+
+    8938  rw   xxxx xxxx xxxx xxxx      Aux A Control Field
+    893A  rw   xxxx xxxx xxxx xxxx      Aux B Control Field
+    893C  ro   xxxx xxxx xxxx xxxx      Aux A Input Field
+    893E  ro   xxxx xxxx xxxx xxxx      Aux B Input Field
+
+    8940  rw   0000 xxxx 0000 xxxx      General Purpose IO Control
+    8942  rw   0000 xxxx 0000 xxxx      General Purpose IO Data
+
+    8961  w    xxxx xxxx                Real Time Clock Address Register
+    8963  rw   xxxx xxxx                Real Time Clock Data Register
+
+    8C01rw   xxxx xxxx                  SCC DMA pointer upper
+    8C03rw   xxxx xxxx                  SCC DMA pointer upper-middle
+    8C05rw   xxxx xxxx                  SCC DMA pointer lower-middle
+    8C07rw   xxxx xxxx                  SCC DMA pointer lower
+
+    8C09  rw   xxxx xxxx                SCC DMA byte count upper
+    8C0B  rw   xxxx xxxx                SCC DMA byte count upper-middle
+    8C0D  rw   xxxx xxxx                SCC DMA byte count lower-middle
+    8C0F  rw   xxxx xxxx                SCC DMA byte count lower
+
+    8C10  r    xxxx xxxx                SCC Data Residue Reg UU byte
+    8C11  r    xxxx xxxx                SCC Data Residue Reg UM byte
+    8C12  r    xxxx xxxx                SCC Data Residue Reg LM byte
+    8C13  r    xxxx xxxx                SCC Data Residue Reg LL byte
+
+    8C15  rw   bzu0 rsed                SCC DMA Control Register
+                                        b - bus error during DMA
+                                            (read only, cleared by read)
+                                        z - byte count zero
+                                            (read only, cleared by read)
+                                        u - data underrun
+                                            (read only, cleared by read)
+                                        r - Aux/SCC select
+                                            0=SCC
+                                            1=AUX
+                                        s - SCC channel
+                                            0=A
+                                            1=B
+                                        e - DMA enable
+                                            0=off
+                                            1=on
+                                        d - DMA direction:
+                                            0=in from port
+                                            1=out to port
+
+    8C81  rw   xxxx xxxx                SCC A control register
+    8C83  rw   xxxx xxxx                SCC A data register
+    8C85  rw   xxxx xxxx                SCC B control register
+    8C87  rw   xxxx xxxx                SCC B data register
+
+    8CA0-8CBF (odd bytes)               DMA expansion IO port
+
+    8E01  rw   xxxx xxx0                System Interrupt Mask (B7 - B1; B0 unused)
+    8E03  r    xxxx xxx0                System Interrupt State (before mask register)
+    8E05  rw   xxxx xxxa                System Interrupter (a=1 generate interrupt 1)
+    8E07  rw   xxxx xxxb                VME Interrupter (b=1 generate VME IRQ3)
+    8E09  rw   xxxx xxxx                General Purpose Reg 1
+    8E0B  rw   xxxx xxxx                General Purpose Reg 2
+    8E0D  rw   xxxx xxx0                VME Interrupt Mask (B7 - B1; B0 unused)
+    8E0F  r    xxxx xxx0                VME Interrupt State (before mask register)
+
+    9200  r    xxxx xxxx                System Configuration Straps
+
+    9800  --   XXXX XXXX                FALCON palette register 0
+    9801  rw   rrrr rrrr
+    9802  rw   gggg gggg
+    9803  rw   bbbb bbbb
+    9804  --   XXXX XXXX                FALCON palette register 1
+    9805  rw   rrrr rrrr
+    9806  rw   gggg gggg
+    9807  rw   bbbb bbbb
+     ||
+    9BFC  --   XXXX XXXX                FALCON palette register 255
+    9BFD  rw   rrrr rrrr
+    9BFE  rw   gggg gggg
+    9BFF  rw   bbbb bbbb
+
+    A000-A1FFIO expansion area 1        (IOCS1) (2)
+    A200-A207 rw                        DSP Host interface
+    A208-A3FFIO expansion area 2        (DSP) (2)
+
+    FA01  rw   xxxx xxxx                MFP-1 GPIP
+    FA03  rw   xxxx xxxx                MFP-1 AER
+    FA05  rw   xxxx xxxx                MFP-1 DDR
+    FA07  rw   xxxx xxxx                MFP-1 IERA
+    FA09  rw   xxxx xxxx                MFP-1 IERB
+    FA0B  rw   xxxx xxxx                MFP-1 IPRA
+    FA0D  rw   xxxx xxxx                MFP-1 IPRB
+    FA0F  rw   xxxx xxxx                MFP-1 ISRA
+    FA11  rw   xxxx xxxx                MFP-1 ISRB
+    FA13  rw   xxxx xxxx                MFP-1 IMRA
+    FA15  rw   xxxx xxxx                MFP-1 IMRB
+    FA17  rw   xxxx xxxx                MFP-1 VR
+    FA19  rw   xxxx xxxx                MFP-1 TACR
+    FA1B  rw   xxxx xxxx                MFP-1 TBCR
+    FA1D  rw   xxxx xxxx                MFP-1 TCDCR
+    FA1F  rw   xxxx xxxx                MFP-1 TADR
+    FA21  rw   xxxx xxxx                MFP-1 TBDR
+    FA23  rw   xxxx xxxx                MFP-1 TCDR
+    FA25  rw   xxxx xxxx                MFP-1 TDDR
+    FA27  rw   xxxx xxxx                MFP-1 SCR
+    FA29  rw   xxxx xxxx                MFP-1 UCR
+    FA2B  rw   xxxx xxxx                MFP-1 RSR
+    FA2D  rw   xxxx xxxx                MFP-1 TSR
+    FA2F  rw   xxxx xxxx                MFP-1 UDR
+
+    FA81  rw   xxxx xxxx                MFP-2 GPIP
+    FA83  rw   xxxx xxxx                MFP-2 AER
+    FA85  rw   xxxx xxxx                MFP-2 DDR
+    FA87  rw   xxxx xxxx                MFP-2 IERA
+    FA89  rw   xxxx xxxx                MFP-2 IERB
+    FA8B  rw   xxxx xxxx                MFP-2 IPRA
+    FA8D  rw   xxxx xxxx                MFP-2 IPRB
+    FA8F  rw   xxxx xxxx                MFP-2 ISRA
+    FA91  rw   xxxx xxxx                MFP-2 ISRB
+    FA93  rw   xxxx xxxx                MFP-2 IMRA
+    FA95  rw   xxxx xxxx                MFP-2 IMRB
+    FA97  rw   xxxx xxxx                MFP-2 VR
+    FA99  rw   xxxx xxxx                MFP-2 TACR
+    FA9B  rw   xxxx xxxx                MFP-2 TBCR
+    FA9D  rw   xxxx xxxx                MFP-2 TCDCR
+    FA9F  rw   xxxx xxxx                MFP-2 TADR
+    FAA1  rw   xxxx xxxx                MFP-2 TBDR
+    FAA3  rw   xxxx xxxx                MFP-2 TCDR
+    FAA5  rw   xxxx xxxx                MFP-2 TDDR
+    FAA7  rw   xxxx xxxx                MFP-2 SCR
+    FAA9  rw   xxxx xxxx                MFP-2 UCR
+    FAAB  rw   xxxx xxxx                MFP-2 RSR
+    FAAD  rw   xxxx xxxx                MFP-2 TSR
+    FAAF  rw   xxxx xxxx                MFP-2 UDR
+
+    FC00  rw   xxxx xxxx                Keyboard ACIA Control
+    FC02  rw   xxxx xxxx                Keyboard ACIA Data
+
+    FC04  rw   xxxx xxxx                MIDI ACIA Control
+    FC06  rw   xxxx xxxx                MIDI ACIA Data
+
+(1) A write to the ACSI DMA base upper middle, lower middle, or
 lower lower byte will clear the upper upper byte (8601).
 
-2 Two general purpose IO select signals, IOCS1 and IOCS2(DSP),
+(2) Two general purpose IO select signals, IOCS1 and IOCS2(DSP),
 are generated for IO addresses 00FFA000-00FFA1FF and
 00FFA200-00FFA3FF, respectively. Note that A200-A20F is used by
 the DSP host interface. These pins minimize decoding when adding
 peripherals to the main board sometime in the future.
 
-    Any IO address not expressly listed in this section should
+Any IO address not expressly listed in this section should
 be considered reserved. Any additions or changes to the FALCON
 memory map must be approved by the FALCON design team at Atari
 Microsystems in Dallas.
 
-11.2 VME ADDRESS SPACE
+## 11.2 VME ADDRESS SPACE
 
-    Note that some models do not include the VME interface.
+Note that some models do not include the VME interface.
 
-11.2.1 ADDRESS SPACE SEEN BY A32 VME BUS MASTER
+### 11.2.1 ADDRESS SPACE SEEN BY A32 VME BUS MASTER
 
-    The value in the slave starting address register (xxFF8098)
+The value in the slave starting address register (xxFF8098)
 is subtracted from the VME address and the result becomes the
 address presented to the FBus. The addresses given below
 represent that result and will be equal to the address generated
 by the VME master only when the slave starting address register
 (SSAR) is zero. The Falcon system appears as a D32 VME slave.
 
-address (VME addr-SSAR)use
-00000000-00000007      first 8 bytes of rom bank0
-    (restart vector)
+    address(VME addr-SSAR) use
 
-00000008-000007FF      Video RAM (protected)
+    00000000-00000007      first 8 bytes of rom bank0 (restart vector)
 
-00000800-0007FFFF      Video RAM 512 kB
-      000FFFFF         512 kB + 512 kB
-      001FFFFF         2 MB
-      0027FFFF         2 MB + 512 kB
-      003FFFFF         2 MB + 2 MB
-      007FFFFF         8 MB
-      0087FFFF         8 MB + 512 kB
-      009FFFFF         8 MB + 2 MB
-      00EFFFFF         8 MB + 8 MB (15 MB usable)
+    00000008-000007FF      Video RAM (protected)
 
-00FA0000-00FAFFFF      cartridge port A
-00FB0000-00FBFFFF      cartridge port B
+    00000800-0007FFFF      Video RAM 512 kB
+             000FFFFF                512 kB + 512 kB
+             001FFFFF                2 MB
+             0027FFFF                2 MB + 512 kB
+             003FFFFF                2 MB + 2 MB
+             007FFFFF                8 MB
+             0087FFFF                8 MB + 512 kB
+             009FFFFF                8 MB + 2 MB
+             00EFFFFF                8 MB + 8 MB (15 MB usable)
 
-00F00000-00FFFFFF      IO
+    00FA0000-00FAFFFF      cartridge port A
+    00FB0000-00FBFFFF      cartridge port B
 
-01000000-010FFFFF      Fast RAM (optional) 1 MB
-         011FFFFF      1 MB + 1 MB
-         013FFFFF      4 MB
-         014FFFFF      4 MB + 1 MB
-         017FFFFF      4 MB + 4 MB
-         01FFFFFF      16 MB
-         020FFFFF      16 MB + 1 MB
-         023FFFFF      16 MB + 4 MB
-         02FFFFFF      16 MB + 16 MB
+    00F00000-00FFFFFF      IO
 
-01000000-|
-01100000-|
-01200000-|
-01400000-|
-01500000-|
-01800000-|\
-02000000-|-FEFFFFFF    VME bus
-02100000-|/
-02400000-|
-03000000-|
+    01000000-010FFFFF      Fast RAM (optional) 1 MB
+             011FFFFF                          1 MB + 1 MB
+             013FFFFF                          4 MB
+             014FFFFF                          4 MB + 1 MB
+             017FFFFF                          4 MB + 4 MB
+             01FFFFFF                          16 MB
+             020FFFFF                          16 MB + 1 MB
+             023FFFFF                          16 MB + 4 MB
+             02FFFFFF                          16 MB + 16 MB
 
-FF000000-FFDFFFFF      Image of video ram
-FFE00000-FFEFFFFF      TOS ROM
-FFF00000-FFFFFFFF      Image of IO
+    01000000-|
+    01100000-|
+    01200000-|
+    01400000-|
+    01500000-|
+    01800000-|\
+    02000000-|-FEFFFFFF    VME bus
+    02100000-|/
+    02400000-|
+    03000000-|
 
-11.2.2 ADDRESS SPACE SEEN BY A24 VME BUS MASTER
+    FF000000-FFDFFFFF      Image of video ram
+    FFE00000-FFEFFFFF      TOS ROM
+    FFF00000-FFFFFFFF      Image of IO
 
-    The Falcon address space from FF000000h to FFFFFFFFh appears
+### 11.2.2 ADDRESS SPACE SEEN BY A24 VME BUS MASTER
+
+The Falcon address space from FF000000h to FFFFFFFFh appears
 as a D32 VME slave when enabled in the interface configuration
 register (xxFF8080).
 
-address  use
-000000-000007      first 8 bytes of rom bank0
-    (restart vector)
+    address            use
+    000000-000007      first 8 bytes of rom bank0 (restart vector)
 
-000008-0007FF      video ram (protected)
+    000008-0007FF      video ram (protected)
 
-000800-07FFFF      Video RAM 512 kB
-    0FFFFF         512 kB + 512 kB
-    1FFFFF         2 MB
-    27FFFF         2 MB + 512 kB
-    3FFFFF         2 MB + 2 MB
-    7FFFFF         8 MB
-    87FFFF         8 MB + 512 kB
-    9FFFFF         8 MB + 2 MB
-    EFFFFF         8 MB + 8 MB (15 MB usable)
+    000800-07FFFF      Video RAM 512 kB
+           0FFFFF                512 kB + 512 kB
+           1FFFFF                2 MB
+           27FFFF                2 MB + 512 kB
+           3FFFFF                2 MB + 2 MB
+           7FFFFF                8 MB
+           87FFFF                8 MB + 512 kB
+           9FFFFF                8 MB + 2 MB
+           EFFFFF                8 MB + 8 MB (15 MB usable)
 
-E00000-EFFFFF      TOS ROMs
+    E00000-EFFFFF      TOS ROMs
 
-FA0000-FAFFFF      cartridge port A
-FB0000-FBFFFF      cartridge port B
+    FA0000-FAFFFF      cartridge port A
+    FB0000-FBFFFF      cartridge port B
 
-F00000-FFFFFF      IO
+    F00000-FFFFFF      IO
 
-11.2.3 VME CONTROLLER STARTING ADDRESSES
+### 11.2.3 VME CONTROLLER STARTING ADDRESSES
 
-    The starting address of the A32/D32 VME space is contiguous
+The starting address of the A32/D32 VME space is contiguous
 with the top of single purpose (fast) expansion RAM. If no such
 RAM is present then the VME space starts at 01000000h. Boot
 software must initialize the fast memory configuration register
 (xxFF800B).
 
-11.3 INTERRUPT ASSIGNMENTS
+### 11.3 INTERRUPT ASSIGNMENTS
 
+#### Table 11.2 (Interrupt Assignments)
 
+Interrupt level | System source (1) | Interrupt acknowledge response (2) | VME source
+----------------|-------------------|------------------------------------|-----------
+7               | VME SYSFAIL       | Auto vector                        | IRQ7
+6               | none              | Vector                             | MFPs and IRQ6
+5               | none              | Vector                             | SCC and IRQ5
+4               | VSYNC             | Auto vector                        | IRQ4
+3               | none (3)          | Auto vector                        | VME interrupter + IRQ3
+2               | HSYNC             | Auto vector                        | IRQ2
+1               | System interrupter| Auto vector                        | IRQ1
 
-
-Interrupt Assignments
-
-
-Interrupt
-level
-System source 1
-Interrupt
-acknowledge
-response 2
-VME source
-
-
-7
-VME SYSFAIL
-Auto vector
-IRQ7
-
-
-6
-none
-Vector
-MFPs and IRQ6
-
-
-5
-none
-Vector
-SCC and IRQ5
-
-
-4
-VSYNC
-Auto vector
-IRQ4
-
-
-3
-none 3
-Auto vector
-VME interrupter +
-IRQ3
-
-
-2
-HSYNC
-Auto vector
-IRQ2
-
-
-1
-System
-interrupter
-Auto vector
-IRQ1
-
-
-                                Table 11.2
-
-1 Within each level, the system interrupt has higher priority
+(1) Within each level, the system interrupt has higher priority
 than the VME interrupt. And, within the shared Level5 and Level6
 interrupts, the part on the motherboard has higher priority than
 the VME interrupt.
 
-2 The VME interrupts use their interrupt status ID byte as their
+(2) The VME interrupts use their interrupt status ID byte as their
 interrupt vector.
 
-3 The level 3 system interrupt mask must be enabled for the level
+(3) The level 3 system interrupt mask must be enabled for the level
 3 VME interrupt to actually be generated.
 
-11.3.1 MFP Interrupt Assignments
+### 11.3.1 MFP Interrupt Assignments
 
-MFP-1
-int                function
-GPIP7              DMA Sound IRQ
-GPIP6              Serial port 1 ring indicator
-TimerA
-RxRDY
-RxERR
-TxEMPTY
-TxERR
-TimerB
-GPIP5              FDC Interrupt
-GPIP4              MIDI / Keyboard Interface
-TimerC
-TimerD
-GPIP3              DSP connector INT input
-GPIP2              MIDI IRQ
-GPIP1              parallel port ACK* signal
-GPIP0              Parallel port BUSY* signal
+    MFP-1 int          function
 
-MFP 2
-int                function
-GPIP7              SCSI Controller IRQ (active high)
-GPIP6              RTC IRQ (active low, cleared by reading RTC
-                   register 0x0C)
-TimerA
-RxRDY
-RxERR
-TxEMPTY
-TxERR
-TimerB
-GPIP5              SCSI DMAC Interrupt (active low)
-GPIP4              AUX DMA port IRQ
-TimerC
-TimerD
-GPIP3              Graphics processor IRQ
-GPIP2              SCC DMAC Interrupt (active low)
-GPIP1              general purpose I/O pin
-GPIP0              general purpose I/O pin
+    GPIP7              DMA Sound IRQ
+    GPIP6              Serial port 1 ring indicator
+    TimerA
+    RxRDY
+    RxERR
+    TxEMPTY
+    TxERR
+    TimerB
+    GPIP5              FDC Interrupt
+    GPIP4              MIDI / Keyboard Interface
+    TimerC
+    TimerD
+    GPIP3              DSP connector INT input
+    GPIP2              MIDI IRQ
+    GPIP1              parallel port ACK* signal
+    GPIP0              Parallel port BUSY* signal
 
-11.4 DMA/BUS MASTERSHIP PRIORITIES
+    MFP 2 int          function
+    
+    GPIP7              SCSI Controller IRQ (active high)
+    GPIP6              RTC IRQ (active low, cleared by reading RTC register 0x0C)
+    TimerA
+    RxRDY
+    RxERR
+    TxEMPTY
+    TxERR
+    TimerB
+    GPIP5              SCSI DMAC Interrupt (active low)
+    GPIP4              AUX DMA port IRQ
+    TimerC
+    TimerD
+    GPIP3              Graphics processor IRQ
+    GPIP2              SCC DMAC Interrupt (active low)
+    GPIP1              general purpose I/O pin
+    GPIP0              general purpose I/O pin
 
-priority function
-highest  SCSI DMA Channel
-         AUX DMA Channel
-         Floppy DMA channel
-         Digital sound DMA channel
-         VMEbus Masters
-lowest   CPU
+## 11.4 DMA/BUS MASTERSHIP PRIORITIES
+
+    priority function
+
+    highest  SCSI DMA Channel
+             AUX DMA Channel
+             Floppy DMA channel
+             Digital sound DMA channel
+             VMEbus Masters
+    lowest   CPU
 
 
 
