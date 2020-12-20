@@ -3065,209 +3065,93 @@ assumes an intimate knowledge of both the 68030 and 68040 bus
 definitions. A thorough study of the Motorola user's manuals for
 both processors is highly recommended (see reference section).
                                     
-8.1 FBUS Summary
+# 8.1 FBUS Summary
 
-                                       The internal bus for FALCON, called the FBUS, is a hybrid of
-      the 68030 and 68040 busses. The objective is an architecture
-    which will accommodate both processors with a minimum of external
-          glue logic. The FBUS is thus a subset of either bus.
-                                    2
-    The FBUS defines two modes of operation. One which is 030
-     like and the other 040 like. Most FBUS signals are defined such
-     that they can be connected directly to the corresponding signal
-     of either processor. Timing and function of these signals will
-     therefore depend the current bus mode. Logic in each slave port
-     must adjust how these signals are interpreted accordingly. The
-       FBUS signal BMODE shall identify the current bus mode. FBUS
-    masters can use either mode and masters using different modes can
-                        coexist on the same bus.
+The internal bus for FALCON, called the FBUS, is a hybrid of
+the 68030 and 68040 busses. The objective is an architecture
+which will accommodate both processors with a minimum of external
+glue logic. The FBUS is thus a subset of either bus.
+
+The FBUS defines two modes of operation. One which is 030
+like and the other 040 like. Most FBUS signals are defined such
+that they can be connected directly to the corresponding signal
+of either processor. Timing and function of these signals will
+therefore depend the current bus mode. Logic in each slave port
+must adjust how these signals are interpreted accordingly. The
+FBUS signal BMODE shall identify the current bus mode. FBUS
+masters can use either mode and masters using different modes can
+coexist on the same bus.
                                     
-    In order to keep the glue logic reasonable, many compromises
-    were necessary. The FBUS does not support the dynamic bus sizing
-      of the 030 or bus snooping by the 040. CPU control involving
-          halts or retries is not supported in either bus mode.
+In order to keep the glue logic reasonable, many compromises
+were necessary. The FBUS does not support the dynamic bus sizing
+of the 030 or bus snooping by the 040. CPU control involving
+halts or retries is not supported in either bus mode.
                                     
-    The FBUS does offer unique features. The FBUS wide mode
-      allows devices to connect directly to the 64 bit video memory
-    data bus permitting double longword transfers.  The FBUS defines
-     a burst write in 030 bus mode, which, although never used by a
-              68030, is available to a 030 mode bus master.
+The FBUS does offer unique features. The FBUS wide mode
+allows devices to connect directly to the 64 bit video memory
+data bus permitting double longword transfers.  The FBUS defines
+a burst write in 030 bus mode, which, although never used by a
+68030, is available to a 030 mode bus master.
                                     
-    Slave ports must monitor the BMODE signal and support either
-    bus mode on a cycle by cycle basis. Bus masters must drive BMODE
-    according to the mode they use. The particular timing on the bus
-        should conform to or be compatible with the 33Mhz timing
-     specification for the MC68030 or MC68040 for the corresponding
-                                bus mode.
+Slave ports must monitor the BMODE signal and support either
+bus mode on a cycle by cycle basis. Bus masters must drive BMODE
+according to the mode they use. The particular timing on the bus
+should conform to or be compatible with the 33Mhz timing
+specification for the MC68030 or MC68040 for the corresponding
+bus mode.
                                     
-    The video memory is the only 64 bit wide port currently
-    defined in FALCON. The MCU will monitor WID0-WID1 and drive WEN.
-     Masters connected to the memory data bus may use wide mode for
-    data transfers. Wide mode is explained more fully later. Masters
-    connecting to the 32 bit FBUS data section may not use wide mode.
-         Slaves other than the MCU must ignore wide mode cycles.
+The video memory is the only 64 bit wide port currently
+defined in FALCON. The MCU will monitor WID0-WID1 and drive WEN.
+Masters connected to the memory data bus may use wide mode for
+data transfers. Wide mode is explained more fully later. Masters
+connecting to the 32 bit FBUS data section may not use wide mode.
+Slaves other than the MCU must ignore wide mode cycles.
                                     
-    All ports in FALCON are 32 bit ports to the FBUS (except for
-      video memory as described above). Slaves ports must drive or
-     receive data on the byte lanes appropriate to the address. All
-       size/address combinations for 32 bit ports and burst reads
-     defined by the 68030  are defined for the FBUS in 030 mode. All
-     size/address combinations and line reads and writes defined by
-                  the 68040 are defined for the FBUS. 
+All ports in FALCON are 32 bit ports to the FBUS (except for
+video memory as described above). Slaves ports must drive or
+receive data on the byte lanes appropriate to the address. All
+size/address combinations for 32 bit ports and burst reads
+defined by the 68030  are defined for the FBUS in 030 mode. All
+size/address combinations and line reads and writes defined by
+the 68040 are defined for the FBUS. 
                                     
-8.2 SIGNAL DEFINITION
-
-                                   8.2                        .1  Signal Mapping
-
-                                   
-                                  
-
-FBUS to Processor Signal Correspondence
-
-
-FBUS signal
-68030 signal
-68040
-
-
-A0-A31
-A0-A31
-A0-A31
-
-
-D0-D31
-D0-D31
-D0-D31
-
-
-TT0
-CBREQ
-TT0
-
-
-TT1
-'1'
-TT1
-
-
-TM0-TM2
-FC0-FC2
-TM0-TM2
-
-
-SIZ0-SIZ1
-SIZ0-SIZ1
-SIZ0-SIZ1
-
-
-LOCK
-RMC
-LOCK
-
-
-AV
-AVEC
-AVEC
-
-
-TA0
-STERM
-TA
-
-
-TA1
-CBACK
-TBI
-
-
-TE
-BERR
-TEA
-
-
-R/W
-R/W
-R/W
-
-
-CO
-CIOUT
-CIOUT
-
-
-CI
-CIIN
-TCI
-
-
-ST0
-AS
-TS
-
-
-ST1
-DS
-TIP
-
-
-I0-I2
-IPL0-IPL2
-IPL0-IPL2
-
-
-IP
-IPEND
-IPEND
-
-
-CLK
-CLK
-BCLK
-
-
-RES
-RESET
-RSTI,RSTO 1
-
-
-BR
-BR
-BR 2
-
-
-BG
-BG
-BG 2
-
-
-BA
-BGACK
-BB 2
-
-
-BMODE
---
---
-
-
-WID0-WID1
---
---
-
-
-WEN
---
---
-
-
-SIZ2
-
-
-
-
-                                 Table 8.1
-
-1 The RSTI and RSTO signals of the 68040 will be combined by
+## 8.2 SIGNAL DEFINITION
+
+### 8.2.1 Signal Mapping
+
+#### Table 8.1 (FBUS to Processor Signal Correspondence)
+
+FBUS signal | 68030 signal | 68040 signal
+------------|--------------|-------------
+A0-A31      | A0-A31       | A0-A31
+D0-D31      | D0-D31       | D0-D31
+TT0         | CBREQ        | TT0
+TT1         | '1'          | TT1
+TM0-TM2     | FC0-FC2      | TM0-TM2
+SIZ0-SIZ1   | SIZ0-SIZ1    | SIZ0-SIZ1
+LOCK        | RMC          | LOCK
+AV          | AVEC         | AVEC
+TA0         | STERM        | TA
+TA1         | CBACK        | TBI
+TE          | BERR         | TEA
+R/W         | R/W          | R/W
+CO          | CIOUT        | CIOUT
+CI          | CIIN         | TCI
+ST0         | AS           | TS
+ST1         | DS           | TIP
+I0-I2       | IPL0-IPL2    | IPL0-IPL2
+IP          | IPEND        | IPEND
+CLK         | CLK          | BCLK
+RES         | RESET        | RSTI,RSTO (1)
+BR          | BR           | BR (2)
+BG          | BG           | BG (2)
+BA          | BGACK        | BB (2)
+BMODE       | --           | --
+WID0-WID1   | --           | --
+WEN         | --           | --
+SIZ2        |              |
+
+(1) The RSTI and RSTO signals of the 68040 will be combined by
 external circuitry into the FBUS signal RES. The ideal situation
 would be for the 68040 RSTO signal to drive the FBUS and the FBUS
 to drive the 68040 RSTI input without colliding (so the 040 reset
@@ -3275,7 +3159,7 @@ instruction will not cause a reset of the processor), but this
 circuit is not yet designed and the final implementation may be
 different.
 
-2 An external bus arbiter circuit will be necessary when using a
+(2) An external bus arbiter circuit will be necessary when using a
 68040. The processor BR, BG, and BB will connect to the arbiter
 circuit as will the FBUS signals BR, BG, and BA. The 68030 BR,
 BG, and BGACK will connect directly to the FBUS BR, BG, and BA
@@ -3283,178 +3167,75 @@ respectively. Attempts will be made to maintain consistent timing
 for bus arbitration with either processor.
 
 68030 signals not supported:
-HALT
-DBEN
-CDIS
-MMUDIS
-REFILL
-STATUS
-DSACK0
-DSACK1
+
+- HALT
+- DBEN
+- CDIS
+- MMUDIS
+- REFILL
+- STATUS
+- DSACK0
+- DSACK1
 
 68040 signals not supported:
-TLN0-TLN1
-UPA0-UPA1
-LOCKE 1
-DLE
-SC0-SC1
-MI
-CDIS
-MDIS
-PST0-PST3
-TCK,TMS
-TDI,TDO,TRST
+
+- TLN0-TLN1
+- UPA0-UPA1
+- LOCKE (1)
+- DLE
+- SC0-SC1
+- MI
+- CDIS
+- MDIS
+- PST0-PST3
+- TCK,TMS
+- TDI,TDO,TRST
 
 
-    Unsupported outputs are not connected. Unsupported inputs
+Unsupported outputs are not connected. Unsupported inputs
 are tied to an inactive level.
 
-1 LOCKE may be used by the external arbiter circuit but is not
+(1) LOCKE may be used by the external arbiter circuit but is not
 defined for the FBUS.
 
-8.2.2  FBUS signal definition
+### 8.2.2  FBUS signal definition
 
+#### Table 8.2 (FBUS Signal Definition)
 
+Signal | Direction (from master) | Function
+-------|-------------------------|---------
+A0-A31 | O                       | Address bus
+D0-D31 | IO                      | Data bus
+TT0-TT1| O                       | Transfer type (1)
+TM0-TM2| O                       | Transfer modifier (1)
+SIZ0-SIZ1| O                     | Transfer size (1)
+LOCK   | O                       | Bus cycle lock (1)
+AV     | I                       | Auto vector request (1), (3)
+TA0-TA1| I                       | Transfer acknowledge (1), (3)
+TE     | I                       | Transfer error (1), (3)
+R/W    | O                       | Read / write
+CO     | O                       | External cache inhibit (2)
+CI     | I                       | Cache inhibit (2), (3)
+ST0-ST1| O                       | Transfer strobes (1)
+IO-I2  | --                      | Interrupt level (2)
+IP     | I                       | Interrupt pending (2)
+CLK    | I                       | Bus clock
+RES    | IO                      | System reset (3)
+BR     | O                       | Bus request (3)
+BG     | I                       | Bus grant (4)
+BA     | O                       | Bus acknowledge (3)
+BMODE  | O                       | Bus mode select (5)
+WID0-WID1| O                     | Wide mode select (3), (6)
+WEN    | I                       | Wide mode enable (6)
+SIZ2   | O                       | Transfer size (wide mode only)
 
-
-FBUS Signal Definition
-
-
-Signal
-Direction
-(from master)
-Function
-
-
-A0-A31
-O
-Address bus
-
-
-D0-D31
-IO
-Data bus
-
-
-TT0-TT1
-O
-Transfer type 1
-
-
-TM0-TM2
-O
-Transfer modifier 1
-
-
-SIZ0-SIZ1
-O
-Transfer size 1
-
-
-LOCK
-O
-Bus cycle lock 1
-
-
-AV
-I
-Auto vector request 1,3
-
-
-TA0-TA1
-I
-Transfer acknowledge 1,3
-
-
-TE
-I
-Transfer error 1,3
-
-
-R/W
-O
-Read / write
-
-
-CO
-O
-External cache inhibit 2
-
-
-CI
-I
-Cache inhibit 2,3
-
-
-ST0-ST1
-O
-Transfer strobes 1
-
-
-IO-I2
---
-Interrupt level 2
-
-
-IP
-I
-Interrupt pending 2
-
-
-CLK
-I
-Bus clock
-
-
-RES
-IO
-System reset 3
-
-
-BR
-O
-Bus request 3
-
-
-BG
-I
-Bus grant 4
-
-
-BA
-O
-Bus acknowledge 3
-
-
-BMODE
-O
-Bus mode select 5
-
-
-WID0-WID1
-O
-Wide mode select 3,6
-
-
-WEN
-I
-Wide mode enable 6
-
-
-SIZ2
-O
-Transfer size (wide mode only)
-
-
-                                 Table 8.2
-
-1 Signal or signal groups function or timing is different in 030
+(1) Signal or signal groups function or timing is different in 030
 bus mode and 040 bus mode.
 
-2 These signals have meaning to the CPU. They will probably be
+(2) These signals have meaning to the CPU. They will probably be
 ignored by most masters. CO and IP are always driven by the CPU.
 
-3 Indicates wire-or'd signals. Any master driving these signals
+(3) Indicates wire-or'd signals. Any master driving these signals
 must only drive them low, except AV, TA0-TA1, TE, CI, BA, and
 WID0-WID1 should be actively negated before release. Normally RES
 is an input to devices on the bus. Any master may drive RES low
@@ -3463,31 +3244,30 @@ ownership to the processor so an alternate master which drives
 RES low must release the bus and arbitrate after RES returns
 high.
 
-4 The BG signal is an output from the arbiter, the 68030 BG
+(4) The BG signal is an output from the arbiter, the 68030 BG
 output or the external arbiter with a 68040. It is an input to
 the first master in the BG daisy chain.
 
-5 The BMODE signal should only change when bus ownership is
+(5) The BMODE signal should only change when bus ownership is
 transferred. The timing for BMODE is the same as BA and like BA,
 BMODE is a wire-or'd signal and should only be driven low. 030
 mode bus masters need not drive BMODE since a pull-up will insure
 it is high. Slave ports must monitor BMODE to determine how they
 respond.
 
-6 Wide mode is provided to allow devices to connect to the 64 bit
+(6) Wide mode is provided to allow devices to connect to the 64 bit
 video memory data bus instead of the FBUS 32 bit data bus. These
 two busses are connected via the funnel logic which is controlled
 by the MCU. A separate section of this specification provides a
 complete description of wide mode operation.
 
+## 8.3 FBUS 040 Mode
 
-8.3 FBUS 040 Mode
+The BMODE signal is LOW for 040 mode.
 
-    The BMODE signal is LOW for 040 mode.
+### 8.3.1  General Description
 
-8.3.1  General Description
-
-    Ports should be designed to work properly with 33mhz 68040
+Ports should be designed to work properly with 33mhz 68040
 timing to support FBUS mode 0. Refer to the 68040 users manual
 for AC timing specifications. Designers of ports supporting line
 bursts should note that ports must ignore A0 and A1 and
@@ -3502,7 +3282,7 @@ alternate function code cycles. Only ports connecting to the 64
 bit memory data bus and capable of 64 bit data transfers may
 respond when WID1 is low.
 
-    Masters should meet the AC timing specification for the
+Masters should meet the AC timing specification for the
 32mhz 68040. Masters which do not have internal caches should
 ignore CI and not drive CO or drive it high. Masters may not use
 the 040 alternate function code cycle. Masters which never do
@@ -3513,268 +3293,69 @@ Masters which keep the bus for long times should give up the bus
 as quickly as possible when another needs it. In NO case may a
 master keep the bus for more than 256 contiguous clock cycles.
 
-8.3.2  040 Mode Signal Definitions
+### 8.3.2  040 Mode Signal Definitions
 
+#### Table 8.3 (040 Mode Transfer Modifiers)
 
+TM2 | TM1 | TM0 | Normal and MOVE16 accesses only (1)
+----|-----|-----|------------------------------------
+0   | 0   | 0   | Data cache push access
+0   | 0   | 1   | User data access
+0   | 1   | 0   | User code access
+0   | 1   | 1   | MMU table search data access
+1   | 0   | 0   | MMU table search code access
+1   | 0   | 1   | Supervisor data access
+1   | 1   | 0   | Supervisor code access
+1   | 1   | 1   | Reserved
 
-
-040 Mode Transfer Modifiers
-
-
-TM2
-TM1
-TM0
-Normal and MOVE16 accesses only 1
-
-
-0
-0
-0
-Data cache push access
-
-
-0
-0
-1
-User data access
-
-
-0
-1
-0
-User code access
-
-
-0
-1
-1
-MMU table search data access
-
-
-1
-0
-0
-MMU table search code access
-
-
-1
-0
-1
-Supervisor data access
-
-
-1
-1
-0
-Supervisor code access
-
-
-1
-1
-1
-Reserved
-
-
-                                 Table 8.3
-
-1 TM0-TM2 are connected directly to the 68040 TM0-TM2 lines.
+(1) TM0-TM2 are connected directly to the 68040 TM0-TM2 lines.
 These lines carry the interrupt level during acknowledge cycles
 and the alternate access function code during alternate logical
 function cycles. See the 68040 user's manual for details of the
 TMx line usage.
 
+#### Table 8.4 (040 Mode Transfer Type)
 
+TT1 | TT0 | .
+----|-----|----
+0   | 0   | Normal access
+0   | 1   | MOVE16 access
+1   | 0   | Alternate logical function code access
+1   | 1   | Acknowledge access
 
+TT0-TT1 connect directly to the 040 TT0-TT1.
 
-040 Mode Transfer Type
+#### Table 8.5 (040 Mode Size Encoding)
 
+SIZ1 | SIZ0 | .
+-----|------|---
+0    | 0    | Longword
+0    | 1    | Byte
+1    | 0    | Word
+1    | 1    | Line (16 bytes)
 
-TT1
-TT0
+SIZ0-SIZ1 connect directly to the 040 SIZ0-SIZ1.
 
+#### Table 8.6 (040 Mode Data Bus Active Sections)
 
+Xfer size | SIZ1 | SIZ0 | A1 | A0 | D31:D24 | D23:D16 | D15:D08 | D07:D00
+----------|------|------|----|----|---------|---------|---------|------
+Byte      | 0    | 1    | 0  | 0  | A       |         |         |
+Byte      | 0    | 1    | 0  | 1  |         | A       |         |
+Byte      | 0    | 1    | 1  | 0  |         |         | A       |
+Byte      | 0    | 1    | 1  | 1  |         |         |         | A
+Word      | 1    | 0    | 0  | 0  | A       | A       |         |
+Word      | 1    | 0    | 1  | 0  |         |         | A       | A
+Line      | 1    | 1    | X  | X  | A       | A       | A       | A
+Long      | 0    | 0    | X  | X  | A       | A       | A       | A
 
-0
-0
-Normal access
+## 8.4 FBUS 030 mode
 
+The BMODE signal is HIGH for 030 mode.
 
-0
-1
-MOVE16 access
+### 8.4.1  030 Mode General Description
 
-
-1
-0
-Alternate logical function
-code access
-
-
-1
-1
-Acknowledge access
-
-
-                                 Table 8.4
-
-    TT0-TT1 connect directly to the 040 TT0-TT1.
-
-
-
-
-040 Mode Size Encoding
-
-
-SIZ1
-SIZ0
-
-
-
-0
-0
-Longword
-
-
-0
-1
-Byte
-
-
-1
-0
-Word
-
-
-1
-1
-Line (16 bytes)
-
-
-                                 Table 8.5
-
-    SIZ0-SIZ1 connect directly to the 040 SIZ0-SIZ1.
-
-
-
-
-040 Mode Data Bus Active Sections
-
-
-Xfer
-size
-SIZ
-1
-SIZ
-0
-A1
-A0
-D31:
-D24
-D23:
-D16
-D15:
-D08
-D07:
-D00
-
-
-Byte
-0
-1
-0
-0
-A
-
-
-
-
-
-Byte
-0
-1
-0
-1
-
-A
-
-
-
-
-Byte
-0
-1
-1
-0
-
-
-A
-
-
-
-Byte
-0
-1
-1
-1
-
-
-
-A
-
-
-Word
-1
-0
-0
-0
-A
-A
-
-
-
-
-Word
-1
-0
-1
-0
-
-
-A
-A
-
-
-Line
-1
-1
-X
-X
-A
-A
-A
-A
-
-
-Long
-0
-0
-X
-X
-A
-A
-A
-A
-
-
-                                 Table 8.6
-
-8.4 FBUS 030 mode
-
-    The BMODE signal is HIGH for 030 mode.
-
-8.4.1  030 Mode General Description
-
-    Ports should be designed to work properly with 32mhz 68030
+Ports should be designed to work properly with 32mhz 68030
 timing to support FBUS mode 1. Refer to the 68030 users manual
 for AC timing specifications. Designers of ports supporting line
 bursts should note that ports must ignore A0 and A1 and
@@ -3788,7 +3369,7 @@ cycles and do not supply a vector should drive AV. Only ports
 connecting to the 64 bit memory data bus and capable of 64 bit
 data transfers may respond when WID1 is low.
 
-    Masters should meet the AC timing specification for the
+Masters should meet the AC timing specification for the
 32mhz 68030. Masters which do not have internal caches should
 ignore CI and not drive CO or drive it high. Masters which never
 do interrupt acknowledge cycles may ignore AV. Masters should not
@@ -3798,340 +3379,70 @@ Masters which keep the bus for long times should give up the bus
 as quickly as possible when another needs it. In NO case may a
 master keep the bus for more than 256 contiguous clock cycles.
 
-8.4.2  030 Mode Signal Definition
+### 8.4.2  030 Mode Signal Definition
 
+#### Table 8.7 (030 Mode Transfer Modifiers)
 
+TM2 | TM1 | TM0 | .
+----|-----|-----|----
+0   | 0   | 0   | Reserved
+0   | 0   | 1   | User data access
+0   | 1   | 0   | User code access
+0   | 1   | 1   | Reserved
+1   | 0   | 0   | Reserved
+1   | 0   | 1   | Supervisor data access
+1   | 1   | 0   | Supervisor code access
+1   | 1   | 1   | CPU space access (1)
 
-
-030 Mode Transfer Modifiers
-
-
-TM2
-TM1
-TM0
-
-
-
-0
-0
-0
-Reserved
-
-
-0
-0
-1
-User data access
-
-
-0
-1
-0
-User code access
-
-
-0
-1
-1
-Reserved
-
-
-1
-0
-0
-Reserved
-
-
-1
-0
-1
-Supervisor data access
-
-
-1
-1
-0
-Supervisor code access
-
-
-1
-1
-1
-CPU space access 1
-
-
-                                 Table 8.7
-
-1 TM0-TM2 are connected directly to the 68030 FC0-FC2 lines. Note
+(1) TM0-TM2 are connected directly to the 68030 FC0-FC2 lines. Note
 that interrupt acknowledge is a CPU space cycle and the slave
 must also decode A1-A3 and A16-A19. See the 68030 user's manual
 for details of the FCx line usage.
 
-
-
-
-030 Mode Transfer Type
-
-
-TT1
-TT0
-
-
-
-1
-0
-Burst requested cycle
-
-
-1
-1
-Normal cycle
-
-
-                                 Table 8.8
-
-    TT0 connects to the 030 CBREQ and TT1 is driven high.
-
-
-
-
-030 Mode Size Encoding
-
-
-SIZ1
-SIZ0
-
-
-
-0
-0
-Longword
-
-
-0
-1
-Byte
-
-
-1
-0
-Word
-
-
-1
-1
-Three byte
-
-
-                                 Table 8.9
-
-    SIZ0-SIZ1 connect directly to the 030 SIZ0-SIZ1.
-
-
-
-
-030 Mode Data Bus Active Sections
-
-
-Xfer
-size
-SIZ
-1
-SIZ
-0
-A1
-A0
-D31:
-D24
-D23:
-D16
-D15:
-D08
-D07:
-D00
-
-
-Byte
-0
-1
-0
-0
-A
-
-
-
-
-
-Byte
-0
-1
-0
-1
-
-A
-
-
-
-
-Byte
-0
-1
-1
-0
-
-
-A
-
-
-
-Byte
-0
-1
-1
-1
-
-
-
-A
-
-
-Word
-1
-0
-0
-0
-A
-A
-
-
-
-
-Word
-1
-0
-0
-1
-
-A
-A
-
-
-
-Word
-1
-0
-1
-0
-
-
-A
-A
-
-
-Word
-1
-0
-1
-1
-
-
-
-A
-
-
-3-byte
-1
-1
-0
-0
-A
-A
-A
-
-
-
-3-byte
-1
-1
-0
-1
-
-A
-A
-A
-
-
-3-byte
-1
-1
-1
-0
-
-
-A
-A
-
-
-3-byte
-1
-1
-1
-1
-
-
-
-A
-
-
-Long
-0
-0
-0
-0
-A
-A
-A
-A
-
-
-Long
-0
-0
-0
-1
-
-A
-A
-A
-
-
-Long
-0
-0
-1
-0
-
-
-A
-A
-
-
-Long
-0
-0
-1
-1
-
-
-
-A
-
-
-                                Table 8.10
-
-8.5 BUS ARBITRATION
-
-    The 68030 internal bus arbiter will perform arbitration for
+#### Table 8.8 (030 Mode Transfer Type)
+
+TT1 | TT0 | .
+----|-----|---
+1   | 0   | Burst requested cycle
+1   | 1   | Normal cycle
+
+TT0 connects to the 030 CBREQ and TT1 is driven high.
+
+#### Table 8.9 (030 Mode Size Encoding)
+
+SIZ1 | SIZ0 | .
+-----|------|---
+0    | 0    | Longword
+0    | 1    | Byte
+1    | 0    | Word
+1    | 1    | Three byte
+
+SIZ0-SIZ1 connect directly to the 030 SIZ0-SIZ1.
+
+#### Table 8.10 (030 Mode Data Bus Active Sections)
+
+Xfer size | SIZ1 | SIZ0 | A1 | A0 | D31:D24 | D23:D16 | D15:D08 | D07:D00
+----------|------|------|----|----|---------|---------|---------|-----
+Byte      | 0    | 1    | 0  | 0  | A       |         |         |
+Byte      | 0    | 1    | 0  | 1  |         | A       |         |
+Byte      | 0    | 1    | 1  | 0  |         |         | A       |
+Byte      | 0    | 1    | 1  | 1  |         |         |         | A
+Word      | 1    | 0    | 0  | 0  | A       | A       |         |
+Word      | 1    | 0    | 0  | 1  |         | A       | A       |
+Word      | 1    | 0    | 1  | 0  |         |         | A       | A
+Word      | 1    | 0    | 1  | 1  |         |         |         | A
+3-byte    | 1    | 1    | 0  | 0  | A       | A       | A       | 
+3-byte    | 1    | 1    | 0  | 1  |         | A       | A       | A
+3-byte    | 1    | 1    | 1  | 0  |         |         | A       | A
+3-byte    | 1    | 1    | 1  | 1  |         |         |         | A
+Long      | 0    | 0    | 0  | 0  | A       | A       | A       | A
+Long      | 0    | 0    | 0  | 1  |         | A       | A       | A
+Long      | 0    | 0    | 1  | 0  |         |         | A       | A
+Long      | 0    | 0    | 1  | 1  |         |         |         | A
+
+## 8.5 BUS ARBITRATION
+
+The 68030 internal bus arbiter will perform arbitration for
 the FBUS when it is the system CPU. When a 68040 is used, an
 external arbiter circuit which conforms to similar timing will
 perform the bus arbitration. FBUS master designs should arbitrate
@@ -4139,7 +3450,8 @@ correctly with a 32mhz 68030. Note that BMODE may only change
 states at the time BA changes. 040 masters may drive BMODE low
 using the same enable that is used to drive the BA signal low.
 030 masters need not drive BMODE at all.
-    All masters should have a BG input and output so that a
+
+All masters should have a BG input and output so that a
 daisy chain may be implemented. A master which receives a low on
 its BG input should drive its BG output low as quickly as
 possible if it is not requesting the bus. A master requesting the
@@ -4156,41 +3468,42 @@ output will not be connected.
 
 Notes on bus arbitration:
 
-    To request the bus, a master drives BR low. A master may
-    drive BR low anytime except when it is driving its BG output
-    low. If a master is driving its BG output low and it decides
-    to request the bus, it must wait until it drives its BG
-    output high (as a result of its BG input going high) before
-    it drives BR low.
+To request the bus, a master drives BR low. A master may
+drive BR low anytime except when it is driving its BG output
+low. If a master is driving its BG output low and it decides
+to request the bus, it must wait until it drives its BG
+output high (as a result of its BG input going high) before
+it drives BR low.
 
-    If a masters BG input goes low and it is not driving BR low,
-    then the master should drive its BG output low with a
-    minimum of delay. If a masters BG input goes low and it is
-    driving BR low, then it must maintain its BG output high.
+If a masters BG input goes low and it is not driving BR low,
+then the master should drive its BG output low with a
+minimum of delay. If a masters BG input goes low and it is
+driving BR low, then it must maintain its BG output high.
 
-    A master may drive BA low only when; it is driving BR low
-    AND its BG input is low AND its BG output is high AND ST0
-    and ST1 are high AND TA0 is high AND BA is high AND a rising
-    edge occurs on CLK.
+A master may drive BA low only when; it is driving BR low
+AND its BG input is low AND its BG output is high AND ST0
+and ST1 are high AND TA0 is high AND BA is high AND a rising
+edge occurs on CLK.
 
-    Once a master has driven BA low, it should release BR.
+Once a master has driven BA low, it should release BR.
 
-    Once a master has driven BA low, it may drive appropriate
-    bus lines to perform defined bus cycles.
+Once a master has driven BA low, it may drive appropriate
+bus lines to perform defined bus cycles.
 
-    Upon completion of the last bus cycle a master wishes to
-    perform, the master should release the bus by tristating its
-    bus drivers and releasing BA. Note that bus control signals
-    ST0-ST1 and TA0-TA1 should not be tristated until they have
-    been actively negated. BA should also be actively negated.
+Upon completion of the last bus cycle a master wishes to
+perform, the master should release the bus by tristating its
+bus drivers and releasing BA. Note that bus control signals
+ST0-ST1 and TA0-TA1 should not be tristated until they have
+been actively negated. BA should also be actively negated.
 
-    Once a master has released BA and if its BG input is low, it
-    should drive its BG output low.
+Once a master has released BA and if its BG input is low, it
+should drive its BG output low.
 
+*(perhaps missing Figure 8.1 here?)*
 
-8.6 WIDE MODE
+## 8.6 WIDE MODE
 
-    Four control signals (WID0, WID1, WEN, and SIZ2) have been
+Four control signals (WID0, WID1, WEN, and SIZ2) have been
 added to the FBUS to allow devices to connect directly to the 64
 bit video memory data bus. Thus connected, masters which exchange
 large amounts of data with wide slave ports (video memory is the
@@ -4201,730 +3514,85 @@ wide masters to access the 32 bit data bus via the funnel logic.
 WID0 and WID1 are control signals from the master which indicate
 the type of transfer requested.
 
+#### Table 8.11 (Wide Mode Signal Definition)
 
+WID1 | WID0 | Type Transfer
+-----|------|--------------
+1    | 1    | Normal transfer
+0    | 1    | Direct access of video memory data bus
+1    | 0    | Access of FBUS via funnel logic
+0    | 0    | Access of wide device via funnel logic
 
-
-Wide Mode Signal Definition
-
-
-WID1
-WID0
-Type Transfer
-
-
-1
-1
-Normal transfer
-
-
-0
-1
-Direct access of video memory data bus
-
-
-1
-0
-Access of FBUS via funnel logic
-
-
-0
-0
-Access of wide device via funnel logic
-
-
-                                Table 8.11
-
-    WID0-WID1 are normally kept high by pullups so standard FBUS
+WID0-WID1 are normally kept high by pullups so standard FBUS
 masters need not drive these signals. A wide master can access
 the video memory using 64 bit (double longword) transfers by
 driving WID1 low. When WID1 is driven low the SIZ2 signal is used
 in conjunction with the SIZ0, SIZ1, A0, A1, and A2 signals to
 select the byte(s) of the 64 bit data.
 
-
-
-Wide Mode Data Bus Active Sections (030 mode)
-
-
-SIZ
-210
-A
-210
-D63:
-D56
-D55:
-D48
-D47:
-D40
-D39
-:32
-D31:
-D24
-D23:
-D16
-D15:
-D08
-D07:
-D00
-
-
-000
-000
-A
-A
-A
-A
-A
-A
-A
-A
-
-
-001
-000
-A
-
-
-
-
-
-
-
-
-
-001
-001
-
-A
-
-
-
-
-
-
-
-
-001
-010
-
-
-A
-
-
-
-
-
-
-
-001
-011
-
-
-
-A
-
-
-
-
-
-
-001
-100
-
-
-
-
-A
-
-
-
-
-
-001
-101
-
-
-
-
-
-A
-
-
-
-
-001
-110
-
-
-
-
-
-
-A
-
-
-
-001
-111
-
-
-
-
-
-
-
-A
-
-
-010
-000
-A
-A
-
-
-
-
-
-
-
-
-010
-001
-
-A
-A
-
-
-
-
-
-
-
-010
-010
-
-
-A
-A
-
-
-
-
-
-
-010
-011
-
-
-
-A
-A
-
-
-
-
-
-010
-100
-
-
-
-
-A
-A
-
-
-
-
-010
-101
-
-
-
-
-
-A
-A
-
-
-
-010
-110
-
-
-
-
-
-
-A
-A
-
-
-011
-000
-A
-A
-A
-
-
-
-
-
-
-
-011
-001
-
-A
-A
-A
-
-
-
-
-
-
-011
-010
-
-
-A
-A
-A
-
-
-
-
-
-011
-011
-
-
-
-A
-A
-A
-
-
-
-
-011
-100
-
-
-
-
-A
-A
-A
-
-
-
-011
-101
-
-
-
-
-
-A
-A
-A
-
-
-100
-000
-A
-A
-A
-A
-
-
-
-
-
-
-100
-001
-
-A
-A
-A
-A
-
-
-
-
-
-100
-010
-
-
-A
-A
-A
-A
-
-
-
-
-100
-011
-
-
-
-A
-A
-A
-A
-
-
-
-100
-100
-
-
-
-
-A
-A
-A
-A
-
-
-101
-000
-A
-A
-A
-A
-A
-
-
-
-
-
-101
-001
-
-A
-A
-A
-A
-A
-
-
-
-
-101
-010
-
-
-A
-A
-A
-A
-A
-
-
-
-101
-011
-
-
-
-A
-A
-A
-A
-A
-
-
-110
-000
-A
-A
-A
-A
-A
-A
-
-
-
-
-110
-001
-
-A
-A
-A
-A
-A
-A
-
-
-
-110
-010
-
-
-A
-A
-A
-A
-A
-A
-
-
-111
-000
-A
-A
-A
-A
-A
-A
-A
-
-
-
-111
-001
-
-A
-A
-A
-A
-A
-A
-A
-
-
-                                Table 8.12
-
-
-
-
-Wide Mode Data Bus Active Sections (040 mode)
-
-
-SIZ
-210
-A
-210
-D63:
-D56
-D55:
-D48
-D47:
-D40
-D39
-:32
-D31:
-D24
-D23:
-D16
-D15:
-D08
-D07:
-D00
-
-
-000
-XXX
-A
-A
-A
-A
-A
-A
-A
-A
-
-
-001
-000
-A
-
-
-
-
-
-
-
-
-
-001
-001
-
-A
-
-
-
-
-
-
-
-
-001
-010
-
-
-A
-
-
-
-
-
-
-
-001
-011
-
-
-
-A
-
-
-
-
-
-
-001
-100
-
-
-
-
-A
-
-
-
-
-
-001
-101
-
-
-
-
-
-A
-
-
-
-
-001
-110
-
-
-
-
-
-
-A
-
-
-
-001
-111
-
-
-
-
-
-
-
-A
-
-
-010
-000
-A
-A
-
-
-
-
-
-
-
-
-010
-010
-
-
-A
-A
-
-
-
-
-
-
-010
-100
-
-
-
-
-A
-A
-
-
-
-
-010
-110
-
-
-
-
-
-
-A
-A
-
-
-100
-000
-A
-A
-A
-A
-
-
-
-
-
-
-100
-100
-
-
-
-
-A
-A
-A
-A
-
-
-X11
-XXX
-A
-A
-A
-A
-A
-A
-A
-A
-
-
-                                Table 8.13
-
-    A wide master which does not connect to the 32 bit data bus
+#### Table 8.12 (Wide Mode Data Bus Active Sections (030 mode))
+
+SIZ210 | A210 | D63:D56 | D55:D48 | D47:D40 | D39:32 | D31:D24 | D23:D16 | D15:D08 | D07:D00
+-------|------|---------|---------|---------|--------|---------|---------|---------|--------
+000    | 000  | A       | A       | A       | A      | A       | A       | A       | A
+001    | 000  | A       |         |         |        |         |         |         |
+001    | 001  |         | A       |         |        |         |         |         |
+001    | 010  |         |         | A       |        |         |         |         |
+001    | 011  |         |         |         | A      |         |         |         |
+001    | 100  |         |         |         |        | A       |         |         |
+001    | 101  |         |         |         |        |         | A       |         |
+001    | 110  |         |         |         |        |         |         | A       |
+001    | 111  |         |         |         |        |         |         |         | A
+010    | 000  | A       | A       |         |        |         |         |         |
+010    | 001  |         | A       | A       |        |         |         |         |
+010    | 010  |         |         | A       | A      |         |         |         |
+010    | 011  |         |         |         | A      | A       |         |         |
+010    | 100  |         |         |         |        | A       | A       |         |
+010    | 101  |         |         |         |        |         | A       | A       |
+010    | 110  |         |         |         |        |         |         | A       | A
+011    | 000  | A       | A       | A       |        |         |         |         |
+011    | 001  |         | A       | A       | A      |         |         |         |
+011    | 010  |         |         | A       | A      | A       |         |         |
+011    | 011  |         |         |         | A      | A       | A       |         |
+011    | 100  |         |         |         |        | A       | A       | A       |
+011    | 101  |         |         |         |        |         | A       | A       | A
+100    | 000  | A       | A       | A       | A      |         |         |         |
+100    | 001  |         | A       | A       | A      | A       |         |         |
+100    | 010  |         |         | A       | A      | A       | A       |         |
+100    | 011  |         |         |         | A      | A       | A       | A       |
+100    | 100  |         |         |         |        | A       | A       | A       | A
+101    | 000  | A       | A       | A       | A      | A       |         |         |
+101    | 001  |         | A       | A       | A      | A       | A       |         |
+101    | 010  |         |         | A       | A      | A       | A       | A       |
+101    | 011  |         |         |         | A      | A       | A       | A       | A
+110    | 000  | A       | A       | A       | A      | A       | A       |         |
+110    | 001  |         | A       | A       | A      | A       | A       | A       |
+110    | 010  |         |         | A       | A      | A       | A       | A       | A
+111    | 000  | A       | A       | A       | A      | A       | A       | A       |
+111    | 001  |         | A       | A       | A      | A       | A       | A       | A
+
+#### Table 8.13 (Wide Mode Data Bus Active Sections (040 mode))
+
+SIZ210 | A210 | D63:D56 | D55:D48 | D47:D40 | D39:32 | D31:D24 | D23:D16 | D15:D08 | D07:D00
+-------|------|---------|---------|---------|--------|---------|---------|---------|--------
+000    | XXX  | A       | A       | A       | A      | A       | A       | A       | A
+001    | 000  | A       |         |         |        |         |         |         |
+001    | 001  |         | A       |         |        |         |         |         |
+001    | 010  |         |         | A       |        |         |         |         |
+001    | 011  |         |         |         | A      |         |         |         |
+001    | 100  |         |         |         |        | A       |         |         |
+001    | 101  |         |         |         |        |         | A       |         |
+001    | 110  |         |         |         |        |         |         | A       |
+001    | 111  |         |         |         |        |         |         |         | A
+010    | 000  | A       | A       |         |        |         |         |         |
+010    | 010  |         |         | A       | A      |         |         |         |
+010    | 100  |         |         |         |        | A       | A       |         |
+010    | 110  |         |         |         |        |         |         | A       | A
+100    | 000  | A       | A       | A       | A      |         |         |         |
+100    | 100  |         |         |         |        | A       | A       | A       | A
+X11    | XXX  | A       | A       | A       | A      | A       | A       | A       | A
+
+A wide master which does not connect to the 32 bit data bus
 may access the FBUS via the funnel logic by driving WID0 low.
 With WID0 driven low, all FBUS signals operate normally and
 devices on the FBUS see no difference to any other cycle. The MCU
@@ -4934,7 +3602,7 @@ operating in this way, the funnel logic will introduce delay in
 the data path. The master must allow for this delay so as not to
 violate FBUS timing and to insure proper operation.
 
-    The WID0 and WID1 low case is provided for wide masters
+The WID0 and WID1 low case is provided for wide masters
 containing registers which must be accessible to other normal
 FBUS masters. When such a wide master does not own the bus but
 detects an access to one of its internal registers, it may drive
@@ -4943,7 +3611,7 @@ funnel logic to couple the data busses. Again the funnel logic
 delay will be present and the wide master responding as a slave
 must compensate. 
 
-    Discussion of wide mode so far has assumed that the video
+Discussion of wide mode so far has assumed that the video
 memory data bus is free when the data transfer begins. Standard
 and wide masters doing transfers which use the video memory data
 bus, such as CPU to memory or wide master to FBUS, arbitrate for
@@ -4963,7 +3631,7 @@ there is an extra clock cycle inserted between the assertion of
 address and the assertion of the strobes ST0 and ST1 for all
 cycles where WID0 or WID1 is driven low.
 
-    Of course a wide master may connect to both the 64 bit video
+Of course a wide master may connect to both the 64 bit video
 memory data bus and the 32 bit FBUS data bus. In that case the
 master may access or be accessed via standard FBUS cycles using
 the 32 bit data bus and only use the 64 bit bus for transfers to
