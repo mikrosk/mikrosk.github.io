@@ -2881,182 +2881,189 @@ The main system board serves as the VMEbus system controller
 * VMEbus arbiter
 * VMEbus utility bus driver
                                     
-7.2 VME Bus Master Address Partitioning
+## 7.2 VME Bus Master Address Partitioning
 
-                                       The FBUS accesses the VME bus in all areas of the 4 Gigabyte
-       address space, excluding those which are dedicated to local
-      resources.  The VME bus portion of the address map is further
-     subdivided to support the 32, 24, and 16 bit addressing modes.
-    The beginning of the VME bus A32 space is configured adjacent to
-      the end of fast memory in order to allow contiguous expansion
-                                 memory.
+The FBUS accesses the VME bus in all areas of the 4 Gigabyte
+address space, excluding those which are dedicated to local
+resources.  The VME bus portion of the address map is further
+subdivided to support the 32, 24, and 16 bit addressing modes.
+The beginning of the VME bus A32 space is configured adjacent to
+the end of fast memory in order to allow contiguous expansion
+memory.
                                     
-    A portion of the VME bus space is dedicated to D16
-    transfers.  VME bus slaves which are limited to D16 transfers can
-    be accessed in this area.  When the VMEC receives a three or four
-      byte transfer request from an FBUS master to a slave in this
-         address space, the request will be divided into two D16
-    transfers, with data routed to the correct byte lanes.  A single
-    acknowledgement will be sent to the FBUS master once the process
-                              is completed.
+A portion of the VME bus space is dedicated to D16
+transfers.  VME bus slaves which are limited to D16 transfers can
+be accessed in this area.  When the VMEC receives a three or four
+byte transfer request from an FBUS master to a slave in this
+address space, the request will be divided into two D16
+transfers, with data routed to the correct byte lanes.  A single
+acknowledgement will be sent to the FBUS master once the process
+is completed.
                                     
-7.3 VME Bus Slave Address Partitioning
+## 7.3 VME Bus Slave Address Partitioning
 
-                                       The VME bus Slave Interface provides access to FBUS system
-      resources by other masters on the VME bus. Slave accesses for
-        each address space may be inhibited via the VME interface
-    configuration register (xxFF8080). VME bus masters may access all
-      FBUS resources when operating in the A32 region. The starting
-     address for VME bus A32 slave accesses is programmable via the
-      VME slave starting address register (xxFF8098). The starting
-    address register provides an offset which is subtracted from the
-      VME bus address in order to determine the FBUS location to be
-     accessed.  VME bus masters may access FBUS Fast Memory only in
-    A32 space, due to the limitation of the 16 Megabyte range of the
-       A24 space. VME bus masters may access a subset of the FBUS
-      resources when operating in the A24 region. Only the last 16
-      Megabytes, also known as the ST image, may be accessed. This
-       excludes fast memory from being accessed by an A24 VME bus
-     master.  The VME bus starting address for access to the FBUS is
-     fixed at 000000 (hex), but may be inhibited to accommodate the
-       need to use other A24 slaves on the VME bus, while allowing
-                  access to the FBUS by an A32 master.
+The VME bus Slave Interface provides access to FBUS system
+resources by other masters on the VME bus. Slave accesses for
+each address space may be inhibited via the VME interface
+configuration register (xxFF8080). VME bus masters may access all
+FBUS resources when operating in the A32 region. The starting
+address for VME bus A32 slave accesses is programmable via the
+VME slave starting address register (xxFF8098). The starting
+address register provides an offset which is subtracted from the
+VME bus address in order to determine the FBUS location to be
+accessed.  VME bus masters may access FBUS Fast Memory only in
+A32 space, due to the limitation of the 16 Megabyte range of the
+A24 space. VME bus masters may access a subset of the FBUS
+resources when operating in the A24 region. Only the last 16
+Megabytes, also known as the ST image, may be accessed. This
+excludes fast memory from being accessed by an A24 VME bus
+master.  The VME bus starting address for access to the FBUS is
+fixed at 000000 (hex), but may be inhibited to accommodate the
+need to use other A24 slaves on the VME bus, while allowing
+access to the FBUS by an A32 master.
                                     
-7.4 VME Interrupter
+## 7.4 VME Interrupter
 
-                                       A FBUS master can write to bit 0 of the I/O address
-    (0x00FF8E06) to generate a level 3 interrupt on the VMEbus. When
-    set to 1, it generates a VME bus level 3 interrupt. When cleared,
-       the interrupt request is taken away. If a VME bus interrupt
-     handler acknowledges this interrupt, the VMEC responds with the
-        contents of the VME interrupt vector register (xxFF8097).
+A FBUS master can write to bit 0 of the I/O address
+(0x00FF8E06) to generate a level 3 interrupt on the VMEbus. When
+set to 1, it generates a VME bus level 3 interrupt. When cleared,
+the interrupt request is taken away. If a VME bus interrupt
+handler acknowledges this interrupt, the VMEC responds with the
+contents of the VME interrupt vector register (xxFF8097).
                                     
-    Note that the Falcon level 3 interrupt must be masked off
-        (either by setting the processor's IPL or by masking the
-    interrupt in the Falcon system controller) or the Falcon CPU will
-      be immediately interrupted in which case the local interrupt
-    acknowledge is autovectored and the VME bus does not participate.
+Note that the Falcon level 3 interrupt must be masked off
+(either by setting the processor's IPL or by masking the
+interrupt in the Falcon system controller) or the Falcon CPU will
+be immediately interrupted in which case the local interrupt
+acknowledge is autovectored and the VME bus does not participate.
                                     
-    FBUS interrupt levels 5 and 6 (from the SCC and MFP/DSP
-      respectively) also generate the corresponding VME interrupts.
-    Normaly these interrupts are seviced by the FBUS master. They can
-     however be masked to the FBUS and serviced by a VME bus master.
-      The VMEC will respond to VME interrupt acknowledge cycles for
-    levels 3, 5, or 6 only if the Falcon source for the interrupt is
-    present. Levels 5 and 6 supply the vector received from the FBUS
-    as the status/ID. The VMEC will pass the IACK signal down the VME
-                IACK daisy chain if it does not respond.
+FBUS interrupt levels 5 and 6 (from the SCC and MFP/DSP
+respectively) also generate the corresponding VME interrupts.
+Normaly these interrupts are seviced by the FBUS master. They can
+however be masked to the FBUS and serviced by a VME bus master.
+The VMEC will respond to VME interrupt acknowledge cycles for
+levels 3, 5, or 6 only if the Falcon source for the interrupt is
+present. Levels 5 and 6 supply the vector received from the FBUS
+as the status/ID. The VMEC will pass the IACK signal down the VME
+IACK daisy chain if it does not respond.
                                     
-7.5 VME Interrupt Handler
+## 7.5 VME Interrupt Handler
 
-                                       The VMEC will act as a VME bus interrupt handler.  VME bus
-    interrupt requests are signalled to the local microprocessor (if
-         not masked). When the FBUS master performs an interrupt
-     acknowledge cycle for a VME interrupt, the VMEC generates a VME
-    bus interrupt acknowledge cycle. The status/ID byte from the VME
-                bus is provided to the FBUS as a vector.
+The VMEC will act as a VME bus interrupt handler. VME bus
+interrupt requests are signalled to the local microprocessor (if
+not masked). When the FBUS master performs an interrupt
+acknowledge cycle for a VME interrupt, the VMEC generates a VME
+bus interrupt acknowledge cycle. The status/ID byte from the VME
+bus is provided to the FBUS as a vector.
                                     
-7.6 VME Arbiter
+## 7.6 VME Arbiter
 
-                                       The VMEC implements a single level arbiter on VME level 3.
-      The arbiter can be programmed for release on request (ROR) or
-     release when done via the VME interface configuration register
-                               (xxFF8080).
+The VMEC implements a single level arbiter on VME level 3.
+The arbiter can be programmed for release on request (ROR) or
+release when done via the VME interface configuration register
+(xxFF8080).
                                     
-7.7 VME Utility Functions
+## 7.7 VME Utility Functions
 
-                                       The Falcon VME interface provides the VME utility signals:
-                 SYSCLK, SYSRESET*, SYSFAIL*, and BERR*.
+The Falcon VME interface provides the VME utility signals:
+SYSCLK, SYSRESET*, SYSFAIL*, and BERR*.
                                     
-    SYSRESET* is asserted when the FBUS reset is asserted AND
-    vice versa. SYSFAIL* is asserted via the utility control register
-     (xxFF8083). SYSFAIL* can also cause a level 7 interrupt on the
-        FBUS. The bus timer function can be disabled via the VME
-     interface configuration register. If enabled the timeout period
-                         is approximately 64us.
+SYSRESET* is asserted when the FBUS reset is asserted AND
+vice versa. SYSFAIL* is asserted via the utility control register
+(xxFF8083). SYSFAIL* can also cause a level 7 interrupt on the
+FBUS. The bus timer function can be disabled via the VME
+interface configuration register. If enabled the timeout period
+is approximately 64us.
                                     
-7.8 VME Registers
+## 7.8 VME Registers
 
-                                   Int                   erface Configuration Register
+### Interface Configuration Register
 
-                                       Address = 00FF8080 (or FFFF8080):
+Address = 00FF8080 (or FFFF8080):
                                     
-    D7 - A32 slave interface enable (0=no 1=yes)
-    D6 - A24 slave interface enable (0=no 1=yes)
-    D5 - A32 master interface enable (0=no 1=yes)
-    D4 - A24 master interface enable (0=no 1=yes)
-    D3 - A16 master interface enable (0=no 1=yes)
-    D2 - Bus Requester mode  (0=Release on Request
-    1=Release when Done)
-    D1 - reserved
-    D0 - Cache Inhibit Signal for A32/D32 space (0=yes 1=no)
+D7 - A32 slave interface enable (0=no 1=yes)
+
+D6 - A24 slave interface enable (0=no 1=yes)
+
+D5 - A32 master interface enable (0=no 1=yes)
+
+D4 - A24 master interface enable (0=no 1=yes)
+
+D3 - A16 master interface enable (0=no 1=yes)
+
+D2 - Bus Requester mode  (0=Release on Request 1=Release when Done)
+
+D1 - reserved
+
+D0 - Cache Inhibit Signal for A32/D32 space (0=yes 1=no)
                                     
-                        Utility Control Register
+### Utility Control Register
                                     
-    Address = 00FF8083 (or FFFF8083):
+Address = 00FF8083 (or FFFF8083):
                                     
-    D7 - SYSRESET* pulse width (0=200ms 1=1us)
-    D6-D2 reserved
-    D1 - Bus Timeout enable (0=no 1=yes)
-    D0 - SYSFAIL - (0 = assert)
+D7 - SYSRESET* pulse width (0=200ms 1=1us)
+
+D6-D2 reserved
+
+D1 - Bus Timeout enable (0=no 1=yes)
+
+D0 - SYSFAIL - (0 = assert)
                                     
-                            Interrupt Vector
+### Interrupt Vector
                                     
-    Address = 00FF8097 (or FFFF8097):
+Address = 00FF8097 (or FFFF8097):
                                     
-    This register contains the interrupt vector which is
-      supplied as the VMEbus Status/ID in response to an interrupt
-    acknowledge cycle from a VMEbus master due to a VMEbus interrupt
-     generated from the Falcon system motherboard.  Please note that
-    the interrupt level is encoded onto the lowest three data bits of
-                           the Status/ID byte.
-    The VMEC will determine whether to supply the value of this
-    register or let the interrupting device supply a vector.  This is
-         accomplished by bringing the possible sources of VMEbus
-     interrupts into the VMEC.  Devices which signal an autovectored
-     interrupt to the FBus must use this register when requesting an
-    interrupt to the VMEbus.  Devices which are capable of supplying
-      an interrupt vector will supply the Status/ID to the VMEbus.
+This register contains the interrupt vector which is
+supplied as the VMEbus Status/ID in response to an interrupt
+acknowledge cycle from a VMEbus master due to a VMEbus interrupt
+generated from the Falcon system motherboard.  Please note that
+the interrupt level is encoded onto the lowest three data bits of
+the Status/ID byte.
+
+The VMEC will determine whether to supply the value of this
+register or let the interrupting device supply a vector.  This is
+accomplished by bringing the possible sources of VMEbus
+interrupts into the VMEC.  Devices which signal an autovectored
+interrupt to the FBus must use this register when requesting an
+interrupt to the VMEbus.  Devices which are capable of supplying
+an interrupt vector will supply the Status/ID to the VMEbus.
                                     
-    D7 - Int Vector bit7
+    D7 - Int Vector bit 7
     D6 -   "            6
     D5 -   "            5
     D4 -   "            4
     D3 -   "            3
-    D2 - Int Level bit 2
+    D2 - Int Level bit  2
     D1 -   "            1
     D0 -   "            0
 
-                           Slave Starting Addr           ess Register
+### Slave Starting Address Register
 
-                               Address = 00FF8098 (or FFFF8098):
+Address = 00FF8098 (or FFFF8098):
                                     
-    This register provides the value at which address zero on
-      the FBus appears when it is accessed as an A32 VMEbus slave. 
-    This value is used as an offset to provide the ability to access
-    the entire FBus as a VMEbus slave, since most VMEbus masters also
-     will contain some local resources which start at address zero. 
-     This value is subtracted from the VMEbus address to derive the
-          address which is supplied from the VMEC to the FBus.
+This register provides the value at which address zero on
+the FBus appears when it is accessed as an A32 VMEbus slave. 
+This value is used as an offset to provide the ability to access
+the entire FBus as a VMEbus slave, since most VMEbus masters also
+will contain some local resources which start at address zero. 
+This value is subtracted from the VMEbus address to derive the
+address which is supplied from the VMEC to the FBus.
                                     
-    D7 - VMEbus address31
-    D6 - 30
-    D5 - 29
-    D4 - 28
-    D3 - 27
-    D2 - 26
-    D1 - 25
-    D0 - 24
+    D7 - VMEbus address 31
+    D6 -    "           30
+    D5 -    "           29
+    D4 -    "           28
+    D3 -    "           27
+    D2 -    "           26
+    D1 -    "           25
+    D0 -    "           24
 
-                                
-                                
-                                
-                                Section 8                        System Bus
+# Section 8 System Bus
 
-                                    The following description of the FALCON internal bus (FBUS)
-      assumes an intimate knowledge of both the 68030 and 68040 bus
-    definitions. A thorough study of the Motorola user's manuals for
-     both processors is highly recommended (see reference section).
+The following description of the FALCON internal bus (FBUS)
+assumes an intimate knowledge of both the 68030 and 68040 bus
+definitions. A thorough study of the Motorola user's manuals for
+both processors is highly recommended (see reference section).
                                     
 8.1 FBUS Summary
 
