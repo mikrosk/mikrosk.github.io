@@ -4670,113 +4670,102 @@ interrupt vector.
              VMEbus Masters
     lowest   CPU
 
-
-
-
-Section 12  Revisions
+# Section 12  Revisions
 
 FBUS Version 1.0, October 22, 1990, original
 December 7, 1990, clarifications to bus arbitration, redefinition
 of wide mode.
 
-January 4, 1991, First draft of this document
-April 8, 1991, Second draft
-April 19, 1991 Third Draft
-September 7, 1991 Forth Draft
-December 3, 1991 Fifth Draft
-February 21, 1992 Sixth Draft
+- January 4, 1991, First draft of this document
+- April 8, 1991, Second draft
+- April 19, 1991 Third Draft
+- September 7, 1991 Forth Draft
+- December 3, 1991 Fifth Draft
+- February 21, 1992 Sixth Draft
 -----------------
-April 8, 1992 Prototype A release
-August 26, 1992 Prototype B release
+- April 8, 1992 Prototype A release
+- August 26, 1992 Prototype B release
 
-
-
-Section 13  References
+# Section 13  References
 
 The VMEbus is defined by:
 
-VMEbus International Trade Association (VITA), VMEbus
+- VMEbus International Trade Association (VITA), VMEbus
 Specification Manual, Revision C.1, October, 1985.
-
 
 The Small Computer Systems Interface (SCSI) is defined by:
 
-Adaptive Data Systems, Inc., SCSI Guidebook, Issue Number 2,
+- Adaptive Data Systems, Inc., SCSI Guidebook, Issue Number 2,
 June, 1985.
-
 
 Specific SCSI device implementation details for typical devices
 are available in:
 
-Adaptec Inc., Description of SCSI Command Set for Communications
+- Adaptec Inc., Description of SCSI Command Set for Communications
 Devices, Revision 0.91, 1988.
 
-Archive Corporation, VIPER Product Manual; SCSI Models 2060S and
+- Archive Corporation, VIPER Product Manual; SCSI Models 2060S and
 2150S, Part No. 21391-001, June, 1988.
 
-Maxtor  Corporation, XT-4000S OEM Manual & Product Specification,
+- Maxtor  Corporation, XT-4000S OEM Manual & Product Specification,
 1014995, 1987.
 
-Quantum Corporation, Q200 Series Programmer's Manual, 81-45416,
+- Quantum Corporation, Q200 Series Programmer's Manual, 81-45416,
 Rev. B, 1987.
 
 Details of the major commercially available chips used in the
 FALCON architecture are contained in:
 
-Yamaha Corp., YM3439-F Programmable Sound Generator Data Sheet,
+- Yamaha Corp., YM3439-F Programmable Sound Generator Data Sheet,
 June 1991 (Atari part #C104541-001)
 
-Logic Devices Inc., L5380/L53C80 CMOS SCSI Bus Controllers,
+- Logic Devices Inc., L5380/L53C80 CMOS SCSI Bus Controllers,
 September 1988
 
-Motorola, Inc., MC68030 Enhanced 32-Bit Microprocessor User's
+- Motorola, Inc., MC68030 Enhanced 32-Bit Microprocessor User's
 Manual, 3rd. Edition, 1990.
 
-Motorola, Inc., MC68881/MC68882 Floating-Point Coprocessor User's
+- Motorola, Inc., MC68881/MC68882 Floating-Point Coprocessor User's
 Manual, First Edition, 1987.
 
-Motorola, Inc., MC68901 Multi-Function Peripheral, January, 1984.
+- Motorola, Inc., MC68901 Multi-Function Peripheral, January, 1984.
 
-Motorola, Inc., MC68040 32-Bit Microprocessor User's Manual, 1st.
+- Motorola, Inc., MC68040 32-Bit Microprocessor User's Manual, 1st.
 Edition, 1989.
 
-Dallas Semiconductor, DS1287 Real-Time Clock Plus RAM (RTC), June
-1990.
+- Dallas Semiconductor, DS1287 Real-Time Clock Plus RAM (RTC), June 1990.
 
-Motorola, Inc., MC6850 Asynchronous Communications Interface
+- Motorola, Inc., MC6850 Asynchronous Communications Interface
 Adapter, 19??.
 
-Western Digital Corp., WD1772-02 Floppy Disk Formatter/Controller
+- Western Digital Corp., WD1772-02 Floppy Disk Formatter/Controller
 
-Zilog, Inc., Z80C30 CMOS Z-BUS SCC / Z85C30 CMOS SCC Serial
+- Zilog, Inc., Z80C30 CMOS Z-BUS SCC / Z85C30 CMOS SCC Serial
 Communications Controller - Preliminary Product Specification,
 October, 1987.
 
-Zilog, Inc., Z80C30 CMOS Z-BUS SCC / Z85C30 CMOS SCC Serial
+- Zilog, Inc., Z80C30 CMOS Z-BUS SCC / Z85C30 CMOS SCC Serial
 Communications Controller - Technical Manual, September, 1986.
 
-Motorola, Inc., DSP56000/DSP56001 Digital Signal Processor User's
+- Motorola, Inc., DSP56000/DSP56001 Digital Signal Processor User's
 Manual (DSP56000UM/AD Rev2)
 
-Motorola, Inc., DSP56001/D Digital Signal Processor Data Sheet
+- Motorola, Inc., DSP56001/D Digital Signal Processor Data Sheet
 Rev2
 
 The ST compatible hardware interfaces are also described in:
 
-Atari Corporation, Engineering Hardware Specification of the
+- Atari Corporation, Engineering Hardware Specification of the
 Atari ST Computer System, January 7, 1986.
 
-Atari Corporation, ST DMA Sound Technical Reference, July 18,
-1988.
+- Atari Corporation, ST DMA Sound Technical Reference, July 18, 1988.
 
-Atari Corporation, Intelligent Keyboard (ikbd) Protocol, February
+- Atari Corporation, Intelligent Keyboard (ikbd) Protocol, February
 26, 1985.
 
-Atari Corporation, Atari ACSI/DMA Integration Guide, June 28,
-1991.
+- Atari Corporation, Atari ACSI/DMA Integration Guide, June 28, 1991.
 
-
-    All questions or comments about FALCON or this specification
+All questions or comments about FALCON or this specification
 should be directed to:
 
     John D. Horton Jr.
