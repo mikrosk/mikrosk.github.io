@@ -3638,24 +3638,20 @@ the 32 bit data bus and only use the 64 bit bus for transfers to
 or from video memory. Such a master need only drive WID1 and must
 only monitor WEN when using the video memory data bus.
 
+# Section 9   SYSTEM
 
+## 9.1 Boot Sequence
 
-
-
-Section 9   SYSTEM
-
-9.1 Boot Sequence
-
-    The FALCON ROM will contain power-on diagnostics to verify
+The FALCON ROM will contain power-on diagnostics to verify
 that the processor, memory, and I/O subsystems are functional.
 The boot sequence begins after these diagnostic tests are
 successfully completed.
 
-    The boot process has three general stages:
+The boot process has three general stages:
 
-1)  The ROM boot procedure searches peripherals for boot code.
+1. The ROM boot procedure searches peripherals for boot code.
 
-2)  If found, this boot code, or device boot, is loaded by the
+2. If found, this boot code, or device boot, is loaded by the
     ROM boot. The boot loaded from the hard disk is referred to
     as the "hard disk boot", or simply, "disk boot". The device
     boot consists of 512 bytes of boot code from the "boot
@@ -3664,49 +3660,48 @@ successfully completed.
     hard disks, load a second sector of boot code that calls
     code in the first sector.
 
-3)  The UNIX boot is loaded by the device boot. It is typically
+3. The UNIX boot is loaded by the device boot. It is typically
     a moderately sized program (32 to 64 Kb) that actually loads
     the UNIX operating system. It need not be position
     independent if its location has been agreed upon with the
     device boot.
 
-    The ROM boot procedure's main purpose is to detect boot
+The ROM boot procedure's main purpose is to detect boot
 devices and load and run the device boot code on these devices.
 It checks the following devices in order:
-1)  Cartridge
-2)  Floppy drive 0
-3)  SCSI hard disk drives
-4)  Network (if present)]
-5)  ROM
 
-    For detailed information on the FALCON boot procedures, wait
+1. Cartridge
+2. Floppy drive 0
+3. SCSI hard disk drives
+4. Network (if present)]
+5. ROM
+
+For detailed information on the FALCON boot procedures, wait
 for the specification to be written.
 
-9.2 Operating System
+## 9.2 Operating System
 
-    The FALCON is intended for use with Atari's TOS operating
+The FALCON is intended for use with Atari's TOS operating
 system or ASV.
 
-9.3 Device Drivers
+## 9.3 Device Drivers
 
-    ASV is supplied with configuration tools which allow device
+ASV is supplied with configuration tools which allow device
 drivers to be fully configurable with the UNIX kernel.
 
-9.4 Networking Support
+## 9.4 Networking Support
 
-     To permit its use in a wide variety of environments, FALCON
+To permit its use in a wide variety of environments, FALCON
 may have software support for the Ethernet network, the Internet
 networking protocols (TCP/IP), Sun Microsystem's Network File
 System (NFS), and/or LocalTalk network protocol.
 
-9.5 Windowing User Interface
+## 9.5 Windowing User Interface
 
-    The UNIX operating system may include a windowing user
+The UNIX operating system may include a windowing user
 interface built on the X-Windows (Version 11.4) package.
 
-
-
-Section 10  Mechanical Considerations
+# Section 10  Mechanical Considerations
 
     Questions and comments on mechanical aspects of FALCON
 systems should be directed to Steven Chan and Ira Valenski.
