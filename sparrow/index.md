@@ -85,9 +85,9 @@ So basically the Falcon030 is a bugfixed version of the Sparrow with one excepti
 
 The Falcon project (designed by John D. Horton Jr. in Dallas, Texas) started its development also early on in 1991 as the successor of the TT. It was supposed to have full 32-bit data bus, 8- and 24-bit packed  pixel ("chunky") graphics, up to 32 MB TT (Fast) RAM, multi-slot VME bus, video and DMA I/O expansion slots, 68030+68882 and 68040 CPU support. In 1992, perhaps following post-Sparrow Falcon030 development, it got the DSP, 16-bit sound DMA and DSP connector and even got rid of the Microwire.
 
-In this [magazine](91_falcon1.jpg) [excerpt](91_falcon2.jpg) dated Jul'91 one can clearly recognise the TT/VME-based Falcon which had been in the works. 
+In this [magazine](91_falcon1.jpg) [excerpt](91_falcon2.jpg) dated Jul'91 one can clearly recognise the TT/VME-based Falcon which had been in the works. It was expected to have a developer prototype by the end of 1991 and ship in mid-1992.
 
-So what became of this Falcon? The last available specifification confirms that by Aug'92 the second prototype had been finished - around the same time when the Falcon030 was released at Atari Messe! We can only speculate why Atari didn't show at least a prototype of the Falcon040 there...
+So what became of this Falcon? The last available specifification confirms that by Aug'92 the second prototype had been finished - around the same time when the Falcon030 was released at Atari Messe! We can only speculate why Atari didn't show at least a prototype of the Falcon there...
 
 #### The Microbox
 
@@ -95,6 +95,6 @@ However when we closely look at the [Microbox](https://www.maedicke.de/atari/har
 
 #### The Falcon040
 
-And then there is the [Falcon040](https://www.maedicke.de/atari/hardware/falcon040.htm) (also designed by the Dallas team). It would seem it was supposed to share the same case as the Microbox but the PCB surely is different - more slots, more sockets for ICs in development.
+And then there is the [Falcon040](https://www.maedicke.de/atari/hardware/falcon040.htm) (also designed by the Dallas team). It would seem it was supposed to share a case of similar design as the Microbox but the PCB surely is different - more slots, more sockets for ICs in development.
 
 In Dec'92 the rumours about Atari Corp. having a Falcon040 in development were [pretty much alive](atari-st-format-issue-041_11.jpg) (with the focus on built-in CD drive), with planned release date in late 1993 as a more powerful successor of the Falcon030. As there is no mention of the Microbox whatsoever, we can again only speculate that sometime during the infamous Falcon030 production problems Atari Corp. realised that the Microbox doesn't make much sense anymore and went ahead with a full 68040 "PC like" machine. Unfortunately, no machine was ever shown or previewed in 1993 or later...
