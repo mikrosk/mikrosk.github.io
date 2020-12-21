@@ -53,7 +53,7 @@ This makes only 17 (rev.1) + 59 (rev.2) = 76 publicly known Sparrows in the worl
 The following documents were found & rescued by [Christian Zietz](https://www.chzsoft.de) and first published at [atari-home.de](https://forum.atari-home.de/index.php/topic,13380.msg214172.html#msg214172):
 
 - [Sparrow specification (dated Dec 18 1991)](sparrow_specification_19911218.md) (converted into markdown by me)
-- [Page 3 of Sparrow schematics (dated March 12 1991)](sparrow-schematic-march91-page3.pdf)
+- [(Incomplete) Sparrow schematics (dated March 12 1991)](sparrow_schematics_19910312.pdf) (converted into PDF by Christian)
 - [Falcon specification (dated Dec 3 1991)](falcon_specification_19911203.pdf) (converted into PDF by Christian)
 - [Falcon specification (dated Aug 26 1992)](falcon_specification_19920826.md) (converted into markdown by me)
 
