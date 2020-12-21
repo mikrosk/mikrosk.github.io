@@ -93,6 +93,8 @@ So what became of this Falcon? The last available specifification confirms that 
 
 However when we closely look at the [Microbox](https://www.maedicke.de/atari/hardware/microbox.htm)'s description (68030/68040 CPU, 32-bit data bus, 3 expansion slots), its [motherboard](https://www.computerhistory.org/collections/catalog/102672949) (we can see one huge expansion slot and pins of something what resembles VME prety well) and consider the fact that Ira Valenski (the [former ST/FM designer](http://www.computinghistory.org.uk/det/587/Atari-520-STM)) is directly mentioned in the Falcon specification and as the [design lead for the Microbox](http://www.atarimuseum.com/computers/16bits/falcon030/microbox/index.htm) we can speculate whether the Microbox wasn't the original Falcon project. Also, this prototype looks quite polished, so it could be the one from Aug'92.
 
+Note: there are two versions of the Microbox _case_, one having a floppy disk drive on the front-right of the system which was for the machine described above, and a CD-ROM version for the Falcon040.
+
 #### The Falcon040
 
 And then there is the [Falcon040](https://www.maedicke.de/atari/hardware/falcon040.htm) (also designed by the Dallas team). It would seem it was supposed to share a case of similar design as the Microbox but the PCB surely is different - more slots, more sockets for ICs in development.
