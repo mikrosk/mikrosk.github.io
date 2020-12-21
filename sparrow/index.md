@@ -69,7 +69,7 @@ See  also the related thread on [atari-forum.com](https://www.atari-forum.com/vi
 
 As the first Sparrow rev.1 motherboard's manufacturing date is February 1992 it is very likely that this is what Atari showed in March 1992 at CeBIT in Hannover -- and announced it as the Falcon shortly after.
 
-### The Falcon 030
+#### The Falcon 030
 
 Even though the offical [Falcon 030](https://www.maedicke.de/atari/hardware/falcon.htm) release happened in August 1992 at Atari Messe in Dusseldorf, Atari magazines got only photos of Sparrow's typical dark grey case with white ST/E keyboard and rev.2 motherboard inside for their September issue.
 
@@ -77,7 +77,7 @@ A month later all the Atari press were previewing the real Falcon 030 but it too
 
 So basically the Falcon 030 is a bugfixed version of the Sparrow with one exception: the Sparrow still had the Microwire interface and so called RASCAL sound ship (able to process only 12-bit samples) - none of which are present in the Falcon 030.
 
-### The Falcon
+#### The Falcon
 
 The Falcon project (designed by John D. Horton Jr. in Dallas, Texas) started its development also early on in 1991 as the successor of the TT. It was supposed to have full 32-bit data bus, 8- and 24-bit packed  pixel ("chunky") graphics, up to 32 MB TT (Fast) RAM, multi-slot VME bus, video and DMA I/O expansion slots, 68030+68882 and 68040 CPU support. Later on, same as the Sparrow, got the DSP and 16-bit sound DMA + DSP connector and got rid of the Microwire.
 
@@ -87,10 +87,10 @@ As mentioned, by the end of 1991 perhaps Atari decided to focus on the Sparrow b
 
 So what became of this Falcon? Nobody knows. But...
 
-### The Microbox
+#### The Microbox
 
 However when we closely look at the [Microbox](https://www.maedicke.de/atari/hardware/microbox.htm)'s description (68030/68040 CPU, 32-bit data bus, 3 expansion slots), its [motherboard](https://www.computerhistory.org/collections/catalog/102672949) (we can see one huge expansion slot and pins of something what resembles VME prety well) and consider the fact that Ira Valenski (the [former ST/FM designer](http://www.computinghistory.org.uk/det/587/Atari-520-STM) is directly mentioned in the Falcon specification and as the [design lead for the Microbox]((http://www.atarimuseum.com/computers/16bits/falcon030/microbox/index.htm) we can speculate whether the Microbox wasn't the original Falcon project. Also, this prototype looks quite polished, so it could be the one from August 1992.
 
-### The Falcon 040
+#### The Falcon 040
 
 And then there is the [Falcon 040](https://www.maedicke.de/atari/hardware/falcon040.htm) (also designed by the Dallas team). It would seem it was supposed to share the same case as the Microbox but the PCB is surely different - more slots, more sockets for ICs in development. If I were to guess, I would say that this is a continuation of the Microbox project - maybe sometime around 1993 Atari realised that the Microbox doesn't make much sense anymore and went ahead with a full 68040 "PC like" machine.
