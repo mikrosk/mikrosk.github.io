@@ -9,7 +9,7 @@ The main PCB has following production numbers:
 - **CA401332-003** ASSY PCB FALCON030 PAL-B (UK, generally UK, Ireland, Hong Kong, South Africa, and Macau; last Atari revision: H)
 - **CA401332-004** ASSY PCB FALCON030 PERITEL (FRANCE; last Atari revision: A)
 
-- **700015-003** (C-Lab MK II)
+- **700015-003** (newer C-Lab MK II)
 - **700015-005** (C-Lab MK X)
 
 ### Manufacturers
@@ -36,7 +36,7 @@ From all the serial numbers I've seen so far one can conclude:
 2. Second batch happend in 02/1993 in **B3**, **B5** and during 12/1992-02/1993 in **Y4**
 3. Third batch happend in 04/1993 in **B3** (s/n numbering reset) and during 03-09/1993 in **Y4** (s/n numbering reset)
 4. Fourth batch happend in 01/1994 in **Y4** (s/n numbering reset)
-5. Fifth batch happened in 09/1994 in **Y4** for C-Lab MK II (and maybe MK X) models (s/n numbering reset)
+5. Fifth batch happened in 09/1994 in **Y4** for C-Lab MK II (and maybe MK X) models (s/n numbering reset). Interestingly, one can find PCBs with the old production number (Atari's) as well as the new one (C-Lab's) from this very same month.
 6. Sixth and the last batch in 12/1995 in **Y4** for C-Lab MK X models (s/n numbering reset)
 
 If we can trust the ECO statistics document, the last approval activity for Falcon stuff had happend around 06-07/1993.
