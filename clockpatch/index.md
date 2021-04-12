@@ -213,7 +213,7 @@ Credit where credit's due! Sorted by volume of information taken from there:
 
 [Phantom installation manual](http://www.volny.cz/boban07/PhantomS/phantom_manual.rtf) by and discussion with Ctirad Feřtr
 
-[Nemesis installation manual](http://dev-docs.atariforge.org/files/Nemesis_Manual.pdf) by Peter Green & Black Scorpion Software and hosted by Lonny Pursell
+[Nemesis installation manual](https://docs.dev-docs.org/htm/search.php?find=Nemesis) by Peter Green & Black Scorpion Software and hosted by Lonny Pursell
 
 [Falcon acceleration problems](http://www.stcarchiv.de/stc1998/06/falcon-beschleunigen) by Michael Ruge
 
