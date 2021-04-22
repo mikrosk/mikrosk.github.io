@@ -32,12 +32,13 @@ it should be pretty straightforward but it is not. There are several discrepanci
 
 From all the serial numbers I've seen so far one can conclude:
 
-1. First batch happened during 10-12/1992 in **B5**, this was also the only batch producing Peritel models
-2. Second batch happend in 02/1993 in **B3**, **B5** and during 12/1992-02/1993 in **Y4**
-3. Third batch happend in 04/1993 in **B3** (s/n numbering reset) and during 03-09/1993 in **Y4** (s/n numbering reset)
-4. Fourth batch happend in 01/1994 in **Y4** (s/n numbering reset)
-5. Fifth batch happened in 09/1994 in **Y4** for C-Lab MK II (and maybe MK X) models (s/n numbering reset). Interestingly, one can find PCBs with the old production number (Atari's) as well as the new one (C-Lab's) from this very same month.
-6. Sixth and the last batch in 12/1995 in **Y4** for C-Lab MK X models (s/n numbering reset)
+1. First batch happened in 08/1992 in **B5**. Most likely just a few units to be send to early developers and for presentation at Atari Messe in Düsseldorf (held on 23rd August!), where the Falcon has been officially presented (as the Falcon, until then it was known as the Sparrow).
+1. Second batch happened during 10-12/1992 in **B5**, this was also the only batch producing Peritel models
+2. Third batch happend in 02/1993 in **B3**, **B5** and during 12/1992-02/1993 in **Y4**
+3. Fourth batch happend in 04/1993 in **B3** (s/n numbering reset) and during 03-09/1993 in **Y4** (s/n numbering reset)
+4. Fifth batch happend in 01/1994 in **Y4** (s/n numbering reset)
+5. Sixth batch happened in 09/1994 in **Y4** for C-Lab MK II (and maybe MK X) models (s/n numbering reset). Interestingly, one can find PCBs with the old production number (Atari's) as well as the new one (C-Lab's) from this very same month.
+6. Seventh and the last batch in 12/1995 in **Y4** for C-Lab MK X models (s/n numbering reset)
 
 If we can trust the ECO statistics document, the last approval activity for Falcon stuff had happend around 06-07/1993.
 
@@ -53,11 +54,11 @@ Rodolphe Czuba [recalls](https://groups.google.com/d/msg/comp.sys.atari.st/OWDA8
 
 Highest s/n values per factory:
 
-- B5: 900 (02/1993)
+- B5: 12 (08/1992) + 900 (02/1993)
 - B3: 402 (02/1993) + 192 (04/1993)
 - Y4: 3015 (12/1992-02/1993) + 11903 (03-09/1993) + 266 (01/1994) + 1477 (09/1994) + 211 (12/1995)
 
-That gives us **16,678** known original Falcon030 units and **1,688** known C-Lab units. Therefore it's safe to assume the number isn't higher than 20,000.
+That gives us **16,690** known original Falcon030 units and **1,688** known C-Lab units. Therefore it's safe to assume the number isn't higher than 20,000.
 
 Still the question whether C-Lab had ordered something from EKA remains -- the ST Computer article mentions MKII models still from the Atari batch but quoting C-Lab representatives about a C-Lab batch ordered from EFA directly, for later MKII and MKX models, so who knows? Altough it's hard to understand why they would order another batch if they had 8,000 semi-completed units in stock?
 
