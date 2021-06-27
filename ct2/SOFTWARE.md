@@ -55,9 +55,9 @@ If there hasn't been an error, SCSI should be fine. If there has been an error, 
 
 Audio quality has to be verified using a good application whether there aren't any audible crackles.
 
-In case of a trouble with SCSI and/or audio locate four small square-shaped solder pads on the CT2 card (below the new CPU, between the small 14-pin ICs). The two leftmost pads are connected together with a solder bridge. Cut this bridge and create another solder bridge on the two rightmost pads. This puts a new SDMA timing in effect. Test everything again.
+*Applies to rev.A:*
 
-*Note from mikro: I don't have any bridge on neither of the aforementioned pads on my CT2B. Neither it has another CT2Bs I have seen.*
+In case of a trouble with SCSI and/or audio locate four small square-shaped solder pads on the CT2A card (below the new CPU, between the small 14-pin ICs). The two leftmost pads are connected together with a solder bridge. Cut this bridge and create another solder bridge on the two rightmost pads. This puts a new SDMA timing in effect. Test everything again.
 
 ## Patches
 
@@ -272,3 +272,7 @@ If you have a security code, you are notified here (only for registered develope
 If you use the internal Cécile, this last menu makes it possible to modify the parameters of the driver (buffer DATA & FAT, max. number of FOLDERS, boot partition, speed of the IDE and the allocations of removable partitions). These settings are the same as those you can find in CC-TOOLS.APP.
 
 An option allows you to allow / prevent the setup from reading the CECILE.SYS settings located at the root of the boot partition for additional information set in CC-TOOLS.APP.
+
+## Source material
+
+- [CT2A JEDEC](files/ct2a.jed)

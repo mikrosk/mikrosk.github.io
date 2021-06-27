@@ -29,6 +29,9 @@ There is a few differences between the two revisions:
 - Rev A optionally offers a 36 MHz clock instead of 32 MHz on its VID pin
 - (Early?) Rev A had so called "patch board" 1 and 2 located on the GALs. They were used for changing the SDMA timing. Rev B has the solder pads.
 
+![CT2A patch board](ct2a_patch_board.jpg)
+![CT2A patch board installed](ct2a_patch_board_overview.jpg)
+
 Trivia: There was an infamous 'battle' between an UK company called Titan Designs and Centek about the removal of the expansion slot pins. Titan put a warning about possible technical difficulties with the CT2B and their Eclipse PCI card (assuming that Centek had removed the pins because they couldn't get it running properly) leading to a very sharp reaction from Centek. According to Centek, the expansion slot pins were removed because of budget reasons and because nobody (?) had been really using it except them (for Dolmen OS development).
 
 ## CENTurbo II Rev AN/BN

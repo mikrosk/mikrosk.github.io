@@ -1,6 +1,9 @@
 # CENTurbo II
 The CENTurbo II (later known as CT2) was an accelerator card for the Atari Falcon. It was designed by Rodolphe Czuba and sold by a French company called Centek in two versions:
 - Rev A: designed from January '97 to June '98 and sold from September '98 to December '98 (92 units)
+
+![CT2 rev.A](ct2a.jpg)
+
 - Rev B: designed from December '98 to January '99 and sold from February '99 to January '00 (150 units)
 
 ![CT2 rev.B](ct2b.png)
