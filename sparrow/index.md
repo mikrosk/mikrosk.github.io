@@ -10,6 +10,8 @@ The following list has been compiled from various Internet sources (eBay auction
 
 As far as I know, only rev.2 PCB had its case available. The cases I have been able to find so far:
 - A3 25 11 0010 11
+- A3 25 11 0010 13
+- A3 25 12 0010 23
 - A3 26 12 0010 33
 - A3 26 13 0010 34
 - A3 26 13 0010 35
@@ -28,6 +30,8 @@ The fourth number (from the right) serves as an ID for the PCB (x=0) and case (x
 - A3 24 33 0000 03 (printed as "A3 24 33 00000 3")
 - A3 25 31 0000 08
 - A3 25 31 0000 11 ("calculated" from the case s/n A3 25 11 0010 11)
+- A3 25 31 0000 13
+- A3 25 32 0000 23
 - A3 25 32 0000 25
 - A3 26 32 0000 32
 - A3 26 32 0000 33 ("calculated" from the case s/n A3 26 12 0010 33)
