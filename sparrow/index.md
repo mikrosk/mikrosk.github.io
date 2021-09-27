@@ -9,6 +9,7 @@ There had been two revisions manufactured: rev.1 (usually on a hand-written labe
 The following list has been compiled from various Internet sources (eBay auctions, forum posts, computer history pages, ...). Sometimes I had to extract the PCB s/n from its case s/n - although I'm fairly sure that the "algorithm" is correct, I do place a note where such s/n is presented.
 
 As far as I know, only rev.2 PCB had its case available. The cases I have been able to find so far:
+- A3 25 11 0010 09 (printed as "A3 25 11 00100 9")
 - A3 25 11 0010 11
 - A3 25 11 0010 13
 - A3 25 12 0010 23
@@ -29,6 +30,7 @@ The fourth number (from the right) serves as an ID for the PCB (x=0) and case (x
 #### rev.2:
 - A3 24 33 0000 03 (printed as "A3 24 33 00000 3")
 - A3 25 31 0000 08
+- A3 25 31 0000 09
 - A3 25 31 0000 11 ("calculated" from the case s/n A3 25 11 0010 11)
 - A3 25 31 0000 13
 - A3 25 32 0000 23
