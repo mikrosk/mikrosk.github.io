@@ -81,7 +81,7 @@ As the first Sparrow rev.1 motherboard's manufacturing date is Feb'92 it is very
 
 #### The Falcon030
 
-Even though the offical [Falcon030](https://www.maedicke.de/atari/hardware/falcon.htm) release happened in Aug'92 at Atari Messe in Dusseldorf, Atari magazines got for their September issue only photos of Sparrow's typical dark grey case with white ST/E keyboard and rev.2 motherboard inside.
+Even though the offical [Falcon030](https://www.maedicke.de/atari/hardware/falcon.htm) release happened in Aug'92 at Atari Messe in Dusseldorf (with TOS 4.00), Atari magazines got for their September issue only photos of Sparrow's typical dark grey case with white ST/E keyboard and rev.2 motherboard inside.
 
 A month later all the Atari press were previewing the real Falcon030 but it took several months (as late as Mar/Apr'93!) until it hit the stores due to "insurmountable quality control issues". This was also the time when the internal HDD got upgraded from 65 MB to 80 MB and TOS from version 4.00/4.01 via 4.02 to 4.04.
 
