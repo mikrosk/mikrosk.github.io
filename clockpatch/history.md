@@ -33,14 +33,14 @@ it should be pretty straightforward but it is not. There are several discrepanci
 From all the serial numbers I've seen so far one can conclude:
 
 1. First batch happened in 08/1992 in **B5**. Most likely just a few units to be send to early developers and for presentation at Atari Messe in Düsseldorf (held on 23rd August!), where the Falcon has been officially presented (as the Falcon, until then it was known as the Sparrow).
-1. Second batch happened during 10-12/1992 in **B5**, this was also the only batch producing Peritel models
-2. Third batch happend in 02/1993 in **B3**, **B5** and during 12/1992-02/1993 in **Y4**
-3. Fourth batch happend in 04/1993 in **B3** (s/n numbering reset) and during 03-09/1993 in **Y4** (s/n numbering reset)
-4. Fifth (Peritel only?) batch happend in 12/1993 in **Y4** (s/n numbering reset)
-5. Sixth batch happend in 01/1994 in **Y4** (s/n numbering reset)
-6. Seventh batch happened in 09/1994 in **Y4** for C-Lab MK II (and maybe MK X) models (s/n numbering reset). Interestingly, one can find PCBs with the old production number (Atari's) as well as the new one (C-Lab's) from this very same month.
-7. Seventh and the last batch in 12/1995 in **Y4** for C-Lab MK X models (s/n numbering reset)
-
+2. Second batch happened during 10-12/1992 in **B5**, this was also the only batch producing Peritel models
+3. Third batch happend in 02/1993 in **B3**, **B5** and during 12/1992-02/1993 in **Y4**
+4. Fourth batch happend in 04/1993 in **B3** (s/n numbering reset) and during 03-09/1993 in **Y4** (s/n numbering reset)
+5. Fifth (Peritel only?) batch happend in 12/1993 in **Y4** (s/n numbering reset)
+6. Sixth batch happend in 01/1994 in **Y4** (s/n numbering reset)
+7. Seventh batch happened in 09/1994 in **Y4** for C-Lab MK II (and maybe MK X) models (s/n numbering reset). Interestingly, one can find PCBs with the old production number (Atari's) as well as the new one (C-Lab's) from this very same month.
+8. Eighth and the last batch in 12/1995 in **Y4** for C-Lab MK X models (s/n numbering reset)
+   
 If we can trust the ECO statistics document, the last approval activity for Falcon stuff had happend around 06-07/1993.
   
 Sometime in 09/1994 (judging from MK II serial numbers) C-Lab had ordered by EFA another batch for the MK II/X models which were delivered around 08/1995 according to [this article](http://www.stcarchiv.de/stc1995/05_sylvie.php) in ST-Computer.
