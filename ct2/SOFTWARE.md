@@ -195,6 +195,31 @@ Following memory regions do not generate a bus error when accessing on the CT2:
 
 Integrated into Flash setup 1.4.1. Developed by Didier Méquignon.
 
+***Detailed explanation by Xavier Joubert regarding FreeMiNT compatibility:***
+
+*Basically CT2 boot code (We're talking about CT2 here - CT60 is far better on this topic) always use the PMMU to remap its TT-RAM from $0x04000000 to the 
+well known 0x01000000.*
+
+*Didier wrote a small AUTO folder program which adds a supervisor protection on low mem. It's available on his web site. This was later included into the CT2 boot code.*
+
+*Since the PMMU is used, MiNT was unable to run with memory protection. So Didier wrote a specific patch to allow MP with MiNT on CT2. It's commited to CVS in sys/arch/mprot030.c (search for "CT2" there). This code handle the strange TT-RAM base address, but it seems nothing was done to add supervisor protection of low mem.*
+
+*On a standard Atari or clone, the low mem (0x0000-0x07FF) is supervisor only. This check is done by a chip called MMU on the ST family (which is very 
+different from the MMU inside an m68k, this is why we use to call this a PMMU - PAGED Memory Management Unit - on Atari.), or COMBEL on the Falcon.*
+
+*Since it's an external chip that generate the bus error (acces fault in the 680[46]0 terminology), we cannot skip it with the PMMU. Even if we say in the PMMU 
+tree that this zone is user-readable, any attempt to do so will still generate an exception.*
+
+*A problem of the CT2 is that 0x0000-0x07FF is user readable (and 0x0008-0x07FF user writable) on this board. Didier wrote a patch that protect this using the 
+PMMU for TOS, MagiC and MiNT without memory protection*
+
+*But with MP, the problem is different. The MMU configuration that MiNT uses defines a page size of 8 Ko. We cannot change this without rewritting a large 
+part of MiNT's protected memory management.*
+
+*So we can only affect memory protection on 0x0000-0x2000 at once. But 0x0800-0x2000 is user readable/writable on standard Atari, so programs are allowed to 
+access it in user mode. This would generate a bus error under MiNT MP if we protect the whole memory page. This is a problem since there are some 
+interresting datas there (Line-A variables among others, IIRC), that a program may legally try to access in user mode.*
+
 ## Other applications
 Centek released a couple of not strictly CT2-related applications with their products, mostly demo versions.
 
