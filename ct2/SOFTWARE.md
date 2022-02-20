@@ -300,4 +300,6 @@ An option allows you to allow / prevent the setup from reading the CECILE.SYS se
 
 ## Source material
 
-- [CT2A JEDEC](files/ct2a.jed)
+- [CT2A JEDEC](files/ct2a.jed) ([ABL source](files/ct2a.abl)
+- [CT2B JEDEC](files/ct2b.jed) ([ABL source](files/ct2b.abl)
+- [CT2B Fast RAM JEDEC](files/ct2b_fr.jed) ([ABL source](files/ct2b_fr.abl)
