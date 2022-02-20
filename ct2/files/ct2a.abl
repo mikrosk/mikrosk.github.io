@@ -1,0 +1,326 @@
+MODULE SYL "50 MHz - Rev.A - Last modif. 21/03/2000    
+
+
+"INPUTS"
+
+a0,a01,a02,a03					pin 96,95,92,91;
+a10..a15					pin 77,76,73,72,69,68;
+a16..a23					pin 63..56;
+a24..a27					pin 55..52;
+a28..a31					pin 45..42;
+as,rw,siz0,siz1,fc1,fc2				pin 23,8,109,101,121,123;
+bg,bgk						pin 99,126;
+dtk						pin 98; 
+dpdtk						pin 3;
+bclk						pin 2;
+clk32						pin 70;
+clk36						pin 66;
+clk50						pin 67;
+asf,fc0,sw					pin 124,107,21;
+i6ei						pin 41;
+		
+"OUTPUTS"
+dsk1,dsk0,stm,avec,berr				pin 71,125,10,119,38;
+uu,ul,lu,ll					pin 34,35,36,37;
+uds,lds						pin 22,24;
+asdis,abdis,dbdis,bgi				pin 85,11,12,40;
+flcs,floe					pin 29,31;
+ecas,dpml,areq					pin 13,27,32;
+extclk,mclk					pin 74,128;
+dpa3,dpa2					pin 5,4 istype 'reg_d,buffer,keep';
+eck						pin 39 istype 'reg_d,buffer,keep';
+aclk0,aclk					pin 7,89 istype 'reg_d,buffer,keep';	
+dspcs						pin 90;
+fpu						pin 25;
+cksw,eco					pin 106,108;
+ird,iwr						pin 103,102;
+
+
+"INPUTS/OUTPUTS"
+edtk						pin 127;
+
+"NODES"
+flh,ct2,fadd,xffx,acia,io,ide,dsp		node istype 'keep';
+p16,acdtk,hz,oe					node istype 'keep';
+eck3,eck1,eck0,drbt,drdsp,dride,dreco,dre32	node istype 'reg_d,buffer,keep';
+das0,dlas4,dlas3,dlas2,dlas1,dlas0		node istype 'reg_d,buffer,keep';
+dk1a,ber2,ber1,ber0				node istype 'reg_d,buffer,keep';
+aclk1,aclk2,aclk3,aclk4,dl1,dl0			node istype 'reg_d,buffer,keep';
+
+"SETS"
+qdr	= [drbt,dride,drdsp,dreco,dre32];
+qeck	= [eck3,eck,eck1,eck0];
+qdlas  	= [dlas4,dlas3,dlas2,dlas1,dlas0];
+qberr	= [ber2,ber1,ber0];
+qdpa	= [dpa3,dpa2];
+qaclk	= [aclk,aclk4..aclk0];
+qdl	= [dl1,dl0];
+
+"PROPERTIES"
+PLSI PROPERTY 'PRESERVE flh';
+PLSI PROPERTY 'PRESERVE ct2';
+PLSI PROPERTY 'PRESERVE fadd';
+PLSI PROPERTY 'PRESERVE xffx';
+PLSI PROPERTY 'PRESERVE acia';
+PLSI PROPERTY 'PRESERVE dsp';
+PLSI PROPERTY 'PRESERVE io';
+PLSI PROPERTY 'PRESERVE ide';
+PLSI PROPERTY 'PRESERVE hz';
+PLSI PROPERTY 'PRESERVE fpu';
+PLSI PROPERTY 'PRESERVE flcs';
+PLSI PROPERTY 'PRESERVE areq';
+PLSI PROPERTY 'PRESERVE stm';
+PLSI PROPERTY 'PRESERVE dpml';
+PLSI PROPERTY 'PRESERVE p16';
+PLSI PROPERTY 'PRESERVE acdtk';
+PLSI PROPERTY 'PRESERVE abdis';
+PLSI PROPERTY 'PRESERVE dbdis';
+PLSI PROPERTY 'PRESERVE asdis';
+
+PLSI PROPERTY 'PULLUP siz0';
+PLSI PROPERTY 'PULLUP siz1';
+PLSI PROPERTY 'PULLUP dpdtk';
+PLSI PROPERTY 'PULLUP uu';
+PLSI PROPERTY 'PULLUP ul';
+PLSI PROPERTY 'PULLUP lu';
+PLSI PROPERTY 'PULLUP ll';
+PLSI PROPERTY 'PULLUP bg';
+PLSI PROPERTY 'PULLUP sw';
+
+PLSI PROPERTY 'USE_GLOBAL_RESET ON';
+PLSI PROPERTY 'ISP ON';
+PLSI PROPERTY 'SECURITY ON';
+
+
+EQUATIONS
+
+"-- DECODING --------------------------------------------------------------------------
+fadd	= !a31 & !a30 & !a29 & !a28 & !a27 & !a26 & !a25 & !a24		"$00xxxxxx	 FALCON
+        #  a31 &  a30 &  a29 &  a28 &  a27 &  a26 &  a25 &  a24;	"$FFxxxxxx
+ide	= fadd & a23 & a22 & a21 & a20 & !a19 & !a18 & !a17 & !a16;	"$FFF0xxxx   	 IDE
+xffx	= a23 & a22 & a21 & a20 & a19 & a18 & a17 & a16;		"$xxFFxxxx
+io	= !fc1 &  fc0 & fadd & a23 & a22 & a21 & a20 & a19 & !a18 & a17	"$FFFAxxxx-BFFFF CART.
+	#  fc1 & !fc0 & fadd & a23 & a22 & a21 & a20 & a19 & !a18 & a17
+	# !fc1 & fadd & xffx & a15 & !a14 & !a13 & !a12 & !a11 & !a10	"$FFFF80xx- 83FF VID
+	# !fc1 & fadd & xffx & a15 & !a14 & !a13 & !a12 & a11;		"$FFFF88xx- 8FFF YM/SCC
+dsp	= !as & !fc1 & fadd & xffx & a15 & !a14 & a13 &!a12&!a11&!a10;	"$FFFFA0xx- A3xx DSP
+acia	= !as & !fc1 & fadd & xffx & a15 &  a14 & a13 & a12& a11& a10;	"$FFFFFCxx- FFFF ACIA
+flh	=       a31 & a30 & a29 & a28 & !a27 & a26 & !a25;		"$F4/F5x	 FLASH	
+ct2 	= !as & a31 & a30 & a29 & a28 & !a27 & a26 &  a25 & !a24;	"$F6xxxxxx	 CT2
+!fpu	= !as & das0.q &fc2&fc1&fc0&!a19&!a18&a17&!a16&!a15&!a14&a13;	"FPU
+
+"-- ARBITRATION / BUS ACCESS / INT ----------------------------------------------------
+!bgi	= !bg & as;						"BG to F30 if not AS
+hz	= !bg & as						"SDMA or BLITTER MASTER
+	# hz & !bgk;
+
+abdis	= hz;
+
+dbdis   = hz 							"SDMA/BLITTER
+	# !as & !a31 & !a30 & !a29 & !a28 & !a27 & a26 		"FAST 64MB $04-07
+	# !as &  a31 &  a30 &  a29 &  a28 & !a27	 	"BUS/FLH/CT2/DP $F0-F7
+	# i6ei							"IACK6 only from ext.card
+	# !fpu							"FPU
+	# sw & !drbt.q;						"BOOT Turbo
+
+asdis	= hz							"SDMA/BLITTER
+	# !a31 & !a30 & !a29 & !a28 & !a27 & a26		"FAST 64 MB $04-07
+	#  a31 &  a30 &  a29 &  a28 & !a27			"BUS/FLH/CT2/DP $F0-F7
+	# sw & !rw & io & dl1.q					"I/O   Turbo
+	# sw & !drbt.q;						"BOOT  Turbo
+	
+!oe	= !ber2.q &  a31 &  a30 &  a29 &  a28 & !a27 & !a26     "BUS  EXT 64MB $F0-F3
+	# !ber2.q & !a31 & !a30 & !a29 & !a28 & !a27 &  a26&a25 "FAST EXT 32MB $04-05
+	# !ber2.q & !fpu;					"FPU
+	
+avec.oe = oe;
+!avec	= !as & fc2 & fc1 & fc0 & xffx & !a03 &  a02 & !a01  	"AVEC 2 = HBL
+	# !as & fc2 & fc1 & fc0 & xffx &  a03 & !a02 & !a01; 	"AVEC 4 = VBL
+		 
+uds.oe	= !hz;		
+!uds	= fadd & !as & rw 			
+	# fadd & !as & !a0;
+lds.oe  = !hz;
+!lds	= fadd & !as & rw 	
+	# fadd & !as & a0	
+	# fadd & !as & !siz0 
+	# fadd & !as & siz1;
+
+"-- ACIA : DTacK & Clock E ---------------------------------------------------------
+eck0.d	= !eck1.q & !eck.q
+	#  eck1.q &  eck.q;
+eck1.d	=  eck0.q & !eck.q
+	# !eck0.q & eck1.q;
+eck.d	=  eck0.q & eck.q
+	# !eck0.q & eck1.q
+	# !eck0.q & eck1.q & !acia
+	# !eck0.q & eck1.q & !eck3.q;
+eck3.d	= !acia;
+qeck.clk = !bclk;
+p16	= acia & eck0.q & !eck.q
+	# acia & eck1.q &  p16
+	# acia & eck1.q & !eck.q & eck3.q
+	# p16 & !as;			
+!acdtk	= acia & !eck1.q & p16 & eck.q	
+	# !acdtk & !as;
+
+"-- FAST-Ram CONTROLER -----------------------------------------------------------------------
+!dpml	= fc2 & !fc1 & fc0 & a31 & a30 & a29 & a28 & !a27 & a26 & a25 & a24;	"DP Conf. $F7x
+!areq	= !as & !fc1 &  fc0 & !a31 & !a30 & !a29 & !a28 & !a27 & a26 & !a25 	"$04-05	
+	# !as &  fc1 & !fc0 & !a31 & !a30 & !a29 & !a28 & !a27 & a26 & !a25 	"$04-05
+	# !as & !dpml;	
+
+stm.oe  = oe;
+!stm	= !as & dlas1.q & !dpdtk;
+
+!ecas	= !as & dlas0.q & !areq; 
+
+dpa2.d	= a02;
+dpa3.d  = a03;
+qdpa.clk= !as; 
+
+!uu	= !areq & !as & rw				"Add +0
+	# !areq & !as & !a01 & !a0;				
+!ul	= !areq & !as & rw				"Add +1
+	# !areq & !as & !a01 & a0			
+	# !areq & !as & !a01 & !siz0  
+	# !areq & !as & !a01 & siz1;
+!lu	= !areq & !as & rw				"Add +2
+	# !areq & !as & a01 & !a0			
+	# !areq & !as & !a01 & a0 & !siz0
+	# !areq & !as & !a01 & !siz1 & !siz0 	
+	# !areq & !as & !a01 & siz1 & siz0;   
+!ll	= !areq & !as & rw				"Add +3
+	# !areq & !as & a01 & a0			
+	# !areq & !as & a01 & siz1
+	# !areq & !as & a0 & siz0 & siz1 
+	# !areq & !as & !siz0 & !siz1;	
+
+"-- WATCHDOG ----------------------------------------------------------------------------------
+berr.oe	= oe;
+!berr	= !as & ber2.q 		  		"AS during 10-12 us
+	# !as & !berr;
+
+qberr.clk= aclk.q;				"2us (500kHz) delay
+qberr.ar = as;					"RESET if no AS
+ber0.d	= !ber0.q;			
+ber1.d	= !ber1.q &  ber0.q
+	#  ber1.q & !ber0.q;
+ber2.d	= !ber2.q &  ber1.q & ber0.q
+	#  ber2.q & !ber1.q
+	#  ber2.q & !ber0.q;
+
+"-- FLASH -----------------------------------------------------------------------
+!flcs   = !as & fadd & !drbt.q & rw & sw	"Turbo BOOT
+	# !as & flh;				
+!floe   = !as & fadd & !drbt.q & rw & sw	"Turbo BOOT
+	# !as & flh & rw;			
+
+"-- IDE -------------------------------------------------------------------------
+!ird	= !sw & !as & dlas1.q & ide &  rw 			"Normal	           
+	#  sw & !as & dlas1.q & ide &  rw & !dride.q            "Turbo 
+	#  sw & !as & dlas1.q & ide &  rw &  dride.q; 		"Turbo WS
+!iwr	= !sw & !as & dlas1.q & ide & !rw			"Normal
+	#  sw & !as & dlas0.q & ide & !rw & !dride.q & !dk1a.q  "Turbo
+	#  sw & !as & dlas1.q & ide & !rw &  dride.q & !dk1a.q; "Turbo WS
+
+"-- DSP ------------------------------------------------------------------------
+!dspcs	= !sw & !as & dsp & dlas0.q &  rw		 	"Normal READ
+	# !sw & !as & dsp & dlas0.q & !rw & !dlas2.q	 	"Normal WRITE
+	#  sw & !as & dsp & dlas1.q &  rw			"Turbo  READ   
+	#  sw & !as & dsp & dlas1.q & !rw & !dlas3.q & !drdsp.q "Turbo  WRITE
+	#  sw & !as & dsp & dlas1.q & !rw & !dl1.q   &  drdsp.q;"Turbo  WRITE WS
+
+"-- DSACK0 - DSACK1 - EDTACK ----------------------------------------------------
+
+dsk0.oe = oe;
+!dsk0	= !sw & !as & dsp & dlas2.q		"Normal DSP
+	#  sw & !as & dsp & dlas3.q & !drdsp.q  "Turbo  DSP
+	#  sw & !as & dsp & dl1.q   &  drdsp.q  "Turbo  DSP WS
+	# !as & !flcs & dlas2.q			"FLASH
+	# !as & ct2;				"CT2 Conf.
+ 				
+dsk1.oe = oe; 
+!dsk1	= !sw & !as & !acdtk			"Normal ACIAs
+	# !sw & !as & !edtk			"Normal SDMA/MFP
+	# !sw & !as & !dtk			"Normal COMBEL
+	#  sw & !as & dk1a.q;			"TURBO	
+
+dk1a.clk= !bclk;
+dk1a.ar = as; 
+dk1a.d	= !as & dlas1.q & !acdtk		"Turbo ACIAs
+	# !as & dlas1.q & !edtk			"Turbo SDMA/MFP
+	# !as & dlas1.q & !dtk & !io & !ide	"Turbo COMBEL (except IO & IDE)
+	# !as & dl1.q & io			"Turbo IO
+ 	# !as & dlas1.q & ide &  rw & !dride.q	"Turbo IDE READ   4 cycles (FAST mode)
+	# !as & dlas1.q & ide & !rw & !dride.q  "Turbo IDE WRITE  4 cycles (FAST mode)
+	# !as & dlas2.q & ide &  rw &  dride.q	"Turbo IDE READ   5 cycles (SLOW mode)	
+	# !as & dlas2.q & ide & !rw &  dride.q;	"Turbo IDE WRITE  5 cycles (SLOW mode)
+	
+edtk.oe = hz;				"SDMA Master
+!edtk   = !asf & dlas0.q & !dtk;  	"si dlas1 --> anyplayer decroche !"
+
+das0.clk= !clk50; 		
+das0.d	= !as;
+
+qdlas.clk= bclk;			"25 MHz POS edge WS on AS/ASF
+qdlas.ar = as & asf;
+dlas0.d	= !as  &  bgk
+	# !dtk & !bgk;
+dlas1.d	= dlas0.q;
+dlas2.d	= dlas1.q;
+dlas3.d	= dlas2.q;
+dlas4.d	= dlas3.q;
+
+qdl.clk = aclk3.q;			"Delay with 2MHz clock	
+qdl.ar  =  as;	 			
+dl0.d	= !as;
+dl1.d 	= dl0.q & !as;
+	
+"-- CLOCKs ---------------------------------------------------------------------
+!cksw	= sw;			"CPU Clock switch (16/50)
+
+mclk	= clk32 & !sw		"Clock 32/50 for COMBEL-DSP-SLOT Bus
+	# clk50 &  sw;
+extclk	= clk36 & !dre32.q	"Clock 36 MHz for VIDEL
+	# clk32 &  dre32.q;	"Clock 32 MHz for VIDEL
+eco	= dreco.q;		"Ext clock OFF
+
+qaclk.clk = clk32;
+aclk0.d	= !aclk0.q;			
+aclk1.d	= !aclk1.q &  aclk0.q
+	#  aclk1.q & !aclk0.q;
+aclk2.d	= !aclk2.q &  aclk1.q & aclk0.q
+	#  aclk2.q & !aclk1.q
+	#  aclk2.q & !aclk0.q;
+aclk3.d	= !aclk3.q &  aclk2.q & aclk1.q & aclk0.q
+	#  aclk3.q & !aclk2.q
+	#  aclk3.q & !aclk1.q
+	#  aclk3.q & !aclk0.q;
+aclk4.d = !aclk4.q &  aclk3.q & aclk2.q & aclk1.q & aclk0.q
+	#  aclk4.q & !aclk3.q
+	#  aclk4.q & !aclk2.q
+	#  aclk4.q & !aclk1.q
+	#  aclk4.q & !aclk0.q;
+aclk.d	= !aclk.q  &   aclk4.q & aclk3.q & aclk2.q & aclk1.q & aclk0.q
+	#  aclk.q  & !aclk4.q
+	#  aclk.q  & !aclk3.q
+	#  aclk.q  & !aclk2.q
+	#  aclk.q  & !aclk1.q
+	#  aclk.q  & !aclk0.q;
+
+"-- DATA REGISTERs -------------------------------------------------------------
+qdr.clk = clk50;
+
+dre32.d	= !ct2 & dre32.q		"EXTCLK at 32 MHz
+	#  ct2 & !rw & a19;
+dreco.d	= !ct2 & dreco.q		"EXTCLK OFF
+	#  ct2 & !rw & a20;
+dride.d	= !ct2 & dride.q		"WS on IDE
+	#  ct2 & !rw & a21;
+drdsp.d	= !ct2 & drdsp.q		"WS on DSP
+	#  ct2 & !rw & a22;
+drbt.d	= drbt.q			"FALCON ENABLE
+	#  ct2 & !rw & a23;
+
+end;
