@@ -42,7 +42,7 @@ CENTurbo II offers quite an unique set of features even to today's (Atari) stand
 
 # Links
 - [Centek](http://centek.online.fr/atari/ct2/) (fr)
-- [Rodolphe Czuba](http://powerphenix.com/rodolphe.czuba.free.fr/CT2/english/welcome.htm) (en, [fr](http://powerphenix.com/rodolphe.czuba.free.fr/CT2/french/bienvenu.htm))
+- [Rodolphe Czuba](https://mikrosk.github.io/ct60tos/rodolphe.czuba.free.fr/CT2/english/welcome.htm) (en, [fr](https://mikrosk.github.io/ct60tos/rodolphe.czuba.free.fr/CT2/french/bienvenu.htm))
 - [Dead Hackers Society](http://dhs.nu/files.php?t=accelerators) (en)
 - [Didier Méquignon](http://didierm.pagesperso-orange.fr/) (en, fr)
 - [Florent Lafabrie](http://www.lafabrie.net/old/Atari/Centurbo/Index.htm) (fr)
