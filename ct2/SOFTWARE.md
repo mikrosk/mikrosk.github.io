@@ -95,7 +95,7 @@ Part of the [CT2 patches](files/centek/patchct2.zip).
 ## Tools
 Unfortunately Centek hadn't been releasing tools in both language mutations at the same time so most of the time French versions are more up to date. Also it's worth taking a look into French version of given app anyway as it tends to contain far more detailed description.
 
-Tools which have higher version in French are: **CBOOT**, **Cécile** and **CENTScreen**.
+Tools which have higher version in French are: **CBOOT**, **Cécile**, **CENTScreen** and **PUTFLASH**.
 
 ### CBOOT
 Flash setup and NVRAM configuration. It allows you to configure your CT2 without going to the flash setup.
