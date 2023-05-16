@@ -1,0 +1,129 @@
+<html>
+<head>
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Aide et Tutorial d'Icon Extract</title>
+<!-- TemplateEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link href="../../../../css/perso.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" link="#669999" vlink="#CCCCCC" alink="#00CCCC" leftmargin="5" topmargin="0" marginwidth="5" marginheight="0">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td valign="bottom" height="19" align="left"><div align="center"></div></td>
+    <td valign="middle" height="19" align="left"><img src="../../Images/Extract/aide.jpg" width="255" height="30"></td>
+  </tr>
+  <!-- TemplateBeginEditable name="EditRegion4" --> 
+  <tr> 
+    <td width="3%" valign="middle" align="center" height="11"><img src="../../../../Images/Bleu.jpg" width="25" height="25"></td>
+    <td height="11" colspan="2" valign="middle" class="petis-12-Bleu">V&eacute;rification 
+      et Extraction des ic&ocirc;nes d'un fichier ICL</td>
+  </tr>
+  <tr> 
+    <td width="3%" height="210" align="center" valign="middle">&nbsp;</td>
+    <td width="97%" colspan="2" valign="top" class="petis-12"><p align="justify"><br>
+        <span class="petis-12-Bleu">Examen du fichier :</span><br>
+        Le fichier ICL est compos&eacute; d'une librairie importante d'ic&ocirc;nes 
+        au format ICO ou CUR. Il y aura avant traitement, une extraction des ic&ocirc;nes 
+        qu'il contient dans un sous r&eacute;pertoire portant le nom du fichier 
+        ICL sans son extension.<br>
+        <br>
+        <span class="petis-12-Bleu">Ent&ecirc;te PE et NE:</span><br>
+        Windows distingue deux types de fichier : les PE (Portable executable) 
+        et les NE (New executable). Actuellement, seuls les fichiers ICL avec 
+        un ent&ecirc;te NE sont trait&eacute;s.<br>
+        <br>
+        <span class="petis-12-Bleu">Type RT_ICON et RT_GROUP_ICON :</span><br>
+        Les ic&ocirc;nes des fichiers PE et NE peuvent &ecirc;tre stock&eacute;es 
+        de deux mani&egrave;res : soit dans une structure RT_ICON, soit dans une 
+        structure RT_GROUP_ICON. Le programme traite les deux types.<br>
+        <br>
+        Le processus suivant l'extraction continuera comme s'il s'agissait du 
+        transfert des ic&ocirc;nes d'un r&eacute;pertoire. <br>
+        <br>
+      </p></td>
+  </tr>
+  <tr> 
+    <td height="19" valign="top">&nbsp;</td>
+    <td height="19" colspan="2" valign="middle" class="petis-12"><div align="center"><img src="../../../Images/Atabandeau.jpg" width="517" height="1"></div></td>
+  </tr>
+  <tr> 
+    <td height="19" valign="top"><img src="../../../../Images/Bleu.jpg" width="25" height="25"></td>
+    <td height="19" colspan="2" valign="middle" class="petis-12-Bleu">V&eacute;rification</td>
+  </tr>
+  <tr> 
+    <td height="160" rowspan="2" valign="top"><br> </td>
+    <td colspan="2" valign="top" class="petis-12"><div align="justify"><span class="petis-12">Le 
+        programme v&eacute;rifie si le dossier o&ugrave; les ic&ocirc;nes du fichier 
+        ICL vont &ecirc;tre extraite existe d&eacute;j&agrave;.<br>
+        <br>
+        </span></div></td>
+  </tr>
+  <tr> 
+    <td colspan="2" valign="top" class="petis-12"><div align="center"><img src="../../Images/Extract/Dossier.jpg" width="483" height="151"></div></td>
+  </tr>
+  <tr> 
+    <td height="19" valign="top">&nbsp;</td>
+    <td height="19" colspan="2" valign="middle" class="petis-12"> <div align="center"><img src="../../../Images/Atabandeau.jpg" width="517" height="1"></div></td>
+  </tr>
+  <tr> 
+    <td height="19" valign="top"><img src="../../../../Images/Bleu.jpg" width="25" height="25"></td>
+    <td height="19" colspan="2" valign="middle" class="petis-12-Bleu">Extraction 
+      des ic&ocirc;nes</td>
+  </tr>
+  <tr> 
+    <td height="152" rowspan="2" valign="top"><br> </td>
+    <td height="124" colspan="2" valign="top" class="petis-12">Elle se d&eacute;compose 
+      en trois phases successives pendant lequelles vous avez acc&egrave;s aux 
+      informations constituant le fichier ICL. 
+      <p align="justify">Passe n&deg;1 : Lecture des offsets des ressources et 
+        de leurs noms.<br>
+        <br>
+        Passe n&deg;2 : Lecture des offsets des structures ICO ou CUR et correction 
+        de leur taille. Padding sur 32 bits et &eacute;criture des fichiers ICO 
+        ou CUR avec seulement leur en-t&ecirc;te.<br>
+        <br>
+        Passe n&deg;3 : Lecture des datas au format ICO ou CUR et &eacute;criture 
+        finale des fichiers.<br>
+        <br>
+      </p></td>
+  </tr>
+  <tr> 
+    <td colspan="2" valign="top" class="petis-12"><div align="center"><img src="../../Images/Extract/CalcuIcl2.jpg" width="486" height="310" border="0" usemap="#Map2"> 
+        <map name="Map2" id="Map2">
+          <area shape="rect" coords="13,91,471,178" href="#" alt="Informations sur le fichier ICL &agrave; traiter." title="Informations sur le fichier ICL &agrave; traiter.">
+          <area shape="rect" coords="14,193,472,290" href="#" alt="Fichiers en cours d'extraction." title="Fichiers en cours d'extraction.">
+        </map>
+        <br>
+        <span class="petis-10">d&eacute;placer le curseur de votre souris sur 
+        les diff&eacute;rentes zones de l'image </span></div></td>
+  </tr>
+  <tr>
+    <td height="19" valign="top">&nbsp;</td>
+    <td colspan="2" valign="top" class="petis-12">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="19" valign="top"><img src="../../../../Images/Bleu.jpg" width="25" height="25"></td>
+    <td colspan="2" valign="middle" class="petis-12"><a href="6.htm" target="_parent">Page 
+      suivante</a></td>
+  </tr>
+  <tr>
+    <td height="19" valign="top"><img src="../../../../Images/Bleu.jpg" width="25" height="25"></td>
+    <td colspan="2" valign="middle" class="petis-12"><a href="../Aide.htm" target="_parent">Retour 
+      au menu</a></td>
+  </tr>
+  <!-- TemplateEndEditable --> 
+</table>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional"><html lang="de"><head><title>ATOS-Magazin: Homepage - Icon-Extrakt 1.1</title>
+
+<meta name="Copyright" content="(c) 2000 Uwe Mindrup, Germany">
+<meta name="Author" content="Uwe Mindrup, uwe@mindrup.de">
+<meta name="Modified" content="28-01-2002 15:54:17">
+<meta name="Keywords" content="ATOS, ATOS-Magazin, Atari, TOS, Icons aus der Windowswelt übernehmen">
+<meta name="Description" content="Die Webseiten des ATOS-Magazins. Informationen rund um TOS. ">
+<meta name="MSSmartTagsPreventParsing" content="TRUE">
+<meta name="robots" content="all">
+<meta name="revisit-after" content="60 days">
+<link rel="stylesheet" type="text/css" href="ATOS/style.css">
+<link rev="made" href="mailto:webmaster@atos-magazin.de">
+<link rel="begin" href="http://www.mindrup.de/atos/news/index.html">
+<link rel="toc" href="http://www.mindrup.de/atos/news/index.html">
+<link rel="copyright" href="http://www.mindrup.de/atos/news/impressum.html">
+<link rel="home" href="http://www.mindrup.de/atos/news/index.html">
+<link rel="up" href="http://www.atos-magazin.de/newsarchiv.html">
+<link rel="next" href="http://www.mindrup.de/atos/news/news20011224-01.html">
+<link rel="prev" href="http://www.mindrup.de/atos/news/news200112.html">
+<link rel="first" href="http://www.mindrup.de/atos/news/news200112.html">
+<link rel="last" href="http://www.mindrup.de/atos/news/news20011224-01.html"></head>
+
+<body lang="de" text="#000000" bgcolor="#ffffff" link="#0000ee" alink="#008080" vlink="#661a8b">
+<a name="oben"></a>
+<table cellspacing="2" cellpadding="8" border="0" width="100%" summary="Navigation und Hauptbereich">
+<tbody><tr>
+ <td valign="top" width="100%">
+  <div align="center">
+  <a href="http://www.mindrup.de/atos/news/index.html"><img src="ATOS/atos.gif" alt="Das ATOS-Magazin" border="0" width="265" height="113"></a>
+	<br>&nbsp;<br>
+</div>
+  <table cellspacing="0" cellpadding="1" border="0" width="100%" summary="History der besuchten Seiten">
+<tbody><tr>
+  <td>
+  <small>
+      <img src="ATOS/udo_fo.gif" alt=" " width="16" height="13">&nbsp;<a href="http://www.atos-magazin.de/newsarchiv.html">zurück zum News-Archiv</a><br>
+  </small>
+ </td>
+</tr>
+</tbody></table>
+  <small> <a href="http://www.mindrup.de/atos/news/news200112.html">Anfang</a>&nbsp;<a href="http://www.mindrup.de/atos/news/news200112.html">zurück</a>&nbsp;<a href="http://www.mindrup.de/atos/news/news20011224-01.html">vorwärts</a>&nbsp;<a href="http://www.mindrup.de/atos/news/news20011224-01.html">Ende</a>&nbsp;</small>
+<p><small>18.12.01</small></p><h1>Icon-Extract 1.1</h1> <h2>Icons aus der Windowswelt übernehmen</h2>
+<p>Von <a href="http://www.mindrup.de/atos/mitarbeiter.html#TK">Thomas Kerkloh</a></p>
+<p align="center"><img src="ATOS/20011224-02-ie_logo.jpg" alt="Bild: Das Logo von Icon-Extract." width="512" height="49"><br>(Das Logo von Icon-Extract.)</p>
+<p>Inhaltsverzeichnis:</p>
+<ol>
+<li><a href="#Einleitung">Einleitung</a></li>
+<li><a href="#Komfort">Komfort</a></li>
+<li><a href="#Systemvoraussetzungen">Systemvoraussetzungen</a></li>
+<li><a href="#Status">Status</a></li>
+<li><a href="#Testsystem">Das Testsystem</a></li>
+<li><a href="#Installation">Installation</a></li>
+<li><a href="#Programmstart">Der erste Programmstart</a></li>
+<li><a href="#Icons">Der Hauptdialog: Bereich Icons</a></li>
+<li><a href="#Config">Der Hauptdialog: Bereich Config</a></li>
+<li><a href="#Konvertierung">Die Konvertierung</a></li>
+<li><a href="#Praxistest">Der Praxistest</a></li>
+<li><a href="#Programmfehler">Programmfehler und sonstige Unschönheiten</a></li>
+<li><a href="#Fazit">Fazit</a></li>
+<li><a href="#Bezug">Bezug</a></li>
+<li><a href="#Autor">Der Autor</a></li>
+</ol>
+<hr>
+<a name="Einleitung"></a>
+<h3>Einleitung</h3>
+<p align="center"><img src="ATOS/20011224-02-ie_logo.jpg" alt="Bild: Das Logo von Icon-Extract." width="512" height="49"><br>(Das Logo von Icon-Extract.)</p>
+<p>
+Icon-Extract 1.1 vom 12.07.2001 von Florent Lafabrie (siehe <a href="#Autor">Autor</a>) verspricht eine Vereinfachung der Übernahme von Icons aus der
+Windowswelt.</p>
+<p>
+Der Weg bisher:</p>
+<ul>
+<li>Icon per Screensnapshot vom Bildschirm ablichten</li>
+<li>Grafikfile auf den Atari bringen</li>
+<li>Grafikfile in ein Format bringen, das der Resource-Editor laden kann</li>
+<li>Grafikfile an die Palette des Systems anpassen</li>
+<li>RSC erstellen mit einem Formular</li>
+<li>in das Formular ein Farbicon als Objekt bringen</li>
+<li>in das Farbicon den Auschnitt mit dem Icon bringen</li>
+<li>Maske und Co. des Farbicons erstellen</li>
+<li>RSC abspeichern</li>
+</ul>
+<p>
+Icon-Extract verspricht den einfachen Weg:</p>
+<ul>
+<li>Datei mit dem Icon vom Windows-Rechner auf den Atari bringen</li>
+<li>Icon-Extrakt den Rest machen lassen</li>
+</ul>
+<p>
+Der folgende Artikel zeigt auf, wie es mit den Versprechungen aussieht.</p>
+<hr>
+<a name="Komfort"></a>
+<h3>Komfort</h3>
+<p>
+Icon-Extract kommt zeitgemäß daher: GEMSetup zum Installieren aller
+Komponenten in diversen Sprachen (zur Zeit stehen Englisch,
+Französisch und Spanisch zur Auswahl). HTML-Hilfetexte,
+ST-Guide-Unterstützung und BubbleGEM-Hilfetexte runden das Angebot ab.
+Funktionen können sowohl mit der Maus als auch per Tastatur aufgerufen
+werden; die Dialoge liegen in Fenstern und Buttons lassen sich per
+Tastaturshortcuts bedienen.</p>
+<p>
+Die Gestaltung z.B. des Konfigurationsdialoges ist sehr
+gewöhnungsbedürftig; der Autor hat ausgiebig Iconanleihen bei diversen
+Windowsapplikationen gemacht.</p>
+<p>
+Die Bedienung ist ebenso wie die Gestaltung der Dialoge
+gewöhnungsbedürftig; manche mögen das GUI einfach nur als grausig
+empfinden. Fakt ist aber, dass alle Funktionen klar erkennbar sind und
+auch dementsprechend funktionieren. Auch Benutzer ohne Englisch-,
+Spanisch- oder Französischkenntnisse werden das Programm bedienen
+können.</p>
+<p>
+Der Autor ist via E-Mail erreichbar (
+  <a href="mailto:lafabrie@club-internet.fr">Florent Lafabrie </a> (lafabrie@club-internet.fr)) und es gibt eine Homepage, auf der
+gegebenenfalls neue Versionen und Zusatzinformationen bereitstehen.</p>
+<hr>
+<a name="Systemvoraussetzungen"></a>
+<h3> Systemvoraussetzungen</h3>
+<p>
+Der Programmautor (Florent Lafabrie (siehe <a href="#Autor">Autor</a>) gibt folgende
+System-Vorgaben für sein Programm vor:</p>
+<ul>
+<li>ein Atari mit 68000, 68030 oder 68040 (jeweils mit oder ohne
+    68881/2)</li>
+<li>Alternativ einen Mac mit MagiCMac oder einen Intel-kompatiblen PC mit
+    MagiC-PC</li>
+<li>Bildschirmauflösung mit mindestens 640*400 Pixeln</li>
+</ul>
+<hr>
+<a name="Status"></a>
+<h3>Status</h3>
+<p>
+Icon-Extract 1.1 ist Shareware, die Gebühr beträgt 50 FF (ca. 15 DM
+beziehungsweise 7,62 EUR).</p>
+<p align="center"><img src="ATOS/20011224-02-dial_reg.jpg" alt="Bild: Der Registrierungs-Dialog." width="430" height="241"><br>(Der Registrierungs-Dialog.)</p>
+<p>
+Auch ohne Registrierung funktioniert Icon-Extract ohne
+Einschränkungen, einer ausgiebigen Testaktion steht nichts im Wege.</p>
+<p>
+Einer anschließenden Registrierung aber auch nicht...</p>
+<hr>
+<a name="Testsystem"></a>
+<h3>Das Testsystem</h3>
+<dl><dt>Rechner</dt><dd>Apple Macintosh PPC-Klone von Umax mit 266Mhz-G3-Prozessorkarte</dd><dt>Betriebssystem</dt><dd>MagiCMac 6.1.4 mit 120 MB durchgehendem ST-RAM</dd><dt>Bildschirmauflösungen und Farbtiefe</dt><dd>von 640*400 bis 1280*960, 16, 256 Farben und TC.</dd><dt>sonstige installierte Software</dt><dd>NVDI 5.0.3, Jinnee 2.0, Ratsch, ST-Guide, 1ST-Guide, GrafTool,
+     OLGA, SMU, usw......</dd></dl>
+<hr>
+<a name="Installation"></a>
+<h3>Installation</h3>
+<p>
+Per GEMSetup 2.01 von Joachim Fornallaz gestaltet sich die
+Installation sehr einfach.</p>
+<p>
+Neben der französischen und spanischen Version kann auch eine englische
+installiert werden.</p>
+<p>
+Das Verzeichnis mit den Programmdateien kann auf einen beliebigen
+Datenträger installiert werden.</p>
+<p align="center"><img src="ATOS/20011224-02-gemsetup.jpg" alt="Bild: einfache Installation via GEMSetup 2.01" width="516" height="508"><br>(einfache Installation via GEMSetup 2.01)</p>
+<p>
+Welche Version von Icon-Extract man für seinen Rechner installieren
+sollte, steht im ST-Guide-Hilfetext. Diese kann man selber auspacken.
+Sie befindet sich im jeweiligen Sprachen-Ordner (z.B. french oder
+english) als LZH-Archiv.</p>
+<p>
+Die installierte ST-Guide-Hilfe bezieht sich zwar auf die
+Icon-Extract-Version 1.0, allerdings scheint es in der Version 1.1 nicht allzuviele
+Änderungen im Vergleich zur 1.0 gegeben zu haben.</p>
+<hr>
+<a name="Programmstart"></a>
+<h3>Der erste Programmstart</h3>
+<p>
+Nach dem Start von Icon-Extract erhält der unregistrierte Benutzer einen
+kurzen Moment Zeit, sich die Sache mit der Registration des
+Shareware-Programms doch nochmal zu überlegen.</p>
+<p align="center"><img src="ATOS/20011224-02-dia_nerv.jpg" alt="Bild: Gedenksekunden in Sachen Shareware" width="290" height="119"><br>(Gedenksekunden in Sachen Shareware)</p>
+<p>
+Anschließend präsentiert sich Icon-Extract im Desktop-Look. Fenster
+anderer Applikationen, die geöffnet sind, werden nicht überdeckt. Auch
+ein Wechsel zu diesen Applikationen ist zu diesem Zeitpunkt noch
+möglich.</p>
+<p align="center"><img src="ATOS/20011224-02-desktop.jpg" alt="Bild: Icon-Konvertieren als Desktop" width="346" height="311"><br>(Icon-Konvertieren als Desktop)</p>
+<hr>
+<a name="Icons"></a>
+<h3>Der Hauptdialog: Bereich Icons</h3>
+<p>
+Über den Menüpunkt <tt>Menu</tt> und den Menüeintrag <tt>Open</tt>
+(oder per Tastaturkürzel <tt>Control-O</tt>) wird das
+Hauptfenster geöffnet
+und die ersten Einstellungen können vorgenommen werden.</p>
+<p>
+Der Hauptdialog ist als Reiter/Karteikarten-Dialog konzipiert,
+unterteilt ist dieser in die beiden Bereiche ICONS und CONFIG.</p>
+<p align="center"><img src="ATOS/20011224-02-dialicon.jpg" alt="Bild: Der Icon-Bereich des Hauptdialoges." width="524" height="377"><br>(Der Icon-Bereich des Hauptdialoges.)</p>
+<p>
+Der Bereich ICONS ist eher der Bereich, der interessant wird, wenn die
+Konvertierung vorgenommen wird. Zum Zeitpunkt der Konfiguration ist er
+noch leer.</p>
+<hr>
+<a name="Config"></a>
+<h3>Der Hauptdialog: Bereich Config</h3>
+<p>
+Wichtiger und auch interessanter ist der Bereich CONFIG; hier lassen
+sich die diversen Voreinstellungen tätigen, die beim eigentlichen
+Konvertierungsvorgang das Endergebnis bestimmen.</p>
+<p align="center"><img src="ATOS/20011224-02-dialconf.jpg" alt="Bild: Der Konfigurationsbereich des Hauptdialoges." width="527" height="377"><br>(Der Konfigurationsbereich des Hauptdialoges.)</p>
+<p>
+Eingestellt werden können:</p>
+<ul>
+<li>Die Art der Datei, die die zu extrahierenden Icons enthält:
+  <ul>
+     <li>ICO = Icons</li>
+     <li>CUR = Icons als Cursor</li>
+     <li>ANI = (Cursor)-Animationen</li>
+     <li>ICL = Icons in einer Library</li>
+     <li>DLL = Icons in einer DLL</li>
+     <li>EXE = noch nicht in der 1.1</li>
+     <li>OCX = noch nicht in der 1.1</li>
+     <li>XPM = noch nicht in der 1.1</li>
+	</ul>
+</li>
+<li>ob die Palette bei jedem Icon neu gelesen werden soll</li>
+<li>welche Größe von Icons extrahiert werden soll:
+  <ul>
+     <li>16 * 16 Pixel</li>
+     <li>32 * 32 Pixel</li>
+     <li>48 * 48 Pixel</li>
+     <li>64 * 64 Pixel</li>
+     <li>72 * 72 Pixel</li>
+     <li>96 * 96 Pixel</li>
+     <li>128 * 128 Pixel</li>
+</ul>
+</li>
+<li>welche Farbtiefe bei den Icons extrahiert werden soll</li>
+<li>wieviele Icons in ein RSC gepackt werden sollen</li>
+<li>ob eine automatische Nummerierung erfolgen soll</li>
+<li>welche Palette zur Konvertierung genommen werden soll
+  <ul>
+     <li>die aktuelle des Systems</li>
+     <li>die des Falcon 030</li>
+     <li>die von NVDI</li>
+	</ul>
+</li>
+<li>ob das RSC als 8 Bit oder als 24 Bit gesichert werden soll</li>
+<li>ob ein Debug-File angelegt werden soll.</li>
+</ul>
+<hr>
+<a name="Konvertierung"></a>
+<h3>Die Konvertierung</h3>
+<p>
+Je nach eingestelltem Originalformat kann man im Hauptdialog Bereich
+ICONS nun eine Einzelne Datei (File) oder einen ganzen Ordnerinhalt
+(Directory) auswählen, die konvertiert/extrahiert werden sollen.</p>
+<p align="center"><img src="ATOS/20011224-02-dialwait.jpg" alt="Bild: Analyse des Ordnerinhaltes." width="258" height="94"><br>(Analyse des Ordnerinhaltes.)</p>
+<p>
+Das Format der gewählten Datei beziehungsweise der Inhalt des Ordners werden nun
+analysiert und das Ergebnis wird im Dialog dargestellt.</p>
+<p align="center"><img src="ATOS/20011224-02-dialrotc.jpg" alt="Bild: Das Ergebnis der Analyse." width="494" height="365"><br>(Das Ergebnis der Analyse.)</p>
+<p>
+Klick auf den Button <em>Continue</em> startet die
+Konvertierung/Extraktion. Im nun im Vordergrund liegenden Dialog kann
+man die Aktionen und den Fortschritt der Konvertierung/Extraktion
+mitverfolgen.</p>
+<p>
+Leider lässt sich dieser Vorgang nicht abbrechen, andere Applikationen
+sind währenddessen auch nicht erreichbar.</p>
+<p align="center"><img src="ATOS/20011224-02-dial_i2r.jpg" alt="Bild: Genaue Informationen über den Konvertierungs-/Extraktionsvorgang." width="766" height="636"><br>(Genaue Informationen über den Konvertierungs-/Extraktionsvorgang.)</p>
+<p>
+Nach erfolgter Konvertierung/Extraktion liegt im selben Verzeichnis
+wie die Icons auch eine RSC-Datei, die nun alle
+konvertierten/extrahierten Icons enthält.</p>
+<p>
+Der besseren Übersicht halber wird für jede Iconauflösung jeweils eine
+eigene RSC-Datei angelegt. Enthielten die Icondateien Icons im Format 48*48
+und 16*16 und 32*32, so findet man nun 3 RSC-Dateien mit den Namen
+<tt>ICO48-01.RSC</tt>, <tt>ICO32-01.RSC</tt> und <tt>ICO16-01.RSC</tt>.</p>
+<p>
+Icon-Extract bietet nun direkt die Möglichkeit, sich diese im RSC
+anzusehen.
+</p><p align="center"><img src="ATOS/20011224-02-iconfert.jpg" alt="Bild: Ansicht der Icons nun im RSC." width="618" height="436"><br>(Ansicht der Icons nun im RSC.)</p>
+<p>
+Alle RSCs, die während einer Sitzung mit Icon-Extract erstellt wurden,
+sind über diesen Dialog auswählbar. Er ist erreichbar über das Menu
+<em>RSC-Files</em> und dem Menüeintrag <em>Display the list</em> und/oder das Tastatur-Kürzel <tt>Control-V</tt>.</p>
+<p align="center"><img src="ATOS/20011224-02-dial_rsc.jpg" alt="Bild: Die Übersicht über die konvertierten/extrahierten Icons." width="562" height="194"><br>(Die Übersicht über die konvertierten/extrahierten Icons.)</p>
+<p>
+Einer weiteren Verarbeitung der so erstellten RSC steht mit
+geeignetem RCS wie z.B. Interface und ResourceMaster nichts mehr im
+Wege.</p>
+<p>
+Florent Lafabrie (siehe <a href="#Autor">Der Autor</a>) gibt im
+ST-Guide-Hilfetext auch diverse URLs an, die für Nachschub an Icons
+sorgen; ein Test mit einer Auswahl von Dateien einer
+Standard-Windows-Installation folgt hier im nächsten Kapitel.</p>
+<hr>
+<a name="Praxistest"></a>
+<h3>Der Praxistest</h3>
+<p>
+Die mitgelieferten Icons, die sich im Ordner EXAMPLES befinden, werden
+von Icon-Extract ohne Probleme konvertiert/extrahiert.</p>
+<p>
+Um zu sehen, wie Icon-Extract mit Dateien aus dem Windowsbereich
+zurecht kommt, wurde auf einem Windows95-System alles an *.ICO,*.ANI
+und *.CUR zum Atari transferiert.</p>
+<p>
+Icon-Extract konnte alle Dateien in RSC konvertieren/extrahieren,
+Probleme gab es nur bei langen Dateinamen und Dateinamen, die
+Leerzeichen enthalten.</p>
+<p>
+Das Ergebnis einer Konvertierung/Extraktion sieht man hier:</p>
+<p align="center"><img src="ATOS/20011224-02-beispiel.jpg" alt="Bild: Ein Beispiel von konvertierten/extrahierten Icons." width="601" height="238"><br>(Ein Beispiel von konvertierten/extrahierten Icons.)</p>
+<p>
+Im Bereich der DLL klappte leider nichts, es lagen wohl keine DLLs vor,
+mit denen Icon-Extract etwas anfangen konnte. Der Autor geht in seiner
+Programmdokumentation sehr genau auf die Arten der Dateien ein, die
+per Icon-Extract bearbeitet werden können.</p>
+<p>
+Ein Kurztest mit diversen ICL-, ICO-, CUR- und ANI-Dateien aus dem
+Internet (einige Adressen/Links sind auch in den Hilfetexten und auf
+der Homepage von Florent Lafabrie (siehe <a href="#Autor">Der Autor</a>) angegeben)
+verlief ebenfalls positiv.</p>
+<hr>
+<a name="Programmfehler"></a>
+<h3>Programmfehler und sonstige Unschönheiten</h3>
+<p>
+Kein Programm ohne den einen oder anderen Bug - auch Icon-Extract
+macht da keine Ausnahme, zu kompletten Abstürzen kam es aber in der
+Testphase nicht!
+Der Autor beschreibt zwei Fehler, die ihm selbst zur Zeit bekannt
+sind. Nachvollziehen konnte der Artikelautor
+diese auf seinem Testsystem allerdings
+(siehe <a href="#Testsystem">Das Testsystem</a>) nicht:</p>
+<ul>
+<li>Im Modus für 256 Farben werden Iconfarben nicht korrekt
+     dargestellt, in Interface lässt sich dies aber beheben.</li>
+<li>Abstürze (sehr selten) im Bereich des Hauptfensters und beim
+     Schließen des RSC-Fensters.</li>
+</ul>
+<p>Des Weiteren sind im Test folgende Punkte aufgefallen:</p>
+<ul>
+  <li>
+    Unter Auflösungen kleiner 800*600 ist der Hauptdialog
+     nicht mehr komplett auf dem Bildschirm.</li>
+<li>
+    Die Farbpalette wird beim Wechsel zu und von anderen
+     Applikationen nicht mehr korrekt ausgewertet. Dies gilt aber
+     nur für die Darstellung der Dialoge auf dem Bildschirm.</li>
+<li>
+    Es gibt keine Möglichkeit, den ST-Guide-Hilfetext kontextbezogen
+     aufzurufen.</li>
+<li>
+    Die Konvertierung/Extraktion dauert selbst auf einem G3 sehr
+     lange.</li>
+<li>Icon-Extract hat Probleme mit langen Dateinamen und Leerzeichen im
+     Dateinamen.
+</li><li>
+    Während der Konvertierung/Extraktion sind alle anderen
+     Applikationen nicht erreichbar.</li>
+<li>
+    Die Iconnamen aus dem ICL werden nicht mit übernommen.</li>
+</ul>
+<hr>
+<a name="Fazit"></a>
+<h3>Fazit</h3>
+<p>
+Icon-Extract 1.1 kann man all denen empfehlen, die des öfteren Icons von
+der Windowswelt übernehmen wollen. Die Zeitersparnis ist doch immens,
+wenn man das im Vergleich zur manuellen Iconkonvertierung durch
+Grafikfiles sieht. Trotz der Minuspunkte (gewöhnungsbedürftiges GUI,
+keine langen Dateinamen, relativ langsam) wird dieses Programm seiner
+Aufgabe mehr als gerecht.</p>
+<p>
+Gravierende Mängel sind in der Testphase nicht aufgetreten, einige
+Bereiche wirken noch verbesserungswürdig (z.B. lange Dateinamen),
+aber insgesamt erscheint die Sharewaregebühr von ca. 15 DM bzw. 7,62 EURO
+absolut gerechtfertigt.</p>
+<hr>
+<a name="Bezug"></a>
+<h3>Bezug</h3>
+<p>
+Homepage des Programmautors: <a href="http://www.club-internet.fr/perso/lafabrie/" target="_blank">http://www.club-internet.fr/perso/lafabrie/</a></p>
+<hr>
+<a name="Autor"></a>
+<h3>Der Autor</h3>
+<address>
+Florent Lafabrie<br>
+2 Rue René Byé<br>
+65000 TARBES (FRANCE)
+</address>
+<p>
+E-Mail:
+  <a href="mailto:lafabrie@club-internet.fr">Florent Lafabrie </a> (lafabrie@club-internet.fr)<br>
+Homepage: <a href="http://www.club-internet.fr/perso/lafabrie/" target="_blank">http://www.club-internet.fr/perso/lafabrie/</a>
+</p>
+<p>
+<a href="http://www.mindrup.de/atos/mitarbeiter.html#TK">Thomas Kerkloh</a>
+</p></td>
+</tr>
+</tbody></table>
+<hr>
+<small> <a href="http://www.mindrup.de/atos/news/news200112.html">Anfang</a>&nbsp;<a href="http://www.mindrup.de/atos/news/news200112.html">zurück</a>&nbsp;<a href="http://www.mindrup.de/atos/news/news20011224-01.html">vorwärts</a>&nbsp;<a href="http://www.mindrup.de/atos/news/news20011224-01.html">Ende</a>&nbsp;</small>
+<small><a href="#oben">Seitenanfang</a></small>
+<br>
+<p align="center"><small>
+ Copyright und alle Rechte beim ATOS-Magazin.
+ Nachdruck und Veröffentlichung von Inhalten nur mit schriftlicher
+ Zustimmung der Redaktion.
+ <br>
+ <a href="http://www.mindrup.de/atos/news/impressum.html">Impressum</a>
+  -
+ <a href="http://www.mindrup.de/atos/news/redaktion.html">Rückmeldung via Mail oder Formular</a>
+  -
+ <a href="mailto:webmaster@atos-magazin.de">Nachricht an webmaster</a>
+</small>
+</p>
+</body></html>

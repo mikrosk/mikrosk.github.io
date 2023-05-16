@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<un:pbmstore xmlns:un="http://usablenet.com/namespaces/508as_results">
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>1733</un:offset1>
+    <un:offset2>1792</un:offset2>
+    <un:linenum>37</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Aucun texte ALT défini pour l'image.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>2101</un:offset1>
+    <un:offset2>2187</un:offset2>
+    <un:linenum>42</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Aucun texte ALT défini pour l'image.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>2307</un:offset1>
+    <un:offset2>2393</un:offset2>
+    <un:linenum>42</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Aucun texte ALT défini pour l'image.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>2511</un:offset1>
+    <un:offset2>2595</un:offset2>
+    <un:linenum>42</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Aucun texte ALT défini pour l'image.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>2718</un:offset1>
+    <un:offset2>2807</un:offset2>
+    <un:linenum>42</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Aucun texte ALT défini pour l'image.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>2811</un:offset1>
+    <un:offset2>2870</un:offset2>
+    <un:linenum>42</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Aucun texte ALT défini pour l'image.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>3087</un:offset1>
+    <un:offset2>3199</un:offset2>
+    <un:linenum>47</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Le texte ALT de l'image semble contenir uniquement du texte del'espace réservé.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>3479</un:offset1>
+    <un:offset2>3556</un:offset2>
+    <un:linenum>51</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Aucun texte ALT défini pour l'image.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>3917</un:offset1>
+    <un:offset2>4000</un:offset2>
+    <un:linenum>54</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Aucun texte ALT défini pour l'image.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>4249</un:offset1>
+    <un:offset2>4307</un:offset2>
+    <un:linenum>59</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Aucun texte ALT défini pour l'image.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>4563</un:offset1>
+    <un:offset2>4621</un:offset2>
+    <un:linenum>64</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Aucun texte ALT défini pour l'image.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>4963</un:offset1>
+    <un:offset2>5021</un:offset2>
+    <un:linenum>69</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Aucun texte ALT défini pour l'image.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>5388</un:offset1>
+    <un:offset2>5446</un:offset2>
+    <un:linenum>74</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Aucun texte ALT défini pour l'image.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>5790</un:offset1>
+    <un:offset2>5848</un:offset2>
+    <un:linenum>79</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Aucun texte ALT défini pour l'image.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>6180</un:offset1>
+    <un:offset2>6238</un:offset2>
+    <un:linenum>84</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Aucun texte ALT défini pour l'image.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>6577</un:offset1>
+    <un:offset2>6635</un:offset2>
+    <un:linenum>89</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Aucun texte ALT défini pour l'image.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>6959</un:offset1>
+    <un:offset2>7017</un:offset2>
+    <un:linenum>94</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Aucun texte ALT défini pour l'image.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>7337</un:offset1>
+    <un:offset2>7395</un:offset2>
+    <un:linenum>99</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Aucun texte ALT défini pour l'image.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwValidALT</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>7713</un:offset1>
+    <un:offset2>7771</un:offset2>
+    <un:linenum>104</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Aucun texte ALT défini pour l'image.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>1733</un:offset1>
+    <un:offset2>1792</un:offset2>
+    <un:linenum>37</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>2101</un:offset1>
+    <un:offset2>2187</un:offset2>
+    <un:linenum>42</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>2307</un:offset1>
+    <un:offset2>2393</un:offset2>
+    <un:linenum>42</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>2511</un:offset1>
+    <un:offset2>2595</un:offset2>
+    <un:linenum>42</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>2718</un:offset1>
+    <un:offset2>2807</un:offset2>
+    <un:linenum>42</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>2811</un:offset1>
+    <un:offset2>2870</un:offset2>
+    <un:linenum>42</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>3087</un:offset1>
+    <un:offset2>3199</un:offset2>
+    <un:linenum>47</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>3479</un:offset1>
+    <un:offset2>3556</un:offset2>
+    <un:linenum>51</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>3917</un:offset1>
+    <un:offset2>4000</un:offset2>
+    <un:linenum>54</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>4249</un:offset1>
+    <un:offset2>4307</un:offset2>
+    <un:linenum>59</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>4563</un:offset1>
+    <un:offset2>4621</un:offset2>
+    <un:linenum>64</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>4963</un:offset1>
+    <un:offset2>5021</un:offset2>
+    <un:linenum>69</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>5388</un:offset1>
+    <un:offset2>5446</un:offset2>
+    <un:linenum>74</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>5790</un:offset1>
+    <un:offset2>5848</un:offset2>
+    <un:linenum>79</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>6180</un:offset1>
+    <un:offset2>6238</un:offset2>
+    <un:linenum>84</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>6577</un:offset1>
+    <un:offset2>6635</un:offset2>
+    <un:linenum>89</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>6959</un:offset1>
+    <un:offset2>7017</un:offset2>
+    <un:linenum>94</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>7337</un:offset1>
+    <un:offset2>7395</un:offset2>
+    <un:linenum>99</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>7713</un:offset1>
+    <un:offset2>7771</un:offset2>
+    <un:linenum>104</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>L'image (autre qu'espacement) a peut-être besoin d'unattribut LONGDESC.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>DontRelyOnColorAlone</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>0</un:offset1>
+    <un:offset2>8290</un:offset2>
+    <un:linenum>1</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>ColorsAreVisible</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>0</un:offset1>
+    <un:offset2>8290</un:offset2>
+    <un:linenum>1</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>138</un:offset1>
+    <un:offset2>198</un:offset2>
+    <un:linenum>5</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>La page utilise des feuilles de style pour présenter soncontenu. Il se peut que certains navigateurs ne puissent paslire les feuilles de styles ou que ces dernières soientincompatibles avec les informations de stylespécifiées par l'utilisateur.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>TableWithHeaders</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>1659</un:offset1>
+    <un:offset2>2896</un:offset2>
+    <un:linenum>35</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>La page contient un tableau pouvant être utilisépour présenter des données. Si c'est le cas, leslignes et les colonnes du tableau doivent contenir desen-têtes (c.-à-d. des chaînes avec desbalises TH).</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>TableWithHeaders</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>2896</un:offset1>
+    <un:offset2>8274</un:offset2>
+    <un:linenum>45</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>La page contient un tableau pouvant être utilisépour présenter des données. Si c'est le cas, leslignes et les colonnes du tableau doivent contenir desen-têtes (c.-à-d. des chaînes avec desbalises TH).</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>TextOnlyEquivPage</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>200</un:offset1>
+    <un:offset2>1342</un:offset2>
+    <un:linenum>6</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>1355</un:offset1>
+    <un:offset2>8281</un:offset2>
+    <un:linenum>34</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'BODY' element has an event attribute ('ONLOAD'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>1985</un:offset1>
+    <un:offset2>2191</un:offset2>
+    <un:linenum>42</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'A' element has an event attribute ('ONMOUSEOUT'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>1985</un:offset1>
+    <un:offset2>2191</un:offset2>
+    <un:linenum>42</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'A' element has an event attribute ('ONMOUSEOVER'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>2191</un:offset1>
+    <un:offset2>2397</un:offset2>
+    <un:linenum>42</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'A' element has an event attribute ('ONMOUSEOUT'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>2191</un:offset1>
+    <un:offset2>2397</un:offset2>
+    <un:linenum>42</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'A' element has an event attribute ('ONMOUSEOVER'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>2397</un:offset1>
+    <un:offset2>2599</un:offset2>
+    <un:linenum>42</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'A' element has an event attribute ('ONMOUSEOUT'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>2397</un:offset1>
+    <un:offset2>2599</un:offset2>
+    <un:linenum>42</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'A' element has an event attribute ('ONMOUSEOVER'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>2599</un:offset1>
+    <un:offset2>2811</un:offset2>
+    <un:linenum>42</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'A' element has an event attribute ('ONMOUSEOUT'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>2599</un:offset1>
+    <un:offset2>2811</un:offset2>
+    <un:linenum>42</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'A' element has an event attribute ('ONMOUSEOVER'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>3797</un:offset1>
+    <un:offset2>4004</un:offset2>
+    <un:linenum>54</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'A' element has an event attribute ('ONMOUSEOUT'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>3797</un:offset1>
+    <un:offset2>4004</un:offset2>
+    <un:linenum>54</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'A' element has an event attribute ('ONMOUSEOVER'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>SkipRepetitiveLinks</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>1355</un:offset1>
+    <un:offset2>8281</un:offset2>
+    <un:linenum>34</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>Vérifiez qu'un lien texte est bien présent pouréviter les liens de navigationrépétés sur chaque page.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>NoFlickeringGIFs</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>1355</un:offset1>
+    <un:offset2>8281</un:offset2>
+    <un:linenum>34</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>La page contient des images GIF :occasionnent-t-elles des scintillements d'écran ?Si c'est le cas, modifiez ou supprimez ces images.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>NoFlickeringObjects</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>200</un:offset1>
+    <un:offset2>1342</un:offset2>
+    <un:linenum>6</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>ClearLangForSite</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>1355</un:offset1>
+    <un:offset2>8281</un:offset2>
+    <un:linenum>34</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>ClarifyNatLangUsage</un:ruleid>
+    <un:fileurl>file:///C|/Documents and Settings/CDDP/Mes documents/Atari/Test/Index.htm</un:fileurl>
+    <un:offset1>1355</un:offset1>
+    <un:offset2>8281</un:offset2>
+    <un:linenum>34</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+</un:pbmstore>

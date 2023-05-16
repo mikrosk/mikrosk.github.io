@@ -45,7 +45,7 @@ CENTurbo II offers quite an unique set of features even to today's (Atari) stand
 - [Rodolphe Czuba](https://mikrosk.github.io/ct60tos/rodolphe.czuba.free.fr/CT2/english/welcome.htm) (en, [fr](https://mikrosk.github.io/ct60tos/rodolphe.czuba.free.fr/CT2/french/bienvenu.htm))
 - [Dead Hackers Society](http://dhs.nu/files.php?t=accelerators) (en)
 - [Didier Méquignon](http://didierm.pagesperso-orange.fr/) (en, fr)
-- [Florent Lafabrie](http://www.lafabrie.net/old/Atari/Centurbo/Index.htm) (fr)
+- [Florent Lafabrie](http://www.lafabrie.net/old/Atari/Centurbo/Index.htm) (fr, local mirror [here](archives/lafabrie.net/Atari/Centurbo/Index.htm))
 - [Odd Skancke](http://assemsoft.atari.org/) (en)
 - [MyAtari](https://www.exxoshost.co.uk/atari/mirror/myatari/issues/oct2000/falcon.htm) (en)
 - [ToXiC MaG Special Issue 3 (Centurbo II)](http://strider.untergrund.net/toxicmag/toxichs3/index.htm) (fr)

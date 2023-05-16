@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>Aide et Tutorial d'Icon Extract</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+<link href="../../../css/perso.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" link="#669999" vlink="#CCCCCC" alink="#FFFFCC" leftmargin="5" topmargin="0" marginwidth="5" marginheight="0">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td height="19" align="left" valign="middle"> <div align="center"></div></td>
+    <td height="19" align="left" valign="middle"><img src="../Images/Extract/programe.jpg" width="274" height="30"></td>
+  </tr>
+  <tr> 
+    <td width="1%" height="282" valign="top" class="petis-12"> <p align="justify" class="petis-12;"><img src="../../../Images/Bleu.jpg" width="25" height="25"></p></td>
+    <td width="99%" valign="top" class="petis-12"><p align="justify" class="petis-12;"><span class="petis-12-Bleu">Introduction 
+        :</span><br>
+        <span class="petis-12">C'est en utilisant des programmes comme MICROANGELO 
+        ou AX-ICONES sur PC que m'est venu l'id&eacute;e de cr&eacute;er un logiciel 
+        similaire sur ATARI. Il existe un nombre tr&egrave;s important de sites 
+        d&eacute;di&eacute;s &agrave; l'iconographie. Mais jusqu'&agrave; maintenant, 
+        il &eacute;tait impossible de les r&eacute;utiliser telles quelles sur 
+        notre plateforme. Gr&acirc;ce &agrave; Icon Extract, cela est devenu une 
+        r&eacute;alit&eacute;. </span> </p>
+      <p align="justify"><span class="petis-12-Bleu">Principe :</span><br>
+        Le programme extrait toutes les ic&ocirc;nes des fichiers ICO, CUR, ICL, 
+        ANI et DLL du monde Windows, celles au format XPM du monde Linux et les 
+        sauvegarde dans des fichiers RSC &eacute;tendus (type 4) lisibles sous 
+        Interface, Ressource master ou RSC 4. D'autres types de fichiers seront 
+        peu &agrave; peu support&eacute;s comme les EXE et OCX. Les ic&ocirc;nes 
+        en 2, 16 et 256 couleurs puis celles en 24 et 32 bits (conversion en 256 
+        couleurs) sont trait&eacute;es quelle que soit leur taille (16x16, 32x32, 
+        48x48, 64x64, 72x72, 96x96 et 128x128 pixels).</p>
+      <p align="justify"><span class="petis-12-Bleu">Probl&egrave;mes &agrave; 
+        r&eacute;soudre :</span><br>
+        La palette de couleur utilis&eacute;e par les ic&ocirc;nes n'est pas celle 
+        de l'ATARI car sous Windows la notion de palette n'existe pas. Seules 
+        les 16 premi&egrave;res couleurs doivent &ecirc;tre respect&eacute;es 
+        pour afficher correctement l'interface graphique. D'ailleur celles-ci 
+        sont presque les m&ecirc;mes que le mode 16 couleurs de l'ATARI, mais 
+        dans un ordre diff&eacute;rent. En mode 256 couleurs et plus, la palette 
+        Windows peut donc changer &agrave; volont&eacute;.</p>
+      <p align="justify">Dans le cas d'une ic&ocirc;ne en 4 bits (16 couleurs), 
+        il y a donc une simple r&eacute;organisation de l'ordre des couleurs pour 
+        pouvoir l'afficher sur son ATARI. Ce n'est pas la m&ecirc;me chose pour 
+        le mode 8 bits (256 couleurs). Il faut recalculer les couleurs les plus 
+        proches de la palette de l'ATARI en fonction de celle des ic&ocirc;nes. 
+        Cela n&eacute;cessite plus de temps et en fonction des couleurs d'origines, 
+        le r&eacute;sultat peut ne pas &ecirc;tre tr&egrave;s esth&eacute;tique. 
+        Mais dans plus de 95% des cas, le r&eacute;sultat est parfait comme le 
+        montre l' exemple ci-dessous :<br>
+      </p></td>
+  </tr>
+  <tr> 
+    <td height="19" valign="top" class="petis-12">&nbsp;</td>
+    <td height="19" valign="middle" class="petis-12"> <div align="center"><img src="../../Images/Atabandeau.jpg" width="517" height="1"></div></td>
+  </tr>
+  <tr> 
+    <td height="150" valign="top" class="petis-12"><div align="center"><br>
+      </div></td>
+    <td height="150" valign="top" class="petis-12"><div align="center">Ic&ocirc;nes 
+        en 32 x 32 pixels trait&eacute;es par Icon Extract<br>
+        <br>
+        <img src="../Images/Extract/RSC256di.jpg" width="586" height="452"> </div></td>
+  </tr>
+  <tr> 
+    <td height="19" valign="top" class="petis-12">&nbsp;</td>
+    <td height="19" valign="middle" class="petis-12"><div align="center"><img src="../../Images/Atabandeau.jpg" width="517" height="1"></div></td>
+  </tr>
+  <tr> 
+    <td height="274" valign="top" class="petis-12"> <div align="center"> 
+        <p><br>
+          <br>
+        </p>
+      </div></td>
+    <td valign="top" class="petis-12"> <div align="center">Probl&egrave;me des 
+        palettes 256 couleurs (&agrave; gauche Windows, &agrave; droite Atari)<br>
+        <br>
+        <img src="../Images/Extract/Pal256wi.gif" width="228" height="229">&nbsp; 
+        <img src="../Images/Extract/Pal256at.gif" width="228" height="229"></div></td>
+  </tr>
+  <tr> 
+    <td height="19" valign="top" class="petis-12">&nbsp;</td>
+    <td height="19" valign="middle" class="petis-12"><div align="center"><img src="../../Images/Atabandeau.jpg" width="517" height="1"></div></td>
+  </tr>
+  <tr> 
+    <td height="91" valign="top" class="petis-12"><span class="grand-titre-2"><br>
+      <br>
+      </span></td>
+    <td valign="top" class="petis-12"> <div align="center">Probl&egrave;me des 
+        palettes 16 couleurs (&agrave; gauche Windows, &agrave; droite Atari)<br>
+        <span class="grand-titre-2"><br>
+        <img src="../Images/Extract/PalWindo.jpg" width="294" height="24" align="absmiddle">&nbsp;<img src="../Images/Extract/PalAtari.jpg" width="294" height="24" align="absmiddle"></span></div></td>
+  </tr>
+  <tr>
+    <td height="19" valign="top" class="petis-12">&nbsp;</td>
+    <td valign="top" class="petis-12">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="25" valign="top" class="petis-12"><img src="../../../Images/Bleu.jpg" width="25" height="25"></td>
+    <td valign="top" class="petis-12"><a href="Bugs.htm" target="_parent">Page 
+      suivante</a></td>
+  </tr>
+  <tr>
+    <td height="25" valign="top" class="petis-12"><img src="../../../Images/Bleu.jpg" width="25" height="25"></td>
+    <td valign="middle" class="petis-12"><a href="../Index.htm" target="_parent">Retour 
+      au menu</a></td>
+  </tr>
+</table>
+</body>
+</html>

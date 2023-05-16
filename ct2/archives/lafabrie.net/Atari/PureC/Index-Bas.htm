@@ -1,0 +1,269 @@
+<html>
+<head>
+<title>Programmer le GEM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+var nJag = 0;
+var ImgDiapoJag = new Array(); 
+ImgDiapoJag[0] = "Images/alien_vs_predator.jpg"; 
+ImgDiapoJag[1] = "Images/atari_kart.jpg"; 
+ImgDiapoJag[2] = "Images/bubsy.jpg"; 
+ImgDiapoJag[3] = "Images/canon_fodder.jpg"; 
+ImgDiapoJag[4] = "Images/dino_dunes.jpg"; 
+ImgDiapoJag[5] = "Images/doom.jpg"; 
+ImgDiapoJag[6] = "Images/double_dragon.jpg"; 
+ImgDiapoJag[7] = "Images/flip_out.jpg"; 
+ImgDiapoJag[8] = "Images/kasumi_ninja.jpg"; 
+ImgDiapoJag[9] = "Images/pinball_fantasie.jpg"; 
+ImgDiapoJag[10] = "Images/power_rally.jpg"; 
+ImgDiapoJag[11] = "Images/raiden.jpg"; 
+ImgDiapoJag[12] = "Images/super_burnout.jpg"; 
+ImgDiapoJag[13] = "Images/theme_park.jpg"; 
+ImgDiapoJag[14] = "Images/wolfensten_3d.jpg"; 
+ImgDiapoJag[15] = "Images/zool_2.jpg"; 
+var NbrImgJag = (ImgDiapoJag.length - 1); 
+function DiapoJag(d) 
+{ 
+	nJag = nJag + d; 
+	if (nJag < 0) { 
+		nJag = NbrImgJag; } 
+	if (nJag > NbrImgJag) {
+		 nJag = 0; } 
+	document.MyimgJag.src = ImgDiapoJag[nJag]; 
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+<link href="../../css/perso.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" link="#669999" vlink="#CCCCCC" alink="#00CCCC" leftmargin="5" topmargin="0" marginwidth="5" marginheight="0">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td colspan="2" rowspan="9" valign="top"><div align="center"><a href="../Extract/Images/Extract/Ecran.jpg" target="_blank"><img src="Images/library.jpg" width="256" height="192" alt="Cliquer pour aggrandir l'image" border="0"></a><span class="petis-12"><br>
+        </span><span class="petis-10">Programmer le GEM avec<br>
+        PURE C et Interface</span><span class="petis-12"><br>
+        </span><span class="petis-12-Gras"><img src="../../Images/carton1.jpg" width="76" height="64" align="absmiddle"></span><span class="petis-12"><br>
+        <font size="-1" face="Arial, Helvetica, sans-serif" color="#FFCC66"><br>
+        </font> </span></div></td>
+    <td valign="middle" height="19" colspan="3" align="left"> <div align="center"><img src="../Images/Atabandeau.jpg" width="517" height="1"></div></td>
+  </tr>
+  <tr> 
+    <td valign="middle" height="19" colspan="3" align="left"> <p align="center" class="grand-titre-2">ProgrammER 
+        le GEM</p></td>
+  </tr>
+  <tr> 
+    <td valign="middle" height="19" colspan="3" align="left"> <div align="center"><img src="../Images/Atabandeau.jpg" width="517" height="1"></div></td>
+  </tr>
+  <tr> 
+    <td height="25" colspan="3" align="center" valign="middle">
+<div align="center"> </div>
+      <div align="center" class="petis-12-Gras">Une interface de programmation 
+        ais&eacute;e</div></td>
+  </tr>
+  <tr> 
+    <td width="26" height="25" align="center" valign="top">&nbsp;</td>
+    <td colspan="2" valign="middle" class="petis-12"><div align="center"> 
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="305" height="160">
+          <param name="movie" value="Atarigem.swf">
+          <param name="quality" value="high">
+          <param name="LOOP" value="false">
+          <embed src="Atarigem.swf" width="305" height="160" loop="false" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"></embed></object>
+      </div></td>
+  </tr>
+  <tr> 
+    <td height="144" align="center" valign="top">&nbsp;</td>
+    <td width="109" align="center" valign="top"> <div align="left"><img src="Images/Interfacebis.jpg" width="108" height="144"></div></td>
+    <td align="center" valign="middle"> <div align="justify"><span class="petis-12">Pour 
+        bien programmer sur Atari, il faut un bon compilateur C et un &eacute;diteur 
+        de ressource. D&eacute;s le d&eacute;part, j'ai achet&eacute; une version 
+        de PURE C (1.1) et Interface 2.33. Ce dernier est desormais en t&eacute;l&eacute;chargement 
+        libre sur le site de Hadley (rubrique GFA) </span><span class="petis-12">ou 
+        sur le site ftp de Cham&eacute;lie en Belgique (lien direct) :</span><br>
+        <img src="Images/Telecharger.jpg" width="115" height="62"> <br>
+        <a href="http://www.hadley.de/" target="_blank">http://www.hadley.de/</a><br>
+        <a href="ftp://chapelie.rma.ac.be/atari/programming/intrface.zip%20" target="_blank">ftp://chapelie.rma.ac.be/atari/programming/intrface.zip 
+        </a><br>
+        <br>
+      </div></td>
+  </tr>
+  <tr> 
+    <td height="144" align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top"> <div align="justify" class="petis-12">Interface 
+        est livr&eacute; avec la librairie pour PURE C : XRSRC (gestion des fichiers 
+        RSC de plus de 64 Ko) et <a href="http://www.gwdg.de/%7Embernau/german/software.html" target="_blank">Mydial</a> 
+        (objet USERDEF). La derni&egrave;re version 2.19 est disponible sur le 
+        site de son auteur :<br>
+        <img src="Images/Telecharger.jpg" width="115" height="62"><br>
+        <a href="http://www.gwdg.de/%7Embernau/german/software.html">http://www.gwdg.de/~mbernau/german/software.html</a></div></td>
+  </tr>
+  <tr> 
+    <td height="144" align="center" valign="top">&nbsp;</td>
+    <td><img src="Images/PureCbis.jpg" width="108" height="144"></td>
+    <td class="petis-12">Pure C est toujours un logiciel commercial, son pr&eacute;d&eacute;cesseur 
+      : <a href="http://www.borland.com">TURBO C</a> (versions Dos et Atari), 
+      de l'&eacute;diteur <a href="http://www.borland.com" target="_blank">Borland</a> 
+      est pass&eacute; en diffusion libre voici quelques temps. Les pages de t&eacute;l&eacute;chargement 
+      du <a href="http://bdn.borland.com/article/0,1410,20841,00.html" target="_blank">mus&eacute;e 
+      Borland</a> pour la version Atari &eacute;tant tr&egrave;s difficiles &agrave; 
+      trouver, je l'ai mis en t&eacute;l&eacute;chargement ici :<br> <img src="Images/Telecharger.jpg" width="115" height="62"> 
+      <br> <a href="../T%E9l%E9chargements/TURBOC.ZIP">T&eacute;l&eacute;charger 
+      Turbo C </a></td>
+  </tr>
+  <tr> 
+    <td height="899" align="center" valign="top">&nbsp;</td>
+    <td colspan="2" align="center" valign="top"><div align="justify" class="petis-12"> 
+        <p>Pour apprendre et bien conna&icirc;tre le fonctionnement du GEM, je 
+          conseille un certain nombre d'ouvrage (peut &ecirc;tre difficile &agrave; 
+          trouver actuellement). Le plus complet est le <a href="http://www.fortunecity.com/skyscraper/apple/308/" target="_blank">Compendium</a>. 
+          Son auteur a mis son ouvrage en ligne au format HTML &agrave; l'adresse 
+          suivante :<br>
+          <a href="http://www.fortunecity.com/skyscraper/apple/308/" target="_blank">http://www.fortunecity.com/skyscraper/apple/308/</a><br>
+          <br>
+          Une version au format ST-Guide avait &eacute;t&eacute; con&ccedil;ue 
+          par un groupe de pasionn&eacute;s, mais l'auteur du <a href="http://www.fortunecity.com/skyscraper/apple/308/" target="_blank">Compendium</a> 
+          a refus&eacute; sa diffusion. Par contre, on peut trouver sur diff&eacute;rents 
+          sites ftp, d'autres fichiers au format HYP comme par exemple TOS.HYP 
+          (de Rolf Kotzian et maintenant reprit par <a href="http://www.mbernstein.de" target="_blank">Michael 
+          Bernstein</a>), qui d&eacute;crit tout sur les fonctions du TOS.<br>
+          <a href="ftp://chapelie.rma.ac.be/atari/TOS/tos_30m.zip" target="_blank">ftp://chapelie.rma.ac.be/atari/TOS/tos_30m.zip</a><br>
+          <a href="ftp://chapelie.rma.ac.be/atari/docs/hypertext/tos_hyp.zip" target="_blank">ftp://chapelie.rma.ac.be/atari/docs/hypertext/tos_hyp.zip<br>
+          </a><br>
+          Pour pouvoir programmer des applications sous Magic (un syst&egrave;me 
+          multitache qui remplace le TOS), un auteur anglais a traduit la documentation 
+          developpeur d'origine allemande :<br>
+          <a href="http://www.bygjohn.fsnet.co.uk/atari/index.html" target="_blank">http://www.bygjohn.fsnet.co.uk/atari/index.html<br>
+          <br>
+          </a>La m&ecirc;me chose existe pour <a href="http://www.freemint.de" target="_blank">MiNT</a> 
+          (le successeur de MultiTOS de chez Atari Corp) :<br>
+          <a href="http://www.freemint.de" target="_blank">http://www.freemint.de</a><br>
+          <br>
+          Pour b&eacute;n&eacute;ficier des routines graphiques suppl&eacute;mentaires 
+          impl&eacute;ment&eacute;es par le programme <a href="http://www.nvdi.de" target="_blank">NVDI</a>, 
+          ses auteurs ont mis en t&eacute;l&eacute;chargement quelques sources 
+          et une documentation au format HTML. On y trouvera &eacute;galement 
+          celles concernant le programme r&eacute;sident WDIALOG :<br>
+          <a href="http://www.nvdi.de" target="_blank">http://www.nvdi.de</a><br>
+          <br>
+          Voici quelques liens pour t&eacute;l&eacute;charger des librairies pr&ecirc;tes 
+          &agrave; l'emploi et quelques informations d&eacute;veloppeurs. Bonne 
+          programmation.<br>
+          <br>
+          LDG<br>
+          AADS<br>
+          <a href="http://olivier.landemarre.free.fr/" add_date="917971273" last_visit="960383074" last_modified="917971269" target="_blank">Olivier 
+          LANDEMARRE Gem Programmation</a><br>
+          <a href="http://olivier.landemarre.free.fr/" add_date="921760149" last_visit="966952245" last_modified="921760148" target="_blank">Programmation 
+          ATARI - GEM</a><br>
+          <a href="http://www.willowsp.u-net.com/andy/atari/" add_date="966849751" last_visit="981555360" last_modified="966849738" target="_blank">Atari 
+          Company-Confidential document</a><br>
+          <a href="http://gemtos.free.fr/" add_date="972552466" last_visit="982837280" last_modified="972552459" target="_blank">GEMTOS 
+          : a collection of TOS manuals</a><br>
+          <a href="http://devdoc.free.fr/" class="petis-12">Devdoc</a><br>
+          <br>
+          <span class="petis-12-Bleu">Quelques ouvrages (certainement dificiles 
+          &agrave; trouver actuellement) peuvent vous aider. N'h&eacute;sitez 
+          pas &agrave; consulter les sites d'ench&egrave;res ou de ventes d'occasions.<br>
+          </span><a href="http://www.ebay.fr" target="_blank">http://www.ebay.fr</a><br>
+          <a href="http://www.aucland.fr" target="_blank">http://www.aucland.fr</a><br>
+          <a href="http://www.okazoo.com%20" target="_blank">http://www.okazoo.com 
+          </a></p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr class="petis-12"> 
+            <td width="1" bgcolor="#336699" class="petis-12-Bleu">&nbsp; </td>
+            <td bgcolor="#336699" class="petis-12-Bleu"> <div align="center"><font color="#FFCC66">Livre 
+                n&deg;1</font></div></td>
+            <td bgcolor="#336699"> <div align="center" class="petis-12-Bleu"><font color="#FFCC66">Livre 
+                n&deg;2</font></div></td>
+            <td bgcolor="#336699"> <div align="center" class="petis-12-Bleu"><font color="#FFCC66">Livre 
+                n&deg;3</font></div></td>
+            <td width="1" bgcolor="#336699">&nbsp;</td>
+          </tr>
+          <tr class="petis-12"> 
+            <td width="1" bgcolor="#336699">&nbsp; </td>
+            <td> <div align="center"><img src="Images/Tome1et2bis.jpg" width="108" height="144"></div></td>
+            <td> <div align="center"><img src="Images/Compendiumbis.jpg" width="108" height="144"></div></td>
+            <td> <div align="center"><img src="Images/Dddfsbis.jpg" width="108" height="144"></div></td>
+            <td width="1" bgcolor="#336699">&nbsp;</td>
+          </tr>
+          <tr class="petis-12"> 
+            <td width="1" valign="top" bgcolor="#336699">&nbsp; </td>
+            <td valign="top" bgcolor="#336699"> <div align="center"><font color="#FFFFFF">Le 
+                livre du developpeur <br>
+                tome 1 et 2<br>
+                Editeur : Micro Application<br>
+                R&eacute;f&eacute;rence : <br>
+                ML 764 (Tome 1)<br>
+                ML 589 (Tome 2)<br>
+                ML 689 (Tome 2 + disquette)<br>
+                Num&eacute;ro ISBN :<br>
+                2-86899-402-4 (Tome 1)<br>
+                2-86899-266-8 (Tome 2) </font></div></td>
+            <td valign="top" bgcolor="#336699"> <div align="center"><font color="#FFFFFF">The 
+                Atari Compendium<br>
+                <br>
+                Editeur : SDS Publishing<br>
+                <br>
+                <br>
+                <br>
+                <br>
+                Num&eacute;ro ISBN :<br>
+                0-9638331-0-3 </font></div></td>
+            <td valign="top" bgcolor="#336699"> <div align="center"><font color="#FFFFFF">DDFS<br>
+                <br>
+                Auteur : Emmanuel CROMBEZ</font></div></td>
+            <td width="1" valign="top" bgcolor="#336699">&nbsp;</td>
+          </tr>
+          <tr class="petis-12"> 
+            <td colspan="2" valign="top"><img src="../../Images/carre-bleu.jpg" width="100%" height="1"></td>
+            <td valign="top"><img src="../../Images/carre-bleu.jpg" width="100%" height="1"></td>
+            <td colspan="2" valign="top"><img src="../../Images/carre-bleu.jpg" width="100%" height="1"></td>
+          </tr>
+        </table>
+      </div></td>
+  </tr>
+  <tr> 
+    <td height="64" colspan="2" valign="top">&nbsp;</td>
+    <td align="center" valign="middle">&nbsp;</td>
+    <td colspan="2" align="center" valign="top"><div align="left"><span class="petis-12"><br>
+        Vous pouvez &eacute;galement trouver des documents ou des exemples de 
+        programmation sur Internet en utilisant des moteurs comme <a href="http://www.google.fr" target="_blank">Google</a>.<br>
+        </span><br>
+      </div></td>
+  </tr>
+  <tr> 
+    <td height="19" colspan="2" valign="top">&nbsp;</td>
+    <td align="center" valign="middle"><font color="#FFCC66"><b><img src="../../Images/Bleu.jpg" width="25" height="25"></b></font></td>
+    <td colspan="2" align="center" valign="middle"> <div align="left" class="petis-12">Mes 
+        exemples de programmation sous GEM (Pure C et Interface)</div></td>
+  </tr>
+  <tr> 
+    <td height="19" colspan="2" valign="top">&nbsp;</td>
+    <td align="center" valign="middle">&nbsp;</td>
+    <td colspan="2" align="center" valign="middle"><div align="left" class="petis-12-Bleu"></div></td>
+  </tr>
+  <tr> 
+    <td height="85" colspan="2" valign="top">&nbsp;</td>
+    <td align="center" valign="middle">&nbsp;</td>
+    <td width="109" align="center" valign="middle"><img src="Images/Page-Compendiumbis.jpg" width="108" height="81"><br> 
+    </td>
+    <td width="609" align="center" valign="middle" class="petis-12"> <div align="justify">En 
+        cours de r&eacute;alisation...<br>
+        <img src="Images/Telechargercode.jpg" width="115" height="62"> </div></td>
+  </tr>
+  <tr> 
+    <td colspan="2" valign="top">&nbsp;</td>
+    <td align="center" valign="middle">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top" class="petis-12">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>
