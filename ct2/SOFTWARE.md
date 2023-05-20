@@ -55,9 +55,7 @@ If there hasn't been an error, SCSI should be fine. If there has been an error, 
 
 Audio quality has to be verified using a good application whether there aren't any audible crackles.
 
-*Applies to rev.A:*
-
-In case of a trouble with SCSI and/or audio locate four small square-shaped solder pads on the CT2A card (below the new CPU, between the small 14-pin ICs). The two leftmost pads are connected together with a solder bridge. Cut this bridge and create another solder bridge on the two rightmost pads. This puts a new SDMA timing in effect. Test everything again.
+In case of a trouble with SCSI and/or audio locate four small square-shaped solder pads on the CT2 card (below the new CPU, between the small 14-pin ICs). The two leftmost pads are connected together with a solder bridge. Cut this bridge and create another solder bridge on the two rightmost pads. This puts a new SDMA timing in effect. Test everything again.
 
 ## Patches
 
