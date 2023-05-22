@@ -82,7 +82,7 @@ Cut as close as possible to the mother board the left pin of L102 which is locat
 
 ![L102 pin](cpu.gif)
 
-***Explanation:** The bent pin is the 32.084988 (PAL) / 32.215905 (NTSC) master clock input. Through the L102 it then leads to Combel's pin 20 (CLK) and Videl's pin 44 (CLK32).*
+***Explanation:** The bent pin is the 32.084988 (PAL) / 32.215905 (NTSC) master clock input. Through the L102 it then leads to Combel's pin 20 (CLK) and Videl's pin 44 (CLK32).*[\*\*\*\*](NOTES.md#videl-why-clk32-pin-44-gets-50-mhz-and-not-extclk-pin-14-)
 
 If it wasn't done already, **remove** the resistors or solder bridge on **R221** and **R222** on the right side of the CPU (see picture). If there is a solder bridge or there is no resistor on **R216**, you will need to **place one there** (after removing the eventual bridge), using the one furnished on this paper. Without this resistor on R216, the CT2B may not work correctly !
 Be carefull that the track around the R216 place is not cut !
