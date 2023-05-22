@@ -8,9 +8,6 @@
 
 *Centek had published this explanation: External clock from CT2B is not wired because of a recently discovered disturbance of the DSP clock! It is not recommended to use this feature as it will be no longer supported!*
 
-## Videl: why CLK32 (pin 44) gets 50 MHz and not EXTCLK (pin 14) ?
-**(\*\*\*)** At first it looks very logical -- keep 32 MHz on `CLK32` to have RGB modes compatible with the original timing and feed `EXCTCLK` with 50 MHz for extended resolutions. However the problem is that Videl is synchronized with Combel for ST-RAM accesses via pin 44. For that reason the 32 MHz master clock (which later gets divided by two for the CPU, FPU, bus, ...) is feed equally to both Combel and Videl. In comparison, EXTCLK is purely used only for video modes, not synchronization, so it doesn't make any harm to overclock it.
-
 ## Atari VGA adaptor
 
 ![Atari VGA adaptor](atari_vga.jpg)
@@ -22,6 +19,9 @@ The modification proposed by Centek connects pin 15 and pin 11 together (having 
 Another approach is to desolder SMT resistor R49 which connects Videl's pin 14 and DB19's pin 15 on the PCB.
 
 Either way, you need this modification (or another adaptor) only if you care about a backward compatible 32 MHz clock for the Videl. Previously you might have been interested to do this modification if you prefered some other Videl accelerator (Screen Blaster, BlowUP etc) but since that option has been [no longer recommended](#external-video-clock) it's really only about backward compatiblity for 32 MHz VGA modes (which have to be created by a 3rd party, TOS uses 25.175 MHz in VGA by default).
+
+## Videl: why CLK32 (pin 44) gets 50 MHz and not EXTCLK (pin 14) ?
+**(\*\*\*\*)** At first it looks very logical -- keep 32 MHz on `CLK32` to have RGB modes compatible with the original timing and feed `EXCTCLK` with 50 MHz for extended resolutions. However the problem is that Videl is synchronized with Combel for ST-RAM accesses via pin 44. For that reason the 32 MHz master clock (which later gets divided by two for the CPU, FPU, bus, ...) is feed equally to both Combel and Videl. In comparison, EXTCLK is purely used only for video modes, not synchronization, so it doesn't make any harm to overclock it.
 
 ## CENTurbo II Rev A vs. Rev B
 There is a few differences between the two revisions:
