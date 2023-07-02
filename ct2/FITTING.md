@@ -147,71 +147,59 @@ FOLLOW THESE RULES:
 
 Solder:
 - the wires n1 (A) on the pin 13 of U62.
-
-***Explanation:** CT2 -> ADDR0*
+    - ***Explanation:** CT2 -> ADDR0*
 
 - the wire  n2 (E) on the pin 6 of U62.
-
-***Explanation:** CT2 -> QC*
+    - ***Explanation:** CT2 -> QC*
 
 - the wire n3 (8) on the pin 1 of U63. *(Applies to rev.A only)*[\*](NOTES.md#removal-of-old-cpu)
-
-***Explanation:** U63's pin 1 (CLK) had (now disabled) CPUCLKB clock here. This replaces the original 16 MHz clock with 8 MHz and continues to the old CPU.*
+    - ***Explanation:** U63's pin 1 (CLK) had (now disabled) CPUCLKB clock here. This replaces the original 16 MHz clock with 8 MHz and continues to the old CPU.*
 
 - the wire n4 (MB) on the motherboard: the pin left of the L102 placement (and not the pin of L102 that is bent up).
-
-***Explanation:** CT2's 50 MHz clock feeding back to the motherboard.*
+    - ***Explanation:** CT2's 50 MHz clock feeding back to the motherboard.*
 
 - the wire n5 (SWG) on the superior pin of the switch.
-
-***Explanation:** Ground for the CT2 on/off switch.*
+    - ***Explanation:** Ground for the CT2 on/off switch.*
 
 - the wire n6 (L102) on the left pin of L102 (see picture).
 
-![L102 wire](cpu.gif)
+  ![L102 wire](cpu.gif)
 
-***Explanation:** The original master clock is fed to CT2 here.*
+    - ***Explanation:** The original master clock is fed to CT2 here.*
 
 - the wire n7 (SWS) on the middle pin of the switch.
-
-***Explanation:** CT2 'on' wire.*
+    - ***Explanation:** CT2 'on' wire.*
 
 - the wire n8 (AK) on the pin 3 and 4 of the keyboard ACIA.
-
-***Explanation:** 500 kHz clock to the keyboard ACIA's RXC/TXC pins.*
+    - ***Explanation:** 500 kHz clock to the keyboard ACIA's RXC/TXC pins.*
 
 - the wire n9 (AM) on the pin 3 and 4 of the MIDI ACIA.
-
-***Explanation:** 500 kHz clock to the MIDI ACIA's RXC/TXC pins.*
+    - ***Explanation:** 500 kHz clock to the MIDI ACIA's RXC/TXC pins.*
 
 - the wire n10 (U44) on the pin 15 of U44 socket (NOT the chip). Break the pin 15 of the chip U44, and insert it back on its socket.
-
-***Explanation:** U44's DSP Chip Select signal is replaced by the one from CT2.*
+    - ***Explanation:** U44's DSP Chip Select signal is replaced by the one from CT2.*
 
 - the wire n11 (DSP) on the cut track going to the DSP.
-
-***Explanation:** CT2's 50 MHz clock feeding the DSP.*
+    - ***Explanation:** CT2's 50 MHz clock feeding the DSP.*
 
 - the wire n12 (SDMA) on the cut track and resistor connection near the SDMA (see picture).
 
   ![SDMA wire](sdma_e.gif)
 
-***Explanation:** CT2's 25 MHz clock feeding the SDMA.*
+    - ***Explanation:** CT2's 25 MHz clock feeding the SDMA.*
 
 - the wire n13 (VID) on the tinned hole of the VIDEL. *(Applies to rev.A only)*[\*\*](NOTES.md#external-video-clock)
-
-***Explanation:** CT2's 32 MHz clock (most likely the original Falcon's master clock) feeding the VIDEL on its external clock input.*
+    - ***Explanation:** CT2's 32 MHz clock (most likely the original Falcon's master clock) feeding the VIDEL on its external clock input.*
 
 - the wire n14 (+12) on the front pin of R178 (see picture).
 
-![R178 wire](cpu.gif)
+  ![R178 wire](cpu.gif)
 
-***Explanation:** +12V to power the CT2.*
+    - ***Explanation:** +12V to power the CT2.*
 
 - the wire n15 (IW) with the wire n23 of the IDE  cable (the one that goes to the peripheral).
 - the wire n16 (IR) with the wire n25 of the IDE  cable (the one that goes to the peripheral).
-
-***Explanation:** CT2's replacement signals for IDE I/O access.*
+    - ***Explanation:** CT2's replacement signals for IDE I/O access.*
 
 Remove the jumper of the mother board bus.
 Put the power supply unit back in and remove the screw in the bottom right corner that fix the supply PCB on the metal bracket (the heatsink/fan module of the CT2 will need place).
