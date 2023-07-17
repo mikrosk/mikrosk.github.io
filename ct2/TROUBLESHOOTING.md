@@ -34,3 +34,5 @@ did work mostly, but then I noted erroneous data for CD-ROM reads, and in the en
 
 I had a problem getting HD Driver and ExtenDos Gold working in the Turbo Modes on my CT2B Falcon. I finally found the problem. The Solution was to change the resistor that came with the CT2B for the SDMA to a 100 Ohm resistor. I used the 100 Ohm resistor from the Nemesis 25/50 Buffer Modification. I had replaced that resistor with the one from Centek. HD Driver and ExtenDos Gold worked the first time I tried them in Turbo Mode. Now all drives including the CDR and CDROM work excellent
 in normal and Turbo Mode. *(Phantomm)*
+
+**Random bus errors when booting FreeMiNT**: The solution for my falcon was to replace the cable to the DMA controller with a coax cable and (while hot summer days) to install a cooler on the CT2b itself. Since these modifications are done it works without crashes for days. *(Ralph Lowinski)*
