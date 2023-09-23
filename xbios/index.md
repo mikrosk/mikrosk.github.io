@@ -44,11 +44,11 @@ Reiplementation of GSXB for [MagicMac](http://www.application-systems.de/magicma
 - Author: Richard Kurz, Joachim Fornallaz
 - Author's website: [http://jf.omnis.ch](http://jf.omnis.ch) (no direct binary download available)
 - Last known version: 1.2.0 (16/12/1999)
-- Hardware: MagicMac
+- Hardware: ST, STE, TT, Falcon, MagicMac
 - Presence: [\_SND cookie](http://toshyp.atari.org/en/003007.html#Cookie_2C_20_SND) bit 2&4,`McSn` cookie
 - Download: [macsound.lzh](files/macsound.lzh) (documentation + driver)
 
-This seems to a driver provided directly by ASH for their commercial product, MagicMac. It doesn't set [\_SND cookie](http://toshyp.atari.org/en/003007.html#Cookie_2C_20_SND) bit 5, perhaps because it predates the Extended XBIOS "standard".
+This seems to a driver provided directly by ASH for their commercial product, MagicMac. It doesn't set [\_SND cookie](http://toshyp.atari.org/en/003007.html#Cookie_2C_20_SND) bit 5, perhaps because it predates the Extended XBIOS "standard". However Atari machines are also supported, on the ST 12.5 kHz/8-bit mono is emulated.
 
 ### STFA
 - Author: Seb/the Removers
