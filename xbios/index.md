@@ -69,3 +69,8 @@ Unlike previous drivers, this one reimplements all functions little bit differen
 - Download: [xsound.zip](files/xsound.zip) (documentation + driver + source)
 
 Perhaps one of the first XBIOS API "emulators". A separate version for the Yamaha (ST) and DMA (STE/TT) sound is provided. It supports the the `McSn` cookie / API for querying available features.
+
+---
+
+Struggling with supporting all of those in one, unified way? Take a look at my project: https://github.com/mikrosk/atari_sound_setup.
+
