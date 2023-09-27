@@ -72,5 +72,5 @@ Perhaps one of the first XBIOS API "emulators". A separate version for the Yamah
 
 ---
 
-Struggling with supporting all of those in one, unified way? Take a look at my project: https://github.com/mikrosk/atari_sound_setup.
+Struggling with supporting all of those in one, unified way? Take a look at my project: [Atari Sound Setup](https://github.com/mikrosk/atari_sound_setup).
 
