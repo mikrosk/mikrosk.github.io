@@ -59,7 +59,7 @@ This makes only 17 (rev.1) + 59 (rev.2) = 76 publicly known Sparrows in the worl
 The following documents were found & rescued by [Christian Zietz](https://www.chzsoft.de) and first published at [atari-home.de](https://forum.atari-home.de/index.php/topic,13380.msg214172.html#msg214172):
 
 - [Sparrow specification (dated Dec 18 1991)](sparrow_specification_19911218.md) (converted into markdown by me)
-- [(Incomplete) Sparrow schematics (dated March 12 1991)](sparrow_schematics_19910312.pdf) (converted into PDF by Christian)
+- [(Incomplete) Sparrow schematics (dated Mar 12 1991 - Sep 13 1991: Moshe Segal, S. Moshe, John Horton)](sparrow_schematics_19910312.pdf) (converted into PDF by Christian)
 - [Falcon specification (dated Dec 3 1991)](falcon_specification_19911203.pdf) (converted into PDF by Christian)
 - [Falcon specification (dated Aug 26 1992)](falcon_specification_19920826.md) (converted into markdown by me)
 
@@ -97,7 +97,7 @@ So what became of this Falcon? The last available specifification confirms that 
 
 #### The Microbox
 
-However when we closely look at the [Microbox](https://www.maedicke.de/atari/hardware/microbox.htm)'s description (68030/68040 CPU, 32-bit data bus, 3 expansion slots), its [motherboard](https://www.computerhistory.org/collections/catalog/102672949) (we can see one huge expansion slot and pins of something what resembles VME prety well) and consider the fact that Ira Valenski (the [former ST/FM designer](http://www.computinghistory.org.uk/det/587/Atari-520-STM)) is directly mentioned in the Falcon specification and as the [design lead for the Microbox](http://www.atarimuseum.com/computers/16bits/falcon030/microbox/index.htm) we can speculate whether the Microbox wasn't the original Falcon project. Also, this prototype looks quite polished, so it could be the one from Aug'92.
+However when we closely look at the [Microbox](https://www.maedicke.de/atari/hardware/microbox.htm)'s description (68030/68040 CPU, 32-bit data bus, 3 expansion slots), its [motherboard](https://www.computerhistory.org/collections/catalog/102672949) (we can see one huge expansion slot and pins of something what resembles VME prety well) and consider the fact that Ira Valenski (the [former ST/FM designer](http://www.computinghistory.org.uk/det/587/Atari-520-STM)) is directly mentioned in the Falcon specification and as the [design lead for the Microbox](http://www.atarimuseum.com/computers/16bits/falcon030/microbox/index.htm) we can speculate whether the Microbox wasn't the original Falcon project. Also, this prototype looks quite polished, so it could be the one from Aug'92. The last trace of it can be found on the Atari HQ CD ROM: bill of materials, netlist and PCB placement plan, dated January 1993.
 
 According to some sources Atari had several (at least three) prototypes of the MicroBox but the memory controller was buggy; just before the release date its development was abandoned.
 
