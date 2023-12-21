@@ -15,7 +15,7 @@ When TOS clones like Medusa DirecT40/60, Hades, Milan or ARAnyM had become avail
 - Author's website: [http://www.woller.com/milanblaster/milanblaster.html](https://web.archive.org/web/20140510065954/http://www.woller.com:80/milanblaster/milanblaster.html)
 - Last known version: 2.1 (11/05/2000)
 - Hardware: Milan ISA/PCI cards
-- Presence: [\_SND cookie](http://toshyp.atari.org/en/003007.html#Cookie_2C_20_SND) bit 2&5, `nTOS` cookie
+- Presence: [\_SND cookie](http://toshyp.atari.org/en/003007.html#Cookie_2C_20_SND) bit 2&5, `nTOS` cookie, `McSn` cookie
 - Download: [mb_blast.lzh](files/mb_blast.lzh) (documentation)
 
 Officially bundled with the Milan's sound card (Milan + SoundBlaster = MilanBlaster).
