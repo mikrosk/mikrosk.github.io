@@ -15,7 +15,7 @@ When TOS clones like Medusa DirecT40/60, Hades, Milan or ARAnyM had become avail
 - Author's website: [http://www.woller.com/milanblaster/milanblaster.html](https://web.archive.org/web/20140510065954/http://www.woller.com:80/milanblaster/milanblaster.html)
 - Last known version: 2.1 (11/05/2000)
 - Hardware: Milan ISA/PCI cards
-- Presence: [\_SND cookie](http://toshyp.atari.org/en/003007.html#Cookie_2C_20_SND) bit 2&5, `nTOS` cookie, `McSn` cookie
+- Presence: [\_SND cookie](https://freemint.github.io/tos.hyp/en/bios_cookiejar.html#Cookie_2C_20_SND) bit 2&5, `nTOS` cookie, `McSn` cookie
 - Download: [mb_blast.lzh](files/mb_blast.lzh) (documentation)
 
 Officially bundled with the Milan's sound card (Milan + SoundBlaster = MilanBlaster).
@@ -25,7 +25,7 @@ Officially bundled with the Milan's sound card (Milan + SoundBlaster = MilanBlas
 - Author's website: [http://assemsoft.atari.org/gsxb](http://assemsoft.atari.org/gsxb)
 - Last known version: 0.16 Beta (08/2000)
 - Hardware: Milan and Hades PCI cards
-- Presence: [\_SND cookie](http://toshyp.atari.org/en/003007.html#Cookie_2C_20_SND) bit 2&5, `GSXB` cookie
+- Presence: [\_SND cookie](https://freemint.github.io/tos.hyp/en/bios_cookiejar.html#Cookie_2C_20_SND) bit 2&5, `GSXB` cookie
 - Download: [gsxb.lzh](files/gsxb/gsxb.lzh) (manager), [gsxbmix.lzh](files/gsxb/gsxbmix.lzh) (mixer app), [es1371.lzh](files/gsxb/es1371.lzh) (Sound Blaster AudioPCI 64V & Sound Blaster AudioPCI 128 driver)
 
 "**G**eneric **S**ound **XB**IOS" was Odd Skancke's answer to Milan's MilanBlaster since the official Hades manufacturer didn't provide any support in this area (Hades was based on TOS 3.06, i.e. without the sound API). Later he made the driver compatible also with Milan, virtually superseeding the original MilanBlaster.
@@ -35,7 +35,7 @@ Officially bundled with the Milan's sound card (Milan + SoundBlaster = MilanBlas
 - Author's website: [http://didierm.pagesperso-orange.fr/magxsnde.htm](http://didierm.pagesperso-orange.fr/magxsnde.htm)
 - Last known version: 0.97 (04/2002)
 - Hardware: MagicMac, Hades, ARAnyM
-- Presence: [\_SND cookie](http://toshyp.atari.org/en/003007.html#Cookie_2C_20_SND) bit 1&2&5, `MgSn` cookie
+- Presence: [\_SND cookie](https://freemint.github.io/tos.hyp/en/bios_cookiejar.html#Cookie_2C_20_SND) bit 1&2&5, `MgSn` cookie
 - Download: [magxsnd.zip](files/magxsnd.zip) (documentation + driver)
 
 Reiplementation of GSXB for [MagicMac](http://www.application-systems.de/magicmac) by Didier Méquignon. He later hadded support for Hades' Yamaha chip and MV16/PSOUND cards and after that for ARAnyM's SDL backend.
@@ -45,10 +45,10 @@ Reiplementation of GSXB for [MagicMac](http://www.application-systems.de/magicma
 - Author's website: [http://jf.omnis.ch](http://jf.omnis.ch) (no direct binary download available)
 - Last known version: 1.2.0 (16/12/1999)
 - Hardware: MagicMac
-- Presence: [\_SND cookie](http://toshyp.atari.org/en/003007.html#Cookie_2C_20_SND) bit 2&4,`McSn` cookie
+- Presence: [\_SND cookie](https://freemint.github.io/tos.hyp/en/bios_cookiejar.html#Cookie_2C_20_SND) bit 2&4,`McSn` cookie
 - Download: [macsound.lzh](files/macsound.lzh) (documentation + driver)
 
-This seems to a driver provided directly by ASH for their commercial product, MagicMac. It doesn't set [\_SND cookie](http://toshyp.atari.org/en/003007.html#Cookie_2C_20_SND) bit 5, perhaps because it predates the Extended XBIOS "standard".
+This seems to a driver provided directly by ASH for their commercial product, MagicMac. It doesn't set [\_SND cookie](https://freemint.github.io/tos.hyp/en/bios_cookiejar.html#Cookie_2C_20_SND) bit 5, perhaps because it predates the Extended XBIOS "standard".
 
 ### STFA
 - Author: Seb/the Removers
