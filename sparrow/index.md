@@ -33,6 +33,7 @@ The fourth number (from the right) serves as an ID for the PCB (x=0) and case (x
 - A3 25 31 0000 09
 - A3 25 31 0000 11 ("calculated" from the case s/n A3 25 11 0010 11)
 - A3 25 31 0000 13
+- A3 25 31 0000 15
 - A3 25 32 0000 23
 - A3 25 32 0000 25
 - A3 26 32 0000 32
