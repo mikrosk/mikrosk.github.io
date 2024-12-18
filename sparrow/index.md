@@ -12,6 +12,7 @@ As far as I know, only rev.2 PCB had its case available. The cases I have been a
 - A3 25 11 0010 09 (printed as "A3 25 11 00100 9")
 - A3 25 11 0010 11
 - A3 25 11 0010 13
+- A3 25 11 0010 15
 - A3 25 12 0010 23
 - A3 26 12 0010 33
 - A3 26 13 0010 34
