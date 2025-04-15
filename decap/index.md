@@ -27,6 +27,9 @@ francuz posyt
 
 https://www.exxosforum.co.uk/forum/viewtopic.php?p=121181&sid=4a8b42fbd2b6a742e3f5413cc3b4d457#p121181
 
+https://www.exxosforum.co.uk/forum/ucp.php?i=pm&mode=view&f=0&p=32726
+https://www.exxosforum.co.uk/forum/viewtopic.php?p=121181#p121181
+
 
 
 
