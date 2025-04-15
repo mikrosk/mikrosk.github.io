@@ -18,17 +18,33 @@ Over the time, various interesting resources and projects have seen the light of
 
 ... and some more (unfortunately, there is quite a chaos when it comes to finding the actual drawings and sources). Using those but also with a lot of patience and trial and error, people started building their own cores for the MiST(er) or even creating their own, like [zeST](https://zest.sector1.fr/) or [Suska](http://experiment-s.de/en/).
 
-With some simplification one could say that building your own ST and maybe even STE machine in FPGA is a real possibility today. However, when it comes to Falcon, this is
+With some simplification one could say that building your own ST and maybe even STE machine in FPGA is a real possibility today (and not only in FPGA, see the [H5 Phoenix](https://www.atari-forum.com/viewtopic.php?t=42588) or [Atari ST ATX](http://ataripcb.pl/atari_st_atx_v1.1.html)). However, when it comes to Falcon, this is a whole different matter. While the physical replica of Falcon PCB has been attempted at least twice:
 
-H5
-falcon03ng
-francuz posyt
+- [F030NG](https://github.com/salacpavel/F030NG) by Centuriontech (Pavel Salac)
 
+- [Falcon motherboard recreation](https://www.atari-forum.com/viewtopic.php?t=44454)
 
-https://www.exxosforum.co.uk/forum/viewtopic.php?p=121181&sid=4a8b42fbd2b6a742e3f5413cc3b4d457#p121181
+the actual chips must have been supplied either from a real Falcon or purchased from BEST Electronics or Wizztronics (from their limited supply of new old stock, of course). Apart from that, there was only one attempt to actually produce an enhanced replica of the Videl chip - the [SuperVidel](https://nature.atari.org/supervidel.html) project and even that one was based on guesswork, Hatari source code and the partial documentation available from demo coders.
+
+So it's time to change that!
+
+## But why, really?
+
+There are basically two, okay, three main bullet points for me:
+
+- to be able to switch your broken Videl (Combel, SDMA) chip for a new one, in case it gets damaged (Videl is the most common offender here, often due to usage of the original, non-recapped, power supplies)
+
+- to encourage development of new Falcon PCB replicas. Why? Well, let's say that the original Falcon PCB has so many defects and cheap solutions that it's miracle it is even working. And of course it open gates to further expansion, like onboard SATA/USB/Ethernet, better CPU/DSP etc
+
+- and the last but not least: to be able to uncover the custom ICs' secrets! There's a couple of clues (both from leaked TOS 4.04 source code and internal documents about the [Dallas Falcon project](https://mikrosk.github.io/sparrow/)) that Atari had in the works a true chunky-oriented 8bpp video so who knows, maybe there will be some clues about that.
+
+## The humble beginning
+
+https://www.exxosforum.co.uk/forum/viewtopic.php?p=121181#p121181
+
 
 https://www.exxosforum.co.uk/forum/ucp.php?i=pm&mode=view&f=0&p=32726
-https://www.exxosforum.co.uk/forum/viewtopic.php?p=121181#p121181
+
 
 
 
