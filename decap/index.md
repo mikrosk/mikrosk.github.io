@@ -1,10 +1,15 @@
-# Atari Falcon IC (Videl, Combel, SDMA) decap initiative
+# Atari Falcon's Videl decap initiative
 
 [What is this about?](#what-is-this-about)
-[## But why, really?](#but-why-really)
+
+[But why, really?](#but-why-really)
+
 [Humble beginnings](#humble-beginnings)
+
 [So here we are](#so-here-we-are)
+
 [Donations](#donations)
+
 [News](#news)
 
 ## What is this about?
@@ -31,7 +36,7 @@ With some simplification one could say that building your own cycle-accurate ST 
 
 - [Falcon motherboard recreation](https://leblogdecosmos.blogspot.com/2024/12/cm-falcon-030-sous-eagle.html) by Cosmos (ongoing)
 
-- [Microbox recreation](https://wizztronics.com/atari-news) by Wizztronics (see also the [AF thread](https://www.atari-forum.com/viewtopic.php?p=460347#p460347) and their [Facebook page](https://www.facebook.com/p/Wizztronics-100063913393264), ongoing)
+- [Microbox recreation](https://wizztronics.com/falcon-rebuild) by Wizztronics (see also the [AF thread](https://www.atari-forum.com/viewtopic.php?p=460347#p460347), [older website](https://wizztronics.com/atari-news) and their [Facebook page](https://www.facebook.com/p/Wizztronics-100063913393264), ongoing)
 
 the actual chips must have been supplied either from a real Falcon or purchased from [BEST Electronics](https://www.best-electronics-ca.com/custom-i.htm) or Wizztronics (from their limited supply of new old stock, of course). Apart from that, there was only one attempt to actually produce an enhanced replica of the Videl chip - the [SuperVidel](https://nature.atari.org/supervidel.html) project and even that one was based on guesswork, Hatari source code and the partial documentation available from demo coders.
 
@@ -75,7 +80,7 @@ Basically, ijor advised me the following:
 
 He reminded me again that this might take years and that he cannot commit himself at all or to make any kind of promises whatsoever but when it comes to it, his work would be for free. All the money would be spent on the process of acquiring the die pictures.
 
-So that got me thinking. BEST sells those ICs for $45 per piece, so perhaps this is a good opportunity to purchase them before they run out of stock. So that would solve the chipset availability problem (no need to desolder them from a Falcon). ijor has good contacts at a reliable (and somewhat cheap-ish) lab in China and most importantly, I'm in the mood to really do it! And so I did. I purchased all three ICs from BEST and shipped to to ijor. Then he shipped the Videl to the lab.
+So that got me thinking. BEST sells those ICs for $45 per piece, so perhaps this is a good opportunity to purchase them before they run out of stock. So that would solve the chipset availability problem (no need to desolder them from a Falcon). ijor has good contacts at a reliable (and somewhat cheap-ish) lab in China and most importantly, I'm in the mood to really do it! And so I did. I purchased all three ICs (Videl, Combel, SDMA) from BEST and shipped them to ijor. Then he shipped the Videl (for starters...) to the lab.
 
 And in March 2025 we got ...
 
@@ -87,7 +92,7 @@ And in March 2025 we got ...
 
 With the die's image several things became clearer. The most important one being that the die is pretty big. In comparison, this die is about 2.5 times larger than the one on the ST chipset. And it also uses a more modern, and hence, smaller, CMOS process. This would mean that the lab cost will be much higher. The lab charges by picture. Bigger die require more pictures. And also the more advanced CMOS process will require using higher resolution pictures, which again, means more pictures.
 
-It is always hard to say in advance but ijor estimates the lab cost for this chip would be somewhere **between 2000 USD and 3000 USD**. This funds don't have to be paid in advance. The lab doesn't charge until the job is completed and we received the images already (I guess this is thanks to the good relationship they have with ijor).
+It is always hard to say in advance but ijor estimates the lab cost for this chip would be somewhere **between $2000 USD and $3000 USD**. This funds don't have to be paid in advance. The lab doesn't charge until the job is completed and we received the images already (I guess this is thanks to the good relationship they have with ijor).
 
 The die is built with multiple layers one on top of the other. Metal layers are usually at the top and being wide and bright you can't see much of the actual silicon layers below.
 
@@ -96,6 +101,21 @@ The decap process is to take an image for one layer and then remove it with a pr
 After we receive the images we can start the long and tedious process to convert this to netlist, schematics, and/or HDL (Verilog/HDL). The exact step could vary depending on the case.
 
 ## Donations
+
+There are two aspects to it. The first one being, of course, that $3000 USD is quite a lot of money. So that begs the question whether other people wouldn't be willing to contribute. The second aspect being that I couldn't give ijor the go-ahead unless I was sure I got the funds ready which could take months, after which many things may have changed (like the price, or the lab's availability etc). So I decided the following:
+
+- I will be the one paying the bill, no matter what. Its exact sum will be published here once we get it.
+
+- Everyone who will have contributed will get a voting right (with a vote relative to the overall amount contributed) what to do with the acquired die pictures:
+  - we could release them as-is, making them available for both commercial (e.g. for the [Apollo](https://www.apollo-computer.com)) and open source developers
+  - we could release them under a strict free license like the GPL to make sure it will be used only for open source projects
+  - we could keep it in-house for some time for selected developers
+
+- Whatever decision will be, the pictures eventually *will* be released publicly, that's for sure. The only question is when (see above).
+
+- For a better idea what to expect, I'll remind you of another campaign, the restoration of [Geneva/Neodesk](https://gribnif.github.io) archive. For those unaware, in October 2016 Antoni Sawicki, also known as [tenox](https://www.tenox.net) (see also his [Atari System V website](http://www.atariunix.com)!), [contacted](https://www.atari-forum.com/viewtopic.php?p=303711#p303711) Dan Wilga with an inquiry about restoration of his old Atari TT hard drive. In May 2017 Dan's hard drive content had been recovered for a [hefty $1900 USD](https://www.atari-forum.com/viewtopic.php?p=319600#p319600). In addition to that, Atarian Computing (Joshua Kaijankoski) created a [petition](https://www.change.org/p/dan-wilga-open-source-geneva-neodesk) to show Dan how much anticipated the release of his products was. However it took nearly one more year to actually get the (now freeware) [updated executable files](https://atari-forum.com/viewtopic.php?p=339125#p339125) and then another **six** years the [source code](https://atari-forum.com/viewtopic.php?p=458217#p458217)!
+
+- So you see, your donation wont turn into a FPGA Videl overnight however in case of a successful run, we may get also Combel and SDMA ICs decaped in a similar way. Not to mention the motivation boost for all invoved to actually start reverse engineering them.
 
 ## News
 
