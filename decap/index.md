@@ -1,5 +1,20 @@
 # Atari Falcon's Videl decap initiative
 
+<form action="https://www.paypal.com/donate" method="post" target="_top">
+<input type="hidden" name="business" value="2W34Y3Y2S3W8L" />
+<input type="hidden" name="no_recurring" value="1" />
+<input type="hidden" name="item_name" value="Please don't forget to specify under which name or nickname should I publish your contribution. " />
+<input type="hidden" name="currency_code" value="USD" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_SK/i/scr/pixel.gif" width="1" height="1" />
+</form>
+
+Or you can use [Wise](https://wise.com/pay/me/miroslavk428)
+
+Or if you prefer EU IBAN transfer: SK37 5600 0000 0061 8230 8002
+
+(let me know in the message for recipient which name/nickname should I use for publishing your contribution)
+
 [What is this about?](#what-is-this-about)
 
 [But why, really?](#but-why-really)
