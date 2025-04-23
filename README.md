@@ -12,6 +12,7 @@ In order of appearance:
 - [Summary & drivers for various extended Atari XBIOS implementations](xbios/index.md)
 - [All resources related to the CENTurbo II (a.k.a. CT2) accelerator card at one place](ct2/index.md) (work in progress)
 - [Atari Sparrow resources](sparrow/index.md) (work in progress)
+- [Falcon IC decap initiative](decap/index.md) (work in progress)
 
 These are separate projects with browsable content:
 
