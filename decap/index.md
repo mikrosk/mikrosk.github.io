@@ -37,6 +37,8 @@ Over the time, various interesting resources and projects have seen the light of
 
 - [FX68K 68000 cycle accurate SystemVerilog core](https://github.com/ijor/fx68k) by ijor (Jorge Cwik)
 
+- [FX ST Blitter](https://github.com/ijor/stBlitter) by ijor (Jorge Cwik)
+
 - [Atari ST Shifter decap](https://www.atari-forum.com/viewtopic.php?t=29658) by ijor (Jorge Cwik) (on AF you can find posts about further decaps / analysis of the MCU and MMU, too)
 
 - [Blitter re-creation initiative](https://www.exxosforum.co.uk/forum/viewtopic.php?f=80&t=79) by Exxosforum folks
