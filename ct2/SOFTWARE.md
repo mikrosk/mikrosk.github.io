@@ -298,6 +298,22 @@ An option allows you to allow / prevent the setup from reading the CECILE.SYS se
 
 ## Source material
 
-- [CT2A JEDEC](files/ct2a.jed) ([ABL source](files/ct2a.abl))
-- [CT2B JEDEC](files/ct2b.jed) ([ABL source](files/ct2b.abl))
-- [CT2B Fast RAM JEDEC](files/ct2b_fr.jed) ([ABL source](files/ct2b_fr.abl))
+[CT2 CPLD files](files/ct2_cpld.7z) is a collection of all ABL/JED files which Rodolphe was able to dig from his harddisk:
+
+- ct2a - 2000-03-21.abl
+- ct2a - 2000-03-21.jed ; confirmed to be working by Stephane Barre
+- ct2b - 1999-01-11.abl
+- ct2b - 1999-01-11 (recompiled 2025).jed ; not confirmed to work yet
+- ct2b - 2000-03-23.abl
+- ct2b - 2000-03-23 (recompiled 2025).jed ; should be the same as  ct2b - 2000-03-24.jed (different compiler/optimisation flags?)
+- ct2b - 2000-03-24.jed ; doesn't seem to work
+- ct2b_fr - 1998-12-12.abl ; named fastram.abl
+- ct2b_fr - 2000-03-12.abl ; named as ct2_fro.abl
+- ct2b_fr - 2000-03-23.abl
+- ct2b_fr - 2000-08-28.jed
+
+N revisions (with fast ram being located at $01xxxxxx), never released/tested:
+
+- ct2an - 2000-03-16.abl
+- ct2bn - 2000-03-19.abl
+- ct2b_frn - 2000-03-23.abl
