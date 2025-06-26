@@ -26,8 +26,9 @@ Final sum for decap: **$8,021 USD**.
 | Contibutor  | Amount (USD) |
 | ------------- | ------------- |
 | anonymous      | 100 |
+| Lukasz Jokiel | 23.44 (20 EUR) |
 
-Funds collected: $100 USD.
+Funds collected: $123.44 USD.
 
 ---
 
