@@ -9,6 +9,8 @@
 <img alt="" border="0" src="https://www.paypal.com/en_SK/i/scr/pixel.gif" width="1" height="1" />
 </form>
 
+Beware, this "Donate" button charges 3% of the sum you donate, so if you are about to wire a bigger amount, better use Paypal Family&Friends directly at [miro.kropacek](https://www.paypal.com/paypalme/mirokropacek).
+
 Or you can use [Wise](https://wise.com/pay/me/miroslavk428)
 
 Or if you prefer EU IBAN transfer: SK37 5600 0000 0061 8230 8002
