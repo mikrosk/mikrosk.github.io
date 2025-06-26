@@ -29,8 +29,11 @@ Final sum for decap: **$8,021 USD**.
 | Lukasz Jokiel | 23.44 (20 EUR) |
 | evldhs | 50 |
 | Andrej Gerbec | 117.21 (100 EUR) |
+| Thibault Bernard | 82.05 (70 EUR) |
+| Przemyslaw Szeremiota | 25 |
+| Matthias Arndt | 234.42 (200 EUR) |
 
-Funds collected: $290.65 USD.
+Funds collected: $632.12 USD.
 
 ---
 
