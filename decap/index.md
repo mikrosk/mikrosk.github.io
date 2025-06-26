@@ -57,8 +57,9 @@ Final sum for decap: **$8,021 USD**.
 | Douglas Little | 250 EUR |
 | Bartłomiej Sroczyński | 50 USD |
 | Anders Granlund	| 100 EUR |
+| Chris Holland | 56.19 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$1,484.87 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$1,550.61 USD**.
 
 ---
 
