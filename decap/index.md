@@ -21,6 +21,22 @@ Or if you prefer EU IBAN transfer: SK37 5600 0000 0061 8230 8002
 
 ---
 
+[What is this about?](#what-is-this-about)
+
+[But why, really?](#but-why-really)
+
+[Humble beginnings](#humble-beginnings)
+
+[So here we are](#so-here-we-are)
+
+[Donations](#donations)
+
+[Timeline / news](#timeline)
+
+[Future](#future)
+
+---
+
 Final sum for decap: **$8,021 USD**.
 
 | Contibutor  | Contribution |
@@ -42,20 +58,6 @@ Final sum for decap: **$8,021 USD**.
 Funds collected (conversion rate 1 EUR = 1.17 USD): **$1,025 USD**.
 
 ---
-
-[What is this about?](#what-is-this-about)
-
-[But why, really?](#but-why-really)
-
-[Humble beginnings](#humble-beginnings)
-
-[So here we are](#so-here-we-are)
-
-[Donations](#donations)
-
-[Timeline / news](#timeline)
-
-[Future](#future)
 
 ## What is this about?
 
