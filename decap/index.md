@@ -23,9 +23,9 @@ Final sum for decap: **$8,021 USD**.
 
 | Contibutor  | Amount (USD) |
 | ------------- | ------------- |
-| nobody  | 0 |
+| anonymous      | 100 |
 
-Funds collected: $0,000 USD.
+Funds collected: $100 USD.
 
 ---
 
