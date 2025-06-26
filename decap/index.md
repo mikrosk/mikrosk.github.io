@@ -56,8 +56,9 @@ Final sum for decap: **$8,021 USD**.
 | Kevin Hulse | 100 USD |
 | Douglas Little | 250 EUR |
 | Bartłomiej Sroczyński | 50 USD |
+| Anders Granlund	| 100 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$1,367.87 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$1,484.87 USD**.
 
 ---
 
