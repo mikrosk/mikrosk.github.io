@@ -198,7 +198,7 @@ The good news is that about half the die is just RAM. All the RAM cells are iden
 
 ### 14.05.2025
 
-Received Dmitry's work on Videl. He isn't able to delayer the chip but nevertheless the quality of the images is superb. To our shock, while the lab is taking their time with just the one chip, Dmitry was able to offer use complete decapping of all three chips in a very near future, amazing!
+Received Dmitry's work on Videl. He isn't able to delayer the chip but nevertheless the quality of the images is superb. To our shock, while the lab is taking their time with just the one chip, Dmitry was able to offer complete decapping of all three chips in a very near future, amazing!
 
 ### 03.05.2025
 
