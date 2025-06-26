@@ -23,17 +23,23 @@ Or if you prefer EU IBAN transfer: SK37 5600 0000 0061 8230 8002
 
 Final sum for decap: **$8,021 USD**.
 
-| Contibutor  | Amount (USD) |
+| Contibutor  | Contribution |
 | ------------- | ------------- |
-| anonymous      | 100 |
-| Lukasz Jokiel | 23.44 (20 EUR) |
-| evldhs | 50 |
-| Andrej Gerbec | 117.21 (100 EUR) |
-| Thibault Bernard | 82.05 (70 EUR) |
-| Przemyslaw Szeremiota | 25 |
-| Matthias Arndt | 234.42 (200 EUR) |
+| anonymous      | 100 USD |
+| Lukasz Jokiel | 20 EUR |
+| evldhs | 50 USD |
+| Andrej Gerbec | 100 EUR |
+| Thibault Bernard | 70 EUR |
+| Przemyslaw Szeremiota | 25 USD |
+| Matthias Arndt | 200 EUR |
+| Martin Faxér | 100 EUR |
+| Simon Yardley | 28.10 EUR |
+| Stefan Lindberg | 53.49 EUR |
+| Stephane Capo | 15 EUR |
+| Olivier Jan | 54.75 EUR |
+| Kevin Hulse | 100 USD |
 
-Funds collected: $632.12 USD.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$1,025 USD**.
 
 ---
 
