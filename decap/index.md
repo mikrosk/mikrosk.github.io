@@ -54,8 +54,9 @@ Final sum for decap: **$8,021 USD**.
 | Stephane Capo | 15 EUR |
 | Olivier Jan | 54.75 EUR |
 | Kevin Hulse | 100 USD |
+| Douglas Little | 250 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$1,025 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$1,317.87 USD**.
 
 ---
 
