@@ -74,8 +74,9 @@ Final sum for decap: **$8,021 USD**.
 | Stuart Duncan | 117.32 USD |
 | Joaquin Ferrero | 100	EUR |
 | Ronald Hall	| 24.52 EUR |
+| tOri | 22.51 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$2,650.17 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$2,676.51 USD**.
 
 ---
 
