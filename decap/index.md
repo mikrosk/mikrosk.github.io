@@ -64,8 +64,11 @@ Final sum for decap: **$8,021 USD**.
 | Miroslav Nohaj | 25 EUR |
 | tzeb | 50 EUR |
 | [atari.sk](https://atari.sk) | 200 EUR |
+| Cosmos Atari | 50 EUR |
+| Wietze Spijkerman	| 50 EUR |
+| Roman Lukovics | 100 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$2,065.41 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$2,299.41 USD**.
 
 ---
 
