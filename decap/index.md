@@ -58,8 +58,11 @@ Final sum for decap: **$8,021 USD**.
 | Bartłomiej Sroczyński | 50 USD |
 | Anders Granlund	| 100 EUR |
 | Chris Holland | 56.19 EUR |
+| Sedma | 50 EUR |
+| Janez Valant Jerman | 100 EUR |
+| Sporniket | 15 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$1,550.61 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$1,743.66 USD**.
 
 ---
 
