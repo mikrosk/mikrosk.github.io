@@ -9,7 +9,9 @@
 <img alt="" border="0" src="https://www.paypal.com/en_SK/i/scr/pixel.gif" width="1" height="1" />
 </form>
 
-Beware, this "Donate" button charges 3% of the sum you donate, so if you are about to wire a bigger amount, better use Paypal Family&Friends directly at [miro.kropacek](https://www.paypal.com/paypalme/mirokropacek).
+Beware, this "Donate" button charges 3% of the sum you donate, so if you are about to wire a bigger amount, better use Paypal Family&Friends directly at [mirokropacek](https://www.paypal.com/paypalme/mirokropacek)
+
+Also beware, if your native Paypal currency is e.g. US Dollar and Paypal encourages you to sent the payment as EUR, it will convert your payment with a terrible rate. Always pay in USD (there should be an UI option for that, I have already received several USD payments as you can see bellow).
 
 Or you can use [Wise](https://wise.com/pay/me/miroslavk428)
 
@@ -70,8 +72,10 @@ Final sum for decap: **$8,021 USD**.
 | Cyprian Konador	| 25 EUR |
 | kohli79	| 50 EUR |
 | Stuart Duncan | 117.32 USD |
+| Joaquin Ferrero | 100	EUR |
+| Ronald Hall	| 24.52 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$2,504.48 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$2,650.17 USD**.
 
 ---
 
