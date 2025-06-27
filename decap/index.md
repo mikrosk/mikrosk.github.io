@@ -69,8 +69,9 @@ Final sum for decap: **$8,021 USD**.
 | Roman Lukovics | 100 EUR |
 | Cyprian Konador	| 25 EUR |
 | kohli79	| 50 EUR |
+| Stuart Duncan | 117.32 USD |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$2,387.16 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$2,504.48 USD**.
 
 ---
 
