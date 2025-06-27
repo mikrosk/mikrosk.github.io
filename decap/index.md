@@ -41,7 +41,7 @@ Final sum for decap: **$8,021 USD**.
 
 | Contibutor  | Contribution |
 | ------------- | ------------- |
-| anonymous      | 100 USD |
+| (anonymous) | 100 USD |
 | Lukasz Jokiel | 20 EUR |
 | evldhs | 50 USD |
 | Andrej Gerbec | 100 EUR |
@@ -63,8 +63,9 @@ Final sum for decap: **$8,021 USD**.
 | Sporniket | 15 EUR |
 | Miroslav Nohaj | 25 EUR |
 | tzeb | 50 EUR |
+| atari.sk | 200 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$1,831.41 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$2,065.41 USD**.
 
 ---
 
