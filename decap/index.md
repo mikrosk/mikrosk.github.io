@@ -61,8 +61,10 @@ Final sum for decap: **$8,021 USD**.
 | Sedma | 50 EUR |
 | Janez Valant Jerman | 100 EUR |
 | Sporniket | 15 EUR |
+| Miroslav Nohaj | 25 EUR |
+| tzeb | 50 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$1,743.66 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$1,831.41 USD**.
 
 ---
 
