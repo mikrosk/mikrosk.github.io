@@ -75,8 +75,13 @@ Final sum for decap: **$8,021 USD**.
 | Joaquin Ferrero | 100	EUR |
 | Ronald Hall	| 24.52 EUR |
 | tOri | 22.51 EUR |
+| Erez Yaary | 150 EUR |
+| Joseph Ceklosky	| 22.58 EUR |
+| David Galvez Carles |	40 EUR |
+| nerve |	50 EUR |
+| Fredrik Olsson |100 USD |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$2,676.51 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$3,083.72 USD**.
 
 ---
 
