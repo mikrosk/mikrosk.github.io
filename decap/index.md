@@ -81,8 +81,9 @@ Final sum for decap: **$8,021 USD**.
 | nerve |	50 EUR |
 | Fredrik Olsson |100 USD |
 | Peter Slegg | 20.01 EUR |
+| [SidecarTridge](https://sidecartridge.com) | 150 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$3,107.14 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$3,282.64 USD**.
 
 ---
 
