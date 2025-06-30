@@ -85,8 +85,9 @@ Final sum for decap: **$8,021 USD**.
 | Daniel Hedberg | 50 USD |
 | foft | 213.21 EUR |
 | Thomas Heimann | 100 USD |
+| Philsan | 50 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$3,682.09 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$3,740.59 USD**.
 
 ---
 
