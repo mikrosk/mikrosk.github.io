@@ -83,8 +83,10 @@ Final sum for decap: **$8,021 USD**.
 | Peter Slegg | 20.01 EUR |
 | [SidecarTridge](https://sidecartridge.com) | 150 EUR |
 | Daniel Hedberg | 50 USD |
+| foft | 213.21 EUR |
+| Thomas Heimann | 100 USD |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$3,332.64 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$3,682.09 USD**.
 
 ---
 
