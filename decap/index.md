@@ -86,8 +86,12 @@ Final sum for decap: **$8,021 USD**.
 | foft | 213.21 EUR |
 | Thomas Heimann | 100 USD |
 | Philsan | 50 EUR |
+| Francois Galea | 68.03 EUR |
+| insane | 150 EUR |
+| tOri | 25 EUR |
+| Mickael Pontier | 50 USD |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$3,740.59 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$4,074.94 USD**.
 
 ---
 
