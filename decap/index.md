@@ -90,8 +90,12 @@ Final sum for decap: **$8,021 USD**.
 | insane | 150 EUR |
 | tOri | 25 EUR |
 | Mickael Pontier | 50 USD |
+| Nokturnal	| 150 EUR |
+| jym	| 30 EUR |
+| Trixster | 10 EUR |
+| Atarian Computing	| 100	EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$4,074.94 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$4,414.24 USD**.
 
 ---
 
