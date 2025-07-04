@@ -94,8 +94,9 @@ Final sum for decap: **$8,021 USD**.
 | jym	| 30 EUR |
 | Trixster | 10 EUR |
 | Atarian Computing	| 100	EUR |
+| Adam Kłobukowski | 100 USD |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$4,414.24 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$4,514.24 USD**.
 
 ---
 
