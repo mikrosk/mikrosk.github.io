@@ -87,7 +87,7 @@ Final sum for decap: **$8,021 USD**.
 | Thomas Heimann | 100 USD |
 | Philsan | 50 EUR |
 | Francois Galea | 68.03 EUR |
-| insane | 150 EUR |
+| insane/tscc | 150 EUR |
 | tOri | 25 EUR |
 | Mickael Pontier | 50 USD |
 | Nokturnal	| 150 EUR |
