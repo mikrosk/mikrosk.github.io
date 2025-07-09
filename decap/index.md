@@ -98,8 +98,9 @@ Final sum for decap: **$8,021 USD**.
 | Mathieu Demange (sigmate) | 600 EUR |
 | Steffen Thomas | 150 EUR |
 | Laurent Sallafranque | 90  USD |
+| Simon Abejansky | 50 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$5,481.74 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$5,540.24 USD**.
 
 ---
 
