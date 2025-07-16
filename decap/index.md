@@ -212,6 +212,18 @@ There are two aspects to it. The first one being, of course, that $8,021 USD is 
 
 ## Timeline
 
+## 15.07.2025
+
+Dmitry sent us first images of delayered Combel. The quality is excellent, we're still refining the process with him to get the best possible Combel & SDMA images possible.
+
+## 08.07.2025
+
+Today I wired the whole $8,021 USD from my bank account to Taiwan. Thanks to all of you who have contributed I didn't go bankrupt. :-) We are still not finished though, there's ongoing work on Combel and SDMA.
+
+## 30.06.2025
+
+ijor has started a technical thread about this effort on AF: https://www.atari-forum.com/viewtopic.php?t=45152.
+
 ### 23.06.2025
 
 Received invoice from the lab. They even charge a 6% credit card handling fee. Perhaps we'll try to wire the money directly to their bank via Wise or so.
