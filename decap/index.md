@@ -99,8 +99,9 @@ Final sum for decap: **$8,021 USD**.
 | Steffen Thomas | 150 EUR |
 | Laurent Sallafranque | 90  USD |
 | Simon Abejansky | 50 EUR |
+| Jesse Burns |100 USD |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$5,540.24 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$5,640.24 USD**.
 
 ---
 
