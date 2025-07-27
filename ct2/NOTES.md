@@ -30,7 +30,7 @@ There is a few differences between the two revisions:
 - Rev A has slower write access to TT-RAM (6 cycles vs. 4 cycles with Rev B)
 - Rev A doesn't allow to write-protect the flash memory
 - Rev A optionally offers a 36 MHz clock instead of 32 MHz on its VID pin
-- (Early?) Rev A had so called "patch board" 1 and 2 located on the GALs. They were used for changing the SDMA timing. Rev B has the solder pads.
+- (Early?) Rev A had so called "patch board" 1 and 2 (also called "Modul") located on the GALs. They were used for changing the SDMA timing. Rev B has the solder pads however there used to be also Rev B installations with only Modul's `A` and `E` connected and the solder bridge broken on both pads.
 
 ![CT2A patch board](ct2a_patch_board.jpg)
 ![CT2A patch board installed](ct2a_patch_board_overview.jpg)
