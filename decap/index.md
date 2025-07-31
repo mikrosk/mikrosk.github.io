@@ -213,6 +213,14 @@ There are two aspects to it. The first one being, of course, that $8,021 USD is 
 
 ## Timeline
 
+### 31.07.2025
+
+Dmitry sent us first images of delayered SDMA.
+
+### 22.07.2025
+
+Dmitry sent us the complete set of Combel die shots with the metal layer removed.
+
 ### 15.07.2025
 
 Dmitry sent us first images of delayered Combel. The quality is excellent, we're still refining the process with him to get the best Combel & SDMA images possible.
