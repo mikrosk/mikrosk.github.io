@@ -130,7 +130,7 @@ With some simplification one could say that building your own cycle-accurate ST 
 
 - [F030NG](https://github.com/salacpavel/F030NG) by Centuriontech (Pavel Salac, cancelled)
 
-- [Falcon motherboard recreation](https://leblogdecosmos.blogspot.com/2024/12/cm-falcon-030-sous-eagle.html) by Cosmos (ongoing)
+- [Falcon motherboard recreation](https://leblogdecosmos.blogspot.com/2024/12/cm-falcon-030-sous-eagle.html) by Cosmos (ongoing), followed by [RE Falcon 030](https://www.re-falcon.com) by Suavek (ongoing)
 
 - [Microbox recreation](https://wizztronics.com/falcon-rebuild) by Wizztronics (see also the [AF thread](https://www.atari-forum.com/viewtopic.php?p=460347#p460347), [older website](https://wizztronics.com/atari-news) and their [Facebook page](https://www.facebook.com/p/Wizztronics-100063913393264), ongoing)
 
