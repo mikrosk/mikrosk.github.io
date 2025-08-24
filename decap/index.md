@@ -101,8 +101,9 @@ Final sum for decap: **$8,021 USD**.
 | Simon Abejansky | 50 EUR |
 | Jesse Burns | 100 USD |
 | Sascha Springer | 100 USD |
+| Markus Fichtenbauer | 100 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$5,740.24 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$5,857.24 USD**.
 
 ---
 
