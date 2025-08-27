@@ -285,7 +285,7 @@ If you have a security code, you are notified here (only for registered develope
 - Palette in RGxB format (long) corresponding to the image, like the usual Falcon palette entries (no palette in True color mode).
 - Image data
 
-**TODO** The adapted resolution will be passed. Only for XBOOT, the original resolution will be ironed the time of its execution.
+The adjusted resolution will be applied. Only for XBOOT, the original resolution will be restored during its execution.
 
 **F9** - Boot menu
 - *Hard disk driver*: Choose between the CECILE driver in flash memory and a driver installed on your boot partition.
