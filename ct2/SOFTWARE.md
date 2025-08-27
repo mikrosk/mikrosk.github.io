@@ -231,6 +231,8 @@ Centek released a couple of not strictly CT2-related applications with their pro
 
 ## Flash setup
 
+_**IMPORTANT:** Flash 1.3.4 - 1.3.9 forces the user to read through the whole text instruction screen. Scroll down to the last page and press **SHIFT + F9** to exit this screen! -mikro_
+
 The flash setup menu appears when you start your CENTURBO II for the first time in TURBO mode. It provides access to all the useful options during the initialization phase of the Falcon.
 
 It is broken down into 2 parts: the top one dedicated to the choice of the operating system and access to the menu, and the bottom one to the various options grouped into several sub-menus.
