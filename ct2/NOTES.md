@@ -14,7 +14,7 @@
 
 **(\*\*\*)** If you happen to own this adaptor you might be wondering what is the problem exactly. Internally it has its pin 19 (M0), pin 15 (external clock input) and pin 11 (ground) connected together. So that M1+M0 = %10 bin = 2 dec (VGA) and external clock input is disabled. If CT2 (or any other external Videl clock like the Screen Blaster, BlowUP etc) wants to feed its own clock to Videl's pin 14, it can't have Videl pin 14 (which is in turn connected to DB19's pin 15) grounded.
 
-The modification proposed by Centek connects pin 15 and pin 11 together (having only M0 grounded). The adaptor they mention would simply ignore the grounded pin 15 because the adaptor's pin 15 wouldn't be connected at all.
+The modification proposed by Centek connects pin 19 and pin 11 together (having only M0 grounded). The adaptor they mention would simply ignore the grounded pin 15 because the adaptor's pin 15 wouldn't be connected at all.
 
 Another approach is to desolder SMT resistor R49 which connects Videl's pin 14 and DB19's pin 15 on the PCB.
 
@@ -33,7 +33,6 @@ There is a few differences between the two revisions:
 - (Early?) Rev A had so called "patch board" 1 and 2 (also called "Modul") located on the GALs. They were used for changing the SDMA timing. Rev B has the solder pads however there used to be also Rev B installations with only Modul's `A` and `E` connected and the solder bridge broken on both pads.
 
 ![CT2A patch board](ct2a_patch_board.jpg)
-![CT2A patch board installed](ct2a_patch_board_overview.jpg)
 
 Trivia: There was an infamous 'battle' between an UK company called Titan Designs and Centek about the removal of the expansion slot pins. Titan put a warning about possible technical difficulties with the CT2B and their Eclipse PCI card (assuming that Centek had removed the pins because they couldn't get it running properly) leading to a very sharp reaction from Centek. According to Centek, the expansion slot pins were removed because of budget reasons and because nobody (?) had been really using it except them (for Dolmen OS development).
 
