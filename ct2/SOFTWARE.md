@@ -162,7 +162,7 @@ Software emulation of the missing DSP interrupt line (using the 'spurious interr
 
 This allows apps like `MP2` <= 0.994, `Aniplayer` (when playing Cinepak \[cvid\], Apple/QuickTime Video \[rpza\], Microsoft Video 1 \[msvc/cram8\] AVI/MOV files in 'Without GEM' mode), `MegaPlayer`, `Quincy` and some demos to work properly.
 
-Integrated into Flash setup after version 1.3.3 *(can't test versions between 1.3.4 - 1.3.9 but it definitely is integrated in 1.4.1 -mikro)*. Part of the [CT2 patches](files/centek/patchct2.zip).
+Integrated into Flash setup 1.4.1. Part of the [CT2 patches](files/centek/patchct2.zip).
 
 ### [EXCLKOFF.PRG](files/centek/exclkoff.zip)
 Program to disable CT2's external clock on the Videl pin (in NORMAL mode). In TURBO mode you can do this in the flash setup. As using CT2's external clock is [not recommended](NOTES.md#external-video-clock), this should be the default state and this program not needed.
