@@ -105,8 +105,9 @@ Final sum for decap: **$8,021 USD**.
 | Devander | 100 EUR |
 | Questor | 100 EUR |
 | Patrick - MEX68KECB | 40.79 EUR |
+| Jacek Kruczkowski | 25 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,138.96 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,168.21 USD**.
 
 ---
 
