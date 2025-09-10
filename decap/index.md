@@ -104,10 +104,10 @@ Final sum for decap: **$8,021 USD**.
 | Markus Fichtenbauer | 100 EUR |
 | Devander | 100 EUR |
 | Questor | 100 EUR |
-| Patrick - MEX68KECB | 40.79 EUR |
+| Patrick - MEX68KECB | 50 USD |
 | Jacek Kruczkowski | 25 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,168.21 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,170.49 USD**.
 
 ---
 
