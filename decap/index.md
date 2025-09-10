@@ -137,7 +137,7 @@ With some simplification one could say that building your own cycle-accurate ST 
 
 - [Falcon motherboard recreation](https://leblogdecosmos.blogspot.com/2024/12/cm-falcon-030-sous-eagle.html) by Cosmos (ongoing), followed by [RE Falcon 030](https://www.re-falcon.com) by Suavek (ongoing)
 
-- [Microbox recreation](https://wizztronics.com/falcon-rebuild) by Wizztronics (see also the [AF thread](https://www.atari-forum.com/viewtopic.php?p=460347#p460347), [older website](https://wizztronics.com/atari-news) and their [Facebook page](https://www.facebook.com/p/Wizztronics-100063913393264), ongoing)
+- [Falcon Re-Imagined](https://wizztronics.com/falcon-rebuild) by Wizztronics (see also the [AF thread](https://www.atari-forum.com/viewtopic.php?p=460347#p460347), [older website](https://wizztronics.com/atari-news) and their [Facebook page](https://www.facebook.com/p/Wizztronics-100063913393264), ongoing)
 
 the actual chips must have been supplied either from a real Falcon or purchased from [BEST Electronics](https://www.best-electronics-ca.com/custom-i.htm) or Wizztronics (from their limited supply of new old stock, of course). Apart from that, there was only one attempt to actually produce an enhanced replica of the Videl chip - the [SuperVidel](https://nature.atari.org/supervidel.html) project and even that one was based on guesswork, Hatari source code and the partial documentation available from demo coders.
 
