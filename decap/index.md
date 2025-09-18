@@ -106,8 +106,9 @@ Final sum for decap: **$8,021 USD**.
 | Questor | 100 EUR |
 | Patrick - MEX68KECB | 50 USD |
 | tOri | 25 EUR |
+| Denis Karimani | 150 USD |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,170.49 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,320.49 USD**.
 
 ---
 
