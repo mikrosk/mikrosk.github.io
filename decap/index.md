@@ -220,6 +220,12 @@ There are two aspects to it. The first one being, of course, that $8,021 USD is 
 
 ## Timeline
 
+### 07.10.2025
+
+It may look like there's nothing going on but ijor has been busy with tracing the Videl die. After just a few months [he was able to perform the first simulation waveform](https://www.atari-forum.com/viewtopic.php?p=486755#p486755) produced from a netlist extracted from the die shot.
+
+Also, we are quietly working towards better die shots for the Combel and SDMA but it takes time.
+
 ### 31.07.2025
 
 Dmitry sent us first images of delayered SDMA.
