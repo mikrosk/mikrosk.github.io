@@ -108,8 +108,9 @@ Final sum for decap: **$8,021 USD**.
 | tOri | 25 EUR |
 | Denis Karimani | 150 USD |
 | Martin Faxér | 100 EUR |
+| Badwolf	| 60 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,437.49 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,507.69 USD**.
 
 ---
 
