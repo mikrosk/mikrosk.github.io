@@ -223,6 +223,10 @@ There are two aspects to it. The first one being, of course, that $8,021 USD is 
 
 ## Timeline
 
+### 14.11.2025
+
+Combel has arrived at the Taiwanese lab for metal layer removal. After this is done, it should be easier for Dmitry to prepare cleaner die shots.
+
 ### 07.10.2025
 
 It may look like there's nothing going on but ijor has been busy with tracing the Videl die. After just a few months [he was able to perform the first simulation waveform](https://www.atari-forum.com/viewtopic.php?p=486755#p486755) produced from a netlist extracted from the die shot.
