@@ -16,7 +16,7 @@ When TOS clones like Medusa DirecT40/60, Hades, Milan or ARAnyM had become avail
 - Last known version: 2.1 (11/05/2000)
 - Hardware: Milan ISA/PCI cards
 - Presence: [\_SND cookie](https://freemint.github.io/tos.hyp/en/bios_cookiejar.html#Cookie_2C_20_SND) bit 2&5, `nTOS` cookie, `McSn` cookie
-- Download: [mb_blast.lzh](files/mb_blast.lzh) (documentation)
+- Download: [mb_blast.lzh](files/mb_blast.lzh) (documentation), [sblaster.zip](files/sblaster.zip) (driver)
 
 Officially bundled with the Milan's sound card (Milan + SoundBlaster = MilanBlaster).
 
@@ -72,5 +72,4 @@ Perhaps one of the first XBIOS API "emulators". A separate version for the Yamah
 
 ---
 
-Struggling with supporting all of those in one, unified way? Take a look at my project: [Atari Sound Setup](https://github.com/mikrosk/atari_sound_setup).
-
+Struggling with supporting all of those in one, unified way? Take a look at my project: [uSound](https://github.com/mikrosk/usound).
