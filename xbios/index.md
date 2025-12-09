@@ -36,7 +36,7 @@ Officially bundled with the Milan's sound card (Milan + SoundBlaster = MilanBlas
 - Last known version: 0.97 (04/2002)
 - Hardware: MagicMac, Hades, ARAnyM
 - Presence: [\_SND cookie](https://freemint.github.io/tos.hyp/en/bios_cookiejar.html#Cookie_2C_20_SND) bit 1&2&5, `MgSn` cookie
-- Download: [magxsnd.zip](files/magxsnd.zip) (documentation + driver)
+- Download: [magxsnd.zip](files/magxsnd.zip) (documentation + driver + source code)
 
 Reiplementation of GSXB for [MagicMac](http://www.application-systems.de/magicmac) by Didier Méquignon. He later hadded support for Hades' Yamaha chip and MV16/PSOUND cards and after that for ARAnyM's SDL backend.
 
@@ -66,7 +66,7 @@ Unlike previous drivers, this one reimplements all functions little bit differen
 - Last known version: 1999
 - Hardware: ST, STE, TT
 - Presence: `McSn` cookie
-- Download: [xsound.zip](files/xsound.zip) (documentation + driver + source)
+- Download: [xsound.zip](files/xsound.zip) (documentation + driver + source code)
 
 Perhaps one of the first XBIOS API "emulators". A separate version for the Yamaha (ST) and DMA (STE/TT) sound is provided. It supports the the `McSn` cookie / API for querying available features.
 
