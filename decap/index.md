@@ -110,8 +110,9 @@ Final sum for decap: **$8,021 USD**.
 | Martin Faxér | 100 EUR |
 | Badwolf	| 60 EUR |
 | Geir Øyvind Vælidalo | 50 USD |
+| tOri | 40 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,557.69 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,604.49 USD**.
 
 ---
 
