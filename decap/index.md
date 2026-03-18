@@ -224,7 +224,7 @@ There are two aspects to it. The first one being, of course, that $8,021 USD is 
 
 ## Timeline
 
-## 12.02.2026
+### 12.02.2026
 
 The lab provided the final invoice -- $2,795 USD. Phew. ;) In the meantime, ijor couldn't resist and started working on Combel, too.
 
@@ -236,7 +236,7 @@ In some cases those lower rez pictures can help to decode the damaged die spots,
 
 Anyway, some surprising discoveries on the way!
 
-## 07.12.2025
+### 07.12.2025
 
 For Videl, a couple of verification steps were needed. ijor completed the first a few weeks ago. Still trying to find the time to perform the last step -- we are very close to be able to release a netlist shortly!
 
