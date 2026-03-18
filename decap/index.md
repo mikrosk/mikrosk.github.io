@@ -224,6 +224,24 @@ There are two aspects to it. The first one being, of course, that $8,021 USD is 
 
 ## Timeline
 
+## 12.02.2026
+
+The lab provided the final invoice -- $2,795 USD. Phew. ;) In the meantime, ijor couldn't resist and started working on Combel, too.
+
+But it is going slowly. It turns out that Combel is much more difficult than Videl. This is for a couple of reasons. One is the intrinsic characteristic of the die. But also it turns out the Dmitry's pics are not as good as we had hoped. To be more precise, the pictures themselves are great. The problem is the condition of the die. The die seems to be damaged in multiple spots. Not exactly sure why. May be it is because the decapsulation method he uses.
+
+The current situation is following: the lab processed a Combel chip (so we basically have two of them decap'ed now -- Dmitry's and this one). But we didn't ask for high rez pictures for all the layers, as we did with Videl. Otherwise it was going to cost us about the same that we paid for Videl. So, we don't have lab high rez for Combel top layer. We did ask them to take lowish/med rez pictures of the top die, though. That was done mostly to be sure that both Combel chips are exactly the same revision. Just in case there are multiple ones.
+
+In some cases those lower rez pictures can help to decode the damaged die spots, but not in all of them. It is not the end of the world, though. They aren't too many spots. And it is usually possible to figure out the layout anyway. It just makes the process slower.
+
+Anyway, some surprising discoveries on the way!
+
+## 07.12.2025
+
+For Videl, a couple of verification steps were needed. ijor completed the first a few weeks ago. Still trying to find the time to perform the last step -- we are very close to be able to release a netlist shortly!
+
+On the Combel front, the decision to remove metal layers only turned out to be more problematic. The lab usually doesn't send a half-done work to the customer plus we need some other things which Dmitry couldn't provide (like X-Ray images) so we have decided to order a full decap work for Combel, too. Of course, it wont cost as much as the Videl one, expectations is about $2,700 USD.
+
 ### 14.11.2025
 
 Combel has arrived at the Taiwanese lab for metal layer removal. After this is done, it should be easier for Dmitry to prepare cleaner die shots.
