@@ -111,8 +111,9 @@ Final sum for decap: **$8,021 USD**.
 | Badwolf	| 60 EUR |
 | Geir Øyvind Vælidalo | 50 USD |
 | tOri | 40 EUR |
+| John Sohn | 50 USD |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,604.49 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,654.49 USD**.
 
 ---
 
