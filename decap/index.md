@@ -112,8 +112,9 @@ Final sum for decap: **$8,021 USD**.
 | Geir Øyvind Vælidalo | 50 USD |
 | tOri | 40 EUR |
 | John Sohn | 50 USD |
+| Warren Stanley | 15 USD |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,654.49 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,669.49 USD**.
 
 ---
 
