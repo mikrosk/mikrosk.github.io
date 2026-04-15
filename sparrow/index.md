@@ -56,14 +56,25 @@ It would seem there were three batches of both rev.1 (02/1992, 03/1992 and 04/19
 
 This makes only 17 (rev.1) + 59 (rev.2) = 76 publicly known Sparrows in the world (assuming the numbering had restarted for rev.2). Actually, there was one Sparrow board without any serial number for sale, so that makes it 77.
 
+_Anfang 1992 wurde der Prototyp des Atari Falcon einigen Entwicklern präsentiert. Etwa 150 Vorserienmodelle wurden dann Mitte des selben Jahres an europäische Entwickler ausgeliefert. Einige dieser Rechner trugen das Label FX-1 wärend auf anderen der Name Sparrow prangte. Der Festplattentreiber des Prototyps meldete sich beim Booten mit "Sparrow" und benutzte den Blitterchip für den Datentransfer zur IDE Festplatte. Auf dem Board wurde ein TOS 4.00 in 2 Megabit großen DIL Eproms als Betriebssystem eingesetzt. In einer frühen Entwicklungsstufe war es sogar ein TOS 2.07, welches die VDI Routinen für die Bildschirmausgabe von Platte nachlud._
+
+_The Atari FX-1, or "Sparrow", is also a prototype machine. Actually, it is almost a Falcon030. It has all its features except its true color mode (not fully implemented in the FX-1) and the PCM sound channels (12 bit instead of 16 in the Falcon)._
+
+_These computers used the Atari Mega STe TOS (2.06) slightly modified to cope with the new graphic modes. This TOS version had the number 2.07 and was replaced in the last Sparrow models with the TOS 4.0 (The Falcon used TOS 4.01 in the earlier models, then the 4.04 and finally the 4.92 (never released))._
+
+_Atari produced less than 100 of these machines. They were built with sample spare parts and were used by developpers to write software for the future Atari Falcon._
+
 ### Sparrow resources
 
-The following documents were found & rescued by [Christian Zietz](https://www.chzsoft.de) and first published at [atari-home.de](https://forum.atari-home.de/index.php/topic,13380.msg214172.html#msg214172):
+The first four documents were found & rescued by [Christian Zietz](https://www.chzsoft.de) and first published at [atari-home.de](https://forum.atari-home.de/index.php/topic,13380.msg214172.html#msg214172):
 
 - [Sparrow specification (dated Dec 18 1991)](sparrow_specification_19911218.md) (converted into markdown by me)
 - [(Incomplete) Sparrow schematics (dated Mar 12 1991 - Sep 13 1991: Moshe Segal, John Horton)](sparrow_schematics_19910312.pdf) (converted into PDF by Christian)
 - [Falcon specification (dated Dec 3 1991)](falcon_specification_19911203.pdf) (converted into PDF by Christian)
 - [Falcon specification (dated Aug 26 1992)](falcon_specification_19920826.md) (converted into markdown by me)
+- [Sparrow schematics (dated Jan 19 1992](sparrow_schematics_19920119.pdf) (recovered by Wizztronics)
+- [(Incomplete) Microbox gerber file](microbox_gerber.pdf)
+- [Microbox PCB](microbox-pcb-color.pdf)
 
 ### Sparrow vs. Falcon030 vs. Falcon vs. Microbox vs. Falcon040
 
@@ -71,7 +82,7 @@ Interestingly, there were *four* 32-bit machines (excluding the TT) developed (a
 
 See  also the related thread on [atari-forum.com](https://www.atari-forum.com/viewtopic.php?p=310452).
 
-#### The Sparrow (also known as the FX-1)
+#### The Sparrow (also known as the [FX-1](badges.jpg))
 
 [Sparrow](https://www.maedicke.de/atari/hardware/sparrow.htm) (designed by Moshe Segal and Eran Dariel in Israel) began its life in 1991 as a set of daughterboards for the STE to increase its sound and graphics capabilities - with the SDMA, COMBEL and STE Shifter (which would later become the VIDEL) respectively. There were rumours that this had actually been the goal all along - to create a powerful daughterboard for the existing STE line.
 
