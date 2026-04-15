@@ -92,7 +92,7 @@ Focusing on the Sparrow computer naturally lowered priority to its competing pro
 
 As the first Sparrow rev.1 motherboard's manufacturing date is Feb'92 it is very likely that this is what Atari showed in Mar'92 at CeBIT in Hannover -- and announced it as the Falcon shortly after.
 
-#### The Falcon030
+#### The [Falcon030](badges2.jpg)
 
 Even though the offical [Falcon030](https://www.maedicke.de/atari/hardware/falcon.htm) release happened in Aug'92 at Atari Messe in Dusseldorf (with TOS 4.00), Atari magazines got for their September issue only photos of Sparrow's typical dark grey case with white ST/E keyboard and rev.2 motherboard inside.
 
