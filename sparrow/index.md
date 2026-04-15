@@ -123,3 +123,7 @@ And then there is the [Falcon040](https://www.maedicke.de/atari/hardware/falcon0
 In Dec'92 the rumours about Atari Corp. having a Falcon040 in development were [pretty much alive](atari-st-format-issue-041_11.jpg) (with the focus on built-in CD drive), with planned release date in late 1993 as a more powerful successor of the Falcon030. As there is no mention of the Microbox whatsoever, we can again only speculate that sometime during the infamous Falcon030 production problems Atari Corp. realised that the Microbox doesn't make much sense anymore and went ahead with a full 68040 "PC like" machine. Unfortunately, no machine was ever shown or previewed in 1993 or later...
 
 Note: according to Hans Martin-Krober, an Atari employee, the case for the Falcon040 was [entirely different](falcon040_case.jpg).
+
+### Gallery
+
+My collection of Sparrow photos is available as a gallery here: [Sparrow Gallery](gallery/index.html).
