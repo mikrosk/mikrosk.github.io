@@ -54,7 +54,7 @@ It would seem there were three batches of both rev.1 (02/1992, 03/1992 and 04/19
 
 ### Number of Sparrows produced
 
-This makes only 17 (rev.1) + 59 (rev.2) = 76 publicly known Sparrows in the world (assuming the numbering had restarted for rev.2). Actually, there was one Sparrow board without any serial number for sale, so that makes it 77.
+This makes only 17 (rev.1) + 59 (rev.2) = 76 publicly known Sparrows in the world (assuming the numbering had restarted for rev.2). Actually, there were three Sparrow board without any serial number for sale, so that makes it 79.
 
 _Anfang 1992 wurde der Prototyp des Atari Falcon einigen Entwicklern präsentiert. Etwa 150 Vorserienmodelle wurden dann Mitte des selben Jahres an europäische Entwickler ausgeliefert. Einige dieser Rechner trugen das Label FX-1 wärend auf anderen der Name Sparrow prangte. Der Festplattentreiber des Prototyps meldete sich beim Booten mit "Sparrow" und benutzte den Blitterchip für den Datentransfer zur IDE Festplatte. Auf dem Board wurde ein TOS 4.00 in 2 Megabit großen DIL Eproms als Betriebssystem eingesetzt. In einer frühen Entwicklungsstufe war es sogar ein TOS 2.07, welches die VDI Routinen für die Bildschirmausgabe von Platte nachlud._
 

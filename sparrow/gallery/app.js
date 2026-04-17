@@ -3,21 +3,23 @@ const folderTemplate = document.getElementById("folder-template");
 const cardTemplate = document.getElementById("card-template");
 const summary = document.getElementById("summary");
 
-function normalizeLabel(text) {
-  const noExt = text.replace(/\.[^.]+$/, "");
-  return noExt.replace(/[_-]+/g, " ").replace(/\s+/g, " ").trim();
-}
-
 function titleForImage(path, titleMap) {
-  if (titleMap[path]) return titleMap[path];
-
-  const fileName = path.split("/").pop() || path;
-  return normalizeLabel(fileName);
+  return titleMap[path] || "";
 }
 
 function folderDisplayName(folderName, folderMap) {
   return folderMap[folderName] || folderName;
 }
+
+const imgObserver = new IntersectionObserver((entries, obs) => {
+  for (const entry of entries) {
+    if (!entry.isIntersecting) continue;
+    const img = entry.target;
+    const src = img.dataset.src;
+    if (src && !img.src) img.src = src;
+    obs.unobserve(img);
+  }
+}, { rootMargin: "400px 0px" });
 
 function groupByFolder(paths) {
   const groups = new Map();
@@ -33,21 +35,6 @@ function groupByFolder(paths) {
   return [...groups.entries()].sort((a, b) =>
     a[0].localeCompare(b[0], undefined, { numeric: true, sensitivity: "base" })
   );
-}
-
-async function loadTitles() {
-  try {
-    const res = await fetch("titles.json", { cache: "no-store" });
-    if (!res.ok) return { folders: {}, images: {} };
-
-    const data = await res.json();
-    return {
-      folders: data.folders || {},
-      images: data.images || {}
-    };
-  } catch {
-    return { folders: {}, images: {} };
-  }
 }
 
 // --- Lightbox ---
@@ -111,20 +98,20 @@ function renderGallery(paths, titleConfig) {
   allImages = [];
 
   if (!paths.length) {
-    gallery.innerHTML = '<p class="empty">No PNG files found in manifest.json.</p>';
+    gallery.innerHTML = '<p class="empty">No PNG files found in manifest.js.</p>';
     summary.textContent = "No images found.";
     return;
   }
 
   const grouped = groupByFolder(paths);
-  summary.textContent = `${paths.length} images across ${grouped.length} folders.`;
+  summary.textContent = "";
 
   for (const [folder, items] of grouped) {
     const section = folderTemplate.content.firstElementChild.cloneNode(true);
     const title = section.querySelector(".folder-title");
     const grid = section.querySelector(".folder-grid");
 
-    title.textContent = `${folderDisplayName(folder, titleConfig.folders)} (${items.length})`;
+    title.textContent = folderDisplayName(folder, titleConfig.folders);
 
     items.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" }));
 
@@ -132,11 +119,25 @@ function renderGallery(paths, titleConfig) {
       const card = cardTemplate.content.firstElementChild.cloneNode(true);
       const img = card.querySelector("img");
       const caption = card.querySelector("figcaption");
+      const captionText = caption.querySelector(".caption-text");
+      const toggle = caption.querySelector(".caption-toggle");
       const imgTitle = titleForImage(path, titleConfig.images);
 
-      img.src = path;
+      img.dataset.src = path;
       img.alt = imgTitle;
-      caption.textContent = imgTitle;
+      imgObserver.observe(img);
+      if (imgTitle) {
+        captionText.textContent = imgTitle;
+        toggle.addEventListener("click", e => {
+          e.stopPropagation();
+          const expanded = caption.classList.toggle("expanded");
+          toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+          toggle.innerHTML = expanded ? "&#9652;" : "&#9662;";
+          toggle.setAttribute("aria-label", expanded ? "Hide full title" : "Show full title");
+        });
+      } else {
+        caption.remove();
+      }
 
       const idx = allImages.length;
       allImages.push({ src: path, title: imgTitle });
@@ -149,6 +150,28 @@ function renderGallery(paths, titleConfig) {
 
     gallery.appendChild(section);
   }
+
+  refreshCaptionToggles();
+}
+
+function refreshCaptionToggles() {
+  for (const caption of gallery.querySelectorAll("figcaption")) {
+    if (caption.classList.contains("expanded")) continue;
+    const text = caption.querySelector(".caption-text");
+    const toggle = caption.querySelector(".caption-toggle");
+    if (!text || !toggle) continue;
+    toggle.hidden = text.scrollWidth <= text.clientWidth;
+  }
+}
+
+let resizeTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(refreshCaptionToggles, 120);
+});
+
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(refreshCaptionToggles);
 }
 
 async function init() {

@@ -36,6 +36,28 @@ body {
   padding: 2.5rem 1rem 2rem;
 }
 
+.back-link {
+  display: inline-block;
+  margin: 0 0 0.9rem;
+  font: 600 0.78rem/1 "IBM Plex Mono", monospace;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(255, 253, 247, 0.6);
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(179, 54, 45, 0.08);
+}
+
 .eyebrow {
   margin: 0;
   font: 600 0.78rem/1 "IBM Plex Mono", monospace;
@@ -87,6 +109,7 @@ h1 {
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform: translateZ(0);
 }
 
 .image-card:hover {
@@ -107,9 +130,44 @@ h1 {
   font: 500 0.79rem/1.35 "IBM Plex Mono", monospace;
   color: #2f3236;
   border-top: 1px solid var(--line);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.image-card .caption-text {
+  flex: 1 1 auto;
+  min-width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.image-card figcaption.expanded .caption-text {
+  white-space: normal;
+  overflow: visible;
+  word-break: break-word;
+}
+
+.image-card .caption-toggle {
+  flex: 0 0 auto;
+  background: none;
+  border: none;
+  padding: 0 0.15rem;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  line-height: 1.35;
+  border-radius: 3px;
+}
+
+.image-card .caption-toggle:hover {
+  color: var(--accent);
+  background: rgba(179, 54, 45, 0.08);
+}
+
+.image-card .caption-toggle[hidden] {
+  display: none;
 }
 
 .empty,

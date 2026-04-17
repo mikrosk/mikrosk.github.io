@@ -12,6 +12,7 @@
 <body>
   <header class="site-header">
     <div class="header-inner">
+      <a class="back-link" href="../" aria-label="Back to parent page">&#8592; Back</a>
       <p class="eyebrow">GitHub Pages Gallery</p>
       <h1>Sparrow Image Archive</h1>
       <p id="summary" class="summary">Loading images...</p>
@@ -29,8 +30,11 @@
 
   <template id="card-template">
     <figure class="image-card">
-      <img loading="lazy" decoding="async" alt="">
-      <figcaption></figcaption>
+      <img alt="">
+      <figcaption>
+        <span class="caption-text"></span>
+        <button class="caption-toggle" type="button" aria-label="Show full title" aria-expanded="false" hidden>&#9662;</button>
+      </figcaption>
     </figure>
   </template>
 
