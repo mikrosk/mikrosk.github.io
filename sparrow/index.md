@@ -75,6 +75,7 @@ The first four documents were found & rescued by [Christian Zietz](https://www.c
 - [Sparrow schematics (dated Jan 19 1992](sparrow_schematics_19920119.pdf) (recovered by Wizztronics)
 - [(Incomplete) Microbox gerber file](microbox_gerber.pdf)
 - [Microbox PCB](microbox-pcb-color.pdf)
+- [Falcon040 stencil](falcon040.png)
 
 ### Sparrow vs. Falcon030 vs. Falcon vs. Microbox vs. Falcon040
 
