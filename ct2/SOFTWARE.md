@@ -319,3 +319,5 @@ N revisions (with fast ram being located at $01xxxxxx), never released/tested:
 - ct2an - 2000-03-16.abl
 - ct2bn - 2000-03-19.abl
 - ct2b_frn - 2000-03-23.abl
+
+[CT2 Firmware & Tools](files/ct2sourc.zip) is TOS 7.04 and Dolmen development files as of 1999/04/02. Can't remember where I got it from.
