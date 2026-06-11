@@ -114,8 +114,9 @@ Final sum for decap: **$8,021 USD**.
 | John Sohn | 50 USD |
 | Warren Stanley | 15 USD |
 | James Dier | 20 USD |
+| Aaron Naas | 41.47	EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,689.49 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,738.01 USD**.
 
 ---
 
