@@ -50,6 +50,16 @@ Reiplementation of GSXB for [MagicMac](http://www.application-systems.de/magicma
 
 This seems to a driver provided directly by ASH for their commercial product, MagicMac. It doesn't set [\_SND cookie](https://freemint.github.io/tos.hyp/en/bios_cookiejar.html#Cookie_2C_20_SND) bit 5, perhaps because it predates the Extended XBIOS "standard".
 
+### Weirdmac
+- Author: Thorsten Pohlmann
+- Author's website: n/a
+- Last known version: 0.64
+- Hardware: MagicMac
+- Presence: [HSnd cookie](https://freemint.github.io/tos.hyp/en/bios_cookiejar.html#Cookie_2C_20HSND)
+- Download: [weirdmac.lzh](files/weirdmac.lzh) (documentation + driver)
+
+A mixture of Crazy Sounds driver and true (but only partially implemented) XBIOS sound API. Compatible with MacSound 'standard'.
+
 ### STFA
 - Author: Seb/the Removers
 - Author's website: [http://removers.free.fr/softs/stfa.php](http://removers.free.fr/softs/stfa.php)
