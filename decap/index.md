@@ -117,8 +117,9 @@ Final sum for decap: **$8,021 USD**.
 | Aaron Naas | 41.47	EUR |
 | John Sohn | 50 USD |
 | Marcus Lund | 25 USD |
+| Rui Lima | 20 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,813.01 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,836.41 USD**.
 
 ---
 
