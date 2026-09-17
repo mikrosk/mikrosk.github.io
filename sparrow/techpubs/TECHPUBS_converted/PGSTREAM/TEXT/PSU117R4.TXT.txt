@@ -1,0 +1,540 @@
+                    117 VAC SPARROW PSU SPECIFICATION
+                         Part Number: C302866-001                            Table of Contents
+
+
+1.0 GENERAL. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  1
+
+2.0 INPUT ELECTRICAL REQUIREMENTS. . . . . . . . . . . . . . . . . . . .  1
+
+3.0 OUTPUT ELECTRICAL REQUIREMENTS . . . . . . . . . . . . . . . . . . .  1
+
+4.0 OVERALL PERFORMANCE. . . . . . . . . . . . . . . . . . . . . . . . .  2
+
+5.0 FEATURES . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  2
+
+6.0 ENVIRONMENTAL. . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+
+7.0  BURN IN . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+
+8.0  SAFETY REGULATORY STANDARDS . . . . . . . . . . . . . . . . . . . .  3
+
+9.0 CONDUCTED EMI COMPLIANCE STANDARDS . . . . . . . . . . . . . . . . .  4
+
+10.0 LEAKAGE CURRENT . . . . . . . . . . . . . . . . . . . . . . . . . .  4
+
+11.0 DIELECTRIC WITHSTANDING VOLTAGE (HIPOT) . . . . . . . . . . . . . .  4
+
+12.0 INSULATION RESISTANCE . . . . . . . . . . . . . . . . . . . . . . .  4
+
+13.0 RELIABILITY . . . . . . . . . . . . . . . . . . . . . . . . . . . .  5
+
+14.0 POWER ON / OFF SWITCH . . . . . . . . . . . . . . . . . . . . . . .  5
+
+15.0 CONNECTORS. . . . . . . . . . . . . . . . . . . . . . . . . . . . .  5
+
+16.0 SPECIAL REQUIREMENTS: . . . . . . . . . . . . . . . . . . . . . . .  7
+
+17.0 MECHANICAL  . . . . . . . . . . . . . . . . . . . . . . . . . . . .  7
+
+18.0 MARKINGS. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  8
+
+19.0 QUALITY ASSURANCE PROVISIONS. . . . . . . . . . . . . . . . . . . .  8
+
+20.0 PACKAGE FOR SHIPMENT. . . . . . . . . . . . . . . . . . . . . . . .  8
+
+21.0 DOCUMENTATION . . . . . . . . . . . . . . . . . . . . . . . . . . .  8
+
+APPROVED VENDORS . . . . . . . . . . . . . . . . . . . . . . . . . . . .  8
+
+
+
+
+
+
+
+
+
+
+
+1.0 GENERAL
+
+This specification describes the detailed requirements for a 117 VAC 60 HZ version of a
+switching power supply used in Atari computers.
+
+Suppliers of this part must supply to the Atari Microsystems Product Engineering, Product Safety,
+and Document Control Departments copies of all Engineering Change Orders on this product in
+writing.
+
+Vendor must supply an Electrical Schematic and Part List for this power supply.
+
+Changes to this power supply affecting Regulatory Agency Approval status cannot be done
+without the prior approval of  Atari Product Engineering.
+
+
+2.0 INPUT ELECTRICAL REQUIREMENTS
+         
+2.1 AC INPUT VOLTAGE:           90 to 129 VAC (RMS) 117 VAC Nominal
+         
+2.2 AC INPUT FREQUENCY:         55 to 65 Hz
+
+2.3 AC INPUT CURRENT:           0.9 Amperes (RMS) for 117 VAC operation
+
+2.4 MAXIMUM INRUSH CURRENT:     35 Amperes for 117 VAC
+
+
+3.0 OUTPUT ELECTRICAL REQUIREMENTS
+
+          Output 1   Output 2
+_________________________________________________________
+
+3.1 Output Voltage:  +5 VDC     +12 VDC
+
+3.2 Minimum Load Current:       1.5 Amp    0.0 Amp    
+
+3.3 Maximum Load Current:       7.0 Amp    0.2 Amp   
+
+3.4 Line Regulation: ±5%        ± 10%
+
+3.5 Load Regulation: ± 5%       ± 10%
+
+3.6 Cross Regulation:± 5%       ± 10%
+
+
+3.7 Specification of cross regulation:
+
+(1) 5 VDC, 1.5 Amp, 12 VDC, 0.18 Amp
+(2) 5 VDC, 7.0 Amp, 12 VDC, 0.0 Amp
+
+3.8 Ripple:                100 millivolts p-p
+
+3.9 Noise:                 100 millivolts p-p
+
+3.10 Peak Current:         +5 VDC peak current of 10 amperes for not more than 10 seconds
+                           with +12 VDC output at full load.
+
+3.11 +5 VDC Set Point:     The +5 VDC output must be set to +5.05 ±0.1 VDC with a +5
+                           VDC output having a load of 4.0 amperes.
+
+
+4.0 OVERALL PERFORMANCE
+
+4.1 Total Output Power:         37.4 watts
+
+4.2 Efficiency:            55% minimum at full load, minimum frequency.
+
+4.3 Hold up time:               10 milliseconds at 100% load and nominal input voltage.
+
+4.4 Switching frequency:        20 KHZ (minimum)
+
+4.5 Temperature coefficient:    ± 0.04% per degree Centigrade
+
+4.6 Power on delay time:        150 milliseconds (maximum)
+
+
+5.0 FEATURES
+
+5.1 Short circuit protection:   All outputs are to be equipped with short circuit protection.
+                                If any of the outputs become overloaded, the power supply
+                                should switch off within 20 milliseconds, all outputs should
+                                not exceed their limit.
+
+5.2 Overshoot:             (5% of the nominal output voltage) at turn on and off with
+                           the outputs not exceeding the limit.
+
+6.0 ENVIRONMENTAL
+
+6.1 Operating Temperature: 0 to +50 degrees Centigrade
+
+6.2 Operating Humidity:         20% to 90% Relative Humidity
+
+6.3 Operating Altitude:         0 to 3000 meters
+
+6.4 Storage Temperature:        -20 to +80 degrees Centigrade
+
+6.5 Storage Humidity:           0% to 90% Relative Humidity
+
+6.6 Storage Altitude:           0 to 15,000 meters
+
+6.7 Cooling:                    Free air convection
+ 
+6.8 Audible Noise:              Not applicable
+
+6.9 Vibration Proof:       This specification and electrical characteristics of the
+                           product can be maintained after being subjected to the
+                           vibration with a frequency variation range of 10 Hz to 55
+                           Hz at an amplitude of 1 millimeter, and cycle time of 1
+                           minute for 2 hours in each of the X,Y and Z directions.
+
+6.9 Impact:                     When packed for shipment, the product shall work normally
+                                after a drop from a 100 centimeter height on each flat
+                                surface of the shipping container.
+
+
+7.0  BURN IN 
+
+7.1 Burn In Parameters:    24 hours at 45 degrees Centigrade (±5 degrees Centigrade) with
+                           power on/off cycling at full load and 117 VAC nominal line
+                           voltage.
+
+7.2  Warranty:       One year warranty
+
+8.0  SAFETY REGULATORY STANDARDS
+
+8.1  Components
+
+The components in the power supply must meet the Safety Regulatory Standards of:
+
+UL 114
+
+UL 1950
+
+CSA 22.2 - NO.154
+
+8.2  Cx, Cy:         UL, CSA Approval
+
+8.3  Fuse:           UL, CSA Approval
+
+
+9.0 CONDUCTED EMI COMPLIANCE STANDARDS
+
+9.1 Limits
+
+The power supply must meet the conducted emission limits of:
+
+FCC PART 15 SUBPART J CLASS B at 117VAC
+
+VDE 0871 6.68 Class B
+
+
+10.0 LEAKAGE CURRENT
+
+10.1 Leakage current:      0.5 milliamperes maximum
+
+
+11.0 DIELECTRIC WITHSTANDING VOLTAGE (HIPOT)
+
+11.1 Input to Output:      1500 VAC 10 milliamperes 60 seconds
+
+
+12.0 INSULATION RESISTANCE
+
+12.1 Input to Output:      10 megohms minimum
+
+
+13.0 RELIABILITY
+
+13.1 Mean Time Between Failures:     50,000 hours minimum at 75% load at a +35 degree
+                                     Centigrade ambient temperature.
+
+13.2 On / Off Cycles:                The power supply shall withstand a minimum of
+                                     5000 power on/off cycles without failure rate
+                                     degradation.
+
+
+14.0 POWER ON / OFF SWITCH
+
+14.1 Mechanical:                     Refer to Paragraph 17.1, Power Supply Reference
+                                     drawing, for critical dimen sions of switch body and
+                                     plastic rocker. These are critical dimensions needed
+                                     to have the power supply properly fit into the
+                                     system housing.
+
+14.2 Safety:                         UL, CSA 
+
+14.3 Rating:                         125 VAC/5A: 250 VAC/3A
+
+14.4 Switch Type:                    Rocker 
+
+14.5 Rocker Color:                   Black
+
+
+15.0 CONNECTORS
+
+15.1 AC Input Connector:             Inlet CEE-22 UL, CSA and VDE
+
+15.2 DC Output Connectors: 
+
+15.2.1 Connector Housing:            MOLEX 09-50-1081 
+
+15.2.2 Contacts:                     MOLEX 08-70-1030
+
+15.2.3 Wire:                         UL, CSA, 1007 80 degrees Centigrade 18 AWG 70
+                                     mm length
+15.2.4 Cabling Diagram:
+
+Pin #     Color Wire Function
+______________________________________
+
+Pin 1     Red        +5 VDC
+Pin 2     Red        +5 VDC
+Pin 3     Red        +5 VDC
+Pin 4     Black      Ground  
+Pin 5     Black      Ground
+Pin 6     Black      Ground  
+Pin 7     Black      Ground 
+Pin 8     Blue       +12 VDC
+
+15.2.5 Output Cable Harness Length:  2.76 inches (70 mm)
+
+Refer to drawing below:
+16.0 SPECIAL REQUIREMENTS: 
+
+16.1 MAXIMUM COMPONENT HEIGHT: 
+
+ALL COMPONENTS ON THE PC BOARD OTHER THAN HEAT SINKS CANNOT EXCEED
+THE LIMIT OF 31 MILLIMETERS IN HEIGHT.
+
+16.2 INSULATION OF HEAT SINK: 
+
+HEIGHT OF HEAT SINKS MUST NOT EXCEED THE MAXIMUM HEIGHT OF 43.78 MM
+SHOWN IN PARAGRAPH 17.1, POWER SUPPLY REFERENCE DRAWING. IF THE HEAT
+SINK HEIGHT IS GREATER THAN 43.78 MM, THE HEAT SINK MUST BE INSULATED
+ALONG ITS UPPER MOST EDGE. IN NO CASE CAN THE HEAT SINK HEIGHT EXCEED
+THE 43.78 MM HEIGHT LIMITATION. THIS IS NEEDED TO PREVENT SHORTING OF
+THE HEAT SINK TO A METAL SHIELD ABOVE THE POWER SUPPLY.
+
+16.3 FRAME GROUND REFERENCE:
+
+The power supply must provide the option to connect the +5 VDC Output Return and the +12
+VDC Output Return to frame ground.
+
+
+17.0 MECHANICAL 
+
+17.1 Power Supply Reference Drawing
+
+DRAWING IS FOR REFERENCE ONLY
+
+DO NOT SCALE
+17.2 Power Supply Mounting Bracket 
+
+Dimensions:                4.69 inches (119.0 mm) length
+          5.65 inches (143.0 mm) width
+          1.87 inches (46.5 mm) height
+
+17.3 Power Supply Weight:
+
+          Not to exceed 16 ounces (454 grams)
+
+
+18.0 MARKINGS
+
+The power supply must be marked with the manufacturer's logo, manufacturer's part number and
+revision, the unit's serial number, and Atari part number.
+
+
+19.0 QUALITY ASSURANCE PROVISIONS
+
+The power supply must meet Atari's "Qualification, Reliability, Acceptance Specifications".
+
+
+20.0 PACKAGE FOR SHIPMENT
+
+All power supplies shipped to this specification shall be packed to prevent physical damage,
+corrosion and deterioration during shipment.
+
+
+21.0 DOCUMENTATION
+
+21.1 SCHEMATIC
+
+Vendor must supply a reproducible of the electrical Schematic for  this power supply.
+
+21.2 BILL OF MATERIAL
+
+Vendor must supply a bill of material for this power supply,  including vendor names and part
+numbers.
+APPROVED VENDORS
+
+ATARI PART NUMBER    MANUFACTURER PART NUMBER
+___________________________________________________________________________
+SPECIFICATION CHANGE HISTORY
+
+
+REV1 - 2/29/92 - Revised as follows:
+
+1.   Paragraph 2.3, AC Input Inrush Current, from 0.6 amperes to 0.9 amperes.
+
+         
+2.   Paragraph 4.1, Total Output Power from 37 watts to 37.4 watts.
+
+
+REV2 - 4/28/92 - Revised as follows:
+
+1.   Paragraph 15.2.1, Connector Housing, from AMP Plug 171822-6 to MOLEX 09-50-1081 
+
+2.   Paragraph 15.2.2, Contacts, from AMP Receptacle 170262-1 to MOLEX 08-70-1030
+
+         
+3.   Paragraph 15.2.3, Wire: from 20 AWG (UL, CSA, 1007 80 degrees Centigrade 95 mm
+     length) to 18 AWG (UL, CSA, 1007 80 degrees Centigrade 95 mm length) 
+4.   Paragraph 15.2.4 Cabling Diagram: 
+
+     FROM:
+
+     Pin #Color Wire Function
+     ______________________________________
+
+     Pin 1Red        +5 VDC
+     Pin 2Red        +5 VDC
+     Pin 3Black      Ground  
+     Pin 4Black      Ground
+     Pin 5Black      Ground  
+     Pin 6Blue       +12 VDC
+
+     TO:
+
+     Pin #Color Wire Function
+     ______________________________________
+
+     Pin 1Red        +5 VDC
+     Pin 2Red        +5 VDC
+     Pin 3Red        +5 VDC
+     Pin 4Black      Ground  
+     Pin 5Black      Ground
+     Pin 6Black      Ground  
+     Pin 7Black      Ground 
+     Pin 8Blue       +12 VDC
+
+
+5.   Paragraph 17.1, change
+
+     FROM:
+
+     17.1 Case Dimensions: 5.79 inches (147 mm) length
+                           5.65 inches (143.5 mm) width
+                           2.12 inches (53.8 mm) height
+
+     TO:
+
+     17.1 Mounting Bracket Dimensions:     4.69 inches (119.1 mm) length
+                                     5.65 inches (143.5 mm) width
+                                     1.87 inches (47.5 mm) height
+
+6.   Remove all dimensions from drawing in Paragraph 17.2. 
+
+
+7.   After removing dimensions from drawing in Paragraph 17.2, add the following to the
+     drawing:
+
+     FOR REFERENCE ONLY
+
+     DO NOT SCALE
+
+8.   Add Paragraph 15.2.6, as follows:
+
+     15.2.6 Output Cable Location:   The output cable must be located on the power
+                                     supply as shown in drawing in Paragraph 17.1.
+
+9.   Add mechanical drawing of power supply bracket as FIGURE 17.
+
+10.  Change drawing in 15.2.5 to show correct number of wires (now 8) in the output cable
+     and the correct wire size (now 18 AWG).
+
+
+REV3 - 5/11/92 
+
+1.   Paragraph 17.2, Mounting Bracket
+
+     FROM:
+
+     Dimensions:     4.69 inches (119.1 mm) length
+                5.65 inches (143.5 mm) width
+                1.87 inches (47.5 mm) height
+
+     TO:
+
+     Dimensions:     4.69 inches (119.0 mm) length
+                5.63 inches (143.0 mm) width
+                1.83 inches (46.5 mm) height
+2.   Add Paragraph 16.2, INSULATION OF HEAT SINK
+
+     16.2 INSULATION OF HEAT SINK: 
+
+     HEAT SINKS MUST EITHER BE LOWER IN HEIGHT THAN THE MAXIMUM
+     COMPONENT HEIGHT OF 31 MM OR MUST BE INSULATED ON THEIR
+     UPPERMOST EDGE. THIS IS NEEDED TO PREVENT SHORTING TO A METAL
+     SHIELD LOCATED ABOVE THE POWER SUPPLY.
+
+3.   Change Paragraph 15.2.3, Wire
+
+      FROM:
+
+      "95" mm
+
+      TO:
+
+      "60" mm.
+
+4.   Change Paragraph 15.2.5, Output Cable Harness Length
+
+     FROM:
+
+     "3.74 inches (95 mm)"
+
+     TO:
+
+     "2.36 inches (60 mm)"
+
+5.   Correct Output Cable Harness Length drawing, part of paragraph 15.2.5, to change cable
+     length from "95 ±5 mm" to "60 ±5 mm". Also change connector housing from "AMP
+     171822-0" to "MOLEX 09-50-1081". Also change connector contacts from "AMP
+     170262-1" to "MOLEX 08-70-1030". Also change drawing to show "8 wires" not "6
+     wires" in the cable.
+
+6.   Add Paragraph 17.2, Location of Output Cable. Define position on pcb where Output
+     Cable is to be located. Location of center of Output Cable is 36 mm ±3 mm. from the
+     rear edge of the pcb.
+
+7.   Add to Figure 17.2, Mounting Bracket drawing, the restric tion on tolerance of tabs
+     holding the pcb above the bracket from general tolerance of "__________" to tolerance
+     of "+0 mm to -______ mm". 
+
+8.   Add to Figure 17.2, Mounting Bracket drawing, the limit of 16.3 mm as the maximum
+     allowed vertical dimension of AC power switch on power supply mounting bracket.
+
+9.   Change Paragraph 17.3, Weight from "TO BE DETERMINED" to "Not to exceed 16
+     ounces (454 grams)".
+
+10.  Change Paragraph 3.10, Peak Current, +5DC, from "PEAK CURRENT TO BE
+     SPECIFIED" to "Maximum of 10 amperes for not more than 10 seconds".
+
+11.  Change Paragraph 14.1, Source (for POWER ON / OFF SWITCH) from "Echo Electric
+     Co., Ltd. (or alternate vendor)" to Refer to Paragraph 17.1, Power Supply Reference
+     drawing, for critical dimensions of switch boady and plastic rocker. 
+
+     These are critical dimensions needed to have the power supply properly fit into the
+     system housing."
+
+12.  Add Paragraph 3.11, "+5 VDC Set Point: The +5 VDC output must be set to +5.05 ±0.1
+     VDC."
+
+
+REV4 - 5/18/92 - Change C302866-001 as follows
+
+1.   Change location of position of DC Output Cable shown in Power Supply Reference
+     Drawing from "end of DC Output Cable with DC Output Connector" to   "beginning a
+     DC Output Cable soldered to the power supply printed circuit board assembly."
+
+2.   Replace 17.1 Power Supply Reference Drawing wth drawing showing the change
+     referenced in Change 1 above.
+
+3.   Change Paragraph 18.0, Markings,
+
+     FROM:
+
+     "manufacturer's part number,"
+
+     TO:
+
+     "manufacturer's part number and revision"
+4.   Change Paragraph 3.11, +5 VDC Set Point, 
+
+     FROM:
+
+     "The +5 VDC output must be set to +5.05 ± 0.1 VDC"
+
+     TO:
+
+          "The +5 VDC output must be set to +5.05 ± 0.1 VDC with a +5 VDC output having a
+          load of 4.0 amperes.

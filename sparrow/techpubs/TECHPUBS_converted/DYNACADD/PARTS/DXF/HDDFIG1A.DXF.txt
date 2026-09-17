@@ -1,0 +1,70 @@
+DXF drawing: DYNACADD/PARTS/DXF/HDDFIG1A.DXF
+Render: HDDFIG1A.DXF.svg
+
+== Summary ==
+File:        12873 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font txt
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (0.6381, 1.4157) - (10.0059, 8.2712)
+             rendered (0.6893, 1.4157) - (9.9547, 8.2712), size 9.2654 x 6.8555
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: STANDARD (font txt)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 2 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            42
+  10            7  CONTINUOUS    on            73
+  unused: 2, 3, 4, 5, 6, 7, 8, 9
+Entities:    model space: LINE 61, TEXT 21, ARC 18, CIRCLE 8, SOLID 7
+Blocks:      0 defined
+
+== Text in reading order (21 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (21 items) --
+  HARD DISK COVER
+  ACCESSORY
+  COVER
+  FRONT
+  HARD DISK
+  MOUNTING
+  BRACKET
+  REAR
+  HOLES FOR
+  MOUNTING
+  HARD DISK
+  HARD DISK
+  DRIVE
+  FRONT
+  REAR  |  POWER
+  EXTENSION CABLE
+  (If Installed)
+  INTERFACE
+  HARD DISK
+  CONNECTOR
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE     TEXT
+5.2227  8.1212      0.15      0  center    1      STANDARD  HARD DISK COVER
+9.1288  7.4247      0.15      0  center    1      STANDARD  ACCESSORY
+ 9.092  7.2237      0.15      0  center    1      STANDARD  COVER
+1.0956  6.6769      0.15      0  center    1      STANDARD  FRONT
+8.0671  6.3712      0.15      0  center    1      STANDARD  HARD DISK
+7.9925  6.1733      0.15      0  center    1      STANDARD  MOUNTING
+7.9925  5.9523      0.15      0  center    1      STANDARD  BRACKET
+6.6179  5.5015      0.11      0  center    1      STANDARD  REAR
+1.3128   5.233      0.15      0  center    1      STANDARD  HOLES FOR
+1.2382   5.012      0.15      0  center    1      STANDARD  MOUNTING
+1.2631  4.7679      0.15      0  center    1      STANDARD  HARD DISK
+9.3809  3.2527      0.15      0  center    1      STANDARD  HARD DISK
+9.3974  3.0286      0.15      0  center    1      STANDARD  DRIVE
+1.7811   2.736      0.15      0  center    1      STANDARD  FRONT
+6.8452  2.6209      0.15      0  center    1      STANDARD  REAR
+8.7097  2.5758      0.15      0  center    1      STANDARD  POWER
+8.7595  2.3317      0.15      0  center    1      STANDARD  EXTENSION CABLE
+8.7534  2.1006      0.15      0  center    1      STANDARD  (If Installed)
+7.3091  1.6136      0.15      0  center    1      STANDARD  INTERFACE
+4.7277  1.4916      0.15      0  center    1      STANDARD  HARD DISK
+7.3091  1.4157      0.15      0  center    1      STANDARD  CONNECTOR

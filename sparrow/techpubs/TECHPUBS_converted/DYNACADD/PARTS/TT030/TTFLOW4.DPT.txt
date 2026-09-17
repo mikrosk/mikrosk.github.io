@@ -1,0 +1,45 @@
+DynaCADD 2.0 entity file (.DPT)
+Source: DYNACADD/PARTS/TT030/TTFLOW4.DPT (9623 bytes)
+Record stream: 104 records, ends at offset 0x2597 with FFFF terminator
+Drawing settings from: TTFLOW4.DWG
+Sheet: width 16.84, height 28.6132, scale 1
+Units: not recorded in a field identified so far; coordinates are listed as stored
+Entities: 104 total (LINE 61, ARC 12, TEXT 31)
+Extents: x 1.4033 .. 15.4359, y 2.3844 .. 26.2287 (size 14.0326 x 23.8443)
+Layers used: 0 "L1" (104)
+Line styles used: 0 "DASHED, drawn solid" (104)
+Colour indices used: 7 (104)
+Groups: none
+
+Text strings (31), in file order; x,y = insertion point:
+  x=2.4319     y=21.7229    h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "MHzCLOCK "
+  x=2.4752     y=21.3179    h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "PRESENT? "
+  x=2.1305     y=13.194     h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "OUTPUT "
+  x=1.7631     y=8.7152     h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "TRACE"
+  x=2.5088     y=8.334      h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "CONNECTOR, "
+  x=1.8824     y=7.9052     h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "REPLACE"
+  x=2.0079     y=7.4764     h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "FAILING"
+  x=1.8135     y=8.3102     h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "TO "
+  x=3.2871     y=25.1275    h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "C"
+  x=3.1642     y=22.0564    h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "32 "
+  x=5.5545     y=21.6752    h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "NO "
+  x=7.5708     y=21.3179    h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "CRYSTAL"
+  x=9.1743     y=21.7229    h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "THE"
+  x=7.1396     y=21.7229    h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "REPLACE"
+  x=7.7912     y=16.8152    h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "RESTART"
+  x=3.9358     y=13.1702    h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "FROM "
+  x=5.5289     y=13.1702    h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "NO "
+  x=3.551      y=10.7163    h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "YES"
+  x=3.5253     y=19.2452    h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "YES"
+  x=2.6951     y=12.6761    h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "TTVIDEO?"
+  x=7.6987     y=13.3396    h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "REPLACE"
+  x=7.7418     y=12.7652    h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "TTVIDEO"
+  x=3.2684     y=8.6913     h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "OUTPUT "
+  x=3.7116     y=7.9052     h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "THE"
+  x=3.7387     y=7.4764     h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "PART "
+  x=8.1589     y=8.1197     h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "OK?"
+  x=10.7264    y=8.3102     h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "YES"
+  x=8.7649     y=5.8802     h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "NO "
+  x=12.7657    y=8.0721     h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "RESTART"
+  x=7.754      y=3.8552     h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "REPLACE"
+  x=8.095      y=3.4502     h=0.2578  w=0.1881  angle=0      font=LEROY_R  layer=L1       "MCU "

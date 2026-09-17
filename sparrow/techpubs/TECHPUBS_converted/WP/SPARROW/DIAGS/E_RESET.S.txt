@@ -1,0 +1,39 @@
+* author: Tom Le
+* date: Feb 21, 1992
+	.data
+.even
+testrstm: dc.b cr,lf,'  Reset signal: ',eot
+.even
+	.text
+testrstbe:
+	move.l  spsave0,sp
+	bra	testrst0
+
+testreset:
+	lea	testrstm,a5
+	bsr	dspmsg
+	move.l  sp,spsave0
+	move.l  8,intsave0
+	move.l  #testrstbe,8
+	move.b  expandio,d0
+bsr	crlf
+bsr	dspd0b
+	move.w  d0,$f10000	;generate a bus error
+
+testrst0:
+move.b  expandio,d0
+bsr	crlf
+bsr	dspd0b
+	cmp.w   #$1234,d0
+	bne	testrstf
+	clr.w   flag
+
+testrstrt:
+	tst.w  flag
+	rts
+
+testrstf:
+	lea	failmsg,a5
+	bsr	dspmsg
+	move.w  #$ffff,flag
+	bra	testrstrt

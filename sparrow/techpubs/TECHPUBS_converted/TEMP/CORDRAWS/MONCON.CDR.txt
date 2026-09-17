@@ -1,0 +1,49 @@
+File: TEMP/CORDRAWS/MONCON.CDR
+Format: CorelDRAW 2.x drawing, pre-RIFF "WL" (Waldo) container, version byte 0xC9 (201)
+File size: 6039 bytes
+Page: 11.000 x 8.500 in (landscape); native units 0.001 in, origin at page centre, y up
+Drawing extent (in, page-centred): x -2.270 .. 2.402, y -2.033 .. 2.258
+Preview bitmap: 90x90 monochrome
+Record index: type1=25, type2=22, type7=1
+Objects: groups 2, rectangle 0, ellipse 13, curve 2, text 7, bitmap 0
+Curve nodes total: 18
+Fills: none 1, solid 21
+Outlines: none 7, solid 15
+Colours used: CMYK(0,0,0,100) x36
+Fonts: toronto.wfn (id 68)
+
+Text strings: 7
+(position = text anchor point in inches from page top-left, x right / y down; listed top-to-bottom, left-to-right)
+  ( 3.500,  3.437)  "4"  [toronto.wfn 30.0pt align=left scale=0.70x1.00]
+  ( 7.516,  3.647)  "1"  [toronto.wfn 30.0pt align=left scale=0.70x1.00]
+  ( 3.500,  4.062)  "8"  [toronto.wfn 30.0pt align=left scale=0.70x1.00]
+  ( 7.511,  4.147)  "5"  [toronto.wfn 30.0pt align=left scale=0.70x1.00]
+  ( 7.534,  4.668)  "9"  [toronto.wfn 30.0pt align=left scale=0.70x1.00]
+  ( 3.438,  4.687)  "12"  [toronto.wfn 30.0pt align=left scale=0.70x1.00]
+  ( 5.500,  6.062)  "13"  [toronto.wfn 30.0pt align=left scale=0.70x1.00]
+
+Object tree (stored order = front-most first; bbox in inches from page top-left):
+  group [3.438,2.200-7.694,6.075]
+    curve 5 nodes [5.374,2.375-5.875,3.000]
+    group [4.437,3.124-6.750,5.312]
+      ellipse 0.438x0.438 in [5.375,4.874-5.813,5.312]
+      ellipse 0.438x0.438 in [6.312,3.124-6.750,3.562]
+      ellipse 0.438x0.438 in [6.312,4.312-6.750,4.750]
+      ellipse 0.438x0.438 in [6.312,3.687-6.750,4.125]
+      ellipse 0.438x0.438 in [5.062,3.124-5.500,3.562]
+      ellipse 0.438x0.438 in [5.062,4.312-5.500,4.750]
+      ellipse 0.438x0.438 in [5.062,3.687-5.500,4.125]
+      ellipse 0.438x0.438 in [5.687,3.124-6.125,3.562]
+      ellipse 0.438x0.438 in [5.687,4.312-6.125,4.750]
+      ellipse 0.438x0.438 in [5.687,3.687-6.125,4.125]
+      ellipse 0.438x0.438 in [4.437,3.124-4.875,3.562]
+      ellipse 0.438x0.438 in [4.437,4.312-4.875,4.750]
+      ellipse 0.438x0.438 in [4.437,3.687-4.875,4.125]
+    text "5" [7.500,3.863-7.636,4.160]
+    text "9" [7.534,4.341-7.694,4.687]
+    text "1" [7.516,3.363-7.632,3.647]
+    text "12" [3.438,4.360-3.723,4.687]
+    text "8" [3.500,3.748-3.625,4.098]
+    text "13" [5.500,5.755-5.772,6.075]
+    text "4" [3.500,3.156-3.639,3.437]
+    curve 13 nodes [3.826,2.200-7.373,5.747]

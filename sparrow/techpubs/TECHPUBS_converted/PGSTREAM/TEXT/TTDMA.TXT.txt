@@ -1,0 +1,207 @@
+
+		DESIGN SPECIFICATION FOR THE TT DMAC
+
+Incarnations:	National ??? rev. A
+		National ADT rev. B
+		Styra ST-4134 rev.s B & C
+
+1. Pin Description
+
+	A0-A31	TTL bi-dir	bus address bus
+	FC0-FC2	TTL bi-dir	bus function codes
+	RXW	TTL bi-dir	bus read write
+	XAS	TTL bi-dir	bus address strobe
+	XDS	TTL bi-dir	bus data strobe
+	SIZ0-1	TTL bi-dir	bus size codes
+	XIACK	TTL input	interrupt ack input
+
+	D0-D7	TTL bi-dir	data bus
+
+	XSTERM	TTL input	bus synchronous termination
+	XDSACK0	TTL input	data size ack
+	XDSACK1	TTL bi-dir	data size ack
+
+	DRQ	TTL input	dma request (active state is determined
+				by the mode; high for SCSI low for SCC)
+
+	XBGI	TTL input	bus grant daisy chain input
+	XBGO	output		bus grant daisy chain output
+	XBGACK	TTL bidir	bus grant acknowledge output, monitiored
+				during arbitration
+	XBR	ts output	bus request
+
+	XRESET	TTL input	reset
+	CLKIN	cmos input	clock input
+
+	XBERR	TTL input	bus error input, used to terminate DMA if
+				a buss error occurs while the DMAC is master
+
+	XIRQ	ts output	interrupt output (see register description
+				for interrupt conditions)
+
+	XCEN	output		data control to DCU
+	XLWRD	output		(see DCU documentation for details)
+	XHOLD	output
+	XLDI	output
+	XPEN	output
+	XTHRU	output
+	DA0-DA1	output
+
+	XRD	output		IO control read strobe
+	XWR	output		IO control write strobe
+	DCDK	output		SCC ADDR A/B - SCSI dma acknowledge
+	ABEP	output		SCC ADDR D/C - SCSI end of dma strobe
+	MODE	input		SCSI/SCC mode select
+
+2. PACKAGE
+The circuit needs 74 signal pins. Package will be 84pin PLCC. Bonding
+diagram to be provided by vendor.
+
+Pin#	signal
+1  - XBERR	22 - A8		43 - A24	64 - D7
+2  - XXIRQ	23 - A9		44 - A25	65 - XCEN
+3  - XXSTERM	24 - VDD	45 - A26	66 - XPEN
+4  - XXDSACK0	25 - VSS	46 - A27	67 - XLDI
+5  - XXDSACK1	26 - A10	47 - A28	68 - XHOLD
+6  - XSIZ0	27 - A11	48 - A29	69 - XLWRD
+7  - XSIZ1	28 - A12	49 - A30	70 - XTHRU
+8  - XRXW	29 - A13	50 - VDD	71 - DA0
+9  - XXDS	30 - A14	51 - VSS	72 - DA1
+10 - XXAS	31 - A15	52 - A31	73 - DRQ
+11 - XVSS	32 - A16	53 - FC0	74 - VSS
+12 - XVDD	33 - XIACK	54 - FC1	75 - VDD
+13 - XCLKIN	34 - A17	55 - FC2	76 - ABEP
+14 - XA0	35 - A18	56 - MODE	77 - DCDK
+15 - XA1	36 - A19	57 - D0		78 - XRD
+16 - XA2	37 - VSS	58 - D1		79 - XWR
+17 - XA3	38 - VDD	59 - D2		80 - XRESET
+18 - XA4	39 - A20	60 - D3		81 - XBGO
+19 - XA5	40 - A21	61 - D4		82 - XBGACK
+20 - XA6	41 - A22	62 - D5		83 - XBGI
+21 - XA7	42 - A23	63 - D6		84 - XBR
+
+
+		FUNCTIONAL DESCRIPTION OF TT DMAC
+
+The DMAC has two modes controlled by the SCSI/SCC pin. When this pin
+is strapped high, the DMAC is in SCSI mode. A low is SCC mode. The
+timing and pin functions are configured to interface to a NCR 5380
+SCSI controller when in SCSI mode. In SCC mode the chip is configured
+for a Z85C30 SCC.
+
+	MODE	PIN		INTERFACES TO
+	SCSI	73 = REQUEST	NCR 5380
+	  "	76 = XEOP	   "
+	  "	77 = XDACK	   "
+	 SCC	73 = XREQUEST	 Z8530
+	  "	76 = A/B	   "
+	  "	77 = D/C	   "
+
+The register map is the same in either mode, but the base address of
+the registers is changed.
+
+	MODE	BASE ADDRESS
+	SCSI	 xxFF8700	(xx = FF OR 00)
+	SCC	 xxFF8C00
+
+-----------------------------------------------------------------------
+REGISTER MAP
+
+BASE+	TYPE	D15      -       D0	FUNCTION
+
+0	RW	---- ---- XXXX XXXX	DMA ADDRESS POINTER UPPER BYTE
+2	RW	---- ---- XXXX XXXX	DMA ADDRESS POINTER UPPER-MIDDLE
+4	RW	---- ---- XXXX XXXX	DMA ADDRESS POINTER LOWER-MIDDLE 
+6	RW	---- ---- XXXX XXXX	DMA ADDRESS POINTER LOWER BYTE
+
+8	RW	---- ---- XXXX XXXX	BYTE COUNTER UPPER BYTE
+A	RW	---- ---- XXXX XXXX	BYTE COUNTER UPPER-MIDDLE
+C	RW	---- ---- XXXX XXXX	BYTE COUNTER LOWER-MIDDLE 
+E	RW	---- ---- XXXX XXXX	BYTE COUNTER LOWER BYTE
+
+10	RO	XXXX XXXX XXXX XXXX	DATA RESIDUE HIGH (DCU LATCHES)
+12	RO	XXXX XXXX XXXX XXXX	DATA RESIDUE LOW
+
+14	RW	---- ---- abc0 00de	CONTROL REGISTER
+					a - bus error during DMA
+					    (read only, cleared by read)
+					b - byte count = 0
+					    (read only, cleared by read)
+					c - overrun (DRQ after byte count=0)
+					    (read only, cleared by
+					     read or write)
+					d - DMA enable
+					    0=off 1=on
+					e - DMA direction
+					    0 = out to port
+					    1 = in from port
+
+80-8F	--	---- ---- XXXX XXXX	THRU MODE
+					These addresses access the port
+					chip directly.
+
+-------------------------------------------------------------------------
+DMA OPERATION
+
+The DMA address pointer is set to the address of the first byte of data
+to be transfered. The byte counter is optional if the port controller
+can signal the end of the transfer. If used, the byte counter is decremented
+for each byte transfered. When the byte count reaches zero, bit 6 in the
+control register is set and the XIRQ line is driven low.  Further DMA
+requests are inhibited. A read of the control register clears bit 6
+and the interrupt. If a data request is received after the byte count
+has decremented to zero, bit 5 of the control register (overrun) is set.
+A read or write of the control register will clear bit 5.
+
+DMA into memory:
+
+The number of bytes transfered or the staring address are not restricted,
+however, if the transfer does not end at a longword boundary then one to
+three bytes of data will remain in the DCU. This occurs because the bus
+transfers are initiated at longword boundaries. For this reason the
+data residue register exists to allow the data to be manually placed.
+
+When DMA is initiated, the DMAC will not request the bus until one to four
+bytes have been assembled in the DCU. How many depends on the starting
+address. The first bus transfer is the only one which is not guarateed
+to be a longword. The DMAC waits until enough bytes have come in to
+reach the first longword boundary, then transfers longwords on longword
+boundaries thereafter. The byte counter is decremented after each byte
+at the port. When the byte counter reaches zero bit 6 in the control
+register is set and the XIRQ line is driven low. No byte transfers
+can take place after the byte count is zero. The service routine should
+clear bit 1 of the control register.
+
+The DMAC will request the bus anytime a complete longword is latched
+in the DCU. If the next longword has not yet been received at the time
+the bus is granted, then the DMAC will do one transfer and release the bus.
+If the next longword has been received then the DMAC will transfer both
+longwords.
+
+If the DMAC is delayed in getting the bus and the DCU is subsequently
+filled, the the DMAC will not respond to DMA requests until the
+situation is resolved.
+
+DMA out to port:
+
+If the starting address is not a longword boundary, then the first bus
+transfer will be a one to three byte read. Otherwise all bus reads are
+longwords. When DMA is initiated, the DMAC will immediately request the
+bus and do two transfers, thus filling both latches in the DCU. When-
+ever space for a longword exists in the DCU, the DMAC will request the
+bus. If the DCU is not empty, then the DMAC will read one longword. If
+the DCU has been emptied while waiting for the bus, then the DMAC will
+read two longwords.
+
+If the DMAC is delayed in getting the bus and the DCU is subsequently
+empied, the the DMAC will not respond to DMA requests until the
+situation is resolved.
+
+----------------------------------------------------------------------
+THRU MODE
+
+When the system accesses addresses in the thru mode range, the DMAC
+instructs the DCU to pass thru data and operates the port control
+lines to accomplish the requested transfer. The net effect is that
+the port chip appears in the memory map as if the DMAC were not
+there.

@@ -1,0 +1,37 @@
+[PageStream 2 document PCBA_ASM.DOC: 8.50 x 11.00 in, 26908 objects]
+
+--- Page 33 ---
+[10835 drawing objects, see PCBA_ASM.DOC.p033.svg]
+
+--- Page 34 ---
+[16021 drawing objects, see PCBA_ASM.DOC.p034.svg]
+
+--- Master page (repeated on pages; # = page number) ---
+[32 drawing objects, see PCBA_ASM.DOC.mR.svg]
+
+SIZE
+
+DRAWING NO.
+
+REV
+
+®
+
+ATARI
+CORPORATION
+
+A
+
+SCALE
+
+NONE
+
+C302758-001
+
+SHEET
+
+OF
+
+1
+
+_

@@ -1,0 +1,28 @@
+File: EASYDRAW/SPARUPA.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-4148,-7169)-(4424,-1501)
+Page size: 279.4 x 431.8 mm
+Coordinate window: lower-left (-5005,7735), upper-right (5005,-7735); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-4148,-7169)-(4424,-1501)
+Items: 16776 (100702 words)
+Objects: polyline 5584
+Other records (escapes, application data): write_meta 10 x1, write_meta 150 x1, write_meta 151 x1, write_meta 158 x1, write_meta 160 x1, write_meta 80 x5584, write_meta 81 x5584
+Text strings: 0
+
+No text objects in this file (any lettering is drawn as vector strokes or outlines).
+
+LABELS READ FROM THE RENDERED IMAGE (lettering here is vector graphics, not text data; transcribed visually in reading order, may contain reading errors)
+F1 F2 F3 F4 F5 F6 F7 F8 F9 F10
+Esc | ! 1 | @ 2 | # 3 | $ 4 | % 5 | ^ 6 | & 7 | * 8 | ( 9 | ) 0 | _ - [?] | + = [?] | ~ ` [?] | Backspace
+Help | Undo
+( | ) | / | *
+Tab | Q | W | E | R | T | Y | U | I | O | P | { [ | } ] | Delete
+Insert | ↑ | Clr / Home
+7 | 8 | 9 | -
+Control | A | S | D | F | G | H | J | K | L | : ; | " ' [?] | Return | | \
+← | ↓ | →
+4 | 5 | 6 | +
+Shift | Z | X | C | V | B | N | M | < , | > . | ? / | Shift
+1 | 2 | 3 | Enter
+Alternate | CapsLock
+0 | .

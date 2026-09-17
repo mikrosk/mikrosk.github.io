@@ -1,0 +1,74 @@
+[PageStream 2 document F030HDD.DOC: 8.50 x 11.00 in, 17058 objects]
+
+--- Page 1 ---
+[7167 drawing objects, see F030HDD.DOC.p001.svg]
+
+FALCON030
+Hard Disk Installation Kit
+
+
+Contents
+
+2.5" Hard Disk and Hard Disk Mounting Kit P/N CA41347-001
+
+
+Installation
+
+1.	Turn the unit over and remove the seven screws holding the top cover in place. Remove the top cover and keyboard assembly.
+
+Top
+Cover
+
+Keyboard
+Assembly
+
+Bottom
+Cover
+
+Screws
+
+Screws
+
+--- Page 2 ---
+[7365 drawing objects, see F030HDD.DOC.p002.svg]
+
+2.	Remove the nine screws holding the Cover Shield. Lift up the Cover Shield and unplug the Speaker Assembly from the Main PCB. Remove the Cover Shield.
+
+Screws
+
+Speaker
+Assembly
+
+Cover
+Shield
+
+Bottom
+Cover
+
+3.	Install the hard disk into the hard disk bracket assembly using the four screws provided. Install the hard disk interface cable into the disk drive.
+
+Hard
+Disk
+
+Interface
+Cable
+
+Hard Disk
+Bracket
+
+Screws
+
+--- Page 3 ---
+[2498 drawing objects, see F030HDD.DOC.p003.svg]
+
+4.	Install the hard disk in the unit by plugging the interface cable into the Main PCB. Attach the hard disk bracket using four screws.
+
+Screws
+
+Hard Disk
+In Bracket
+
+Bottom
+Cover
+
+5.	Plug in the speaker assembly and replace the Cover Shield, Keyboard, and Top Cover.

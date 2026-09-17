@@ -1,0 +1,7 @@
+DynaCADD 2.0 entity file (.DPT)
+Source: DYNACADD/PARTS/STBOOK/TOP.DPT (37 bytes)
+Record stream: 0 records, ends at offset 0x25 with FFFF terminator
+Drawing settings from: TOP.DWG
+Sheet: width 34, height 22, scale 1
+Units: not recorded in a field identified so far; coordinates are listed as stored
+Entities: none (file holds only the header and the end marker)

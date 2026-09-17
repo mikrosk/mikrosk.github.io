@@ -1,0 +1,51 @@
+[PageStream 2 document MSTE0004.DOC: 8.50 x 11.00 in, 2 objects]
+
+--- Page 1 ---
+
+Atari Technical Bulletin
+Number: MSTE-0004
+Date: November 8, 1991
+Page 1 of 2
+
+
+Product(s) Affected:	MEGA STE
+Model:				MEGA STE/2/4
+Type of ATB:		As Needed
+ECO #: 			N/A
+
+Reason for ATB:
+
+When using SIMMs built with Goldstar DRAMs in the MEGA STE, it is possible the system will not boot correctly if power is turned off and then on again in under 30 seconds.
+
+This bulletin describes how the Goldstar DRAMs can be used without causing this problem.
+
+Notes:
+
+There are two versions of this DRAM IC package:
+
+Part marking			Package style
+
+GM71C1000J12		20 pin SOJ package
+GM71C1000-12		18 pin DIP package
+
+Symptoms of Problem:
+
+When you turn the MEGA STE power off and then on again in under 30 seconds, TOS will detect valid RAM data in the Goldstar DRAMs and perform a warm boot instead of a cold boot. The Goldstar DRAMs are retaining valid data for up to 30 seconds. This is especially noticeable when the internal SCSI hard disk drive is installed, since the system will boot before the hard disk drive is ready and the internal hard disk drive will not be recognized.
+
+Tests to Determine if Problem Exists:
+
+Insert any formatted floppy disk into the A drive. Turn the system power OFF for 15 seconds. After 15 seconds turn the power ON. DO NOT press any keys. The system will start booting before the internal hard disk is ready. The system will therefore not recognize the internal hard disk.
+
+--- Page 2 ---
+
+Atari Technical Bulletin
+Number: MSTE-0004
+Date: November 8, 1991
+Page 2 of 2
+
+
+Solution:
+
+In MEGA STE/2 systems, use only one Goldstar SIMM in location U701. Use any other approved SIMM in location U703. TOS checks for valid RAM data in both location. So as long as either location does not use the Goldstar DRAMs, TOS will find invalid data and properly perform a cold boot.
+
+In MEGA STE/4 systems, use the Goldstar SIMMs only in the upper memory banks (U702 and U704). TOS does not check for valid memory in the upper memory banks.

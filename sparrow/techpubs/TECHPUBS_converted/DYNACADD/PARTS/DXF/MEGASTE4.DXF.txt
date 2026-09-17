@@ -1,0 +1,81 @@
+DXF drawing: DYNACADD/PARTS/DXF/MEGASTE4.DXF
+Render: MEGASTE4.DXF.svg
+
+== Summary ==
+File:        12207 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font ROMAND
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (-357.19, 210.679) - (-341.598, 237.173)
+             rendered (-357.19, 210.679) - (-341.598, 237.173), size 15.592 x 26.494
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: ROMAND (font ROMAND)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            108
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: LINE 61, TEXT 35, ARC 12
+Blocks:      0 defined
+
+== Text in reading order (35 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (35 items) --
+  C
+  32
+  MHzCLOCK  |  NO  |  REPLACE  |  THE
+  PRESENT?  |  CRYSTAL
+  YES
+  RESTART
+  OUTPUT  |  FROM  |  NO  |  REPLACE  |  GST
+  GST  |  VIDEO  |  VIDEO  |  SHIFTER
+  SHIFTER?
+  YES
+  TRACE OUTPUT
+  TO CONNECTOR,  |  YES
+  OK?  |  RESTART
+  REPLACE THE
+  FAILING PART
+  NO
+  REPLACE
+  GSTMCU
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+       X         Y    HEIGHT    ROT  JUST      LAYER  STYLE   TEXT
+-355.039   235.949    0.2865      0  left      1      ROMAND  C
+-355.168   232.537    0.2865      0  left      1      ROMAND  32
+-356.005   232.166    0.2865      0  left      1      ROMAND  MHzCLOCK
+-352.516   232.113    0.2865      0  left      1      ROMAND  NO
+-350.756   232.166    0.2865      0  left      1      ROMAND  REPLACE
+-348.511   232.166    0.2865      0  left      1      ROMAND  THE
+-355.941   231.716    0.2865      0  left      1      ROMAND  PRESENT?
+ -350.28   231.716    0.2865      0  left      1      ROMAND  CRYSTAL
+-354.778   229.413    0.2865      0  left      1      ROMAND  YES
+-350.032   226.713    0.2865      0  left      1      ROMAND  RESTART
+-356.337    222.69    0.2865      0  left      1      ROMAND  OUTPUT
+-354.312   222.663    0.2865      0  left      1      ROMAND  FROM
+-352.545   222.663    0.2865      0  left      1      ROMAND  NO
+-350.642   222.663    0.2865      0  left      1      ROMAND  REPLACE
+-348.283   222.663    0.2865      0  left      1      ROMAND  GST
+-355.871   222.213    0.2865      0  left      1      ROMAND  GST
+-354.459    222.24    0.2865      0  left      1      ROMAND  VIDEO
+-350.866   222.213    0.2865      0  left      1      ROMAND  VIDEO
+-349.028   222.213    0.2865      0  left      1      ROMAND  SHIFTER
+-355.842   221.763    0.2865      0  left      1      ROMAND  SHIFTER?
+ -354.75   219.937    0.2865      0  left      1      ROMAND  YES
+-356.746   217.713    0.2865      0  left      1      ROMAND  TRACE
+-355.072   217.687    0.2865      0  left      1      ROMAND  OUTPUT
+ -356.69   217.263    0.2865      0  left      1      ROMAND  TO
+-355.904    217.29    0.2865      0  left      1      ROMAND  CONNECTOR,
+-346.777   217.263    0.2865      0  left      1      ROMAND  YES
+-349.639   217.052    0.2865      0  left      1      ROMAND  OK?
+-344.505   216.999    0.2865      0  left      1      ROMAND  RESTART
+-356.598   216.813    0.2865      0  left      1      ROMAND  REPLACE
+-354.581   216.813    0.2865      0  left      1      ROMAND  THE
+-356.454   216.337    0.2865      0  left      1      ROMAND  FAILING
+-354.537   216.337    0.2865      0  left      1      ROMAND  PART
+-348.949   214.563    0.2865      0  left      1      ROMAND  NO
+-350.074   212.313    0.2865      0  left      1      ROMAND  REPLACE
+-350.089   211.863    0.2865      0  left      1      ROMAND  GSTMCU

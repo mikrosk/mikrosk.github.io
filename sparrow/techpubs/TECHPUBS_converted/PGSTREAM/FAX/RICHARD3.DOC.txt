@@ -1,0 +1,27 @@
+[PageStream 2 document RICHARD3.DOC: 8.50 x 11.00 in, 2 objects]
+
+--- Page 1 ---
+[1 drawing objects, see RICHARD3.DOC.p001.svg]
+
+Dallas Office Memo
+
+
+To:		Richard Miller
+From:	Marty Pennock
+Subject:	DTP Package Use
+Date:	March 4, 1992
+
+cc:		Ira Goldstein - ATX
+		Tom Ulaszek - ATX
+
+
+After talking to Tom Ulaszek and Ira Goldstein on Tuesday, March 3, 1992, it appears some confusion has arisen over the choice and use of a Desk Top Publishing package for manual creation here at ATX. After a conversation with you while you were here working on the Sparrow project, I believe that it was left to a deadline to switch back to IBM software and an ABC386DX II if problems with PageStream had not been resolved after a week. It is also my understanding that I may have falsely led you to believe that conversion of documents created in Ventura on the ABC could easily be dropped into PageStream on the TT030 and converted. I would like to clarify at this point that this is really not quite the case. There is no direct conversion capability between Ventura and PageStream. The ease of conversion comes from the fact that Style Sheets are already set up in PageStream to do Service and Option manuals. Ventura creates GEM based drawings from any HPGL (Hewlett Packard Graphics Language) drawing file it imports. These GEM based drawings can also be used in PageStream as GEM metafiles once the metafile import module has been fixed.
+
+However, All of the text and tags associated with the document created in Ventura must be re-created from a base document as would be the case if starting from scratch with an ASCII file. The conversion process would not be difficult, but it would be time consuming. I have talked with Ira about this and he was under the impression that once we decided to go back to the IBM software, we would stay with it. It is very inefficient to switch and convert back and forth between packages on a monthly, or 2-month basis. At this point I would suggest that we stay with PageStream, even though it has problems, and work around the bugs until it is fixed. I believe, or have been led to understand, it is the wish of Sam Tramiel that we create all of our documents in PageStream. This is fine as far as I am concerned, because we will either see the inefficient use of resources up front, while working in a bug-ridden package such as PageStream, or later in the end when the conversion process must take place.
+
+At this point please try to understand and accept my apologies if I had misled you earlier on information about conversion of documents from one package to another. Please disregard the RPO sent for Ventura if we are not going to use it for anything more than a 1-2 month interim basis. At this point I believe it would be a waste of the companies money. If it is decided will go with Ventura and stay with it, then talk it over with the powers at be, and approve it. I will abide by any decisions made. Well, there is my serve, I await your volley. Again much thanks for your consideration and time in this matter during your hectic schedule with Sparrow.
+
+
+Sincerely
+
+Marty Pennock

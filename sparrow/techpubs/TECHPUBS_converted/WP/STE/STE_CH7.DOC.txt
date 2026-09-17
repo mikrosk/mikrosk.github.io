@@ -1,0 +1,400 @@
+[Footer: -  #   -]
+SECTION SEVEN:
+PARTS LIST
+
+
+ASSY NO: CA400338-201
+
+PART NUMBER                                              DESCRIPTION    LOCATION/QUANTITY
+
+CA200133-001       1                                     ASSY CABLE COAXIAL (NTSC)  1
+
+C070349-001                                              CORD AC WITH POLY BAG      1
+
+CA400607-001                                             DISK LANGUAGE USA IDD      1
+
+C026406-001                                              MANUAL OWNER'S 1
+
+C100536-001                                              MANUAL BASIC MEGA/ST/STE   1
+
+C100971-001                                              MANUAL PCM1 ENG.     1
+
+C300986-001                                              MANUAL ADDENDUM STE ENG.   1
+
+CA070025-                                                MOUSE MEGA/ST/STE    1
+
+CA400339-201                                             ASSY MAIN 1040 STE W/MOD USA     1
+
+
+ASSY NO: CA400339-201
+
+PART NUMBER                                              DESCRIPTION    LOCATION/QUANTITY
+
+CA400343-003                                             ASSY TOP CASE 1040 STE     1
+
+CA400344-001                                             ASSY BTM CASE NTSC   1
+
+C301430-001                                              SHIELD REAR STE FCC USA/CAN/GE   1
+
+CA400340-111                                             ASSY PCB 1040 STE USA W/MOD      1
+
+CA070059-003                                             ASSY PSU 110V STE USA/CAN  1
+
+CA070057-005                                             ASSY K/B CAN ST      1
+
+C103704-001                                              FDD 1MB 3.5" SONY W/LED    1
+
+
+ASSY NO: SE400340-111
+
+PART NUMBER                                              DESCRIPTION    LOCATION/QUANTITY
+
+CA400329-101                                             ASSY PCB SUB STE NTSC W/MOD
+
+CA400366-001                                             ASSY TOS ROM 1.62 USA STE  U102 - 103
+
+CA400495-001                                             ASSY SIM 256K x 1 x (8) DIP      U600 - 603
+
+
+ASSY NO: CA400366-001
+
+PART NUMBER                                              DESCRIPTION    LOCATION/QUANTITY
+
+C301163-002                                              IC TOS ROM 1.62 USA HI STE U102
+
+C301164-002                                              IC TOS ROM 1.62 USA LO STE U103
+
+
+ASSY NO: CA400495-001
+
+PART NUMBER                                              DESCRIPTION    LOCATION/QUANTITY
+
+C398152-001                                              PCB SIMM 256K x 8 DIP STE  1
+
+C101743-002                                              IC DRAM 256K x 1 120 NS  16P     8
+
+C101207-224                                              CAP CER  .22UF 50V AX      2
+
+
+ASSY NO:  CA400329-101                                     DESC: PCV SUB ASSY STE W/MODULATOR
+
+PART NUMBER                                              DESCRIPTION    LOCATION/QUANTITY
+
+C300780-001                                              SCHEMATIC DIAGRAM
+
+CA070023-009                                             ASSY CABLE 4P CONN 280 MM  J302
+
+CA070024                                                 CABLE FLAT ASSY  34P J303
+
+CO70335                                                  BANDAGE PLATE
+
+CO25993                                                  CRYSTAL 2.4576 MHZ   Y200
+
+C398066-001                                              OSC 8.010613 MHZ     U303
+
+C398068-001                                              OSC 32.215905 MHZ    U402
+
+CO19748                                                  IC 555 TIMER  8P     U104
+
+C398739-001                                              IC DMA CONTL 4140  40P     U300
+
+CO25983                                                  IC YM-2149 SOUND  40P      U202
+
+C025984                                                  IC 68901 MFP  48P    U203
+
+C025985                                                  IC 6850 ACIA  24P    U200,201
+
+C025986                                                  IC MC1488 RS232C DRIVER  14P     U206
+
+C025988                                                  IC PC900 PHOTO COUPLER  6P U208
+
+CO25989                                                  IC LM556 DUAL PRECISION  14P     U513,514
+
+CO26028-002                                              IC 1772 FDD CONTROLLER  28P ST   U301
+
+C070447                                                  IC TL497A SW REGULATOR  14P      U204,205
+
+CI00117                                                  IC MC1377 ENCODER 20 PIN   U403
+
+C101609-006                                              IC 7406 DIP  14P     U210,305
+
+C101610-257                                              IC 74S257 DIP  16P   U405
+
+C101611-004                                              IC 74LS04 DIP  14P   U211
+
+C101611-074                                              IC 74LS74 DIP  14P   U304,306
+
+C101611-086                                              IC 74LS86 DIP  14P   U209
+
+C101611-164                                              IC 74LS164 DIP  14P  U900
+
+C101611-244                                              IC 74LS244 DIP  20P  U307,509,510,512,632
+
+C101611-245                                              IC 74LS245 DIP  20P  U302
+
+C101611-373                                              IC 74LS373 DIP  20P  U511
+
+C101643                                                  IC ST BLITTER CUSTOM 68 PIN      U101
+
+C101739-001                                              IC 1489A RS-232C RECEIVER  14P   U207
+
+C300259-257                                              IC 74F257 DIP  16P   U405
+
+C300259-374                                              IC 74374 DIP  20P    U500,501
+
+C300588-001                                              IC STESHFTR 84P NATIONAL   U401
+
+C398055-001                                              IC LF347  14P  U504,507
+
+C398056-001                                              IC MF4-100  8P U505,506
+
+C398057-001                                              IC DAC0802  16P      U502,503
+
+C398058-001                                              IC LMC1992  28P      U508
+
+C398061-001                                              IC 68000 PLCC  68P   U100
+
+C070734-002                                              IC LM78L82 VOLTAGE REGULATOR  3P Q500
+
+34-2N3904                                                IC TRAN 2N3904  3P   Q400 -   404
+
+C101008-472                                              RES NET 4.7K 5%  9P BUS    P101-103, 500-502
+
+C070448                                                  RES NET SIP 10K  9P  P104,105,600
+
+C101008-122                                              RES NET 1.2K  9P     P100
+
+C070157-004                                              CAP ELEC 47UF 16V RA C566,567
+
+C398121-001                                              CAP ELEC 47UF 16V  20% RA  C416
+
+C398069-001                                              CAP 15UF 25V +/-2  RA TANTL 0%   C420,424,426
+
+C070157-005                                              CAP ELEC 100UF 16V RA      C423,417
+
+C070157-008                                              CAP ELEC 470UF 16V RA      C415
+
+C070450-001                                              CAP ELEC 4.7UF 25V 20% AX NPO    C202,204,205,215
+
+C070450-002                                              CAP ELEC 10UF 35V 20% RA   C100,542
+
+C070450-008                                              CAP ELEC 470UF 3   5V 20% AX     C216
+
+C070499-001                                              CAP ELEC 22UF 16V +-20% AX C102
+
+C070499-003                                              CAP ELEC 47UF 16V  20% AX  C508,520,525,529,535
+                                                         537,541,C543,544,546,
+                                                         547
+
+C070499-004                                              CAP ELEC 100UF 16V   C107,110,600,558,
+                                                         561,564
+
+C070566                                                  CAP ELEC 1UF 50V     C433
+
+C101205-472                                              CAP ELEC 4700UF 16V AX     C103
+
+C070741-007                                              CAP MICA 680PF 50V +-5% RA C526,532,539,548
+
+C101403-102                                              FILTER NOISE TDK     L200-202,204-207,209-
+                                                         227,511-527, L300-310,
+                                                         404-409,504-507,509,510
+
+C070241-002                                              FILTER NOISE  *ALT*  ZJS5101-02
+
+C100091-002                                              FILTER NOISE  *ALT*  DSS306-55B 102M
+
+C101403-002                                              FILTER NOISE  *ALT*  ZJSR5101-102
+
+C101404-002                                              FILTER NOISE  *ALT*  STB102KB
+
+C100210                                                  COIL VARIABLE 24UH   L403
+
+C100209                                                  DELAY LINE 3.58 MHZ  DL1
+
+C070119                                                  SW PUSH SP J312U     S100
+
+C100184                                                  RF MODULATOR ST NTSC ST MOD
+
+C014386-13                                               SKT UC IUO 32 POS    U102,103
+
+C070120-002                                              SKT 68P PLCC   U100,101
+
+C070718                                                  PLCC STOPPER 68P
+
+C100384-001                                              CONN SKT PLCC 84P STG      U401
+
+C398063-001                                              UC SOCKET SIMM 30P   U600,603
+
+C070033                                                  CONN DIN 5P MIDE I RIGHT ANGLE   J200,201
+
+C070129                                                  CONN 40P RIGHT ANGLE J103
+
+C070130-002                                              CONN DB19S HARD HOOK TYPE  J301
+
+C070131                                                  CONN DIN FLOPPY DISK  14P  J304
+
+C070132-002                                              CONN DB 25P RS232C HOOK TYPE     J204
+
+C070133-002                                              CONN D 25B FEMALE RT-ANGLE J203
+
+C070134                                                  CONN 13P DIN VIDEO   J400
+
+C070445                                                  CONN SINGLE INLINE  6P     J100
+
+C070446                                                  CONN SINGLE INLINE  8P     J202
+
+C398064-002                                              CONN D SUB 15P  3 ROW FEMALE     J500,501
+
+C398065-001                                              CONN PHONO RIGHT ANGLE     J502,503
+
+C100287-070                                              WIRE SOLID AWG26 200MM
+
+
+ASSY NO: SB400329-101
+
+PART NUMBER                                              DESCRIPTION    LOCATION
+
+C060607                                                  DIODE 1N4148   D100,200-203
+
+31-1N914                                                 DIODE 1N914 SIGNAL *ALT* SILICON
+
+C060629                                                  RES JMPR 0     R405,451,459
+
+C101004-1002                                             RES MF AX 10K 1%1/4W R501-504,505,506,
+                                                         510-515
+
+C101004-1003                                             RES MF AX 100K 1% 1/4W     R545,546
+
+C101004-1801                                             RES MF AX 1.8K 1% 1/4W     R507,516
+
+C101004-8201                                             RES MF AX 8.2K 1% 1.4W     R500,508,509,517
+
+14-5010/A                                                RES CF 1 5% 1/4W     R211
+
+14-5100/A                                                RES CF 10 1/4W 5% AX R542,543
+
+
+14-5101/A                                                RES CF 100 1/4W 5% AX      R441
+
+14-5102/A                                                RES CF 1K 1/4W 5% AX R102,107,209,220,
+                                                         300-306,406,413,421,
+                                                         429,430,440.442,470,541,
+                                                         540,R520,533,463
+
+14-5103/A                                                RES CF 10K 1/4W 5% AX      R100,103105,210,525,
+                                                         527,530,538
+
+14-5105/A                                                RES CF 1M 1/4W 5% AX R518,521,528,535
+
+14-5122/A                                                RES CF 1.2K  1/4W 5% AX    R106,208,213,431
+
+14-5123/A                                                RES CF 12K 1/4W 5% AX      R101,206,411,416,422
+
+14-5151/A                                                RES CF AX 150 1/4W 5%      R448
+
+14-5152/A                                                RES CF 1.5K 1/4W 5% AX     R412,417,424,452
+
+14-5202/A                                                RES CF AX 2K 1/4W 5% R408,423,433
+
+14-5221/A                                                RES CF AX 220 1/4 5% R200,202,204,205,
+                                                         207,307
+
+14-5222/A                                                RES CF AX 2.2K 1/4W  R109,R119,120
+
+14-5270/A                                                RES CF AX 27 1/4W 5% R438
+
+14-5274/A                                                RES CF 270K 1/4W 5%  R590,591
+
+14-5302/A                                                RES CF 3K 5% 1/4W    R414,418,426
+
+14-5330/A                                                RES  CF AX 33 1/4W 5%      R435,437,433,446,449,
+                                                         450,453
+
+14-4332/A                                                RES CF AX 3.3K 1/4W 5%     R212
+
+14-5362/A                                                RES CF AX 3.6K 1/4W 5%     R524,537
+
+14-5392/A                                                RES CF AX 3.9K 1/4W 5%     R214
+
+14-5470/A                                                RES CF AX 47 1/4W 5% R308-311
+
+14-5471/A                                                RES CF AX 470 1/4W 5%      R519,523,529,536
+
+14-5472/A                                                RES CF AX 4.7K 1/4W 5%     R110,201,215-219,472
+
+14-55R1/A                                                RES CF AX 5.1 1/4W 5%      R203
+
+14-5513/A                                                RES CF AX 51K 1/4W 5%      531,539,471
+
+14-5562/A                                                RES CF AX 5.6K 1/4W 5%     R469
+
+14-5622/A                                                RES CF 6.2K 5% 1/4W  R415,419,428
+
+14-5680/A                                                RES CF AX 68 1/4W 5% R312-323,454,455,
+                                                         457,458,460,461,462,
+                                                         464,465,466
+
+14-5750/A                                                RES CF 75 5% 1/4W    R407,409,410,420,425
+                                                         427,432,434,R436,439
+
+14-5821/A                                                RES CF 820 5% 1/4W   R467,468
+
+C014179-05                                               CAP CER 47PF 50V 5%  C421
+
+C014179-30                                               CAP CER 30PF 50V +-5% AX CH      C219,220,130
+
+C014180-17                                               CAP CER .001UF 25V   C427,505,506,509,
+                                                         510,517,518,521
+
+C014180-18                                               CAP CER V.01UF  25V 20% AX C503,515,101,540,527
+                                                         533,549,430
+
+C014180-25                                               CAP CER 8200PF 50V 20% AX  C528,531,534,538
+
+C014181-05                                               CAP CER .22UF 50V -20+80% AX     C633-636
+
+C014181-07                                               CAP CER .47UF 25V +80-20% AX     C411
+
+C0770149-008                                             CAP CER 100PF 50V 5% SL AX C222-225
+
+C070290-001                                              CAP CER 150PF 50V 10% AX   C208
+
+C070290-004                                              CAP CER 270PF 50V 10% AX   C218
+
+C070290-005                                              CAP CER 330PF 50V 10% AX   C209
+
+C070480-001                                              CAP CER .1UF 25V AX -20+80% Z    C104-106,108,109,
+                                                         111-114,200,201,226
+                                                         C300-307,402-406,409,
+                                                         412-414,419,C500-502,
+                                                         504,507,511-514,516,519,
+                                                         C523,524,632,206,203,
+                                                         559,562,565,C207,210,
+                                                         214,217,221,227-230,
+                                                         422,C550-557,428,429,
+                                                         900,536
+
+C014384/A                                                IND FERRITE BEAD AD   L100,401,402,500-503
+                                                         410,508,510
+
+C070471-002                                              IND 220UH 10% AX     L208
+
+C101401-221                                              IND 220UF AX   L203
+
+
+ASSY NO: SD400329-001
+
+PART NUMBER                                              DESCRIPTION    LOCATION/QUANTITY
+
+SA400429-001                                             ASSY SMD STE W/MOD   1
+
+SB400329-101                                             ASSY SEQ STE NTSC W/MOD    1
+
+
+ASSY NO: SA400329-001
+
+PART NUMBER                                              DESCRIPTION    LOCATION/QUANTITY
+
+C300779-001                                              PCB STE BLANK  1
+
+C300589-001                                              IC STE MCU GLU 144P  U400

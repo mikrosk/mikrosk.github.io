@@ -1,0 +1,3 @@
+@BACK PAGE = Copyright ■ 1991, Atari Corporation<T><T><T>             Printed in
+Taiwan<R>Sunnyvale, CA 94089-1302<T><T><T><T>             C301973-001  REV. 
+A<R>All rights reserved.

@@ -1,0 +1,366 @@
+Atari TT030 TT/ST RAM Expansion Board Installation Manual
+
+
+Kit Contents
+
+Your Atari TT/ST RAM Expansion Board kit should contain the
+following items:
+
+     A TT RAM Expansion Board P/N CA401058.
+                       or
+     An ST RAM Expansion Board P/N CA40159
+
+     Four (4) mounting screws P/N C301363-004
+     Four (4) plastic insulating washers P/N C070613-003.
+                       or
+     Two (2) mounting screws P/N C301363-004
+     Two (2) plastic insulating washers P/N C070613-003.
+
+     Installation Manual P/N C301973
+
+If any of these components are missing from your kit please
+contact the outlet from which the kit was purchased.
+
+Tools Required:
+
+     Phillips screwdriver, head shaped like +
+     Flat blade (slotted) screwdriver, head shaped like -
+
+Installation
+
+The following steps should be taken in order to install the
+TT or ST RAM Expansion board in your Atari TT030 computer.
+Carefully read each step all the way through before taking
+any action required by that step.
+
+WARNING: Failure to perform each step completely or skipping
+steps could result in damage to the RAM Expansion board or
+your computer.
+
+Step 1
+
+Turn off your computer and disconnect all cables from the
+sides and back of the unit (e.g. keyboard, power cord,
+external disk drive etc.).
+
+Step 2
+
+Turn your computer over and place it on its top.
+
+Step 3
+
+Remove the ten (10) screws located in the square holes on
+the bottom cover and set them aside. See FIGURE 1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          FIGURE 1
+Step 4
+
+With a slotted screwdriver loosen the retaining screw
+holding the Accessory Cover or Hard Disk in place.
+
+The retaining screw may be covered by a warning label. If it
+is contact your local Atari dealer for approval to remove
+the label.
+
+Loosen the screw. See FIGURE 1.
+
+Step 5
+
+**WARNING** Failure to hold the Accessory cover or Hard Disk
+in place can cause damage to your computer.
+
+Slide your fingers under both sides of the computer and
+holding the Accessory Cover or Hard Disk unit in place turn
+the unit back over and set it on the bottom.
+
+Step 6
+
+Tilt the Accessory Cover or Hard Disk assembly up. See
+FIGURE 2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          FIGURE 2
+Step 7
+
+If a Hard Disk is present, remove the interface cable and
+power cable from the Hard Disk. The power cable must be
+pulled straight up and back toward the rear of the Hard Disk
+assembly. Set the Hard Disk or Accessory Cover aside on its
+bottom. (Cover up).
+
+Step 8
+
+Lift off the top cover and set it on its back behind the
+bottom case. Be sure to take care with the cables attached
+to the floppy disk drive.
+
+Step 9
+
+Locate the proper connector for either the ST or TT
+Expansion Board. See FIGURE 3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          FIGURE 3
+Step 10
+
+Locate PIN 1 on the main PCB (FIGURE 3) and PIN 1 of the RAM
+Expansion Board Connector(s). See FIGURE 4 for the TT
+Expansion Board and FIGURE 5 for the ST Expansion Board. PIN
+1 should always be on the left side of the connector. Be
+sure the standoffs are in place with a flat side even with
+the edge of the connector (See FIGURE 3). If they are not,
+slightly rotate them with a pair of pointed nosed pliers
+until they are. Install the RAM Expansion Board by lining up
+the connectors with the pins pointing down and gently
+pushing the board down until it is snug against the
+standoffs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          FIGURE 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          FIGURE 5
+Step 11
+
+With a phillips head screwdriver, the head should look like
+a + sign, use the mounting screws with plastic insulating
+washers to fasten the RAM Expansion Board to the main PCB.
+The mounting holes are located beside each connector.
+
+Step 12
+
+Put the top case back on the computer being sure that the
+floppy disk cables are routed neatly and clear of any posts
+in the top cover.
+
+Step 13
+
+Turn the computer back over and set it on its top. Fasten
+the top cover back on with the ten (10) screws removed
+earlier. See FIGURE 1.
+
+Step 14
+
+Turn the computer back over and set it on its bottom. Pick
+up the Hard Disk or Accessory Cover. If a Hard Disk was
+installed connect the interface and power cables to it. See
+FIGURE 2. Be sure the red stripe on the interface cable is
+to the left when you plug it in. Tilt the Accessory Cover or
+Hard Disk back down into the top cover until it fits flush
+against the cover.
+
+Step 15
+
+**WARNING** Failure to hold the Accessory cover or Hard Disk
+in place can cause damage to your computer.
+
+Holding the Accessory Cover or Hard Disk in place with your
+fingers turn the computer back over and set it on its top.
+Secure the Accessory Cover or Hard Disk with the retaining
+screw. See FIGURE 1.
+
+Step 16
+
+Turn the computer back over and set it on its bottom. Re-
+connect all cables that were removed. Install the TT
+Diagnostic Cartridge and turn the power to the computer on.
+
+If the TT Diagnostic Cartridge is not available take your
+computer to your nearest Atari dealer so that diagnostics
+can be run on the RAM board.
+
+If you encounter any errors on power up contact the outlet
+from which the RAM Expansion Board was purchased.
+
+Step 17
+
+If the TT Diagnostic Cartridge is available run the RAM (R)
+diagnostic to ensure proper operation of the RAM Expansion
+Board. If you encounter any errors while running the
+diagnostic contact the outlet from which the RAM Expansion
+Board was purchased.
+

@@ -1,0 +1,24 @@
+[PageStream 2 document RICHARD2.DOC: 8.50 x 11.00 in, 3 objects]
+
+--- Page 1 ---
+[1 drawing objects, see RICHARD2.DOC.p001.svg]
+
+Dallas Office FAX
+
+
+To:		Richard Miller
+From:	Marty Pennock
+Subject:	Sparrow Connectors
+Date:	January 30, 1992
+
+cc		Tom Ulaszek - ATX
+		Ira Goldstein - ATX
+
+
+Contained in the external connector specs that were sent on 1/29/92 a monitor connector (19 pin) was sent that may be reversed. Physically the spec that was used here was a female spec. The male connector spec does not exist as yet. The male part is the one being used in the machine. This may cause the physical representation of the connector as viewed from the back to have pin one at top right instead of top left as was sent yesterday. Please make a note of this on the drawings that were sent. Sorry for the inconvenience.
+
+
+Sincerely Yours
+
+
+Marty Pennock

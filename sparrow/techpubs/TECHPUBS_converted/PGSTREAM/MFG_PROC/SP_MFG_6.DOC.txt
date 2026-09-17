@@ -1,0 +1,117 @@
+[PageStream 2 document SP_MFG_6.DOC: 8.50 x 11.00 in, 53 objects]
+
+--- Page 30 ---
+
+6.0	OUTGOING INSPECTION
+
+1.	Application
+This procedure shall be applied foroutgoing inspection of finished goods..
+
+2.	Purpose
+To prevent shippment of finished goods  which do not conform to the specifications.
+
+3.	Inspection method
+
+3.1	Type
+Lot by lot acceptance sampling
+
+3.2	Standard
+MIL-STD-105D normal inspection with single sampling
+
+3.3	Level
+Inspection level II unless otherwise specified
+
+4.	Defect classification
+Critical defect - a defect likely to result in hazardous or unsafe conditions for individuals using maintaining, or storing the product.
+Major defect - a defect, other than critical, that is likely to result in failure, or to reduce materially the usability of the product for its intended purpose.
+Minor defect - a defect that is not likely to reduce materially the usability of the product for its intended purpose, or is a departure from established standards having little bearing on the effective use or operation of the product.
+
+5.	Acceptable Quality Level (AQL)
+The following AQL will be used unlles otherwise specified.
+Critical defect:	0
+Major defect:	0.65
+Minor defect:	1.5
+
+6.	Inspection lots
+Many practical matters influence the formation of inspection lots. The following rules should govern decisions on this matter.
+
+6.1	Within each lot, the factors that seem likely to cause marked variability in product quality should be as nearly constant as practicable.
+6.2	Inspection lots should be as large as possible, subject to the foregoing rule.
+
+7.	Inspection results
+Inspection results must be recorded in the inspection report. Refer to the section for items to be inspected.
+
+7.1	Rejected lots must not be shipped unless the lot has been reworked, re-inspected and found to be qualified.
+
+7.2	The inspection report must be submitted to Atari Quality Assurance for final approval.
+
+--- Page 31 ---
+
+3.8	PRINTED MATERIAL
+
+			      	          DEFECT CLASS
+ITEM	OPERATION	       CRIT    MAJ     MIN
+
+1.	Appearance	a) scratch, stain, dirt				X
+		b) color/finish flaw				X
+		c) damaged			X
+		g) marking				X
+			manufacturer's logo
+			manufacturer's part number and revision
+			serial numberor date code
+			Atari part number and revision
+			country designation
+		h) outline dimensions			X
+
+2.	Function test	a) initialization			X
+
+
+a) No power	X
+b) No video	X
+(ST, Mono, VGA)
+c) Video distorted/	X
+discolored/unstable
+(ST, Mono, VGA)
+d) No RF video	X
+e) RF video distorted	X
+discolored/unstable
+f) No monitor audio	X
+g) Monitor audio distorted/	X
+low volume
+
+
+B) Mechanical
+C) Appearance
+D) Tear down inspection
+E) Packing
+@
+
+--- Master page (repeated on pages; # = page number) ---
+[32 drawing objects, see SP_MFG_6.DOC.mR.svg]
+
+SIZE
+
+DRAWING NO.
+
+REV
+
+®
+
+ATARI
+CORPORATION
+
+A
+
+SCALE
+
+NONE
+
+C302758-001
+
+SHEET
+
+OF
+
+1
+
+_

@@ -1,0 +1,52 @@
+[PageStream 2 document PATTON1.DOC: 8.50 x 11.00 in, 5 objects]
+
+--- Page 1 ---
+[1 drawing objects, see PATTON1.DOC.p001.svg]
+
+Dallas Office Memo
+
+
+To:		J. E. Patton
+From:	Marty Pennock
+Subject:	Bug List for DITEK DynaCADD and Soft Logik PageStream 2.1
+
+Date:	April 2, 1992
+
+cc		Tom Ulaszek - ATX
+		Ira Goldstein - ATX
+
+
+The following is a set of bugs we have noticed here at ATX with PageStream and DynaCADD.
+
+DynaCADD
+
+1.	When exporting a drawing in GEM output, the file cannot be loaded into Avant Vektor or Easy Draw without being upside down or inverted. Even when flip, mirror, and other options are selected in DynaCADD before the output is started. DITEK has had my distribution disks for over three months. Dave Fletcher in their Tech. Support department was supposed to work on it and apply a fix. I have phoned Dave several times, no response to messages and he is never in the office. Meanwhile, no distribution disks. If the system crashes here, I am out of luck with nothing more than a hopefully good archive set.
+
+
+PageStream
+
+1.	When importing GEM Metafiles from Easy Draw, the fonts used in Easy Draw do not transfer correctly. They are not sized, not justified, and run all over the objects they are used in or on.
+
+2.	When files are imported from DynaCADD, they must be selected, ungrouped, lines styles and colors must be set before the drawing even becomes visible on the screen.
+
+3.	If you import a GEM drawing form DynaCADD, Easy Draw, or even one created with PageStream itself, sometimes, depending on the drawing and the size, the file cannot be accessed again after quitting. A page is started when you try to open the file and a #2 or #3 exception is displayed and you are dumped back out to the desktop. The file is lost forever. The only way around this is to craete everything on the page as an object, including text. You loose all text manipulation features and it is very slow and tedious.
+
+4.	When importing multiple GEM files into a document and using the Text Runaround feature, after a certain point, it can even be in the beginning after only one or two drawings, the text runaround feature stops working. You can select it but nothing happens.
+
+5.	Sometimes when editing a document with a GEM drawing and you try to change the font in a text object, the font choices dialoge box will appear with only numbers and garbage for choices. The application must be closed and started again to get the font choices back.
+
+--- Page 2 ---
+
+6.	Sometimes after importing a GEM file, the application will force a #2 or #3 exception and dump you back out on the desktop.
+
+7.	Word Perfect 4.1 files do not import with all of the line spacing that was set up in the WP file.
+
+8.	1st Word files, when imported, contain no line or character spaces. All of the text is just run together.
+
+These are a few of the problems with PageStream and DynaCADD. As you can see these problems make it impossible to use these applications for DTP when edit capable GEM files are required. More problems exist, but I will be sending a report of these a little later. The problems I have listed here are the most urgent. I have also included some bug reports and an example file from Jerry Smith along with a screen dump of one of the problems.
+
+
+Sincerely
+
+
+Marty Pennock

@@ -1,0 +1,98 @@
+[PageStream 2 document TT300003.DOC: 8.50 x 11.00 in, 84 objects]
+
+--- Page 1 ---
+
+Atari Technical Bulletin
+Number: TT30-0003
+Date: March 24, 1992
+Page 1 of 2
+
+
+Product(s) Affected:	TT030
+Model:		All
+Type of ATB:	As Needed
+ECO #: 		N/A
+
+Reason for ATB:
+
+To correct improper jumper setting causing coprocessor to run at 16MHz instead of 32MHz.
+
+
+Notes:
+
+Four FAB assemblies are affected by this ATB. They sre marked as follows:
+
+FAB Number	REV
+
+C301763-001	D
+C301763-001	B1
+C302406-001	A
+
+
+Symptoms of Problem:
+
+Applications needing coprocessor support run slow.
+
+Solution:
+
+1.	Remove the top cover. If the TOS ROMs are located on the left front side of the main PCB, remove the VME card guide.
+
+2.	Check jumper setting at W101.
+
+	For FAB C301763-001 REV D and C302406-001 REV A see Figure 1 on page 2.
+
+	For FAB C301763-001 REV B1 see Figure 2 on page 2.
+
+	Be sure the jumper is parked across pins 1 and 2.
+
+3.	Re-assemble unit.
+
+--- Page 2 ---
+[46 drawing objects, see TT300003.DOC.p002.svg]
+
+Atari Technical Bulletin
+Number: TT30-0003
+Date: March 24, 1992
+Page 2 of 2
+
+U210
+
+U204
+
+C191
+
+R990
+
+3
+
+R992
+
+R993
+
+R991
+
+1
+
+R960
+
+R962
+
+W101
+
+Figure 1
+
+W101
+
+1
+
+3
+
+C116
+
+U101
+
+C114
+
+U605
+
+Figure 2

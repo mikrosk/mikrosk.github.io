@@ -1,0 +1,846 @@
+[Header: left=Atari Confidential | right=V0.3  16 Feb 1992]
+[Footer: centre=Page #]
+
+
+                  FX-1 Hardware reference guide
+
+
+Version:       0.3
+Date:          16 February 1992
+Author:        RGM
+
+      This document contains preliminary, inaccurate and Atari
+   confidential information.  It must not be copied or distributed
+                without explicit written permission!
+
+
+
+Contents:
+
+
+
+     1.   Introduction
+     2.   Expansion port
+     3.   Video port
+     4.   DSP
+     5.   Digital Sound
+     6.   DSP port
+     7.   LAN
+     8.   Parallel port
+     9.   Serial port
+     10.  SCSI
+     11.  Joysticks (Enhanced and standard)
+     12.  MIDI
+
+1. Introduction
+
+
+FX-1 s a new generation of Atari TOS™ compatible computers.  It is
+based around a Motorola 68030 32 bit microprocessor.  In addition, it
+includes an optional Motorola 68882 Floating point coprocessor, a
+16MHz 16 bit BliTTer, and a 32 MHz Motorola 56001 Digital Signal
+Processor.
+
+Briefly, the FX-1 hardware specification can be summarised as
+follows:
+
+
+CPU:           68030, 16MHz
+
+FPU:           Socket for optional 68881 or 68882, running at 16 MHz
+
+RAM:           Custom module. 1 to 14 MBytes of RAM
+
+ROM:           512 KBytes, implemented as 2x 256KB ROMs
+
+Blitter:       Graphics coprocessor, running at 16MHz
+
+Video:                      Bit
+               Resolution  planes  Colours  Palette colours
+---------------------------------------------------------------------
+ST Low-res     320 x 200     4       16      4096/262,144
+ST Med-res     640 x 200     2        8      4096/262,144
+ST High-res    640 x 400     1        2      4096/262,144
+
+VGA            640 x 480     8      256      262,144
+True colour    320 x 200    15     32,768    N/A. 1 bit for Genlock
+               320 x 200    16     65,536    No Genlock
+Programmable     X x Y   1,2,4,8  2,4,16,256 262,144
+----------------------------------------------------------------------
+               True colour mode can also be Genlocked, to provide
+               multi-media capabilities on monitors or Televisions.
+
+               The programmable modes allow for overscanned video.
+
+               On-board RF modulator for direct connection to TVs.
+               Monitor connector allows connection to VGA monitors, or
+               ST monochrome or colour monitors (all via an adaptor
+               cable)
+
+               Supports horizontal scrolling, compatible with STE
+
+Sound:         3 Channel PSG sound (compatible with ST)
+               Stereo 8 bit PCM sound (compatible with STE)
+               10 Channel 16 bit PCM digital record/playback I/0
+               Built in stereo 8 bit Analogue to Digital Convertor
+               Built in Stereo 12 bit DACs
+               Stereo microphone input, and Stereo Headphone output
+               jacks.  Internal speaker (mono)
+               Digital Audio/DSP connector
+
+DSP:           56001 32MHz Digital Signal Processor, with 32Kx24 zero
+               wait-state SRAM
+
+I/O:           Parallel port
+               Modem/RS232 port
+               MIDI in
+               MIDI out/thru
+               Cartridge port
+               SCSI II (50 pin connector) with DMA
+               STE compatible enhanced joystick ports
+               LAN Local area network (compatible with MegaSTE)
+
+FDD:           1.44 Mbyte Floppy Disk Drive
+
+HDD:           Internal optional hard disk drive, on IDE bus
+
+Keyboard:      94/95 key keyboard, with enhanced controller IC (which
+               supports faster keystrokes, and up to 300 DPI mouse)
+
+Mouse:         100 DPI mouse supplied as standard
+
+Other:         Real time clock, with battery backed, non-volatile RAM
+               Optional internal HDD
+               Internal bus expansion connector
+
+Mechanical specification
+
+Connectors - Rear panel:
+
+Type      Pins  Sex       Qty  Description
+---------------------------------------------------------------------
+DIN 5      5     Female    1    MIDI in
+DIN 5      5     Female    1    MIDI out
+DB25      25     Female    1    Parallel port
+DB9        9     Male      1    Modem 1  (ST compatible, MFP#1)
+SCSI II   50     Female    1    SCSI II
+DB19      19     Male      1    Video out / Genlock
+Mini-Jack  2     Female    1    Stereo Headphone out (Like Walkman)
+Mini-Jack  2     Female    1    Stereo Microphone in ( ""    ""   )
+DB26      26     Female    1    DSP/Digital Audio interface
+RCA        2     Female    1    RF Modulator
+MiniDIN    9     Female    1    LAN
+Reset switch
+
+
+Left Side panel:
+Custom    40               1    Cartridge port
+DB15      15     Male      2    STE compatible enhanced joysticks
+                                (option in the tool)
+Underside:
+DB9        9     Male      2    Old ST joystick/mouse ports
+
+
+
+
+Internal:
+Headers   30+50  ??        1   DRAM expansion board
+Header    30+50  ??        1    0.1" center row of stakes, internal
+                                bus expansion
+Header    ??     ??        1    Internal IDE connection
+Header    ??     ??        1    Internal Floppy Disk Drive
+
+Other:
+
+Rechargeable cell on motherboard for battery backed RAM/RTC.  Lasts
+for over 10 years
+
+Internal speaker
+
+2. Internal Expansion port
+
+The FX-1 has a minimal internal space for expansion, specifically
+limited in size to prevent large, high-powered (and hot!) boards.
+
+J20 Pinout:
+
+Pin #     Signal          Pin #     Signal
+
+1         D14             2         D13
+3         D12             4         D11
+5         D10             6         D9
+7         D8              8         D7
+9         D6              10        D5
+11        D4              12        D3
+13        D2              14        D1
+15        D0              16        D15
+17        GND             18        GND
+19        GND             20        n/c
+21        EINT1           22        EINT5
+23        500KHZ          24        n/c
+25        MFP_IEI         26        MFP_INT
+27        EINT3           28        VCC
+29        VCC             30        VCC
+
+J19 Pinout:
+
+Pin #     Signal          Pin #     Signal
+
+1         GND             2         GND
+3         BGK             4         AS
+5         LDS             6         UDS
+7         RXW             8         DTACK
+9         FC2             10        FC1
+11        FC0             12        n/c
+13        n/c             14        IACK
+15        BG              16        BR
+17        RESET           18        HALT
+19        BERR            20        IPL0
+21        IPL1            22        IPL2
+23        CPUCLK          24        VCC
+25        VCC             26        A23
+27        A22             28        A21
+29        A20             30        A19
+31        A18             32        A17
+33        A16             34        A15
+35        A14             36        A13
+37        A12             38        A11
+39        A10             40        A9
+41        A8              42        A7
+43        A6              44        A5
+45        A4              46        A3
+47        A2              48        A1
+49        n/c             50        n/c
+
+{Modified from rev A2 is:
+
+Connector/pin       Old Signal          New Signal
+J20, Pin 20         XBGACK              n/c
+J20, Pin 21         XROM3               EINT1
+J20, Pin 22         XROM4               EINT5
+J20, Pin 24         XIEO_MFP            n/c
+
+J19, Pin 12         XCPUBG              n/c
+J19, Pin 13         COMBOBG             n/c
+}
+
+The internal expansion port essentially includes a 68000 direct
+microprocessor interface.  Since FX-1 uses a 68030 microprocessor,
+there are some important differences from the 68000 bus however.  In
+particular, signals such as UDS, LDS, AS, DTACK have been synthesised
+from the 68030 equivalents.  In addition, the expansion bus has 16 bit
+data and 24 bit address busses.
+
+No signal should ever be connected to more than one equivalent TTL
+load, or else the host system will become unreliable, or fail.
+
+2.1 Microprocessor bus signals
+
+A(23:1)        Lower 23 bits of 68030 address bus
+D(15:0)        Upper 16 bits of 68030 data bus (D(31:16))
+UDS, LDS       68000 compatible data strobes
+AS             68000 comaptible address strobe
+DTACK
+RXW
+FC(2:0)
+RESET
+HALT
+
+2.2 Bus arbitration signals
+
+BR             Wire-Ored, active low bus request
+BGK            Wire-Ored, active low bus grant acknowledge
+BG             Daisy chained, bus grant
+
+Expansion board peripherals have the lowest priority in the bus
+request daisy chain.  To request the bus, a peripheral should pull BR
+low (with an open collector output), wait for BG to go low, and then
+acknowledge by pulling BGK low (again, with an open collector output).
+The conditions under which BGK can be pulled low can be somewhat
+complex since there are multiple alternate bus masters, and designers
+are urged to consult the 68030 documentation for a complete
+description.
+
+2.3 Interrupt signals
+
+
+EINT1          Active high, level 1 interrupt
+EINT3          Active high, level 3 interrupt
+EINT5          Active low, level 5 interrupt
+
+MFP_IEI        Active low, MFP (level 6) interrupt enable
+MFP_INT        Active low, Wire-Ored, level 6 interrupt
+IACK           Active low, level 6 interrupt acknowledge
+
+IPL(2:0)       Active low, CPU interrupt priority level indicators
+
+EINT1, EINT3 and EINT5 allow peripherals to interrupt at levels 1, 3
+and 5 respectively.  These signals are decoded and prioritised by
+custom logic to generate a processor interrupt.
+
+MFP_INT can be used, in conjunction with IACK and MFP_IEI, to
+generate a high priority level 6 interrupt.  The peripheral is
+positioned at a higher priority than the MFP or DSP (which can also
+cause level 6 interrupts).
+
+Peripherals should pull MFP_INT low (with an open collector output),
+while holding MFP_IEI high to hold off the MFP from asserting its own
+interrupt vector.  When IACK goes low, together with LDS???, the
+peripheral should put a vector onto the data bus, bits ???.
+
+The following timing diagram shows a correct peripheral level 6
+interrupt cycle:
+
+
+
+
+
+
+
+
+
+The IPL(2:0) signals must not be driven by peripherals, since they are
+internally driven by custom logic.  They are included for devices
+which may want to monitor these signals only.
+
+2.4 Clock signals
+
+CPUCLK         Set to 8MHz at reset, then set to 16MHz by TOS.  This
+               clock is used by the system bus to synchronise all bus
+               cycles
+500KHZ         500KHz fixed clock
+
+Neither of these clocks should be loaded with more than one TTL type
+device (or equivalent) under any circumstances.  Excessive loading of
+these clocks (or any other signals on the expansion bus), will lead to
+system unreliability or failure.
+
+
+3. Video port
+
+
+FX-1 has a new video port connector.  This connector contains all the
+signals necessary for connection to an analogue VGA monitor, or an ST
+or STE compatible colour or monochrome monitor.  In addition, it
+includes the signals necessary for external GENLOCK devices, including
+an external video dot clock, and insertion of external Hsync or Vsync
+signals.
+
+The FX-1 video connector is a DB19 male.  Its pinout is as follows:
+
+
+Pin #     Signal          Pin #     Signal
+------------------------------------------------
+1         Red
+                          11        GND
+2         Green
+                          12        Composite Sync / Composite video
+3         Blue
+                          13        Hsync
+4         Mono Detect
+                          14        Vsync
+5         GND
+                          15        External clock input
+6         Red GND
+                          16        Pixel Select output
+7         Green GND
+                          17        +12V
+8         Blue GND
+                          18        M1
+9         Audio out
+                          19        M0
+10        GND
+
+
+Pin 9. Audio out
+
+This signal represents the same signal that goes to the internal
+speaker, except that it cannot be disabled.  It is ???V peak-to-peak,
+AC coupled, with an impedance of ??? / can drive an impedence of up to
+???.
+
+Pin 12. Composite Sync / Composite Video
+
+On Peritel machines, this pin is Composite Sync, which is the logical
+AND of active low Hsync and Vsync. ???
+
+On all other machines, this pin is Composite Video (RS170 levels). ???
+
+Pin 15. External clock input
+
+An external video source can drive a clock input into this pin,
+synchronous with the external video dot-clock.  FX-1 will use this
+signal as dot clock, when selected in software.
+
+Internally, this signal is padded with a 100R resistor, and then
+pulled high with a 4k7 resistor.  This signal should be driven by a
+??? type device, with a 50/50 duty cycle clock, between ground and
++5V.  The maximum frequency this input can be driven is 32MHz.
+
+Pin 16. Pixel select output
+
+When FX-1 is in Genlock mode, and displaying 16 bits per pixel, this
+pin will reflect bit 5 of each word of pixel data.  A 1 in bit 5 will
+force this signal high (+5V), and a 0 in bit 5 will force it low
+(Ground).
+
+Typically, this feature will be used to select between FX-1 and
+externally generated video, on a pixel by pixel basis.  It could be
+called a one bit chroma-key, useful for overlays and titles for
+example.
+
+Pins 18,19.  Monitor select 1,0
+
+These pins are internally pulled high, and are read by the operating
+system to determine the type of monitor connected.  The operating
+system then uses this information to set up video timing values
+suitable for that particular monitor.
+
+The values assigned are as follows (1 -> +5V, 0 -> Gnd):
+
+
+     M1        M0         Monitor type
+------------------------------------------
+     0         0          ST Monochrome
+     0         1          ST Colour
+     1         0          VGA
+     1         1          TV
+------------------------------------------
+4. Digital Signal Processor (DSP)
+
+The FX-1 includes a Motorola 56001 Digital Signal processor.  This
+part offers the following features:
+
+     * 32 MHz operation, yields 16 MIPS
+     * 1024 point complex FFT can be done in 2.07 milliseconds
+     * 24 bit internal and external data paths, yielding 144 dB
+       dynamic range
+     * 56 bit accumulators
+     * The following operations can be executed in parallel in one
+       instruction cycle:
+
+               24 x 24 multiply
+               56 bit addition
+               Two data moves
+               Two address pointer updates
+               Instruction prefetch
+
+     * 1024 x 24 bits of on chip RAM.
+     * 512 x 24 bits of on chip ROM, used for Mu-Law, A-Law and four
+       quadrant Sine wave table data.
+
+
+4.1 Memory Map
+
+In addition to the on-chip RAM and ROMs, there are 32K words of
+external, zero wait state SRAM.
+
+The memory map is configured as follows:
+
+     Program space is one contiguous block of 32K words.
+     X and Y data space are each separate 16K word blocks.
+     Both X and Y can be accessed as blocks starting at 0 or 16K.
+     Program space physically overlaps both X and Y data spaces.
+
+Note that since program space overlaps X and Y space, DSP software
+must be careful to avoid having program and data memory corrupt each
+other.  Note that X:0, X:16K, and P:16K are the same physical RAM
+location, and that Y:0, Y:16K and P:0 are also at the same physical
+RAM location.
+
+   $ffff  +---------+     +---------+     +---------+
+          |         |     |         |     |         |
+          |         |     |         |     |         |
+          |         |     |         |     |         |
+          |Reserved |     |Reserved |     |Reserved |
+          |         |     |         |     |         |
+          |         |     |         |     |         |
+          |         |     |         |     |         |
+   $7fff  +---------+     +---------+     +---------+ --------
+          |  16 K   |     |  16 K   |     |         |
+          | Shadow  |     | Shadow  |     |         | Overlaps
+          |         |     |         |     |  32 K   |  X RAM
+   $3fff  +---------+     +---------+     | Program | --------
+          |  16 K   |     |  16 K   |     |  RAM    | Overlaps
+          |External |     | External|     |         |  Y RAM
+          |   RAM   |     |  RAM    |     |         |
+   $01ff  +---------+     +---------+     +---------+ --------
+          |Internal |     |Internal |     |Internal |
+          | RAM/ROM |     | RAM/ROM |     |   RAM   |
+   $0000  +---------+     +---------+     +---------+
+           X Memory        Y Memory        P Memory
+
+
+4.2 Interfaces
+
+4.2.1 SSI
+
+FX-1 brings out the six wire SSI port to the external DSP connector
+(see section 6 for a full description of interfacing to this port).
+
+4.2.2 Host Port
+
+Interface with the 68030 host is via the 56001 host port (port B).
+Data transfer by the host is via programmed IO.  In other words, the
+DSP host port appears in the 68030 memory map as eight byte locations.
+Data transfers by the host should always be conducted through the
+appropriate operating system calls (see FX-1 software developer's
+guide).
+
+DSP software transfers data to and from the host port in the usual way
+(see 56001 DSP User's Manual).  The host can interrupt the DSP, and
+vice-versa.
+
+4.2.3 SCI Port
+
+The 56001 three wire SCI port is not implemented in FX-1.  DSP
+software must not rely on the existance of any of the SCI registers,
+including the SCI timer, interrupts, or control and status registers.
+
+Various versions of FX-1 may or may not even include the SCI
+circuitry!
+
+
+5. Digital Sound
+
+FX-1 contains a sophisticated sound sub-system, designed to allow high
+performance digital sound recording and playback.  Its features
+include:
+
+     * Ten track, sixteen bit digital sound DMA record channel
+     * Ten track, sixteen bit digital sound DMA playback channel
+       (operating in parallel with digital record)
+     * Sample rates up to 50KHz
+     * On board 12 bit stereo bitstream DACs, and external headphone
+       port
+     * On board 8 bit stereo ADCs, and external microphone port
+     * Dedicated DSP for volume, treble, bass and scale control
+       (independant of the 56001 DSP)
+     * Built in 'speaker (or external headphones) can monitor any
+       stereo channel of 10 track digital playback data
+     * External serial record and playback channels connect to
+       industry standard DACs, ADCs and S/PDIF components with minimum
+       additional logic
+
+The following diagram shows the various sound data paths in FX-1:
+
+FX-1 essentially contains two dedicated high performance DMA channels
+for sound record and playback.  Each channel can operate completely
+independantly of the other, and has a total throughput each, of
+1Megabyte per second.  This corresponds to a maximum of ten tracks of
+sixteen bit data, at a sample rate of 50KHz.
+
+5.1 Record channel
+
+The record channel can accept source data from one of three places:
+
+     a)   Loopback from the playback channel
+     b)   The built in ADC, or
+     c)   External record data stream
+
+The loopback mode is used primarily for test purposes.
+
+The built in ADC is a stereo, eight bit, oversampling convertor.  The
+ADC sample rate is fixed at 50KHz.  Analogue data is sourced from the
+external stereo microphone jack, mixed with data from the internal
+Programmable Sound Generator (if activated).
+
+The external record data stream comes directly from the DSP port
+connector (see section 6).  If the external data has only two tracks
+per sample (ie one stereo channel), then this data can be monitored by
+the internal DAC.  If multiple samples are used, then the internal DAC
+will sample an undetermined stereo pair, and is therefore of little or
+no use!
+
+For details of the memory data format of recorded data, and how to
+program this interface, see the FX-1 Programmer's guide.
+
+5.2 Playback channel
+
+The playback channel takes sequential sixteen or eight bit samples
+from memory, serialises them, and outputs the resulting serial data
+stream through the DSP connector.  Each sample can contain up to five
+stereo channels (or ten tracks).  Any one of these stereo channels can
+be monitored and played back through the internal 'speaker, or
+external headphones, after digital processing by a dedicated DSP for
+volume, scale, bass and treble attenuation.
+
+The built in DAC is a stereo, 80 times oversampling, bitstream DAC.
+
+
+5.3 Clocking system
+
+The master clock for sampled sound is internally divided by either
+160, 320, 640 or 1280 to derive the sample rate (selectable in
+software).  The internal clock is 8MHz, resulting in sample periods of
+either 50KHz, 25KHz, 12.5KHz or 6.25KHz.  This internal clock can be
+overidden by an external clock EXCLK, which comes in on pin 26 of the
+DSP connector.  The external clock needs to be enabled by making the
+appropriate operating system call.
+
+Examples of external clock rates are:
+
+            EXCLK     Divisor    Sample Rate
+        --------------------------------------
+          7.056 MHz     160        44.1 KHz
+          7.680 MHz     160        48.0 KHz
+
+If you are doing DMA Sound Record (using R_CLK, R_EN, R_DATA and
+R_CHAN), the bit rate clock and sample clocks are defined by R_CLK and
+R_EN respectively.  DMA Sound Record is therfore at a rate entirely
+defined by the R_xxx signals.
+
+5.4 Serial Control Channel
+
+A general pupose serial control interface is provided to access
+certain internal sound control registers and allow the addition of
+other internal and external devices.  The operating system provides
+support of data transfers on this channel.
+
+
+6. DSP port
+
+This DB26 female connector includes a variety of signals, designed
+primarily for the connection of digital sound devices and modems.  It
+can (and almost certainly will) be used for a number of other
+applications, such as low cost laser printers, video digitisers and
+scanners and so forth.
+
+The signals on this port include several high speed clock and data
+lines.  It is therefore essential that developers use correct drive
+and termination.  In general, outputs are driven by a 74LS244 and must
+be terminated with 220 ohms to Vcc, and 330 ohms to ground.  Inputs
+are internally terminated with 220 ohms to Vcc and 330 ohms to ground,
+and must be driven by a device suitable for this load (such as
+74LS244s).  The SSI interface is an exception and should be terminated
+differently, as shown below (section 6.2).
+
+Total cable length should not exceed 24 inches, and we strongly advise
+the use of twisted pair cables.
+
+
+The pinout is as follows:
+
+
+Pin #     Signal          Pin #     Signal
+----------------------------------------------
+1         MWEN            2         MWD
+3         MWC             4         P_EN
+5         P_CLK           6         P_DATA
+7         P_CHAN          8         GND
+9         FSAMP           10        GND
+11        SC0             12        SC1
+13        SC2             14        GND
+15        SRD             16        GND
+17        +12V            18        GND
+19        R_EN            20        R_CLK
+21        R_DAT           22        R_CHAN
+23        STD             24        SCK
+25        GND             26        EXCLK
+
+These signals can be split into five groups:
+
+     Microwire interface
+     DSP SSI interface
+     Playback serial channel
+     Record serial channel
+     Clock controls
+
+
+6.1 Serial control channel interface:
+
+MWEN           Serial Enable         Output
+MWD            Serial Data           Output
+MWC            Serial clock          Output
+
+The Serial Control Channel is a three wire serial connection and
+protocol, compatible with the National Semiconductor Microwire™
+specification.  it allows individual devices to be accessed.
+
+The length of the serial data stream depends on the destination
+device.  In general, the stream consists of N bits of address,
+followed by zero or more don't care bits, followed by M bits of data.
+
+The interface consists of a clock, enable and data.  The clock is free
+running at a frequency of 1MHz.  Enable and Data should be sampled on
+rising edges of the clock.  The first bit of valid data is sent on the
+first rising edge of the clock after enable goes low.  In the
+following example, the device address is binary 10:
+
+
+
+
+
+
+
+
+
+
+
+
+
+Addresses binary 10 and binary 11 are reserved.  In other words,
+external peripherals can use any data stream where the first two bits
+are either binary 00 or binary 01.  The length of data is arbitrary.
+
+All three signals are driven by a 74LS244 device, and should be
+terminated by the peripheral with 220 ohms to Vcc and 330 ohms to
+ground.
+
+6.2 DSP SSI interface:
+
+SC0       SSI Serial control 0      Bi-Directional
+SC1       SSI Serial control 1      Bi-Directional
+SC2       SSI Serial control 2      Bi-Directional
+SRD       SSI Receive data          Input
+STD       SSI Transmit data         Output
+SCK       SSI Serial Clock          Bi-Directional
+
+These six pins are the SSI port from the Motorola 56001 DSP chip.  The
+serial clock can operate up to one quarter of the 32 MHz DSP master
+clock rate, which in this case means 8MHz.
+
+All the above signals must be correctly terminated in the peripheral,
+as follows:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A ferrite bead should be chosen that does not begin cutoff until 20MHz
+to 30MHz.
+
+Output signals from the Peripheral should be driven by CMOS devices
+such as 74HCxx or 74HCTxx.
+
+
+6.3 Playback serial channel:
+
+P_EN      Playback Enable           Output
+P_CLK     Playback Clock            Output
+P_DATA    Playback Data             Output
+P_CHAN    Playback Channel Select   Output
+
+This four wire serial interface can be used to transfer data from the
+host computer.  It is intended to be used for digital sound data, but
+theoretically could be used for any other data also.
+
+All four signals are internally driven by a 74LS244, and must be
+terminated in the peripheral with 220 ohms to Vcc and 330 ohms to
+ground.
+
+P_CLK operates at 16MHz, completely independant of the sound master
+clock, ar the sample rate.  P_DATA, P_EN and P_CHAN should all be
+sampled on the rising edge of P_CLK.  There will always be at least
+20ns of setup time on these signals, and 10ns of hold time.
+
+P_CHAN determines which channel is selected for the current sample.
+0=Left, 1=Right.
+
+P_EN is an active low signal to enable data transfer.  The first
+rising edge of P_CLK after P_EN goes low, is the MSB of data, and is a
+valid value of P_CHAN.  P_EN will remain low for sixteen clock cycles,
+and will then go high for a minimum of 6 further clock cycles.
+
+P_DATA is the serial data stream.  Latch P_DATA on rising edges of
+P_CLK.
+
+Only pairs of samples can be output, and they always come in the
+sequence of Left-Right-Left-Right ...... as shown below:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+One stereo pair can optionally be monitored by the internal DAC.
+
+The data itself is sampled MSB first, as shown below:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6.4 Record serial channel:
+
+R_EN      Record Enable             Input
+R_CLK     Record Clock              Input
+R_DATA    Record Data               Input
+R_CHAN    Record Channel Select     Input
+
+This four wire input channel is designed to transfer serial sixteen
+bit data into the host.
+
+All four inputs are internally terminated with 220 ohms to Vcc and 330
+ohms to ground.  They should be driven by a device capable of driving
+this termination, and we suggest using a ferrite bead in series.
+
+R_CLK is the clock used by the host to latch R_DATA, R_EN and R_CHAN.
+These signals should have a setup time of at least 20ns before the
+rising edge of R_CLK, and a hold time of at least 20ns also.
+
+R_CLK should not be run at a frequency greater than 16MHz.
+
+R_EN is an active low signal to signify valid R_DATA.  The first
+rising edge of R_CLK after R_EN goes low, is used by the host to latch
+the MSB of R_DATA.  R_EN should remain low for sixteen clock cycles,
+and then should not go low again for at least six further cycles.
+
+R_CHAN is sampled on the rising edge of R_CLK, and is used by the host
+to determine which channel of data is being transferred. 0=Left,
+1=Right.
+
+R_DATA is the serial data stream.
+
+Data transfer cycles for recorded data should look the same as shown
+above for playback data.
+
+
+6.5 Clock controls:
+
+FSAMP          Sample rate clock        Output
+EXCLK          External master clock    Input
+
+
+The internal 8MHz master clock can be overridden by an external source
+EXCLK.  EXCLK is enabled through software.  Its frequency must not
+exceed 8MHz.
+
+EXCLK is internally terminated with 220 ohms to Vcc and 330 ohms to
+ground.  it should be driven by a device suitable for this load, and
+we suggest the use of a ferrite bead in series with this signal.
+
+FSAMP is an output clock which is the master clock (8MHz or EXCLK)
+divided by 160, 320, 640 or 1280 (as selected).

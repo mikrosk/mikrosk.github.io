@@ -1,0 +1,36 @@
+[PageStream 2 document TEST2.DOC: 8.50 x 11.00 in, 72 objects]
+
+--- Page 1 ---
+[55 drawing objects, see TEST2.DOC.p001.svg]
+
+Wire From Pin 1 of
+
+U110
+
+Left Side of R888
+
+U111
+
+R888
+
+U110
+
+U112
+
+U114
+
+C115
+
+C599
+
+C215
+
+Pin 1
+
+R899
+
+R951
+
+U206
+
+UA00

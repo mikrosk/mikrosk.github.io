@@ -1,0 +1,62 @@
+DXF drawing: DYNACADD/PARTS/DXF/2MBREAR.DXF
+Render: 2MBREAR.DXF.svg
+
+== Summary ==
+File:        17132 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font ROMANS
+Sections:    HEADER, TABLES, BLOCKS, ENTITIES
+Extents:     header (0.25, 3.3082) - (9.45, 6.1282)
+             rendered (0.25, 3.3082) - (9.45, 6.1225), size 9.2 x 2.8143
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: ROMANS (font ROMANS)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            101
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: POLYLINE 45 (180 vertices), TEXT 15, INSERT 3, LINE 3
+             in block definitions: LINE 35
+Blocks:      3 defined
+  2MBREAR-G1: base (0, 0), LINE 12; inserted 1 time
+      at (0, 0) scale 1,1 rotation 0 layer 1
+  2MBREAR-G2: base (0, 0), LINE 12; inserted 1 time
+      at (0, 0) scale 1,1 rotation 0 layer 1
+  2MBREAR-G3: base (0, 0), LINE 11; inserted 1 time
+      at (0, 0) scale 1,1 rotation 0 layer 1
+Notes:
+  - 1 zero-length polylines (all vertices identical, e.g. pin dots) drawn as dots
+
+== Text in reading order (15 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (15 items) --
+  Top of Floppy Drive
+  2  |  34
+  9  |  16
+  1  |  33
+  1  |  8
+  J1  |  J2
+  SS01
+  #3 Pin is removed
+  to prevent incorrect
+  unsertion
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE   TEXT
+4.8125  6.0625      0.12      0  middle    1      ROMANS  Top of Floppy Drive
+  6.05    5.05      0.12      0  middle    1      ROMANS  2
+  9.05    5.05      0.12      0  middle    1      ROMANS  34
+  2.55    4.95      0.12      0  middle    1      ROMANS  9
+  4.45    4.95      0.12      0  middle    1      ROMANS  16
+  6.05    4.85      0.12      0  middle    1      ROMANS  1
+  9.05    4.85      0.12      0  middle    1      ROMANS  33
+  2.55    4.75      0.12      0  middle    1      ROMANS  1
+  4.45    4.75      0.12      0  middle    1      ROMANS  8
+     1       4      0.12      0  middle    1      ROMANS  J1
+ 7.625       4      0.12      0  middle    1      ROMANS  J2
+   3.5   3.875      0.12      0  middle    1      ROMANS  SS01
+ 6.125  3.7568      0.12      0  middle    1      ROMANS  #3 Pin is removed
+ 6.125  3.5625      0.12      0  middle    1      ROMANS  to prevent incorrect
+ 6.125  3.3682      0.12      0  middle    1      ROMANS  unsertion

@@ -1,0 +1,106 @@
+	.text
+dspa0:
+puta0:
+	move.l  d1,-(sp)
+	move.l  a0,d1
+	bra     dspd11
+
+dspa1:
+puta1:
+	move.l  d1,-(sp)
+	move.l  a1,d1
+	bra     dspd11
+
+dspa2:
+puta2:
+	move.l  d1,-(sp)
+	move.l  a2,d1
+	bra     dspd11
+
+dspd2:
+putd2:
+	move.l  d1,-(sp)
+	move.l  d2,d1
+	bra     dspd11
+
+
+dspd0:
+putd0:
+	move.l	d1,-(sp)
+	move.l  d0,d1
+dspd11:
+	bsr	dspd1
+	move.l  (sp)+,d1
+	rts
+
+dspd1:
+putd1:
+	move.l	d1,-(sp)
+	swap	d1
+	bsr	putd1w
+	move.l	(sp),d1
+        bsr	putd1w
+	move.l  (sp)+,d1
+	rts
+
+dspd3w:
+putd3w:
+        move.w  d1,-(sp)
+	move.w  d3,d1
+	bra	dspd1w1
+
+dspd2w:
+putd2w:
+        move.w  d1,-(sp)
+	move.w  d2,d1
+	bra	dspd1w1
+
+
+dspd0w:
+putd0w:
+	move.w	d1,-(sp)
+	move.w  d0,d1
+dspd1w1:
+	bsr	dspd1w
+	move.w  (sp)+,d1
+	rts
+
+dspd1w:
+putd1w:	
+	move.w	d1,-(sp)
+	asr	#8,d1
+	bsr	dspbyt
+	move.w	(sp),d1
+	bsr	dspbyt
+	move.w	(sp)+,d1
+	rts
+
+.if !(^^defined dspwrd)
+dspwrd = dspd1w
+.endif
+
+dspd2b:
+putd2b:
+        move.w  d1,-(sp)
+	move.w  d2,d1
+        bra     dspd1b1
+	
+
+dspd1b:
+putd1b:
+	bra	dspbyt
+
+dspd0b:
+putd0b:
+	move.w  d1,-(sp)
+	move.w  d0,d1
+
+dspd1b1:
+	bsr	dspbyt		;dsp d1b
+	move.w  (sp)+,d1
+	rts
+
+.if !(^^defined dspasc)
+dspasc = dspd1b
+.endif
+

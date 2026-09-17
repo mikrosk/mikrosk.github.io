@@ -1,0 +1,42 @@
+[PageStream 2 document STBKSPEC.CVR: 8.50 x 11.00 in, 1 objects]
+
+--- Page 1 ---
+
+Hardware Specification for the Atari STBook Computer System
+
+
+The Atari Corporation
+Sunnyvale, California
+
+
+Revision History
+
+9 September 1992/Martin Pennock
+Included references to COMBO and SHADOW IC.
+
+9 September 1992/Martin Pennock
+Layout and changed Yamaha YM-2149 references to YM-3439.
+
+3 October 1991/Tracy R. Hall
+First Release to Version Control.
+
+13 June 1991/Tracy R. Hall
+Added minor changes to Expansion Connector definition.
+
+9 April 1991/Tracy R. Hall
+Added power and Pseudo-ACSI, generally cleaned up.
+
+21 March 1991/Tracy R. Hall
+Removed touch panel references, added IDE interface description.
+
+21 March 1991/Tracy R. Hall
+Corrected bit assignments and interrupt levels, added 120-pin expansion connector
+
+13 July 1990/Tracy R. Hall
+Corrected new interrupt input levels
+
+10 July 1990/Tracy R. Hall
+Initial draft (Adapted from STE specs)
+
+
+THE SCOPE OF THIS DOCUMENT is limited to a hardware definition of the Atari STBook Computer System.  This document does not provide a description of  STBook component parts, peripheral devices, and system software. For more information, please refer to the texts listed at the end of this document.

@@ -1,0 +1,59 @@
+*       test halftone RAM
+*       write target with $01; write all others with 0 and f, verify target,
+*       repeat, writing left shifted data to target, until 16 patterns done
+*       repeat with next target
+	.text
+testblt:
+	move.w  sr,srsave0
+	move.w  #$2700,sr	
+        lea     blt2,a0
+tst_ht:  
+	moveq   #0,d0           ;starting pattern for target
+ht_256:  move    d0,(a0)         ;write target 
+        move    #$ffff,d1       ;surround pattern
+        moveq   #0,d2
+*       fill background
+fil_ht0: lea     blt2,a1
+        moveq   #15,d7          ;# of cells
+	
+fil_ht1: 
+	cmpa.l    a0,a1
+        beq     fil_ht2
+        move    d2,(a1)
+        move    d1,(a1)         ;write all others
+fil_ht2: adda    #2,a1
+        dbra    d7,fil_ht1
+*       verify target
+*        cmp     (a0),d0         ;check target
+	move.w  (a0),d3
+	cmp.w   d3,d0
+        bne     ht_rf
+
+        add     #$101,d0
+        cmp     #$100,d0
+        bne     ht_256           ;256 combinations
+
+        adda    #2,a0           ;next target
+        cmpa.l  #blt2+32,a0
+        bne     tst_ht
+        bra     testbltr
+
+ht_rf:   
+	move.w  switch,d6
+.if TOS=0
+        move    #red,palette
+.endif
+	lea     bltmsg1,a5
+	bsr	dspmsg
+	bsr	crlf
+	bsr	puta0	
+	bsr	dspspc
+	bsr	putd0w
+	bsr	dspspc
+	bsr	putd3w
+	bset    #ebltf,flag	
+
+testbltr:
+	move.w  srsave0,sr
+	btst    #ebltf,flag
+	rts

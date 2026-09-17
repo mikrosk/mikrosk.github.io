@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1155" height="2000" viewBox="114.2007 -1005.425 455.7243 789.1">
+<title>DYNACADD/PARTS/F030/F030FLW1.DPT</title>
+<rect x="114.2007" y="-1005.425" width="455.7243" height="789.1" fill="#ffffff"/>
+<g fill="none" stroke="#000000" stroke-width="0.3645" stroke-linecap="round" stroke-linejoin="round">
+<path data-layer="PEN1" data-style="Continuous, drawn solid" d="M335.75 -990.25L395.75 -990.25M395.7501 -961.5A14.3755 14.3755 0 0 0 395.75 -990.25M395.7501 -961.5L335.7501 -961.5M335.75 -990.25A14.3755 14.3755 0 0 0 335.7501 -961.5M365.75 -940.25L413.75 -900.25M413.75 -891.4999A5.7112 5.7112 0 0 0 413.75 -900.25M413.75 -891.5L365.75 -851.5M365.75 -851.5L317.75 -891.5M317.75 -900.2501A5.7112 5.7112 0 0 0 317.75 -891.5M317.75 -900.25L365.75 -940.25M189.5 -930.25L290.75 -930.25M290.75 -930.25L290.75 -861.5M290.75 -861.5L189.5 -861.5M189.5 -861.5L189.5 -930.25M239.75 -810.25L287.75 -770.25M287.75 -761.4999A5.7112 5.7112 0 0 0 287.75 -770.25M287.75 -761.5L239.75 -721.5M239.75 -721.5L191.75 -761.5M191.75 -770.2501A5.7112 5.7112 0 0 0 191.75 -761.5M191.75 -770.25L239.75 -810.25M365.75 -810.25L413.75 -770.25M413.75 -761.4999A5.7112 5.7112 0 0 0 413.75 -770.25M413.75 -761.5L365.75 -721.5M365.75 -721.5L317.75 -761.5M317.75 -770.2501A5.7112 5.7112 0 0 0 317.75 -761.5M317.75 -770.25L365.75 -810.25M170.75 -706.5A22.4172 22.4172 0 0 0 149.75 -730.25M149.75 -681.5A23.0868 23.0868 0 0 0 170.75 -706.5M129.5 -706.5A22.7493 22.7493 0 0 0 149.75 -681.5M149.75 -730.25A22.0695 22.0695 0 0 0 129.5 -706.5M239.75 -670.25L287.75 -630.25M287.75 -621.4999A5.7112 5.7112 0 0 0 287.75 -630.25M287.75 -621.5L239.75 -581.5M239.75 -581.5L191.75 -621.5M191.75 -630.2501A5.7112 5.7112 0 0 0 191.75 -621.5M191.75 -630.25L239.75 -670.25M315.5 -660.25L416.75 -660.25M416.75 -660.25L416.75 -591.5M416.75 -591.5L315.5 -591.5M315.5 -591.5L315.5 -660.25M453.5 -660.25L554.75 -660.25M554.75 -660.25L554.75 -591.5M554.75 -591.5L453.5 -591.5M453.5 -591.5L453.5 -660.25M170.75 -566.5A22.4172 22.4172 0 0 0 149.75 -590.25M149.75 -541.5A23.0868 23.0868 0 0 0 170.75 -566.5M129.5 -566.5A22.7493 22.7493 0 0 0 149.75 -541.5M149.75 -590.25A22.0695 22.0695 0 0 0 129.5 -566.5M503.75 -530.25L551.75 -490.25M551.75 -481.4999A5.7112 5.7112 0 0 0 551.75 -490.25M551.75 -481.5L503.75 -441.5M503.75 -441.5L455.75 -481.5M455.75 -490.2501A5.7112 5.7112 0 0 0 455.75 -481.5M455.75 -490.25L503.75 -530.25M189.5 -520.25L290.75 -520.25M290.75 -520.25L290.75 -451.5M290.75 -451.5L189.5 -451.5M189.5 -451.5L189.5 -520.25M315.5 -520.25L416.75 -520.25M416.75 -520.25L416.75 -451.5M416.75 -451.5L315.5 -451.5M315.5 -451.5L315.5 -520.25M503.75 -400.25L551.75 -360.25M551.75 -351.4999A5.7112 5.7112 0 0 0 551.75 -360.25M551.75 -351.5L503.75 -311.5M503.75 -311.5L455.75 -351.5M455.75 -360.2501A5.7112 5.7112 0 0 0 455.75 -351.5M455.75 -360.25L503.75 -400.25M209.75 -370.25L269.75 -370.25M269.7501 -341.5A14.3755 14.3755 0 0 0 269.75 -370.25M269.7501 -341.5L209.7501 -341.5M209.75 -370.25A14.3755 14.3755 0 0 0 209.7501 -341.5M353.75 -370.25L413.75 -370.25M413.7501 -341.5A14.3755 14.3755 0 0 0 413.75 -370.25M413.7501 -341.5L353.7501 -341.5M353.75 -370.25A14.3755 14.3755 0 0 0 353.7501 -341.5M524.75 -256.5A22.4172 22.4172 0 0 0 503.75 -280.25M503.75 -231.5A23.0868 23.0868 0 0 0 524.75 -256.5M483.5 -256.5A22.7493 22.7493 0 0 0 503.75 -231.5M503.75 -280.25A22.0695 22.0695 0 0 0 483.5 -256.5M363 -947L366 -941M366 -941L369 -947M366 -961L366 -941M297 -893L291 -896M291 -896L297 -899M291 -896L315 -896M240 -861L240 -811M237 -817L240 -811M240 -811L243 -817M360 -833L366 -836M366 -836L360 -839M366 -851L366 -811M363 -817L366 -811M366 -811L369 -817M366 -836L300 -836M300 -836L300 -426M300 -426L366 -426M366 -426L366 -451M147 -737L150 -731M150 -731L153 -737M150 -731L150 -766M150 -766L189 -766M417 -766L504 -766M504 -766L504 -661M240 -721L240 -671M237 -677L240 -671M240 -671L243 -677M366 -721L366 -661M363 -667L366 -661M366 -661L369 -667M147 -597L150 -591M150 -591L153 -597M150 -591L150 -626M150 -626L189 -626M423 -623L417 -626M417 -626L423 -629M417 -626L426 -626M426 -626L426 -486M426 -486L453 -486M366 -591L366 -521M363 -527L366 -521M366 -521L369 -527M504 -591L504 -531M501 -537L504 -531M504 -531L507 -537M240 -581L240 -521M237 -527L240 -521M240 -521L243 -527M240 -451L240 -371M237 -377L240 -371M240 -371L243 -377M504 -441L504 -401M501 -407L504 -401M504 -401L507 -407M435 -353L429 -356M429 -356L435 -359M429 -356L453 -356M504 -311L504 -281M501 -287L504 -281M504 -281L507 -287M501 -667L504 -661M504 -661L507 -667"/>
+</g>
+<g fill="#000000" font-family="DejaVu Sans Mono, Consolas, Courier New, monospace">
+<text x="351.8045" y="-971" font-size="8.8247" textLength="27.2653" lengthAdjust="spacingAndGlyphs">START</text>
+<text x="219.8019" y="-911" font-size="8.8247" textLength="39.3696" lengthAdjust="spacingAndGlyphs">CONNECT</text>
+<text x="207.9381" y="-901" font-size="8.8247" textLength="43.1553" lengthAdjust="spacingAndGlyphs">TERMINAL</text>
+<text x="261.9381" y="-901" font-size="8.8247" textLength="12.2923" lengthAdjust="spacingAndGlyphs">TO</text>
+<text x="303.9544" y="-901" font-size="8.8247" textLength="12.261" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="345.9087" y="-901" font-size="8.8247" textLength="35.27" lengthAdjust="spacingAndGlyphs">DISPLAY</text>
+<text x="208.018" y="-891" font-size="8.8247" textLength="25.0877" lengthAdjust="spacingAndGlyphs">RS232</text>
+<text x="244.069" y="-891" font-size="8.8247" textLength="23.6802" lengthAdjust="spacingAndGlyphs">PORT</text>
+<text x="340.018" y="-891" font-size="8.8247" textLength="48.5731" lengthAdjust="spacingAndGlyphs">READABLE?</text>
+<text x="213.8713" y="-881" font-size="8.8247" textLength="15.7508" lengthAdjust="spacingAndGlyphs">AND</text>
+<text x="237.8019" y="-881" font-size="8.8247" textLength="27.0918" lengthAdjust="spacingAndGlyphs">CYCLE</text>
+<text x="226.069" y="-871" font-size="8.8247" textLength="29.2892" lengthAdjust="spacingAndGlyphs">POWER</text>
+<text x="369.695" y="-841" font-size="8.8247" textLength="15.3854" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="177.9544" y="-771" font-size="8.8247" textLength="12.261" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="207.9087" y="-771" font-size="8.8247" textLength="35.27" lengthAdjust="spacingAndGlyphs">DISPLAY</text>
+<text x="256.0633" y="-771" font-size="8.8247" textLength="12.2731" lengthAdjust="spacingAndGlyphs">ON</text>
+<text x="351.9315" y="-771" font-size="8.8247" textLength="27.6044" lengthAdjust="spacingAndGlyphs">ERROR</text>
+<text x="417.9544" y="-771" font-size="8.8247" textLength="12.261" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="213.9381" y="-761" font-size="8.8247" textLength="45.9888" lengthAdjust="spacingAndGlyphs">TERMINAL?</text>
+<text x="340.3628" y="-761" font-size="8.8247" textLength="46.2806" lengthAdjust="spacingAndGlyphs">MESSAGE?</text>
+<text x="243.695" y="-711" font-size="8.8247" textLength="15.3854" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="369.695" y="-711" font-size="8.8247" textLength="15.3854" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="147.8908" y="-701" font-size="8.8247" textLength="3.557" lengthAdjust="spacingAndGlyphs">B</text>
+<text x="328.018" y="-641" font-size="8.8247" textLength="37.7869" lengthAdjust="spacingAndGlyphs">REPLACE</text>
+<text x="376.069" y="-641" font-size="8.8247" textLength="27.1071" lengthAdjust="spacingAndGlyphs">PARTS</text>
+<text x="177.9544" y="-631" font-size="8.8247" textLength="12.261" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="358.069" y="-631" font-size="8.8247" textLength="14.8221" lengthAdjust="spacingAndGlyphs">PER</text>
+<text x="207.9087" y="-621" font-size="8.8247" textLength="53.7251" lengthAdjust="spacingAndGlyphs">DIAGNOSTIC</text>
+<text x="333.9087" y="-621" font-size="8.8247" textLength="53.7251" lengthAdjust="spacingAndGlyphs">DIAGNOSTIC</text>
+<text x="466.018" y="-621" font-size="8.8247" textLength="15.3353" lengthAdjust="spacingAndGlyphs">RUN</text>
+<text x="489.8713" y="-621" font-size="8.8247" textLength="14.338" lengthAdjust="spacingAndGlyphs">ALL</text>
+<text x="513.9381" y="-621" font-size="8.8247" textLength="26.3283" lengthAdjust="spacingAndGlyphs">TESTS</text>
+<text x="219.9315" y="-611" font-size="8.8247" textLength="34.4129" lengthAdjust="spacingAndGlyphs">ERROR?</text>
+<text x="351.81" y="-611" font-size="8.8247" textLength="23.9492" lengthAdjust="spacingAndGlyphs">GUIDE</text>
+<text x="243.695" y="-571" font-size="8.8247" textLength="15.3854" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="147.8019" y="-561" font-size="8.8247" textLength="4.0964" lengthAdjust="spacingAndGlyphs">C</text>
+<text x="202.018" y="-501" font-size="8.8247" textLength="37.7869" lengthAdjust="spacingAndGlyphs">REPLACE</text>
+<text x="250.069" y="-501" font-size="8.8247" textLength="27.1071" lengthAdjust="spacingAndGlyphs">PARTS</text>
+<text x="232.069" y="-491" font-size="8.8247" textLength="14.8221" lengthAdjust="spacingAndGlyphs">PER</text>
+<text x="207.9087" y="-481" font-size="8.8247" textLength="53.7251" lengthAdjust="spacingAndGlyphs">DIAGNOSTIC</text>
+<text x="333.8019" y="-481" font-size="8.8247" textLength="27.0918" lengthAdjust="spacingAndGlyphs">CYCLE</text>
+<text x="370.069" y="-481" font-size="8.8247" textLength="29.2892" lengthAdjust="spacingAndGlyphs">POWER</text>
+<text x="483.9315" y="-481" font-size="8.8247" textLength="34.4129" lengthAdjust="spacingAndGlyphs">ERROR?</text>
+<text x="225.81" y="-471" font-size="8.8247" textLength="23.9492" lengthAdjust="spacingAndGlyphs">GUIDE</text>
+<text x="435.695" y="-471" font-size="8.8247" textLength="15.3854" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="507.9544" y="-431" font-size="8.8247" textLength="12.261" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="441.9544" y="-361" font-size="8.8247" textLength="12.261" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="220.018" y="-351" font-size="8.8247" textLength="38.6116" lengthAdjust="spacingAndGlyphs">RESTART</text>
+<text x="369.9087" y="-351" font-size="8.8247" textLength="23.5854" lengthAdjust="spacingAndGlyphs">DONE</text>
+<text x="484.0633" y="-351" font-size="8.8247" textLength="33.9737" lengthAdjust="spacingAndGlyphs">OTHER?</text>
+<text x="507.695" y="-301" font-size="8.8247" textLength="15.3854" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="501.8713" y="-251" font-size="8.8247" textLength="4.1921" lengthAdjust="spacingAndGlyphs">A</text>
+</g>
+</svg>

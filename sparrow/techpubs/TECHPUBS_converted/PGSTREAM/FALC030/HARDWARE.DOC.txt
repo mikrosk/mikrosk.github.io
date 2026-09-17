@@ -1,0 +1,1611 @@
+[PageStream 2 document HARDWARE.DOC: 11.00 x 8.50 in, 1247 objects, booklet layout: two page halves per sheet, halves listed in text flow order]
+
+--- Page 1, right half ---
+[1 drawing objects, see HARDWARE.DOC.p001.svg]
+
+Falcon030
+Hardware Reference Guide
+Version: 1.0a
+Date: 11 May 1992
+Author: RGM
+
+Introduction
+
+Falcon030 is a new generation of Atari TOS-compatible computers.  It is based around a Motorola 68030 32 bit microprocessor and includes an optional Motorola 68882 Floating point coprocessor, a 16MHz - 16 bit BLiTTER, and a 32 MHz Motorola 56001 Digital Signal Processor.
+
+The Falcon030 hardware specification can be summarized as follows:
+
+CPU:  68030, 16MHz
+
+FPU:  Socket for optional 68881 or 68882 running at 16 MHz.
+
+RAM:  Custom module. 1 to 16 MBytes of RAM.
+
+ROM:  512 KBytes.
+
+BLiTTER:  Graphics coprocessor running at 16MHz.
+
+Video:	                  Bit
+               Resolution   planes   Colors    Palette colors
+-----------------------------------------------------------------
+ST Low-res      320 x 200      4         16    4096
+ST Med-res      640 x 200      2          8    	4096
+ST High-res     640 x 400      1          2    4096
+
+True color      640 x 480      8        256    262,144
+                320 x 200     15     32,768    N/A. 1 bit for
+                                               Overlay
+
+VGA or Video  X:320 or 640   1,4,      2,16,
+              Y:200 or 400     8        256    262,144
+-----------------------------------------------------------------
+All modes can also be Genlocked, to provide multi-media capabilities on monitors or Televisions.  The true color modes also directly support overlays.
+
+(Overscan
+ Selectable)
+
+© 1992, Atari Corporation
+
+Hardware .1
+
+--- Page 2, left half ---
+[2 drawing objects, see HARDWARE.DOC.p002.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+An on-board RF modulator allows for direct connection to TVs.  Monitor connector allows connection to VGA monitors, ST monochrome, or color monitors (via an adaptor plug).
+
+Horizontal scrolling is supported, compatible with STE.
+
+Sound:
+Built in stereo 16-bit Analog to Digital Convertor.
+Built in stereo 16-bit DACs.
+Stereo microphone input and stereo headphone output
+      jacks.  Internal speaker (mono).
+Sophisticated multiplexer connects DSP, Codec and DMA.
+3 Channel PSG sound (compatible with ST).
+8 Channel 16 bit PCM digital record/playback I/0.
+Stereo 8 bit PCM sound (compatible with TT030, STE, and
+      MSTE).
+Digital Audio/DSP connector.
+
+DSP:  56001 32MHz Digital Signal Processor with 32Kx24 zero wait-state SRAM.
+
+I/O:
+Parallel port.
+Modem/RS232 port.
+MIDI in.
+MIDI out/thru.
+Cartridge port.
+SCSI II (50 pin connector) with DMA.
+LAN Local area network (compatible with TT030
+      and MegaSTE).
+
+Joysticks:  Two STE compatible enhanced joystick ports supporting four paddles, a light gun, and up to 21 buttons each.  (See keypad documentation)
+
+FDD:  1.44 Mbyte Floppy Disk Drive.
+
+HDD:  Internal optional hard disk drive on IDE bus.
+
+Keyboard:  94/95 key keyboard (with enhanced controller IC which supports faster keystrokes, up to 300 DPI mouse, and
+
+Hardware .2
+
+© 1992, Atari Corporation
+
+--- Page 2, right half ---
+[2 drawing objects, see HARDWARE.DOC.p002.svg]
+
+5/11/92
+
+Introduction
+
+prevents overrun and underrun).
+
+Mouse:  100 DPI mouse supplied as standard.
+
+Other:
+Real time clock with battery backed, non-volatile RAM.  Optional internal HDD.
+Internal expansion connector.
+
+Mechanical Specification
+
+Connectors
+
+Type       Pins   Type    #   Description
+-----------------------------------------------------------------Rear panel:
+DIN 5        5   Female   1   MIDI in
+DIN 5        5   Female   1   MIDI out
+DB25        25   Female   1   Parallel port
+DB9          9   Male     1   Modem / Serial port
+SCSI II     50   Female   1   SCSI II
+DB19        19   Male     1   Video out / Genlock
+Mini-Jack    3   Female   	1   Stereo Headphone out
+Mini-Jack    3   Female 	  1   Stereo Microphone in
+DB26        26   Female   1   DSP/Digital Audio interface
+RCA          2   Female   1   RF Modulator
+MiniDIN      9   Female   1   LAN
+Reset switch
+
+Left Side panel:
+Custom      40            1   Cartridge port
+DB15        15   Male     2   STE compatible enhanced joysticks
+
+Underside:
+DB9          9   Male     2   Old ST joystick/mouse ports
+
+Internal:
+Headers  30+50   Male     1   DRAM expansion board
+Header   30+50   Male     1   Internal bus expansion
+Header      44   Male     1   Internal IDE connection
+Header      34   Cable    1   Internal Floppy Disk Drive
+
+Other:
+Rechargeable cell on motherboard for battery backed RAM/RTC
+      Lasts over 10 years
+Internal speaker
+
+© 1992, Atari Corporation
+
+Hardware .3
+
+--- Page 1, left half ---
+[2 drawing objects, see HARDWARE.DOC.p001.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+Internal Expansion Port
+
+The Falcon030 has a full featured, internal expansion bus.
+
+J20. 30 pin, dual row, upright male header
+
+     Pin#   Signal        Pin#   Signal
+    ----------------     ----------------
+       1    D14             2    D13
+       3    D12             4    D11
+       5    D10             6    D9
+       7    D8              8    D7
+       9    D6             10    D5
+      11    D4             12    D3
+      13    D2             14    D1
+      15    D0             16    D15
+      17    GND            18    GND
+      19    GND            20    CPUBGO
+      21    EINT1          22    CPUBGI
+      23    500KHZ         24    n/c
+      25    MFP_IEI        26    MFP_INT
+      27    EINT3          28    VCC
+      29    VCC            30    VCC
+
+J19. 50 pin, dual row, upright male header
+
+     Pin#   Signal        Pin#   Signal
+    ----------------     ----------------
+       1    GND             2    GND
+       3    BGK             4    AS
+       5    LDS             6    UDS
+       7    RXW             8    DTACK
+       9    FC2            10    FC1
+      11    FC0            12    BMODE
+      13    n/c            14    IACK
+      15    BG             16    BR
+      17    RESET          18    HALT
+      19    BERR           20    IPL0
+      21    IPL1           22    IPL2
+      23    CPUCLK         24    VCC
+      25    VCC            26    A23
+      27    A22            28    A21
+      29    A20            30    A19
+      31    A18            32    A17
+      33    A16            34    A15
+      35    A14            36    A13
+      37    A12            38    A11
+      39    A10            40    A9
+      41    A8             42    A7
+      43    A6             44    A5
+      45    A4             46    A3
+      47    A2             48    A1
+      49    n/c            50    n/c
+
+Hardware .4
+
+© 1992, Atari Corporation
+
+--- Page 3, right half ---
+[2 drawing objects, see HARDWARE.DOC.p003.svg]
+
+5/11/92
+
+Internal Expansion Port
+
+© 1992, Atari Corporation
+
+Hardware .5
+
+--- Page 4, left half ---
+[2 drawing objects, see HARDWARE.DOC.p004.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+The internal expansion port essentially includes a 68000 direct microprocessor interface.  Since Falcon030 uses a 68030 microprocessor there are some important differences from the 68000 bus.  In particular, signals such as UDS, LDS, AS, and DTACK have been synthesized from the 68030 equivalents.  In addition, the expansion bus has 16 bit data and 24 bit address busses.
+
+No signal should ever be connected to more than one equivalent TTL load.  Failure to follow this guideline will cause the system to become unreliable or fail completely.
+
+Microprocessor Bus Signals
+
+A(23:1)	Lower 23 bits of 68030 address bus
+D(15:0)	Upper 16 bits of 68030 data bus (D(31:16))
+UDS, LDS	Data Strobes (68000 compatible)
+AS	Address strobe
+DTACK	Data Transfer Acknowledge
+RXW	Read/Write
+FC(2:0)	Function code (68030 compatible)
+RESET	Reset (active low)
+HALT	CPU Halt
+
+Bus Arbitration Signals
+
+BR	Wire-Or'ed, active low bus request
+BGK	Wire-Or'ed, active low bus grant
+	      acknowledge
+BG	Daisy chained, bus grant
+
+CPU_BGI	Bus grant in, direct from CPU
+CPU_BGO	Bus grant out, to lower priority devices
+
+The signals BR and BGK are wire or'ed together with every other alternate bus master in the system.  The other bus masters are:
+
+68030 CPU
+DMA	For SCSI and Floppy disk drive
+Sound Record
+Sound Playback
+BLiTTER
+
+Hardware .6
+
+© 1992, Atari Corporation
+
+--- Page 4, right half ---
+[2 drawing objects, see HARDWARE.DOC.p004.svg]
+
+5/11/92
+
+Internal Expansion Port
+
+Expansion port devices can choose where they sit in bus priority.  By using CPU_BGI and CPU_BGO they will have priority just below the CPU, but above DMA.  Using BG, they will have lowest priority, just below the BLiTTER.
+
+If an expansion board wishes to sit at the top of the chain it must guarantee a maximum response time of 1 microsecond to maintain system integrity.  The worst case device is currently the floppy disk.  If the DMA channel cannot empty its FIFO in time a sector of data will be lost. (SCSI does not have this problem since SCSI devices are by their nature buffered).  Excessive response times may also cause Sound DMA to lose words when running in continuous mode.
+
+To request the bus, a peripheral should pull BR low (with an open collector output), wait for BG to go low, and then acknowledge by pulling BGK low (again, with an open collector output).  The conditions under which BGK can be pulled low can be somewhat complex since there are multiple alternate bus masters.  Designers are urged to consult the 68030 documentation for a complete description.
+
+Interrupt Signals
+
+EINT1	Active high, level 1 interrupt
+EINT3	Active high, level 3 interrupt
+
+MFP_IEI	Active low, MFP (level 6) interrupt enable
+MFP_INT	Active low, Wire-Ored, level 6 interrupt
+IACK	Active low, level 6 interrupt acknowledge
+
+IPL(2:0)	Active low, CPU interrupt priority level
+ 	indicators
+
+EINT1 and EINT3 allow peripherals to interrupt at levels 1 and 3 respectively.  These signals are decoded and prioritized by custom logic to generate a processor interrupt.
+
+MFP_INT can be used in conjunction with IACK and MFP_IEI to generate a high priority level 6 interrupt.  The peripheral is positioned at a higher priority than the MFP or DSP (which can also cause level 6 interrupts).
+
+© 1992, Atari Corporation
+
+Hardware .7
+
+--- Page 3, left half ---
+[2 drawing objects, see HARDWARE.DOC.p003.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+Peripherals should pull MFP_INT low (with an open collector output) while holding MFP_IEI high to hold off the MFP from asserting its own interrupt vector.  When IACK goes low together with LDS, the peripheral should put a vector onto the data bus.
+
+The IPL(2:0) signals must not be driven by peripherals since they are internally driven by custom logic.  They are only included for devices which may want to monitor these signals.
+
+Clock Signals
+
+CPUCLK	Set to 8MHz at reset, then set to 16MHz by
+	TOS.  This clock is used by the system bus
+	to synchronize all bus cycles
+500KHZ	500KHz fixed clock
+
+Neither of these clocks should be loaded with more than one TTL type device (or equivalent) under any circumstances.  Excessive loading of these clocks (or any other signals on the expansion bus) will lead to system unreliability or failure.
+
+Hardware .8
+
+© 1992, Atari Corporation
+
+--- Page 5, right half ---
+[2 drawing objects, see HARDWARE.DOC.p005.svg]
+
+5/11/92
+
+Video Port
+
+Video Port
+
+
+Falcon030 has a new video port connector.  This connector contains all the signals necessary for connection to an analog VGA monitor as well as an ST or STE compatible color or monochrome monitor.  In addition, it includes the signals necessary for external GENLOCK devices including an external video dot clock, and insertion of external Vsync.
+The Falcon030 video connector is a DB19 male.  Its pinout is as follows:
+
+Pin#  Signal       Pin#  Signal
+------------------------------------------------
+  1   Red           11   GND
+  2   Green         12   Composite video / Composite Sync
+  3   Blue          13   Hsync
+  4   Mono/Overlay  14   Vsync
+  5   GND           15   External clock input
+  6   Red GND       16   External Sync enable
+  7   Green GND     17   +12V
+  8   Blue GND      18   M1
+  9   Audio out     19   M0
+ 10   GND
+------------------------------------------------
+
+Pin 4. Mono/Overlay
+
+This pin is a one bit monochrome video output when in ST-High resolution (640 x 400).  It has levels compatible with the ST, STE and MegaSTe.
+
+In True color mode this pin represents an inverted version of bit 5 (the overlay bit) of each pixel:
+
+  Bit   15 14 13 12 11 10  9  8  7  6  5  4  3  2  1  0
+---------------------------------------------------------
+         R  R  R  R  R  G  G  G  G  G  X  B  B  B  B  B
+---------------------------------------------------------
+
+© 1992, Atari Corporation
+
+Hardware .9
+
+--- Page 6, left half ---
+[96 drawing objects, see HARDWARE.DOC.p006.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+The overlay bit becomes active one pixel clock period before analogue RGB:
+
+
+                          Min    Typ    Max
+   ----------------------------------------
+   T1                     4ns    9ns   20ns
+   ----------------------------------------
+   R,G,B, Propagation Delay     12ns   24ns
+   ----------------------------------------
+   Analog Settling Time                14ns
+   ----------------------------------------
+
+Note that the externally supplied clock (Pin 15) can be one, two or four times the frequency of the actual pixel clock used.
+
+Typically this feature will be used to select between Falcon030 and externally generated video on a pixel by pixel basis.  It could be called a one bit chroma-key, useful for overlays and video titling.
+
+Pin 9. Audio out
+
+This signal represents the same signal that goes to the internal speaker except that it cannot be disabled.  It has a level of 1.4V RMS.
+
+Pin 12. Composite Sync / Composite Video
+
+On Peritel machines, this pin is Composite Sync.  On all other machines, this pin is Composite Video.
+
+External Clock
+
+Pixel Clock
+
+RGB (Pins 1, 2, 3)
+
+0              1              2              3
+
+Overlay (Pin 4)
+
+               0              1              2
+
+T1
+
+Hardware .10
+
+© 1992, Atari Corporation
+
+--- Page 6, right half ---
+[2 drawing objects, see HARDWARE.DOC.p006.svg]
+
+5/11/92
+
+Video Port
+
+Pin 14. Vsync
+
+This pin can be programmed as an input to Falcon030.  When it is an input, a low level on Vsync will hold the vertical timing generator in a reset condition.  This feature is typically used by external Genlocking devices.
+
+Hsync cannot be programmed as an input.  Horizontal locking is achieved with a phase locked loop, controlling the external video clock (pin 15).
+
+Pin 15. External clock input
+
+An external video source can drive a clock input into this pin synchronous with the external video dot-clock.  Falcon030 will use this signal as master video clock, when selected in software.
+
+Internally, this signal is padded with a 68Ω resistor and then pulled high with a 4.7k resistor.  This signal should be driven by a 74HCxx or 74HCTxx type device, with a 50/50 duty cycle clock between ground and +5V.  The maximum frequency this input can be driven at is 32MHz.
+
+Pin 16. External sync enable
+
+When this signal is logic level 1 (+5V), then Vsync has been programmed to be an input signal.  When pin 16 is low (GND), then Vsync is an output.
+
+This pin is useful since it can be used by an external Genlock device to enable an input on Vsync.  Without it, contention could occur when the machine is first turned on.
+
+Pin 17.  +12V
+
+This voltage level is necessary for Peritel interfaces.  No power can be drawn through this pin since a 10K resistor is inserted in series between it and the internal +12V supply.
+
+Pins 18,19.  Monitor select 1,0
+
+These pins are internally pulled high and are read by the operating system to determine the type of monitor connected.  The operating system then uses this information
+
+© 1992, Atari Corporation
+
+Hardware .11
+
+--- Page 5, left half ---
+[2 drawing objects, see HARDWARE.DOC.p005.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+to set up video timing values suitable for that particular monitor.
+
+The values assigned are as follows (1 -> +5V, 0 -> Gnd):
+
+	M1	M0	Monitor type
+  --------------------------
+	0	0	ST Monochrome
+	0	1	ST Color
+	1	0	VGA
+	1	1	TV
+  --------------------------
+
+Hardware .12
+
+© 1992, Atari Corporation
+
+--- Page 7, right half ---
+[2 drawing objects, see HARDWARE.DOC.p007.svg]
+
+5/11/92
+
+DSP and Audio Subsystem
+
+Digital Signal Processor (DSP)
+and Audio Subsystem
+
+
+Overview
+
+Falcon030 contains a sophisticated digital processing and audio sub-system...
+
+32 MHz 56001 Digital Signal Processor with 96K bytes of
+      zero wait-state SRAM.
+
+Eight track, 16-bit digital DMA record channel.
+
+Eight track, 16-bit digital DMA playback channel
+      (operating in parallel with digital record).
+
+On-board 16-bit stereo DACs, feeding the internal
+      loudspeaker and headphone jack.
+
+On-board 16-bit stereo ADCs, and stereo microphone jack.
+
+Sophisticated data path matrix between DSP, DMA, Codec
+      and external connector.
+
+Sample rates up to 50KHz.
+
+Serial data transfer rates up to 1MByte per second.
+
+Loudspeaker or headphones can monitor any stereo channel
+      of 8 track digital playback data.
+
+External serial record and playback channels connect to
+      industry standard DACs, ADCs and S/PDIF components
+      with minimum additional logic.
+
+The block diagram on the following page describes the Falcon030 Digital processing sub-system.
+
+© 1992, Atari Corporation
+
+Hardware .13
+
+--- Page 8, left half ---
+[46 drawing objects, see HARDWARE.DOC.p008.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+I/O
+
+Data Bus
+
+32k x 24
+SRAM
+
+3
+
+Address Bus
+
+Interrupt
+
+DSP Connector
+
+SSI
+
+56001
+
+Host
+
+FIFO
+
+External Clock
+
+25.175
+MHz
+
+Control
+
+DMA Record
+
+32.0
+MHz
+
+Phones
+
+Multiplexer and Protocol Convertor
+
+Mic
+
+FIFO
+
+Control
+
+Sample Clock
+
+DMA Playback
+
+DAC
+
+ADC
+
+PSG
+
+Hardware .14
+
+© 1992, Atari Corporation
+
+--- Page 8, right half ---
+[2 drawing objects, see HARDWARE.DOC.p008.svg]
+
+5/11/92
+
+DSP and Audio Subsystem
+
+The digital processing sub-system has many features which make it ideal for audio processing.  However, the data being processed can also be video (images), graphics objects (3-D image manipulation) or any other general purpose data.
+
+To maintain the maximum flexibility, Falcon030 provides an extremely general connection system between these components.  All data transfers are in a synchronous serial format.  Any component can talk with any other.  Since some of the components have real time response requirements, the clocking schemes have also been made especially general and flexible.
+
+Communications
+
+Any two devices in the sub-system can talk with each other.  To allow them to talk you need to connect them together correctly.  This requires several things:
+
+1 Connect the two devices (a receiving device to a source
+      device)
+2 Select the source clock
+3 Select the communication protocol (handshake or
+      continuous)
+
+© 1992, Atari Corporation
+
+Hardware .15
+
+--- Page 7, left half ---
+[34 drawing objects, see HARDWARE.DOC.p007.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+Connections
+
+There are four devices capable of sending data and four devices capable of receiving data.  To allow any connection therefore requires a four by four matrix:
+
+
+Each receiving device can have its data path connected to any one source device.
+
+Clock Sources
+
+All the data connections shown above, are actually serial data paths which include a bit clock, data, and synchronization signal.
+
+There are three possible clock sources in the system:
+
+	Internal clock (25.175 MHz)
+	Internal clock (32 MHz)
+	External clock
+
+Each source device must select one of these clocks as its master clock.  The Codec can use the Internal 25.175MHz, or External clock.
+
+SOURCE
+DEVICE
+
+EXTERNAL INPUT
+CHANNEL
+
+DSP TRANSMIT
+
+CODEC OUTPUT
+(ADC)
+
+DMA PLAYBACK
+
+CODEC
+INPUT
+(DAC)
+
+DMA
+RECORD
+
+DSP
+RECEIVE
+
+DMA
+INPUT
+
+RECEIVING DEVICE
+
+Hardware .16
+
+© 1992, Atari Corporation
+
+--- Page 9, right half ---
+[13 drawing objects, see HARDWARE.DOC.p009.svg]
+
+5/11/92
+
+DSP and Audio Subsystem
+
+The bit clock is taken from the master clock divided by 4 to 24.  The Sample rate is then the bit rate, divided by 128:
+
+
+Master clock  Divisor(n)   Bit Rate      Sample Rate
+---------------------------------------------------------25.175  MHz       4      6.29375 MHz    49.17 KHz (50KHz)
+22.5792 MHz       4      5.6448  MHz    	44.1  KHz (CD)
+24.576  MHz       4      6.144   MHz    48.0  KHz (DAT)
+32.000  MHz       4      8.000   MHz    62.5  KHz
+---------------------------------------------------------
+The internal 27.175 MHz clock is used to support STE compatible 50KHz, 25KHz, and 12.5KHz sound sample rates.  (Note that the built in DACs do not actually support a 6.25KHz samples rate)
+
+The internal 32 MHz clock is useful since it can be used to provide an 8 MHz bit rate (or 1 Megabyte per second), which is the maximum transfer rate of the DSP SSI interface.
+
+The external clock comes from the DSP connector.  It can run up to 32 MHz.  Some useful external clock rates are shown below:
+
+	22.5792 MHz  gives CD  rate of 44.1 KHz
+	24.576  MHz  gives DAT rate of 48.0 KHz
+
+Communication protocols
+
+Data sometimes gets lost.  We all do it.  Even a piece of perfectly well designed hardware can do it.
+
+The maximum data rate of the DMA record or playback channels is 1 Megabyte per second each.  Since the FIFOs are 32 bytes deep each sound DMA channel will require bus access approximately every 32 microseconds.
+
+Master Clock              Bit Rate              Sample Rate
+
+Divide
+by
+128
+
+Divide
+by
+n
+
+© 1992, Atari Corporation
+
+Hardware .17
+
+--- Page 10, left half ---
+[2 drawing objects, see HARDWARE.DOC.p010.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+Unfortunately, poorly written software can create situations where this access requirement is not met.  A combination of other devices may lock out the bus from sound DMA, particularly, badly behaved expansion port devices and true color video.
+
+If the data is sound data and it is not critical, then an occasional overrun or underrun may be acceptable.  If the data is JPEG video, DSP object code, or any other non redundant data, then you will want to guarantee it is never mislaid.
+
+For precisely this purpose our system includes a special handshaking mode which prevents overrun or underrun.  When in handshaking mode, the data rate can be variable since timely bus access cannot be guaranteed.  This also means that in handshaking mode there is no concept of a sample rate, or left and right tracks, or multiple tracks at all.  The data is simply transferred one word at a time as quickly as the source and receiving devices can communicate.
+
+If timely bus access can be guaranteed it is better to use continuous mode.  Continuous mode should be used for any real time applications (such as sound playback or record), and it will generally be more efficient for the DSP since its interrupt routines can be faster.
+
+Devices
+
+DMA Input
+
+The DMA input channel provides a fast path to system memory.  Briefly, it includes a 32 byte FIFO on the data path synchronized with a memory addressing module which can fill memory in a linear, continuous or looping mode.  The maximum data transfer rate is about one Megabyte per second.
+
+The data and clock signals to DMA input must be synchronized. Source devices can send data to DMA input in either handshaked or non-handshaked modes.
+
+Hardware .18
+
+© 1992, Atari Corporation
+
+--- Page 10, right half ---
+[2 drawing objects, see HARDWARE.DOC.p010.svg]
+
+5/11/92
+
+DSP and Audio Subsystem
+
+In handshaked mode DMA Input must be the clock source.  It uses a gated clock technique to stop data transmission if its FIFO becomes full.
+
+In non-handshaked mode, DMA input receives a clock from the sending device.  When its FIFO becomes half full it will attempt to write it to memory.  If it cannot get access to the system bus in time, data will overflow.
+
+Non-handshaked mode to DMA input is provided simply because it puts less burden on the sending device.  However, when using it the user must be careful to limit the data transfer rate to within system bus bandwidth limits.
+
+DMA Output
+
+The DMA output channel provides a fast data channel from system memory to sub-system devices.  It also has its own 32 byte FIFO which helps ensure that it can keep up with the real time response required by certain devices (such as the Codec DACs).
+
+Data transfers can be done in either handshaked or non-handshaked modes.  In handshaked mode a gated clock technique is used together with a flag signal from the receiving device to prevent overruns or underruns.
+
+Non-handshaked mode is normally used for communication with DACs or other real-time devices.  If the system bus becomes overloaded for any reason with higher priority bus masters data may be lost in non-handshaked mode.
+
+As usual, the receiving device must be using the same clocks and protocol as DMA output to ensure correct data transfer.
+
+© 1992, Atari Corporation
+
+Hardware .19
+
+--- Page 9, left half ---
+[2 drawing objects, see HARDWARE.DOC.p009.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+Digital Signal Processor (DSP)
+
+The Falcon030 includes a Motorola 56001 Digital Signal Processor. This part offers the following features:
+
+32 MHz operation, yields 16 MIPS.
+
+1024 point complex FFT can be done in 2.07 milliseconds.
+
+24 bit internal and external data paths, yielding 144 dB
+      dynamic range.
+
+56 bit accumulators.
+
+The following operations can be executed in parallel in one
+      instruction cycle:
+		24 x 24 multiply
+		56 bit addition
+		Two data moves
+		Two address pointer updates
+		Instruction prefetch
+
+1024 x 24 bits of on chip RAM.
+
+512 x 24 bits of on chip ROM used for Mu-Law, A-Law and
+      four quadrant Sine wave table data.
+
+Hardware .20
+
+© 1992, Atari Corporation
+
+--- Page 11, right half ---
+[14 drawing objects, see HARDWARE.DOC.p011.svg]
+
+5/11/92
+
+DSP and Audio Subsystem
+
+DSP Memory Map
+
+In addition to the on-chip RAM and ROMs there are 32K words of external, zero wait state SRAM.
+
+The memory map is configured as follows:
+
+Program space is one contiguous block of 32K words.
+X and Y data space are each separate 16K word blocks.
+Both X and Y can be accessed as blocks starting at 0 or 16K.
+Program space physically overlaps both X and Y data spaces.
+
+Note that since program space overlaps X and Y space DSP software must be careful to avoid having program and data memory corrupt each other.  Note that X:0, X:16K and P:16K are the same physical RAM location, and that Y:0, Y:16K and P:0 are also at the same physical RAM location.
+
+
+SSI Interface
+
+Falcon030 brings out the six wire SSI port to the external DSP connector.
+
+$ffff
+
+
+$7fff
+
+
+$3fff
+
+
+$01ff
+
+
+$0000
+
+Reserved
+
+Reserved
+
+Reserved
+
+16 K
+Shadow
+
+16 K
+Shadow
+
+Overlaps
+X memory
+
+32 K
+Program
+RAM
+
+16 K
+External
+RAM
+
+16 K
+External
+RAM
+
+Overlaps
+Y memory
+
+Internal
+RAM/ROM
+
+Internal
+RAM/ROM
+
+Internal
+RAM
+
+X Memory
+
+Y Memory
+
+P Memory
+
+© 1992, Atari Corporation
+
+Hardware .21
+
+--- Page 12, left half ---
+[2 drawing objects, see HARDWARE.DOC.p012.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+Host Port
+
+Interface with the 68030 host is via the 56001 host port (port B).  Data transfer by the host is via programmed IO.  In other words, the DSP host port appears in the 68030 memory map as eight byte locations.  Data transfers by the host should always be conducted through the appropriate operating system calls (see Falcon030 software developer's guide).
+
+DSP software transfers data to and from the host port in the usual way (see 56001 DSP User's Manual).  The host can interrupt the DSP and vice-versa.
+
+SCI
+
+The 56001 three wire SCI port is not implemented in Falcon030.  DSP software must not rely on the existence of any of the SCI registers, including the SCI timer, interrupts, or control and status registers.
+
+Various versions of Falcon030 may or may not even include the SCI circuitry!
+
+DSP expansion port
+
+This DB26 female connector includes a variety of signals designed primarily for the connection of digital sound devices and modems.  It can (and almost certainly will) be used for a number of other applications such as low cost laser printers, video digitizers, scanners and so forth.
+
+The pinout is as follows:
+
+DSP Connector, DB26, three row Female:
+
+Pin#  Signal         Pin#  Signal         Pin#  Signal
+---------------------------------------------------------
+  1   GP0             10   GND             20   R_CLK
+  2   GP1             11   SCO             21   R_SYNC
+  3   GP2             12   SC1             22   EXT_INT
+  4   P_DATA          13   SC2             23   STD
+  5   P_CLK           14   GND             24   SCK
+  6   P_SYNC          15   SRD             25   GND
+  7   n/c             16   GND             26   EXCLK
+  8   GND             17   +12V
+  9   +12V            18   GND
+--------------------------------------------------------
+
+Hardware .22
+
+© 1992, Atari Corporation
+
+--- Page 12, right half ---
+[2 drawing objects, see HARDWARE.DOC.p012.svg]
+
+5/11/92
+
+DSP and Audio Subsystem
+
+Pin Description:
+
+GP(2:0)	I/O	General purpose inputs and outputs.
+		Can be individually set and read
+EX_INT	I	General purpose interrupt input
+
+SC0	I/O	DSP SSI port Pin SC0 (PC3), Receive clock
+SC1	I/O	DSP SSI port Pin SC1 (PC4), Receive Sync
+SC2	I/O	DSP SSI port Pin SC2 (PC5), Transmit Sync
+SCK	I/O	DSP SSI port Pin SCK (PC6), Transmit clock
+SRD	I/O	DSP SSI port Pin SRD (PC7), Receive Data
+STD	I/O	DSP SSI port Pin STD (PC8), Transmit data
+
+XO_DATA	O	External Serial Output, serial data
+XO_CLK	O	External Serial Output, serial clock
+XO_SYNC	I/O	External Serial Output, Sync
+
+XI_DATA	I 	External Serial Input, serial data
+XI_CLK	O  	External Serial Input, serial clock
+XI_SYNC	I/O 	External Serial input, Sync
+
+EX_CLK	I	External master clock
+
++12V	-	+12V power.  Do not draw more than
+		300mA on this pin.
+
+The signals on this port include several high speed clock and data lines.  It is therefore essential that developers use correct drive and termination.  In general, all signals should be terminated with a ferrite bead followed by a 68Ω resistor in series.  This is the same type of termination used inside Falcon030 on all DSP port signals.  A ferrite bead should be chosen that does not begin cutoff until 20MHz to 30MHz. Input signals from the peripheral should be driven by CMOS devices such as 74HCxx or 74HCTxx.
+
+Total cable length should not exceed 24 inches and we strongly advise the use of twisted pair cables.
+
+General purpose bits
+
+Three bits are provided for general control purposes.  They can be set, cleared or read as inputs through the operating system.
+
+© 1992, Atari Corporation
+
+Hardware .23
+
+--- Page 11, left half ---
+[2 drawing objects, see HARDWARE.DOC.p011.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+DSP SSI interface
+
+These six pins are the SSI port from the Motorola 56001 DSP chip.  The serial clock can operate up to one quarter of the 32 MHz DSP master clock rate, which in this case means 8MHz.
+
+To use these pins to talk directly with the DSP you need to take care to avoid contention with the communication matrix by tri-stating the communication matrix outputs through the appropriate OS call.
+
+External Serial Output channel
+
+This three wire serial interface can be used to transfer data from the host computer.  It can transfer data from the DSP, DMA playback channel, or on board analogue to digital convertor.
+
+Data transfers use either continuous mode or a handshaked (gated clock) mode:
+
+   Signal     Continuous    Handshaked
+  ------------------------------------
+   XO_DATA      Output      Output
+   XO_CLK       Output      Output
+   XO_SYNC      Output      Input
+  ------------------------------------
+
+In either mode, data changes on the rising edge of the clock.  Data should be sampled on the falling edge of the clock.
+
+Hardware .24
+
+© 1992, Atari Corporation
+
+--- Page 13, right half ---
+[185 drawing objects, see HARDWARE.DOC.p013.svg]
+
+5/11/92
+
+DSP and Audio Subsystem
+
+In Continuous mode there are 128 clock cycles per sample period.  XO_SYNC will go high for the first 16 bits of a sample period and then low for the remaining 96 bits.  In each sample period a maximum of 8 tracks of 16 bit data can be transferred.  Data words are transmitted MSB first, end-on-end, with no gaps in between them.  The number of words per sample period is determined by the source device.
+
+A typical sample is shown below:
+
+
+In Handshaked mode XO_SYNC becomes an input.  The external device will pull XO_SYNC high, and if the source device is ready, XO_CLK will become active for 16 cycles (or one word) together with XO_DATA.  XO_SYNC is sampled by the source device at the end of each word.  If XO_SYNC is high and another word is ready to be sent, XO_CLK and XO_DATA will become active for another 16 cycles.  A minimum of two clock periods will always be inserted between data words.
+
+This gated clock technique will prevent overrun or underrun at either end of the data paths:
+
+128 Clock Cycles
+
+CLK
+
+SYNC
+
+DATA
+
+MSB
+
+LSB MSB
+
+Word 1                          Word 2          Word 16  Word 1
+
+DATA and SYNC change on rising edges of CLK and should be
+sampled on falling sdges of CLK.
+
+CLK
+
+SYNC
+
+DATA
+
+                 One Word
+
+NOTE: SYNC hold time after first rising edge of CLK = 0ns
+
+© 1992, Atari Corporation
+
+Hardware .25
+
+--- Page 14, left half ---
+[2 drawing objects, see HARDWARE.DOC.p014.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+External Serial Input Channel
+
+This three wire serial interface can be used to transfer data to the host computer.  It can transfer data to the DSP, DMA record channel, or an on board digital to analogue convertor.
+
+Data transfers use either continuous mode or a handshaked (gated clock) mode:
+
+   Signal    Continuous     Handshaked
+ ---------------------------------------
+   XI_DATA      Input       Input
+   XI_CLK       Output      Output
+   XI_SYNC      Output      Input
+ ---------------------------------------
+
+In continuous mode it is the responsibility of the external device to synchronize to the XI_CLK and XI_SYNC outputs.  Data should be changed on the rising edges of XI_CLK since it will be sampled on the falling edges.  XI_SYNC will identify the start of a frame by going high for the first 16 clock cycles, and then low for the remaining 96 cycles.
+
+In handshaked mode the protocol is basically the same as for the external serial output channel, except that XI_DATA is an input.  When the external device has no data to send it must pull XI_SYNC low at least one clock cycle before the end of the previous sample.
+
+External Master clock
+
+This clock can optionally replace the internal 25.175MHz or 32.0MHz clocks.  The maximum frequency allowable is 32 MHz.
+
+CODEC
+
+The Falcon030 on board Codec is a high performance, 16 bit, stereo device.  It includes a stereo DAC and stereo ADC.
+
+16-bit Stereo DAC
+
+The DAC output is directed to the on board loudspeaker (which can optionally be turned off), to the monitor port (for monitors which have loudspeakers built in, such as the
+
+Hardware .26
+
+© 1992, Atari Corporation
+
+--- Page 14, right half ---
+[55 drawing objects, see HARDWARE.DOC.p014.svg]
+
+5/11/92
+
+DSP and Audio Subsystem
+
+SC1224), and the stereo headphone jack on the back panel.
+
+DAC attenuation can be controlled for left and right channels independently, through operating system calls.
+
+Stereo Headphone Jack
+
+The output port is a voltage drive with a peak voltage level of 3V, and an RMS level of 2V.  It is designed for a peak load of 0.25W; this means that the load should have an impedance greater than 32Ω.
+
+
+To help compensate for the poor low-frequency response of headphones and small speakers, the headphone amplifier has had a bass-boost circuit added to it which adds about 6dB to the output level, centered at 100Hz, dropping to a 0dB boost at 1KHz.
+
+The power level present at the headphones is dependent on the level in the input signal and the output impedance.  If the input (digital) value is assumed to be a 16-bit value scaled between +/-1, then power level on the headphones is:
+
+          VOUT = 3 * IN
+                                      2
+          POUT = (3 * IN)  /XH;
+
+Where XH is the headphone impedance.  For example, for 32Ω headphones the peak output power is:
+                                                     2
+          POUT = 0.28 * (INMAX)
+
+The output is AC coupled by a 47UF capacitor.  This means
+
+6
+
+1
+
+8
+
+BNC
+
+0.033UF
+
+3
+
++
+
+5
+
+2
+
+-
+
+47UF
+
+LM386
+
+4
+
+7
+
+GND
+
+GND
+
+© 1992, Atari Corporation
+
+Hardware .27
+
+--- Page 13, left half ---
+[65 drawing objects, see HARDWARE.DOC.p013.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+that there is a roll-off in the frequency response at low frequencies.  The cut-off point can be approximated as:
+
+          FCUT-OFF = 1/(2 * 3.14159 * 47UF * XH);
+
+Where XH is the impedance of the headphones.  For example, with 32Ω headphones the cut-off is at 105Hz.
+
+Note that the headphone output is a voltage.  While the output is somewhat higher than normal line levels, output attenuation in the Codec can reduce this without loss of dynamic range.  At the normal "line" impedance of 600Ω, the cut-off frequency will be lower; other internal limits keep the system to a cut-off of about 30Hz.
+
+Internal Loudspeaker
+
+The internal speaker is driven from a boosted op-amp.  It is capable of output levels of 2V RMS (3.5V peak), and can drive loads as low as 8Ω.  This means that the RMS output level is 0.5W.  Peak levels will clip at 1.5W.
+
+
+16-bit Stereo ADC
+
+The ADC is connected to the microphone jack on the back panel.  The ADC gain can be controlled through operating system calls.  The PSG signals can optionally be fed to the ADC input.
+
++12V
+
+LF347
+
+4
+
+Speaker
+
+3
+
+NPN
+
++
+
+1
+
+2
+
+-
+
+47UF
+
+PNP
+
+1
+1
+
+GND
+
+GND
+
+Hardware .28
+
+© 1992, Atari Corporation
+
+--- Page 15, right half ---
+[66 drawing objects, see HARDWARE.DOC.p015.svg]
+
+5/11/92
+
+DSP and Audio Subsystem
+
+Stereo Microphone Jack
+
+The effective impedance of the microphone port is:
+
+	2.15K Ohm,  0   - 30Hz
+	1.77K Ohm,  30Hz - 900KHz
+	    0 Ohms  >900KHz
+
+At DC, the input appears as a 2.2K resistor to +9V, and a 100K resistor to ground.  The actual circuit used is shown below:
+
+
+The maximum signal levels to be present at this port depend to some degree on the input gain set in the Codec.  A "simple" formula is:
+                                            -(0.075 * N)
+          VMAX(RMS) = (10                     )/10;
+
+where N is the value (0 to 15) of the input gain.
+
+Note that the VMAX mentioned above is that appearing directly at the input pin.  As may seem apparent, the input impedance can be part of a "resistor ladder" to attenuate incoming signals to an appropriate level.  If we call the input impedance "RI" and the (series) attenuation resistor "RA", than the voltage seen at the input pin is:
+
++9V
+
+2.2K
+
+BNC
+
+6
+
+2
+
+-
+
+4
+
+10K
+
+0.47UF
+
+1
+
++
+
+LM 387
+
+3
+
+100K
+
+GND
+
+GND
+
+GND
+
+© 1992, Atari Corporation
+
+Hardware .29
+
+--- Page 16, left half ---
+[4 drawing objects, see HARDWARE.DOC.p016.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+          VIN =         RI     * VSOURCE
+                       (RI + RA)
+
+This means that the maximum source signal would then be:
+                                                                      -(0.075 * N)
+          VSOURCE(MAX) = (RI + RA) * 10
+                                                10 * RI
+
+Or, more usefully, the needed attenuation resistor is:
+                                                                                 (0.075 * N)
+          RA = RI * (10 * VSOURCE(MAX) -1) * 10
+
+For example, the attenuation resistor for a 1V RMS input to be allowed at N=15 (i.e. full gain) would be:
+
+          RA = (1.77K) * (10 * 1 - 1) * 10(0.075 * 15)
+          RA = 212K
+
+Hardware .30
+
+© 1992, Atari Corporation
+
+--- Page 16, right half ---
+[2 drawing objects, see HARDWARE.DOC.p016.svg]
+
+5/11/92
+
+Parallel Port
+
+Parallel Port
+
+The Falcon030 parallel port has been extended from previous TOS products, to include two additional signals - 'Acknowledge', and 'Select'.
+
+The new parallel port now looks like this:
+
+Parallel port.  DB25, female.
+
+    Pin#    Signal          Pin#    	Signal
+  --------------------------------------------
+      1     Strobe           14     -
+      2     Data 0           15     -
+      3     Data 1           16     -
+      4     Data 2           17     Select
+      5     Data 3           18     -
+      6     Data 4           19     -
+      7     Data 5           20     -
+      8     Data 6           21     -
+      9     Data 7           22     -
+     10     Acknowledge      23     -
+     11     Busy             24     -
+     12     -                25     -
+     13     -
+  ---------------------------------------------
+'Acknowledge' is an input, active low from the printer.  It is connected to the MFP pin GPIP1.
+
+'Select' is an output, normally used to turn a printer on-line.  It is connected to the PSG pin IOA3.
+
+© 1992, Atari Corporation
+
+Hardware .31
+
+--- Page 15, left half ---
+[2 drawing objects, see HARDWARE.DOC.p015.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+Serial port
+
+The Falcon030 serial port is connected to the 85c30 SCC chip (rather than the 68901 MFP as in previous machines).  This is generally more powerful and flexible than the MFP.
+
+    Pin#   Signal                  Input/Output
+  -----------------------------------------------
+      1    DCD  Carrier detect         i/p
+      2    RxD  Receive data           i/p
+      3    TxD  Transmit data          o/p
+      4    DTR  Data Terminal ready    o/p
+      5    GND  Ground
+      6    DSR  Data set ready         	i/p
+      7    RTS  Request to send        o/p
+      8    CTS  Clear to send          i/p
+      9    RI   Ring indicator         i/p
+  -----------------------------------------------
+
+All signals are RS232 levels.  Every signal except Ring Indicator is connected to the appropriate 85c30 port B pin.
+
+Ring Indicator is compatible with previous machines, and connected to the MFP pin GPIP6.
+
+
+LAN
+
+
+SCSI
+
+
+Joysticks
+
+
+MIDI
+
+Hardware .32
+
+© 1992, Atari Corporation
+
+--- Page 17, left half ---
+[2 drawing objects, see HARDWARE.DOC.p017.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+Hardware .
+
+© 1992, Atari Corporation
+
+--- Page 17, right half ---
+[2 drawing objects, see HARDWARE.DOC.p017.svg]
+
+5/11/92
+
+?
+
+© 1992, Atari Corporation
+
+Hardware .
+
+--- Page 18, left half ---
+[2 drawing objects, see HARDWARE.DOC.p018.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+Hardware .
+
+© 1992, Atari Corporation
+
+--- Page 18, right half ---
+[2 drawing objects, see HARDWARE.DOC.p018.svg]
+
+5/11/92
+
+?
+
+© 1992, Atari Corporation
+
+Hardware .
+
+--- Page 19, left half ---
+[2 drawing objects, see HARDWARE.DOC.p019.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+Hardware .
+
+© 1992, Atari Corporation
+
+--- Page 19, right half ---
+[2 drawing objects, see HARDWARE.DOC.p019.svg]
+
+5/11/92
+
+?
+
+© 1992, Atari Corporation
+
+Hardware .
+
+--- Page 20, left half ---
+[2 drawing objects, see HARDWARE.DOC.p020.svg]
+
+Atari Falcon030 Hardware Reference Guide
+
+5/11/92
+
+Hardware .
+
+© 1992, Atari Corporation
+
+--- Page 20, right half ---
+[2 drawing objects, see HARDWARE.DOC.p020.svg]
+
+5/11/92
+
+?
+
+© 1992, Atari Corporation
+
+Hardware .
+
+--- Page 21, left half ---
+[69 drawing objects, see HARDWARE.DOC.p021.svg]
+
+50K
+
+10K
+
+3
+
+2
+
++
+
+-
+
+6
+
+1
+
+8
+
+5
+
+LM386
+
+0.033UF
+
+47UF
+
+J?
+BNC
+
+4
+
+7
+
+GND
+
+GND
+
+2.2K
+
+4
+
+--- Page 21, right half ---
+[110 drawing objects, see HARDWARE.DOC.p021.svg]
+
++12V
+
+LF347
+
+4
+
+3
+
++
+
+1
+
+NPN
+
+2
+
+-
+
+PNP
+
+47UF
+
+1
+1
+
+GND
+
+GND
+
+10K
+
++9V
+
+100K
+
+2.2K
+
+6
+
+U?A
+
+J?
+BNC
+
+-
+
+2
+
++
+
+1
+
+10K
+
+0.47UF
+
+3
+
+100K
+
+GND
+
+GND
+
+GND

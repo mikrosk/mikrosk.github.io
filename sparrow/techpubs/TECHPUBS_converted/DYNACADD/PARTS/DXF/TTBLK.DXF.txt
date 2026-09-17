@@ -1,0 +1,279 @@
+DXF drawing: DYNACADD/PARTS/DXF/TTBLK.DXF
+Render: TTBLK.DXF.svg
+
+== Summary ==
+File:        67530 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font txt
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (0.354, -0.479) - (20.223, 19.998)
+             rendered (0.46, -0.479) - (20.142, 19.998), size 19.682 x 20.477
+Limits:      (0, 0) - (11, 11)
+Units:       not stored in this DXF version
+Header:      24 variables; $LTSCALE=1, $FILLMODE=1
+Text styles: STANDARD (font txt)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            377
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: POLYLINE 200 (668 vertices), TEXT 146, LINE 31
+Blocks:      0 defined
+Notes:
+  - 87 polylines with constant width drawn as thick strokes
+
+== Text in reading order (146 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (145 items) --
+  CONTROL/25
+  OSC  |  MC68030  |  DATA/32
+  32.215 MHz  |  PROCESSOR
+  32 MHz  |  ADDRESS/32
+  RAM
+  LATCHED RAM CONTROL
+  CONTROL
+  ALS244
+  LATCH
+  MEMORY
+  CONTROL  |  DATA LATCH
+  UNIT  |  CONTROL
+  (MCU)  |  MULTIPLEXED
+  MEMORY DATA/64  |  2MB
+  256KX4
+  MC68882  |  DATA/32
+  DATA  |  DRAM
+  FPU
+  FUNNEL
+  32 MHz  |  ADDRESS/32
+  CPU DATA/32
+  MONITOR
+  TT VIDEO
+  1 MB
+  ROM
+  MIDI IN
+  MC6850
+  Joystick  |  MIDI
+  CONT.
+  MIDI OUT
+  & Mouse
+  MC6850
+  KEYBOARD
+  CONT.
+  Parallel Printer Port
+  2149
+  Floppy Drive Unit Selects
+  PSG
+  SPEAKER AUDIO
+  BATTERY
+  MC146818
+  REAL-TIME
+  CLOCK
+  Serial Port C
+  MC68901
+  ACSI Floppy, ACSI Hard Disk,
+  MFP1
+  Keyboard, MIDI, Sound,
+  INTERNAL FLOPPY  |  WD1772  |  CONTROL
+  Port C, Parallel Port Busy
+  FLOPPY
+  Interrupts In
+  DISK
+  ATARI
+  EXTERNAL FLOPPY  |  CONT.  |  DATA
+  DMAC
+  Serial Port D
+  MC68901  |  Interrupts in
+  MFP2  |  from MFP1
+  SCSI Hard Disk,
+  Real-Time Clock,
+  ACSI DMA PORT  |  LS244
+  Port B, Disk Change,
+  Interrupts In
+  MFP
+  Interrupts In
+  LS244  |  SCU
+  VME Bus
+  Interrupts In
+  CONTROL
+  ATARI  |  VME
+  DATA  |  BUS
+  CONTROL  |  DECODE
+  UNIT  |  DATA  |  ADDRESS
+  (DCU)
+  INTERNAL SCSI PORT  |  5380
+  CONTROL  |  DATA
+  SCSI  |  ADDRESS
+  DISK
+  CONTROL  |  DATA
+  EXTERNAL SCSI PORT  |  CONT.  |  LATCH
+  ADDRESS
+  ATARI
+  DMAC
+  LEFT  |  LMC1992
+  LATCH  |  DAC  |  VOLUME
+  SD  |  CONTROL
+  Left Stereo Jack
+  DATA
+  ATARI
+  LAN PORT
+  8530  |  DATA  |  DATA
+  SERIAL PORT A  |  SCC  |  CONTROL  |  SNDSHIFTR  |  Right Stereo Jack
+  CONT.  |  UNIT  |  RIGHT
+  SERIAL PORT B  |  LATCH  |  DAC
+  (DCU)
+  MICROWIRE INTERFACE
+  CONTROL
+  ATARI
+  DMAC
+
+-- direction 270 deg (1 items) --
+  DMA SOUND DATA/16
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE     TEXT
+ 6.919  19.864     0.104      0  middle    1      STANDARD  CONTROL/25
+ 3.496  19.542     0.104      0  middle    1      STANDARD  OSC
+ 5.643  19.587     0.104      0  middle    1      STANDARD  MC68030
+ 6.767  19.556     0.104      0  middle    1      STANDARD  DATA/32
+ 3.496  19.369     0.104      0  middle    1      STANDARD  32.215 MHz
+ 5.643  19.413     0.104      0  middle    1      STANDARD  PROCESSOR
+ 5.643   19.24     0.104      0  middle    1      STANDARD  32 MHz
+ 6.914  19.269     0.104      0  middle    1      STANDARD  ADDRESS/32
+11.201  19.208     0.104      0  middle    1      STANDARD  RAM
+14.711  19.121     0.104      0  middle    1      STANDARD  LATCHED RAM CONTROL
+11.201  19.034     0.104      0  middle    1      STANDARD  CONTROL
+12.663  18.915     0.104      0  middle    1      STANDARD  ALS244
+12.663  18.742     0.104      0  middle    1      STANDARD  LATCH
+ 9.738  18.503     0.104      0  middle    1      STANDARD  MEMORY
+ 9.738   18.33     0.104      0  middle    1      STANDARD  CONTROL
+11.335  18.293     0.104      0  middle    1      STANDARD  DATA LATCH
+ 9.738  18.157     0.104      0  middle    1      STANDARD  UNIT
+11.335  18.119     0.104      0  middle    1      STANDARD  CONTROL
+ 9.738  17.983     0.104      0  middle    1      STANDARD  (MCU)
+14.553  18.008     0.104      0  middle    1      STANDARD  MULTIPLEXED
+14.553  17.834     0.104      0  middle    1      STANDARD  MEMORY DATA/64
+16.173  17.832     0.104      0  middle    1      STANDARD  2MB
+16.173  17.658     0.104      0  middle    1      STANDARD  256KX4
+ 5.643  17.539     0.104      0  middle    1      STANDARD  MC68882
+ 6.917  17.529     0.104      0  middle    1      STANDARD  DATA/32
+12.663  17.453     0.104      0  middle    1      STANDARD  DATA
+16.173  17.485     0.104      0  middle    1      STANDARD  DRAM
+ 5.643  17.366     0.104      0  middle    1      STANDARD  FPU
+12.663  17.279     0.104      0  middle    1      STANDARD  FUNNEL
+ 5.643  17.193     0.104      0  middle    1      STANDARD  32 MHz
+ 6.946  17.214     0.104      0  middle    1      STANDARD  ADDRESS/32
+ 9.713  16.931     0.104      0  middle    1      STANDARD  CPU DATA/32
+15.296  15.903     0.104      0  middle    1      STANDARD  MONITOR
+ 9.446  15.611     0.104      0  middle    1      STANDARD  TT VIDEO
+ 6.521  14.235     0.104      0  middle    1      STANDARD  1 MB
+ 6.521  14.062     0.104      0  middle    1      STANDARD  ROM
+15.207  13.264     0.104      0  middle    1      STANDARD  MIDI IN
+ 9.446  13.152     0.104      0  middle    1      STANDARD  MC6850
+ 5.002  13.021     0.104      0  middle    1      STANDARD  Joystick
+ 9.446  12.978     0.104      0  middle    1      STANDARD  MIDI
+ 9.446  12.805     0.104      0  middle    1      STANDARD  CONT.
+15.296  12.686     0.104      0  middle    1      STANDARD  MIDI OUT
+ 5.002  12.626     0.104      0  middle    1      STANDARD  & Mouse
+ 6.521  12.274     0.104      0  middle    1      STANDARD  MC6850
+ 6.521  12.101     0.104      0  middle    1      STANDARD  KEYBOARD
+ 6.521  11.928     0.104      0  middle    1      STANDARD  CONT.
+15.863  11.511     0.104      0  middle    1      STANDARD  Parallel Printer Port
+ 9.446  11.018     0.104      0  middle    1      STANDARD  2149
+16.073  10.917     0.104      0  middle    1      STANDARD  Floppy Drive Unit Selects
+ 9.446  10.844     0.104      0  middle    1      STANDARD  PSG
+10.962   10.47     0.104      0  middle    1      STANDARD  SPEAKER AUDIO
+ 4.766  10.346     0.104      0  middle    1      STANDARD  BATTERY
+ 6.521  10.227     0.104      0  middle    1      STANDARD  MC146818
+ 6.521  10.053     0.104      0  middle    1      STANDARD  REAL-TIME
+ 6.521    9.88     0.104      0  middle    1      STANDARD  CLOCK
+15.471   9.495     0.104      0  middle    1      STANDARD  Serial Port C
+ 9.446   9.263     0.104      0  middle    1      STANDARD  MC68901
+16.324   9.144     0.104      0  middle    1      STANDARD  ACSI Floppy, ACSI Hard Disk,
+ 9.446   9.089     0.104      0  middle    1      STANDARD  MFP1
+16.324    8.97     0.104      0  middle    1      STANDARD  Keyboard, MIDI, Sound,
+ 1.256   8.883     0.104      0  middle    1      STANDARD  INTERNAL FLOPPY
+ 4.181   8.851     0.104      0  middle    1      STANDARD  WD1772
+ 5.351   8.883     0.104      0  middle    1      STANDARD  CONTROL
+16.324   8.797     0.104      0  middle    1      STANDARD  Port C, Parallel Port Busy
+ 4.181   8.678     0.104      0  middle    1      STANDARD  FLOPPY
+16.324   8.624     0.104      0  middle    1      STANDARD  Interrupts In
+ 4.181   8.504     0.104      0  middle    1      STANDARD  DISK
+ 6.521   8.385     0.104      0  middle    1      STANDARD  ATARI
+ 1.256   8.298     0.104      0  middle    1      STANDARD  EXTERNAL FLOPPY
+ 4.181   8.331     0.104      0  middle    1      STANDARD  CONT.
+ 5.217   8.298     0.104      0  middle    1      STANDARD  DATA
+ 6.521   8.212     0.104      0  middle    1      STANDARD  DMAC
+15.471   8.032     0.104      0  middle    1      STANDARD  Serial Port D
+ 9.446     7.8     0.104      0  middle    1      STANDARD  MC68901
+11.493     7.8     0.104      0  middle    1      STANDARD  Interrupts in
+ 9.446   7.627     0.104      0  middle    1      STANDARD  MFP2
+11.493   7.627     0.104      0  middle    1      STANDARD  from MFP1
+15.739   7.389     0.104      0  middle    1      STANDARD  SCSI Hard Disk,
+15.739   7.215     0.104      0  middle    1      STANDARD  Real-Time Clock,
+ 1.548   7.128     0.104      0  middle    1      STANDARD  ACSI DMA PORT
+ 4.181   7.128     0.104      0  middle    1      STANDARD  LS244
+15.739   7.042     0.104      0  middle    1      STANDARD  Port B, Disk Change,
+15.739   6.869     0.104      0  middle    1      STANDARD  Interrupts In
+11.493    6.63     0.104      0  middle    1      STANDARD  MFP
+11.493   6.457     0.104      0  middle    1      STANDARD  Interrupts In
+ 4.181   6.251     0.104      0  middle    1      STANDARD  LS244
+ 9.446   6.251     0.104      0  middle    1      STANDARD  SCU
+10.767    6.08     0.104      0  middle    1      STANDARD  VME Bus
+10.767   5.906     0.104      0  middle    1      STANDARD  Interrupts In
+ 15.59   5.539     0.104      0  middle    1      STANDARD  CONTROL
+ 5.936   5.428     0.104      0  middle    1      STANDARD  ATARI
+16.745   5.393     0.104      0  middle    1      STANDARD  VME
+ 5.936   5.254     0.104      0  middle    1      STANDARD  DATA
+16.745    5.22     0.104      0  middle    1      STANDARD  BUS
+ 5.936   5.081     0.104      0  middle    1      STANDARD  CONTROL
+14.311   5.105     0.104      0  middle    1      STANDARD  DECODE
+ 5.936   4.908     0.104      0  middle    1      STANDARD  UNIT
+ 6.833   4.944     0.104      0  middle    1      STANDARD  DATA
+15.593   4.928     0.104      0  middle    1      STANDARD  ADDRESS
+ 5.936   4.734     0.104      0  middle    1      STANDARD  (DCU)
+ 1.256   4.496     0.104      0  middle    1      STANDARD  INTERNAL SCSI PORT
+  4.17   4.463     0.104      0  middle    1      STANDARD  5380
+ 9.446   4.381     0.104      0  middle    1      STANDARD  CONTROL
+15.673    4.34     0.104      0  middle    1      STANDARD  DATA
+  4.17    4.29     0.104      0  middle    1      STANDARD  SCSI
+ 5.515   4.328     0.104      0  middle    1      STANDARD  ADDRESS
+  4.17   4.117     0.104      0  middle    1      STANDARD  DISK
+ 5.567    4.05     0.104      0  middle    1      STANDARD  CONTROL
+ 9.389    4.05     0.104      0  middle    1      STANDARD  DATA
+ 1.256   3.911     0.104      0  middle    1      STANDARD  EXTERNAL SCSI PORT
+  4.17   3.943     0.104      0  middle    1      STANDARD  CONT.
+13.416   3.914     0.104      0  middle    1      STANDARD  LATCH
+ 9.327   3.762     0.104      0  middle    1      STANDARD  ADDRESS
+ 5.936    3.12     0.104      0  middle    1      STANDARD  ATARI
+ 5.936   2.947     0.104      0  middle    1      STANDARD  DMAC
+15.707   2.635     0.104      0  middle    1      STANDARD  LEFT
+16.758   2.622     0.104      0  middle    1      STANDARD  LMC1992
+13.839   2.459     0.104      0  middle    1      STANDARD  LATCH
+14.997   2.448     0.104      0  middle    1      STANDARD  DAC
+16.758   2.448     0.104      0  middle    1      STANDARD  VOLUME
+10.616   2.243     0.104      0  middle    1      STANDARD  SD
+16.758   2.275     0.104      0  middle    1      STANDARD  CONTROL
+19.391   2.156     0.104      0  middle    1      STANDARD  Left Stereo Jack
+10.616   2.069     0.104      0  middle    1      STANDARD  DATA
+ 5.936   1.918     0.104      0  middle    1      STANDARD  ATARI
+ 2.426   1.863     0.104      0  middle    1      STANDARD  LAN PORT
+  4.17   1.744     0.104      0  middle    1      STANDARD  8530
+ 5.038   1.747     0.104      0  middle    1      STANDARD  DATA
+ 5.936   1.744     0.104      0  middle    1      STANDARD  DATA
+ 2.133   1.571     0.104      0  middle    1      STANDARD  SERIAL PORT A
+  4.17   1.571     0.104      0  middle    1      STANDARD  SCC
+ 5.936   1.571     0.104      0  middle    1      STANDARD  CONTROL
+ 9.446   1.571     0.104      0  middle    1      STANDARD  SNDSHIFTR
+19.391   1.571     0.104      0  middle    1      STANDARD  Right Stereo Jack
+  4.17   1.398     0.104      0  middle    1      STANDARD  CONT.
+ 5.936   1.398     0.104      0  middle    1      STANDARD  UNIT
+15.706   1.409     0.104      0  middle    1      STANDARD  RIGHT
+ 2.133   1.278     0.104      0  middle    1      STANDARD  SERIAL PORT B
+13.833   1.278     0.104      0  middle    1      STANDARD  LATCH
+14.997   1.278     0.104      0  middle    1      STANDARD  DAC
+ 5.936   1.224     0.104      0  middle    1      STANDARD  (DCU)
+11.201   0.693     0.104      0  middle    1      STANDARD  MICROWIRE INTERFACE
+ 4.756    0.29     0.104      0  middle    1      STANDARD  CONTROL
+ 5.936   0.195     0.104      0  middle    1      STANDARD  ATARI
+ 5.936   0.022     0.104      0  middle    1      STANDARD  DMAC
+12.956  14.733     0.104    270  middle    1      STANDARD  DMA SOUND DATA/16

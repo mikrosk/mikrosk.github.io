@@ -1,0 +1,15 @@
+DynaCADD 2.0 entity file (.DPT)
+Source: DYNACADD/PARTS/F030/F030MEM.DPT (4801 bytes)
+Record stream: 85 records, ends at offset 0x12c1 with FFFF terminator
+Drawing settings from: F030MEM.DWG
+Sheet: width 222.5685, height 183.816, scale 1
+Units: not recorded in a field identified so far; coordinates are listed as stored
+Entities: 85 total (LINE 82, CIRCLE 1, TEXT 1, SOLID 1)
+Extents: x 75.9698 .. 187.8933, y 58.932 .. 120.2149 (size 111.9234 x 61.2829)
+Layers used: 1 "L1" (85)
+Line styles used: 0 "CONTINUOUS" (77), 1 "HIDDEN" (8)
+Colour indices used: 7 (85)
+Groups (unnamed, numbered; 0 = not grouped): 3 (85)
+
+Text strings (1), in file order; x,y = insertion point:
+  x=176.5179   y=113.536    h=3       w=2.34    angle=0      font=LEROY_R  layer=L1       "110  "

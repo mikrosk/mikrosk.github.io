@@ -1,0 +1,142 @@
+[PageStream 2 document ARCDOCS.DOC: 8.50 x 11.00 in, 5 objects]
+
+--- Page 1 ---
+[1 drawing objects, see ARCDOCS.DOC.p001.svg]
+
+Dallas Office Memo
+
+
+To:	Richard Miller
+From:	Marty Pennock
+Subject:	Documents and Specifications in House
+
+Date:	October 21, 1992
+
+cc	Ira Goldstein
+	Tom Ulaszek
+
+
+The following is a list of documents, specs, and drawings  that I have in archives and/or on disk. Drawers A, B, C, and D are located in the black locked file cabinet.
+
+Service Guides
+
+Document		Part Number	Hard Copy	On Disk	Location
+
+STE Service Guide	C302481-001 REV A	Y	Y	A
+MEGA STE Service Guide	C301016-001 REV A	Y	Y	A
+TT030 Service Guide	C302483-001 REV A	Y	Y	A
+SOTEC J1 Notebook	N/A	Y	N	A
+ABC386DX/SX II	N/A	Y	N	A
+SAMSUNG 12" Mono Monitor	N/A	Y	N	A
+Atari SM125 Mono Monitor	C3026408	Y	N	A
+Atari Portfolio Service Guide	C398208-001 REV C	Y	N	A
+TT030 Service Guide Change Pages	N/A	Y	Y	A
+STE+ Service Guide Rough Draft	N/A	Y	Y	A
+Atari MEGA 2/4 Service Guide	C399010-001 REV A	Y	N	A
+Atari XMM801 Service Manual	C070435	Y	N	A
+FALCON030 Service Guide	C303062-001	Y	Y	A
+
+
+User's Guides
+
+Document				Part Number	Hard Copy	On Disk
+
+Atari 7800 User's Guide (Benelux)	?	N	Y
+Atari Lynx User's Guies (Benelux)	?	N	Y
+Atari PC Mouse			C300488-001 REV A	Y	N
+ABC-16 286/60 Owner's Manual	C301514-001 REV D	Y	N
+Atari PTC1426 Owner's Manual (USA)	C301513-001 REV A	Y	N
+Atari PTC1426 Owner's Manual (SWZ)	C301513-006 REV A	Y	N
+Atari PTC1426 Owner's Manual (SPA)	C301513-007 REV A	Y	N
+Atari PTC1426 Owner's Manual (FRA)	C301513-003 REV A	Y	N
+AT Mode Manual (STE+)		N/A	Y	Y
+AT-Speed Read-Me (STE+)		N/A	Y	Y
+
+Specifications
+
+Document				Part Number	Hard Copy	On Disk
+
+TT030 DCU IC			?		Y	Y
+TT030 MCU IC			?		Y	Y
+TT030 MCU REV B IC		?		Y	Y
+TT030 Data Funnel IC		?		Y	Y
+TT030 DMAC IC			?		Y	Y
+TT030 FMCU IC			?		Y	Y
+Falcon DMAC IC			?		Y	Y
+TT030 Glue				?		Y	Y
+TT030 SCU IC			?		Y	Y
+
+--- Page 2 ---
+
+Falcon IO IC				?		Y	Y
+Sparrow DMAC IC			?		Y	Y
+ST Blitter IC				?		Y	N
+Atari ACSI/DMA Intgration		?		Y	N
+STBook Initial Test Procedure	?		Y	N
+STE+ Product Spec			?		Y	Y
+TT030 Product Spec		?		Y	Y
+Falcon Product Spec		?		Y	Y
+Sparrow Product Spec A10		?		Y	Y
+Rascal IC					D-MA-C0034-100	Y	N
+VTG Cookbook A2			?		Y	Y
+AJAX IC					C302096-001 REV A	Y	N
+VIDEL IC REV A5			?		Y	Y
+COMBEL IC A7			?		Y	Y
+Earphone Connector		C101990 REV 1	Y	N
+Game Port Connector		C398064 REV 1	Y	N
+DB9 Serial Port Connector		C300269 REV 1	Y	N
+DB25 Parallel Port Connector		C070133 REV E	Y	N
+DB26 DSP Connector		C302821 REV 1	Y	N
+Mini DIN 5p MIDI Connector	C070033 REV B	Y	N
+Mini DIN 8p LAN Connector		C398087 REV 1	Y	N
+
+Installation Manuals
+
+Document				Part Number	Hard Copy	On Disk
+
+MEGA STE Coprocessor		C301973-001 REV A?	Y	Y
+MEGA STE Hard Disk		C301973-002 REV A	Y	Y
+MEGA STE 2MB Floppy		C302953-001 REV A	Y	Y
+TT030 2MB Floppy		C302563-001 REV A	Y	Y
+TT030 Hard Disk			C301973-001 REV A?	Y	Y
+TT030 ST/TT RAM		?		Y	Y
+
+Schematics and Drawings
+
+Document				Part Number	Hard Copy	On Disk
+
+STE+ Main Assembly Drawing	CA401070 REV 2	Y	N
+STE+ FAB Drawing		C302196 REV B	Y	N
+STE+ Silkscreen Top		?		Y	N
+Schematics and Drawings
+
+Document			Part Number	Hard Copy	On Disk
+
+STE+ Schematic		C302203 REV 2	Y	N
+STE+ Shipping Assembly Drawing	CA401071 REV 1	Y	N
+TT030 4 Meg RAM PCB Schematic	C300725-001 REV 1	Y	N
+TT030 2 Meg RAM PCB Schematic	C300726-001 REV 1	Y	N
+TT030 Schenatic		C301762-001 REV G	Y	N
+MEGA STE Top Silkscreen	?	Y	N
+MEGA STE Schematic	C301565-001 REV B	Y	N
+MEGA STE Main Assembly Drawing	CA400854 REV A	Y	N
+STE Shipping Assembly Drawing	CA400338 REV 19	Y	N
+STE Main Assembly Drawing	CA400339 REV B	Y	N
+STE PCB Assembly Drawing	CA400340 REV 5	Y	N
+STE Schematic		C300780-001 REV C	Y	N
+STE Top Silkscreen		?	Y	N
+STE FAB Drawing		C300779 REV C	Y	N
+Keyboard 95 Key Germany Drawing	C070502 REV B	Y	N
+STE Keyboard Assembly Drawing	CA070057 REV G	Y	N
+STE Test Fixture Drawing	?	Y	N
+TT030 Main Assembly Drawing	CA400416 REV C	Y	N
+4 Meg TT RAM Assembly Drawing	CA400312 	Y	N
+
+--- Page 3 ---
+
+2 Meg TT RAM Assembly Drawing	CA400313 	Y	N
+2/8 Meg TT RAM Assembly Drawing	CA401059 REV C 	Y	N
+2/8 Meg TT RAM Schematic	C302231-001 REV B 	Y	N
+4/16 Meg TT RAM Assembly Drawing	CA401058 REV C 	Y	N
+4/16 Meg TT RAM Schematic	C302230-001 REV B 	Y	N
+TT030 Top Silkscreen Drawing	CA400961 REV F	Y	N

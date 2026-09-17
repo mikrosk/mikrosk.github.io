@@ -1,0 +1,27 @@
+DXF drawing: DYNACADD/PARTS/DXF/SPARROWL.DXF
+Render: SPARROWL.DXF.svg
+
+== Summary ==
+File:        51581 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); DynaCADD export (linetypes described "DynaCADD Style - n"), 51 header variables in alphabetical order starting $ANGBASE, no $ACADVER
+Sections:    HEADER, TABLES, BLOCKS, ENTITIES
+Extents:     header (65.09, 55.25) - (135.07, 451.51)
+             rendered (65.09, 55.25) - (135.07, 451.51), size 69.98 x 396.27
+Limits:      (0, 0) - (781.09, 602.04)
+Units:       not stored in this DXF version; $LUNITS=2 (decimal); limits and extents suggest millimetres
+Header:      51 variables; $LTSCALE=20.00000000, $TEXTSIZE=0.20000000, $FILLMODE=1
+Text styles: STANDARD (font TXT)
+Linetypes:   CONTINUOUS, HIDDEN, BORDER, PHANTOM, DIVIDE
+Layers:      11 in table, 5 used
+  name      color  linetype      state         objects
+  BTM_HSG      15  CONTINUOUS    on            87
+  MS_TOP        5  CONTINUOUS    on            75
+  PCB_MOD       4  CONTINUOUS    on            177
+  NS_PLATE      7  CONTINUOUS    on            3
+  NS_BTM        3  CONTINUOUS    on            78
+  unused: L0, TOP_HSG, POWER, NS_COVER, NP_BTM, INSULATOR
+Entities:    model space: LINE 315, ARC 90, CIRCLE 15
+Blocks:      0 defined
+
+== Text in reading order (0 text items) ==
+(no text in drawing)

@@ -1,0 +1,42 @@
+DXF drawing: DYNACADD/PARTS/DXF/401273D4.DXF
+Render: 401273D4.DXF.svg
+
+== Summary ==
+File:        590174 bytes, CR/LF line ends
+Dialect:     group codes right-aligned in 3 columns; full AutoCAD header with $ACADVER=AC1006 (R10), 112 header variables, tables VPORT/LTYPE/LAYER/STYLE/VIEW/UCS/DWGMGR
+Sections:    HEADER, TABLES, BLOCKS, ENTITIES
+Menu:        $MENU=acad
+Dates:       created 1992-06-18 02:27, last saved 1992-07-09 04:49 ($TDCREATE/$TDUPDATE)
+Extents:     header (133.27, 76.79) - (264.12, 200.534)
+             rendered (133.27, 76.79) - (264.12, 200.534), size 130.851 x 123.744
+Limits:      (0, 0) - (420, 300)
+Units:       not stored in this DXF version; $LUNITS=2 (decimal); limits and extents suggest millimetres
+Header:      112 variables; $LTSCALE=1.0, $TEXTSIZE=0.2, $DIMSCALE=1.0, $FILLMODE=1
+Text styles: STANDARD (font txt), ROMANS (font romans)
+Linetypes:   CONTINUOUS, HIDDEN
+Layers:      2 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            1952
+  unused: 0
+Entities:    model space: LINE 1326, POLYLINE 545 (4346 vertices), ARC 65, TEXT 6, CIRCLE 5, SOLID 5
+Blocks:      0 defined
+
+== Text in reading order (6 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (6 items) --
+  50
+  9PLCS
+  180
+  170
+  160
+  REF
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+      X        Y    HEIGHT    ROT  JUST      LAYER  STYLE   TEXT
+159.727  184.384         3      0  left      1      ROMANS  50
+153.944   178.35         3      0  left      1      ROMANS  9PLCS
+254.277   168.44         3      0  left      1      ROMANS  180
+246.211  156.185         3      0  left      1      ROMANS  170
+224.701   135.56         3      0  left      1      ROMANS  160
+ 222.61   80.262         3      0  left      1      ROMANS  REF

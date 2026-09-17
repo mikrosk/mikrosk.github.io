@@ -1,0 +1,42 @@
+DXF drawing: TEMP/TESTJ/TTESTJ.DXF
+Render: TTESTJ.DXF.svg
+
+== Summary ==
+File:        1361959 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font txt
+Sections:    HEADER, TABLES, BLOCKS, ENTITIES
+Extents:     header (-4.063, -3.587) - (4.064, 3.561)
+             rendered (-4.063, -3.587) - (4.064, 3.561), size 8.127 x 7.148
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: STANDARD (font txt)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 2 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            6
+  10            7  CONTINUOUS    on            958
+  unused: 2, 3, 4, 5, 6, 7, 8, 9
+Entities:    model space: POLYLINE 919 (28686 vertices), TEXT 4, INSERT 2
+             in block definitions: POLYLINE 39 (2117 vertices)
+Blocks:      2 defined
+  TTESTJ-G1: base (0, 0), POLYLINE 29 (2038 vertices); inserted 1 time
+      at (0, 0) scale 1,1 rotation 0 layer 1
+  TTESTJ-G2: base (0, 0), POLYLINE 10 (79 vertices); inserted 1 time
+      at (0, 0) scale 1,1 rotation 0 layer 1
+Notes:
+  - 30803 polyline vertices but only 4 TEXT entities: lettering visible in the SVG is probably drawn as outlines and is not listed here
+
+== Text in reading order (4 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (4 items) --
+  J2  |  J5
+  J303  |  J403
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+      X        Y    HEIGHT    ROT  JUST      LAYER  STYLE     TEXT
+ -0.364  -0.1046      0.06      0  left      1      STANDARD  J2
+ 0.7313  -0.1046      0.06      0  left      1      STANDARD  J5
+-0.2016  -1.4528      0.06      0  left      1      STANDARD  J303
+ 0.4852  -1.4464      0.06      0  left      1      STANDARD  J403

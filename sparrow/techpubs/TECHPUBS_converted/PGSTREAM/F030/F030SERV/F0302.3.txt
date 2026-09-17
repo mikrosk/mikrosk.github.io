@@ -1,0 +1,765 @@
+[PageStream 2 document F0302.3: 8.50 x 11.00 in, 327 objects]
+
+--- Page 22 ---
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+38
+
+DTACK-
+
+I/O
+
+68030 bus data acknowledge. This line is an output during I/O and indicates to the 68030 bus master that the current cycle can be terminated. During DMA this line is input to determine when to terminate a DMA cycle.
+
+39
+
+BERR-
+
+Input
+
+This signal is used to terminate a DMA cycle when the system detects a bus error. It is provided to prevent system lockup when a bus error occurs during DMA.
+
+40
+
+BR-
+
+Output
+
+This output is driven low when the 68030 bus is needed to perform DMA cycles.
+
+41
+
+BGI-
+
+Input
+
+A low on this input indicates that the 68030 bus is granted and that the chip can assume control of the bus at the completion of the current cycle, if one is in progress, or immediately.
+
+43
+
+BGO-
+
+Output
+
+This output is provided to support a daisy chain on the bus grant line to arbitrate multiple bus requests. When the chip is not requesting the bus, this output is driven to match the BGI- input else it is driven high (inactive).
+
+44
+
+BGA-
+
+I/O
+
+This output is driven low when the chip assumes the bus after the request grant handshake. When DMA operations have been completed and the chip releases the bus, this line is driven high then tri-stated.
+
+45
+
+RESET-
+
+Input
+
+A low on this input resets the chip and clears any current operational mode.
+
+76
+
+UWD
+
+Output
+
+This output is the data signal of the three wire MicroWire bus.
+
+75
+
+UWC
+
+Output
+
+This output is the clock signal of the three wire MicroWire bus.
+
+74
+
+UWEN-
+
+Output
+
+This output is the enable signal of the three wire MicroWire bus.
+
+58
+
+SMCLK
+
+Input
+
+This input is the master timing clock for the sound DMA channel.
+
+32
+
+BMODE
+
+Input
+
+This input is driven by the Bus Master. It is low for 68030 Bus Masters and high for 68000 Bus Masters.
+
+70
+
+PLYDATA
+
+Output
+
+Serial sound data to DSP Connector.
+
+71
+
+PLYCLK
+
+Output
+
+Clock signal for PLYDATA. It is controlled by the receive matrix.
+
+69
+
+PLYSYNC
+
+I/O
+
+This signal is an output when in continuous clock mode, and an input when in gated clock mode.
+
+--- Page 23 ---
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+67
+
+RECDATA
+
+Input
+
+This is the sound data supplied by an external device connected to the DSP. This signal can be fed to one of four devices. DMA In, DSP RX, Conn RX, or Internal DAC.
+
+68
+
+RECCLK
+
+Output
+
+This is the clock signal for RECDATA.
+
+65
+
+RECSYNC
+
+I/O
+
+This signal is an output when in continuous clock mode, and an input when in gated clock mode.
+
+59
+
+SCLOCK
+
+Output
+
+This is the master clock signal for the CODEC. It has two sources. The internal 25.175MHz for 50kHz samples, and the EXT_CLOCK supplied on the DSP connector.
+
+62
+
+ASCLK
+
+Output
+
+This is the serial clock for ASDIN and ASDOUT.
+
+61
+
+ASSYNC
+
+Output
+
+This is the bit and frame sync information for the CODEC. Its format is a two-bit wide pulse every 32-bits. The two-bit wide pulse occurs every 256 ASCLKs.
+
+63
+
+PSGN
+
+Input
+
+This is the serial data from the CODEC. It is sampled on the falling edge of ASCLK.
+
+64
+
+ASDOUT
+
+Output
+
+This is the serial data for the DAC. ASDOUT changes on the falling edge of ASCLK.
+
+2
+
+SINT
+
+Output
+
+This output is low when sound DMA is active and high otherwise. It will make a high to low
+transition at the beginning of a frame of sound data and a low to high transition at the end of the frame. This signal can be programmed to come from either the record or play channels.
+
+142
+
+SCNT
+
+Output
+
+This output is similar to SINT but is wider.
+
+72
+
+TEST
+
+Input
+
+When this input is high, the ACSI sector count can be read in the high byte of the ACSI status register. Also a low to high transition on this signal increments the sound DMA address counters and the ACSI sector prescale and count. This pin should be tied low for normal system operation.
+
+141
+
+DSKIRQ-
+
+Output
+
+FDINT high or HDINT- low make this output low.
+
+77
+
+FDINT
+
+Input
+
+This input affects DSKIRQ- only.
+
+78
+
+HDINT-
+
+Input
+
+This input affects DSKIRQ- only.
+
+79
+
+FRQ
+
+Input
+
+Active high DMA request from the FDC.
+
+80
+
+FCS-
+
+Output
+
+Active low chip select to the FDC.
+
+83
+
+HRQ
+
+Input
+
+Active high DMA request from the SCSI controller.
+
+84
+
+HCS-
+
+Output
+
+Active low chip select to the SCSI controller.
+
+--- Page 24 ---
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+84
+
+HCS-
+
+Output
+
+Active low chip select to the SCSI controller.
+
+82
+
+ACK-
+
+Output
+
+Active low DMA acknowledge to the SCSI controller.
+
+86,87,88, 89,91,92, 93,94
+
+CD0-CD7
+
+I/O
+
+Data bus for the FDC and SCSI controller.
+
+98,97,96
+
+CA0-CA2
+
+Output
+
+Register address to the and SCSI controller. Used to select FDC or SCSI controller registers during I/O.
+
+100
+
+CRW
+
+Output
+
+A high means transfer from the FDC or SCSI controller. A low means transfer to the FDC or SCSI controller.
+
+99
+
+CRW-
+
+Output
+
+The inverse of CRW.
+
+101
+
+DISKCHNG
+
+Input
+
+Status input for the floppy density select register.
+
+102,103
+
+MODE1
+MODE2
+
+Output
+
+Status outputs for the floppy density select register.
+
+114,115
+
+MDET1
+MDET2
+
+Input
+
+Status inputs for the floppy density select register.
+
+104
+
+CLK32I
+
+Input
+
+Feedback for the 32 Mhz oscillator.
+
+105
+
+CLK32O
+
+Output
+
+32 Mhz oscillator output.
+
+106
+
+CLK8
+
+Output
+
+Free running 32 Mhz clock divided by four.
+
+113
+
+CLK2
+
+Output
+
+Free running 32 Mhz clock divided by 16.
+
+112
+
+FCCLK
+
+Output
+
+32 Mhz clock divided by 1, 2, or 4 as selected by the floppy density select register.
+
+2.1.7 Real-Time Clock
+
+The FALCON030 system includes a Real-time Clock chip. When the system is powered on the real-time clock is powered by the main PCB power supply. In the event of a power failure, or when the system is powered off, the real-time clock is powered by a 3.6v lithium battery.
+
+This allows the date, time, and configuration data to be maintained even when there is no power to the unit. 50 bytes of battery backed-up RAM is also provided for storing diagnostic and configuration data.
+
+The real-time clock provides time of day (down to one second resolution) and date. The RTC contains an integrated battery and crystal. The chip is accessed through two consecutive word ports. The first word is a write-only port used to set the real-time clock chip address desired. The second word is the read-write data port.
+
+When doing a write to a clock chip register, a double word write can be performed. The first word would set the address, and the second word would load the data.
+
+--- Page 25 ---
+
+2.1.7.1 Real-Time Clock Pin and Signal List
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+1
+
+MOT
+
+Input
+
+This signal is tied high to select Motorola bus timing.
+
+4-11
+
+AD0-7
+
+I/O
+
+These are the multiplexed address data pins for the Real-Time Clock.
+
+13
+
+CS-
+
+Input
+
+This signal is used to select the Real-Time Clock.
+
+14
+
+AS
+
+Input
+
+This signal is used to latch addresses into the Real-Time Clock.
+
+15
+
+R/(W)-
+
+Input
+
+This signal is used to select data flow direction to the static RAM. A high selects a read operation. A low selects a write operation.
+
+17
+
+DS-
+
+Input
+
+This signal is used to latch data to or from the static RAM.
+
+18
+
+RESET-
+
+Input
+
+This signal is used to reset the RTC.
+
+19
+
+IRQ-
+
+Output
+
+This signal is used to send an interrupt to the system.
+
+23
+
+SQW
+
+Output
+
+This pin is not connected in the FALCON030 system.
+
+24
+
+Vcc
+
+Input
+
++5V Power to RTC.
+
+12
+
+GND
+
+Input
+
+Ground for RTC.
+
+16,20,21, 22,23
+
+N/C
+
+--------
+
+No Connect.
+
+2.1.8 System Timing and Bus Control
+
+There are six system resources that use the system memory separate from the microprocessor. In order of highest to lowest priority these are:
+
+• Expansion Bus (optional using CPU/BGO)
+• Video
+• DMA
+• Refresh
+• Blitter (Graphics coprocessor inside COMBO IC)
+• Expansion Bus (using daisy-chained BG)
+
+Only two of these arbitrate for the system bus in a normal manner. These are the DMA and Blitter. The DMA chip which resides in the FALCON030 system contains the bus arbitration logic which arbitrates for either DMA disk transfers or DMA sound accesses. DMA arbitration has a higher priority than does the Blitter.
+
+--- Page 26 ---
+
+Video accesses in the system are done in Page Mode. Any video request for memory access will interrupt other DRAM access cycles, whether they are microprocessor, DMA, or Blitter, by inserting wait states into the current bus cycle. This is accomplished by holding off the DTACK signal. While the current cycle is in wait states, the memory bus is used for the video
+access. When the video cycle terminates, the DTACK signal is asserted and the current cycle is allowed to complete. Refresh cycles operate in the same manner.
+
+
+2.1.8.1 68000 Bus Decode PAL U68
+
+PAL U68 is used to generate Bus Grant for 68000 type devices. It also generates the BMODE signal used to inform the SDMA and COMBO IC that a 68000 type device is accessing the bus. 68000 type devices typically require an extra clock cycle, as opposed to 68030 devices, to complete strobe and handshaking signals. The DSP data strobe signal is also generated by this PAL.
+
+
+2.1.8.2 68000 Bus Decode PAL U63
+
+PAL U63 is used to generate the Expansion Data, Bus Error, and Data Transfer Acknowledge signals to the system. It also generates the Data Transfer Size and Acknowledge 1 signal.
+
+
+2.1.8.3 68000 Bus Decode PAL U62
+
+PAL U62 is used to generate 68000 compatible Upper and Lower Data Strobes (UDS, LDS), Valid Memory Address (VMA), Read/Write (RW), and Size 1 (SIZ1) bit.
+
+
+2.1.8.4 68000 Bus Decode PAL U67
+
+PAL U67 decodes the address for the DSP (56001) and genrates a partial DSP decode.
+
+
+2.1.8.5. 68000 Bus Decode GAL U44
+
+GAL U44 generates DSP Chip Select, Hardware Acknowledge, Mfp Interrupt Enable Out, Interrupt Acknowledge, Mfp Interrupt, and Data Size And Transfer Acknowledge 0.
+
+--- Page 27 ---
+
+2.1.9 Configuration Switch
+
+Two configuration switches are provided for the enabling or disabling of hardware options on the main logic board. The switches are 8-bit DIP type and are located at U56 and U57.
+
+NOTE: It is recommended that these switches not be changed as problems could result from their improper setting.
+
+The values of these switches is as follows:
+
+U56
+
+Segment
+
+Function
+
+On = 1 Wait State DRAMs
+OFF = 0 Wait State DRAMs
+
+1
+
+On = 32-bit Video Bus
+Off = 16-bit Video Bus
+
+2
+
+Off Off = 0 Wait State ROMs
+Off On = 1 Wait State ROMs
+On Off = 2 Wait State ROMs
+On On = Reserved
+
+3-4
+
+Not Used
+
+5-6
+
+Not Used
+
+7-8
+
+U57
+
+Function
+
+Segment
+
+Not Used
+
+1-4
+
+Off = Quad Density Floppy
+On = Don't Care
+
+5
+
+Off = AJAX Installed (1.44MB)
+On = 1772 Installed (720K)
+
+6
+
+Off = No DMA Sound Hardware
+On = DMA Sound Hardware Installed
+
+7
+
+--- Page 28 ---
+
+2.2 AUDIO/VIDEO SUBSYSTEM
+
+
+2.2.1 Video System Overview
+
+The video subsystem in FALCON030 is composed of five major components. These are as follows:
+
+• Video RAM (Dual-purpose System and Video)
+• Interrupt and Data Load Control (COMBO)
+• Video Shifter (VIDEL)
+• Digital to Analog Converter ( DAC)
+• NTSC/PAL Encoder (1377)
+
+The FALCON030 Video Subsystem extends the existing STE video modes. Video can be generated in ST compatible modes as well as VGA, True Color, and Programmable modes. Functionality has been enhanced by the ability of the subsystem to access video memory on any even word boundary. There is an RF modulator on-board to facilitate the direct connection to TV. Video also has the capability of being GENLOCKed for sync to external video timing sources. The monitor connector supplied with the system allows for the connection of ST color and ST monochrome monitors in addition to VGA type monitors.
+
+The video modes supported by the system are as follows:
+
+ST Modes
+
+Resolution
+
+Bit Planes
+
+Colors
+
+Palette Colors
+
+320 X 200
+640 X 200
+640 X 400
+
+4
+2
+1
+
+16
+8
+2
+
+4096/262,144
+4096/262,144
+4096/262,144
+
+VGA Mode
+
+Resolution
+
+Bit Planes
+
+Colors
+
+Palette Colors
+
+640 X 480
+
+8
+
+256
+
+262,144
+
+True Color
+
+Resolution
+
+Bit Planes
+
+Colors
+
+Palette Colors
+
+320 X 200
+320 X 200
+
+15
+16
+
+32,768
+65,536
+
+1 Bit GENLOCK
+No GENLOCK
+
+Programmable
+
+Resolution
+
+Bit Planes
+
+Colors
+
+Palette Colors
+
+X x Y
+
+1,2,4,8
+
+2,4,16,256
+
+262,144
+
+--- Page 29 ---
+
+2.2.1.1 Video RAM
+
+Video RAM is shared as dual-purpose memory with the rest of the FALCON030 system. The physical screen origin located at the top left corner of the screen is the start of mapped display memory.
+
+Display memory is configured as 1, 2, 4, or 8 logical planes that are interwoven as 16-bit words into contiguous memory to form one physical plane starting at any even-word boundary.The size of this plane will depend on the video resolution and the number of colors selected. For example, 320 X 200 4 color mode would require a 32,000 byte plane.
+
+
+2.2.1.2 Interrupt and Data Load Control (COMBO)
+
+The COMBO IC is responsible for handling the interrupts generated by the VIDEL IC, and the loading of DRAM data into the video chip's input buffer. COMBO receives the interrupt signals VINT for VSYNC and HINT for HSYNC. A request for video data to be loaded into the video RAM buffer within the VIDEL IC is generated to the COMBO IC by the VREQ signal, and DRAM data is loaded into the video chip's input buffer via the VLD signal from the COMBO IC.
+
+The starting address of display memory is placed in the COMBO IC's Video Base High, Video Base Mid, or Video Base Low Address registers by the Operating System or application. This register is loaded into the Video Address Counter (High/Mid/Low) in the COMBO IC at the beginning of each frame. The Address Counter is incremented as the Bitmap planes are read. COMBO then loads the VIDEL IC with Bitmap info 32-bits at a time.
+
+
+2.2.1.3 Video Shifter (VIDEL)
+
+The COMBO IC will load Bitmap planes into the VIDEL IC video buffer 32-bits at a time, except in XGA mode. The video shifter then loads the video shift register where one bit from each plane is shifted out and collectively used as the index to a specific STE or SP (FALCON030) palette register There are 16 word-wide color registers which comprise the STE palette and 256 double word-wide registers in the SP palette.
+
+Each palette is programmed for 12 bits of color in STE mode, four for each red, green, and blue, or 18 bits of color in SP mode, 6 for each red, green, and blue. Therefore there are 16 x
+16 x 16 or 4096 colors possible in STE mode, and 64 x 64 x 64 or 262,144 colors possible in SP mode. In monochrome mode, the color palettes are bypassed and instead provided with an inverter for inverse video controlled by bit 0 of palette register 0.
+
+The VIDEL IC also has the ability to accept vertical sync and video clock. To inject a system clock ground pin 16 (EXT) on the monitor connector and then inject the clock into pin 15 (GENLOCK INPUT).

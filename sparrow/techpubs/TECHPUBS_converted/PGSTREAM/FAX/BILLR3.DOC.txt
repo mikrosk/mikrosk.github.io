@@ -1,0 +1,21 @@
+[PageStream 2 document BILLR3.DOC: 8.50 x 11.00 in, 3 objects]
+
+--- Page 1 ---
+[1 drawing objects, see BILLR3.DOC.p001.svg]
+
+Dallas Office Memo
+
+
+To:		Bill Rehbock
+From:	Marty Pennock
+Subject:	PageStream 2.2 Beta Release
+
+Date:	June 8, 1992
+
+
+I have started using PageStream 2.2 Beta Release 5. All previous problems that I was having with PageStream and GEM format files has been fixed. It is a very good package for Desk Top Publishing. I have also used Ventura 4.0 for Windows while PageStream was being fixed. I can truthfully say that PageStream is easier and quicker to use than Ventura. I enjoy using my TT030 very much. I took one home and have started using it there along with many of the other new releases like FSMGDOS and HDX 5.0. In fact, my IBM sits quite a bit of the time. I just thought you would like to hear that my problems have been resolved. I have also enclosed a couple of example pages for your viewing pleasure. I eagerly await the retail release of version 2.2.
+
+Sincerely
+
+
+Marty Pennock

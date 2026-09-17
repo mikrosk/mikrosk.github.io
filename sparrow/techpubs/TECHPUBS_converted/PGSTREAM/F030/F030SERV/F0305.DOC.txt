@@ -1,0 +1,144 @@
+[PageStream 2 document F0305.DOC: 8.50 x 11.00 in, 30 objects]
+
+--- Page 103 ---
+
+SECTION FIVE:
+SYMPTOM CHECKLIST
+
+
+This section gives a brief summary of common problems and their most probable causes. For more detail, refer to the section of troubleshooting in this document, or the Diagnostic Cartridge Troubleshooting Guide.
+
+
+5.1   DISPLAY PROBLEMS
+
+Probable Cause
+
+No power (check LED), bad COMBO IC, bad VIDEL IC. See Section 3.3: Troubleshooting a Dead Unit.
+
+VIDEL IC, COMBO IC, SDMA IC, MC68030. Use diagnostic cartridge with terminal connected via RS232 port.
+
+Bad SIMM modile, COMBO IC, VIDEL IC. Use the diagnostic cartridge.
+
+Video cable or connector. SGC DAC, VIDEL IC. Check signals with oscilloscope.
+
+Verify that the monochrome monitor detect bit is being 	grounded when monochrome monitor is plugged in. 	Check MFP GPIP bit 7; replace MFP.
+
+
+COMBO IC. Use diagnostic cartridge.
+
+Modulator, phase locked loop. Trace signal with oscilloscope.
+
+Symptom
+
+Black Screen
+
+
+White Screen
+
+
+Dots/Bars on Screen
+
+
+One Color Missing
+
+
+Monochrome Monitor Fails to Sync but Color Monitor Okay
+
+Scrambled Screen
+
+TV Output Bad
+
+--- Page 104 ---
+
+5.2   DISK DRIVE PROBLEMS
+
+
+5.3   KEYBOARD PROBLEMS
+
+
+5.4   MIDI PROBLEMS
+
+
+5.5   RS232 PROBLEMS
+
+Probable Cause
+
+Power supply, AJAX IC, SDMA, PSG chip, IRQ lines shorted to ground. See if Select light goes on, if not, check PSG outputs. Listen for motor spinning. If not, check power supply. Swap disk drive or try external drive. If not working, check SDMA Controller and AJAX IC with diagnostic chart.
+
+AJAX IC, SDMA Controller, disk drive.
+
+Data on diskette, disk drive, AJAX IC, SDMA, or COMBO IC. Swap diskette, retry. Use diagnostic cartridge to check AJAX IC, SDMA Controller, COMBO IC; replace disk drive.
+
+Symptom
+
+Disk Won't Boot
+
+
+Disk Won't Format
+
+System Crash after Loading Files
+
+Probable Cause
+
+Bad keyboard, 6850, MFP.
+
+Symptom
+
+Red Screen:
+Keyboard not responding
+
+Probable Cause
+
+Bad opto-isolator chip, 6850, inverter (74LS06).
+
+Symptom
+
+Red Screen: MIDI Errors
+
+Probable Cause
+
+Bad SCC, 1489 receiver, 1488 driver, or PSG chips,
+±12 VDC:DC inverting power supply.  See Section 3.12.1.
+
+Symptom
+
+Red Screen: SCC Error
+
+--- Page 105 ---
+
+5.6   PRINTER PORT PROBLEMS
+
+
+5.7   HARD DISK PORT PROBLEMS
+
+
+5.8   DMA SOUND
+
+Probable Cause
+
+ Bad PSG, MFP chips.  See Section 3.17.1
+
+
+Bad ASCI port cables, terminator resistors, bad LS244, LS245 drivers.
+
+Symptom
+
+Red Screen: Printer Error
+
+Shadow Printing
+
+Probable Cause
+
+Bad SDMA Controller, COMBO IC, AJAX IC (loading the bus), 5380SCSI Controller. See Section 3.15.1
+
+Symptom
+
+Red Screen: DMA Error
+
+Probable Cause
+
++8V regulator, ±supplies, DSP IC, CODEC IC, SDMA IC.
+
+Symptom
+
+No Sound

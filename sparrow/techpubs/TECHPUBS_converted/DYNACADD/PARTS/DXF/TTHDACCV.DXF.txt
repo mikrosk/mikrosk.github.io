@@ -1,0 +1,32 @@
+DXF drawing: DYNACADD/PARTS/DXF/TTHDACCV.DXF
+Render: TTHDACCV.DXF.svg
+
+== Summary ==
+File:        16065 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font txt
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (0.1403, 0.7096) - (5.7598, 2.2958)
+             rendered (0.1403, 0.7096) - (5.7598, 2.2958), size 5.6196 x 1.5862
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: STANDARD (font txt)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            167
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: LINE 121, ARC 43, TEXT 2, SOLID 1
+Blocks:      0 defined
+
+== Text in reading order (2 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (2 items) --
+  ACCESSORY
+  COVER
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE     TEXT
+4.6741  2.2458       0.1      0  middle    1      STANDARD  ACCESSORY
+4.6741  2.0791       0.1      0  middle    1      STANDARD  COVER

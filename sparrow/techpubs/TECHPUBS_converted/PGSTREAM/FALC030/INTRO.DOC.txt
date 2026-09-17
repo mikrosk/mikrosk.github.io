@@ -1,0 +1,302 @@
+[PageStream 2 document INTRO.DOC: 11.00 x 8.50 in, 163 objects, booklet layout: two page halves per sheet, halves listed in text flow order]
+
+--- Page 1, right half ---
+[1 drawing objects, see INTRO.DOC.p001.svg]
+
+Introduction
+Welcome
+
+
+Welcome to the first developer support package for Sparrow.	 This kit contains a machine with 16 Megabytes of RAM, a 40 Megabyte harddisk, software on the harddisk and on floppies, and the documentation package that you are reading.
+
+The machine requires that the boot disk be in the drive to boot the  harddisk (this will be changed in the next set of ROMs).  After the machine boots you will be at the prompt of a command shell.  To just run the machine type "exit".  The reason for the shell is to allow you to choose to run in STE video modes or two of the many new Sparrow modes.	  To run in Sparrow modes type "cd c:\screens" followed by either "s320x200" to get into 320x200 true color mode or "p320x200" to get into 320x200 256 color mode.
+
+Note:  For the time being do not use the BLiTTER in 320x200 true color mode.
+
+After choosing the video mode of your choice type "newdesk".
+
+Please note that the video timings for these modes are a bit rough.  The default STE modes use PAL timings.  This is not a problem with most NTSC SC1224 monitors.  The softloaded drivers use NTSC timing.  This should not be a problem with most PAL SC1224 monitors.  The horizontal positioning of these modes is also a bit off.
+
+The software on the harddisk is organized into four folders.  The DSP folder contains the files ASM56000.TTP, DSPLNK.TTP, CLDLOD.TTP, README and DSPBIND.H which is the binding needed to use the DSP Support Routines that are automatically loaded at boot  time.	  The UTILS folder contain some simple programs to allow you to turn  the blitter on and off, and to switch the system between 8 or 16 MHz.  The SCREENS folder has been described above.  The
+
+© 1992, Atari Corporation
+
+Intro .1
+
+--- Page 2, left half ---
+[2 drawing objects, see INTRO.DOC.p002.svg]
+
+Introduction
+
+4/23/92
+
+XCONTROL folder has a copy of XCONTROL as a program and a new CPX that uses only VDI calls.  This is for use in the softloaded video modes.
+
+Intro .2
+
+© 1992, Atari Corporation
+
+--- Page 2, right half ---
+[2 drawing objects, see INTRO.DOC.p002.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .3
+
+--- Page 1, left half ---
+[2 drawing objects, see INTRO.DOC.p001.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .4
+
+© 1992, Atari Corporation
+
+--- Page 3, right half ---
+[1 drawing objects, see INTRO.DOC.p003.svg]
+
+Overview
+
+
+From the point of view of an application writer, the most important thing to realize about the new Sparrow is that it is an ST compatible TOS machine.  This means that software written to take advantage of the operating system features via operating system calls of the previous machines will work without modification.  In fact a great deal of effort was expended to insure that a large percentage of software that runs on previous machines will continue to operate.
+
+The changes that the user will see between Sparrow and previous TOS machines involve improved video and sound abilities.
+
+The video system has the following characteristics:
+
+   1)  The system supports both VGA and broadcast system monitor types.  For this document, "broadcast type monitor" means a TV as well as an	 analog RGB monitor such as the SC1224.
+   2)  The number of vertical lines can be either 200 or  400 (approximately).  This is done by using interlace on broadcast monitors to get	 400 lines and doubling each line on VGA monitors to get about 200.
+   3)  The number of horizontal pixels can be approximately either 640 or 320.
+   4)  The number of bit planes can be either one, two, four or eight.
+   5)  Characteristics numbered 1-4 can be mixed in any combination.
+   6)  The color palette is 262144 in 1, 4 or 8 bit per pixel mode and 4096 in 2 bit per pixel mode.
+   7)  Overscan is available in all broadcast video modes.
+   8)  A 16 bit per pixel, true color mode exists that will operate in all modes except 640 pixel wide VGA mode.  All of these modes can be accessed via the GEM VDI.  In the case of the true color mode there is no color palette to allow for changing the color of pixels that have all ready been drawn.  The GEM VDI provides 256 virtual
+
+© 1992, Atari Corporation
+
+Intro .3
+
+--- Page 4, left half ---
+[2 drawing objects, see INTRO.DOC.p004.svg]
+
+Introduction
+
+4/23/92
+
+pens to use for drawing.  These pens act just like the physical pens in the other modes except that once a pixel is drawn, it cannot be changed using vs_color().
+
+The sound system is allows contains has the following components:
+
+   1)  56001 Digital Signal Processor
+   2)  DMA sound engine that can playback or record one, two, three or four 16 bit stereo channels at 12.5,25 or 50 kHz.
+   3)  16 bit stereo codec allowing both input and output of sound via	built-in headphone and microphone jacks.
+   4)  An external port ( DSP) that allows external I/O for a wide	 variety of purposes.  The details of how these various components can be used and in what combinations will be given in future documents.
+
+Intro .4
+
+© 1992, Atari Corporation
+
+--- Page 4, right half ---
+[2 drawing objects, see INTRO.DOC.p004.svg]
+
+4/20/92
+
+DSP Library Functions - Data Transfer Routines
+
+© 1992, Atari Corporation
+
+DSP .7
+
+--- Page 3, left half ---
+[2 drawing objects, see INTRO.DOC.p003.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .8
+
+© 1992, Atari Corporation
+
+--- Page 5, right half ---
+[2 drawing objects, see INTRO.DOC.p005.svg]
+
+4/20/92
+
+DSP Library Functions - Data Transfer Routines
+
+© 1992, Atari Corporation
+
+DSP .9
+
+--- Page 6, left half ---
+[2 drawing objects, see INTRO.DOC.p006.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .10
+
+© 1992, Atari Corporation
+
+--- Page 6, right half ---
+[2 drawing objects, see INTRO.DOC.p006.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+© 1992, Atari Corporation
+
+DSP .11
+
+--- Page 5, left half ---
+[2 drawing objects, see INTRO.DOC.p005.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .12
+
+© 1992, Atari Corporation
+
+--- Page 7, right half ---
+[2 drawing objects, see INTRO.DOC.p007.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+© 1992, Atari Corporation
+
+DSP .13
+
+--- Page 8, left half ---
+[2 drawing objects, see INTRO.DOC.p008.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .14
+
+© 1992, Atari Corporation
+
+--- Page 8, right half ---
+[2 drawing objects, see INTRO.DOC.p008.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+© 1992, Atari Corporation
+
+DSP .15
+
+--- Page 7, left half ---
+[2 drawing objects, see INTRO.DOC.p007.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .16
+
+© 1992, Atari Corporation
+
+--- Page 9, left half ---
+[2 drawing objects, see INTRO.DOC.p009.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .20
+
+© 1992, Atari Corporation
+
+--- Page 9, right half ---
+[2 drawing objects, see INTRO.DOC.p009.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .17
+
+--- Page 10, left half ---
+[2 drawing objects, see INTRO.DOC.p010.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .18
+
+© 1992, Atari Corporation
+
+--- Page 10, right half ---
+[2 drawing objects, see INTRO.DOC.p010.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .19
+
+--- Page 11, left half ---
+[2 drawing objects, see INTRO.DOC.p011.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .2
+
+© 1992, Atari Corporation
+
+--- Page 11, right half ---
+[2 drawing objects, see INTRO.DOC.p011.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .3
+
+--- Page 12, left half ---
+[2 drawing objects, see INTRO.DOC.p012.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .2
+
+© 1992, Atari Corporation
+
+--- Page 12, right half ---
+[2 drawing objects, see INTRO.DOC.p012.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .3

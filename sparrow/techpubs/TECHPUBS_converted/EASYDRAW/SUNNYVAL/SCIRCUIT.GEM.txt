@@ -1,0 +1,78 @@
+File: EASYDRAW/SUNNYVAL/SCIRCUIT.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-4410,-3054)-(4450,3130)
+Page size: 254.0 x 203.2 mm
+Coordinate window: lower-left (-4550,3640), upper-right (4550,-3640); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-3628,-3054)-(3648,2373)
+Items: 291 (2452 words)
+Objects: polyline 28, fill area 8, bar 4, ellipse 2, elliptical arc 2, justified text 51
+Other records (escapes, application data): write_meta 10 x3, write_meta 150 x1, write_meta 151 x3, write_meta 152 x9, write_meta 153 x9, write_meta 154 x46, write_meta 155 x10, write_meta 157 x2, write_meta 158 x1, write_meta 160 x1, write_meta 80 x30, write_meta 81 x30
+Warning: premature end marker at word 2136 with 315 words following
+Warning: no end marker (file truncated or damaged)
+Warning: damaged file; data blocks belonging to other drawings may appear in the text list and the render
+Warning: damaged data skipped, words 1539-1541
+Warning: damaged data skipped, words 2136-2138
+Warning: damaged data skipped, words 2444-2452
+Text strings: 51
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+    770    -560  [font 5 12pt]  Programmable
+    770    -400  [font 5 12pt]  Sound Generator
+
+  -1860   -1360  [font 5 12pt]  Channel
+  -1860   -1200  [font 5 12pt]  Selector
+
+   -580    -500  [font 5 12pt]  MUX
+
+   1620     300  [font 5 12pt]  ADC
+
+   1580   -1310  [font 5 12pt]  DAC
+
+    150   -1350  [font 5 12pt]  Tone, Scale,
+    150   -1190  [font 5 12pt]  Volume, DSP
+
+   2250   -2070  [font 5 12pt]  �⇩c
+  -2460    -260  [font 5 12pt]  Green Return
+  -2460    -100  [font 5 12pt]  Blue Return
+  -2460      60  [font 5 12pt]  Audio
+  -2460     220  [font 5 12pt]  Ground
+
+     70   -1700  [font 5 12pt]  Pin
+     70   -1220  [font 5 12pt]  11
+     70   -1060  [font 5 12pt]  12 
+     70    -900  [font 5 12pt]  13
+     70    -740  [font 5 12pt]  14
+     70    -580  [font 5 12pt]  15
+     70    -420  [font 5 12pt]  16
+     70    -260  [font 5 12pt]  17
+     70    -100  [font 5 12pt]  18
+     70      60  [font 5 12pt]  19
+
+    760   -1710  [font 5 12pt]  Signal
+    760   -1230  [font 5 12pt]  Ground
+    760   -1070  [font 5 12pt]  Composite Sync
+    760    -910  [font 5 12pt]  Horizontal Sync
+    760    -750  [font 5 12pt]  Vertical Sync
+    760    -590  [font 5 12pt]  External Clock
+    760    -430  [font 5 12pt]  External Genlock
+    760    -270  [font 5 12pt]  + 12V
+    760    -110  [font 5 12pt]  V1
+    760      50  [font 5 12pt]  V0
+
+  -3180    -760  [font 5 12pt]  13
+  -3180    -600  [font 5 12pt]  15
+  -3180    -440  [font 5 12pt]  17
+  -3180    -280  [font 5 12pt]  19
+  -3180    -120  [font 5 12pt]  21
+  -3180      40  [font 5 12pt]  23
+  -3180     200  [font 5 12pt]  25
+  -3180     360  [font 5 12pt]  27
+  -3180     520  [font 5 12pt]  29
+  -3180     680  [font 5 12pt]  31
+  -3180     840  [font 5 12pt]  33
+  -3180    1000  [font 5 12pt]  35
+  -3180    1160  [font 5 12pt]  37
+  -3180    1320  [font 5 12pt]  39
+  -3180    1480  [font 5 12pt]  41
+  -3180    1640  [font 5 12pt]  43
+  -3180    1800  [font 5 12pt]  45

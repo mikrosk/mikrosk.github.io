@@ -1,0 +1,170 @@
+MICROBOX BOM, dated 02-05-1993
+Transcribed from MBOXBOM.txt. Item numbers and multi-digit quantities in the original file are corrupted;
+quantities below are counted from the reference designators and match the surviving first digit.
+
+Item  Atari P/N     Description                            NTSC PALB PALI  Reference designator
+-----------------------------------------------------------------------------------------------
+   1  C302996-001   IC CUSTOM SDMA 144P QFP REV C             1    1    1  U1
+   2                IC CUSTOM VIDEL 120P QFP REV. B           1    1    1  U29
+   3  500001        IC CUSTOM COMBEL 208P QFP REV. C          1    1    1  U28
+   4  C302096-001   IC AJAX FDD CNTRL 28P DIP                 1    1    1  U4
+   5  C303217-001   IC ROM TMS27PC240-150, TOS 4.02           1    1    1  U46
+   6  C303001-001   IC PROC SC414230FE16 (16MHZ)              1    1    1  U19
+   7  C398784-001   IC 68B50 ACIA DIP                         2    2    2  U35,36
+   8  C398106-001   IC 68901 PLCC MFP 52P                     1    1    1  U34
+   9  C303002-001   IC DSP SSP4240220FJ                       1    1    1  U11
+  10  C303170-001   IC CODEC 44 PLCC                          1    1    1  U5
+  11  C303004-001   IC SRAM CMOS 32KX8 25NS (SOJ)             3    3    3  U12-14
+  12  C398170-001   IC DS1287 RTC DIP 600MIL                  1    1    1  U39
+  13  C302824-001   IC TRIPLE DAC8 STV8438                    1    1    1  U3, SEE DETAILS A
+  14  C302799-001   IC YM3439-F CMOS SND QFP                  1    1    1  U32
+  15  C100117       IC MC1377 PAL/NTSC ENCODER                1    1    1  U17
+  16  C303030-001   IC LF347                                  1    1    1  U6
+  17  C103803-001   IC LM386 AUDIO AMP (DIP8)                 2    2    2  U8,10
+  18  C302900-001   IC LM387 (DIP8)                           1    1    1  U9
+  19  C104522-001   IC LM555                                  1    1    1  U22
+  20  C302998-001   IC LM556 TIMER                            2    2    2  U40,41
+  21  C398173-157   IC 74ACT157 (SOIC)                        1    1    1  U16
+  22  C302624-244   IC 74HC244 SOIC                           3    3    3  U42,43,45
+  23  C398173-074   IC 74ACT74 (SOIC)                         1    1    1  U15
+  24  C302892-004   IC 74HCT04 SOIC                           1    1    1  U31
+  25  500100        IC 74AC04 SOIC                            1    1    1  U27
+  26  C302889-373   IC 74LS373 SOIC                           1    1    1  U44
+  27  C302889-245   IC 74LS245 SOIC                           4    4    4  U23-26
+  28  C302893-006   IC 7406 SOIC                              2    2    2  U2,21,33  (original quantity 2, 3 designators listed)
+  29  C302893-007   IC 7407 SOIC                              1    1    1  U38
+  30  C025988       IC PC900 OPTO-ISO DIP8                    1    1    1  U37
+  31  C070734-003   IC LM7809ACZ TO-92 3P 9V                  1    1    1  U7
+  32  500082        TRANSISTOR PNP MMBT3906 (SOT23)           1    1    1  Q3
+  33  500083        TRANSISTOR NPN MMBT3904 (SOT23)           4    4    4  Q1,2,5,6
+  34  C398085-002   SOCKET 44PLCC (ROM)                       1    1    1  U46
+  35  500077        SOCKET 68PLCC (FPU)                       1    1    1  U20
+  36  C070033       CONN DIN 5                                2    2    2  P8,9
+  37  500081        CONN DIN 6PIN TCS4560                     1    1    1  P5
+  38  C070133-002   CONN DB25S                                1    1    1  P7
+  39  C101990-001   CONN MINI. STEREO JACK                    2    2    2  J1,2
+  40  C302387-044   CONN HDR 44PIN (0.07")                    1    1    1  P11
+  41  C302823-001   CONN DB19P                                1    1    1  P6
+  42  C398064-002   CONN DB15S                                2    2    2  JOYRT,JOYLT
+  43  C302821-001   CONN 26PIN H-DENSITY                      1    1    1  P4
+  44  C301149-001   CONN RJ12                                 1    1    1  P10
+  45  500075        CONN SIMM 72 PIN                          1    1    1  M1
+  46  C070737-005   CONN SKT SHUNT 3P                         1    1    1  JMP1
+  47  500078        CONN HD CARD EDGE 182 PIN                 1    1    1  P12
+  48  CA07023-009   FDDPWR                                    1    1    1  P1
+  49  C101901-010   CONN HDR 6P (0.1")                        1    1    1  P3
+  50  CA07024       FLOPPY CABLE CONNECTOR                    1    1    1  P2
+  51  C025993-001   XTAL 2.4576MHZ                            1    1    1  Y1
+  52  500079-002    CRYSTAL PAL 17.734475MHZ                  0    1    1  Y3
+  53  500079-001    CRYSTAL NTSC 7.159090MHZ                  1    0    0  Y3
+  54  500079-003    CRYSTAL PAL 32MHZ                         0    1    1  Y2
+  55  500079-004    CRYSTAL NTSC 32.215905MHZ                 1    0    0  Y2
+  56  C303023-003   OSC 32MHZ                                 1    1    1  U47
+  57  C303023-002   OSC 25.175MHZ                             1    1    1  U30
+  58  C070119       SW PUSH SPJ312U                           1    1    1  J3
+  59  C100213       DELAY LINE 4.43MHZ PAL                    0    1    1  DL1
+  60  C100209       DELAY LINE 3.58MHZ NTSC                   1    0    0  DL1
+  61  C100210       TRANSFORMER NTSC                          1    0    0  L61
+  62  C100214       TRANSFORMER PAL                           0    1    1  L61
+  63  C100184       STMOD NTSC                                1    0    0  U18
+  64  C100185       STMOD PAL I                               0    0    1  U18
+  65  C100186       STMOD PAL B                               0    1    0  U18
+  66  C101425-001   IND FERRITE BEAD SMD (1206)              47   47   47  L1-7,9-11,14-44,46-48,86-88
+  67  C070471-001   IND RADIAL 10UH                           1    1    1  L45
+  68  C070790       FILTER KEYBOARD                           1    1    1  L58
+  69  C101415-002   CHOKE COIL SBT-0180W                      2    2    2  L12,13
+  70  500076        FER BEAD INDUCTOR 10 PIN                  1    1    1  L89
+  71                RES CHIP 0 OHM 1/10W 5% (0805)            2    0    0  R65,70
+  72  C101013-100   RES CHIP 10 OHMS 1/10W 5% (0805)          3    3    3  R13,45,46
+  73  C101013-220   RES CHIP 22 OHMS 1/10W 5% (0805)          0    1    1  R65
+  74  C101013-330   RES CHIP 33 OHMS 1/10W 5% (0805)          2    2    2  R84,85
+  75  C101013-680   RES CHIP 68 OHMS 1/10W 5% (0805)          1    1    1  R96
+  76  C101013-750   RES CHIP 75 OHMS 1/10W 5% (0805)          3    3    3  R92-94
+  77  C101021-101   RES CHIP 100 OHMS 1/10W 5% (0805)        34   34   34  R55,104,143,147-177
+  78  C101013-221   RES CHIP 220 OHMS 1/10W 5% (0805)         2    2    2  R60,76
+  79  C101013-471   RES CHIP 470 OHMS 1/10W 5% (0805)         5    5    5  R5,124-127
+  80  C101013-611   RES CHIP 610 OHMS 1/10W 5% (0805)         3    3    3  R8-10
+  81  C101013-102   RES CHIP 1K 1/10W 5% (0805)              14   14   14  R1,3,4,23,28,29,61,71,103,R105,109,110,112,123
+  82  C101013-102   RES CHIP 1K 1/10W 5% (0805)               1    0    0  R68
+  83  C101013-122   RES CHIP 1.2K 1/10W 5% (0805)             2    2    2  R67,74
+  84  C101013-122   RES CHIP 1.2K 1/10W 5% (0805)             0    1    1  R68
+  85  C101013-152   RES CHIP 1.5K 1/10W 5% (0805)             1    1    1  R64
+  86  C101013-222   RES CHIP 2.2K 1/10W 5% (0805)             6    6    6  R19,36,39,57,107,108
+  87  C101013-222   RES CHIP 2.2K 1/10W 5% (0805)             1    0    0  R66
+  88  C101013-272   RES CHIP 2.7K 1/10W 5% (0805)             0    1    1  R66
+  89  C101013-392   RES CHIP 3.9K 1/10W 5% (0805)             2    2    2  R111,137
+  90  C101013-472   RES CHIP 4.7K 1/10W 5% (0805)             4    4    4  R20,58,113,142
+  91  C101013-562   RES CHIP 5.6K 1/10W 5% (0805)             1    1    1  R72
+  92  C101013-912   RES CHIP 9.1K 1/10W 5% (0805)             1    1    1  R17
+  93  C101013-103   RES CHIP 10K 1/10W 5% (0805)             16   16   16  R18,21,22,25-27,30,32,42,43,R52,54,80,106,119,139
+  94  C101013-123   RES CHIP 12K 1/10W 5% (0805)              1    1    1  R140
+  95  C101013-153   RES CHIP 15K 1/10W 5% (0805)              1    1    1  R7
+  96  C101013-333   RES CHIP 33K 1/10W 5% (0805)              2    2    2  R40,41
+  97  C101013-473   RES CHIP 47K 1/10W 5% (0805)              2    2    2  R31,34
+  98  C101013-473   RES CHIP 47K 1/10W 5% (0805)              1    0    0  R73
+  99  C101024-015   RES CHIP 51.1K 1/10W 5% (0805)            0    1    1  R73
+ 100  C101013-104   RES CHIP 100K 1/10W 5% (0805)             8    8    8  R33,37,38,44,51,53,86,87
+ 101  C101013-105   RES CHIP 1M 1/10W 5% (0805)               1    1    1  R141
+ 102  C101021-100   RES CHIP 10 OHMS 1/4W 5% 1206             1    1    1  R79
+ 103  C101021-220   RES CHIP 22 OHMS 1/4W 5% 1206             1    1    1  R35
+ 104  C101021-750   RES CHIP 75 OHMS 1/4W 5% (1206)           1    1    1  R62
+ 105  C101021-151   RES CHIP 150 OHMS 1/4W 5% (1206)          4    4    4  R13-16
+ 106  C101021-221   RES CHIP 220 OHMS 1/4W 5% (1206)          1    1    1  R118
+ 107  C101026-470   RES PACK 47 OHMS X4 1/10W                 1    1    1  R6
+ 108  C101026-680   RES PACK 68 OHMS X4 1/10W                 1    1    1  R138
+ 109  C101026-221   RES PACK 220 OHMS  X4 1/10W               1    1    1  R56
+ 110  C101026-222   RES PACK 2.2K X4 1/10W                    2    2    2  R2,12
+ 111  C101026-392   RES PACK 3.9K X4 1/10W                    3    3    3  R11,56,59
+ 112  C101026-472   RES PACK 4.7K X4 1/10W                    6    6    6  R129-134
+ 113  C101026-105   RES PACK 1M X4 1/10W                      1    1    1  R128
+ 114  C101034-330   RES PACK 33 OHMS X8 1/10W 5%              3    3    3  R81-83
+ 115  C101034-680   RES PACK 68 OHMS X8 1/10W 5%              4    4    4  R49,50,135,136
+ 116  C101034-102   RES PACK 1K X8 1/10W 5%                   1    1    1  R77
+ 117  C101034-392   RES PACK 3.9K X8 1/10W 5%                 1    1    1  R78
+ 118  C101034-473   RES PACK 47K X8 1/10W 5%                  2    2    2  R47,48
+ 119  C101219-220   CAP CHIP 22PF 50V +80-20%                 2    2    2  C103,104
+ 120  C101219-300   CAP CHIP 30PF 50V +80-20%                 4    4    4  C108,109,130,131
+ 121  C101219-470   CAP CHIP 47PF 50V +80-20%                 3    3    3  C114-116
+ 122  C101219-101   CAP CHIP 100PF 50V +80-20%               41   41   41  C37,42,43,50,167,170-205
+ 123  C101219-101   CAP CHIP 100PF 50V +80-20%                0    1    1  C85
+ 124  C101219-121   CAP CHIP 120PF 50V +80-20%                1    0    0  C85
+ 125  C101219-681   CAP CHIP 680PF 50V +80-20%                6    6    6  C21,22,138,139,141,143
+ 126  C101219-821   CAP CHIP 820PF 50V +80-20%                1    1    1  C15
+ 127  C101220-102   CAP CHIP 1000PF 50V +80-20%               2    2    2  C76,81
+ 128  C101220-222   CAP CHIP 2200PF 50V +80-20%               2    2    2  C83,84
+ 129  C101221-103   CAP CHIP 0.01UF 50V +80-20%              10   10   10  C30,32,33,79,80,105,137,140,C142,144
+ 130  C101221-223   CAP CHIP 0.022UF 50V +80-20%              1    1    1  C106
+ 131  C101221-333   CAP CHIP 0.033UF 50V +80-20%              4    4    4  C35,40,51,52
+ 132  C101221-104   CAP CHIP 0.1UF 50V +80-20%               87   87   87  C1-8,16,18,20,26,27,31,34,53,C58-69,72,77,78,86,88-95,C98-102,107,112,117-129,C132-136,145,147-152,161-166,C168,169,206-208,210-213
+ 133  C101221-154   CAP CHIP 0.15UF 50V +80-20%               4    4    4  C44,45,47,49
+ 134  C101221-474   CAP CHIP 0.47UF 50V +80-20%              10   10   10  C11-14,36,41,54,55,97,146
+ 135  C398069-001   CAP CER TANTALUM 15UF 25V +80-20% RD      3    3    3  C73-75
+ 136  500098-010    CAP ELEC 1UF 50V +20-20% RD 5X11          5    5    5  C9,10,82,111,159
+ 137  500098-3R3    CAP ELEC 3.3UF 50V +20-20% RD 5x11        1    1    1  C23
+ 138  500099-4R7    CAP ELEC 4.7UF 35V +20-20% RD 5X11        3    3    3  C96,153,156
+ 139  C070498-001   CAP ELEC 10UF 25V +20-20% RD 5X11         8    8    8  C17,19,24,29,39,46,71,113
+ 140  500098-100    CAP ELEC 10UF 50V +20-20% RD 5X11         1    1    1  C57
+ 141  500098-220    CAP ELEC 22UF 50V +20-20% RD 5X11         1    1    1  C160
+ 142  C070498-004   CAP ELEC 47UF 25V +20-20% RD 5X11         3    3    3  C154,157,158
+ 143  C070157-004   CAP ELEC 47UF 16V +20-20% RD 5X11         4    4    4  C25,28,38,56
+ 144  C070157-005   CAP ELEC 100UF 16V +20-20% RD 6.3X11      2    2    2  C87,209
+ 145  C070498-006   CAP ELEC 220UF 25V +20-20% RD 8X11.5      1    1    1  C48
+ 146  C070498-008   CAP ELEC 470UF 25V +20-20% RD 10X16       1    1    1  C70
+ 147  500084-102    CAP ELEC 1000UF 10V +20-20% RD 10X16      1    1    1  C155
+ 148  C060607A      DIODE 1N4148                              3    3    3  D1,7,8
+ 149  500101        LED/YELLOW                                1    1    1  D5
+ 150  C100317       LED/GREEN                                 1    1    1  D4
+ 151  500080        DIODE TUNING MVAM108                      1    1    1  D6
+ 152  C101814       FUSE 5A 250V                              1    1    1  F2
+
+DETAIL A
+THE FOLLOWING PARTS ARE REQUIRED IF THE SGS TRIPLE DAC8, STV8438, IS NOT USED.
+
+Item  Atari P/N     Description                            NTSC PALB PALI  Reference designator
+-----------------------------------------------------------------------------------------------
+   1  500083        TRANSISTOR NPN MMBT3904 (SOT23)           3    3    3  Q7-9
+   2                RES CHIP 36.5 OHMS 1/10W 5% (0805)        3    3    3  R97,99,101
+   3                RES CHIP 114 OHMS 1/10W 5% (0805)         3    3    3  R98,100,102
+   4  C101221-104   CAP CHIP 0.1UF 50V +80-20%                0    0    0  C207,208,210-212
+   5  C070157-005   CAP ELEC 100UF 16V +20-20% RD 6.3X11      0    0    0  C209
+   6  C101425-001   IND FERRITE BEAD SMD (1206)               0    0    0  L47,48

@@ -1,0 +1,5 @@
+DynaCADD 2.0 part library (.PRT)
+Source: DYNACADD/PARTS/STBOOK.PRT (37 bytes)
+Record stream: 0 records, ends at offset 0x25 with FFFF terminator
+Units: not recorded in a field identified so far; coordinates are listed as stored
+Parts contained: none (the library holds only the header and the end marker)

@@ -1,0 +1,87 @@
+File: EASYDRAW/SUNNYVAL/DSP.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-3380,-4270)-(2940,670)
+Page size: 203.2 x 254.0 mm
+Coordinate window: lower-left (-3640,4550), upper-right (3640,-4550); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-3380,-4192.67)-(2830,600.33)
+Items: 326 (2944 words)
+Objects: polyline 4, ellipse 26, elliptical arc 30, justified text 64
+Other records (escapes, application data): write_meta 10 x7, write_meta 150 x1, write_meta 151 x7, write_meta 152 x12, write_meta 153 x12, write_meta 154 x62, write_meta 158 x1, write_meta 160 x1, write_meta 80 x34, write_meta 81 x34
+Text strings: 64
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+  -3380   -3950  [font 7 24pt]  DSP CONNECTOR
+
+  -3340   -3280  [font 7 12pt]  DB26 Female
+
+  -3120   -1840  [font 7 12pt]  Pin
+  -3120   -1360  [font 7 12pt]  1
+  -3120   -1200  [font 7 12pt]  2 
+  -3120   -1040  [font 7 12pt]  3
+  -3120    -880  [font 7 12pt]  4
+  -3120    -720  [font 7 12pt]  5
+  -3120    -560  [font 7 12pt]  6
+  -3120    -400  [font 7 12pt]  7
+  -3120    -240  [font 7 12pt]  8
+  -3120     -80  [font 7 12pt]  9
+  -3120      80  [font 7 12pt]  10
+  -3120     240  [font 7 12pt]  11
+  -3120     400  [font 7 12pt]  12
+  -3120     560  [font 7 12pt]  13
+
+  -2510   -1830  [font 7 12pt]  Signal
+  -2510   -1350  [font 7 12pt]  Microwire Enable
+  -2510   -1190  [font 7 12pt]  Microwire Data
+  -2510   -1030  [font 7 12pt]  Microwire Clock
+  -2510    -870  [font 7 12pt]  DMA Sound Enable Out
+  -2510    -710  [font 7 12pt]  DMA Sound Clock Out
+  -2510    -550  [font 7 12pt]  DMA Sound Data Out
+  -2510    -390  [font 7 12pt]  DMA Sound Channel Select out
+  -2510    -230  [font 7 12pt]  Ground
+  -2510     -70  [font 7 12pt]  Rate Select
+  -2510      90  [font 7 12pt]  Ground
+  -2510     250  [font 7 12pt]  Sync Serial I/F Control 0
+  -2510     410  [font 7 12pt]  Sync Serial I/F Control 1
+  -2510     570  [font 7 12pt]  Sync Serial I/F Control 2
+
+     20   -1830  [font 7 12pt]  Pin
+     20   -1350  [font 7 12pt]  14
+     20   -1190  [font 7 12pt]  15 
+     20   -1030  [font 7 12pt]  16
+     20    -870  [font 7 12pt]  17
+     20    -710  [font 7 12pt]  18
+     20    -550  [font 7 12pt]  19
+     20    -390  [font 7 12pt]  20
+     20    -230  [font 7 12pt]  21
+     20     -70  [font 7 12pt]  22
+     20      90  [font 7 12pt]  23
+     20     250  [font 7 12pt]  24
+     20     410  [font 7 12pt]  25
+     20     570  [font 7 12pt]  26
+
+    710   -1840  [font 7 12pt]  Signal
+    710   -1360  [font 7 12pt]  Ground
+    710   -1200  [font 7 12pt]  Sync Serial Data In
+    710   -1040  [font 7 12pt]  Ground
+    710    -880  [font 7 12pt]  + 12V
+    710    -720  [font 7 12pt]  Ground
+    710    -560  [font 7 12pt]  DMA Sound Data Enable In
+    710    -400  [font 7 12pt]  DMA Sound Clock In
+    710    -240  [font 7 12pt]  DMA Sound Data In
+    710     -80  [font 7 12pt]  DMA Sound Channel Select In
+    710      80  [font 7 12pt]  Sync Serial I/F Data Out 
+    710     240  [font 7 12pt]  Sync Serial I/F Clock
+    710     400  [font 7 12pt]  Ground
+    710     560  [font 7 12pt]  External Clock (Genlock)
+
+   -640   -2650  [font 7 12pt]   26
+
+   2710   -3240  [font 7 12pt]   1
+
+   -820   -3200  [font 7 12pt]   9
+
+   -730   -2920  [font 7 12pt]   18
+
+   2560   -2930  [font 7 12pt]   10
+
+   2440   -2650  [font 7 12pt]   19

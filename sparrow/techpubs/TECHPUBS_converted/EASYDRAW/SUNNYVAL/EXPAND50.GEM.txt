@@ -1,0 +1,131 @@
+File: EASYDRAW/SUNNYVAL/EXPAND50.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-3470,-4270)-(3130,2221)
+Page size: 203.2 x 254.0 mm
+Coordinate window: lower-left (-3640,4550), upper-right (3640,-4550); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-3470,-4192.67)-(3040,2150.33)
+Items: 498 (4150 words)
+Objects: polyline 4, ellipse 50, elliptical arc 50, justified text 110
+Other records (escapes, application data): write_meta 10 x7, write_meta 150 x1, write_meta 151 x7, write_meta 152 x10, write_meta 153 x10, write_meta 154 x109, write_meta 158 x1, write_meta 160 x1, write_meta 80 x54, write_meta 81 x54
+Text strings: 110
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+   1930   -3410  [font 7 12pt]   1
+
+   2840   -3410  [font 7 12pt]   2
+
+   2840    2050  [font 7 12pt]   50
+
+   1820    2050  [font 7 12pt]   49
+
+  -3410   -2960  [font 7 12pt]  50 Pin Header - J19
+
+  -3470   -3950  [font 7 24pt]  SPARROW EXPANSION CONNECTOR
+
+  -3070   -2200  [font 7 12pt]  Pin
+  -3070   -1720  [font 7 12pt]  1 
+  -3070   -1560  [font 7 12pt]  3
+  -3070   -1400  [font 7 12pt]  5
+  -3070   -1240  [font 7 12pt]  7
+  -3070   -1080  [font 7 12pt]  9
+  -3070    -920  [font 7 12pt]  11
+  -3070    -760  [font 7 12pt]  13
+  -3070    -600  [font 7 12pt]  15
+  -3070    -440  [font 7 12pt]  17
+  -3070    -280  [font 7 12pt]  19
+  -3070    -120  [font 7 12pt]  21
+  -3070      40  [font 7 12pt]  23
+  -3070     200  [font 7 12pt]  25
+  -3070     360  [font 7 12pt]  27
+  -3070     520  [font 7 12pt]  29
+  -3070     680  [font 7 12pt]  31
+  -3070     840  [font 7 12pt]  33
+  -3070    1000  [font 7 12pt]  35
+  -3070    1160  [font 7 12pt]  37
+  -3070    1320  [font 7 12pt]  39
+  -3070    1480  [font 7 12pt]  41
+  -3070    1640  [font 7 12pt]  43
+  -3070    1800  [font 7 12pt]  45
+  -3070    1960  [font 7 12pt]  47
+  -3070    2120  [font 7 12pt]  49
+
+    -30   -2210  [font 7 12pt]  Signal
+    -30   -1730  [font 7 12pt]  Ground
+    -30   -1570  [font 7 12pt]  AS
+    -30   -1410  [font 7 12pt]  UDS
+    -30   -1250  [font 7 12pt]  DTACK
+    -30   -1090  [font 7 12pt]  FC1
+    -30    -930  [font 7 12pt]  No Connect
+    -30    -770  [font 7 12pt]  IACK
+    -30    -610  [font 7 12pt]  BR
+    -30    -450  [font 7 12pt]  Halt
+    -30    -290  [font 7 12pt]  IPL0
+    -30    -130  [font 7 12pt]  IPL2
+    -30      30  [font 7 12pt]  VCC
+    -30     190  [font 7 12pt]  ADDR 23
+    -30     350  [font 7 12pt]  ADDR 21
+    -30     510  [font 7 12pt]  ADDR 19
+    -30     670  [font 7 12pt]  ADDR 17
+    -30     830  [font 7 12pt]  ADDR 15
+    -30     990  [font 7 12pt]  ADDR 13
+    -30    1150  [font 7 12pt]  ADDR 11
+    -30    1310  [font 7 12pt]  ADDR 9
+    -30    1470  [font 7 12pt]  ADDR 7
+    -30    1630  [font 7 12pt]  ADDR 5
+    -30    1790  [font 7 12pt]  ADDR 3
+    -30    1950  [font 7 12pt]  ADDR 1
+    -30    2110  [font 7 12pt]  No Connect
+
+   -750   -2210  [font 7 12pt]  Pin
+   -750   -1730  [font 7 12pt]  2 
+   -750   -1570  [font 7 12pt]  4
+   -750   -1410  [font 7 12pt]  6
+   -750   -1250  [font 7 12pt]  8
+   -750   -1090  [font 7 12pt]  10
+   -750    -930  [font 7 12pt]  12
+   -750    -770  [font 7 12pt]  14
+   -750    -610  [font 7 12pt]  16
+   -750    -450  [font 7 12pt]  18
+   -750    -290  [font 7 12pt]  20
+   -750    -130  [font 7 12pt]  22
+   -750      30  [font 7 12pt]  24
+   -750     190  [font 7 12pt]  26
+   -750     350  [font 7 12pt]  28
+   -750     510  [font 7 12pt]  30
+   -750     670  [font 7 12pt]  32
+   -750     830  [font 7 12pt]  34
+   -750     990  [font 7 12pt]  36
+   -750    1150  [font 7 12pt]  38
+   -750    1310  [font 7 12pt]  40
+   -750    1470  [font 7 12pt]  42
+   -750    1630  [font 7 12pt]  44
+   -750    1790  [font 7 12pt]  46
+   -750    1950  [font 7 12pt]  48
+   -750    2110  [font 7 12pt]  50
+
+  -2310   -2200  [font 7 12pt]  Signal
+  -2310   -1720  [font 7 12pt]  Ground
+  -2310   -1560  [font 7 12pt]  BGK
+  -2310   -1400  [font 7 12pt]  LDS
+  -2310   -1240  [font 7 12pt]  RXW
+  -2310   -1080  [font 7 12pt]  FC2
+  -2310    -920  [font 7 12pt]  FC0
+  -2310    -760  [font 7 12pt]  No Connect
+  -2310    -600  [font 7 12pt]  BG
+  -2310    -440  [font 7 12pt]  Reset
+  -2310    -280  [font 7 12pt]  BERR
+  -2310    -120  [font 7 12pt]  IPL1
+  -2310      40  [font 7 12pt]  CPUCLK
+  -2310     200  [font 7 12pt]  VCC
+  -2310     360  [font 7 12pt]  ADDR 22
+  -2310     520  [font 7 12pt]  ADDR 20
+  -2310     680  [font 7 12pt]  ADDR 18
+  -2310     840  [font 7 12pt]  ADDR 16
+  -2310    1000  [font 7 12pt]  ADDR 14
+  -2310    1160  [font 7 12pt]  ADDR 12
+  -2310    1320  [font 7 12pt]  ADDR 10
+  -2310    1480  [font 7 12pt]  ADDR 8
+  -2310    1640  [font 7 12pt]  ADDR 6
+  -2310    1800  [font 7 12pt]  ADDR 4
+  -2310    1960  [font 7 12pt]  ADDR 2
+  -2310    2120  [font 7 12pt]  No Connect

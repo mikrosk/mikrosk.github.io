@@ -1,0 +1,552 @@
+[PageStream 2 document F0302.4: 8.50 x 11.00 in, 317 objects]
+
+--- Page 30 ---
+
+The internal frequency of this clock is 32.215905 MHz (NTSC) and 32.084988 MHz (PAL). VIDEL also includes the circuitry necessary to interface a light gun or pen plugged into Joystick 0. The current position that the gun or pen is pointing to is reported by these registers.
+
+The position is accurate to within (X direction only):
+
+• 4 Pixels in 320 x 200 Mode
+• 8 Pixels in 640 x 200 Mode
+• 16 Pixels in 640 x 400 Mode
+
+Accurate to 1 pixel in the Y direction in all modes. Accuracies do not account for the quality of the light gun or pen. Note that the X position is given in pixels for 320 x 200 only. In order to get correct results in 640 x 200 mode this number needs to be shifted left one bit and in 640 x 400 modes this number needs to be shifted left two bits.
+
+
+2.2.1.4 Video Digital to Analog Converter (DAC)
+
+The Video DAC is used to take digital TTL input data from the VIDEL IC and convert it to analog RGB output. Inputs of 6-bit color info from the VIDEL are supplied to the DAC via the R2-R7, G2-G7, and B2-B7 inputs. The DAC then outputs analog R, G, and B to the monitor connector.
+
+2.2.1.4.1 Video Digital to Analog Converter Pin and Signal List
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+40
+
+COM
+
+Input
+
+Tied high in the FALCON030 system to select internal digital channel to output amplifier.
+
+4-1,44-41
+
+G0-7
+
+Input
+
+Eight bit green input data from VIDEL.
+
+36-29
+
+B0-7
+
+Input
+
+Eight bit blue input data from VIDEL.
+
+12-5
+
+R0-7
+
+Input
+
+Eight bit red input data from VIDEL.
+
+37
+
+RC
+
+Input
+
+Tied high in the FALCON030 system to select binary coding on R and B data.
+
+25
+
+BEXT
+
+Input
+
+Auxiliary blue input. Not connected in the FALCON030 system.
+
+22
+
+GEXT
+
+Input
+
+Auxiliary green input. Not connected in the FALCON030 system.
+
+19
+
+REXT
+
+Input
+
+Auxiliary red input. Not connected in the FALCON030 system.
+
+18
+
+ROUT
+
+Output
+
+Analog red output to monitor connector.
+
+21
+
+GOUT
+
+Output
+
+Analog green output to monitor connector.
+
+24
+
+BOUT
+
+Output
+
+Analog blue output to monitor connector.
+
+38
+
+CLK
+
+Input
+
+Clock input.
+
+15,26
+
+AVcc
+
+Input
+
+Chip power input.
+
+--- Page 31 ---
+
+2.2.1.5 NTSC/PAL Encoder (1377)
+
+The 1377 encoder is used in the system to convert baseband RGB and sync signals into a composite TV signal.
+
+2.2.1.6 VIDEL Pin and Signal List
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+60,59,57, 55,50,39, 35,33,32, 31,29
+
+A1-A11
+
+Input
+
+These are the 11 LSB of the CPU address bus.
+
+19,20,21, 24,26,28, 34,36,37, 38,40,41, 42,43,48, 49
+
+D0-D15
+
+I/O
+
+This is the CPU data bus.
+
+78-84,87-89,92-85
+
+MD0-31
+
+I/O
+
+This is the 32 bit DRAM data bus. Data is read from this bus when the DRAM is read. Data is written onto this bus when the DRAM is written.
+
+18,17,13, 2,11,9,51,52,53,54, 56,58,64-68,72
+
+R0-R5
+B0-B5
+G0-G5
+
+Output
+
+These are the 3x6 digital RGB outputs.
+
+10
+
+DOTCK
+
+Output
+
+This is the clock for the DAC.
+
+8
+
+MONO
+
+Output
+
+This is the monochrome output when not in XGA. In CONTROL XGA mode it is the pixel control.
+
+96
+
+COLOR
+
+Output
+
+This is a timing signal for composite video generation for NTSC TV.
+
+62
+
+CSYNC
+
+Output
+
+This signal is the composite sync output.
+
+47
+
+VREQ
+
+Output
+
+This is the video request active high output.
+
+44
+
+CLK32
+
+Input
+
+This is a 32 Mhz clock input. Used in non VGA cases.
+
+73
+
+CLK25
+
+Input
+
+This is a 25 Mhz clock input for VGA cases.
+
+14
+
+EXTCLK
+
+Input
+
+This is the external Genlock clock input.
+
+6
+
+VSYNC-
+
+I/O
+
+This is the vertical sync signal. It is programmable as input or out.
+
+114
+
+TEST.
+
+3
+
+HSYNC-
+
+I/O
+
+This is the horizontal sync signal. It is programmable as input or out. In case of TV it contains the full interlace support.
+
+--- Page 32 ---
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+101
+
+HINT-
+
+Output
+
+This is the horizontal display enable signal used for Hsync interrupt generation.
+
+97
+
+VINT-
+
+Output
+
+This is the vertical display enable signal used for Vsync interrupt generation.
+
+7
+
+R/(W)-
+
+Input
+
+This is the CPU R/W input signal. It is used to access the internal registers including CLUT. When high the registers are read to the CPU. When low the registers are written with data from the CPU.
+
+25
+
+VCS
+
+Input
+
+This is the chip select active high input. It selects the video chip for CPU read/write accesses (according to R/W) to/from the video chip internal registers or CLUT. It is controlled by the CPU DS.
+
+66
+
+VLD
+
+Input
+
+This signal informs the video chip that the data read from the DRAM is to be loaded into the video INPUT BUFFER.
+
+22
+
+RDAT-
+
+Output
+
+This active low signal enables the data read from the DRAM into the CPU data bus to enable CPU reading from the DRAM.
+
+23
+
+WDAT-
+
+Output
+
+This active low signal enables the CPU data bus into the DRAM data bus to enable CPU writing into DRAM.
+
+70,71
+
+CAS0-
+CAS1-
+
+Output
+
+These are the SIMMs active low CAS signals. They are ORed in the video chip and used to latch the DRAM data into the INPUT BUFFER.
+
+2
+
+PEN-
+
+Input
+
+This is the Light/gun pen input.
+
+4
+
+LOWP
+
+Input
+
+Low Power pin. Can be used to disable the clocks. It is grounded in normal applications.
+
+5
+
+RAMH
+
+Input
+
+This is an address control signal from COMBO to select the high or low DRAM word in 16 bit video bus. 0 selects low word.
+
+85
+
+ODD_EVEN
+
+Output
+
+An output pin to indicate odd/even video frames. 0 - EVEN.
+
+86
+
+DE
+
+Output
+
+Display Enable.
+
+1
+
+RESET
+
+Input
+
+Reset to VIDEL chip.
+
+DGND
+
+Input
+
+Digital ground pins.
+
+DVcc
+
+Input
+
+Digital power pins.
+
+119
+
+EXT
+
+Input
+
+Used to turn on the external Genlock logic.
+
+112
+
+TN
+
+Input
+
+Used for VLSI parametric testing.
+
+--- Page 33 ---
+[75 drawing objects, see F0302.4.p033.svg]
+
+2.2.1.7 Monitor Connector Pin List
+
+10
+
+1
+
+19
+
+11
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+Red
+Green
+Blue
+Mono Out
+Ground
+Red Return (GND)
+Green Return (GND)
+Blue Return (GND)
+Audio In
+Ground
+
+11
+12
+13
+14
+15
+16
+17
+18
+19
+
+Ground
+Composite Sync
+Horizontal Sync
+Vertical Sync
+Externa Clock Input (GENLOCK)
+EVEN_ODD
++12 Volts for PERITEL
+Video Master Control Bit 1
+Video Master Control Bit 2
+
+2.2.2 Audio Subsystem
+
+The FALCON030 architecture extends the music subsystem presently available on the ST/MEGA computers. The FALCON030 mixes the output of the existing ST PSG sound system with a new DMA-driven dual-channel A-toD, D-to-A subsystem (Codec device). The FALCON030 combines these two sources for simple beeps, and can be connected to an external stereo amplifier for high-fidelity sound. In addition the resulting audio is sent to an on-board speaker which can be turned off with an general purpose bit from the PSG.
+
+
+2.2.2.1 Programmable Sound Generator
+
+The ST sound system using the General Instruments AY-3-8910/Yamaha YM-3439 Programmable Sound Generator is present in the FALCON030 system. The YM-3439 Programmable Sound Generator produces music synthesis, sound effects, and audio feedback.
+
+With an applied clock input of 2 MHz, the PSG is capable of providing a frequency response range between 30 Hz (audible) and 124 KHz (post-audible). The generator places minimal amount of processing burden on the main system (which acts as the sequencer) and has the ability to perform using three independent voice channels. The three sound channel outputs are mixed, along with Audio In, and sent to the CODEC IC for processing. The PSG also provides the speaker gate for the internal speaker.
+
+--- Page 34 ---
+
+2.2.2.2 DMA Sound
+
+The FALCON030 also includes a new DMA-driven sound subsystem that allows the playback or synthesis of complex waveforms at a variety of sampling rates. This feature is supported by the new Codec device which is driven from the new DMA device (same IC that controls the disk DMA cycles).
+
+Sound in the form of digitized samples is stored in system memory. These samples are fetched from dual-purpose memory by the SDMA IC (transparent to the processor) and provided to digital-to-analog converters (DAC's) in the Codec device at a constant sample frequency specified by the user. The outputs of the DAC's are then low pass filtered into a walkman type, micro-stereo connector and to the on-board speaker.
+
+Two channels are provided. They are intended to be used as the left and right channels of a stereo system when using the raw audio outputs from the machine. They are mixed together when fed to the on board speaker or monitor speaker. A MONO mode is provided which will feed the same data to both channels simultaneously. The only restriction placed on MONO mode is that there must be an even number of samples.
+
+
+2.2.2.3 Codec IC
+
+The Codec IC in the FALCON030 system is connected through a serial protocol to provide both an Analog to Digital (ADC) and Digital to Analog (DAC) function for in the 16-bit stereo sound system. The Codec is strapped so that the ADC operates as a conventional oversampling ADC producing stereo data at the output. The DAC operates as a conventional oversampling single bit DAC.
+
+A serial interface is used to connect the Codec IC to the system. It is made up of a data line in,  a data line out, a clock line, and a syncchronization input. Serial data from the SDMA IC to the CODEC consists of interleaved volume, control, and 16-bit stereo sound data. Volume control is achieved by changing the interleaved volume data values.
+
+2.2.2.3.1 Codec Pin and Signal List
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+1
+
+SSYNC
+
+	Input
+
+The Serial Sync Input signal is used to indicate the start of a word or frame of transmissions via the serial interface.
+
+2
+
+RESET-
+
+Input
+
+The Reset input signal is used to reset the CIDC IC.
+
+3
+
+CLKIN
+
+Input
+
+The CLKIN input signal is used as the master clock of the CODEC IC. The D to A and A to D converters are driven by this input.
+
+4
+
+DVcc
+
+Input
+
+This is the power supply voltage
+for the CODEC IC.
+
+5
+
+DGND
+
+Input
+
+This is the ground for the CODEC
+IC.

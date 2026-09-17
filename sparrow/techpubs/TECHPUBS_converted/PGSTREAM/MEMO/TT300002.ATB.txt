@@ -1,0 +1,25 @@
+[PageStream 2 document TT300002.ATB: 8.50 x 11.00 in, 2 objects]
+
+--- Page 1 ---
+[1 drawing objects, see TT300002.ATB.p001.svg]
+
+Dallas Office Memo
+
+
+To:		All Subsidiaries
+From:	Marty Pennock
+Subject:	New TT030 ATB
+Date:	March 6, 1992
+
+cc:		Ira Goldstein - ATX
+		Tom Ulaszek - ATX
+		Richard Miller - SUVL
+
+
+Attached please find a new ATB for the TT030. This ATB addresses a problem in some TT030s when trying to run HDX. The fix should be done as needed. All TT030s are not affected by this problem. A test for the condition is included in the ATB. Also there is enclosed an updated Index for your ATB book.
+
+
+Sincerely
+
+
+Marty Pennock

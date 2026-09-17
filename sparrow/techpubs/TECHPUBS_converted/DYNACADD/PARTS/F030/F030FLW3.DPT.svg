@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="2000" viewBox="178.3167 -1335.5498 803.5167 1085.9332">
+<title>DYNACADD/PARTS/F030/F030FLW3.DPT</title>
+<rect x="178.3167" y="-1335.5498" width="803.5167" height="1085.9332" fill="#ffffff"/>
+<g fill="none" stroke="#000000" stroke-width="0.5404" stroke-linecap="round" stroke-linejoin="round">
+<path data-layer="PEN1" data-style="Continuous, drawn solid" d="M540.95 -1095.5A22.4172 22.4172 0 0 0 519.95 -1119.25M519.95 -1070.5A23.0868 23.0868 0 0 0 540.95 -1095.5M499.7 -1095.5A22.7493 22.7493 0 0 0 519.95 -1070.5M519.95 -1119.25A22.0695 22.0695 0 0 0 499.7 -1095.5M519.95 -1049.25L567.95 -1009.25M567.95 -1000.4999A5.7112 5.7112 0 0 0 567.95 -1009.25M567.95 -1000.5L519.95 -960.5M519.95 -960.5L471.95 -1000.5M471.95 -1009.2501A5.7112 5.7112 0 0 0 471.95 -1000.5M471.95 -1009.25L519.95 -1049.25M381.95 -939.25L429.95 -899.25M429.95 -890.4999A5.7112 5.7112 0 0 0 429.95 -899.25M429.95 -890.5L381.95 -850.5M381.95 -850.5L333.95 -890.5M333.95 -899.2501A5.7112 5.7112 0 0 0 333.95 -890.5M333.95 -899.25L381.95 -939.25M657.95 -939.25L705.95 -899.25M705.95 -890.4999A5.7112 5.7112 0 0 0 705.95 -899.25M705.95 -890.5L657.95 -850.5M657.95 -850.5L609.95 -890.5M609.95 -899.2501A5.7112 5.7112 0 0 0 609.95 -890.5M609.95 -899.25L657.95 -939.25M205.7 -929.25L306.95 -929.25M306.95 -929.25L306.95 -860.5M306.95 -860.5L205.7 -860.5M205.7 -860.5L205.7 -929.25M469.7 -929.25L570.95 -929.25M570.95 -929.25L570.95 -860.5M570.95 -860.5L469.7 -860.5M469.7 -860.5L469.7 -929.25M657.95 -819.25L705.95 -779.25M705.95 -770.4999A5.7112 5.7112 0 0 0 705.95 -779.25M705.95 -770.5L657.95 -730.5M657.95 -730.5L609.95 -770.5M609.95 -779.2501A5.7112 5.7112 0 0 0 609.95 -770.5M609.95 -779.25L657.95 -819.25M331.7 -809.25L432.95 -809.25M432.95 -809.25L432.95 -740.5M432.95 -740.5L331.7 -740.5M331.7 -740.5L331.7 -809.25M381.95 -699.25L429.95 -659.25M429.95 -650.4999A5.7112 5.7112 0 0 0 429.95 -659.25M429.95 -650.5L381.95 -610.5M381.95 -610.5L333.95 -650.5M333.95 -659.2501A5.7112 5.7112 0 0 0 333.95 -650.5M333.95 -659.25L381.95 -699.25M607.7 -689.25L708.95 -689.25M708.95 -689.25L708.95 -620.5M708.95 -620.5L607.7 -620.5M607.7 -620.5L607.7 -689.25M733.7 -689.25L834.95 -689.25M834.95 -689.25L834.95 -620.5M834.95 -620.5L733.7 -620.5M733.7 -620.5L733.7 -689.25M657.95 -579.25L705.95 -539.25M705.95 -530.4999A5.7112 5.7112 0 0 0 705.95 -539.25M705.95 -530.5L657.95 -490.5M657.95 -490.5L609.95 -530.5M609.95 -539.2501A5.7112 5.7112 0 0 0 609.95 -530.5M609.95 -539.25L657.95 -579.25M331.7 -569.25L432.95 -569.25M432.95 -569.25L432.95 -500.5M432.95 -500.5L331.7 -500.5M331.7 -500.5L331.7 -569.25M469.7 -569.25L570.95 -569.25M570.95 -569.25L570.95 -500.5M570.95 -500.5L469.7 -500.5M469.7 -500.5L469.7 -569.25M783.95 -459.25L831.95 -419.25M831.95 -410.4999A5.7112 5.7112 0 0 0 831.95 -419.25M831.95 -410.5L783.95 -370.5M783.95 -370.5L735.95 -410.5M735.95 -419.2501A5.7112 5.7112 0 0 0 735.95 -410.5M735.95 -419.25L783.95 -459.25M607.7 -449.25L708.95 -449.25M708.95 -449.25L708.95 -380.5M708.95 -380.5L607.7 -380.5M607.7 -380.5L607.7 -449.25M859.7 -339.25L960.95 -339.25M960.95 -339.25L960.95 -270.5M960.95 -270.5L859.7 -270.5M859.7 -270.5L859.7 -339.25M804.95 -305.5A22.4172 22.4172 0 0 0 783.95 -329.25M783.95 -280.5A23.0868 23.0868 0 0 0 804.95 -305.5M763.7 -305.5A22.7493 22.7493 0 0 0 783.95 -280.5M783.95 -329.25A22.0695 22.0695 0 0 0 763.7 -305.5M517.2 -1056L520.2 -1050M520.2 -1050L523.2 -1056M520.2 -1070L520.2 -1050M379.2 -946L382.2 -940M382.2 -940L385.2 -946M382.2 -940L382.2 -1005M382.2 -1005L469.2 -1005M571.2 -1005L658.2 -1005M658.2 -1005L658.2 -940M313.2 -892L307.2 -895M307.2 -895L313.2 -898M307.2 -895L331.2 -895M577.2 -892L571.2 -895M571.2 -895L577.2 -898M571.2 -895L607.2 -895M382.2 -850L382.2 -810M379.2 -816L382.2 -810M382.2 -810L385.2 -816M658.2 -850L658.2 -820M655.2 -826L658.2 -820M658.2 -820L661.2 -826M709.2 -775L784.2 -775M784.2 -775L784.2 -690M382.2 -740L382.2 -700M379.2 -706L382.2 -700M382.2 -700L385.2 -706M658.2 -730L658.2 -690M655.2 -696L658.2 -690M658.2 -690L661.2 -696M433.2 -655L520.2 -655M520.2 -655L520.2 -570M658.2 -620L658.2 -580M655.2 -586L658.2 -580M658.2 -580L661.2 -586M382.2 -610L382.2 -570M379.2 -576L382.2 -570M382.2 -570L385.2 -576M709.2 -535L784.2 -535M784.2 -535L784.2 -460M658.2 -490L658.2 -450M655.2 -456L658.2 -450M658.2 -450L661.2 -456M835.2 -415L910.2 -415M910.2 -415L910.2 -340M784.2 -370L784.2 -330M781.2 -336L784.2 -330M784.2 -330L787.2 -336M655.2 -946L658.2 -940M658.2 -940L661.2 -946M781.2 -696L784.2 -690M784.2 -690L787.2 -696M517.2 -576L520.2 -570M520.2 -570L523.2 -576M781.2 -466L784.2 -460M784.2 -460L787.2 -466M907.2 -346L910.2 -340M910.2 -340L913.2 -346"/>
+</g>
+<g fill="#000000" font-family="DejaVu Sans Mono, Consolas, Courier New, monospace">
+<text x="199.2" y="-1302" font-size="17.5924" textLength="22.4259" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="235.2" y="-1302" font-size="17.5924" textLength="69.8083" lengthAdjust="spacingAndGlyphs">DISPLAY</text>
+<text x="199.2" y="-1282" font-size="17.5924" textLength="23.5543" lengthAdjust="spacingAndGlyphs">ON</text>
+<text x="235.2" y="-1282" font-size="17.5924" textLength="74.1157" lengthAdjust="spacingAndGlyphs">MONITOR</text>
+<text x="199.2" y="-1262" font-size="17.5924" textLength="23.6889" lengthAdjust="spacingAndGlyphs">OR</text>
+<text x="235.2" y="-1262" font-size="17.5924" textLength="86.1767" lengthAdjust="spacingAndGlyphs">TERMINAL</text>
+<text x="517.2" y="-1090" font-size="8.7954" textLength="3.8667" lengthAdjust="spacingAndGlyphs">B</text>
+<text x="457.2" y="-1010" font-size="8.7954" textLength="11.1668" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="511.2" y="-1010" font-size="8.7954" textLength="14.4512" lengthAdjust="spacingAndGlyphs">+5V</text>
+<text x="571.2" y="-1010" font-size="8.7954" textLength="15.1375" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="493.2" y="-1000" font-size="8.7954" textLength="44.1579" lengthAdjust="spacingAndGlyphs">PRESENT?</text>
+<text x="649.2" y="-910" font-size="8.7954" textLength="7.3438" lengthAdjust="spacingAndGlyphs">16</text>
+<text x="217.2" y="-900" font-size="8.7954" textLength="38.2728" lengthAdjust="spacingAndGlyphs">REPLACE</text>
+<text x="265.2" y="-900" font-size="8.7954" textLength="28.4466" lengthAdjust="spacingAndGlyphs">POWER</text>
+<text x="319.2" y="-900" font-size="8.7954" textLength="11.1668" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="373.2" y="-900" font-size="8.7954" textLength="14.4512" lengthAdjust="spacingAndGlyphs">+5V</text>
+<text x="499.2" y="-900" font-size="8.7954" textLength="38.2728" lengthAdjust="spacingAndGlyphs">REPLACE</text>
+<text x="595.2" y="-900" font-size="8.7954" textLength="11.1668" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="631.2" y="-900" font-size="8.7954" textLength="14.814" lengthAdjust="spacingAndGlyphs">MHz</text>
+<text x="655.2" y="-900" font-size="8.7954" textLength="27.2325" lengthAdjust="spacingAndGlyphs">CLOCK</text>
+<text x="235.2" y="-890" font-size="8.7954" textLength="34.265" lengthAdjust="spacingAndGlyphs">SUPPLY</text>
+<text x="349.2" y="-890" font-size="8.7954" textLength="38.6993" lengthAdjust="spacingAndGlyphs">SHORTED</text>
+<text x="397.2" y="-890" font-size="8.7954" textLength="12.0114" lengthAdjust="spacingAndGlyphs">TO</text>
+<text x="487.2" y="-890" font-size="8.7954" textLength="55.2967" lengthAdjust="spacingAndGlyphs">OSCILLATOR</text>
+<text x="631.2" y="-890" font-size="8.7954" textLength="44.1579" lengthAdjust="spacingAndGlyphs">PRESENT?</text>
+<text x="361.2" y="-880" font-size="8.7954" textLength="37.1899" lengthAdjust="spacingAndGlyphs">GROUND?</text>
+<text x="385.2" y="-840" font-size="8.7954" textLength="15.1375" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="661.2" y="-840" font-size="8.7954" textLength="15.1375" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="343.2" y="-780" font-size="8.7954" textLength="34.5303" lengthAdjust="spacingAndGlyphs">INSPECT</text>
+<text x="391.2" y="-780" font-size="8.7954" textLength="19.9743" lengthAdjust="spacingAndGlyphs">MAIN</text>
+<text x="637.2" y="-780" font-size="8.7954" textLength="39.7708" lengthAdjust="spacingAndGlyphs">MC68030</text>
+<text x="709.2" y="-780" font-size="8.7954" textLength="15.1375" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="361.2" y="-770" font-size="8.7954" textLength="15.315" lengthAdjust="spacingAndGlyphs">PCB</text>
+<text x="385.2" y="-770" font-size="8.7954" textLength="15.8454" lengthAdjust="spacingAndGlyphs">FOR</text>
+<text x="637.2" y="-770" font-size="8.7954" textLength="37.546" lengthAdjust="spacingAndGlyphs">HALTED?</text>
+<text x="349.2" y="-760" font-size="8.7954" textLength="38.6993" lengthAdjust="spacingAndGlyphs">SHORTED</text>
+<text x="397.2" y="-760" font-size="8.7954" textLength="14.4512" lengthAdjust="spacingAndGlyphs">+5V</text>
+<text x="385.2" y="-730" font-size="8.7954" textLength="11.1668" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="661.2" y="-720" font-size="8.7954" textLength="11.1668" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="367.2" y="-660" font-size="8.7954" textLength="27.0092" lengthAdjust="spacingAndGlyphs">FOUND</text>
+<text x="433.2" y="-660" font-size="8.7954" textLength="15.1375" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="745.2" y="-660" font-size="8.7954" textLength="38.2728" lengthAdjust="spacingAndGlyphs">REPLACE</text>
+<text x="793.2" y="-660" font-size="8.7954" textLength="28.7707" lengthAdjust="spacingAndGlyphs">COMBO</text>
+<text x="361.2" y="-650" font-size="8.7954" textLength="33.9298" lengthAdjust="spacingAndGlyphs">SHORT?</text>
+<text x="619.2" y="-650" font-size="8.7954" textLength="38.2728" lengthAdjust="spacingAndGlyphs">REPLACE</text>
+<text x="667.2" y="-650" font-size="8.7954" textLength="28.7707" lengthAdjust="spacingAndGlyphs">COMBO</text>
+<text x="751.2" y="-650" font-size="8.7954" textLength="11.7957" lengthAdjust="spacingAndGlyphs">OR</text>
+<text x="769.2" y="-650" font-size="8.7954" textLength="39.7708" lengthAdjust="spacingAndGlyphs">MC68030</text>
+<text x="385.2" y="-600" font-size="8.7954" textLength="11.1668" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="343.2" y="-540" font-size="8.7954" textLength="38.2728" lengthAdjust="spacingAndGlyphs">REPLACE</text>
+<text x="391.2" y="-540" font-size="8.7954" textLength="19.9743" lengthAdjust="spacingAndGlyphs">MAIN</text>
+<text x="481.2" y="-540" font-size="8.7954" textLength="35.2566" lengthAdjust="spacingAndGlyphs">REMOVE</text>
+<text x="523.2" y="-540" font-size="8.7954" textLength="27.8169" lengthAdjust="spacingAndGlyphs">SHORT</text>
+<text x="637.2" y="-540" font-size="8.7954" textLength="31.9722" lengthAdjust="spacingAndGlyphs">RS-232</text>
+<text x="709.2" y="-540" font-size="8.7954" textLength="15.1375" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="373.2" y="-530" font-size="8.7954" textLength="15.315" lengthAdjust="spacingAndGlyphs">PCB</text>
+<text x="487.2" y="-530" font-size="8.7954" textLength="15.5743" lengthAdjust="spacingAndGlyphs">AND</text>
+<text x="511.2" y="-530" font-size="8.7954" textLength="37.0261" lengthAdjust="spacingAndGlyphs">RECHECK</text>
+<text x="631.2" y="-530" font-size="8.7954" textLength="40.8735" lengthAdjust="spacingAndGlyphs">DISPLAY?</text>
+<text x="661.2" y="-480" font-size="8.7954" textLength="11.1668" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="619.2" y="-430" font-size="8.7954" textLength="14.8269" lengthAdjust="spacingAndGlyphs">SEE</text>
+<text x="643.2" y="-430" font-size="8.7954" textLength="34.6667" lengthAdjust="spacingAndGlyphs">THEORY</text>
+<text x="685.2" y="-430" font-size="8.7954" textLength="11.7287" lengthAdjust="spacingAndGlyphs">OF</text>
+<text x="613.2" y="-420" font-size="8.7954" textLength="52.0794" lengthAdjust="spacingAndGlyphs">OPERATION,</text>
+<text x="679.2" y="-420" font-size="8.7954" textLength="23.05" lengthAdjust="spacingAndGlyphs">CALL</text>
+<text x="835.2" y="-420" font-size="8.7954" textLength="15.1375" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="619.2" y="-410" font-size="8.7954" textLength="22.7358" lengthAdjust="spacingAndGlyphs">TECH</text>
+<text x="649.2" y="-410" font-size="8.7954" textLength="43.917" lengthAdjust="spacingAndGlyphs">SUPPORT,</text>
+<text x="751.2" y="-410" font-size="8.7954" textLength="50.3244" lengthAdjust="spacingAndGlyphs">DIAGNOSTIC</text>
+<text x="613.2" y="-400" font-size="8.7954" textLength="11.7957" lengthAdjust="spacingAndGlyphs">OR</text>
+<text x="631.2" y="-400" font-size="8.7954" textLength="38.2728" lengthAdjust="spacingAndGlyphs">REPLACE</text>
+<text x="679.2" y="-400" font-size="8.7954" textLength="19.9743" lengthAdjust="spacingAndGlyphs">MAIN</text>
+<text x="763.2" y="-400" font-size="8.7954" textLength="33.2323" lengthAdjust="spacingAndGlyphs">ERROR?</text>
+<text x="649.2" y="-390" font-size="8.7954" textLength="15.315" lengthAdjust="spacingAndGlyphs">PCB</text>
+<text x="787.2" y="-360" font-size="8.7954" textLength="11.1668" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="871.2" y="-320" font-size="8.7954" textLength="38.2728" lengthAdjust="spacingAndGlyphs">REPLACE</text>
+<text x="919.2" y="-320" font-size="8.7954" textLength="27.9934" lengthAdjust="spacingAndGlyphs">PARTS</text>
+<text x="901.2" y="-310" font-size="8.7954" textLength="15.1751" lengthAdjust="spacingAndGlyphs">PER</text>
+<text x="781.2" y="-300" font-size="8.7954" textLength="4.0543" lengthAdjust="spacingAndGlyphs">C</text>
+<text x="877.2" y="-300" font-size="8.7954" textLength="50.3244" lengthAdjust="spacingAndGlyphs">DIAGNOSTIC</text>
+<text x="895.2" y="-290" font-size="8.7954" textLength="22.5138" lengthAdjust="spacingAndGlyphs">GUIDE</text>
+</g>
+</svg>

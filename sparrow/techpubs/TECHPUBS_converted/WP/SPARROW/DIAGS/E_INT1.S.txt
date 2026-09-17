@@ -1,0 +1,61 @@
+* Designer: Tom Le
+* Atari Micro system
+* Date: 2-20-1992
+
+	.text
+spurint1:			;
+	bsr	clear_io
+	lea	spurina1,a5
+	bsr	dspmsg
+        move.w  #$1234,intword
+	rte
+
+eint1a:
+	bsr	clear_io
+        move.w  #$3456,intword
+	bclr    #eint1f,flag
+	rte
+
+testint1:
+	bset	#eint1f,flag
+	move.w  #$abcd,intword
+	move.b  #int1,intlev
+	move.l  $60,intsave0
+	move.l  #spurint1,$60    ;
+	move.l  #eint1a,int1auto
+	move.w  sr,srsave0	;
+	move.w  sr,d0
+	and.w   #$f8ff,d0	;
+	move.w  d0,sr
+	bsr	set_io
+	move.l  #$800,d2        ;setup a sw timer
+	
+testint1a:
+	move.w  intword,d0
+	cmp.w   #$3456,d0
+	beq     testint1p	;passed
+	sub.l   #1,d2
+	bne     testint1a
+	btst    #eint1f,flag
+	beq	testint1p	;passed
+	bsr	clear_io
+	
+.if (TOS=0)
+        move    #red,palette
+.endif
+	lea     int1msg1,a5
+	bsr	dspmsg
+	bset  #eint1f,flag
+
+testint1r:
+	move.l  intsave0,$60
+	move.w  srsave0,sr	;
+        btst    #eint1f,flag
+        rts
+
+testint1p:
+	bclr    #eint1f,flag
+	bra	testint1r
+
+
+	

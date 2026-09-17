@@ -1,0 +1,96 @@
+[PageStream 2 document ATBINDX.DOC: 8.50 x 11.00 in, 4 objects]
+
+--- Page 1 ---
+
+Atari Technical Bulletin Index
+Date: May 8, 1992
+
+
+MEGA STE
+
+Bulletin		Distribution Date		Description
+
+MSTE-0001	January 1992	While installing hard disk drive option kits in the field, system will not boot from hard disk drive.
+
+MSTE-0002	January 1992	Audio distortion caused by shifter I.C. not installed correctly.
+
+MSTE-0003	January 1992	MEGA STE/MC68882 coprocessor problems in some application software.
+
+MSTE-0004	January 1992	When  using  SIMMs  built  with  Goldstar DRAMs in the MEGA STE, it is possible the system will not boot  correctly if power is turned off and then on again in under 30 seconds.
+
+MSTE-0005	January 1992	Errors when accessing floppy drive.
+
+
+STE
+
+Bulletin		Distribution Date	Description
+
+STE-0001		January 1992	Audio distortion caused by shifter I.C. not installed correctly.
+
+
+TT030
+
+Bulletin		Distribution Date	Description
+
+TT30-0001		January 1992	Errors when accessing floppy drive.
+
+TT30-0002		March 1992	Addresses   the   "HDX"   Format    problem reported by the field with TT30's and some versions of TOS.
+
+TT30-0003		April 1992	To correct improper jumper setting causing coprocessor to run at 16MHz instead of 32MHz.
+
+--- Page 2 ---
+
+Atari Technical Bulletin Index
+Date: May 8, 1992
+
+
+TT030
+
+Bulletin		Distribution Date	Description
+
+TT30-0004		April 1992	To correct boot up problems on C301763-001 REV D FAB boards after ATB TT30-0002 or ECO 1425 was applied.
+
+TT30-0005		April 1992	To reduce noise and jitter seen on the high resolution monitor.
+
+TT30-0006		May 1992	To correct boot up problems on C302406-001 REV A FAB boards after ATB TT30-0002 or ECO 1425 was applied.
+
+ABC386
+
+Bulletin		Distribution Date	Description
+
+
+ABC386SX
+
+Bulletin		Distribution Date	Description
+
+
+ABC286
+
+Bulletin		Distribution Date				Description
+
+ABC-0001		January 1992	Field reporting problems with HIMEM not loading after the line 'DEVICE=HIMEM.SYS' is added to the CONFIG.SYS file.
+
+Hard Disk
+
+Bulletin		Distribution Date	Description
+
+--- Page 3 ---
+
+Atari Technical Bulletin Index
+Date: May 8, 1992
+
+
+Diagnostics
+
+Bulletin		Distribution Date	Description
+
+DIAG-0001	January 1992	To inform the field as to the current level of cartridge diagnostics released by Atari. (as of January ,1992).
+
+
+LYNX
+
+Bulletin		Distribution Date	Description
+
+LYNX-0001	May 1992	To correct premature failures of the internal power connector on the LYNX I.
+
+LYNX-0002	June 1992		To repair failures of the front panel controls on the LYNXII (joystick and A and B fire buttons).

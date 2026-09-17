@@ -1,0 +1,90 @@
+File: EASYDRAW/SUNNYVAL/MEMORY30.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-3280,-4280)-(2740,800)
+Page size: 203.2 x 254.0 mm
+Coordinate window: lower-left (-3640,4550), upper-right (3640,-4550); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-3280,-4202.67)-(3250,1600.33)
+Items: 333 (2768 words)
+Objects: polyline 14, fill area 2, bar 8, ellipse 24, elliptical arc 24, justified text 59
+Other records (escapes, application data): write_meta 10 x5, write_meta 150 x1, write_meta 151 x5, write_meta 152 x15, write_meta 153 x15, write_meta 154 x48, write_meta 155 x2, write_meta 158 x1, write_meta 160 x1, write_meta 80 x37, write_meta 81 x38
+Warning: premature end marker at word 1555 with 1212 words following
+Warning: no end marker (file truncated or damaged)
+Warning: damaged file; data blocks belonging to other drawings may appear in the text list and the render
+Warning: damaged data skipped, words 1555-1560
+Warning: damaged data skipped, words 2767-2768
+Text strings: 59
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+  -3280   -3960  [font 7 24pt]  SPARROW MEMORY CONNECTOR
+
+  -3240   -3300  [font 7 12pt]  30 Pin Header - J6
+
+    930   -2700  [font 7 12pt]   5
+
+   1670   -2630  [font 7 12pt]   4
+
+   2740   -2690  [font 7 12pt]   3
+
+   1200   -3380  [font 7 12pt]   8
+
+   2440   -3370  [font 7 12pt]   6
+
+   1840   -3630  [font 7 12pt]   7
+
+   1950   -3330  [font 7 12pt]   1
+
+   2970   -3340  [font 7 12pt]   2
+
+   2980    1570  [font 7 12pt]   44
+
+   1840    1570  [font 7 12pt]   43
+
+  -3110   -3390  [font 7 12pt]  43 Pin Header - P7
+
+  -2960   -2880  [font 7 12pt]  Pin
+  -2960   -2400  [font 7 12pt]  1 
+  -2960   -2240  [font 7 12pt]  3
+  -2960   -2080  [font 7 12pt]  5
+  -2960   -1920  [font 7 12pt]  7
+  -2960   -1760  [font 7 12pt]  9
+  -2960   -1600  [font 7 12pt]  11
+  -2960   -1440  [font 7 12pt]  13
+  -2960   -1280  [font 7 12pt]  15
+  -2960   -1120  [font 7 12pt]  17
+  -2960    -960  [font 7 12pt]  19
+  -2960    -800  [font 7 12pt]  21
+  -2960    -640  [font 7 12pt]  23
+  -2960    -480  [font 7 12pt]  25
+  -2960    -320  [font 7 12pt]  27
+  -2960    -160  [font 7 12pt]  29
+  -2960       0  [font 7 12pt]  31
+  -2960     160  [font 7 12pt]  33
+  -2960     320  [font 7 12pt]  35
+  -2960     480  [font 7 12pt]  37
+  -2960     640  [font 7 12pt]  39
+  -2960     800  [font 7 12pt]  41
+  -2960     960  [font 7 12pt]  43
+
+  -2410   -2880  [font 7 12pt]  Signal
+  -2410   -2400  [font 7 12pt]  IDE Reset
+  -2410   -2240  [font 7 12pt]  Data 7
+  -2410   -2080  [font 7 12pt]  Data 6
+  -2410   -1920  [font 7 12pt]  Data 5
+  -2410   -1760  [font 7 12pt]  Data 4
+  -2410   -1600  [font 7 12pt]  Data 3
+  -2410   -1440  [font 7 12pt]  Data 2
+  -2410   -1280  [font 7 12pt]  Data 1
+  -2410   -1120  [font 7 12pt]  Data 0
+  -2410    -960  [font 7 12pt]  Ground
+  -2410    -800  [font 7 12pt]  No Connect
+  -2410    -640  [font 7 12pt]  IOW
+  -2410    -480  [font 7 12pt]  IOR
+  -2410    -320  [font 7 12pt]  No Connect
+  -2410    -160  [font 7 12pt]  No Connect
+  -2410       0  [font 7 12pt]  IRQ
+  -2410     160  [font 7 12pt]  ADDR3
+  -2410     320  [font 7 12pt]  ADDR2
+  -2410     480  [font 7 12pt]  CS0
+  -2410     640  [font 7 12pt]  IDE-ACT
+  -2410     800  [font 7 12pt]  VCC
+  -2410     960  [font 7 12pt]  Ground

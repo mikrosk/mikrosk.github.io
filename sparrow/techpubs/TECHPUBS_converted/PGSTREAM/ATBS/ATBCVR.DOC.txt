@@ -1,0 +1,53 @@
+[PageStream 2 document ATBCVR.DOC: 8.50 x 11.00 in, 3 objects]
+
+--- Page 1 ---
+
+ATARI DALLAS PRODUCT ENGINEERING TECHNICAL BULLETINS
+
+
+Atari Dallas Product Engineering is starting a new method for the release of technical information to subsidiaries. Atari Dallas will be distributing Technical Bulletins. Enclosed is the distribution of the current bulletins.
+
+Atari Technical Bulletins will be distributed to all subsidiaries and will be used to cover various topics.
+
+An example would be to summarize information in a critical ECO, providing a faster path to alert the field concerning changes defined in the ECO. Technical Bulletins are not replacing ECOs. The purpose of the bulletin is to get critical information to the field quicker.
+
+The bulletins will be given numbers identifying them according to the product involved. Bulletins will be distributed as often as necessary to provide required information to the subsidiaries.
+
+
+Tom Ulaszek - ATX
+
+--- Page 2 ---
+
+ATARI TECHNICAL BULLETINS - GENERAL INFORMATION
+
+
+The following is the format that has been adopted for use in all bulletins. Most fields are self-explanatory. To standardize the form all fields will be included. If a field is not pertinent to a particular ATB, it will be left blank or "N/A" inserted.
+
+
+Atari Technical Bulletin (ATB)
+
+Number:	(First three to four letters indicate subject area)
+Date: 		(Date of release)
+Page		1 of X
+
+Product(s) Affected:	(Any product enclosed in parenthesis indicates a separate ATB has been released for it)
+
+Model:				(Model of equipment affected)
+
+Type of ATB:			(3 Fields - Mandatory, As Needed, Or Information Only)
+
+"Mandatory" will be used for meeting safety requirements and usually indicates a problem that has to be resolved immediately.
+
+"As Needed" basically means that if you have seen the problem use this fix or suggestion.
+
+"Information only" is nice to know information that will be generated to head off or prevent problems before they occur.
+
+ECO #:				(Any ECO which was incorporated to address the problem.)
+
+Reason for ATB:	(Reason why the ATB was written.)
+
+Notes:				(Any notes which may be helpful.)
+
+Symptoms of Problem:	(Symptoms which should indicate the problem exists)
+
+Solution:			(How to fix the problem.)

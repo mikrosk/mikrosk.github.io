@@ -1,0 +1,420 @@
+                            VTG Cook Book
+
+         Written by : Eran Dariel
+         Date       : 12-12-91
+         Rev        : A2
+
+
+                  Rules for programming the VTG registers.
+
+         The freq. of the VTG clock VCK varies according to the mode
+         used.
+
+         STe mode          VCK = 2MHz (for compatability with STe)
+         STe mode on
+             VGA monitor   VCK = 25MHz / 16 .
+
+         SP  mode          VCK = Dotck.
+         SP  mode on
+             VGA monitor   VCK = 12.5MHz.
+
+         XGA mode          VCK = Dotck.
+
+         *** The resolution of the programming is always at quantities
+         of VCK cycle time. (1/VCK)
+         (Ex: In STe mode, Dotck=16MHz, VCK=2MHz, ie. you can program
+         the registers at a resolution of 8 pixels)
+
+         *** The width of the displayed line has to be in units of :
+             16 bit video bus - full words (16 bits)
+             32 bit video bus - double words (32 bits)
+
+                                b          a 0
+         Sync -------------------|____ab____|----------------
+
+                          d                      c
+         Blnk -------------|_db__|__________|__ac_|----------
+
+                    f                                   e
+         DE   ------|__fd__|______________________|__ce__|---
+                    |     fb     |          |   ae       |
+
+         Vrqst________________________|-|____________________
+                                      |      delay       |
+
+
+         The pulse Vrqst (Video request) is the one that intiates edge
+         (e) after "delay". Since this edge can be on either side of
+         point (0), the programmer has to indicate to the VTG where it
+         apears. This is done by programming the "h" bit 10 in
+         register HDB. h=0 - Vrqst occurs after point 0.
+                       h=1 - Vrqst occurs befor point 0.
+
+         The position of Vrqst depends on the mode used and the width
+         of DE, details are explained in the following pages.
+
+
+
+
+
+
+VTG  "Cook-Book"  REV A2                                 page 2
+
+
+         Loading the registers
+
+         General
+
+         Display Line Width - Has to be loaded with the number of 16
+         bit words in each line. (Ex: 640x200, 16 colors needs
+         (640/16)x4=160)
+
+         Horizontal Offset - Number of extra 16 bit words in line
+         length.
+
+         Horizontal Pixel scroll - Number of pixels (up to 15) in
+         horizontal scroll within a word.
+
+         Horizontal
+
+         1) HHT - Horizontal Half line Total in VCK units.
+                = [ Half line length in VCK cycles - 2 ]
+
+                Ex: In ST mode line width is 128 clocks of 2MHz.
+                (128 x 500 us = 64 us, HHT= 128/2 -2 = 62 )      a=63
+         note: a is measured from midline.
+
+         2) HSS - Horz. Sync Start
+                = [ a-ab ] -1
+
+                Ex: if ab=10 then HSS = [ 63 - 10 ] - 1 = 52    b=53
+
+         3) HBE - Horz. Blank End
+                = [ ac - 1 ]
+
+                Ex: if ac=10 then HBE = [ 10 - 1 ] = 9           c=9
+
+         4) HBB - Horz. Blank Begin
+                = [ b - db ]
+
+                Ex: if db=3 then  HBB = [53 - 3 ] = 50          d=50
+
+
+
+
+         5) HDB - Horz. Display Begin
+            The value of HDB requires specific calculation which take
+            into account several hardware constraints caused by having
+            to fill the RAM buffers and the shifter with data before
+            display.
+
+
+
+
+
+
+
+
+
+
+
+VTG  "Cook-Book"  REV A2                                 page 3
+
+
+
+          HDB = [[ e - delay ] + x ]
+                e     = ae - 1
+                delay = d1 + d2 + d3 + 1  (d1,d2,d3 are in table 1)
+                x     =
+                   [ e - delay ] > 0 then   x = 0
+
+                   [ e - delay ] < 0 then   x = Half line width
+                                                 h bit high.
+
+                                     Table 1
+
+         |     Mode        |Dotck| VCK |   d1    | d2 | d3 |  delay  |
+         |                 | MHz | MHz | 4us|2us |    |    | 4us| 2us|
+
+         | STe    16 colors|  8  |  2  |  8 |  4 |  4 |  8 | 21 | 17 |
+         |         4 colors| 16  |  2  |  8 |  4 |  4 |  8 | 21 | 17 |
+         |         1 color | 32  |  2  |  8 |  4 |  4 |  8 | 21 | 17 |
+         | STe VGA 16 color| 12.5|25/16|  8 |  4 |  4 |  8 | 21 | 17 |
+         |          4 color| 25  |25/16|  8 |  4 |  4 |  8 | 21 | 17 |
+         | SP     16 colors|  8  |  8  | 32 | 16 | 16 | 32 | 81 | 65 |
+         |       256 colors|  8  |  8  | 32 | 16 | 16 | 16 | 65 | 49 |
+         |        16 colors| 16  | 16  | 64 | 32 | 16 | 32 |113 | 81 |
+         |       256 colors| 16  | 16  | 64 | 32 | 16 | 16 | 97 | 65 |
+         | SP VGA 16 colors| 12.5| 12.5|    | 32 | 16 | 32 |    | 81 |
+         |       256 colors| 12.5| 12.5|    | 32 | 16 | 16 |    | 65 |
+         |        16 colors| 25  | 12.5|    | 32 |  8 | 16 |    | 57 |
+         |       256 colors| 25  | 12.5|    | 32 |  8 |  8 |    | 49 |
+         | XGA             |  8  |  8  |    | 16 | 16 |  0 |    | 33 |
+         |                 | 16  | 16  |    | 32 | 16 |  0 |    | 49 |
+         | XGA VGA         | 12.5| 12.5|    | 32 | 16 |  0 |    | 49 |
+
+
+
+
+         d1 = 2 or 4 us for enabling the first two video bursts, to
+              load the Ping Pong buffers
+         d2 = 16 dotcks for loading the delay register in scroll
+              applications.( In STe modes 2us)
+         d3 = DE-GO for loading  the pipeline in the shifter with 8
+              words     8 pallets = 16 dotcks
+                        4 pallets = 32 dotcks
+                        2 pallets = 64 dotcks
+                        1 pallet  = 128 dotcks
+
+                Ex: In STe mode if ae=21 then e=21-1
+                    Since [e-delay]<0 then
+
+                        e     delay      x   h bit high
+                HDB=[ (21-1) -  21  ] + 64 +   (512)     = 575
+
+
+
+
+
+
+
+VTG  "Cook-Book"  REV A2                                 page 4
+
+         6) HDE - Horz. Display End
+                = [ d - fd - d3 ]
+
+                Ex: If fd=14 then HDE= (50-14) - 8 = 28
+
+         7) HFS - Horz. Field Sync ( Interlace applications)
+                = [ HSS + 27.3us - a ]
+                Ex: In SP TV mode, VCK= 16MHz.
+                27.3us = 437 , a=511, HSS=436 from  Ex. #4
+                HFS = [ 436+437-511 ] = 362
+
+         8) HEE - Horz. Equlization pulse End.
+                = [ HSS + 2.35us ]
+                Ex: HEE= [ 436+38]=474
+
+
+         VERTICAL
+
+         All the calculations are done in half line units.
+
+         9) VFT - Vert. Field Total
+                = [ Number of half lines -1 ]
+
+         For interlace applications VFT and VSS have to be with even
+         value.
+
+         Ex: For color monitor with 313 lines VFT = [313*2-  1]=625
+             For TV with 312.5 lines          VFT = [312.5*2 -1]=624
+
+         10) VSS - Vert. Sync Start
+                 = [ a - ab ]
+
+                 Ex: If ab=6 then on color monitor VSS=[625-6]=619
+                                  on TV            VSS=[624-1]=618
+
+         11) VBB - Vert. Blank Begin
+                 = [ b - db ]
+
+                 Ex: If db=6 then VBB=[619-6]=613
+
+         12) VBE - Vert. Blank End
+                 = [ ac - 1 ]
+
+                 Ex: For ac=48  VBE= [ 48 - 1 ] = 47
+
+         13) VDB - Vert. Display Begin
+                 = [ ae - 1 ]
+
+                 Ex: For ae=118  VDB= [ 118 - 1 ] = 117
+
+         14) VDE - Vert. Display End
+                 = [ b - fb ]
+
+                 Ex: For fd=102   VDE = [619 - 102 ] = 517
+
+
+
+
+VTG  "Cook-Book"  REV A2                                 page 5
+
+
+                Basic Video Modes Programming
+
+         1) STe 640x200, VCK=2MHz, line width=64us, 313 lines.
+
+            HHT=128/2-2       = 62    ( line width=64us/0.5us=128 )
+            HSS=63-10-1       = 52    ( ab=5us/0.5us         = 10 )
+            HBB=53-3          = 50    ( db=1.5us/0.5us       =  3 )
+            HBE=10-1          =  9    ( ac=5us/0.5us         = 10 )
+            HDB=20-21+64+(512)=575    ( e=ae-1=10.5us/0.5us-1= 20 )
+            HDE=50-14-8       = 28    ( fd=7us/0.5us         = 14 )
+            HFS= 0
+            HEE= 0
+
+            VFT=313*2-1       = 625   ( 313 lines in vertical count)
+            VSS=625-6         = 619   ( ab=3*2 =  6  half lines      )
+            VBB=619-6         = 613   ( db=3*2 =  6      -"-         )
+            VBE=48-1          =  47   ( ac=24*2= 48      -"-         )
+            VDB=118-1         = 117   ( ae=54*2=118      -"-         )
+            VDE=619-102       = 517   ( fd=51*2=102      -"-         )
+
+         2) STe mono, 640x400, VCK=2MHz, line width=28us, 501 lines
+
+            HHT=56/2-2        =  26   (line width=28us/0.5us = 56 )
+            HSS=26-6          =  20   (ab=3us/0.5us          =  6 )
+            HBB= 0                    (db                    =  0 )
+            HBE= 0                    (ac                    =  0 )
+            HDB=8-21+28+(512) = 527   (e=ae-1=4.5/0.5us-1=9-1=  8 )
+            HDE=21-1-8        =  12   (fd=0.5/0.5us          =  1 )
+            HFS= 0 HEE= 0
+
+            VFT=501*2-1       =1001   (501 lines in vertical count)
+            VSS=1002-2-1      = 999   ( ab = 2 half lines         )
+            VBB=0                     ( db = 0                    )
+            VBE=0                     ( ac = 0                    )
+            VDB=68-1          =  67   ( ae = 34*2=68  half lines  )
+            VDE=999-132       = 867   ( fb = 66*2=132 half lines  )
+
+                   VDE-VDB=867-67=800 half lines = 400 lines.
+
+         3) Sparrow, VGA 640x480, VCK=12.5MHz, line width=800 dotcks
+            at 25MHz, 525 lines, 256 colors.
+
+            HHT=400/2-2     = 198 (line width=800 @25MHz=400 @12.5MHz)
+            HSS=199-48-1    = 150 (ab = 96 @25MHz = 48 @12.5MHz      )
+            HBB=151-4       = 147 (db =  8   "    =  4      "        )
+            HBE-20-1        =  19 (ac = 40   "    = 20      "        )
+            HDB=23-49+200+512=686 (e=ae-1:48 "    = 24      "    = 23)
+            HDE=147-4-8     = 135 (fd =  8        =  4      "        )
+            HFS=0
+            HEE-0
+
+
+
+
+
+
+
+VTG  "Cook-Book"  REV A2                                 page 6
+
+            VFT=525*2-1       =1049   (525 lines in vertical count)
+            VSS=1049-4        =1045   ( ab = 2*2=4   half lines   )
+            VBB=1045-6        =1039   ( db = 3*2=6   half lines   )
+            VBE=48-1          =  47   ( ac = 24*2=48 half lines   )
+            VDB=64-1          =  63   ( ae = 32*2=64 half lines   )
+            VDE=1039-16       =1023   ( fb = 8*2=16  half lines   )
+
+                 VDE-VDB=1023-63=960 half lines = 480 lines.
+
+         4) Sparrow, TV, 640x400, VCK=16MHz, line width=64us, 525
+            lines, Interlace on, 16 colors.
+
+            HHT=1024/2-2    = 510 (line width=64us/62.5ns=1024    )
+            HSS=511-74-1    = 436 (ab = 4.7us/62.5ns     =  74    )
+            HBB=434-24      = 410 (db = 1.5us/62.5ns     =  24    )
+            HBE=93-1        =  92 (ac = 5.8us/62.5ns     =  93    )
+            HDB=191-113     =  78 (e=ae-1=12us/62.5ns-1  = 191    )
+            HDE=410-91-32   = 287 (fd                    =  91    )
+            HFS=436+437-511 = 362 (27.3us/62.5ns         = 437    )
+            HEE=436+38      = 474 (2.35us/62.5ns         =  38    )
+
+            VFT=312.5*2-1   = 624 (312.5 lines in vertical count  )
+            VSS=624-6       = 618 ( ab = 3*2=6   half lines       )
+            VBB=618-5       = 613 ( db = 2.5*2=5 half lines       )
+            VBE=48-1        =  47 ( ac = 24*2=48 half lines       )
+            VDB=128-1       = 127 ( ae = 64*2=128 half lines      )
+            VDE=618-91      = 527 ( fb = 45.5*2=91 half lines     )
+
+                 VDE-VDB=527-127=400 half lines = 200 lines.
+
+         5) SP mode, 640*200, color monitor, 8 planes.
+
+            HHT=510, HSS=430, HBB=407, HBE=79, HDB=70, HDE=279 .
+
+            Vertical as in example (1)
+
+         6) SP mode, 640*200, color monitor, 4 planes .
+
+            HHT=510, HSS=430, HBB=407, HBE=79, HDB=54, HDE=263 .
+
+            Vertical as in example (1)
+
+         7) SP mode, 320*200, color monitor, 8 planes.
+
+            HHT=254, HSS=214, HBB=203, HBE=39, HDB=18, HDE=121 .
+
+            Vertical as in example (1)
+
+         8) SP mode, 320*200, color monitor, 4 planes.
+
+            HHT=254, HSS=214, HBB=203, HBE=39, HDB=2, HDE=105 .
+
+            Vertical as in example (1)
+
+
+
+
+
+VTG  "Cook-Book"  REV A2                                 page 7
+
+         9) STe mode, 640*200, VGA monitor, 2 planes.
+
+            HHT=23, HSS=18, HBB=19, HBE=2, HDB=526, HDE=13 .
+            VFT=1049, VSS=1045, VBB=1039, VBE=47, VDB=143, VDE=943.
+
+
+         10) XGA mode, 320*400, VGA monitor .  (*)
+
+            HHT=198, HSS=150, HBB=147, HBE=19, HDB=694, HDE=143 .
+
+            Vertical as in example (3)
+
+         11) XGA mode, 640*200, color monitor. (*)
+
+            HHT=510, HSS=430, HBB=407, HBE=79, HDB=96, HDE=295 .
+
+            Vertical as in (1)
+
+
+
+         12) XGA mode, 320*200, color monitor. (*)
+
+            HHT=254, HSS=214, HBB=203, HBE=39, HDB=34, HDE=147 .
+            Vertical as in (1)
+
+         13) XGA mode, 640*400, TV + interlace.(*)
+
+            HHT=510, HSS=436, HBB=412, HBE=92, HDB=96, HDE=295,
+            HFS=362, HEE=474 .
+
+            Vertical as in (4)
+
+
+         (*) A 4us burst was used.
+
+         (**) Examples 4,6,7,8 were not tested yet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

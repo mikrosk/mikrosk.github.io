@@ -1,0 +1,52 @@
+[Footer: -  #   -]
+SECTION EIGHT:
+GLOSSARY
+
+
+1772  Floppy Disk Controller.
+
+6850  Also ACIA (Asynchronous Communication Interface Adapter).  Each one provides an asynchronous communications channel.  In the STE, there are two 6850s, one for keyboard communication, and one for MIDI communication.
+
+68901  See MFP.
+
+BUS ERROR  GSTMCU has asserted BERR to inform the processor that there is a problem with the current cycle.  This could be due to a device not responding (for example, CPU tries to read memory but the Memory Controller fails to assert DTACK), or an illegal access (attempting to write to ROM).  A bus error causes exception processing.
+
+CPU  The 68000 microprocessor.
+
+DMA  Direct Memory Access.  Process in which data is transferred from external storage device to RAM, or from RAM to external storage.  Transfer is very fast, and takes place independent of the CPU, so that the CPU can be processing while DMA is taking place.  GSTMCU arbitrates the bus between the CPU and DMA.
+
+DMA CONTROLLER  Atari proprietary chip which controls the DMA process.  All disk I/O goes through this device.
+
+EXCEPTION  A state in which the processor stops the current activity, saves what it will need to resume the activity later in RAM, fetches a vector (address) from RAM, and starts executing at the address vector.  When the exception processing is done, the processor will continue what it was doing before the exception occurred.  Exceptions can be caused by interrupts, instructions, or error conditions.  See also System Errors, or a 68000 reference for more detail.
+
+GSTMCU  Atari proprietary chip which ties together all system timing and control signals.
+
+HALT  State in which the CPU is idle, all bus lines are in the high-impedence state, and can only be ended with a RESET input.  This is a bidirectional pin on the CPU.  It is driven externally by the RESET circuit on power-up or a reset button closure, and internally when a double bus fault occurs.  A double bus fault is an error during a sequence which is run to handle a previous error.  For example, if a bus error occurs, and during the exception processing for the bus error, another bus error occurs, then the CPU will assert HALT.
+
+HSYNC  Timing signal for the video display.  Determines when horizontal scan is on the screen, and when it is blank (retracing).  The synchronization (approx. every 63 microseconds) It is also encoded onto IPL2..0 to cause a level 2 auto-vectored interrupt to the CPU.
+
+INTERRUPT  A request by a device for the processor to stop what it is doing and perform processing for the device.  It is a type of exception.  Interrupts are maskable in software, meaning they will be ignored if they do not meet the current priority level of the CPU.  There are three priorities:
+
+The highest are MFP interrupts, then VSYNC interrupts, and lowest are HSYNC interrupts.  Interrupts are signaled to the CPU on the Interrupt Priority Level inputs (IPL0-2).  See Theory of Operation, Main System, MFP, and GSTMCU.
+
+MEMORY CONTROLLER  Atari proprietary chip which handles all RAM accesses.  See Theory of Operation, Main System and Video Subsystem for details.
+
+MIDI  Musical Instrument Digital Interface.  An electrical standard by which electronic instruments communicate.  Also, the logical system for such communication.  In the STE, consists of a 6850 communication chip, driver and receiver chips (74LS04, 74LS05, and PC-900 optoisolator), and an MFP interrupt channel.
+
+MFP  Multi-Function Peripheral, aka 68901.  Interrupt control, timers, and USART for RS232 communication.  See Theory of Operation, Main System.
+
+MODULATOR  Device which modulates a composite video signal, combined with audio, onto an RF carrier for output to a television.
+
+PHASE LOCKED LOOP  Circuit which locks the horizontal sync signal onto the color burst reference frequency for accurate color on the T.V.  Without this circuit, colors on the T.V. become unstable, flickering or shifting about on the screen.
+
+PSG  Programmable Sound Generator, also YM2149.  Yamaha version of General Instruments AY-3-8910.  Has two 8 bit I/O ports and three sound channels.  Used in parallel port and audio.
+
+RS232C  Electrical standard for serial digital communication.  Also the physical and logical device which performs communication using this standard.  In the STE computers, consists of the MFP, PSG, 1488, and 1489 chips.
+
+SUPERVISOR MODE  State of the CPU in which it is allowed to access all hardware and RAM locations, and perform some privileged instructions.  Determined by the state of a bit in the Status Register.
+
+USER MODE  State of the CPU in which certain instructions and areas in the memory map are disallowed (resulting in a privilege violation exception if attempted).  See also SUPERVISOR MODE.
+
+VSYNC  Signal used for vertical synchronization of CRT display device.  Occurs at 70 Hz (monochrome), or 50 or 60 HZ color.
+
+YM2149  See PSG.

@@ -1,0 +1,136 @@
+DXF drawing: DYNACADD/PARTS/DXF/MEGASTE3.DXF
+Render: MEGASTE3.DXF.svg
+
+== Summary ==
+File:        22221 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font ROMAND
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (-778.5255, 253.4624) - (-767.4749, 266.4883)
+             rendered (-778.5255, 253.4624) - (-767.4749, 266.4883), size 11.0506 x 13.0259
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: ROMAND (font ROMAND)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            218
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: LINE 121, TEXT 75, ARC 22
+Blocks:      0 defined
+
+== Text in reading order (75 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (75 items) --
+  B
+  NO  |  +5V  |  YES
+  PRESENT?
+  8 MHz
+  +5V
+  REPLACE POWER  |  NO  |  SHORTED  |  TO  |  REPLACE  |  NO  |  CLOCK
+  SUPPLY  |  OSCILLATOR  |  PRESENT?
+  GROUND?
+  YES  |  YES
+  INSPECT MAIN  |  MC68000  |  YES
+  PCB FOR  |  HALTED?
+  SHORTED +5V
+  NO
+  NO
+  FOUND  |  YES  |  REPLACE  |  REPLACE
+  SHORT?  |  GSTMCU  |  GSTMCU OR
+  MC68000
+  NO
+  REPLACE MAIN  |  REMOVE SHORT  |  RS-232  |  YES
+  PCB  |  AND RECHECK  |  DISPLAY?
+  NO
+  SEE THEORY OF
+  OPERATION, CALL  |  DIAGNOSTIC  |  YES
+  TECH SUPPORT,
+  ERROR?
+  OR REPLACE MAIN
+  PCB
+  NO
+  REPLACE PARTS
+  PER
+  C
+  DIAGNOSTIC
+  GUIDE
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+        X          Y    HEIGHT    ROT  JUST      LAYER  STYLE   TEXT
+-774.0145   266.1543    0.0794      0  left      1      ROMAND  B
+-774.8358   264.4515    0.0794      0  left      1      ROMAND  NO
+-774.1065   264.4636    0.0794      0  left      1      ROMAND  +5V
+-773.3041   264.4636    0.0794      0  left      1      ROMAND  YES
+-774.2574   264.3261    0.0794      0  left      1      ROMAND  PRESENT?
+-772.2236   262.8335    0.0794      0  left      1      ROMAND  8
+-772.1364   262.8335    0.0794      0  left      1      ROMAND  MHz
+-776.0624   262.7928    0.0794      0  left      1      ROMAND  +5V
+ -778.402   262.6959    0.0794      0  left      1      ROMAND  REPLACE
+-777.8788   262.6959    0.0794      0  left      1      ROMAND  POWER
+-776.7917   262.6959    0.0794      0  left      1      ROMAND  NO
+-776.3687   262.6674    0.0794      0  left      1      ROMAND  SHORTED
+-775.7561   262.6674    0.0794      0  left      1      ROMAND  TO
+-774.2117   262.6959    0.0794      0  left      1      ROMAND  REPLACE
+-772.8794   262.6959    0.0794      0  left      1      ROMAND  NO
+ -772.239   262.6959    0.0794      0  left      1      ROMAND  CLOCK
+-778.1478   262.5585    0.0794      0  left      1      ROMAND  SUPPLY
+-774.3338   262.5706    0.0794      0  left      1      ROMAND  OSCILLATOR
+-772.3141   262.5706    0.0794      0  left      1      ROMAND  PRESENT?
+-776.2154   262.5298    0.0794      0  left      1      ROMAND  GROUND?
+-775.8624   261.9434    0.0794      0  left      1      ROMAND  YES
+-771.9366   261.9556    0.0794      0  left      1      ROMAND  YES
+-776.3945   260.9403    0.0794      0  left      1      ROMAND  INSPECT
+-775.8118   260.9403    0.0794      0  left      1      ROMAND  MAIN
+-772.2847   260.9525    0.0794      0  left      1      ROMAND  MC68000
+-771.3477   260.9403    0.0794      0  left      1      ROMAND  YES
+-776.2041   260.8149    0.0794      0  left      1      ROMAND  PCB
+-775.8885   260.8149    0.0794      0  left      1      ROMAND  FOR
+-772.2538   260.8149    0.0794      0  left      1      ROMAND  HALTED?
+-776.4073   260.6895    0.0794      0  left      1      ROMAND  SHORTED
+-775.8532   260.6895    0.0794      0  left      1      ROMAND  +5V
+  -775.86   260.3134    0.0794      0  left      1      ROMAND  NO
+-771.9346   260.1879    0.0794      0  left      1      ROMAND  NO
+-776.1286   259.1848    0.0794      0  left      1      ROMAND  FOUND
+-775.2736   259.1968    0.0794      0  left      1      ROMAND  YES
+-772.2427   259.1848    0.0794      0  left      1      ROMAND  REPLACE
+-770.3251    259.209    0.0794      0  left      1      ROMAND  REPLACE
+-776.1541   259.0595    0.0794      0  left      1      ROMAND  SHORT?
+ -772.236   259.0595    0.0794      0  left      1      ROMAND  GSTMCU
+-770.4851   259.0835    0.0794      0  left      1      ROMAND  GSTMCU
+-769.9565   259.0835    0.0794      0  left      1      ROMAND  OR
+-770.3803   258.9581    0.0794      0  left      1      ROMAND  MC68000
+  -775.86   258.4444    0.0794      0  left      1      ROMAND  NO
+-776.4461   257.4292    0.0794      0  left      1      ROMAND  REPLACE
+-775.8642   257.4292    0.0794      0  left      1      ROMAND  MAIN
+ -774.416   257.4292    0.0794      0  left      1      ROMAND  REMOVE
+-773.8912   257.4292    0.0794      0  left      1      ROMAND  SHORT
+ -772.236   257.4292    0.0794      0  left      1      ROMAND  RS-232
+-771.3477   257.4292    0.0794      0  left      1      ROMAND  YES
+-776.0536   257.3037    0.0794      0  left      1      ROMAND  PCB
+-774.4186   257.3037    0.0794      0  left      1      ROMAND  AND
+-774.0871   257.3037    0.0794      0  left      1      ROMAND  RECHECK
+-772.2945   257.3037    0.0794      0  left      1      ROMAND  DISPLAY?
+-771.9346    256.701    0.0794      0  left      1      ROMAND  NO
+-772.5532   255.7991    0.0794      0  left      1      ROMAND  SEE
+-772.2595   255.7991    0.0794      0  left      1      ROMAND  THEORY
+-771.7473   255.7991    0.0794      0  left      1      ROMAND  OF
+-772.5603   255.6735    0.0794      0  left      1      ROMAND  OPERATION,
+-771.8863   255.6735    0.0794      0  left      1      ROMAND  CALL
+-770.4142   255.6571    0.0794      0  left      1      ROMAND  DIAGNOSTIC
+-769.3394   255.6856    0.0794      0  left      1      ROMAND  YES
+-772.5118   255.5481    0.0794      0  left      1      ROMAND  TECH
+-772.1595   255.5481    0.0794      0  left      1      ROMAND  SUPPORT,
+-770.2966   255.4955    0.0794      0  left      1      ROMAND  ERROR?
+-772.5869   255.4228    0.0794      0  left      1      ROMAND  OR
+-772.3958   255.4228    0.0794      0  left      1      ROMAND  REPLACE
+-771.8792   255.4228    0.0794      0  left      1      ROMAND  MAIN
+-772.2067   255.2973    0.0794      0  left      1      ROMAND  PCB
+ -769.991   254.9453    0.0794      0  left      1      ROMAND  NO
+-768.5689   254.0433    0.0794      0  left      1      ROMAND  REPLACE
+ -768.028   254.0433    0.0794      0  left      1      ROMAND  PARTS
+-768.2117    253.918    0.0794      0  left      1      ROMAND  PER
+-770.1053    253.841    0.0794      0  left      1      ROMAND  C
+-768.4711   253.7926    0.0794      0  left      1      ROMAND  DIAGNOSTIC
+-768.2825   253.6671    0.0794      0  left      1      ROMAND  GUIDE

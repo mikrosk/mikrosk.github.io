@@ -1,0 +1,27 @@
+[PageStream 2 document ISRAEL4.DOC: 8.50 x 11.00 in, 2 objects]
+
+--- Page 1 ---
+[1 drawing objects, see ISRAEL4.DOC.p001.svg]
+
+Dallas Office FAX
+
+
+To:		Moshe Segal, Atari Israel 011-972-52-501873
+From:     Marty Pennock
+Subject:	DSP Connector Pin List and Signal Definition
+Date:	January 28, 1992
+
+cc:		Ira Goldstein - ATX
+		Tom Ulaszek - ATX
+		Sam Tramiel - SUVL
+		Leonard Tramiel - SUVL
+		Richard Miller - SUVL
+
+
+	Would it be possible for you to send me the pin list and signal definition for the 26-pin DSP interface. I am working on the Service Guide and need this information to go along with the schematic that I have. Your help in this matter would be greatly appreciated.
+
+
+Sincerely Yours
+
+
+Marty Pennock

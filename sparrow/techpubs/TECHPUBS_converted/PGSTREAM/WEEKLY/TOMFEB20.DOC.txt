@@ -1,0 +1,80 @@
+[PageStream 2 document TOMFEB20.DOC: 8.50 x 11.00 in, 5 objects]
+
+--- Page 1 ---
+[1 drawing objects, see TOMFEB20.DOC.p001.svg]
+
+Weekly Report
+
+
+To:		Tom Ulazsek
+From:	Marty Pennock
+Subject:	Status Report
+Date:	February 20, 1992
+
+
+Accomplishments
+
+1.	Finished gathering all information for the Western Digital build of the ABC386SX.
+
+2.	Finished correcting and writing ECO 1415 for release of TT030 changed pages.
+
+3.	Finished converting the TT030 Diagnostic Flowcharts in the Service Guide to a PageStream format.
+
+4.	Converted the 4133 IC specification to PageStream Format.
+
+5.	Completed part of Sparrow Block Diagram for the Service Guide along with a major portion of the layout work on Chapter 3.
+
+6.	Turned in ECO 1415 for review and implementation.
+
+7.	Completed back filing needed.
+
+8.	Started putting together list of documentation in area for Tom U.
+
+9.	Completed page count for Western Digital ABC386SX Service Information and got quote from Spinner Printing.
+
+10.	Filled out and turned in Purchase order for Service Information for the Western Digital ABC386SX.
+
+11.	Completed total system backup.
+
+12.	Re-configured software on the ABC386DXII.
+
+12.	Loaded Calamus on the TT030.
+
+
+Plans
+
+1.	Complete 20 copies of Western Digital ABC386SX Service Information and ship to the field.
+
+2.	Continue review of  SOTEC J1 Notebook Service Guide.
+
+3.	Work with Toomey Freeman to determine if ATB is needed for old Diagnostics and TOS not working due to inclusion of CRC. Memo already sent to field by Toomey on 4/4/91.
+
+--- Page 2 ---
+
+4.	Check on Falcon Schedule. Generic schedule generated on 2/3/92.
+
+5.	Find out what the holdup in review for manual procedures is.
+
+6.	Find out status of MEGA STE Service Guide Addendum. All parts finished. Need ECO to release BOM and Schematic to finish.
+
+7.	Get with Robert Joplin on TT030 Owner's Manual issues.
+
+8.	Start ST Book Service Guide.
+
+9.	Check on update of MEGA STE Owner's Manual to include 2 MB floppy drive.
+
+10.	Get with Robert Joplin once he returns from Taiwan and check up on TT030 ATBs for VME, SCSI, and UNIX fixes.
+
+
+ Problems
+
+1.	Still no word from DITEK on DynaCADD Disks sent 2 months ago. Cannot continue work until new versions are received.
+
+2.	Determined PageStream does not handle GEM file formats well. This includes GEM files created with PageStream on a TT030. 2 and 3 bomb exceptions occur when trying to cut, paste, or manipulate drawings. GEM drawings are needed for all manuals. Need to get someone involved at the corporate level to remedy problem. No real support from Soft-Logik, the manufacturer, who is nice and lends an ear. All problems reported are either dismissed as non-existent, or if a slip-up is made, the one technical support rep they do have is supposed to be fired for saying such a thing as their software has this problem. Have found work around for the time being.
+
+3.	Need info from Jerry Smith on whether ECOs are done for MEGA STE 2 MB floppy.
+
+
+4.	Need more solid information for Sparrow Diagnostics so that work on the Service Guide can continue.
+
+5.	Need ASIC specs for Falcon.

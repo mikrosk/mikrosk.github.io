@@ -1,0 +1,150 @@
+[PageStream 2 document TT300001.DOC: 8.50 x 11.00 in, 165 objects]
+
+--- Page 1 ---
+
+Atari Technical Bulletin
+Number: TT30-0001
+Date: December 12, 1991
+Page 1 of 5
+
+
+Product(s) Affected:	TT030, (MEGA STE)
+Model:				TT030/2/4/8, MEGA STE/1/2/4
+Type of ATB:			As Needed
+ECO #:				N/A
+
+
+Reason for ATB:
+
+There have been many reports from the Field and Manufacturing regarding various Floppy Drive problems.  One cause for this has been determined.  All TT030 and MEGA STE systems built to date have had the power and logic cables sandwiched between the Floppy Drive and the VME shield.  This bulk of cables causes enough of an obstacle to force the drive housing to bend when the top and bottom cases of the computer are assembled.  This bend in the drive frame will cause random Read/Write errors when accessing the Floppy Drive.
+
+
+Notes:
+
+The specification from EPSON requires the Floppy Drive to be mounted flat, with no more that 0.3 mm of variance.  This mounting specification may also be violated if the Floppy Drive is not mounted to the Mounting Bracket correctly.  It is highly unlikely that any system would have left the factory with this problem, but the correct configuration is addressed in this Technical Bulletin just in case.
+
+Another cable routing problem that can contribute to Floppy Drive problems is     when the Floppy power cable is in close proximity to the logic cable connector on the Drive.
+
+
+Symptoms of Problem:
+
+1.	)	Format Errors when trying to format a High Density Diskette.
+
+2.)	Floppy Drive errors when running the Floppy Test using the Diagnostic Cartridge.
+
+3.)	Random Read/Write errors when accessing Floppy Drive.
+
+--- Page 2 ---
+
+Atari Technical Bulletin
+Number: TT30-0001
+Date: December 12, 1991
+Page 2 of 5
+
+
+Tests to Determine if Problem Exists:
+
+Test for Symptom 1.
+
+1.)	Power up system.  Make sure you have a blank diskette of the correct media type inserted in the drive.  Point mouse to the FILE pulldown menu so the FORMAT option is available.  Click on the FORMAT option, then select DRIVE A: and DOUBLE DENSITY (if you have a HIGH DENSITY DRIVE in your system, select HIGH DENSITY).  If the system has the problems noted in this Technical Bulletin, a format error should normally occur within 5 consecutive tries.
+
+Test for Symptom 2.
+
+1.)	With the system powered off, insert the Diagnostic Cartridge into the Cartridge slot in the left side of the computer.  Power the system up and choose the 'F'loppy test option.
+
+2.)	When the Floppy Test option menu appears, choose 7 - Install Disk Drives.  Select the number corresponding to the Drive Type in your system.  When the Floppy Disk Drive Routine menu appears again, choose 1 - Quick Test.  Make sure you have a blank diskette of the correct media type inserted in the drive.  If no error was detected, the screen will turn green, and PASS will appear in the upper right corner of the screen.  Hit the space bar to get back to the Floppy Test menu and choose 1 again.  If the system has the problems noted in this Technical Bulletin, an error should occur within 10 cycles.
+
+Test for Symptom 3.
+
+1.)	Power up the computer and boot under the TOS operating system.  If you experience any Floppy read or write problems (with a known good disk), you may have a cable routing problem with your Floppy Drive.
+
+
+Solution:
+
+1.)	Remove all peripheral connections to the computer (keyboard, monitor, power cord, etc..).  Turn the computer over and remove the ten screws in the bottom case that are in the square holes (these are the screws that hold the top and bottom case together).  Also remove the screw holding the Hard Drive Accessory Cover.  Carefully turn over the computer, making sure to hold the Hard Drive Cover.
+
+--- Page 3 ---
+
+Atari Technical Bulletin
+Number: TT30-0001
+Date: December 12, 1991
+Page 3 of 5
+
+
+2.)	Lift off the top case and set it behind the bottom case.  Check to make sure the Floppy Drive is mounted to the Mounting Bracket as shown in Figure 1.  If it is not, remove the screws holding the bracket to the plastic case.  Remove the four screws holding the Drive to the bracket. Re-assemble the drive onto the bracket as in Figure 1.  Mount the bracket with the attached drive to the plastic case of the computer.
+
+3.)	Route the cables as shown in Figure 2.  Make sure the Ribbon Cable is behind mounting hole so it does not interfere with mounting post when computer is re-assembled.  After cables are routed, assemble the top case onto the bottom case, making sure no cables are caught between the housings.  Turn the computer over and install the 10 screws.  Remember to tighten the Hard Drive Cover screw.
+
+4.)	Turn the computer right side up and connect the power cord, monitor, and keyboard.  Run the tests as described in Tests to Determine if Problem Exists.  All tests should now pass.
+
+--- Page 4 ---
+[21 drawing objects, see TT300001.DOC.p004.svg]
+
+Atari Technical Bulletin
+Number: TT30-0001
+Date: December 12, 1991
+Page 4 of 5
+
+
+NOTE:	Mounting Bracket offset MUST BE away from the drive as shown above!
+
+C300840-001
+Mounting
+Bracket
+
+Mounting
+Screws
+
+Mounting
+Screws
+
+2 MB Floppy Drive
+
+Mounting
+Post
+
+Mounting
+Post
+
+Computer Case (Top Housing)
+
+Figure 1
+
+--- Page 5 ---
+[102 drawing objects, see TT300001.DOC.p005.svg]
+
+Atari Technical Bulletin
+Number: TT30-0001
+Date: December 12, 1991
+Page 5 of 5
+
+
+Hole in PCB for Mounting Post on Top Housing. Be sure ribbon cable is behind mounting post when Top and Bottom Housings are assembled.
+
+Tape
+
+5.00 Inches
+
+FDD
+Power
+Harness
+
+Floppy I/F
+Cable
+
+Tape
+
+1
+
+Power Supply
+
+HDD
+Power
+Harness
+
+VME Housing
+Bracket
+
+1
+
+Figure 2

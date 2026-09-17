@@ -1,0 +1,15 @@
+File: EASYDRAW/SUNNYVAL/ATXLOGO.GEM
+Format: GEM Metafile version 3.10, 24-word header, RC coordinates (flag 2)
+Header extents: (-3818,-1318)-(3301,736)
+Page size: 181.2 x 54.9 mm
+Coordinate window: lower-left (-3821,1347), upper-right (3314,-818); rendered with y axis down, 39.38 units/mm
+Drawing bounding box (file units): (-3818,-1338)-(3305,809)
+Items: 157 (9452 words)
+Objects: fill area (bezier) 114
+Other records (escapes, application data): bezier on/off x2, write_meta 10 x18
+Text strings: 0
+
+No text objects in this file (any lettering is drawn as vector strokes or outlines).
+
+LABELS READ FROM THE RENDERED IMAGE (lettering here is vector graphics, not text data; transcribed visually in reading order, may contain reading errors)
+ATARI / MICROSYSTEMS / CORPORATION

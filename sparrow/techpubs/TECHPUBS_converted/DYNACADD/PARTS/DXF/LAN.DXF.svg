@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2448" height="1900.07" viewBox="0 0 2448 1900.07">
+<title>DYNACADD/PARTS/DXF/LAN.DXF</title>
+<rect x="0" y="0" width="2448" height="1900.07" fill="#ffffff"/>
+<g data-layer="10" fill="#000000" stroke="#000000" stroke-width="0.5">
+<polygon points="1049.23,428.63 1049.23,135.24 1397.21,135.24 1397.21,135.24"/>
+</g>
+<g data-layer="10" fill="none" stroke="#000000" stroke-width="119.25" stroke-linecap="butt" stroke-linejoin="miter">
+<path d="M372.11 935.53A851.91 851.91 0 0 0 2075.92 935.53A851.91 851.91 0 0 0 372.11 935.53Z"/>
+</g>
+<g data-layer="10" fill="none" stroke="#000000" stroke-width="99.32" stroke-linecap="butt" stroke-linejoin="miter">
+<path d="M1603.85 1052.75A44.7 44.7 0 0 0 1693.24 1052.75A44.7 44.7 0 0 0 1603.85 1052.75ZM1171.54 1052.75A44.69 44.69 0 0 0 1260.93 1052.75A44.69 44.69 0 0 0 1171.54 1052.75ZM737.79 1059.92A44.7 44.7 0 0 0 827.18 1059.92A44.7 44.7 0 0 0 737.79 1059.92ZM1007.38 1433.99A44.7 44.7 0 0 0 1096.77 1433.99A44.7 44.7 0 0 0 1007.38 1433.99ZM1349.66 1433.99A44.7 44.7 0 0 0 1439.05 1433.99A44.7 44.7 0 0 0 1349.66 1433.99ZM1172.06 704.44A44.7 44.7 0 0 0 1261.45 704.44A44.7 44.7 0 0 0 1172.06 704.44ZM1521.6 697.27A44.69 44.69 0 0 0 1610.99 697.27A44.69 44.69 0 0 0 1521.6 697.27ZM835.73 712.89A44.7 44.7 0 0 0 925.12 712.89A44.7 44.7 0 0 0 835.73 712.89Z"/>
+</g>
+<g data-layer="10" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M1049.23 428.63L1397.21 428.63M1049.23 135.24L1049.23 428.63M1397.21 428.63L1397.21 135.24"/>
+</g>
+<g data-layer="10" fill="#000000" stroke="none" font-family="Helvetica, Arial, 'Liberation Sans', 'DejaVu Sans', sans-serif" xml:space="preserve">
+<text transform="translate(87.33 1146.55)" y="0" font-size="236.34">6</text>
+<text transform="translate(411.19 1816.45)" y="0" font-size="236.34">8</text>
+<text transform="translate(1891.18 1796.33)" y="0" font-size="236.34">7</text>
+<text transform="translate(83.63 752.35)" y="0" font-size="236.34">3</text>
+<text transform="translate(2218.8 1143.76)" y="0" font-size="236.34">4</text>
+<text transform="translate(2187.82 757.84)" y="0" font-size="236.34">1</text>
+</g>
+</svg>

@@ -1,0 +1,260 @@
+       DESIGN SPECIFICATION FOR THE FALCON IO CONTROLLER
+
+Incarnations:  
+
+1. Pin Description
+=================================================================
+=====
+
+=================================================================
+=====
+2. PACKAGE
+=================================================================
+=====
+=================================================================
+=====
+=================================================================
+=====
+3. FUNCTIONAL DESCRIPTION
+=================================================================
+=====
+
+The FALCON IO controller brings in several miscellaneous IO
+functions
+necessary to support the TT/ST IO map. The duplication of the IO
+map
+is necessary for TOS compatibility. Because the FBUS does not
+support
+dynamic bus sizing, a main function of the IO controller is to
+create
+a 68000 like 16 bit bus. All legal FBUS cycles are mapped to this
+IO
+bus. This IO bus consist of 68000 like AS, LDS, UDS, address, and
+16
+bit data in addition to the particular chip selects for the
+various
+IO devices. The IO controller also contains a TT like interrupt
+circuit for system and VME interrupt control.
+
+-----------------------------------------------------------------
+-
+
+Functions from the TT SCU chip
+ xx is A24-A31 = 00h or FFh
+
+Bus mode 1 (030)
+XFPUCS is generated for CPU space cycles with ID 01.
+(FC0=FC1=FC2=A17=A13= 1  A19=A18=A16=A15=A14= 0)
+
+Bus mode 0 (040)
+XFPUCS is not generated.
+
+
+xxFFA000-xxFFA1FF   GENERATES XIOCS1    uncommitted IO
+xxFFA200-xxFFA3FF   GENERATES XIOCS2    selects
+
+Both chip selects have timing similar to the IO bus address
+strobe.
+
+xxFFFA00-xxFFFA3F   GENERATES MFP1
+xxFFFA80-xxFFFABF   GENERATES MFP2
+
+Both chip selects have timing similar to the IO bus address
+strobe.
+
+Interrupt controller registers
+
+ADDR      D7  -  D0
+xxFF8E01  XXXX XXX0 SYSTEM INTERRUPT MASK
+                    0 in a bit position masks the corresponding
+                    system interrupt. Reset state is all masked.
+
+xxFF8E03  XXXX XXX1 SYSTEM INTERRUPT STATE
+                    Inverse of the actual state of the system
+                    interrupts taken before the mask gates.
+
+xxFF8E05  XXXX XXX* SYSTEM INTERRUPTER REGISTER
+                    Setting bit 0 will generate system
+                    interrupt 1 unless masked.
+                    Otherwise all bits are general read/write.
+
+xxFF8E07  XXXX XXX* VME INTERRUPTER REGISTER
+                    Setting bit 0 will cause XSIRQ to go low
+                    if not masked by system interrupt mask 3.
+                    Otherwise all bits are general read/write.
+
+xxFF8E09  XXXX XXXX GENERAL PURPOSE REGISTER 1
+                    8 bit read/write.
+
+xxFF8E0B  XXXX XXXX GENERAL PURPOSE REGISTER 2
+                    8 bit read/write.
+
+xxFF8E0D  XXXX XXX0 VME INTERRUPT MASK
+                    0 in a bit position masks the corresponding
+                    VME interrupt. Reset state is all masked.
+
+xxFF8E0F  XXXX XXX0 VME INTERRUPT STATE
+                    Inverse of the actual state of the VME
+                    interrupts taken before the mask gates.
+
+There are two ways each interrupt level can be generated; via the
+system
+or local interrupt source or by the XVIRQx input pins. The system
+interrupt sources are masked by the system interrupt mask
+register bits.
+The XVIRQx inputs are masked by the VME interrupt mask register
+bits.
+
+Interrupt 1 is caused by setting bit 0 in the system interrupter
+register or a low on XVIRQ1. The bit must be explicitly reset or
+the
+external interrupt removed or masked to clear.
+
+Interrupt 2 is caused by a rising edge on HSYNC or a low on
+XVIRQ2. If caused by HSYNC it is reset by an IACK (2) cycle else
+the
+external interrupt must be removed or masked. Caution should be
+taken
+that an IACK (2) cycle as a result of XVIRQ2 does not clear a
+subsequent
+HSYNC interrupt.
+
+Interrupt 3 is caused by setting bit 0 in the VME interrupter
+register or a low on XVIRQ3. The bit must be explicitly reset or
+the
+external interrupt removed or masked to clear.
+
+Interrupt 4 is caused by a rising edge on VSYNC or a low on
+XVIRQ4. If caused by VSYNC it is reset by an IACK (4) cycle else
+the
+external interrupt must be removed or masked. Caution should be
+taken
+that an IACK (4) cycle as a result of XVIRQ4 does not clear a
+subsequent
+VSYNC interrupt.
+
+Interrupts 5 and 6 are caused by a low on XVIRQ5 or XVIRQ6 
+respectivly. An IACK (5) or IACK (6) cycle will generate a low on
+XIACK5
+or XIACK6 respectivly only if the XSIRQ5 or XSIRQ6 inputs are
+low.
+The external interrupt must be removed or the interrupt masked to
+clear.
+
+A low on XSIRQ7 or XVIRQ7 will cause interrupt 7. The external
+interrupt
+must be removed or the interrupt masked to clear.
+
+During the interrupt acknowledge cycle, if the local interrupt
+state
+exists for the level being acknowledged (ie. VSYNC, HSYNC, the
+interrupter
+bits set, or the appropriate XSIRQ pin low), then the XSYSI line
+is
+driven low and either the XIACK pin for level 5 or 6, or the
+XAVEC pin
+for levels 1,2,3,4,or 7, is driven low. If the local interrupt
+state is
+not present, the interrupt must have come from the VME bus. In
+this case
+the XSYSI pin remains high and both the XIACK pins and the XAVEC
+pin
+remain high.
+
+-----------------------------------------------------------------
+--
+
+ST PSG chip
+
+The GIBC1 and GIDIR lines control the ST sound chip as follows:
+
+ADDR           GIBC1     GIDIR
+xxFF8800  READ        1       0
+xxFF8800  WRITE            1       1
+
+xxFF8802  READ        0    0
+xxFF8802  WRITE            0    1
+
+An internal state machine times the signals to meet the
+requirements
+of the ST sound chip. (see data sheet)
+
+-----------------------------------------------------------------
+------
+Real Time Clock
+
+The XRTC, RTCAS, and RTCDS pins control the clock chip as
+follows:
+
+ADDR                XRTC RTCAS     RTCDS
+xxFF8960  READ        0       0       0 not used
+xxFF8960  WRITE            0       1       0 write address
+xxFF8962  READ/WRITE       0       0       1 data transfer
+
+A state machine times the signals to comply with the requirements
+of the clock chip. (see MC146818A data sheet)
+
+-----------------------------------------------------------------
+-------
+6800 Periferals
+
+Addresses xxFFFC0X will generated the KBDCS signal. This signal
+is
+synchronized with the E clock to confrom to 1mhz 6800 timing. The
+E clock is a free running 1mhz clock. (see the MC6850 data sheet)
+
+-----------------------------------------------------------------
+-------
+ST cartridge port
+
+The ST cartridge port requires two chip selects. Selects are
+active
+for reads in the indicated address range.
+
+xxFFFA0000-xxFFFAFFFF    cartridge A
+xxFFFB0000-xxFFFBFFFF    cartridge B
+
+Both chip selects have timing similar to the IO bus address
+strobe.
+
+-----------------------------------------------------------------
+-------
+Video port
+
+Two chip selects are needed for video. CLUT will be active for
+the
+ranges:
+xxFF8240-xxFF825F   ST color palette
+xxFF8400-xxFF85FF   TT color palette
+xxFF9800-xxFF9BFF   FALCON color palette
+
+
+VREG will be active for the address range:
+xxFF8200-xxFF82FF
+
+Both chip selects have timing similar to the IO bus address
+strobe.
+
+-----------------------------------------------------------------
+-------
+Misc. Glue functions
+
+The XCIIN line is used to disable caching for IO addresses (see
+FALCON
+spec memory map).
+                           
+
+IO BUS
+-----------------------------------------------------------------
+-------
+
+The IO bus mimics an 8mhz 68000 bus. The CLUT ram and cartridge
+port
+reside on this bus as do the AICAs, MFPs, and PSG.
+
+
+***Note to designer*** If the timing of the IO bus works out such
+that buffered FBUS address lines cannot be used, then the IO
+controller must provide address lines which conform to the IO bus
+timing. At least A1-A11 will be needed by the video circuit.
+

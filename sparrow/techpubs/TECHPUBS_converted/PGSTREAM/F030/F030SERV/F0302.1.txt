@@ -1,0 +1,810 @@
+[PageStream 2 document F0302.1: 8.50 x 11.00 in, 421 objects]
+
+--- Page 7 ---
+
+SECTION TWO
+THEORY OF OPERATION
+
+
+2.0 OVERVIEW
+
+The section discusses in general the components which make up the FALCON030 system and how they interrelate with one another. This will give you a basic working knowledge of the system's architecture necessary to repair most hardware failures which may occur. Other sections are provided in this manual to aid in use of diagnostics and troubleshooting techniques. The system is divided into three main categories. Main system, Audio/Video Subsystem, and I/O Subsystem. Each category will be covered separately along with any other components that may lie outside that section as it relates to that section's function within the system.
+
+
+2.1 MAIN SYSTEM
+
+The components which make up the main system are as follows:
+
+• Motorola  MC68030FG Microprocessor
+• Optional Motorola MC68881/MC68882 Coprocessor
+• 512 Kbyte ROM
+• 1, 4, 14 Mbytes RAM
+• COMBO IC
+- Memory Control Unit (MCU)
+- Clock Dividers
+- Interrupt Priority and Illegal Condition Detection
+- Chip Selects
+- Paddle Circuitry
+- Joystick Circuitry
+- Light Gun Circuitry
+- BLITTER
+• DMA Support (SDMA IC)
+• Real-Time Clock (1287 IC)
+• System Timing and Bus Control (SDMA)
+• Configuration Switch (S56, S57)
+
+2.1.1 MC68030 Microprocessor
+
+The Motorola MC68030FG is a 32-bit enhanced microprocessor which contains a central processing unit (CPU), enhanced bus controller, 256 byte instruction and data caches, and a memory management unit (MMU). The microprocessor is operated at 16 MHz.
+
+The MC68030FG implements sixteen 32-bit general purpose data registers, two 32-bit supervisor stack pointers, ten special purpose control registers, and separate 32-bit non multiplexed address and data bus.
+
+--- Page 8 ---
+
+2.1.1.1 MC68030FG Pin List and Signal Description
+
+General Function
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+12,10,9
+
+FC0-FC2
+
+Output
+
+3-bit function code used to identify the address space of each bus cycle.
+
+21-22,58-58,33-31,29-26,36,24-23,56-51,48
+
+A0-A31
+
+Output
+
+32-bit address bus.
+
+75-76,78-83,86-89,91-94,96-99,101-104,106-109,11-114
+
+D0-D31
+
+I/O
+
+32-bit data bus.
+
+120,119
+
+SIZ0-SIZ1
+
+Output
+
+Transfer Size bits indicate the number of bytes remaining to be transferred for the current bus cycle. These signals together with A0 and A1 define the active sections of the data bus.
+
+Bus Control Signals
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+117
+
+R/(W)-
+
+Output
+
+Read/Write- indicates whether the current bus cycle is a read or write cycle. When low it indicates a write cycle, when high it indicates a read cycle.
+
+124
+
+DS-
+
+Output
+
+Data Strobe indicates that a device should put valid data on the data bus during a read cycle. During a write cycle this signal indicates that the MC68030 has placed valid data on the bus.
+
+125
+
+AS-
+
+Output
+
+Address Strobe indicates that a valid address is on the adress bus. The R/(W)-, FC0-FC2, and SIZ0-SIZ1 are also valid when this signal is asserted.
+
+3,132
+
+DSACK0
+DSACK1
+
+Input
+
+Data Transfer and Size Acknowledge 0 and 1 indicate the completion of a requested data transfer operation and also indicate the size of  the external bus port at the end of that completion.
+
+--- Page 9 ---
+
+Bus Control Signals
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+131
+
+STERM-
+
+Input
+
+Synchronous Termination indicates that the addressed port size is 32-bits and that the data is to be latched on the next falling clock edge for a read cycle. This active lowsignal is tied high in the FALCON030 System.
+
+Cache Control Signals
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+122
+
+CIIN-
+
+Input
+
+Cache Inhibit Input prevents data from being loaded into the MC68030 instruction and data caches. This signal is ignored during all write cycles.
+
+Interrupt Control Signals
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+70,69,68
+
+IPL0-
+IPL1-
+IPL2-
+
+Input
+
+Interrupt Priority Level 0-2 provide an indication of an interrupt condition and the encoding of the interrupt level from a peripheral or external prioritizing logic. IPL2- is the most significant bit of the level number.
+
+7
+
+AVEC-
+
+Input
+
+Autovector indicates that the MC68030 should generate an automatic vector during an interrupt acknowledge cycle.
+
+Bus Control Signals
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+20
+
+BR-
+
+Input
+
+Bus Request indicates that an external device needs to become the bus master.
+
+16
+
+BG-
+
+Output
+
+Bus Grant indicates that the MC68030 will release ownership of the bus when the current processor bus cycle completes.
+
+17
+
+BGACK-
+
+Input
+
+Bus Grant Acknowledge indicates that an external device has become bus master.
+
+Bus Exception Control Signals
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+84
+
+RESET-
+
+I/O
+
+Reset is used to initiate a system reset. As an input the MC68030 is reset. As an output only external devices are reset.
+
+129
+
+HALT-
+
+Input
+
+Halt indicates that the processor should suspend bus activity or, when used with BERR, that the processor should retry the current cycle.
+
+130
+
+BERR-
+
+Input
+
+Bus Error indicates that an invalid bus operation is being attempted or, when used with HALT-, that the processor should retry the current bus cycle.
+
+--- Page 10 ---
+
+Other Signals
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+6
+
+CLK
+
+Input
+
+Clock is the input clock to the MC68030. In the FALCON030 system it can be selected through the COMBO IC to be either 16 MHz or 8 MHz.
+
+65,71,73
+
+EM0
+EM1
+EM2
+
+Input
+
+Emulator support signals. These signals are tied high.
+
+L6,K4, K10,H3,H11,F2, F11,D4, D10,C6
+
+Vcc
+
+Input
+
+Power supply for MC68030
+
+L5,L7-L9,J3,J11,G3,G11, F3,F11,E3,E11,C5, C7,C9
+
+GND
+
+Input
+
+Ground for MC68030.
+
+2.1.2 Optional MC68882 Coprocessor
+
+The FALCON030 system comes equipped with a socket for an optional Motorola MC68881/MC68882 coprocessor. The coprocessor interfaces to the MC68030 via standard MC68000 bus transfers and is clocked at the same rate as the MC68030. Both data transfers and exception processing are done at the request of the coprocessor, allowing memory management, address errors, bus errors, and bus arbitration to function as if the instructions were being executed by the MC68030.
+
+2.1.2.1 MC68882 Pin List and Signal Description
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+26-22
+
+A0-A4
+
+Input
+
+Address Bus signals are used by the MC68030 to select the CIR locations in the CPU address space. Both A0 and SIZE- signals are tied high in the FALCON030 system to indicate a 32-bit data bus.
+
+1,2,3,64-68,62,60-33
+
+D0-D31
+
+I/O
+
+Data Bus signals D0-D31 serve as the general-purpose data path between the MC68030 and MC68882.
+
+--- Page 11 ---
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+18
+
+SIZE-
+
+Input
+
+Size is used in conjunction with the A0 signal to configure the MC68882 for 32-bit operation. SIZE- is tied high in the FALCON030 system for 32-bit data bus operation.
+
+21
+
+AS-
+
+Input
+
+Address Strobe indicates a valid address on the address bus and valid signals for chip select (CS-) and Read/Write (R/(W)-).
+
+29
+
+CS-
+
+Input
+
+Chip Select enables the MC68030 to access the MC68882's CIRs.
+
+28
+
+R/(W)-
+
+Input
+
+Read Write indicates the direction of a bus transaction. A high indicates a read from the MC68882, a low indicates a write to the MC68882.
+
+20
+
+DS-
+
+Input
+
+Data Strobe indicates that valid data is on the data bus during a write bus cycle.
+
+31-32
+
+DSACK0-
+DSACK1-
+
+Output
+
+Data Transfer Size and Acknowledge 0 and 1 indicate the completion of a bus cycle to the MC68030. The MC68882 asserts both signals upon the assertion of CS-.
+
+13
+
+RESET-
+
+Input
+
+Reset causes a reset of the MC68882.
+
+11
+
+CLK
+
+Input
+
+Clock is the input clock of the MC68882 and is the same frequency as the input clock of the
+MC68030.
+
+4
+
+ SENSE-
+
+I/O
+
+Sense is tied high in the FALCON030 system to indicate the MC68882 is present.
+
+10,16,17,
+27,43,52-53, 61
+
+Vcc
+
+Input
+
+Power for the MC68882.
+
+5,6,7,8,9,
+12,14,19,
+30,41,51,
+63
+
+GND
+
+Input
+
+Ground for the MC68882.
+
+2.1.3 ROM
+
+One socket is provided in the system for the installation of ROM (read only memory) IC. The total amount of ROM shipped with the system is 512Kbytes. The ROM is accessed through an 18-bit bus path via the ADDR1-ADDR18 lines.
+
+--- Page 12 ---
+
+The system ROM also provides an 16-bit data path via the DATA0-DATA15 lines. By default the system supports 125ns ROMs. An image of the first eight bytes of ROM resides in the first eight bytes of the system RAM area. The first eight bytes, located at 0x00000000-0x00000007, are accessible only in supervisor mode.
+
+Any attempt to write or attempt to read from this in user mode causes a bus error. The full ROM memory map resides at addresses 0x00E00000-0x00EFFFFF.
+
+The tasks performed by the system ROM are as follows:
+
+• System Initialization
+• Boot from Floppy or Hard disk
+• TOS Operating System
+
+
+2.1.4 System RAM
+
+System RAM is physically made up of a daughter card containing 8 256K X 4, 8 1M X 4, or 32 4M X 1 DRAMs located in two banks. This architecture yields configurations of 1 Mbyte, 4 Mbytes, or 16 Mbytes of RAM used in a dual-purpose role for both system memory and video memory.
+
+The daughter board is plugged into the main logic card via a 30-pin and 50-pin dual connector. This implementation also provides a full 32-bit data path to the VIDEL IC via the D0-D31 data bus lines. The standard configuration shipped with the system is 1Mbyte. Even though a total of 16 Mbytes of RAM may be available with 4M X 1 DRAMs installed, for compatibility with the STE, only 14 Mbytes of RAM may be accessed.
+
+
+The RAM is addressed via eleven address lines (A0-A10). Row and Column selection is accomplished through the XRAS0, XRAS1, XCAS0L, XCAS0H, XCAS1L, and XCAS1H signals. Write enable for the RAM is provided by the XWE signal. On-board accesses to RAM are usually four clock cycles long, with no parity or ECC correction. Video data is accessed using fast page mode in bursts of 17 32-bit words. The data will fill the video FIFO in the VIDEL IC. The Memory Daughter Board identifies the amount of RAM present via two pins used on the Memory Daughter Board 50-pin connector.
+
+The first 800 bytes, 0-0x800, are accessible only in supervisor mode. Any attempt to read or write to these locations in user mode causes a bus error.
+
+--- Page 13 ---
+[104 drawing objects, see F0302.1.p013.svg]
+
+2.1.4.1 System RAM Connector Pin List
+
+2.1.4.1.1 50-{in Connector J17
+
+25
+
+1
+
+26
+
+50
+
+50-Pin Connector J17
+
+Pin
+
+Signal
+
+Pin
+
+Signal
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+31
+33
+35
+37
+39
+41
+43
+45
+47
+49
+
+Ground
+Memory Data 15
+Memory Data 13
+Memory Data 11
+Ground
+Memory Data 9
+Memory Data 7
+Memory Data 5
+Vcc
+Memory Data 3
+Memory Data 1
+Memory Size 0
+Vcc
+Vcc
+Memory Data 17
+Memory Data 19
+Memory Data 21
+Vcc
+Memory Data 23
+Memory Data 25
+Ground
+Memory Data 27
+Memory Data 29
+Memory Data 31
+Ground
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+32
+34
+36
+38
+40
+42
+44
+46
+48
+50
+
+Vcc
+Memory Data 14
+Memory Data 12
+Memory Data 10
+Vcc
+Memory Data 8
+Memory Data 6
+Ground
+Memory Data 4
+Memory Data 2
+Memory Data 0
+Ground
+Ground
+Memory Data 16
+Memory Data 18
+Memory Data 20
+Ground
+Memory Data 22
+Memory Data 24
+Memory Data 26
+Vcc
+Memory Data 28
+Memory Data 30
+Memory Size 1
+Vcc
+
+--- Page 14 ---
+[64 drawing objects, see F0302.1.p014.svg]
+
+2.1.4.1.2 30-Pin Connector J6
+
+15
+
+1
+
+16
+
+30
+
+30-Pin Connector J6
+
+Pin
+
+Signal
+
+Pin
+
+Signal
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+
+Ground
+Ground
+Memory Address 7
+Memory Address 5
+Memory Address 3
+Memory Address 1
+Ground
+Vcc
+Ground
+Memory Address 10
+Write Enable
+Row Address Select 1
+Column Address Select 0 Low
+Column Address Select 1 Low
+Vcc
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+
+Ground
+Memory Address 8
+Memory Address 6
+Memory Address 4
+Memory Address 2
+Memory Address 0
+Vcc
+Ground
+Vcc
+Memory Address 9
+Row Address Select 0
+Column Address Select 0 High
+Column Address Select 1 High
+Ground
+Vcc
+
+--- Page 15 ---
+
+2.1.5 COMBO IC
+
+The COMBO IC contained in the FALCON030 system integrates several functions. These can be summarized as follows:
+
+• Memory Control Unit (MCU)
+• Interrupt Priority and Illegal Condition Detection
+• Clock Dividers
+• Chip Selects
+• Paddle Circuitry
+• Joystick Circuitry
+• Light Gun Circuitry
+• Blitter (Graphics Coprocessor)
+
+
+2.1.5.1 Memory Control Unit (MCU)
+
+The Memory Controller portion of the COMBO IC takes addresses from the address bus (A1-A23) and converts them to Row and Column Addresses for DRAM with RAS and CAS Strobes. It also generates chip selects for ROM and I/O peripherals. All RAM accesses are controlled by the MCU, which is programmable for up to 14 Megabytes of memory.
+
+Memory size is determined via two configuration pins set in hardware on the Memory Daughter Board. The Memory Controller refreshes the dynamic RAMs and loads the VIDEL IC with display data. The Memory Controller produces all of the addresses for video, refresh, and CPU/DMA on the multiplexed address bus.
+
+
+2.1.5.2 Interrupt Mask and Status Control
+
+The COMBO IC in the FALCON030 system is used both for the masking of interrupts and the storing of current interrupt status. The interrupt priorities in the system are as follows:
+
+Hardware within the COMBO IC allows the enabling of interrupt levels 1 and 3 as external VPA positive edge interrupts. This allows the use of either interrupt level for devices such as the parallel port or IDE port. Hardware is also present allowing the use of interrupt level 5 as a external negative edge interrupt. The COMBO IC uses the output signals IPL0-IPL2 to tell the microprocessor the priority of the interrupt being requested.
+
+Interrupt Level
+
+Priority
+
+Open (Bus)
+MFP Interrupts and DSP
+85C30 LAN IC
+Vertical Blanking (VSYNC)
+Open (Bus)
+Horizontal Blanking (HSYNC)
+Open (Bus)
+
+7 (Highest)
+6
+5
+4
+3
+2
+1 (Lowest)
+
+--- Page 16 ---
+
+2.1.5.2.1 Interrupt Priority Level Signal Definition
+
+
+2.1.5.3 Bus Error Circuitry and Illegal Condition Detect
+
+Bus error circuitry is contained in the COMBO IC that causes a bus error signal (BERR) to be sent to the 68030 if certain conditions occur. These conditions are listed as follows:
+
+• A bus cycle is not concluded within 16 micro seconds (programmable to 32usec)
+• An attempt to write to ROM
+• Writing the wrong size data into a register
+• Writing system memory when in user mode
+
+
+2.1.5.4 Clock Dividers
+
+The COMBO IC takes the 32-MHz clock and outputs 16 MHz, 8 MHz, 4 MHz, and 500-kHz clocks.
+
+
+2.1.5.5 Chip Selects
+
+The COMBO IC decodes addresses to generate chip selects to the 6850s (N6850), MFP (MFPSC), VIDEL Video Chip (VCS), Real-Time Clock (RTCCS), Programmable Sound Generator (SNDCS), Coprocessor (FPUCS), Memory Controller, Cartridge ROM (ROM3, ROM4), IDE Hard Disk (HIDECS0, HIDECS1), and Operating System ROM (ROM2).
+
+
+2.1.5.6 Paddle Circuitry
+
+The COMBO IC contains the circuitry necessary to interface a pair of paddles through the joystick port. Input signals PAD0X, PAD1X, PAD0Y, and PAD1Y are used for direction control feed from the paddles themselves. The PADRST signal is used as a paddle reset.
+
+
+2.1.5.7 Joystick Circuitry
+
+The COMBO IC also contains the circuitry necessary to support the interface of a pair of joysticks to the system. Input signals JOYRH and JOYRL are read enables, while JOYWH and JOTWL are write enables. The BUTTON signal is used as a fire button enable signal.
+
+IPL2
+
+IPL1
+
+IPL0
+
+Interrupt Level
+
+1
+1
+1
+0
+0
+0
+0
+
+0
+1
+0
+1
+0
+1
+0
+
+1
+0
+0
+1
+1
+0
+0
+
+Level 1
+Level 2
+Level 3
+Level 4
+Level 5
+Level 6
+Level 7

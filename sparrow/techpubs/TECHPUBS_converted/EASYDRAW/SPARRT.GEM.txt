@@ -1,0 +1,15 @@
+File: EASYDRAW/SPARRT.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-5036,-984)-(4410,1178)
+Page size: 330.2 x 203.2 mm
+Coordinate window: lower-left (-5915,3640), upper-right (5915,-3640); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-5036,-984)-(4410,1178)
+Items: 749 (4541 words)
+Objects: polyline 242
+Other records (escapes, application data): write_meta 10 x1, write_meta 150 x1, write_meta 151 x1, write_meta 158 x1, write_meta 160 x1, write_meta 80 x242, write_meta 81 x242
+Text strings: 0
+
+No text objects in this file (any lettering is drawn as vector strokes or outlines).
+
+LABELS READ FROM THE RENDERED IMAGE (lettering here is vector graphics, not text data; transcribed visually in reading order, may contain reading errors)
+(no lettering)

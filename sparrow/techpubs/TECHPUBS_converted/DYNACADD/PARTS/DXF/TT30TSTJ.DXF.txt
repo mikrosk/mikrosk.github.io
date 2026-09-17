@@ -1,0 +1,101 @@
+DXF drawing: DYNACADD/PARTS/DXF/TT30TSTJ.DXF
+Render: TT30TSTJ.DXF.svg
+
+== Summary ==
+File:        43292 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font txt
+Sections:    HEADER, TABLES, BLOCKS, ENTITIES
+Extents:     header (-0.0437, 0) - (12.2063, 8.925)
+             rendered (-0.0437, 0) - (12.2063, 8.925), size 12.25 x 8.925
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: STANDARD (font txt)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            389
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: LINE 67, POLYLINE 58 (250 vertices), ARC 41, TEXT 40, INSERT 1
+             in block definitions: LINE 182
+Blocks:      1 defined
+  TT30TSTJ-G1: base (0, 0), LINE 182; inserted 1 time
+      at (0, 0) scale 1,1 rotation 0 layer 1
+Notes:
+  - 1 polylines with constant width drawn as thick strokes
+  - 1 TEXT entities are empty or blank
+
+== Text in reading order (39 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (39 items) --
+  KEYBOARD
+  J11
+  COLOR
+  MONITOR
+  ST/STE/TT DMA
+  J10
+  TEST FIXTURE
+  MONITOR
+  WITH SCOPE  |  SF314
+  SERIAL
+  LOOPBACK
+  PLUGS
+  J603
+  J604  |  J305  |  JA3  |  J304  |  J403
+  J405
+  TT/MEGASTE  |  JA2
+  LAN  |  JA1
+  LOOPBACK
+  J301
+  MIDI  |  TT030 PCB
+  LOOPBACK
+  J302  |  FLOPPY
+  VME TEST CARDS
+  1. XVME-400(SIO)
+  TEST  |  2. GREENSPRING
+  J202
+  CART.  |  VME RAM
+  J303
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+      X        Y    HEIGHT    ROT  JUST      LAYER  STYLE     TEXT
+ 2.8438   8.0938       0.1      0  center    1      STANDARD  KEYBOARD
+ 7.3937   5.8187       0.1      0  center    1      STANDARD  J11
+10.9375   5.6437       0.1      0  center    1      STANDARD  COLOR
+10.9375   5.4771       0.1      0  center    1      STANDARD  MONITOR
+ 5.5563    5.425       0.1      0  center    1      STANDARD  ST/STE/TT DMA
+ 7.4375   5.3375       0.1      0  center    1      STANDARD  J10
+ 5.5563   5.2583       0.1      0  center    1      STANDARD  TEST FIXTURE
+  1.575   4.5938       0.1      0  center    1      STANDARD  MONITOR
+  1.575   4.4271       0.1      0  center    1      STANDARD  WITH SCOPE
+ 8.6188   4.4625       0.1      0  center    1      STANDARD  SF314
+ 4.2875   4.2875       0.1      0  center    1      STANDARD  SERIAL
+ 4.2875   4.1208       0.1      0  center    1      STANDARD  LOOPBACK
+ 4.2875   3.9542       0.1      0  center    1      STANDARD  PLUGS
+ 2.1875   3.4125       0.1      0  center    1      STANDARD  J603
+    2.8    2.975       0.1      0  center    1      STANDARD  J604
+ 4.1125    2.975       0.1      0  center    1      STANDARD  J305
+ 4.8125    2.975       0.1      0  center    1      STANDARD  JA3
+    5.6    2.975       0.1      0  center    1      STANDARD  J304
+  6.475    2.975       0.1      0  center    1      STANDARD  J403
+ 9.0563   2.7563       0.1      0  center    1      STANDARD  J405
+ 1.0063   2.6688       0.1      0  center    1      STANDARD  TT/MEGASTE
+ 5.8625   2.6688       0.1      0  center    1      STANDARD  JA2
+ 1.0063   2.5021       0.1      0  center    1      STANDARD  LAN
+    2.8   2.4937       0.1      0  center    1      STANDARD  JA1
+ 1.0063   2.3354       0.1      0  center    1      STANDARD  LOOPBACK
+    2.8      2.1       0.1      0  center    1      STANDARD  J301
+ 1.0063   1.8813       0.1      0  center    1      STANDARD  MIDI
+ 5.3812   1.8813       0.1      0  center    1      STANDARD  TT030 PCB
+ 1.0063   1.7146       0.1      0  center    1      STANDARD  LOOPBACK
+    2.8    1.575       0.1      0  center    1      STANDARD  J302
+11.1562   1.6187       0.1      0  center    1      STANDARD  FLOPPY
+ 5.4688   1.3562       0.1      0  center    1      STANDARD  VME TEST CARDS
+ 5.4688   1.0229       0.1      0  center    1      STANDARD  1. XVME-400(SIO)
+ 1.6187   0.8313       0.1      0  center    1      STANDARD  TEST
+ 5.4688   0.8562       0.1      0  center    1      STANDARD  2. GREENSPRING
+ 2.8438   0.7438       0.1      0  center    1      STANDARD  J202
+ 1.6187   0.6646       0.1      0  center    1      STANDARD  CART.
+ 5.4688   0.6896       0.1      0  center    1      STANDARD  VME RAM
+ 2.8438    0.175       0.1      0  center    1      STANDARD  J303

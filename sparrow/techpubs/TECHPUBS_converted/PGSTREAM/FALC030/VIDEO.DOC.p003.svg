@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="792pt" height="612pt" viewBox="0 0 79200 61200">
+<rect x="0" y="0" width="79200" height="61200" fill="#fff"/>
+<line x1="75565" y1="57404" x2="44996" y2="57404" fill="none" stroke="#000" stroke-width="100" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="46339" y="3587" width="27878" height="52166" fill="#fff" stroke="none"/>
+<line x1="34182" y1="3738" x2="3614" y2="3738" fill="none" stroke="#000" stroke-width="100" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="34184" y1="57404" x2="3615" y2="57404" fill="none" stroke="#000" stroke-width="100" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="4931" y="5383" width="27876" height="50372" fill="#fff" stroke="none"/>
+<text y="3051.7" xml:space="preserve"><tspan x="31489.6 31948.6 32207.8 32666.8 33125.8 33385 33844" font-size="900" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-style="italic">4/20/92</tspan></text>
+<g><rect x="3612" y="2167" width="23214" height="1116" fill="#fff" stroke="none"/><text y="2974.7" xml:space="preserve"><tspan x="3612 4288.8 4566 4992.6 5319.3 5596.5 5848.5 6525.3 7052.7 7580.1 7832.1 8508.9 8935.5 9412.5 9839.1 10116.3 10593.3 11070.3 11496.9 11823.6 12150.3 12527.4 12779.4 13456.2 13933.2 14359.8 14836.8 15564 15990.6 16467.6 16744.8 17171.4 17448.6 17725.8 18202.8" font-size="900" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-style="italic">Atari DSP Developer's Documentation</tspan></text></g>
+<g><rect x="3613" y="57931" width="16190" height="1116" fill="#fff" stroke="none"/><text y="58738.7" xml:space="preserve"><tspan x="3613 4289.8 4817.2 5344.6 5596.6 5848.6" font-size="900" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-style="italic">DSP .8</tspan></text></g>
+<text y="58809.7" xml:space="preserve"><tspan x="22825 23233" font-size="800" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-style="italic">© </tspan><tspan x="23441 23918 24395 24872 25349 25601 25853 26529.8 26807 27233.6 27560.3 27837.5 28089.5 28716.8 29193.8 29520.5 29997.5 30474.5 30801.2 31227.8 31505 31782.2 32259.2" font-size="900" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-style="italic">1992, Atari Corporation</tspan></text>
+<text y="58809.7" xml:space="preserve"><tspan x="44997 45405" font-size="800" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-style="italic">© </tspan><tspan x="45613 46090 46567 47044 47521 47773 48025 48701.8 48979 49405.6 49732.3 50009.5 50261.5 50888.8 51365.8 51692.5 52169.5 52646.5 52973.2 53399.8 53677 53954.2 54431.2" font-size="900" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-style="italic">1992, Atari Corporation</tspan></text>
+<g><rect x="61363" y="57931" width="14350" height="1118" fill="#fff" stroke="none"/><text y="58738.7" xml:space="preserve"><tspan x="73000.4 73677.2 74204.6 74732 74984 75236" font-size="900" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-style="italic">DSP .5</tspan></text></g>
+</svg>

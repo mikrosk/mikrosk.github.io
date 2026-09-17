@@ -1,0 +1,45 @@
+File: EASYDRAW/SUNNYVAL/DB9.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-3020,-4380)-(2860,-400)
+Page size: 203.2 x 254.0 mm
+Coordinate window: lower-left (-3640,4550), upper-right (3640,-4550); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-3020,-4302.67)-(2800,-489.67)
+Items: 167 (1380 words)
+Objects: polyline 4, ellipse 9, elliptical arc 13, justified text 26
+Other records (escapes, application data): write_meta 10 x5, write_meta 150 x1, write_meta 151 x5, write_meta 152 x8, write_meta 153 x8, write_meta 154 x22, write_meta 158 x1, write_meta 160 x1, write_meta 80 x17, write_meta 81 x17
+Text strings: 26
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+  -3020   -4060  [font 7 24pt]  SERIAL PORT 
+
+  -2960   -3410  [font 7 12pt]  DB9 Male
+
+  -2270   -2280  [font 7 12pt]  Pin
+  -2270   -1800  [font 7 12pt]  1
+  -2270   -1640  [font 7 12pt]  2 
+  -2270   -1480  [font 7 12pt]  3
+  -2270   -1320  [font 7 12pt]  4
+  -2270   -1160  [font 7 12pt]  5
+  -2270   -1000  [font 7 12pt]  6
+  -2270    -840  [font 7 12pt]  7
+  -2270    -680  [font 7 12pt]  8
+  -2270    -520  [font 7 12pt]  9
+
+   -740   -2280  [font 7 12pt]  Signal
+   -740   -1800  [font 7 12pt]  Carrier Detect
+   -740   -1640  [font 7 12pt]  Receive
+   -740   -1480  [font 7 12pt]  Transmit
+   -740   -1320  [font 7 12pt]  Data Terminal Ready
+   -740   -1160  [font 7 12pt]  Ground
+   -740   -1000  [font 7 12pt]  No Connect
+   -740    -840  [font 7 12pt]  Request to Send
+   -740    -680  [font 7 12pt]  Clear to Send
+   -740    -520  [font 7 12pt]  Ring Indicator
+
+   2680   -3370  [font 7 12pt]   5
+
+   2630   -3160  [font 7 12pt]   9
+
+    940   -3160  [font 7 12pt]   6
+
+    910   -3370  [font 7 12pt]   1

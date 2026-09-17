@@ -1,0 +1,309 @@
+[PageStream 2 document F0302.5: 8.50 x 11.00 in, 145 objects]
+
+--- Page 35 ---
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+13
+
+PON-
+
+Input
+
+The Low Power Mode input signal is used to switch the CODEC to low power mode. This pin is tied to Vcc in the Falcon030.
+
+15
+
+ROUT
+
+Output
+
+The Right Analog Output pin is the right channel analog output signal.
+
+16
+
+LOUT
+
+Output
+
+The Left Analog Output pihn the left channel analog output signal.
+
+18
+
+POMCR
+
+-----
+
+The Capacitor Connection pin is used for the outer feedback loop of the pulse density modulator for the right channel. It is tied to the REFBUF pin.
+
+19
+
+POMCL
+
+-----
+
+The Capacitor Connection pin is used for the outer feedback loop of the pulse density modulator for the left channel. It is tied to the REFBUF pin.
+
+20
+
+REFBUF
+
+-----
+
+The Buffered Internal Analog Ground pin is the buffered signal analog ground pin for the pulse density modulator capacitors.
+
+21
+
+REFBYP
+
+-----
+
+The Internal Analog Ground pin is the clean analog ground pin for the analog input and output connectors.
+
+22
+
+REFGND
+
+-----
+
+The Reference Analog Ground pin is the ground pin that serves as a clean ground for the CODEC IC.
+
+23
+
+AGND
+
+-----
+
+The Analog Ground pin is used as an analog ground for the CODEC IC.
+
+24
+
+AVcc
+
+Input
+
+The Analog Supply Voltage pin is used to supply power to the analog circuitry of the CODEC IC.
+
+25
+
+RIN1
+
+Input
+
+The Right Analog Input Channel 1 signal is fed to this pin.
+
+26
+
+RIN2
+
+Input
+
+The Right Analog Input Channel 2 signal is fed to this pin.
+
+27
+
+LIN1
+
+Input
+
+The Left Analog Input Channel 1 signal is fed to this pin.
+
+28
+
+LIN2
+
+Input
+
+The Left Analog Input Channel 2 signal is fed to this pin.
+
+29
+
+MDSEL
+
+Input
+
+The Mode Select Input signal is used to select additional serial formats when pulled high. It is tied to ground in the Falcon030 system.
+
+30
+
+SBF2
+
+Input
+
+The Subframe Input 2 pin is used to determine what subframe the CODEC IC will be active. This pin is grounded in the Falco030 system.
+
+--- Page 36 ---
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+31
+
+SBF1
+
+Input
+
+The Subframe Input 1 pin is used in conjunction with the Subframe Input 2 pin to determine what subframe the CODEC IC will be active. This pin is grounded in the Falco030 system.
+
+32
+
+TESTEN
+
+Input
+
+The TestMode Enable pin is used to seitch the CODEC IC into test mode. This pin is grounded in the falcon030 system.
+
+33-36
+
+DI1-DI4
+
+Input
+
+The Digital Input 1-4 pins are used to supply digital data to the CODEC IC. These pins are grounded in the Falcon030 system.
+
+33-40
+
+DO1-DO4
+
+Output
+
+The Digital Output 1-4 pins are used to supply digital data from the CODEC IC. These pins are not connected in the Falcon030 system.
+
+41
+
+TEST2
+
+Input
+
+The Test 2 pin is used for test mode sychronization. It isnot connected in the Falcon030 system.
+
+42
+
+SDIN
+
+Input
+
+The Serial Data Input pin is used to input serial digital data to the CODEC IC.
+
+43
+
+SDOUT
+
+Output
+
+The Serial Data Output pin is used to output the analog to digital signal according to the serial interface format.
+
+44
+
+SCLK
+
+Input
+
+The Serial clock input pin is used 5to define the bit clock for theserial interface. It latches the data in on the SDIN line, and out on the SDOUT line.
+
+--- Page 37 ---
+
+2.3 I/O SUBSYSTEMS
+
+The FALCON030 architecture supports the following device subsystems:
+
+• IDE Hard Disk Interface.
+• External SCSI II Hard Disk Port.
+• Floppy disk interface sharing the ST ACSI DMA channel.
+• Serial port and an external LAN port connected to SCC controller.
+• A Centronics parallel printer port driven by the Yamaha YM-3439 sound chip.
+• An ST/MEGA compatible intelligent keyboard, mouse, and joystick interface.
+• Option for interfacing to the new Atari Universal Keyboard Controller.
+• A port supporting application and diagnostic cartridges.
+• Two controller ports for additional joysticks as well as light pen/gun and paddle controllers.
+
+
+2.3.1 SCSI II Interface
+
+The external hard disk drive interface is provided through a standard 5380 NCR SCSI Controller. Transfers can take place at up to 2Mbytes/second. The controller interfaces to the system through the SDMA IC.
+
+2.3.1.1 5380 SCSI Controller Pin and Signal List
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+37-41,43-44,1
+
+DB0- to
+DB7-
+
+I/O
+
+8-bit SCSI data bus. During arbitration these lines contain the SCSI ID numbers of all devices arbitrating for the SCSI bus. During selection, these lines contain the ID number of the device which has been selected.
+
+35
+
+DBP-
+
+I/O
+
+SCSI data bus parity bit.
+
+5
+
+SEL-
+
+I/O
+
+The Select signal is asserted by the initiator to select a target. It can also be asserted by the target when reselecting it as an ititiator.
+
+4
+
+BSY-
+
+I/O
+
+Busy is asserted when the SCSI bus is active.
+
+33
+
+ACK-
+
+I/O
+
+Acknowledge is asserted by the initiator during information transfer phases in response to REQ- asserted by the target.
+
+6
+
+ATN-
+
+I/O
+
+Attention is asserted by the intiator after the successful selection of a target.
+
+7
+
+RST-
+
+I/O
+
+When active this signal indicates a SCSI bus reset condition.
+
+32
+
+I/O-
+
+I/O
+
+I/O is controlled by the target device and indicates the direction of data transfer. When low the direction of data flow is to the initator.

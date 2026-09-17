@@ -1,0 +1,99 @@
+File: EASYDRAW/SUNNYVAL/GAME.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-3290,-4266)-(3158,1050)
+Page size: 203.2 x 254.0 mm
+Coordinate window: lower-left (-3640,4550), upper-right (3640,-4550); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-3290,-4192.67)-(3080,1030.33)
+Items: 302 (2512 words)
+Objects: polyline 4, ellipse 15, elliptical arc 19, justified text 74
+Other records (escapes, application data): write_meta 10 x6, write_meta 150 x1, write_meta 151 x6, write_meta 152 x14, write_meta 153 x14, write_meta 154 x68, write_meta 158 x1, write_meta 160 x1, write_meta 80 x23, write_meta 81 x23
+Text strings: 74
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+  -3240   -3950  [font 7 24pt]  ENHANCED JOYSTICK
+
+  -3250   -3300  [font 7 12pt]  DB15 Male
+
+  -3290   -1730  [font 7 12pt]  Pin
+  -3290   -1250  [font 7 12pt]  1
+  -3290   -1090  [font 7 12pt]  2 
+  -3290    -930  [font 7 12pt]  3
+  -3290    -770  [font 7 12pt]  4
+  -3290    -610  [font 7 12pt]  5
+  -3290    -450  [font 7 12pt]  6
+  -3290    -290  [font 7 12pt]  7
+  -3290    -130  [font 7 12pt]  8
+  -3290      30  [font 7 12pt]  9
+  -3290     190  [font 7 12pt]  10
+  -3290     350  [font 7 12pt]  11
+  -3290     510  [font 7 12pt]  12
+  -3290     670  [font 7 12pt]  13
+  -3290     830  [font 7 12pt]  14
+  -3290     990  [font 7 12pt]  15
+
+  -2680   -1720  [font 7 12pt]  Signal
+  -2680   -1240  [font 7 12pt]  UP 2
+  -2680   -1080  [font 7 12pt]  DN 2
+  -2680    -920  [font 7 12pt]  LT 2
+  -2680    -760  [font 7 12pt]  RT2
+  -2680    -600  [font 7 12pt]  PAD 2
+  -2680    -440  [font 7 12pt]  PR 2
+  -2680    -280  [font 7 12pt]  VCC
+  -2680    -120  [font 7 12pt]  No Connect
+  -2680      40  [font 7 12pt]  Ground
+  -2680     200  [font 7 12pt]  PR 3
+  -2680     360  [font 7 12pt]  UP 3
+  -2680     520  [font 7 12pt]  DN 3
+  -2680     680  [font 7 12pt]  LT 3
+  -2680     840  [font 7 12pt]  RT 3
+  -2680    1000  [font 7 12pt]  PAD 3
+
+   -210   -1730  [font 7 12pt]  Pin
+   -210   -1250  [font 7 12pt]  1
+   -210   -1090  [font 7 12pt]  2 
+   -210    -930  [font 7 12pt]  3
+   -210    -770  [font 7 12pt]  4
+   -210    -610  [font 7 12pt]  5
+   -210    -450  [font 7 12pt]  6
+   -210    -290  [font 7 12pt]  7
+   -210    -130  [font 7 12pt]  8
+   -210      30  [font 7 12pt]  9
+   -210     190  [font 7 12pt]  10
+   -210     350  [font 7 12pt]  11
+   -210     510  [font 7 12pt]  12
+   -210     670  [font 7 12pt]  13
+   -210     830  [font 7 12pt]  14
+   -210     990  [font 7 12pt]  15
+
+    440   -1720  [font 7 12pt]  Signal
+    440   -1240  [font 7 12pt]  UP 0
+    440   -1080  [font 7 12pt]  DN 0
+    440    -920  [font 7 12pt]  LT 0
+    440    -760  [font 7 12pt]  RT0
+    440    -600  [font 7 12pt]  PAD 0
+    440    -440  [font 7 12pt]  PR 0
+    440    -280  [font 7 12pt]  VCC
+    440    -120  [font 7 12pt]  No Connect
+    440      40  [font 7 12pt]  Ground
+    440     200  [font 7 12pt]  PR 1
+    440     360  [font 7 12pt]  UP 1
+    440     520  [font 7 12pt]  DN 1
+    440     680  [font 7 12pt]  LT 1
+    440     840  [font 7 12pt]  RT 1
+    440    1000  [font 7 12pt]  PAD 1
+
+  -2990   -2170  [font 7 12pt]  J15
+
+    180   -2160  [font 7 12pt]  J14
+
+   2960   -3240  [font 7 12pt]   1
+
+    170   -3010  [font 7 12pt]   10
+
+   2900   -3010  [font 7 12pt]   6
+
+   2840   -2790  [font 7 12pt]   11
+
+    230   -2790  [font 7 12pt]   15
+
+    170   -3240  [font 7 12pt]   5

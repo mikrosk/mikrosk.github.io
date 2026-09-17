@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="612pt" height="792pt" viewBox="0 0 61200 79200">
+<rect x="0" y="0" width="61200" height="79200" fill="#fff"/>
+<g><rect x="7200" y="7200" width="46800" height="64800" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/><text y="9853.8" xml:space="preserve"><tspan x="21413.7 22778.2 23303.7 24142.8 24772.2 25297.6 25770.1 26924.9 27764.1 28603.2 29548.2 30493.2 31018.6 31857.8 32697 33222.4 33694.9 34955.5 35900.5 36425.9 36951.3 37790.5 38315.9 38841.3" font-size="1800" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">Atari Technical Bulletin</tspan></text><text y="11653.8" xml:space="preserve"><tspan x="22699.8 24064.4 25009.4 26479.8 27424.8 28264 28893.3 29418.8 29891.2 31046 32200.8 33145.8 34090.8 34720.2 35665.2 36610.2 37555.2" font-size="1800" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">Number: TT30-0005</tspan></text><text y="13453.8" xml:space="preserve"><tspan x="23250.7 24615.3 25454.5 25979.9 26819.1 27344.5 27817 29181.6 30126.6 30755.9 31281.3 31806.8 32279.3 33224.3 33696.8 34169.3 35114.3 36059.3 37004.3" font-size="1800" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">Date: April 2, 1992</tspan></text><text y="15253.8" xml:space="preserve"><tspan x="26322 27372.8 28212 29157 29996.1 30468.6 31413.6 31886.1 32831.1 33460.5 33933" font-size="1800" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">Page 2 of 2</tspan></text></g>
+<text transform="translate(28329 49967.1) scale(0.897 1)" x="0 848.1 1156.2 1927.9 2699.7 3161.9 3933.6 4319.5" xml:space="preserve" font-size="1388" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">Figure 1</text>
+<text transform="translate(24692 36250.1) scale(0.896 1)" x="0 1002.1 2004.3 2776" xml:space="preserve" font-size="1388" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">UD00</text>
+<text transform="translate(23392 41507.1) scale(0.896 1)" x="0 1002.1 2004.3 2776" xml:space="preserve" font-size="1388" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">CD07</text>
+<text transform="translate(28377 42354.1) scale(0.896 1)" x="0 1002.1 2004.3 2776" xml:space="preserve" font-size="1388" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">CD09</text>
+<text transform="translate(32005 40360.1) scale(0.896 1)" x="0 1002.1 2004.3 2776" xml:space="preserve" font-size="1388" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">CD04</text>
+<text transform="translate(30650 37095.1) scale(0.897 1)" x="0 771.7 1773.9 2545.6" xml:space="preserve" font-size="1388" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">LD00</text>
+<text transform="translate(23969 27159) scale(0.897 1)" x="0 750.9 1501.8 2080" xml:space="preserve" font-size="1040" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">CD01</text>
+<text transform="translate(23359 29804.1) scale(0.896 1)" x="0 1002.1 2004.3 2776" xml:space="preserve" font-size="1388" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">CD06</text>
+<text transform="translate(27510 29846.1) scale(0.896 1)" x="0 1002.1 2004.3 2776" xml:space="preserve" font-size="1388" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">CD08</text>
+<text transform="translate(31896 27249.1) scale(0.896 1)" x="0 1002.1 2004.3 2776" xml:space="preserve" font-size="1388" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">CD02</text>
+<text transform="translate(33793 29786.1) scale(0.896 1)" x="0 1002.1 2004.3 2776" xml:space="preserve" font-size="1388" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">RD02</text>
+<text transform="translate(32330 31841.1) scale(0.896 1)" x="0 1002.1 2004.3 2776" xml:space="preserve" font-size="1388" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">CD03</text>
+<text transform="translate(32168 33895.1) scale(0.896 1)" x="0 1002.1 2004.3 2776" xml:space="preserve" font-size="1388" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">CD05</text>
+<g transform="matrix(0,1,-1,0,73674,-1208)"><text transform="translate(35971 36551.8) scale(1.12 1)" x="0 748 1496 2072" xml:space="preserve" font-size="1036" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">RD04</text></g>
+<g transform="matrix(0,1,-1,0,71689,1185)"><text transform="translate(33744 36691.8) scale(1.12 1)" x="0 597.8 1195.6 1793.4 2253.8" xml:space="preserve" font-size="828" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">CRD00</text></g>
+<text transform="translate(39374 21082.1) scale(0.897 1)" x="0 1079.9 2082 3161.9 4164 5166.1 6168.3 6554.1 7556.3 7942.1 8944.3" xml:space="preserve" font-size="1388" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">GROUND RING</text>
+<g><line x1="39319" y1="21050" x2="36557" y2="23768" fill="none" stroke="#000" stroke-width="100" stroke-linecap="butt" stroke-linejoin="round"/><path d="M36557 23768 L36844.4 23204.6 L37124.9 23489.7 Z" fill="#000" stroke="none"/></g>
+<ellipse cx="19272" cy="26670" rx="705" ry="786" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<polyline points="19763,26067.8 19819.2,26067.8 19875.3,26067.8 19875.3,26006.3 19875.3,25946 19931.5,25946 19988.7,25885.7 19988.7,25825.4 20044.9,25825.4 20044.9,25765 20101,25765 20101,25703.6 20157.2,25703.6 20157.2,25643.2 20214.4,25643.2 20214.4,25582.9 20270.6,25582.9 20270.6,25522.6 20326.8,25522.6 20326.8,25462.3 20382.9,25462.3 20382.9,25400.8 20439.1,25400.8 20439.1,25340.5 20496.3,25340.5 20496.3,25280.2 20552.5,25280.2 20552.5,25219.8 20608.6,25219.8 20608.6,25159.5 20608.6,25099.2 20664.8,25099.2 20664.8,25037.7 20721,25037.7 20721,24977.4 20777.1,24977.4 20777.1,24917.1 20833.3,24917.1 20833.3,24855.6 20833.3,24795.3 20833.3,24735 20890.5,24735 20890.5,24674.6 20946.7,24614.3 20946.7,24554 21002.8,24554" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<polyline points="19978,26731 20032.6,26731 20086.2,26731 20139.7,26731 20193.3,26731 20247.9,26731 20301.4,26731 20355,26731 20462.1,26791.3 20516.7,26791.3 20623.8,26791.3 20677.4,26791.3 20730.9,26791.3 20784.5,26851.6 20892.6,26851.6 20946.2,26851.6 20999.8,26851.6 21054.3,26851.6 21107.9,26851.6 21161.5,26851.6 21215,26851.6 21268.6,26851.6 21268.6,26912 21322.2,26912 21376.7,26912 21430.3,26912 21483.9,26912 21537.4,26912 21591,26912 21645.6,26912 21699.1,26912 21752.7,26912 21806.2,26912 21859.8,26912 21914.4,26912 21968,26912 22021.5,26912 22075.1,26912 22128.6,26912 22182.2,26912 22236.8,26912 22236.8,26851.6 22290.3,26851.6" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<text transform="translate(12880 24830.1) scale(0.897 1)" x="0 771.7 1543.5 1929.3 2701 3549.1 3935 4937.1 5708.8" xml:space="preserve" font-size="1388" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">15 pF Cap</text>
+<g><line x1="18515" y1="24918" x2="18894" y2="25944" fill="none" stroke="#000" stroke-width="100" stroke-linecap="butt" stroke-linejoin="round"/><path d="M18894 25944 L18498.5 25450.5 L18873.7 25311.9 Z" fill="#000" stroke="none"/></g>
+<path d="M19398 23129" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="22790" y1="29650" x2="23029" y2="30214" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="23034" y1="30220" x2="27009" y2="30220" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="27015" y1="30214" x2="27015" y2="28523" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="27009" y1="28523" x2="22790" y2="28523" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="22790" y1="28523" x2="22790" y2="29643" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="31220" y1="29085" x2="30984" y2="28523" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="30976" y1="28523" x2="27015" y2="28523" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="27015" y1="28523" x2="27015" y2="30214" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="27015" y1="30220" x2="31220" y2="30220" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="31228" y1="30214" x2="31228" y2="29092" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="22790" y="31643" width="7164" height="8128" fill="none" stroke="none"/>
+<path d="M22790 39749.3 L29948.6 39749.3 L29948.6 31643 L22790 31643 L22790 39749.3" fill="none" stroke="#000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="29966" y1="39012" x2="29290" y2="39775" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="29147" cy="26809" rx="388" ry="554" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="29545" y1="26834" x2="29949" y2="26834" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="31741" y="25687" width="3472" height="2266" fill="none" stroke="none"/>
+<path d="M31741 27944.2 L35197.6 27944.2 L35197.6 25687 L31741 25687 L31741 27944.2" fill="none" stroke="#000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="35223" y1="26825" x2="36212" y2="26825" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="31734" y1="26825" x2="30747" y2="26825" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="33526" y="28522" width="3638" height="1596" fill="none" stroke="none"/>
+<path d="M33526 30114.8 L37148.6 30114.8 L37148.6 28522 L33526 28522 L33526 30114.8" fill="none" stroke="#000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="37164" y1="29330" x2="38199" y2="29330" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="33519" y1="29330" x2="32487" y2="29330" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M36710 38566.1 L38188.4 38566.1 L38188.4 34071 L36710 34071 L36710 38566.1" fill="none" stroke="#000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="37480" y1="34067" x2="37480" y2="32786" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="37480" y1="38572" x2="37480" y2="39855" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="31236" y1="34263" x2="36066" y2="34263" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="36072" y1="34256" x2="36072" y2="32497" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="36066" y1="32497" x2="31236" y2="32497" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="31236" y1="32497" x2="31236" y2="34236" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="31236" y1="40780" x2="36020" y2="40780" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="36028" y1="40774" x2="36028" y2="39023" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="36020" y1="39023" x2="31236" y2="39023" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="31236" y1="39023" x2="31236" y2="40753" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="30252" y="34479" width="3964" height="4242" fill="none" stroke="none"/>
+<path d="M30252 38715.6 L34202.7 38715.6 L34202.7 34479 L30252 34479 L30252 38715.6" fill="none" stroke="#000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34725 34769 L35514.4 34769 L36330.8 35882.8 L36330.8 36956.9 L35514.4 38070.7 L34725 38070.7 Z" fill="none" stroke="none"/>
+<path d="M34725 34769 L35514.4 34769 L36330.8 35882.8 L36330.8 36956.9 L35514.4 38070.7 L34725 38070.7" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="34726" y1="34769" x2="34726" y2="38077" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="22790" y1="41288" x2="23029" y2="41842" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="23034" y1="41849" x2="26992" y2="41849" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="26998" y1="41842" x2="26998" y2="40162" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="26992" y1="40162" x2="22790" y2="40162" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="22790" y1="40162" x2="22790" y2="41283" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="27759" y1="42168" x2="27997" y2="42740" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="28004" y1="42747" x2="31946" y2="42747" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="31953" y1="42740" x2="31953" y2="41009" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="31946" y1="41009" x2="27759" y2="41009" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="27759" y1="41009" x2="27759" y2="42161" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="23044" y1="27025" x2="23281" y2="27398" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="23289" y1="27405" x2="27262" y2="27405" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="27270" y1="27398" x2="27270" y2="26255" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="27262" y1="26255" x2="23044" y2="26255" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="23044" y1="26255" x2="23044" y2="27018" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="27270" y1="26825" x2="27507" y2="26825" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="23036" y1="26825" x2="22790" y2="26825" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="27753" cy="26820" rx="238" ry="274" fill="#000" stroke="none"/>
+<ellipse cx="27753" cy="26820" rx="238" ry="274" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="22531" cy="26820" rx="239" ry="274" fill="#000" stroke="none"/>
+<ellipse cx="22531" cy="26820" rx="239" ry="274" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="31734" y1="31638" x2="31972" y2="32199" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="31979" y1="32206" x2="35950" y2="32206" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="35957" y1="32199" x2="35957" y2="30509" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="35950" y1="30509" x2="31734" y2="30509" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="31734" y1="30509" x2="31734" y2="31632" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M21790 44347.1 L38928 44347.1 L38928 24835 L21790 24835 L21790 44347.1" fill="none" stroke="#000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20293 46040.3 L40651.4 46040.3 L40651.4 23127 L20293 23127 L20293 46040.3" fill="none" stroke="#000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="39668" cy="45059" rx="972" ry="980" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="21156" cy="24111" rx="862" ry="982" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="21186" cy="45084" rx="894" ry="947" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="39709" cy="24248" rx="919" ry="1119" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+</svg>

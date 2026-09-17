@@ -1,0 +1,35 @@
+[PageStream 2 document DIAG0002.DOC: 8.50 x 11.00 in, 2 objects]
+
+--- Page 1 ---
+
+Atari Technical Bulletin
+Number: DIAG-0002
+Date: July 30, 1992
+Page 1 of  1
+
+
+Product(s) Affected:	All
+Model:				All
+Type of ATB:			Information Only
+ECO #: 				N/A
+
+Reason for ATB:
+
+Compatibility problem between TOS and diagnostics.
+
+
+Notes:
+
+There is a compatibility problem between TOS and diagnostics (depending on the rev. level used). This has always been a problem in the past and required careful matching of the TOS and diagnostic levels. To eliminate this problem a new system was incorporated that wrote a 16 bit CRC value into the last two locations  in each  ROM/EPROM.  The diagnostics need only recalculate the CRC and then compare with the values found in the ROM/EPROM. This system was to be implemented in all new releases of TOS.
+
+Symptoms of Problem:
+
+Failure of Operating System ROM Diagnostic in the TT030 when ROM/EPROM is good.
+
+Solution:
+
+The particular situation for the TT030 is as follows:
+
+TOS version 3.01 8/9/90 is the last version using the old system. TT030 diagnostics rev. 1.1 is the only version that will work with this TOS.
+
+TOS version 3.05  12/05/90 is the next release and uses the new system. Use TT030 diagnostic rev's 1.2 or higher.

@@ -1,0 +1,39 @@
+File: TEMP/CORDRAWS/SPARMON.CDR
+Format: CorelDRAW 2.x drawing, pre-RIFF "WL" (Waldo) container, version byte 0xC9 (201)
+File size: 5179 bytes
+Page: 11.000 x 8.500 in (landscape); native units 0.001 in, origin at page centre, y up
+Drawing extent (in, page-centred): x -4.286 .. 4.283, y -0.533 .. 0.482
+Preview bitmap: 90x90 monochrome
+Record index: type1=22, type2=20
+Objects: groups 1, rectangle 0, ellipse 19, curve 1, text 0, bitmap 0
+Curve nodes total: 17
+Fills: none 1, solid 19
+Outlines: solid 20
+Colours used: CMYK(0,0,0,100) x39
+Fonts: none
+
+Text strings: 0
+(position = text anchor point in inches from page top-left, x right / y down; listed top-to-bottom, left-to-right)
+
+Object tree (stored order = front-most first; bbox in inches from page top-left):
+  group [1.297,3.851-9.700,4.700]
+    ellipse 0.200x0.200 in [6.200,4.300-6.400,4.500]
+    ellipse 0.200x0.200 in [5.800,4.000-6.000,4.200]
+    ellipse 0.200x0.200 in [9.000,4.000-9.200,4.200]
+    ellipse 0.200x0.200 in [5.400,4.300-5.600,4.500]
+    ellipse 0.200x0.200 in [5.000,4.000-5.200,4.200]
+    ellipse 0.200x0.200 in [8.600,4.300-8.800,4.500]
+    ellipse 0.200x0.200 in [8.200,4.000-8.400,4.200]
+    ellipse 0.200x0.200 in [4.600,4.300-4.800,4.500]
+    ellipse 0.200x0.200 in [4.200,4.000-4.400,4.200]
+    ellipse 0.200x0.200 in [7.800,4.300-8.000,4.500]
+    ellipse 0.200x0.200 in [7.400,4.000-7.600,4.200]
+    ellipse 0.200x0.200 in [3.800,4.300-4.000,4.500]
+    ellipse 0.200x0.200 in [3.400,4.000-3.600,4.200]
+    ellipse 0.200x0.200 in [7.000,4.300-7.200,4.500]
+    ellipse 0.200x0.200 in [6.600,4.000-6.800,4.200]
+    ellipse 0.200x0.200 in [3.000,4.300-3.200,4.500]
+    ellipse 0.200x0.200 in [2.600,4.000-2.800,4.200]
+    ellipse 0.200x0.200 in [2.200,4.300-2.400,4.500]
+    ellipse 0.200x0.200 in [1.800,4.000-2.000,4.200]
+    curve 17 nodes [1.297,3.851-9.700,4.700]

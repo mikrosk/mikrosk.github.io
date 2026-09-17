@@ -1,0 +1,52 @@
+[PageStream 2 document PGSPROB1.DOC: 8.50 x 11.00 in, 3 objects]
+
+--- Page 1 ---
+[1 drawing objects, see PGSPROB1.DOC.p001.svg]
+
+Dallas Office Memo
+
+
+To:		Bill Rehbock
+From:	Marty Pennock
+Subject:	PageStream GEM File Problems
+
+Date:	February 25, 1992
+
+cc		Leonard Tramiel - SUVL
+		Richard Miller - SUVL
+		Ira Goldstein - ATX
+		Tom Ulaszek - ATX
+
+
+Using the GEM file I am sending labeled SPARREAR.GEM the problems I am having with PageStream causing #3 Exceptions can be re-created as follows:
+
+1.	Load PageStream 2.1
+
+2.	Select New Document from the main menu.
+
+3.	Select Letter Size 8.5 X 11 (Default)
+
+4.	Select Create Columns from the Main Menu.
+
+5.	Select default - 1" margins left, right, top, and bottom; no column links, number of columns across = 1, .25 gutter, and from pages 1 to 1. (Just click on OK.)
+
+6.	Select Import Graphics.
+
+7.	Select SPARREAR.GEM
+
+8.	Define a frame. I use full column width.
+
+9.	Once the drawing is displayed save the document.
+
+10.	Exit PageStream.
+
+11.	Restart PageStream either after a re-boot or immediately after saving.
+
+12.	Open the document that you saved.
+
+13.	The column outline will appear and the #3 Exception (3 bombs) will appear on the left and you will be brought back to the desktop.
+
+This procedure should allow you to re-create the problem there. I have lost many many hours of work due to this bug. I know that you can get it resolved once you and Leornard can really see what is going on. Again, my sincere thanks.
+
+
+Marty Pennock

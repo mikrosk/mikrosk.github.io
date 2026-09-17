@@ -1,0 +1,1425 @@
+	
+*   4/17/92     Added variables (Blt and Bltmsg) for running expansion blitter
+*		tests, TLE
+*   5/12/88     Extensive BLiT test
+*   Sept 23, 88: made it a separate test
+
+*   Prints rectangle on screen. Only failure is bus error.
+*      This routine is written exclusively to test those BLiTs which are
+*   very sensitive to noise due to fast switching of data and address lines.
+*   These BLiTs usually pass on standard test but will fail on some application
+*   programs.
+*   08-Oct-86	jde	adjusted hline and vline for REV C blt flaws
+*   10-Nov-86   jde	adjusted to use soft vector for BLASTER primitives
+*   18-Nov-86	jde	tweeked Habline for soft vectored primitive entry
+*   04-Mar-87	jde	Concat handles negative X values correctly
+*			Removed extraneous code from hb_hline
+*   13-Mar-87	jde	ABLINE and HABLINE variables referenced off a4
+*   19-Mar-87	jde	fixed bug in aline code for modes 1 and 3
+*   21-Jan-88	jde	CLC_FLIT mostly referenced off of a4
+*			EST LINE A entry point for CLC_FLIT added
+*			EST LINE A entry point for HABLINE added
+*			EST LINE A entry point for ABLINE added
+*   22-Feb-88	jde	fixed offset error for PTSIN
+*			X1 and X2 offset off of a4 in CLC_FLIT
+
+*	line A variable offsets from "lineavar" base
+
+FILBUF	  EQU    -$10
+FILINT	  equ    -$4
+BYTESLIN	equ    -$0002		; _bytes_lin  screen width for "concat"
+VPLANES		equ	$0000		; _v_planes
+VLINWR		equ	$0002		; _v_lin_wr
+CONTRL		equ	$0004		; _CONTRL
+PTSIN		equ	$000C		; _PTSIN
+FGBP1	   equ     $0018	   ;new color array $00AC to $00A4
+FGBP2	   equ     $001a  
+FGBP3	   equ     $001c  
+FGBP4	   equ     $001e  
+LSTLIN		equ	$0020		; _LSTLIN
+LNMASK		equ	$0022		; _ln_mask
+WRTMODE		equ	$0024		; _WRT_MODE   writing mode (0-3)
+X1		equ	$0026		; _X1
+Y1		equ	$0028		; _Y1
+X2		equ	$002A		; _X2
+Y2	      equ     $002C	   ; _Y2
+PATPTR		equ	$002E		; _patptr
+PATMSK		equ	$0032		; _patmsk
+MULTIFIL	equ	$0034		; _multifill
+CLIP		equ	$0036		; _CLIP
+XMNCLIP		equ	$0038		; _XMN_CLIP
+YMINCL	  equ     $003a	   ;min. Y clipping
+XMXCLIP		equ	$003C		; _XMX_CLIP
+YMAXCL	  equ     $003e	   ;max. Y clipping
+MAX_PLANES	equ	 08		; maximum planes for pixel fragment
+FRAG_LEN	equ	 20		; space for fragment of 16 planes
+
+BLASTER	 equ     $ff8a00
+B_OFF		equ	 60		; offset to reference register
+
+B_PATTERN	equ	-60 		; pattern register file
+B_S_NXWD	equ	-28 		; offset to next src word
+B_S_WRAP	equ	-26 		; wrap from end of one src line to next
+B_S_ADDR	equ	-24 		; initial src address
+B_F1_MSK	equ	-20 		; 1st fringe mask	0:old 1:new
+B_CT_MSK	equ	-18 		; center mask		0:old 1:new
+B_F2_MSK	equ	-16 		; 2nd fringe mask	0:old 1:new
+B_D_NXWD	equ	-14 		; offset to next dst word
+B_D_WRAP	equ	-12 		; wrap from end of one dst line to next
+B_D_ADDR	equ	-10 		; initial dst address
+B_D_SPAN	equ	-06 		; span in words of dst block
+B_HEIGHT	equ	-04 		; pixel height of block
+B_LOGOP		equ	-02 		; ctrl word: src^pat combo & logic op #
+B_SKEW		equ	 00		; ctrl word: flags, pat index & skew
+
+
+BF_PAT		equ  	08		; combo flag: 0:all ones  1:pattern
+BF_SRC		equ  	09		; combo flag: 0:all ones  1:source
+BM_PAT		equ  	$0100		; combo mask: 0:all ones  1:pattern
+BM_SRC		equ  	$0200		; combo mask: 0:all ones  1:source
+		     
+		     
+BF_GO		equ  	15		; execution flag	 0:false 1:true
+BF_HOG		equ  	14		; hog dma flag		 0:false 1:true
+BF_SM		equ  	13		; smudge flag		 0:false 1:true
+BF_PF		equ  	07		; pre-fetch flag  	 0:false 1:true
+BF_FQ		equ  	06		; flush queue flag 	 0:false 1:true
+BM_GO		equ  	$8000		; execution mask	
+BM_HOG		equ  	$4000		; hog dma mask
+BM_SM		equ  	$2000		; smudge mask
+BM_PF		equ  	$0080		; pre-fetch mask
+BM_FQ		equ  	$0040		; flush queue mask
+
+TOP	     equ	 0	   ;0
+BOTTOM	  equ       199	   ;199
+NUMVERT	 equ	 3
+PATLENGTH       equ	15
+*
+	.text
+	.even
+exblt:	move.l   #BLASTER,Blt	;added variables for expansion Blitter
+	move.l   #bltmsg,Bltmsg ; tests, TLE
+
+testxblt:
+	move.l  Bltmsg,a5	 ;display blit test message
+	bsr     dsptst	    ;
+	bsr	isblt		;if we have a blit...
+	beq.s	do_xblt		;do the test
+	move	#red,palette
+	lea	no_blt,a5
+	bsr	dspmsg
+	rts
+
+do_xblt:
+	move.l   sp,n_lines	;save stack pointer
+	bsr      init	      ;initialize variables, reloc screen
+	move.l   a0,a5	     ;save base add. of var. block
+	lea      vertsl,a1
+	move.l   a1,coor_tbl
+	bsr      out_line	  ;outline the polygon
+	bsr      drawit	    ;expand and fill polygon
+	bsr      left	      ;expand to the left
+	cmpi.b   #esc,d0	   ;is esc key pressed?
+	beq      quit	      ;yes, quit
+	bsr      up		;upward
+	cmpi.b   #esc,d0	   ;is esc key pressed?
+	beq      quit	      ;yes, quit
+	bsr      right	     ;to the right
+	cmpi.b   #esc,d0	   ;is esc key pressed?
+	beq      quit	      ;yes, quit
+	bsr      down	      ;downward
+	cmpi.b   #esc,d0	   ;is esc key pressed?
+	beq      quit	      ;yes, quit
+	bsr      left	      ;back to where it was 
+	move.b	#0,d0
+
+*	finished test or failed test or esc
+*	if d0 = esc, pass, if d0 = ff, bus error
+quit:  
+*	restore screen
+	move.l   _v_bas_ad,v_bas_ad ;
+	move.l   _v_bas_ad,d1       ;
+	swap     d1
+	move.b   d1,v_bas_h	 ;
+scr_wait:
+	cmp.b    vadcnth,d1	 ;does screen update address yet?
+	bne      scr_wait
+
+	move.l   spatt,a4	   ;restore old bus error routine
+	move.l   a4,8
+	cmp.b	#0,d0			;finish?
+	bne.s	xbltx			;no, error or esc
+	lea	pasmsg,a5
+xbltx2:
+	move.b	#t_LBLIT,d0
+	bsr	dsppf
+	rts			 ;return to caller
+
+xbltx:
+	lea	falmsg,a5
+	bra	xbltx2	
+*
+****************************************************************************
+*   Subroutines declaration blocks                                         *
+****************************************************************************
+*   This routine will initialize and set up parameters blocks
+*
+init:
+        move.l   #dram,d0 	  ;get test screen base address
+	move.l   v_bas_ad,_v_bas_ad  ;save old screen display address
+	move.l   d0,v_bas_ad	;set new display screen address
+	move.l   d0,a5	      ;save it for later use
+	swap     d0
+	move.b   d0,v_bas_h	 ;set new screen to test screen address
+scr_chk:
+	cmp.b    vadcnth,d0	;wait until screen update address
+	bne      scr_chk
+	moveq    #0,d0		;clear new screen
+	move.l   #$2000,d1	    ;size of screen in word
+let_clean:
+	move.l   d0,(a5)+	     ;one long word at the time
+	dbra     d1,let_clean
+
+;	lea      bltmsg,a5	 ;redisplay blit test message
+	move.l   Bltmsg,a5	 ;redisplay blit test message
+	bsr      dsptst	    ;display it at upper left of new screen
+	lea      lineavar,a0       ;get pointer to parameters & var. block
+	lea      vertd,a2	  ;get initial vertices
+	moveq    #7,d0	     ;transfer data to working space
+	lea      verts,a1	  ;get working space in ram
+	move.l   a1,PTSIN(a0)      ;array ot points to be plotted
+	lea      vertsl,a3	 ;get second array for next draw
+	lea      vertdl,a4	 ;get next array of vertexes	 
+init_lp:
+	move.w   (a2)+,(a1)+       ;transfer each word at one time
+	move.w   (a4)+,(a3)+       ;next array
+	dbra     d0,init_lp	;copy d0 words	
+	lea      control,a1
+	move.l   a1,CONTRL(a0)
+	move.w   #1,VPLANES(a0)	;single plane
+	move.w   #$50,BYTESLIN(a0)     ;80 bytes per line
+	move.w   #$50,VLINWR(a0)       ;set to this value just for now
+	move.w   #1,FGBP1(a0)	  ;plane 0 color bit
+	move.w   #1,FGBP2(a0)	  ;plane 1
+	move.w   #1,FGBP3(a0)	  ;plane 2
+	move.w   #1,FGBP4(a0)	  ;plane 3
+	move     #0,WRTMODE(a0)	;writting mode (replace)
+	lea      fuji,a1
+	move.l   a1,PATPTR(a0)
+	move.w   #PATLENGTH,PATMSK(a0)    ;length of pattern block
+	move.w   #0,MULTIFIL(a0)	  ;single plane fill
+	move.w   #1,CLIP(a0)	      ;no clipping
+	move.w   #0,XMNCLIP(a0)	   ;just in case
+	move.w   #319,XMXCLIP(a0)	 ;max. X = 320
+	move.w   #0,YMINCL(a0)
+	move.w   #199,YMAXCL(a0)	  ;max. Y = 200
+	move.w   #$ffff,LNMASK(a0)	;line style mask
+	move.w   #0,LSTLIN(a0)	    ;draw last pixel of line
+	movea.l  8,a4
+	move.l   a4,spatt		 ;save old bus error routine
+	lea      blt_berr,a4
+	move.l   a4,8		     ;install new routine
+	rts
+
+*	Bus Error routine 
+blt_berr:
+;	lea      BLASTER+B_OFF,a5      ;stop blitter
+
+	move.l   Blt,a5
+	add.l    #B_OFF,a5      ;stop blitter
+	bclr.b   #7,(a5)	      ;by reset busy bit
+	move.w   #red,palette	  ;turn screen red
+	move.l   _v_bas_ad,v_bas_ad    ;restore old screen address
+	move.l   _v_bas_ad,d0
+	swap     d0
+	move.b   d0,v_bas_h	   ;change screen address
+let_wait:
+	cmp.b    vadcnth,d0	   ;screen address change?
+	bne      let_wait	     ;no, let wait until it changes
+	lea      bliterr,a5	   ;bus error message
+	bsr      dspmsg	       ;display it
+	move.l   n_lines,sp	   ;restore old stack pointer
+	move.b   #$ff,d0	      ;do not print pass message
+	lea      quit,a1	      ;jump to where we want it to
+	jmp      (a1)
+
+*
+left:  
+	lea      vertsl,a1	;set up coordinates of polygon
+	move.w   8(a1),d0	  ;to expand the previous polygon to
+	cmp.w    #1,d0	     ;the left of screen
+	ble      leftdon
+	sub.w    #1,d0
+	move.w   d0,8(a1)
+	bsr      drawit	    ;draw polygon
+	cmpi.b   #esc,d0	   ;escape key pressed?
+	beq      leftdon	   ;yes.
+	bra      left	      ;repeat until done
+leftdon:
+	rts
+*
+up:     lea      vertsl,a1	;set up coordinates of polygon
+	move.w   10(a1),d0	 ;to expand the previous one drawn
+	cmp.w    #20,d0	    ;upward
+	ble      updon
+	sub.w    #1,d0
+	move.w   d0,10(a1)
+	bsr      drawit	    ;draw the polygon
+	cmpi.b   #esc,d0	   ;escape key pressed?
+	beq      updon	      ;yes.
+	bra      up		;repeat until done
+updon:  rts
+*
+right:  lea      vertsl,a1	;set up coordinates
+	move.w   8(a1),d0	  ;to rotate the polygon to the right
+	cmp.w    #319,d0	   ;
+	bge      rdon
+	add.w    #1,d0
+	move.w   d0,8(a1)
+	bsr      drawit	    ;move the polygon slowly
+	cmpi.b   #esc,d0	   ;escape key pressed?
+	beq      rdon	      ;yes.
+	bra      right	     ;repeat until done
+rdon:   rts
+*
+down:   lea      vertsl,a1	;set up coordinates
+	move.w   10(a1),d0	 ;expand the polygon downward
+	cmp.w    #190,d0
+	bge      ddon
+	add.w    #1,d0
+	move.w   d0,10(a1)
+	bsr      drawit	    ;expand it
+	cmpi.b   #esc,d0	   ;escape key pressed?
+	beq      ddon	      ;yes.
+	bra      down	      ;no, repeat until done
+ddon:   rts
+*
+*   This routine draws polygon with array of vertexes passed in
+* PTSIN[0].
+drawit:
+	moveq    #0,d3	     ;set iteration flag
+nx_loop:
+	lea      vertsl,a2
+	move.l   a2,PTSIN(a5)
+	move.w   #TOP,Y1(a5)       ;get scan line
+	move.w   #BOTTOM,d4
+	sub.w    #TOP,d4	   ;set loop counter
+loop1:  
+	movem.l   d3-d4/a5,-(sp)
+	bsr      _CLC_FLIT	 ;draw one line at a time
+	movem.l   (sp)+,d3-d4/a5
+	addq     #1,Y1(a5)
+	dbra     d4,loop1	  ;repeat until done
+	cmp.w    #0,d3
+	bne      loop1_out
+	moveq    #$0f,d3
+	move.w   #3,WRTMODE(a5)
+	bra      nx_loop	   ;fill again using not or mode
+loop1_out:
+	move.w   #0,WRTMODE(a5)    ;restore original mode(replace)
+	bsr      out_line	  ;outline the polygon
+	moveq    #0,d0	     ;clear d0
+	bsr      constat	   ;key input?
+	beq      draw_don	  ;no
+	bsr      conin	    ;get key. d0.b=ascii value of key pressed.
+draw_don:
+	rts
+*
+*   This routine will outline the polygon by drawing solid lines
+* between vertexes.
+out_line:
+	move.l   coor_tbl,a2	    ;points table
+	move.w   (a2),X1(a5)
+	move.w   2(a2),Y1(a5)
+	move.w   4(a2),X2(a5)
+	move.w   6(a2),Y2(a5)
+	movem.l  a0-a5,-(sp)
+	bsr      _ABLINE		;draw a line
+	movem.l   (sp)+,a0-a5
+	move.w   (a2),X1(a5)
+	move.w   2(a2),Y1(a5)
+	move.w   8(a2),X2(a5)
+	move.w   10(a2),Y2(a5)
+	movem.l  a0-a5,-(sp)
+	bsr      _ABLINE		;draw next line
+	movem.l  (sp)+,a0-a5
+	move.w   4(a2),X1(a5)
+	move.w   6(a2),Y1(a5)
+	move.w   8(a2),X2(a5)
+	move.w  10(a2),Y2(a5)
+	movem.l  a0-a5,-(sp)
+	bsr      _ABLINE		;draw last line
+	movem.l  (sp)+,a0-a5
+	rts
+*
+
+	.text
+	.even
+*******************************************************************************
+**									     **
+**	_CLC_FLIT							     **
+**									     **
+**		This routine calculates the fill intersections for a list of **
+**	vectors.  The x-intersection of each vector with the scan-line of    **
+**	interest is calculated and inserted into a buffer which is then      **
+**	sorted in ascending order.  The resulting array of x-values are then **
+**	pulled out pair-wise and used as inputs to "_HABLINE".		     **
+**									     **
+**		input:	CONTRL[1] = number of vectors.			     **
+**			PTSIN[]   = array of vertices.			     **
+**			Y1	= scan-line to calculate intersections for **
+**									     **
+**		output: fil_int  = number of intersections.		     **
+**			fill_buf  = array of x-values.			     **
+**									     **
+**		destroys: everything.					     **
+**									     **
+*******************************************************************************
+*******************************************************************************
+
+x1		equ	0
+y1		equ	2
+x2		equ	4
+y2		equ	6
+
+
+_CLC_FLIT:	lea	lineavar,a4
+
+		move.l	CONTRL(a4),a0
+		move.w	2(a0),d0	; d0 <- number of vectors
+		subq.w	#1,d0		; d0 <- dbra counter
+
+		move.l	 PTSIN(a4),a0	; a0 -> array of vertices.
+		lea	FILBUF(a4),a1	; a1 -> array of X coordinates.
+		clr.w	FILINT(a4)	; init count of fill intersections.
+
+flit_lp:	move.w	y2(a0),d1	; d1 <- Y coordinate of 2nd endpoint
+		move.w	y1(a0),d2	; d2 <- Y coordinate of 1st endpoint
+		sub.w	d2,d1		; d1 <- dY
+		beq	no_fill_int	; Ignore Horizontal Vectors
+
+		move.w	Y1(a4),d3	; d3 <- scanline Y
+		move.w	d3,d4
+		sub.w	d2,d4		; d4 <- dY1
+		sub.w	y2(a0),d3	; d3 <- dY2
+		move.w	d4,d2
+		eor.w	d3,d2		; are the signs equal?
+		bpl	no_fill_int	; yes, ignore this vector.
+
+
+*    This test also handles the case when dY1 = 0 or dY2 = 0.  Thus, the
+*    singularity case discussed in Newman & Sproull is properly handled.
+
+		move.w	x2(a0),d2	; d2 <-   X2
+		sub.w	x1(a0),d2	; d2 <-   dX	   (really dX-1)
+		add.w	d2,d2		; d2 <-  2dX       (greater precision)
+		muls	d2,d4		; d4 <- 2(dX * dY1)
+		divs	d1,d4		; d4 <- 2(dX * dY1) /dY
+		bpl	int_pos
+
+
+int_neg:	neg.w	d4
+		addq.w	#1,d4
+		asr.w	#1,d4
+		neg.w	d4		; d4 <-  (dX * dY1) /dY
+		bra	ld_fill_int
+
+int_pos:	addq.w	#1,d4		; compensate for round off error
+		asr.w	#1,d4		; d4 <-  (dX * dY1) /dY
+
+ld_fill_int:	add.w	x1(a0),d4	; d4 <- ((dX * dY1) /dY) + X1
+		move.w	d4,(a1)+	; put intersection X into fill buffer
+		addq.w	#1,FILINT(a4)	; increment intersection count
+
+no_fill_int:	lea	4(a0),a0	; a0 -> next pair of endpoints
+		dbra	d0,flit_lp
+
+
+*   Now that all the intersections have been found, sort them.
+
+sort_fill_int:	move.w	FILINT(a4),d0	; d0 <- intersections
+		bne	sfi_cont
+		rts			; quit if nothing to sort
+
+sfi_cont:	lea	FILBUF(a4),a0	; a0 -> list of intersections
+		bsr	bub_sort	; bubble-sort it
+
+
+*   Now, do the necessary work to fill between the intersections.
+
+		move.w	FILINT(a4),d0
+		asr.w	#1,d0		; d0 <- number of x-pairs.
+		subq.w	#1,d0		; d0 <- dbra counter
+		tst.w	CLIP(a4)	; is clipping on?
+		bne	dr_clip		; yes, branch.
+
+draw_lp:	
+		move.w  (a1)+,X1(a4)    ;load a pair of X intersections
+		move.w  (a1)+,X2(a4)    ;
+       		move.w	d0,-(sp)	; save the count
+		move.l	a1,-(sp)	; save the pointer
+		bsr	_HABLINE	; fill between X's. (a4 gets munged)
+		move.l	(sp)+,a1	; a1 -> next pair of points
+		move.w	(sp)+,d0	; d0 <- dbra pair counter
+		dbra	d0,draw_lp
+		rts
+
+
+dr_clip:	move.w	(a1)+,X1(a4)	; grab a pair of X intersections.
+		move.w	(a1)+,X2(a4)
+		move.w	XMNCLIP(a4),d1	; clip X pair to minimum
+		move.w	X1(a4),d2
+		move.w	X2(a4),d3
+		cmp.w	d1,d2		; is X1 < MINIMUM X ?
+		bge	drc_1		; if so, check for a total eclipse
+
+		cmp.w	d1,d3		; is X2 < minimum X ?
+		blt	drc_end		; if so, segment is totally obscured
+
+		move.w	d1,X1(a4)	; clip X1 to minimum
+
+drc_1:		move.w	XMXCLIP(a4),d1	; clip X pair to maximum
+		cmp.w	d1,d3		; is X2 > maximum X ?
+		ble	drc_2		; no => draw segment
+
+		cmp.w	d1,d2		; is X1 > maximum X ?
+		bgt	drc_end		; if so, segment is totally obscured
+
+*********		move.w	d1,_X2		; clip X2 to maximum
+		move.w  d1,X2(a4)       ;added to replace line above
+drc_2:		move.w	d0,-(sp)	; save the dbra count
+		move.l	a1,-(sp)	; save the pointer to the point list
+		bsr	_HABLINE	; fill between the X1 and X2
+
+		lea	lineavar,a4	; reinit parameter pointer
+		move.l	(sp)+,a1	; a1 -> next point pair
+		move.w	(sp)+,d0	; d0 <- dbra count
+drc_end:	dbra	d0,dr_clip
+		rts
+
+*******************************************************************************
+**									     **
+**	bub_sort							     **
+**									     **
+**		This routine bubble-sorts an array of words into ascending   **
+**		order.							     **
+**									     **
+**		input:	a0 = ptr to start of array.			     **
+**			d0 = number of words in array.	(unsigned word)	     **
+**									     **
+**		output: a1 = ptr to start of sorted array.		     **
+**									     **
+**		destroys: d0-d2/a0-a1					     **
+**									     **
+*******************************************************************************
+*******************************************************************************
+
+
+bub_sort:	subq.w	#2,d0		; d0 <- number of compares -1
+		bcs	bs_out		; there must be more than one point
+
+		move.w	d0,d1		; d1 <- copy of swap count
+		move.l	a0,a1		; a1 -> start of point list
+
+bsl0_init:	move.w	d1,d0		; d0 <- initial dbra count
+		move.l	a1,a0		; a1 -> start of list
+bs_lp0:		move.w	(a0)+,d2	; d2 <- X1
+		cmp.w	(a0),d2		; compare with X2
+		ble	bs_noswap	; if in ascending order, skip exchange
+
+		move.w	(a0),-2(a0)	; X1' <- X2
+		move.w	d2,(a0)		; X2' <- X1
+bs_noswap:	dbra	d0,bs_lp0	; completes 1 pass of the sort.
+*					; the largest word has been bubbled
+*					; down to the end of the array.
+bsl1_end:	dbra	d1,bsl0_init	; shorten the count for the next pass.
+
+bs_out:		rts
+
+*******************************************************************************
+**									     **
+**	ABLINE								     **
+**		 							     **
+**	  This routine draws a line between (_X1,_Y1) and (_X2,_Y2) using    **
+**	  Bresenham's algorithm. The line is modified by the _LN_MASK and    **
+**	  _WRT_MODE variables. This routine handles all 3 video resolutions  **
+**									     **
+**	Note:								     **
+**									     **
+**	  For line-drawing in VDI, the background color is fixed as 0	     **
+**	  (i.e., there is no user-settable background color). This fact	     **
+**	  allows coding short-cuts in the implementation of "replace" and    **
+**	  "not" modes, resulting in faster execution of their inner loops.   **
+**									     **
+**	input:								     **
+**									     **
+**	   _X1,_Y1,_X2,_Y2 = coordinates.				     **
+**		 _v_planes = number of video planes. (resolution)	     **
+**		  _LN_MASK = line mask. (for dashed/dotted lines)	     **
+**		 _WRT_MODE = writing mode.			  	     **
+**									     **
+**			     0 => replace mode.				     **
+**			     1 => or mode.				     **
+**			     2 => xor mode.				     **
+**			     3 => not or mode.				     **
+**									     **
+**	output:								     **
+**									     **
+**	  _LN_MASK rotated to proper alignment with ( _X2,_Y2 ).	     **
+**									     **
+**									     **
+**	destroys:							     **
+**									     **
+**	    everything.							     **
+**									     **
+**	FEATURES:							     **
+**									     **
+**	 o In the horizontal case, the pattern is not alligned prior to	     **
+**	   the line being drawn, hence the pattern isn't in phase with	     **
+**	   the pattern in the succeeding line. In any case, the entire	     **
+**	   method for aligning horizontal patterns is incorrect.	     **
+**									     **
+**	 o The pattern is always implemented starting at the minimum vertex  **
+**	   regardless of the intended direction of line segment. hence,      **
+**	   patterns in consecutive segments are likely not to dovetail or    **
+**	   to have a reversed pattern.					     **
+**									     **
+**	 o The procedure for preventing the endpoints in consecutive	     **
+**	   segments that are XORed to the destination from cancelling 	     **
+**	   is incorrectly implemented. The current method eliminates the     **
+**	   last point at the maximum vertex regardless of the order of	     **
+**	   the entered verticies (or direction of the preceeding segment).   **
+**									     **
+**									     **
+*******************************************************************************
+*******************************************************************************
+
+
+_ABLINE:	lea	lineavar,a4	; a4 -> base of LineA variables
+		moveq.l	#2,d0		; d0 <- XOR writing mode code
+
+		movem.w	X1(a4),d4-d7	; d4<-X1  d5<-Y1  d6<-X2  d7<-Y2
+		cmp.w	d5,d7		; handle the horizontal case seperately
+		beq	hline		; (also handles single points)
+
+		cmp.w	d4,d6		; X1=X2 => vertical line
+		bne	aline		; handle the vertical case seperately
+
+
+
+*   SPECIAL CASE I.	Vertical line segments
+
+hb_vline:
+
+;	lea	BLASTER+B_OFF,a5	; a5 -> BLASTER reference register
+
+	move.l   Blt,a5
+	add.l    #B_OFF,a5      ;stop blitter
+
+	not.w	d4
+	and.w	#$000F,d4		; d4 <- bit number within word
+	clr.w	d0
+	bset.l	d4,d0			; d0 <- pixel mask   0:DST 1:LINE
+	move.w	d0,B_F1_MSK(a5)		; load the fringe mask
+
+	move.w	VPLANES(a4),d0		; d0 <- planes
+	move.w	d0,d1
+	add.w	d1,d1			; d1 <- offset between words
+	subq.w	#1,d0			; d0 <- dbra plane counter
+
+	move.l	v_bas_ad,a1    	; a1 -> start of destination form
+	asr.w	#4,d6			; d6 <- X/16
+	muls	d6,d1			; d1 <- byte offset to X
+	add.l	d1,a1			; a1 -> dst (X,0)
+
+	move.w	BYTESLIN(a4),d2		; d2 <- screen width
+	muls	d5,d2			; d2 <- offset to (0,Y1)
+	add.l	d2,a1			; a1 -> (X,Y1)
+
+	moveq.l	#7,d2			; d2 <- dbra loop counter
+
+	move.w	VLINWR(a4),d1		; d1 <- offset between lines
+
+	lea	LNMASK(a4),a3		; a3 -> line style mask
+	move.w	(a3),d3			; d3 <- line style mask
+
+	sub.w	d5,d7			; d7 <- dY
+	bge	vl_top
+
+
+vl_bot:	neg.w	d7			; d7 <- absolute value of dY
+	neg.w	d1			; d1 <- offset to next line up
+	lea	B_PATTERN+32(a5),a0	; a0 -> last pattern register
+
+vl_b2t:	add.w	d3,d3			; cy <- next style bit
+	subx.w	d4,d4			; cy:0 => d0<-0000  cy:1 => d0<-FFFF
+	move.w	d4,-(a0)		; load register
+	add.w	d3,d3
+	subx.w	d4,d4
+	move.w	d4,-(a0)
+	dbra	d2,vl_b2t
+
+	move.w	#BM_GO+$0F00,d2		; d2 <- SKEW word (start on last line)
+	bra	vl_wrap
+
+
+
+vl_top:	lea	B_PATTERN(a5),a0	; a0 -> 1st pattern register
+
+vl_t2b:	add.w	d3,d3			; cy <- next style bit
+	subx.w	d4,d4			; cy:0 => d0<-0000  cy:1 => d0<-FFFF
+	move.w	d4,(a0)+		; load pattern register
+	add.w	d3,d3
+	subx.w	d4,d4
+	move.w	d4,(a0)+
+	dbra	d2,vl_t2b		; next 2 registers
+
+	move.w	#BM_GO+$0000,d2		; d2 <- initial pattern index
+
+
+vl_wrap:
+
+	move.w	d1,B_D_WRAP(a5)		; store destination wrap
+	addq.w	#1,d7			; d7  <- dY+1: height
+
+	lea	op_table(pc),a2
+	move.w	WRTMODE(a4),d1		; d1 <- writing mode
+	lsl.w	#2,d1			; d1 <- offset into main table
+	add.w	d1,a2			; a2 -> op code table for this mode
+
+	subq.w	#8,d1			; if it's XOR mode ...
+	bne	vl_newmask		
+	tst.w	LSTLIN(a4)		; and it's not the last line ...
+	bne	vl_newmask
+
+	subq.w	#1,d7			; don't plot last pixel
+
+vl_newmask:
+
+	move.w	d7,d1			; d1 <- line length
+	move.w	(a3),d3			; d3 <- pattern for this line
+	and.w	#$000F,d1		; d1 <- realignment factor
+	rol.w	d1,d3			; d3 <- pattern aligned for next line
+	move.w	d3,(a3)			; save it back to _LN_MASK
+
+	lea	FGBP1(a4),a3		; a3 -> bitplane color array
+	moveq.l	#2,d4			; d4 <- mask for op_table offset
+	move.w	#1,B_D_SPAN(a5)		; one word span
+
+vl_loop:
+
+	move.l	a1,B_D_ADDR(a5)		; next plane
+	move.w	d7,B_HEIGHT(a5)		; line height
+
+	tst.w	(a3)+			; logic op is based on writing mode
+	sne	d3			; and current bitplane's color value
+	and.w	d4,d3
+	move.w	0(a2,d3.w),B_LOGOP(a5)
+
+
+*******************************************************************************
+	move.w	d2,(a5)			; load the SKEW register and fly
+*******************************************************************************
+
+	moveq.l	#BF_GO-8,d1		; d1 <- GO flag
+	
+vl_sync:
+
+	bset.b	d1,(a5)
+	nop
+	bne	vl_sync
+
+vl_cont:
+
+	addq.w	#2,a1			; a1 -> start of next plane
+	dbra	d0,vl_loop		; do the next plane
+
+	rts
+
+
+
+
+
+*   SPECIAL CASE II.	Horizontal line segment
+*
+*   All single point lines (X1=X2, Y1=Y2) will be arrive here
+
+
+hline:		cmp.w	WRTMODE(a4),d0	; the XOR writing mode requires
+		bne	no_trunk	; special endpoint treatment
+
+		tst.w	LSTLIN(a4)	; If this isn't the last line and
+		bne	no_trunk	; the line is longer than one point,
+		cmp.w	d4,d6		; truncate the line at the X2 vertex
+		beq	no_trunk	; (DRI: "works most of the time")
+		blt	lf_trunk
+
+rt_trunk:	subq.w	#2,d6		; d6 <- Xmax-2
+lf_trunk:	addq.w	#1,d6		; d6 <- Xmin+1 or Xmax-1
+		move.w	d6,X2(a4)	; must stay compatible with last rev
+
+no_trunk:	cmp.w	d4,d6		; X1 must not be greater than X2
+		bge	in_order	; if it is, swap the endpoints
+
+		exg	d4,d6		; d4<-X2  d6<-X1
+		
+in_order:	move.w	d6,d1		; d1 <-  Xmax
+		sub.w	d4,d1		; d1 <-  Xmax-Xmin
+		addq.w	#1,d1		; d1 <-  Xmax-Xmin+1
+		and.w	#$000F,d1	; d1 <- (Xmax-Xmin+1) mod 16
+
+		lea	LNMASK(a4),a0	; a0 -> line style pattern
+		clr.w	d0		; d0 <- offset to next pattern plane
+
+		move.w	d1,-(sp)
+		bsr	xline		; do horizontal line
+		move.w	(sp)+,d1	; d1 <- mask alignment factor
+
+*   Update line pattern mask for next segment (this doesn't really work)
+
+		move.w	(a0),d0		; d0 <- original _LN_MASK
+		rol.w	d1,d0		; d0 <- rotated line pattern mask
+		move.w	d0,(a0)		; store rotated _LN_MASK
+
+		rts
+
+
+
+*   Process lines of arbitrary slope.
+
+aline:		lea	-FRAG_LEN(sp),sp  ; sp -> pixel fragment frame
+
+		move.w	VPLANES(a4),d3	  ; d3 <- number of planes
+		cmp.w	#MAX_PLANES,d3	  ; too many planes for the buffer ?
+		bhi	al_quit		  ; if so, end prematurely
+
+		cmp.w	WRTMODE(a4),d0	  ; don't build fragment for XOR mode
+		beq	no_frag
+
+		move.l	sp,a2		  ; a2 -> ram for pixel fragment code
+		bsr	pixfrag
+
+
+*	     Order the endpoints
+
+no_frag:	cmp.w	d4,d6		; X1 must not be greater than X2
+		bge	xy_ok		; if it is, swap the endpoints
+
+		exg	d4,d6		; d4<-X2  d6<-X1
+		exg	d5,d7		; d5<-Y2  d7<-Y1
+
+xy_ok:		sub.w	d4,d6		; d6 <- dX
+
+		moveq.l	#0,d1		; d1 <- premordial OR mask
+		move.l	d1,a5		; a5 <- initial frag table offset
+
+		move.w	d4,d0		; d0 <- Xmin
+		not.w	d0
+		and.w	#$000F,d0	; d0 <- bit number
+		bset.l	d0,d1		; d1 <- OR mask
+
+		move.l	v_bas_ad,a0	; a0 <- video base address
+		move.w	VPLANES(a4),d3	; d3 <- plane count
+		add.w	d3,d3		; d3 <- offset to next word in plane
+
+		move.w	BYTESLIN(a4),d2	; d2 <- width of screen
+		muls	d5,d2		; d2 <- offset to Y
+		add.l	d2,a0		; a0 -> line containing Y
+		asr.w	#4,d4		; d4 <- word offset to X
+		muls	d3,d4		; d4 <- offset to Xmin
+		add.l	d4,a0		; a0 -> word containing (Xmin,Y)
+
+		move.w	VLINWR(a4),d0	; d0 <- vertical offset
+
+		sub.w	d5,d7		; d7 <- dY
+		bge	dy_ge_0		; if dY<0, adjust related parameters
+
+		neg.w	d7		; d7 <- positive dY
+		neg.w	d0		; d0 <- negative Yinc
+	
+dy_ge_0:	move.w	d0,a1		; a1 <- Yinc
+		cmp.w	d6,d7		; which delta is larger?
+		bgt	dmax_dmin	; adjust if dX is larger than dY
+
+		exg	d6,d7		; d6 <- dY (dMin)   d7 <- dX (dMax)
+		lea	16(a5),a5	; a5 <- offset to records for dX>dY
+
+dmax_dmin:	move.w	d6,d4		; d4 <- dMin
+		add.w	d4,d4		; d4 <- 2dMin
+		move.w	d4,d5		; d5 <- e1
+		sub.w	d7,d4		; d4 <- epsilon	2dMin - dMax
+		move.w	d4,d6		; d6 <- 2dMax -dMin
+		sub.w	d7,d6		; d6 <- e2	     2dMin - 2dMax
+
+		move.w	WRTMODE(a4),d0	; d0 <- writing mode code
+		lsl.w	#2,d0
+		add.w	d0,a5		; a5 <- offset for particular mode
+
+		subq.w	#8,d0		; if XOR mode ...
+		bne	al_nxtmask
+		tst.w	LSTLIN(a4)	; and not last line ...
+		bne	al_nxtmask
+
+		subq.w	#1,d7		; DRI kludge: don't plot last point
+
+al_nxtmask:	lea	LNMASK(a4),a3	; a3 -> line style mask
+		move.w	(a3),d0		; d0 <- line style mask
+		move.w	d7,d2		; d2 <- dbra pixel counter
+		addq.w	#1,d2		; d2 <- pixels in line
+		and.w	#$000F,d2	; d2 <- alignment count
+		rol.w	d2,d0		; d0 <- line style mask for next line
+		move.w	(a3),d2		; d2 <- line style mask for this line
+		move.w	d0,(a3)		; store line style mask for next line
+
+		move.w	d1,d0		; d1 <- OR mask
+		not.w	d0		; d0 <- AND mask
+
+		lea	wm_tbl(pc,a5.w),a5 ; a5 -> offset to pixel frag return
+		move.l	 a5,a3		   ; a3 -> offset to pixel frag return
+		add.w	(a5)+,a3	   ; a3 <- thread back from pixel frag
+		move.l	 a3,a4		   ; a4 -> base of pixel tower
+		sub.w	 d3,a4		   ; a4 <- thread into pixel tower
+		add.w	(a5),a5		   ; a5 -> writing mode routine
+		jsr	(a5)		   ; so go do it already
+
+al_quit:	lea	FRAG_LEN(sp),sp	   ; clean up the stack
+		rts
+
+
+*   Offset table of Writing Mode entry points.
+*   The absolute address of the table entry plus the word offset at that
+*   entry becomes the absolute address of the writing mode entry point.
+
+wm_tbl:		dc.w	wm0y_nxt-*
+		dc.w	    wm0y-*	; replace		dY > dX
+		dc.w	wm1y_nxt-*
+		dc.w	    wm1y-*	; transparent		dY > dX
+		dc.w	wm2y_nxt-*
+		dc.w	    wm2y-*	; XOR			dY > dX
+		dc.w	wm1y_nxt-*
+		dc.w	    wm3y-*	; reverse transparent	dY > dX
+		dc.w	wm0x_nxt-*
+		dc.w	    wm0x-*	; replace		dX > dY
+		dc.w	wm1x_nxt-*
+		dc.w	    wm1x-*	; transparent		dX > dY
+		dc.w	wm2x_nxt-*
+		dc.w	    wm2x-*	; XOR			dX > dY
+		dc.w	wm1x_nxt-*
+		dc.w	    wm3x-*	; reverse transparent	dX > dY
+
+
+
+*	PIXFRAG
+*
+*   Build a fragment of code in ram that plots a pixel of the color specified
+*   by the FG_BP_x array. The parameters passed into the fragment at run-time
+*   will be:
+*
+*	a3	thread from fragment back to master routine
+*	a5	pointer to word in plane 0 containing the pixel
+*	d0	mask for clearing a bit via an AND operation
+*	d1	mask for setting a bit via an OR operation
+*
+* in:
+*	a2	points to area where pixel fragment can be constructed
+*	d3	number of planes
+*
+* out:
+*	a2	points to start of pixel fragment code
+*
+* munged:
+*	
+*	a0/d0-d3
+
+pixfrag:	subq.w	#1,d3		; d3 <- dbra plane counter
+
+		movem.w	i_tbl(pc),d0-d2 ; cache instruction data in registers
+		move.l	a2,a0		; a0 <- working PC
+		lea	FGBP1(a4),a1	; a1 -> bitplane color array
+
+pf_loop:	tst.w	(a1)+		; get color for this plane
+		bne.s	pf_or		; 0 => AND   1 => OR
+
+pf_and:		move.w	d0,(a0)+	; load:  and.w d0,(a5)+   SET BIT
+		dbra	d3,pf_loop
+
+		move.w	d2,(a0)+	; load:  jmp   (a3)       RETURN THREAD
+		rts
+
+pf_or:		move.w	d1,(a0)+	; load:  or.w  d1,(a5)+   CLEAR BIT
+		dbra	d3,pf_loop
+
+		move.w	d2,(a0)+	; load:  jmp   (a3)       RETURN THREAD
+		rts
+
+*	     Table of Instructions.
+
+i_tbl:		and.w	d0,(a5)+
+		or.w	d1,(a5)+
+		jmp	(a3)
+
+
+
+
+*		a5 = scratch
+*		a4 = thread into clear/xor pixel tower		(modes 0,2)
+*		a3 = thread back from color pixel fragment	(modes 0,1,2)
+*		a2 = thread into color pixel fragment 		(modes 0,1,2)
+*		a1 = offset to next line in Y
+*		a0 = ptr to destination 
+*
+*		d7 = dbra pixel counter
+*		d6 = e2
+*		d5 = e1
+*		d4 = epsilon
+*		d3 = offset to next word in plane
+*		d2 = line style mask
+*		d1 = set pixel mask
+*		d0 = clr pixel mask				(modes 0,1,2)
+
+
+
+
+*	     WRITING MODE 0:  REPLACE			   dY > dX
+
+wm0y:
+wm0y_top:	rol.w	#1,d2		; cy: next style bit		      8
+		bcc	wm0y_clr	; branch if pixel is clear	   10/8
+
+		move.l	a0,a5		; a5 -> 1st dst word containing pixel 4
+		jmp	(a2)		; a2 -> ram based set pixel fragment  8
+
+
+wm0y_clr:	move.l	a0,a5		; a5 -> 1st dst word containing pixel 4
+		jmp	(a4)		; a4 -> entry into clear pixel tower  8
+
+
+		and.w	d0,(a5)+	; 8 planes			     12
+		and.w	d0,(a5)+	;				     12
+		and.w	d0,(a5)+	;				     12
+		and.w	d0,(a5)+	;				     12
+		and.w	d0,(a5)+	; 4 planes			     12
+		and.w	d0,(a5)+	;				     12
+		and.w	d0,(a5)+	; 2 planes			     12
+		and.w	d0,(a5)+	; 1 plane			     12
+
+wm0y_nxt:	add.w	a1,a0		; a0 -> next vertical word	      8
+		tst.w	d4		; epsilon < 0  =>  don't change X     4
+		bmi	wm0y_nc		; branch if X doesn't change	   10/8
+
+		ror.w	#1,d0		; rotate the clr pixel mask	      8
+		ror.w	#1,d1		; rotate the set pixel mask	      8
+		bcc	wm0y_nf		; branch if no word fault	   10/8
+	
+		add.w	d3,a0		; a0 -> next horizontal word	      8
+
+wm0y_nf:	add.w	d6,d4		; d4 <- epsilon + e2		      4
+		dbra	d7,wm0y_top	; do next pixel			  14/10
+		rts
+
+
+wm0y_nc:	add.w	d5,d4		; d4 <- epsilon + e1		      4
+		dbra	d7,wm0y_top	; do next pixel			  14/10
+		rts
+
+
+
+
+
+*	     WRITING MODE 1:  TRANSPARENT		  dY > dX
+*	     WRITING MODE 3:  REVERSE TRANSPARENT	  dY > dX
+
+wm3y:		not.w	d2
+
+wm1y:
+wm1y_top:	rol.w	#1,d2		; cy: next style bit		      8
+		bcc	wm1y_nxt	; branch if pixel is clear	   10/8
+
+		move.l	a0,a5		; a5 -> 1st dst word containing pixel 4
+		jmp	(a2)		; a2 -> ram based set pixel fragment  8
+
+
+wm1y_nxt:	add.w	a1,a0		; a0 -> next vertical word	      8
+		tst.w	d4		; epsilon < 0  =>  don't change X     4
+		bmi	wm1y_nc		; branch if X doesn't change	   10/8
+
+		ror.w	#1,d0		; rotate the clr pixel mask	      8
+		ror.w	#1,d1		; rotate the set pixel mask	      8
+		bcc	wm1y_nf		; branch if no word fault	   10/8
+	
+		add.w	d3,a0		; a0 -> next horizontal word	      8
+
+wm1y_nf:	add.w	d6,d4		; d4 <- epsilon + e2		      4
+		dbra	d7,wm1y_top	; do next pixel			  14/10
+		rts
+
+
+wm1y_nc:	add.w	d5,d4		; d4 <- epsilon + e1		      4
+		dbra	d7,wm1y_top	; do next pixel			  14/10
+		rts
+
+
+
+
+*	     WRITING MODE 2:  XOR			  dY > dX
+
+wm2y:
+wm2y_top:	rol.w	#1,d2		; cy: next style bit		      8
+
+
+		bcc	wm2y_nxt	; branch if pixel is clear	   10/8
+
+		move.l	a0,a5		; a5 -> 1st dst word containing pixel 4
+		jmp	(a4)		; a4 -> entry into xor pixel tower    8
+
+
+		eor.w	d1,(a5)+	; 8 planes			     12
+		eor.w	d1,(a5)+	;				     12
+		eor.w	d1,(a5)+	;				     12
+		eor.w	d1,(a5)+	;				     12
+		eor.w	d1,(a5)+	; 4 planes			     12
+		eor.w	d1,(a5)+	;				     12
+		eor.w	d1,(a5)+	; 2 planes			     12
+		eor.w	d1,(a5)+	; 1 plane			     12
+
+wm2y_nxt:	add.w	a1,a0		; a0 -> next vertical word	      8
+		tst.w	d4		; epsilon < 0  =>  don't change X     4
+		bmi	wm2y_nc		; branch if X doesn't change	   10/8
+
+		ror.w	#1,d1		; rotate the set pixel mask	      8
+		bcc	wm2y_nf		; branch if no word fault	   10/8
+	
+		add.w	d3,a0		; a0 -> next horizontal word	      8
+
+wm2y_nf:	add.w	d6,d4		; d4 <- epsilon + e2		      4
+		dbra	d7,wm2y_top	; do next pixel			  14/10
+		rts
+
+
+wm2y_nc:	add.w	d5,d4		; d4 <- epsilon + e1		      4
+		dbra	d7,wm2y_top	; do next pixel			  14/10
+		rts
+
+
+
+
+
+*	     WRITING MODE 0:  REPLACE			   dX > dY
+
+wm0x:
+wm0x_top:	rol.w	#1,d2		; cy: next style bit		      8
+		bcc	wm0x_clr	; branch if style bit is 0	   10/8
+
+		move.l	a0,a5		; a5 -> 1st dst word containing pixel 4
+		jmp	(a2)		; a2 -> ram based set pixel fragment  8
+
+
+wm0x_clr:	move.l	a0,a5		; a5 -> 1st dst word containing pixel 4
+		jmp	(a4)		; a4 -> entry into clear pixel tower  8
+
+
+		and.w	d0,(a5)+	; 8 planes			     12
+		and.w	d0,(a5)+	;				     12
+		and.w	d0,(a5)+	;				     12
+		and.w	d0,(a5)+	;				     12
+		and.w	d0,(a5)+	; 4 planes			     12
+		and.w	d0,(a5)+	;				     12
+		and.w	d0,(a5)+	; 2 planes			     12
+		and.w	d0,(a5)+	; 1 plane			     12
+
+wm0x_nxt:	ror.w	#1,d0		; rotate the clear pixel mask	      8
+		ror.w	#1,d1		; rotate the set pixel mask	      8
+		bcc	wm0x_nf		; check for word fault		   10/8
+
+		add.w	d3,a0		; a0 -> next horizontal word	      8
+
+wm0x_nf:	tst.w	d4		; epsilon < 0  =>  don't change Y     4
+		bmi	wm0x_nc		; branch if Y doesn't change	   10/8
+
+		add.w	d6,d4		; d4 <- epsilon + e2		      4
+		add.w	a1,a0		; a0 -> next vertical word	      8
+		dbra	d7,wm0x_top	; do next pixel			  14/10
+		rts
+
+
+wm0x_nc:	add.w	d5,d4		; d4 <- epsilon + e1		      4
+		dbra	d7,wm0x_top	; do next pixel			  14/10
+		rts
+
+
+
+
+
+*	     WRITING MODE 1:  TRANSPARENT		  dX > dY
+*	     WRITING MODE 3:  REVERSE TRANSPARENT	  dX > dY
+
+wm3x:		not.w	d2		; invert the style mask
+
+wm1x:
+wm1x_top:	rol.w	#1,d2		; cy: next style bit		      8
+		bcc	wm1x_nxt	; skip if style bit is 0	   10/8
+
+		move.l	a0,a5		; a5 -> 1st dst word containing pixel 4
+		jmp	(a2)		; a2 -> ram based set pixel fragment  8
+
+
+wm1x_nxt:	ror.w	#1,d0		; rotate the clr pixel mask	      8
+		ror.w	#1,d1		; rotate the set pixel mask	      8
+		bcc	wm1x_nf		; check for word fault		   10/8
+
+		add.w	d3,a0		; a0 -> next horizontal word	      8
+
+wm1x_nf:	tst.w	d4		; epsilon < 0  =>  don't change Y     4
+		bmi	wm1x_nc		; branch if Y doesn't change	   10/8
+
+		add.w	d6,d4		; d4 <- epsilon + e2		      4
+		add.w	a1,a0		; a0 -> next vertical word	      8
+		dbra	d7,wm1x_top	; do next pixel			  14/10
+		rts
+
+
+wm1x_nc:	add.w	d5,d4		; d4 <- epsilon + e1		      4
+		dbra	d7,wm1x_top	; do next pixel			  14/10
+		rts
+
+
+
+
+
+*	     WRITING MODE 2:  XOR			  dX > dY
+
+wm2x:
+wm2x_top:	rol.w	#1,d2		; cy: next style bit		      8
+		bcc	wm2x_nxt	; skip if style bit is 0	   10/8
+
+		move.l	a0,a5		; a5 -> 1st dst word containing pixel 4
+		jmp	(a4)		; a4 -> entry into xor pixel tower    8
+
+
+		eor.w	d1,(a5)+	; 8 planes			     12
+		eor.w	d1,(a5)+	;				     12
+		eor.w	d1,(a5)+	;				     12
+		eor.w	d1,(a5)+	;				     12
+		eor.w	d1,(a5)+	; 4 planes			     12
+		eor.w	d1,(a5)+	;				     12
+		eor.w	d1,(a5)+	; 2 planes			     12
+		eor.w	d1,(a5)+	; 1 plane			     12
+
+wm2x_nxt:	ror.w	#1,d1		; rotate the set pixel mask	      8
+		bcc	wm2x_nf		; check for word fault		   10/8
+
+		add.w	d3,a0		; a0 -> next horizontal word	      8
+
+wm2x_nf:	tst.w	d4		; epsilon < 0  =>  don't change Y     4
+		bmi	wm2x_nc		; branch if Y doesn't change	   10/8
+
+		add.w	d6,d4		; d4 <- epsilon + e2		      4
+		add.w	a1,a0		; a0 -> next vertical word	      8
+		dbra	d7,wm2x_top	; do next pixel			  14/10
+		rts
+
+
+wm2x_nc:	add.w	d5,d4		; d4 <- epsilon + e1		      4
+		dbra	d7,wm2x_top	; do next pixel			  14/10
+		rts
+
+
+**************************************************************************
+*******************************************************************************
+**									     **
+**	HABLINE								     **
+**									     **
+**	This routine draws a line between (X1,Y1) and (X2,Y1) using the	     **
+**	BLASTER hardware bit blt.					     **
+**	The line has attributes of color, pattern, and writing mode	     **
+**									     **
+**	Note that 2 entry points are provided for ABLINE		     **
+**									     **
+**	input:		X1 = minimum X of line	     (assumed to be clipped) **
+**			X2 = maximum X of line	     (assumed to be clipped) **
+**			Y1 = row that line is on     (assumed to be clipped) **
+**		    PATMSK = index mask for pattern			     **
+**		    PATPTR = pointer to start of pattern		     **
+**		   VPLANES = number of video planes			     **
+**		     FGBP1 = 1st entry in bitplane color array		     **
+**		   WRTMODE = writing mode				     **
+**									     **
+**			      0 => replace mode.			     **
+**			      1 => transparent mode.			     **
+**			      2 => xor mode.				     **
+**			      3 => reverse transparent mode.		     **
+**									     **
+**		   BVHLINE = pointer to horizontal line primitive	     **
+**									     **
+**	output:	  nothing is returned					     **
+**									     **
+**	destroys: everything						     **
+**									     **
+*******************************************************************************
+*******************************************************************************
+
+op_table:  ;*	 color=0   color=1
+
+	dc.w	BM_PAT+00,BM_PAT+03	; replace
+	dc.w	BM_PAT+04,BM_PAT+07	; transparent
+	dc.w	BM_PAT+06,BM_PAT+06	; xor
+	dc.w	BM_PAT+01,BM_PAT+13	; reverse transparent
+
+
+lf_tab:	dc.w	$FFFF			; left fringe list	0:OLD 1:NEW
+rf_tab:	dc.w	$7FFF,$3FFF,$1FFF,$0FFF	; right fringe list	0:NEW 1:OLD
+	dc.w	$07FF,$03FF,$01FF,$00FF
+	dc.w	$007F,$003F,$001F,$000F
+	dc.w	$0007,$0003,$0001,$0000
+
+
+_HABLINE:
+
+	lea	lineavar,a4		; a4 -> LineA variable base
+	movem.w	X1(a4),d4-d6		; d4 <- X1   d5 <- Y1   d6 <- X2
+
+fline:	move.w	d5,d0			; d0 <- Y1
+	and.w	PATMSK(a4),d0		; d0 <- initial pattern index
+	add.w	d0,d0			; d0 <- initial pattern offset
+	move.l	PATPTR(a4),a0		; a0 -> start of pattern
+	add.w	d0,a0			; a0 -> pattern word
+
+	tst.w	MULTIFIL(a4)		; d0 <- offset to next pattern plane
+	sne	d0			; d0 <- 00: single plane pattern
+	and.w	#32,d0			; d0 <- 32: multiple plane pattern
+
+xline:	move.w	d4,d1			; d1 <- X1
+	asr.w	#4,d1			; d1 <- word containing X1
+	move.w	d6,d2			; d2 <- X2
+	asr.w	#4,d2			; d2 <- word containing X2
+
+	moveq.l	#$0F,d3			; d3 <- mod 16 mask
+
+	and.w	d3,d4			; d4 <- X1 mod 16
+	add.w	d4,d4			; d4 <- offset into fringe table
+	move.w	lf_tab(pc,d4.w),d4	; d4 <- left fringe mask  (0:Dst 1:Src)
+
+	and.w	d3,d6			; d6 <- X2 mod 16
+	add.w	d6,d6			; d6 <- offset into right fringe table
+	move.w	rf_tab(pc,d6.w),d6	; d6 <- inverted right fringe mask
+	not.w	d6			; d6 <- right fringe mask (0:Dst 1:Src)
+
+	sub.w	d1,d2			; d2 <- span-1 of line in words
+*	bne	hline_select		; 1 word span =>  merge lf & rt masks
+	bne     hb_hline		;added ***********
+	and.w	d6,d4			; d4 <- single fringe mask
+
+*hline_select:
+
+* in:
+*	d0	offset between pattern words
+*	d1	word containing X1
+*	d2	span-1 (words)
+*	d3	mod 16 mask
+*	d4	left fringe mask
+*	d5	Y1
+*	d6	right fringe mask
+*
+*	a0	points to 1st pattern word
+*	a4	points to line A variables base address  (_v_planes)
+
+hb_hline:
+
+;	lea	BLASTER+B_OFF,a5	; a5 -> bit blt reference register
+
+	move.l   Blt,a5
+	add.l    #B_OFF,a5      ;stop blitter
+
+	clr.w	B_S_NXWD(a5)		; proceed from left to right
+
+	addq.w	#1,d2			; d2 <- span
+	move.w	d2,B_D_SPAN(a5)
+
+	lea	B_F1_MSK(a5),a3
+	move.w	 d4,(a3)+		; B_F1_MSK <- left fringe
+	move.w	#-1,(a3)+		; B_CT_MSK <- center fringe
+	move.w	 d6,(a3)+		; B_F2_MSK <- right fringe
+
+	move.w	(a4),d2			; d2 <- planes		( _v_planes   )
+	move.w	d2,d7
+	subq.w	#1,d7			; d7 <- dbra plane counter
+
+	add.w	d2,d2			; d2 <- offset between words in plane
+	move.w	d2,(a3)+		; load B_D_NXWD
+
+	move.l	v_bas_ad,a1		; a1 -> start of dst form
+	muls	BYTESLIN(a4),d5		; d5 <- offset to 1st row of dst
+	add.l	d5,a1			; a1 -> row containing line
+
+	muls	d2,d1			; d1 <- offset to word containing X1
+	add.l	d1,a1			; a1 -> 1st word of line
+
+	lea	B_PATTERN(a5),a2	; a2 -> 1st pattern register
+	lea	FGBP1(a4),a3		; a3 -> byte array of bitplane values
+
+	move.w	WRTMODE(a4),d2		; d2 <- writing mode (0-3)
+	add.w	d2,d2
+	add.w	d2,d2			; d2 <- offset to writing mode table
+	lea	op_table(pc),a4		; a4 -> 1st logic op table
+	add.w	d2,a4			; a4 -> writing mode table
+
+	moveq.l	#2,d3			; d3 <- logic op offset mask
+	move.w	#BM_GO,d4		; d4 <- SKEW word
+	moveq.l	#1,d6			; d6 <- height
+
+
+hl_loop:
+
+	move.w	(a0),(a2)		; load the pattern into BLASTER
+	add.w	d0,a0			; a0 -> next pattern word
+
+	move.l	a1,B_D_ADDR(a5)		; new dst plane
+	move.w	d6,B_HEIGHT(a5)		; height of 1
+
+	tst.w	(a3)+			; logic op is determined by the
+	sne	d2			; color of the current bitplane
+	and.w	d3,d2			; d2 <- logic op offset: 0=>0  1=>2
+	move.w	0(a4,d2.w),B_LOGOP(a5)	; load the logic op
+*******************************************************************************
+	move.w	d4,(a5)			; start the BLASTER
+*******************************************************************************
+
+	moveq.l	#BF_GO-8,d5		; d5 -> GO flag in ctrl byte
+
+hl_sync:
+
+	bset.b	d5,(a5)
+	nop
+	bne	hl_sync
+
+hl_cont:
+
+	addq.l	#2,a1			; a1 -> next dst plane
+	dbra	d7,hl_loop
+
+	rts
+
+	  .data
+	  .even
+control:  dc.w    0,NUMVERT	 ;
+vertd:    dc.w    160,100,160,130,80,130,160,100
+vertdl:   dc.w    160,100,160,150,30,150,160,100
+fuji:     dc.w    %0000000000000000 ;$0000
+	  dc.w    %0101010101010101 ;$05a0
+	  dc.w    %1010101010101010 ;$05a0
+	  dc.w    %0101010101010101 ;$05a0
+	  dc.w    %1111111111111111 ;$05a0
+	  dc.w    %0101010101010101 ;0db0
+	  dc.w    %0101010101010101 ;0db0
+	  dc.w    %1111111111111111 ;1db8
+	  dc.w    %0101010101010101 ;399c
+	  dc.w    %0000000000000000 ;799e
+	  dc.w    %1010101010101010 ;718e
+	  dc.w    %0000000000000000 ;718e
+	  dc.w    %0001110001110011 ;6186
+	  dc.w    %1110001110001100 ;4182
+	  dc.w    %1111111100000000 ;0000
+	  dc.w    %0000000011111111 ;0000
+bliterr: dc.b  '                                              ',cr,lf
+	dc.b   '-------->      Replace Blitter     <----------',cr,lf
+	dc.b   '>>>> Bus error has occurred during BLiT test! <<<<<',cr,lf,eot

@@ -1,0 +1,1270 @@
+[PageStream 2 document F0302.8: 8.50 x 11.00 in, 719 objects]
+
+--- Page 52 ---
+[23 drawing objects, see F0302.8.p052.svg]
+
+Controller B
+
+5
+
+1
+
+10
+
+6
+
+15
+
+11
+
+Pin
+
+Function
+
+Pin
+
+Function
+
+1
+3
+5
+7
+9
+11
+13
+15
+
+Up 2
+LT 2
+Pad 1X
++5 VDC
+Ground
+Up 3
+LT 3
+ Pad 1Y
+
+2
+4
+6
+8
+10
+12
+14
+
+Dn 2
+RT 2
+Fire 2
+Not Connected
+Fire 3
+Dn 3
+RT 3
+
+2.3.9 ROM Cartridge
+
+The FALCON030 cartridge port is fully compatible with ST cartridge. The cartridge is physically connected through a 40 pin card edge connector ROM cartridge slot. Cartridge ROMs are mapped to a 128K memory region starting at 0x00FA0000, extending to 0x00FBFFFF.
+
+--- Page 53 ---
+[4 drawing objects, see F0302.8.p053.svg]
+
+2.3.9.1 ROM Cartridge Connector Pin List
+
+If not in a plastic housing, the cartridge must be installed with the chips facing down.The cartridge uses a 40 pin card edge S connector with the following pin assignment:
+
+39
+
+1
+
+40
+
+2
+
+Pin
+
+Function
+
+Pin
+
+Function
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+31
+33
+35
+37
+
++5VDC
+Data 14
+Data 12
+Data 10
+Data 8
+Data 6
+Data 4
+Data 2
+Data 0
+Address 13
+Address 8
+Address 7
+Address 6
+Address 5
+Address 11
+ROM3 Select
+ROM4 Select
+Upper Data Strobe
+Lower Data Strobe
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+32
+34
+36
+38-40
+
+Power +5Vdc
+Data 15
+Data 13
+Data 11
+Data 9
+Data 7
+Data 5
+Data 3
+Data 1
+Address 15
+Address 14
+Address 9
+Address 10
+Address 12
+Address 4
+Address 3
+Address 2
+Address 1
+Ground
+
+2.3.10 Musical Instrument Digital Interface (MIDI)
+
+The MIDI allows the integration of the FALCON030 series with music synthesizers, sequencers, drum boxes, and other devices possessing MIDI interfaces. High speed (31.25 Kbaud) serial communication of keyboard and program information is provided by two ports, MIDI OUT and MIDI IN (the MIDI OUT also includes MIDI
+THRU data).
+
+The MIDI communicates through the MC6850 Asynchronous Communications Interface Adapter (ACIA) to the system bus. The data transfer rate is a constant 31.25 Kbaud of 8-bit asynchronous data.
+
+--- Page 54 ---
+[14 drawing objects, see F0302.8.p054.svg]
+
+ 2.3.10.1 MIDI Connector Pin List
+
+The MIDI OUT/THRU uses a circular DIN 5 pin S connector with the following pin assignment:
+
+3
+
+1
+
+4
+
+5
+
+2
+
+Pin
+
+Function
+
+1
+2
+3
+4
+5
+
+Thru Transmit Data
+Shield Ground
+Thru Loop Return
+Out Transmit Data
+Out Loop Return
+
+The MIDI IN uses a circular DIN 5 pin S connector with the following pin assignment:
+
+3
+
+1
+
+4
+
+5
+
+2
+
+Pin
+
+Function
+
+1
+2
+3
+4
+5
+
+Not Connected
+Not Connected
+Not Connected
+In Receive Data
+In Loop Return
+
+1
+
+--- Page 55 ---
+
+2.3.11 Digital Processor Interface (DSP)
+
+The FALCON030 system includes a Digital Signal Processor (DSP) which can be used for complex audio and video processing. The DSP is located across the data and address buses of the 68030, and also has access to 32K of 24-bit, zero wait-state static RAM. The RAM can be used for information storage. Some of the various uses for the DSP would be sound and music synthesis, special sound effects, and 3D graphics modeling.
+
+2.3.11.1 DSP Pin and Signal List
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+53,54,57, 58,60,61,
+65,67,68,
+70,71,75,
+76,77,79,
+80
+
+A0-A15
+
+Output
+
+16-bit Address bus.
+
+81,82,85, 86,87,88,
+92,93,94,
+96,97,99,
+102,104,
+105,106,
+108,109,
+113,114,
+115,118,
+119,120
+
+D0-D23
+
+I/O
+
+24-bit data bus.
+
+52
+
+PS-
+
+Output
+
+Program Memory Select is driven when external program memory is referenced. This pin is not connected in the FALCON030 system.
+
+49
+
+DS-
+
+Output
+
+Data Memory Select is driven when external memory is referenced.
+
+48
+
+X/(Y)-
+
+Output
+
+This signal is used to select which external memory space is referenced by the DS- signal. This pin is not connected in the FALCON030 system.
+
+47
+
+RD-
+
+Output
+
+Read Enable is asserted to read the external memory on the data bus (D0-D23).
+
+46
+
+WR-
+
+Output
+
+Write Enable is asserted to write the external memory on the data bus (D0-D23).
+
+--- Page 56 ---
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+45
+
+ BR-
+
+Input
+
+Bus Request allows another device to become master of the external address and data buses (D0-D23, A0-A15). This pin is tied high in the FALCON030 system.
+
+43
+
+BG-
+
+Output
+
+This signal is used to acknowledge an external bus request. It is tied high in the FALCON030 system.
+
+123
+
+MODA/
+IRQA-
+
+Input
+
+Mode Select A is a dual function pin used to select the initial operating mode of the DSP56001 and to receive interrupts from and external source. This pin is tied high in the FALCON030 system selecting Mode A.
+
+121
+
+MODB/IRQB-
+
+Input
+
+Mode Select B is a dual function pin used to select the initial operating mode of the DSP56001 and to receive interrupts from and external source. This pin is tied to reset in the FALCON030 system.
+
+124
+
+RESET-
+
+Input
+
+Reset is used to reset the DSP56001.
+
+25,22,20, 19,16,15, 14,11
+
+HD0-7
+
+I/O
+
+The Host Data Bus is used to transfer data between the host system and the DSP56001.
+
+5,2,1
+
+HA0-2
+
+Input
+
+The Host Address Bits are used to select the Host Interface Registers.
+
+9
+
+HR/(W)-
+
+Input
+
+This signal selects the direction of Host processor access.
+
+8
+
+HEN-
+
+Input
+
+This signal is used to enable the transfer of data on the host data bus.
+
+10
+
+HREQ-
+
+Output
+
+This signal is used to request service from the host processor.
+
+6
+
+HACK-
+
+Input
+
+This signal is used to receive acknowledge of a request made for DMA transfers or for interrupt acknowledge from the host processor.
+
+27
+
+RXD
+
+Input
+
+Not Connected in the FALCON030 system.
+
+28
+
+TXD
+
+Output
+
+Not connected in the FALCON030 system.
+
+29
+
+SCLK
+
+I/O
+
+Not connected in the FALCON030 system.
+
+31,40,37
+
+SC0-2
+
+I/O
+
+These pins are used for control by the Synchronous Serial Interface.
+
+32
+
+SCK
+
+I/O
+
+Serial bit rate clock for the Synchronous Serial Interface.
+
+42
+
+SRD
+
+Input
+
+Data is input into the SSI Receive Shift Register on this pin.
+
+--- Page 57 ---
+[34 drawing objects, see F0302.8.p057.svg]
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+39
+
+STD
+
+Output
+
+Data is transmitted from the SSI Transmit Shift Register on this pin.
+
+Vcc
+
+Input
+
+Power supply for DSP56001.
+
+GND
+
+Input
+
+Ground for DSP56001.
+
+127
+
+EXTAL
+
+Input
+
+External 32 MHz clock input.
+
+2.3.11.2 DSP Connector Pin List
+
+9
+
+1
+
+18
+
+10
+
+26
+
+19
+
+Pin
+
+Function
+
+Pin
+
+Function
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+
+GP0
+GP1
+SDMA Play Clock
+No Connect
++12V
+SYNC Serial I/F Control 0
+SYNC Serial I/F Control 2
+ Synchronous Serial Data In
++12V
+SDMA Record Data
+SDMA Record Synchronization
+ SYNC Serial I/F Data Out
+Ground
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+
+GP2
+SDMA Play Data
+SDMA Play Synchronization
++12V
+Ground
+SYNC Serial I/F Control 1
+Ground
+Ground
+Ground
+SDMA Record Clock
+DSP Interrupt
+SYNC Serial I/F Clock
+External Clock (GENLOCK)
+
+2.3.12 IDE Interface
+
+The FALCON030 is equipped with an IDE interface. IDE drives can be connected through an internal 44-pin connector. Chip selects and direction control for the IDE interface are provided by the COMBEL IC. The interface resides across the data bus using data bits 0-16. Four address bits are used to control the IDE interface (A2-A4).
+
+--- Page 58 ---
+[45 drawing objects, see F0302.8.p058.svg]
+
+2.3.12.1 IDE Connector Pin List
+
+43
+
+1
+
+44
+
+2
+
+Pin
+
+Function
+
+Pin
+
+Function
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+31
+33
+35
+37
+39
+41
+43
+
+RESET
+DATA 7
+DATA 6
+DATA 5
+DATA 4
+DATA 3
+DATA 2
+DATA 1
+DATA 0
+Ground
+N/C
+IOW
+IOR
+N/C
+N/C
+IRD
+ADDR 3
+ADDR 2
+CS0
+ACT
+VCC
+Ground
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+32
+34
+36
+38
+40
+42
+44
+
+Ground
+DATA 8
+DATA 9
+DATA 10
+DATA 11
+DADA 12
+DATA 13
+DATA 14
+DATA 15
+KEY
+Ground
+Ground
+Ground
+N/C
+Ground
+N/C
+N/C
+ADDR 4
+CS1
+Ground
+VCC
+N/C
+
+2.3.13 Expansion Connector
+
+The FALCON030 contains an expanxion port connector for use with expansion boards designed for the system. The expansion port is made up of one 50-pin connector and one 30-pin connector. The connectors interface to the system through the data and address bus. External interrupts numbers 1 and 3 are provided to the connector. External bus masters can also be plugged into the expansion connector, and signals are provided for bus control and synchronization.
+
+--- Page 59 ---
+[51 drawing objects, see F0302.8.p059.svg]
+
+2.3.13.1 Expansion Connector Pin List
+
+50-pin Connector J19
+
+49
+
+1
+
+50
+
+2
+
+Pin
+
+Function
+
+Pin
+
+Function
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+31
+33
+35
+37
+39
+41
+43
+45
+47
+49
+
+Ground
+Bus Grant Acknowledge
+Lower Data Strobe
+Read/Write
+Function Code 2
+Function Code 0
+No Connect
+Combel Bus Grant Acknowledge
+Reset
+Bus Error
+IPL1
+Clock
+Vcc
+Address 22
+Address 20
+Address 18
+Address 16
+Address 14
+Address 12
+Address 10
+Address 8
+Address 6
+Address 4
+Address 2
+Expand
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+32
+34
+36
+38
+40
+42
+44
+46
+48
+50
+
+Ground
+Address Strobe
+Upper Data Strobe
+Data Transmit Ack
+Function Code 1
+BMODE
+Interrupt Ack
+Bus Request
+Halt
+IPL0
+IPL2
+Vcc
+Address 23
+Address 21
+Address 19
+Address 17
+Address 15
+Address 13
+Address 11
+Address 9
+Address 7
+Address 5
+Address 3
+Address 1
+No Connect
+
+--- Page 60 ---
+[31 drawing objects, see F0302.8.p060.svg]
+
+30-pin Connector J20
+
+29
+
+1
+
+30
+
+2
+
+Pin
+
+Function
+
+Pin
+
+Function
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+
+Data 14
+Data 12
+Data 10
+Data 8
+Data 6
+Data 4
+Data 2
+Data 0
+Ground
+Ground
+Interrupt 1
+500 kHz Clock
+MFP Interrupt Enable In
+Interrupt 3
+Vcc
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+
+Data 13
+Data 11
+Data 9
+Data 7
+Data 5
+Data 3
+Data 1
+Data 15
+Ground
+Expansion Bus Grant
+External CPU Bus Grant
+No Connect
+MFP Interrupt
+Vcc
+Vcc
+
+--- Page 61 ---
+
+2.4 SYSTEM STARTUP
+
+After a RESET (power-up or reset button) the 68030 will start executing at the address pointed to by locations 4-7, which is ROM (the MCU within the COMBO IC maps the first 8 bytes of ROM at E00000 into the addresses 0-7). Location 000004 points to the start of the operating system code in ROM. The following sequence is then executed:
+
+1.	Perform a reset instruction (outputs a reset pulse). (RESET.)
+
+2.	Read the longword at cartridge address FA0000. If the data read is a magic number, execute from the cartridge (cartridge takes over here). If not, continue.
+
+3.	Check for a warm start (see if RAM locations are valid). If not, initialize the memory controller.
+
+4.	Initialize the PSG chip, deselect disk drives.
+
+5.	Initialize color palettes and set screen address.
+
+6.	If not a warm start, zero memory.
+
+7.	Set up operating system variables in RAM.
+
+8.	Set up exception vectors.
+
+9.	Initialize MFP.
+
+10.	Set screen resolution.
+
+11.	Attempt to boot floppy; attempt to boot hard disk; run program if successful.
+
+12.	If no boot disk, load the desktop ROM on board ROM.
+
+
+2.5 SYSTEM ERRORS
+
+The 68030 has a feature called exception processing, which takes place when an interrupt or bus error is indicated by external logic, or when the CPU detects an error internally, or when
+certain types of instructions are executed. An exception will cause the CPU to fetch a vector (address to a routine) from RAM and start processing at the routine pointed to by the vector. Exception vectors are initialized by the operating system. Those exceptions which do not have legitimate occurrences (interrupts being legitimate) have vectors pointing to a general purpose routine which will display some number of bombs showing on the screen. The number of bombs equals the number of exceptions which occurred.
+
+System errors may or may not be recoverable. Errors in loading files from disk may cause the system to crash, necessitating a reset. Verify the diskette and disk drive before attempting to repair the computer.
+
+--- Page 62 ---
+
+2.5.1 Number of Bombs and Meaning
+
+2:		BUS ERROR. COMBO IC asserted bus error.
+
+3:		ADDRESS ERROR. Processor attempted to access word or long word sized data on an odd address.
+
+4:		ILLEGAL INSTRUCTION. Processor fetched an instruction from ROM or RAM which was not a legal instruction.
+
+5:		ZERO DIVIDE. Processor was asked to perform a division by zero.
+
+6:		CHK INSTRUCTION. This is a legal instruction, if software uses this, it must install a handler.
+
+7:		TRAPV INSTRUCTION. See Chk instruction.
+
+8:		PRIVILEGE VIOLATION. CPU was in user mode, tried to execute a 68030 instruction that can only be performed in supervisor mode.
+
+9:		TRACE. If trace bit is set in the status register, the CPU will execute this exception after every instruction. Used to debug software.
+
+10:		LINE 1010 EMULATOR. CPU read an instruction which has `1010' as its most significant nibble. Used by TOS for low level graphics software routines.
+
+11:		LINE 1111 EMULATOR. CPU read an instruction which has `1111' as its most significant nibble.
+
+12:		Unassigned, should be no occurrence.
+
+13:		Coprocessor Protocol Violation. A read of the coprocessor has resulted in an illegal value.
+
+14:		Format Error. The format word passed to the coprocessor was invalid.
+
+15:		Uninitialized Interrupt. An interrupt was received that had not been reset.
+
+16-23:	Unassigned, should be no occurance.
+
+24:		SPURIOUS INTERRUPT. Bus error during interrupt processing.
+
+25-31:	AUTOVECTOR INTERRUPT. Numbers 4 and 2 are used, others should have no occurrence.
+
+32-63:	TRAP INSTRUCTION. CPU read instruction which is used to generate a software exception (such as the entry to GEMDOS, VDI, or AES).
+
+64-79:	MFP interrupts.
+
+80-127:	Reserved for Atari use.
+
+128-255:	Unused.
+
+--- Page 63 ---
+[121 drawing objects, see F0302.8.p063.svg]
+
+2.6 Overall Block Diagram
+
+32-Bit Data from VIDEL IC
+
+Data Bus 16
+
+MC68030FG
+Microprocessor
+
+Address Bus 24
+
+Control Bus
+
+COMBEL
+IC
+
+Address 10
+
+Memeory
+Daughter
+Card
+1/4/14
+Megabytes
+
+Control Bus
+
+Data 16
+
+Red 6
+
+Optional
+MC68881/
+MC68882
+Coprocessor
+
+Address 4
+
+Data 16
+
+Address 10
+
+VIDEL
+IC
+
+Blue 6
+
+Green 6
+
+Video
+DAC
+
+I/F Cable
+
+ST or VGA
+Monitor
+
+Modulator
+
+TV
+
+Control
+
+SYNC
+
+Data 16
+
+Color
+
+1377
+
+System
+ROM
+
+Address 16
+
+32-Bit Data to DRAM
+
+Control
+
+Ring Indicator
+
+Data 8
+
+ACSI/FDD/IDE Interrupt
+
+Data 8
+
+MC68901
+MFP
+
+MIDI Interrupt
+
+Address 5
+
+DSP Interrupt
+
+Keyboard
+
+MC6850
+Keyboard
+Controller
+
+Address 2
+
+Control
+
+Control
+
+Keyboard/MIDI Interrupt
+
+Printer Acknowledge
+
+Printer Busy
+
+Sound Interrupt
+
+Data 8
+
+Printer Data/Strobe
+
+Data 8
+
+DS1287
+Real-Time
+Clock
+
+Control
+
+YM-3439
+PSG
+
+Printer Select In
+
+IDE Reset
+
+Control
+
+Floppy Disk 0 Select
+
+Floppy Side 0 Select
+
+Data 8
+
+Speaker Gate
+
+MIDI In
+
+MIDI Out
+
+MC6850
+MIDI
+Controller
+
+Address 2
+
+MONO Out
+
+DSP Reset
+
+Control
+
+Data 15
+
+Serial Data
+
+MONO Out
+
+Data
+
+Data 8
+
+Address 23
+
+SDMA
+
+Master Clock
+
+Serial Clock
+
+CODEC
+ADC
+DAC
+
+AMP
+
+Stereo
+
+Internal
+Speaker
+
+Control
+
+Microphone
+
+Address 1
+
+Serial Port
+
+Handshake
+
+8530
+SCC
+
+Serial SYNC
+
+Stereo
+
+Headphones
+
+Control
+
+Data 8
+
+LAN Data
+
+LAN Port
+
+Address 3
+
+Control
+
+AJAX
+Floppy
+Controller
+
+Interal
+Floppy
+Disk
+
+5380
+SCSI
+Controller
+
+External
+SCSI
+Hard
+Disk
+
+Record Data
+
+Data 8
+
+Play Data
+
+Address 3
+
+Control
+
+DSP Connector
+
+Control
+
+56001
+Digital
+Signal
+Processor
+
+Serial Data
+
+Data 24
+
+Address 16
+
+32K SRAM

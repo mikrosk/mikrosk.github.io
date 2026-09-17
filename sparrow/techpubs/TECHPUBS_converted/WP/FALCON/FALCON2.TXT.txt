@@ -1,0 +1,48 @@
+SECTION TWO 
+ 
+THEORY OF OPERATION 
+ 
+ 
+2.0 OVERVIEW 
+
+
+The section discusses in general the components which make up the
+Falcon system and how they interrelate with one another. This 
+will give you a basic working knowledge of the system's
+architecture necessary to repair most hardware failures which may
+occur. Other sections are provided in this manual to aid in use
+of diagnostics and troubleshooting techniques. The system is
+divided into three main categories. Main system, Audio/Video
+Subsystem, and I/O Subsystem. Each category will be covered
+separately along with any other components that may lie outside
+that section as it relates to that sections function within the
+system. 
+ 
+
+2.1 MAIN SYSTEM 
+
+
+The main system architecture of the Falcon is comprised of the
+following major components:
+
+MC68040 Microprocessor @ 33MHz
+512 Kbytes of system ROM
+2 Mbytes of dual-purpose system RAM
+MCU (Memory Control Unit)
+	Memory Control
+	Refresh Control
+	Bus Timers
+IOCU IC
+	Interrupt Control
+	Interrupt Mask and Current Status
+	System Control
+	Interrupt Generator
+Real-Time Clock
+
+2.1.1 MC68030 Microprocessor 
+2.1.1.1 MC68030 Pin List and Signal Description
+2.1.2 MC68882 Coprocessor 
+2.1.2.1 MC68882 Pin List and Signal Description
+2.1.3 ROM 
+2.1.4 System RAM 
+2.1.4.1 System Memory Map

@@ -1,0 +1,81 @@
+DXF drawing: DYNACADD/PARTS/DXF/PARALLEL.DXF
+Render: PARALLEL.DXF.svg
+
+== Summary ==
+File:        10296 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font txt
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (0.1176, -0.0726) - (4.3222, 14.3117)
+             rendered (0.0626, 0.0274) - (4.3272, 14.2117), size 4.2647 x 14.1843
+Limits:      (0, 0) - (4.3, 14.26)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: STANDARD (font txt)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            51
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: POLYLINE 26 (58 vertices), TEXT 25
+Blocks:      0 defined
+Notes:
+  - 24 zero-length polylines (all vertices identical, e.g. pin dots) drawn as dots
+  - 1 polylines with constant width drawn as thick strokes
+
+== Text in reading order (25 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (25 items) --
+  1
+  14
+  2
+  15
+  3
+  16
+  4
+  17
+  5
+  18
+  6
+  19
+  7
+  20
+  8
+  21
+  9
+  22
+  10
+  23
+  11
+  24
+  12
+  25
+  13
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+      X        Y    HEIGHT    ROT  JUST      LAYER  STYLE     TEXT
+ 0.3176  13.1453       0.3      0  middle    1      STANDARD  1
+ 4.0373  12.6453       0.3      0  middle    1      STANDARD  14
+ 0.3456   12.085       0.3      0  middle    1      STANDARD  2
+ 4.0349  11.6099       0.3      0  middle    1      STANDARD  15
+ 0.3456  11.1151       0.3      0  middle    1      STANDARD  3
+ 4.0606  10.6047       0.3      0  middle    1      STANDARD  16
+ 0.3456  10.1151       0.3      0  middle    1      STANDARD  4
+ 4.0583   9.6296       0.3      0  middle    1      STANDARD  17
+ 0.3456   9.0938       0.3      0  middle    1      STANDARD  5
+ 4.0559   8.6244       0.3      0  middle    1      STANDARD  18
+ 0.3362   8.0962       0.3      0  middle    1      STANDARD  6
+ 4.0536   7.6493       0.3      0  middle    1      STANDARD  19
+ 0.3339   7.1316       0.3      0  middle    1      STANDARD  7
+ 4.0513   6.5838       0.3      0  middle    1      STANDARD  20
+ 0.3316   6.1067       0.3      0  middle    1      STANDARD  8
+ 4.0489   5.6388       0.3      0  middle    1      STANDARD  21
+ 0.3292   5.1119       0.3      0  middle    1      STANDARD  9
+ 4.0466   4.6035       0.3      0  middle    1      STANDARD  22
+ 0.3246   4.1171       0.3      0  middle    1      STANDARD  10
+ 4.0722   3.6284       0.3      0  middle    1      STANDARD  23
+ 0.3222   3.1525       0.3      0  middle    1      STANDARD  11
+ 4.0419   2.6232       0.3      0  middle    1      STANDARD  24
+ 0.3199   2.1276       0.3      0  middle    1      STANDARD  12
+ 4.0396   1.6481       0.3      0  middle    1      STANDARD  25
+ 0.3176   1.1027       0.3      0  middle    1      STANDARD  13

@@ -1,0 +1,25 @@
+File: EASYDRAW/SPARFLO1.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-637,-3913)-(458,-364)
+Page size: 203.2 x 254.0 mm
+Coordinate window: lower-left (-3640,4550), upper-right (3640,-4550); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-637,-3913)-(458,-365)
+Items: 90 (719 words)
+Objects: polyline 6, fill area 1, bar 2, rounded box 1, filled rounded box 1, justified text 10
+Other records (escapes, application data): write_meta 10 x2, write_meta 150 x1, write_meta 151 x2, write_meta 152 x4, write_meta 153 x4, write_meta 154 x6, write_meta 155 x1, write_meta 158 x1, write_meta 160 x1, write_meta 80 x7, write_meta 81 x7
+Text strings: 10
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+   -440   -3730  [font 2 10pt bold]  START
+
+   -360    -910  [font 2 10pt bold]  POWER
+   -360    -780  [font 2 10pt bold]  LED
+   -360    -650  [font 2 10pt bold]  ON?
+
+   -270   -2000  [font 2 10pt bold]  POWER
+   -270   -1870  [font 2 10pt bold]  ON
+   -270   -1740  [font 2 10pt bold]  UNIT
+
+   -450   -2910  [font 2 10pt bold]  INSTALL
+   -450   -2780  [font 2 10pt bold]  DIAGNOSTIC
+   -450   -2650  [font 2 10pt bold]  CARTRIDGE

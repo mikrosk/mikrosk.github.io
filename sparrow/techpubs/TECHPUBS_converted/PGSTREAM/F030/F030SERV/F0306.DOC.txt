@@ -1,0 +1,260 @@
+[PageStream 2 document F0306.DOC: 8.50 x 11.00 in, 501 objects]
+
+--- Page 107 ---
+[56 drawing objects, see F0306.DOC.p107.svg]
+
+SECTION SIX
+DIAGNOSTIC FLOWCHARTS
+
+Start
+
+Connect Terminal
+To RS232 Port
+And Cycle Power
+
+No
+
+Display
+Readable?
+
+Yes
+
+No
+
+Display On
+Terminal?
+
+Error
+Message?
+
+No
+
+Yes
+
+Yes
+
+B
+
+No
+
+Diagnostic
+Error?
+
+Replace Parts
+Per Diagnostic
+Guide
+
+Run All Tests
+
+Yes
+
+C
+
+Replace Parts
+Per Diagnostic
+Guide
+
+Cycle Power
+
+Yes
+
+Error?
+
+No
+
+Restart
+
+Done
+
+No
+
+Other?
+
+Yes
+
+A
+
+--- Page 108 ---
+[36 drawing objects, see F0306.DOC.p108.svg]
+
+No Error on Diagnostic
+
+A
+
+Won't Load
+Disk?
+
+Yes
+
+Run Disk
+Diagnostic Or
+Replace Disk
+
+No
+
+Video
+Problem?
+
+Yes
+
+Trace Signal
+From Video
+Shifter To
+Output
+
+No
+
+Problem
+Found?
+
+No
+
+Run Appropriate
+Test Continuously
+
+Yes
+
+Contact ATARI
+Tech Support
+
+--- Page 109 ---
+[137 drawing objects, see F0306.DOC.p109.svg]
+
+No Display on Monitor or Terminal
+
+B
+
+No
+
++5V
+Present?
+
+Yes
+
+Replace
+Power
+Supply
+
+No
+
++5V
+Shorted To
+Ground?
+
+Replace
+Oscillator
+
+No
+
+16 MHz
+Clock
+Present?
+
+Yes
+
+Yes
+
+Inspect Main
+PCB For
+Shorted +5V
+
+MC68030
+Halted?
+
+Yes
+
+No
+
+No
+
+Found
+Short?
+
+Yes
+
+Replace
+COMBO
+
+Replace COMBO
+Or MC68030
+
+No
+
+Replace
+Main
+PCB
+
+Remove Short
+And Recheck
+
+RS232
+Display?
+
+Yes
+
+No
+
+See Theory Of
+Operation, Call
+Tech Support,
+Or Replace Main
+PCB
+
+Diagnostic
+Error?
+
+Yes
+
+No
+
+C
+
+Replace Parts
+Per Diagnostic
+Guide
+
+--- Page 110 ---
+[105 drawing objects, see F0306.DOC.p110.svg]
+
+No Display
+No Error
+
+C
+
+16 MHz
+Clock
+Present
+
+No
+
+Replace The
+Crystal
+
+Yes
+
+Restart
+
+Ouput From
+VIDEL IC?
+
+No
+
+Replace VIDEL IC
+
+Yes
+
+Trace Output
+To Connector,
+Replace Failing
+Component
+
+OK?
+
+Yes
+
+Restart
+
+No
+
+Replace
+COMBO IC

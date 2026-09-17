@@ -1,0 +1,37 @@
+DXF drawing: DYNACADD/PARTS/DXF/STEPLFT.DXF
+Render: STEPLFT.DXF.svg
+
+== Summary ==
+File:        16057 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font ROMANS,romand
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (-301.567, 46.584) - (319.449, 251.32)
+             rendered (-301.567, 81.173) - (-119.824, 147.986), size 181.743 x 66.813
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: ROMANS (font ROMANS), romand (font romand)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 2 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            8
+  10            7  CONTINUOUS    on            154
+  unused: 2, 3, 4, 5, 6, 7, 8, 9
+Entities:    model space: LINE 120, ARC 34, TEXT 6, CIRCLE 2
+Blocks:      0 defined
+Notes:
+  - 3 TEXT entities are empty or blank
+
+== Text in reading order (3 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (3 items) --
+  MIDI OUT
+  MIDI IN
+  CARTRIDGE PORT
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+       X         Y    HEIGHT    ROT  JUST      LAYER  STYLE   TEXT
+-293.228    89.771       2.1      0  left      1      ROMANS  MIDI OUT
+-274.078    85.185       2.1      0  left      1      ROMANS  MIDI IN
+-227.748    81.173       2.1      0  left      1      ROMANS  CARTRIDGE PORT

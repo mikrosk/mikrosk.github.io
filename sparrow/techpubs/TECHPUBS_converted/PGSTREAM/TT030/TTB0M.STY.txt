@@ -1,0 +1,15 @@
+[PageStream style sheet, binary TAGS format: 2 tags]
+
+Tag 1: C Head
+  font id:       0x02030E71
+  style:         bold
+  size:          14.00 pt / 14.00 pt
+  other attributes (raw): 0000 8000 0000 0000 0000 0000 0033 0901 0001 012c
+  record flags:  0x00000007
+
+Tag 2: B Head
+  font id:       0x02030E71
+  style:         bold
+  size:          16.00 pt / 16.00 pt
+  other attributes (raw): 0000 8000 0000 0000 0000 0000 0033 0901 0001 012c
+  record flags:  0x00000007

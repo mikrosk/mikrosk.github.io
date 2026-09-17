@@ -1,0 +1,33 @@
+[PageStream 2 document LYNX0001.DOC: 8.50 x 11.00 in, 1 objects]
+
+--- Page 1 ---
+
+Atari Technical Bulletin
+Number: LYNX-0001
+Date: May 8, 1992
+Page 1 of 1
+
+
+Product(s) Affected:	LYNX
+Model:				LYNX I
+Type of ATB:			As Needed
+ECO #: 				1418, January 21, 1992
+
+Reason for ATB:
+
+To correct premature failures of the internal power connector on the LYNX I.
+
+
+Notes:
+
+The power connector in the LYNX I needs to be replaced with the more reliable LYNX II power connector. Sub-assemblies affected are CA200552-001 REV A and CA200592-001, 002, 003, 004 REV K.
+
+
+Symptoms of Problem:
+
+Internal power connector fails to supply power to unit after prolonged use.
+
+
+Solution:
+
+1.	Replace power jack part number C101979-001 with power jack part number C101984-001.

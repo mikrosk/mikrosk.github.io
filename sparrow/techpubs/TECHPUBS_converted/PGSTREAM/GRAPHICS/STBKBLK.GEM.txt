@@ -1,0 +1,71 @@
+File: PGSTREAM/GRAPHICS/STBKBLK.GEM
+Format: GEM Metafile version 3.10, 24-word header, RC coordinates (flag 2)
+Header extents: (-3701,-4604)-(3701,4612)
+Page size: 189.0 x 234.6 mm
+Coordinate window: lower-left (-3721,4619), upper-right (3721,-4619); rendered with y axis down, 39.38 units/mm
+Drawing bounding box (file units): (-3700,-4598)-(3700,4598)
+Items: 918 (59561 words)
+Objects: polyline (bezier) 25, fill area (bezier) 837
+Other records (escapes, application data): bezier on/off x2, write_meta 10 x1
+Text strings: 0
+
+No text objects in this file (any lettering is drawn as vector strokes or outlines).
+
+LABELS READ FROM THE RENDERED IMAGE (lettering here is vector graphics, not text data; transcribed visually in reading order, may contain reading errors)
+Data Bus 16
+MC68HC000 / MPU / Sheet 2
+Address Bus 23
+Expansion / Bus / Sheet 2
+Control Bus
+Data 8
+Data 16
+System / ROM / Sheet 2
+Address 2
+HD6350 / MIDI / Controller / Sheet 3
+MIDI Port
+Address 18
+Control
+Data 8
+Data 4
+Address 2
+HD6350 / Keyboard / Controller / Sheet 3
+COP888 / Keyboard / Processor / Sheet 8
+Keyboard/ / Joypad
+Real-Time / Clock / Sheet 11
+Address 4
+Control
+Data 8
+Floppy Drive and Side Selects / IDE Reset / Floppy Density Select
+YM3439 / PSG / Sheet 3
+Control
+Parallel Port
+Data 8
+Serial Data / and Control
+MAX241 / Serial / Controller / Sheet 3
+Address 5
+68901 / MFP / Sheet 3
+Serial Port
+Control
+Data 15
+External Modem
+Address 23
+COMBO / Controller / Sheet 4
+Memory Address 10
+Control
+Control
+1 or 4 / Megabyte / RAM / Sheet 5
+Data 15
+Multiplex / Sheet 4
+Memory Data 15
+Shadow / Video / Controller / Sheet 4
+Video RAM / Sheet 4
+Data 16
+LCD
+Address 1
+ACSI/DMA / Controller / Sheet 7
+ACSI/Floppy / Port
+Control
+Data 16
+Address 3
+IDE / Port / Sheet 7
+Control

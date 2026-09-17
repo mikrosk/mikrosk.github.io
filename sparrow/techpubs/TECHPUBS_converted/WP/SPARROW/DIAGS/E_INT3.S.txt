@@ -1,0 +1,54 @@
+* Test user interrupt 
+* Designer: Tom Le
+* Atari Micro Electronic
+* Date: 2-7-1992
+
+
+	.text
+spurint:			;ste int3 only
+	bsr	clear_io
+        move.w  #$4567,intword
+	rte
+
+int3auto:			;sparrow int3 only
+	bsr	clear_io
+        move.w  #$3456,intword
+	rte
+
+testint3:
+	move.b  #int3,intlev
+	move.l  #spurint,$60    ;
+	move.l  #int3auto,$6c    ;
+	move.w  sr,srsave0	;
+	move.w  sr,d0
+	and.w   #$f8ff,d0	;
+	or.w    #$0200,d0	;enable int3 
+	move.w  d0,sr
+
+	clr.w   intword	        ;
+	bsr	set_io
+	move.l  #$800,d1        ;setup a sw timer
+
+testint3a:
+	move.w  intword,d0
+	cmp.w   #$3456,d0
+	beq     testint3p	
+	sub.l   #1,d1
+	bne     testint3a
+	bsr	clear_io
+.if TOS=0
+        move    #red,palette
+.endif
+	lea     int3msg1,a5
+	bsr	dspmsg
+	bset   #eint3f,flag
+
+testint3r:
+	move.w  srsave0,sr	;
+	btst    #eint3f,flag
+        rts
+
+testint3p:
+	bra	testint3r
+
+	

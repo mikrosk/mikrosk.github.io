@@ -1,0 +1,25 @@
+[PageStream 2 document TT303.DOC: 8.50 x 11.00 in, 5895 objects]
+
+--- Page 64 ---
+[1646 drawing objects, see TT303.DOC.p064.svg]
+
+SECTION SIX
+
+Diagnostic Flowcharts
+
+--- Page 65 ---
+[1019 drawing objects, see TT303.DOC.p065.svg]
+
+No Error on Diagnostic
+
+--- Page 66 ---
+[2278 drawing objects, see TT303.DOC.p066.svg]
+
+No Display
+No Monitor
+No Terminal
+
+--- Page 67 ---
+[942 drawing objects, see TT303.DOC.p067.svg]
+
+No Display or Error

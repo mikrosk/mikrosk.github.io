@@ -1,0 +1,76 @@
+[PageStream 2 document TOMUJAN2.DOC: 8.50 x 11.00 in, 5 objects]
+
+--- Page 1 ---
+[1 drawing objects, see TOMUJAN2.DOC.p001.svg]
+
+Weekly Report
+
+
+To:		Tom Ulazsek
+From:	Marty Pennock
+Subject:	Status Report
+Date:	January 2, 1992
+
+
+Accomplishments
+
+
+1.	Got new TT030 Hard Disk and brought it up.
+
+2.	Completed conversion of the TT030 Correction Pages in PageStream. Sent copies with Ira.
+
+3.	Re-installed TT030 applications and sent all files and information back to Sunnyvale with Richard Miller for evaluation.
+
+4.	Sent Robert McGowan new ABC286/60 Manual with switch settings.
+
+5.	Got Sparrow specification from Tom Ulazsek and Israel.
+
+6.	Finished reformatting all ATBs in PageStream.
+
+7.	Finished 80% of the TT030 Service Guide in PageStream.
+
+8.	Got in touch with Maria Barboza in Sunnyvale on ABC386SX Western Digital; Build to inquire if information was received.
+
+9.	Printed final copy of all ATBs.
+
+10.	Finished and printed new ATB on floppy cable dressing with drawings.
+
+11.	Dropped off last set of covers at printer for Service Guides being done for Ted Mac. in Sunnyvale.
+
+12.	Finished putting together ATB binders and index.
+
+
+Plans
+
+1.	Follow up and finish sending ABC386SX WD Build to Maria and field.
+
+2.	Develop Falcon and Sparrow documentation schedule now that most bugs are worked around in the TT030 system.
+
+3.	Find another way to do drawings and convert drawings from Document control which will work with PageStream on the TT030.
+
+--- Page 2 ---
+
+4.	Finish MEGA STE Addendum and send it to the field.
+
+5.	Start Falcon Manual.
+
+6.	Start Sparrow Manual.
+
+7.	Finish converting all documents and information over to the TT030.
+
+8.	Get Falcon specification from John Horton.
+
+9.	Ship all ATBs with folders to field.
+
+10.	Get ABC386SX WD build information to Maria Barboza and field.
+
+
+ Problems
+
+1.	Need to get correct ECO history for the MEGA STE.
+
+2.	Need to find a way to convert drawings from ACAD to GEM for use with PageStream. DynaCADD output is corrupt.
+
+3.	Need comments on MEGA STE Addendum.
+
+4.	Need to get good schematic for ABC386SX WD build. None signed off, Scott B. will not send to Sunnyvale.

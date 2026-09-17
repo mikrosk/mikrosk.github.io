@@ -1,0 +1,34 @@
+[Footer: -  #   -]
+
+Reproduction of all or any portions of this manual is not allowed without the specific written consent of Atari Corporation.
+
+
+
+Every effort has been made to ensure the accuracy of the product documentation in this manual. However, because Atari Corporation is constantly improving and updating its computer hardware and software, it is unable to guarantee the accuracy of printed material after the date of publication and disclaims liability for changes, errors, or omissions.
+
+
+These documents are for repair service information only. Part numbers are for reference only. Only parts on current dealer parts lists are available. No license is given for any use by the possession of these documents and may not be reproduced in any form without the written approval of Atari Corporation.
+
+
+
+
+
+
+
+Atari, the Atari logo, STE, TOS, BLiTTER , SM124, SC1224, SF314, SF354, PCF554, SLM804, CDAR504, Atari BASIC, and Atari SFP-004  are trademarks or registered trademarks of Atari Corporation. Centronics is a registered trademark of Centronics Data Computer Corporation. GEM and GEM Desktop are trademarks or registered trademarks of Digital Research, Inc. MS-DOS is a registered trademark of Microsoft Corporation. Epson is a registered trademark of Seiko-Epson Corporation. VT and DEC are registered trademarks of Digital Equipment Corporation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 1991, Atari Corporation
+Sunnyvale, CA 94089-1302
+All rights reserved.

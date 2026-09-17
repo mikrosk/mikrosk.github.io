@@ -1,0 +1,123 @@
+File: EASYDRAW/SUNNYVAL/SPARBLK.GEM
+Format: GEM Metafile version 3.10, 24-word header, RC coordinates (flag 2)
+Header extents: (-4066,-5078)-(3889,5077)
+Page size: 203.0 x 258.6 mm
+Coordinate window: lower-left (-4084,5099), upper-right (3909,-5084); rendered with y axis down, 39.37 units/mm
+Drawing bounding box (file units): (-4062,-5078)-(3888,5063)
+Items: 1775 (90332 words)
+Objects: polyline (bezier) 309, fill area (bezier) 1213
+Other records (escapes, application data): bezier on/off x2, write_meta 10 x7
+Text strings: 0
+
+No text objects in this file (any lettering is drawn as vector strokes or outlines).
+
+LABELS READ FROM THE RENDERED IMAGE (lettering here is vector graphics, not text data; transcribed visually in reading order, may contain reading errors)
+Data Bus 32
+MC68030FG / Microprocessor
+Address Bus 24
+Control Bus
+COMBEL / IC
+Data Bus 32
+Address 10
+Control
+Memory / Daughter / Card / 1/4/14 / Megabytes
+Data 16
+Red 6
+Data 32
+MC68881 / MC68882 / Optional / Coprocessor
+Address 10
+Blue 6
+DAC
+I/F Cable
+ST or VGA / Monitor
+Address 4
+VIDEL / IC
+Green 6
+Control
+SYNC
+1377
+Modulator
+TV
+Color
+Data 8
+Data 16
+System / ROM
+Address 5
+68901 / MFP
+Ring Indicator
+Hard Disk Interrupt
+Address 16
+MIDI Interrupt
+DSP Interrupt
+Control
+Keyboard Interrupt
+Control
+Printer Busy
+Printer Acknowledge
+Data 8
+Data 8
+YM-3439 / PSG
+Printer Data
+Keyboard
+6850 / Keyboard / Controller
+Address 2
+Control
+Select In
+Control
+IDE Reset
+Floppy Disk 0 Select
+Floppy Side 0 Select
+Data 8
+MONO
+Speaker Gate
+DS1287 / Real-Time / Clock
+Control
+MONO
+AMP
+Internal Speaker
+Stereo
+Microphone
+Data 15
+Serial Data
+CODEC / ADC / DAC
+Address 23
+SDMA
+Master Clock
+Stereo
+Control
+Serial Clock
+Headphones
+Serial Sync
+Data 8
+MIDI Out
+MC6550 / MIDI / Controller
+Control
+Address 2
+MIDI In
+Data 8
+AJAX / Floppy / Controller
+Control
+Address 3
+Data 8
+DATA
+8530 / SCC
+Serial Port
+Handshake
+Address 1
+5380 / SCSI / Controller
+External / SCSI / Disk
+Control
+LAN Data
+LAN Port
+Record Data
+Play Data
+Data 8
+Control
+DSP Connector
+Address 3
+56001 / Digital / Signal / Processor
+Serial Data
+Data 24
+Control
+Address 16
+32K SRAM

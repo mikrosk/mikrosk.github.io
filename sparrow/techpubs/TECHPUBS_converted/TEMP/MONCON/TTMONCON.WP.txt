@@ -1,0 +1,14 @@
+TT030 Monitor Connector
+[Figure: tt30mon.wpg]
+
+
+Pin	Function				Pin	Function
+
+1	Red					2	Green
+3	Blue					4	High Resolution Monochrome Out +
+5	Ground				6	Red Return
+7	Green Return				8	Blue Return
+9	Monochrome Detect			10	Ground
+11	Open					12	Open
+13	Horizontal Sync			14	Vertical Sync
+15	High Resolution Monochrome Out -

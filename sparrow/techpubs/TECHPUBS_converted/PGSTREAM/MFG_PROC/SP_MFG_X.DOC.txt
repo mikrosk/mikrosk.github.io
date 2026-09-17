@@ -1,0 +1,46 @@
+[PageStream 2 document SP_MFG_X.DOC: 8.50 x 11.00 in, 51 objects]
+
+--- Page 1 ---
+
+TITLE
+TITLE ENTRY
+TITLE BLOCK
+bold heading
+bl para 0
+bl para 2
+bl para 4
+bl para 6
+od para 0
+od para 2
+od para 4
+od para 6
+
+--- Master page (repeated on pages; # = page number) ---
+[32 drawing objects, see SP_MFG_X.DOC.mR.svg]
+
+SIZE
+
+DRAWING NO.
+
+REV
+
+®
+
+ATARI
+CORPORATION
+
+A
+
+SCALE
+
+NONE
+
+C302758-001
+
+SHEET
+
+OF
+
+1
+
+_

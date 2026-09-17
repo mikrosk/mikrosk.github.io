@@ -1,0 +1,449 @@
+[PageStream 2 document SP_MFG_4.DOC: 8.50 x 11.00 in, 2604 objects]
+
+--- Page 25 ---
+
+4.0	ASSEMBLY PROCEDURE
+
+4.1	Memory PCB assembly
+Refer to separate bill of material and assembly drawing.
+
+
+1.	Material preparation
+
+1.1	Handling
+Protective measures shall be taken to prevent damage to static sensitive components.
+
+1.2	Incoming inspection
+Preform AQL inspection on incoming component lots as described in section 2.0.
+
+1.3	PCB baking
+PCBs shall be baked in an oven for 4 hours at 105° C ± 5° C.
+PCBs shall be allowed to cool for 2 hours minimum after baking.
+
+1.4	Load automatic placement equipment
+Prepare components for automated palcement and insertion onto PCB
+
+2.	SMD component placement
+
+2.1	Apply solder paste
+Screen solder paste onto component side of PCB.
+
+2.2	Automatic pick and place
+chip capacitors
+SOJ ICs
+
+3.	IR reflow oven
+
+3.1	Conveyor speed
+
+_______	meters per minute
+
+3.2	Oven temperature profile
+
+Stage #1	______ °C
+Stage #2	______ °C
+Stage #3	______ °C
+Stage #4	______ °C
+
+3.1	Cooling period
+
+_______	minutes minimum
+
+CA401292-001	ASSY PCB 1MB DRAM	(8) 256K x 4 DRAMs
+CA401292-002	ASSY PCB 4MB DRAM	(8) 1Meg x 4 DRAMs
+
+--- Page 26 ---
+
+4.	SMD component visual inspection
+
+4.1	Component placement
+Correct components are placed in the correct location, and oriented correctly.
+
+4.2	Edge and toe solder fillets
+Prefered - good solder flow and wetting around edges and toe of component lead, with a continuous smooth coating of solder over the topside of the leads.
+Acceptable - reduced solder flow and wetting around edges of toe of component lead.
+Rejected - no evidence of flow around edges and toe of component lead.
+
+4.3	Heel solder fillets
+Prefered - Good solder fillet evident at heel of component lead.
+Acceptable - reduced solder fillet at heel of lead not less than midpoint of lower bend.
+Rejected - no visible solder fillet at heel of lead.
+
+4.4	Lead alignment
+Prefered - leads shall be centered and aligned parallel to land.
+Acceptable - at least 50% of lead is on land, and does not overlap at any one point to the extent that the minimum spacing requirements are violated.
+Rejected - minimum spacing violated.
+
+4.5	Lead surface contact
+Prefered - toe or heel raised from land not more than 2 times lead thickness with remaining lead close to the land surface.
+Acceptable - toe or heel raised from land more than 2 times and less than 4 times lead thickness with smallest gap between lead and land less than twice the lead thickness.
+Rejected - smallest gap between lead and land exceeds twice the lead thickness, or cracks are evident in any portion of the solder connection.
+
+5.	Install connectors
+
+5.1	Manually insert socket connectors on bottom side so that the leads stick out on the top side.
+
+5.2	Manually solder the socket connectors from the top side of the PCB.
+
+6.	Configure the 1Meg select jumper J2
+1Meg version, -001:  shorted (apply solder from pad to pad creating a short circuit)
+4Meg version, -002:  open (no connection from pad to pad)
+
+7.	Cleaning
+Remove flux residues and any other contaminants  with appropriate solvent.
+
+8.	Marking
+
+8.1	Version number - mark the PCBA, where indicated by the assembly drawing, with the assembly version number.using white epoxy ink.
+
+8.2	Revision letter - mark the PCBA, where indicated by the assembly drawing, with the assembly revision letter.using white epoxy ink.
+
+--- Page 27 ---
+[1805 drawing objects, see SP_MFG_4.DOC.p027.svg]
+
+9.	Final visual inspection
+
+9.1	Component placement
+Correct components are placed in the correct location, and oriented correctly.
+
+9.2	Horizontal mounting
+Prefered - entire body length of component is contacting the board.
+Acceptable - closest point between component body and board(H) less than 0.060 inches, furthest separation (D) less than 0.080 inches, component body parallel so that D-H is less than 0.050 inches.
+Rejected - H value greater than 0.060 inches, D value greater than 0.080 inches, D-H value greater than 0.050 inches.
+
+9.3	Plated through hole solder fillets
+Prefered - no void areas or surface imperfections of solder fillet around lead. Fillet slightly convex, good wetting, solder covers lead and feathers out to a thin edge on land, and solder coverage is neat and bright.Contour of lead clearly visible.
+Acceptable - fillet does not extend to land edge, but wetting is complete and well feathered to lead surface and 80% of the land. Solder is recessed into hole 25% but extends 360 degrees around the lead and wets 80% of the land surface.
+Rejected - large void, pinholes, reduced wetting area, more than one void in the solder joint, excess fillet, solder bridged to adjacent conductor, or no filleting or wetting to land surface.
+
+9.4	Marking
+Version number - check to see if the correct assembly version number.is marked on the PCB in white epoxy ink.
+
+Revision letter -  check to see if the correct assembly revision letter.is marked on the PCB in white epoxy ink.
+
+9.5	Cleanliness
+No flux residue on electrical contact surfaces. No flux entrapment in and under components.
+No dirt or particulate matter on assembly.
+No fingerprints on conductors, components, or contact surfaces.
+
+--- Page 28 ---
+
+4.2	Falcon 030 PCB assembly
+	Refer to separate bill of material and assembly drawing.
+
+
+1.	Material preparation
+
+1.1	Handling
+Protective measures shall be taken to prevent damage to static sensitive components.
+
+1.2	Incoming inspection
+Preform AQL inspection on incoming component lots as described in section 2.0.
+
+1.3	PCB baking
+PCBs shall be baked in an oven for 4 hours at 105° C ± 5° C.
+PCBs shall be allowed to cool for 2 hours minimum after baking.
+
+1.4	Apply solder masking
+Apply solder mask to the 4 fan bracket mounting holes
+Apply solder masking to J22 plated thru holes
+Apply solder masking to L61 plated thru holes
+Apply solder masking to C224 plated thru holes
+Apply solder masking to J1 plated thru holes
+Apply solder masking to J7 and J8 plated thru holes
+
+1.5	Load automatic placement equipment
+Prepare components for automated palcement and insertion onto PCB
+
+2.	Bottom side SMD component placement
+
+2.1	Apply component glue
+apply component glue to solder side of PCB.
+
+2.2	Automatic pick and place
+chip capacitors
+chip resistors
+
+3.	Top side SMD component placement
+
+2.1	Apply solder paste
+Screen solder paste onto component side of PCB.
+
+2.2	Automatic pick and place
+chip capacitors
+chip resistors
+SO ICs
+PLCC ICs
+QFP ICs
+PLCC sockets
+
+CA401332-001	ASSY PCB FALCON 030 NTSC
+CA401332-002	ASSY PCB FALCON 030 PAL-I
+CA401332-003	ASSY PCB FALCON 030 PAL-B
+CA401332-004	ASSY PCB FALCON 030 PERITEL
+
+--- Page 29 ---
+
+4.	IR reflow oven
+
+3.1	Conveyor speed
+
+_______	meters per minute
+
+3.2	Oven temperature profile
+
+Stage #1	______ °C
+Stage #2	______ °C
+Stage #3	______ °C
+Stage #4	______ °C
+
+3.1	Cooling period
+
+_______	minutes minimum
+
+4.	SMD component visual inspection
+
+4.1	Component placement
+Correct components are placed in the correct location, and oriented correctly.
+
+4.2	Edge and toe solder fillets
+Prefered - good solder flow and wetting around edges and toe of component lead, with a continuous smooth coating of solder over the topside of the leads.
+Acceptable - reduced solder flow and wetting around edges of toe of component lead.
+Rejected - no evidence of flow around edges and toe of component lead.
+
+4.3	Heel solder fillets
+Prefered - Good solder fillet evident at heel of component lead.
+Acceptable - reduced solder fillet at heel of lead not less than midpoint of lower bend.
+Rejected - no visible solder fillet at heel of lead.
+
+4.4	Lead alignment
+Prefered - leads shall be centered and aligned parallel to land.
+Acceptable - at least 50% of lead is on land, and does not overlap at any one point to the extent that the minimum spacing requirements are violated.
+Rejected - minimum spacing violated.
+
+4.5	Lead surface contact
+Prefered - toe or heel raised from land not more than 2 times lead thickness with remaining lead close to the land surface.
+Acceptable - toe or heel raised from land more than 2 times and less than 4 times lead thickness with smallest gap between lead and land less than twice the lead thickness.
+Rejected - smallest gap between lead and land exceeds twice the lead thickness, or cracks are evident in any portion of the solder connection.
+
+--- Page 30 ---
+
+5.	Install through hole parts
+
+5.1	Axial lead part automatic insertion
+resistros
+inductors
+diodes
+electrolytic capacitors
+fuses
+
+5.2	Radial lead part automatic insertion
+film capacitors
+tantalum capacitors
+transistors
+filters
+crystals
+
+5.3	DIP lead part automatic insertion
+	DIP ICs
+	DIP sockets
+	oscillators
+delay line
+
+5.4	Manual insertion
+	connectors
+
+6.	Wave solder
+
+6.1	Boards shall be passed through solder wave with the following parameters
+
+a) Solder flux shall be water soluble
+b) Speed of throughput shall be 4-6 feet per minute
+c) Pre-heat temperature shall be 95°C ±5°C
+d) Solder wave temperature shal be 250°C ±5°C
+e) Component lead shall remain in solder wave for 3-5 seconds maximum
+
+6.2	After solder delay
+After soldering, boards shall be allowed to cool at room temperature without touching for 90 seconds ±30 seconds.
+
+6.3	Cleaning
+After solder dealy, boards shall be run through aqueous cleaner for cleaning and drying.
+
+--- Page 31 ---
+
+7.	Touch-up
+
+7.1	remove solder masking
+
+7.2	install hand soldered parts
+hand solder the following parts after cleaning:
+	L61, C224,  J1, U4, J7, and J8
+
+7.3	Configure the system configuration jumpers U56 and U57
+apply solder from pad to pad creating a short circuit across the following pads:
+	U56 pin 3 to pin 14
+	U56 pin 4 to pin 13
+	U57 pin 7 to pin 10
+
+7.4	Cleaning
+Remove flux residues from manual soldering with appropriate solvent.
+
+7.5	Insert the following DIP ICs into sockets:
+U62, U63, U67, U68, U44 (note: these parts must be programmed before installation)
+
+7.6	Insert the following PLCC ICs into sockets:
+U28, U51 (note: U51 must be programmed before installation)
+
+7.7	Jumpers
+Intall a 2pin shorting plug at the following locations
+	W10 pin 2 to pin 3
+	J20 pin 20 to pin 22
+
+8.	Marking
+
+8.1	Serial number - apply an adhesive label to the PCBA bearing the PCBA serial number. Refer to the PCBA assembly drawing for the serial number definition.
+
+8.2	Version number - mark the PCBA, where indicated by the assembly drawing, with the assembly version number.using white epoxy ink.
+
+8.3	Revision letter - mark the PCBA, where indicated by the assembly drawing, with the assembly revision letter.using white epoxy ink.
+
+--- Page 32 ---
+
+9.	Final visual inspection
+
+9.1	Component placement
+Correct components are placed in the correct location, and oriented correctly.
+
+9.2	Horizontal mounting
+Prefered - entire body length of component is contacting the board.
+Acceptable - closest point between component body and board(H) less than 0.060 inches, furthest separation (D) less than 0.080 inches, component body parallel so that D-H is less than 0.050 inches.
+Rejected - H value greater than 0.060 inches, D value greater than 0.080 inches, D-H value greater than 0.050 inches.
+
+9.3	Plated through hole solder fillets
+Prefered - no void areas or surface imperfections of solder fillet around lead. Fillet slightly convex, good wetting, solder covers lead and feathers out to a thin edge on land, and solder coverage is neat and bright.Contour of lead clearly visible.
+Acceptable - fillet does not extend to land edge, but wetting is complete and well feathered to lead surface and 80% of the land. Solder is recessed into hole 25% but extends 360 degrees around the lead and wets 80% of the land surface.
+Rejected - large void, pinholes, reduced wetting area, more than one void in the solder joint, excess fillet, solder bridged to adjacent conductor, or no filleting or wetting to land surface.
+
+9.4	Marking
+Version number - check to see if the correct assembly version number.is marked on the PCB in white epoxy ink.
+
+Revision letter -  check to see if the correct assembly revision letter.is marked on the PCB in white epoxy ink.
+
+9.5	Cleanliness
+No flux residue on electrical contact surfaces. No flux entrapment in and under components.
+No dirt or particulate matter on assembly.
+No fingerprints on conductors, components, or contact surfaces.
+
+--- Page 35 ---
+
+4.3	System assembly
+Refer to separate bill of material and assembly drawing.
+
+
+1.	Material preparation
+
+1.1	Handling
+Protective measures shall be taken to prevent damage to static sensitive components.
+
+1.2	Incoming inspection
+Preform AQL inspection on incoming component lots as described in section 2.0.
+
+CA401273-001	ASSY MAIN FALCON 030 US
+CA401273-002	ASSY MAIN FALCON 030 CAN
+CA401273-003	ASSY MAIN FALCON 030 UK
+CA401273-004	ASSY MAIN FALCON 030 FRA
+CA401273-005	ASSY MAIN FALCON 030 GER
+CA401273-006	ASSY MAIN FALCON 030 ITA
+CA401273-007	ASSY MAIN FALCON 030 NET/UK
+CA401273-008	ASSY MAIN FALCON 030 NET/FRA
+CA401273-009	ASSY MAIN FALCON 030 SPA
+CA401273-010	ASSY MAIN FALCON 030 SWG
+CA401273-012	ASSY MAIN FALCON 030 SWD
+CA401273-014	ASSY MAIN FALCON 030 AUS
+CA401273-020	ASSY MAIN FALCON 030 SWF
+
+--- Page 36 ---
+[725 drawing objects, see SP_MFG_4.DOC.p036.svg]
+
+2.	Top case assembly
+
+2.1	 Install nameplate on top cover
+
+a)	check nameplate for damage, flaws, or dirt
+b)	check top cover for damage, flaws or dirt
+c) 	remove protective backing from adhesive side of nameplate
+d)	firmly press the nameplate into the recessed area on the top cover
+e)	make sure nameplate is square with the top cover and centered in the recessed area
+
+2.2	Install plastic LED indicators (x 2)
+
+a)	check indicator for damage, flaws, or dirt
+b)	install the indicator into the recessed opening inside the top cover
+c)	melt the two tabs inside the top cover with a soldering iron to secure the indicator
+d)	make sure the indicator is flush with the recessed opening inside the top cover and that the indicator is clearly visible from the outside of the top cover
+
+nameplate
+C302777
+
+top cover
+C302784-003
+
+indicator
+C070031
+2 places
+
+--- Page 37 ---
+
+3.	PCBA, insulator, shield assembly
+
+3.1	Install PCB insulator into bottom shield
+
+a)	Check insulator for damage, flaws, or dirt
+b)	Check bottom shield for damage, flaws, or dirt
+c)	Install PCB insulator into bottom shield
+d)	Make sure insulator holes are aligned with holes in bottom shield. Bend insulator at perforations so that fan holes are aligned
+
+
+3.2	Install the PCBA into the bottom shield
+
+a)	Check PCBA for damage, flaws, or dirt
+b)	Install PCBA into bottom shield
+c)	Make sure rear edge of PCBA is flush with back of shield, and I/O connectors fit through shield.
+
+3.3	Install the top shield over the PCBA
+
+a)	Check top shield for damage, flaws, or dirt
+b)	Install top shield over PCBA and bottom shield
+c)	Make sure the top and bottom shields are aligned properly
+d)	Bend the 4 hooks which secure the top and bottom shield
+e)	Install 6 M3x5 pan head screws as shown
+
+--- Master page (repeated on pages; # = page number) ---
+[32 drawing objects, see SP_MFG_4.DOC.mR.svg]
+
+SIZE
+
+DRAWING NO.
+
+REV
+
+®
+
+ATARI
+CORPORATION
+
+A
+
+SCALE
+
+NONE
+
+C302758-001
+
+SHEET
+
+OF
+
+1
+
+_

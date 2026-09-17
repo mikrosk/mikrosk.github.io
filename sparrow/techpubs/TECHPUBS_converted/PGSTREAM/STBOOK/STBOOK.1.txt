@@ -1,0 +1,73 @@
+[PageStream 2 document STBOOK.1: 8.50 x 11.00 in, 9 objects]
+
+--- Page 1 ---
+
+SECTION ONE
+INTRODUCTION
+
+
+1.0 OVERVIEW
+
+The Atari® STBook™ is a portable computer system which consists of a main system, a graphics subsystem, and several I/O device subsystems. The keyboard, LCD Display, and Mouse/Joypad are contained in one integrated unit. The STBook is based on the 68HC000 microprocessor running at 8 MHz and is Atari STE compatible. The major features of the Atari STBook Computer System include:
+
+• MC68HC000 Microprocessor
+• 512 Kbyte System Rom
+• 1 or 4 Mbyte Ram, Battery-Backed
+• Programmable Memory Controller
+• IDE Interface For Internal Hard Drive
+• 6 Voice Sound Generator/Synthesizer
+• Battery-Backed Real-Time Clock
+• Hardware Bit Blitter
+• 640x400 LCD, 0.27mm Dot Pitch LCD Panel
+• Intelligent Keyboard With "Joypad" Mouse Substitute
+• Parallel Interface
+• Serial Interface
+• Musical Instrument Digital Interface (MIDI)
+• External DMA/Hard Disk/Floppy Disk Interface
+
+--- Page 2 ---
+
+2.0 Case Design
+
+
+2.1 Top View
+
+The top case of the ATARI ATBook computer contains a flip top LCD Display, Keyboard, and Joypad Mouse Substitute. The LCD panel contains the HDD LED, Reset Button, Power LED, Power Button, and Sleep Button. The main body houses the Keyboard, Vector Pad, Speaker Volume Dial, And Lcd Contrast Dial. See Figure 1.
+
+Figure 1
+
+2.2 Rear View
+
+The rear of the ATARI STBook computer contains connections for the Serial Port, External ACSI/Hard Disk/Floppy Interface, Parallel Port, MIDI In, MIDI Out, and External Power Connector. See Figure 2.
+
+Figure 2
+
+--- Page 3 ---
+
+2.3 Left Side View
+
+The left side of the STBook computer contains the battery pack and expansion port connector. See Figure 3.
+
+Figure 3
+
+3.0 Power Supply
+
+
+3.1 Power Supply Specifications
+
+An internal DC power supply provides power to the main system board and LCD. All power levels are regulated for over-voltage and over-current protection. The following are minimal power supply specifications:
+
+VCC:
+
+Input 8 to 20V
+Output 5V +/-1%, 1A maximum steady-state; peaks to 3A
+
+MTR:
+
+Input 8 to 20V
+Output 5V +/-1%, 1A maximum steady-state; peaks to 3A
+
+LCD BIAS:
+
+Input 8 to 20V
+Output -12 to -17V (User adjustable), 50MA.

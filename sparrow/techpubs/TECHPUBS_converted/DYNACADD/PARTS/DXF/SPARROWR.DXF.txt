@@ -1,0 +1,23 @@
+DXF drawing: DYNACADD/PARTS/DXF/SPARROWR.DXF
+Render: SPARROWR.DXF.svg
+
+== Summary ==
+File:        45285 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font txt
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (83.25, 322.42) - (711.16, 391.52)
+             rendered (83.25, 322.42) - (711.16, 391.52), size 627.91 x 69.1
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: STANDARD (font txt)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            550
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: LINE 370, ARC 127, CIRCLE 53
+Blocks:      0 defined
+
+== Text in reading order (0 text items) ==
+(no text in drawing)

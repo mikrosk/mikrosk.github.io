@@ -1,0 +1,37 @@
+DXF drawing: DYNACADD/PARTS/DXF/LOGO.DXF
+Render: LOGO.DXF.svg
+
+== Summary ==
+File:        29555 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font txt
+Sections:    HEADER, TABLES, BLOCKS, ENTITIES
+Extents:     header (0.965, 0.7255) - (7.9262, 8.2221)
+             rendered (0.965, 0.7255) - (7.9262, 8.2221), size 6.9612 x 7.4966
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: STANDARD (font txt)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            288
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: POLYLINE 14 (88 vertices), SOLID 6, LINE 4, INSERT 3, CIRCLE 1, TEXT 1
+             in block definitions: LINE 259
+Blocks:      3 defined
+  LOGO-G1: base (0, 0), LINE 66; inserted 1 time
+      at (0, 0) scale 1,1 rotation 0 layer 1
+  LOGO-G2: base (0, 0), LINE 66; inserted 1 time
+      at (0, 0) scale 1,1 rotation 0 layer 1
+  LOGO-G3: base (0, 0), LINE 127; inserted 1 time
+      at (0, 0) scale 1,1 rotation 0 layer 1
+
+== Text in reading order (1 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (1 items) --
+  R
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE     TEXT
+6.9834   1.841      0.18      0  left      1      STANDARD  R

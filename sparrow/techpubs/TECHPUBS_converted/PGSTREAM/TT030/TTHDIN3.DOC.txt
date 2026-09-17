@@ -1,0 +1,32 @@
+[PageStream 2 document TTHDIN3.DOC: 5.50 x 8.50 in, 285 objects]
+
+--- Page 4 ---
+[279 drawing objects, see TTHDIN3.DOC.p004.svg]
+
+7.	Take the hard disk cable and locate the cable end with the connector 	plug installed. Connect the other end of the hard  disk cable to the 	interface connector on the hard disk drive as shown in Figure 2.
+
+8.	The hard disk shield has a bent edge along two sides. Install the hard 	disk shield on the bottom of the disk drive so the  bent edges point 	toward the hard disk drive.
+
+
+Installing the Hard Disk Drive in the Computer
+
+
+The following instructions cover installing the accessory cover with the hard
+disk into your Atari TT030 computer.
+
+The following steps should be completed in order to install the hard disk in
+your Atari TT030 computer. Carefully read each step all the way through
+before taking any action required by  that step.
+
+WARNING
+
+Failure to perform each step completely or skipping steps could result in
+damage to the hard disk or your computer.
+
+9.	Turn  off your computer and disconnect the monitor, keyboard, and power cable from the sides and back of the unit.
+
+10.	Remove the accessory cover. See Figure 3.
+
+ACCESSORY COVER
+
+Figure 3

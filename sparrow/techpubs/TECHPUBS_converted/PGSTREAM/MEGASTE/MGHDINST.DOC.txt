@@ -1,0 +1,72 @@
+[PageStream 2 document MGHDINST.DOC: 5.50 x 8.50 in, 10 objects]
+
+--- Page 1 ---
+
+Atari® MEGA STE™
+HARD DISK INSTALLATION MANUAL
+
+
+KIT CONTENTS
+
+
+Your Atari MEGA STE  Hard Disk kit should contain the following items:
+
+	•	Hard Disk Drive Accessory Cover with bracket, Part Number: CA401082-002
+	•	Hard Disk Shield, Part Number: C300835-001
+	•	8 Mounting Screws, Part Number: C301333-001
+	•	Hard Disk Controller Board,
+		Part Number: CA200535-001
+	•	Hard Disk Cable, Part Number: CA401131-002
+	•	Power Supply Extension Cable,
+		Part Number: CA400972-001
+	•	Installation Manual, Part Number: C301973-002
+	•	1 Mounting Screw with Washer,
+		Part Number: C103286-001
+	•	HDX Advanced Hard Disk Utilities Disk
+		Part Number: CA400959-001
+
+If any of these components are missing from your kit please contact the outlet from which the kit was ordered.
+
+
+TOOLS REQUIRED
+
+	•	Phillips screwdriver.
+	•	Flat blade (slotted) screwdriver.
+	•	Needle nose pliers.
+
+--- Page 2 ---
+
+INSTALLATION
+
+
+The following steps should be completed in the following order to install the hard disk in your Atari MEGA STE computer. Carefully read each step all the way through before taking any action required by that step.
+
+WARNING
+
+This installation should be performed in a static free environment. Be sure you are in a room that does not have carpeting on the floor. Static can cause damage to the components in this kit. Failure to perform each step completely or skipping steps could result in damage to the hard disk or your computer.
+
+
+MOUNTING THE HARD DISK TO THE ACCESSORY COVER
+
+
+The following instructions pertain to attaching the hard disk to the accessory cover so that it can be installed in the computer.
+
+1.	Remove the hard disk from its box.
+
+2.	Depending on what kind of hard disk you are installing the power supply connector could be hard to access once the drive is installed in the bracket. If this is the case install the short power supply extension cable. If the drive already has an extension cable installed do not install the one supplied with the kit.
+
+3.	Locate the SCSI ID jumpers on the hard disk. Refer to the hard disk product manual for their location. Make sure the SCSI ID jumper is set for drive 0.
+
+4.	Refer to the hard disk product manual to locate the terminators on the hard disk PCB. Pull the terminators out of their sockets on the hard disk PCB with a pair of needle nose pliersas shown in Figure 2. These terminators are not required on the MEGA STE.
+
+--- Page 3 ---
+
+5.	Attach the hard disk to the bracket assembly as shown in Figure 1 with the four (4) mounting screws. 6. Plug the LED cable into the LED connector on the hard disk as shown in Figure 2.  7. Push the LED cable into the accessory cover so it will not get pinched when installing the accessory cover into the computer. 8. Take the hard disk cable and locate the cable end with the connector plug installed. Connect the other end of the hard disk cable to the interface connector on the hard disk drive as shown in Figure 2. 9. The hard disk shield has a bent edge along two sides. Install the hard disk shield on the bottom of the disk drive so the bent edges point toward the hard disk drive. 10. Set the accessory cover with the hard disk aside on its bottom INSTALLING THE HARD DISK CONTROLLER BOARD The following instructions cover installing the hard disk controller board into your Atari MegaSTe computer. The following steps should be completed in the following order to install the hard disk controller board in your Atari MegaSTe computer. Carefully read each step all the way through before taking any action required by that step. WARNING Failure to perform each step completely or skipping steps could result in damage to the hard disk controller board or your computer. 11. Turn off your computer and disconnect all cables from the sides and back of the unit. 12. Remove the top cover and accessory cover. 13. Take the hard disk controller board and make sure that switch SW1 has all three positions set to on. 14. Remove the jumpers that are installed across the pins of J402 on the main PCB. Install the hard disk controller board by lining up J1 on the hard disk controller board and J402 on the main PCB and gently pushing the hard disk controller board onto J402 on the main PCB. Fasten the hard disk controller board to the standoff on the main PCB using the mounting screw with the washer.  15. Pull the power supply cable over so it will clear the accessory cove hole in the top case. 16. Put the top case back on the computer. INSTALLING THE HARD DISK DRIVE IN THE COMPUTER The following instructions cover installing the accessory cover with the hard disk into your Atari MegaSTe computer. The following steps should be completed in the following order to install the hard disk drive into your Atari MegaSTe computer. Carefully read each step all the way through before taking any action required by that step. WARNING Failure to perform each step completely or skipping steps could result in damage to the hard disk drive or your computer. 17. Place the accessory cover with the hard disk
+
+--- Page 4 ---
+
+sideways on top of the computer so the disk drive cables will reach into the accessory cover opening. 18. Connect the power supply cable to the hard disk or the power supply extension cable on the hard disk. 19. Connect the hard disk interface cable to the hard disk connector on the hard disk controller board as shown in Figure 3. 20. Install the back the accessory cover with the hard disk into the computer. 21. Re-connect the power cord and monitor. INSTALLING SOFTWARE ON THE HARD DRIVE  After you have installed the hard disk drive into the computer, you must install the software necessary for it to run. LOAD THE HARD DISK DRIVER FROM FLOPPY The hard disk drive has been TOS formatted and partitioned at the factory, but it doesn't contain the software necessary to start the computer from the hard disk drive. 22. Make sure the computer is turned off, then insert the Advanced Hard Disk Utilities diskette, supplied with the hard disk installation kit, into the floppy disk drive. 23. Turn on power to the computer. Wait 90 seconds for the system to start up. Do not press any keys on the keyboard. 24. The screen will display "LOADING... ATARI  HARD DISK DRIVER". Then the desktop will display floppy disk icons A and B, hard disk icon C, the trash icon, and the menu bar. If the hard disk icon C does not display, you cannot continue beyond this point. Check all the previous steps to make sure the kit was installed properly. NOTE: If the hard disk drive is revision "B" or higher, it is not necessary to run the HINSTALL program. You may skip the following steps 25 through 32. The revision letter is marked on the outside of the hard drive carton for revision "B" and higher drives. If you are unsure of the drive revision, DO NOT skip the following steps 25 through 32. INSTALL THE HARD DISK DRIVER ON THE HARD DISK The HINSTALL.PRG program installs the hard disk driver file. The hard disk driver allows the system to start from the hard drive. 25. Display the drive A directory window. 26. Display the directory of the HINSTALL folder. 27. Run HINSTALL.PRG. 28. Select Install from the File menu. 29. Select logical drive C: from the Select the Logical Drive dialog box, then select OK. 30. From the Install Hard Disk Driver dialog box, select OK to install the driver. 31. Select Quit from the File menu after the driver has been installed. 32. Close all directory windows. The hard disk driver installation is now complete. COPY THE LANGUAGE DISK TO THE HARD DISK DRIVE The files contained on the Language Disk supply additional startup information when you start the computer. These files must be copied to the hard disk drive. NOTE: Use Language Disk part number CA400958. Do not use the Language Disk marked (without hard disk drive). This Language Disk is a floppy startup disk only and should not be copied to the hard disk drive. 33. Remove the Advanced Hard Disk Utilities diskette and insert the Language Disk diskette, supplied with the computer, into the floppy disk drive. 34. Drag the drive A icon onto the drive C icon. 35. The Copy Files dialog box displays. Select OK to begin copying the Language Disk. The Copy Files dialog box will show the name of each file as it is copied. NOTE: Skip the following step 36 if you skipped the previous steps 25 through 32. 36. The Name Conflict dialog box will display when the file SHDRIVER.SYS is being copied. Select Copy to continue with the copy process. 37. When the copy
+
+--- Page 5 ---
+
+process is complete, the display will return to the desktop. START THE SYSTEM FROM THE HARD DISK The hard disk now has all the information necessary to start the system from the hard disk drive. 38. Restart the computer. 39. When the desktop displays, you will see four hard disk icons. The hard disk is partitioned into four logical drives referred to by the letters C, D, E, and F.

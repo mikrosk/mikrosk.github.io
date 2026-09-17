@@ -1,0 +1,163 @@
+[PageStream 2 document 2MBTTFIN.DOC: 5.50 x 8.50 in, 272 objects, facing pages]
+
+--- Page 1 ---
+
+Atari® TT030™ 1.44MB Floppy Disk Drive Installation Manual
+
+
+Kit Contents
+
+
+Your Atari TT030 1.44 Megabyte Floppy Disk kit P/N CA401220-001 should contain the following items:
+
+
+•	Floppy Drive Bracket Part Number: C302401-001
+•	2MB 3½" Floppy Disk Part Number C301371-101
+•	REV 3.06 TOS ROMs Part Number: CA400836-001
+•	AJAX Disk Controller Chip Part Number: C302096-001
+•	Installation Manual Part Number: C302563-001
+
+If any of these components are missing from your kit please contact the outlet from which the kit was ordered.
+
+
+Tools Required:
+
+•	Phillips screwdriver.
+•	Flat blade (slotted) screwdriver
+
+
+Installation
+
+
+The following steps should be completed in the following order to install the 1.44 Megabyte floppy drive in your Atari TT030 computer.
+
+Carefully read each step all the way through before taking any action required by that step.
+
+WARNING
+
+This installation should be performed in a static free environment. Static can cause damage to the components in this kit. Failure to perform each step completely or skipping steps could result in damage to the floppy drive, electrical components, or your computer.
+
+--- Page 2 ---
+[105 drawing objects, see 2MBTTFIN.DOC.p002.svg]
+
+1.	If a Hard Disk is installed in the computer, remove it.
+
+2.	Remove the top cover from the computer.
+
+3.	Locate and remove the Floppy Disk Controller Chip at location U409. Replace it with the AJAX chip part number C302096-001.
+
+4.	If the TOS ROMs in the computer are lower than REV 3.06, replace them with REV 3.06 TOS ROMs part number CA400836-001.
+
+5.	Locate switch J203 on the main PCB and turn segment 7 on.
+
+6.	Set the jumpers on the rear of the 1.44 megabyte  floppy drive to 1-2, 5-13, and 14-15. See Figure 1.
+Figure 1
+
+7.	Remove the 1MB floppy drive from the top cover and replace it with the 2MB floppy drive part number C301371-101.
+
+Be sure to install the drive into the mounting bracket as shown in Figure 2.
+
+Top of Floppy Drive
+
+34
+
+2
+
+16
+
+9
+
+1
+
+33
+
+8
+
+1
+
+J1
+
+J2
+
+SS01
+
+#3 Pin is removed
+
+to prevent
+
+improper insertion
+
+--- Page 3 ---
+[21 drawing objects, see 2MBTTFIN.DOC.p003.svg]
+
+NOTE: Mounting Bracket offset MUST BE away from the drive as shown above!
+
+Figure 2
+
+8.	Plug the floppy drive interface cable into J2 of the floppy drive.
+
+9.	Plug the power cable into J1 on the 1.44 megabyte floppy drive. Figure 1.
+
+10.	Route the floppy drive power harness and interface cable as shown in Figure 3.
+
+C302401-001
+Mounting
+Bracket
+
+Mounting
+Screws
+
+Mounting
+Screws
+
+2MB Floppy Drive
+
+Mounting Post
+
+Computer Case
+(Top Housing)
+
+Mounting Post
+
+--- Page 4 ---
+[102 drawing objects, see 2MBTTFIN.DOC.p004.svg]
+
+Figure 3
+
+11.	Replace the top cover.
+
+12.	If you removed a Hard Disk from the computer, replace it.
+
+Tape
+
+5.00 Inches
+
+FDD
+Power
+Harness
+
+Floppy I/F
+Cable
+
+Tape
+
+1
+
+Power Supply
+
+HDD
+Power
+Harness
+
+VME Housing
+Bracket
+
+Hole in PCB for Mounting Post on Top Housing.
+Be sure ribbon cable is behind mounting post when
+Top and Bottom Housings are assembled.
+
+1
+
+--- Page 5 ---
+
+Notes

@@ -1,0 +1,94 @@
+[PageStream 2 document TOMMAR05.DOC: 8.50 x 11.00 in, 5 objects]
+
+--- Page 1 ---
+[1 drawing objects, see TOMMAR05.DOC.p001.svg]
+
+Weekly Report
+
+
+To:		Tom Ulazsek
+From:	Marty Pennock
+Subject:	Status Report
+Date:	March 5, 1992
+
+
+Accomplishments
+
+1.	Completed conversion of TT030 Hard Disk and 1.44 MB Floppy Installation Manuals into PageStream format.
+
+2.	Completed conversion of MEGA STE Hard Disk, 1.44 MB Floppy, and Coprocessor  Installation Manuals into PageStream format.
+
+3.	Printed Camera Ready copies of TT030 Hard Disk and 1.44 MB Floppy Installation Manuals.
+
+4.	Printed Camera Ready copies of MEGA STE Hard Disk, 1.44 MB Floppy, and Coprocessor  Installation Manuals.
+
+5.	Shipped Camera Ready copies of TT030 Hard Disk and 1.44 MB Floppy Installation Manuals to Taiwan.
+
+6.	Shipped Camera Ready copies of MEGA STE Hard Disk, 1.44 MB Floppy, and Coprocessor  Installation Manuals to Taiwan.
+
+7.	Got ABC386SX Western Digital build Service Information copies back from the printer.
+
+8.	Shipped ABC386SX Western Digital build Service Information to the subsidiaries.
+
+9.	Converted Sparrow Service Guide Chapter 1 to Ventura on the ABC386DX II.
+
+10.	Started conversion of Sparrow Service Guide Chapter 2 to Ventura on the ABC386DX II.
+
+11.	Faxed RPO for Ventura to Richard Miller.
+
+12.	Faxed Richard Miller with clarification on file conversions between Ventura and PageStream.
+
+13.	Re-configured TT030 system to gain more hard disk space for PageStream.
+
+14.	Contacted DITEK about DynaCADD distribution disks.
+
+15.	Created and did layout and drawing for TT030 ATB number 2.
+
+16.	Made corrections to TT030 ATB number 2 and re-distributed for review.
+
+--- Page 2 ---
+
+Plans
+
+1.	Ship TT030 ATB number 2 to subsidiaries.
+
+2.	Get DITEK DynaCADD disks back.
+
+3.	Get clarification from Richard Miller whether we are staying in Ventura or PageStream.
+
+4.	Finish Sparrow Block Diagram.
+
+4.	Finish Diagnostic Flowcharts for Sparrow.
+
+5.	Finish Sparrow Service Guide Chapter 3 when Diagnostic code for field is available.
+
+6.	Continue work on Falcon Service Guide once ASIC Specifications are available.
+
+7.	Complete Sparrow Service Guide.
+
+8.	Get fix for PageStream.
+
+9.	Complete Falcon Service Guide.
+
+10.	Complete conversion of MEGA ST Service Guide to PageStream.
+
+
+Problems
+
+1.	Still having problems with PageStream and GEM file formats. Causing a lot of lost time in converting Service Guides and Option Manuals.
+
+2.	Still have no distribution disks back for DynaCADD.
+
+3.	Some drawings work with PageStream, others don't. Impossible to determine how effective package will be at any one given time.
+
+4.	GEM drawings created with Easy Flow do not always convert correctly in PageStream. Have drawn some of the figures for option manuals, and text call out information does not convert correctly. To make it work takes several hours of data manipulation.
+
+5.	Running out of hard disk space on the TT030.
+
+6.	Have no clarification as to what Desk Top Publishing package we will use on a permanent basis.
+
+7.	Need ASIC specifications for Falcon.
+
+8.	Need diagnostic info for Sparrow.
+
+9.	Need sleep and a couple 'o' days off! (Or your weight is 224 lbs, FAT CHANCE!!!)

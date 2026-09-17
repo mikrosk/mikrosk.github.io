@@ -1,0 +1,90 @@
+[PageStream 2 document TOMJUL01.DOC: 8.50 x 11.00 in, 29 objects]
+
+--- Page 1 ---
+[23 drawing objects, see TOMJUL01.DOC.p001.svg]
+
+Weekly Report
+
+
+To:		Tom Ulaszek
+From:	Marty Pennock
+Subject:	Status Report
+Date:	July 1, 1992
+
+
+Accomplishments
+
+1.	Completed layout and edit of preliminary diagnostic section for Sparrow Service Guide Chapter 3.
+
+2.	Captured latest Sparrow BOMs from Manman.
+
+3.	Completed edits on Block Diagram and Flowcharts for Sparrow Service Guide in PageStream format.
+
+4.	Backed up TT030.
+
+5.	Rechecked shipment of ABC386SX Service Documentation. Was shipped and completed on 3/3/92
+
+6.	Checked and reviewed SOTEC manual from J. Titsler completed 1/21/92.
+
+7.	Completed TT030 ATB on VME bus fix.
+
+8.	Completed ECO history for MEGA STE Addendum.
+
+9.	Pulled all BOMs for MEGA STE Addendum.
+
+10.	Backed up ABC386DXII.
+
+11.	Created Sparrow Service Guide Chapters 4 and 5.
+
+
+Plans
+
+1.	Produce Service Guides for STBook, Portfolio, 2600, Falcon040, and 7800 products.
+
+2.	Finish Sparrow Service Guide Chapters 3 through 8 with all edits.
+
+3.	Finish Sparrow Service Guide Chapter 4.
+
+4.	Continue work on Falcon040 Service Guide once ASIC Specifications are available.
+
+5.	Complete Sparrow Service Guide rough draft.
+
+®
+
+--- Page 2 ---
+
+6.	Continue test of PageStream v2.2 beta and convert existing documents to that format.
+
+7.	Complete Falcon040 Service Guide.
+
+8.	Complete conversion of MEGA STE Service Guide to PageStream.
+
+9.	Complete conversions of manuals from Ventura 4.0 to PageStream.
+
+10.	Complete printing of user docs for Windows 3.1.
+
+11.	Finish final copy of Falcon030 Power Supply Spec. for archives.
+
+12.	Continue set up of Engineering Document Control Center.
+
+13.	Get Sparrow Diagnostics for Service Guide Chapter 3.
+
+14.	Complete ATB's for MEGA STE and TT030.
+
+15.	Complete MEGA STE Addendum.
+
+16.	Compile new Sparrow Product Spec for Taiwan trip.
+
+Problems
+
+1.	PageStream v2.2 beta works with GEM files now, however, some other problems still remain. Text search and replace causes failure. It is a simple work around and shouldn't cause great problems in document creation.
+
+2.	Upgrade disks for DynaCADD not fixed. Leonard Tramiel has copy of problem. Working. Leonard has new update which he will send that fixes problems.
+
+3.	Need ASIC specifications for Falcon and Sparrow. Have IO controller documentation.  Need rest.
+
+4.	Need memory manager for system that will run concurrently with the NFS network. Have a shortage of memory. Some applications can only be run under Windows, although they are DOS applications. Have tried several. No fix can be found. Will have to live with memory as is.
+
+5.	Need updated ASIC information on Sparrow changes regarding SDMA. Have rough draft from J. Hoenig that contains many errors. J. Horton working hard to resolve issues.
+
+6.	Need final copies of Sparrow Diagnostics when they are completed. Must add them to existing draft of service guide.

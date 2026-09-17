@@ -1,0 +1,75 @@
+[PageStream 2 document TOMFEB27.DOC: 8.50 x 11.00 in, 4 objects]
+
+--- Page 1 ---
+[1 drawing objects, see TOMFEB27.DOC.p001.svg]
+
+Status Report
+
+
+To:		Tom Ulaszek
+From:	Marty Pennock
+Subject:	Weekly Status Report
+Date:	February 27, 1992
+
+
+Accomplishments
+
+1.	Finished list of documents in house in my archive files and turned it in.
+
+2.	Loaded Calamus on the system to look at some documentation from France. Tried it as an alternative to PageStream.
+
+3.	Met with Richard Miller and showed him the work around for doing GEM based graphics in PageStream. Richard has Bill Rehbock and Leonard Tramiel involved on solving the problems with PageStream.
+
+4.	Finished several more drawings and a major portion of the detailed overall block diagram for Sparrow.
+
+5.	Finished TT030 Service Guide conversion to PageStream.
+
+6.	Picked up coated parts from Martech and returned them to ATX.
+
+7.	Tested block diagram for Sparrow created in Easy Draw for use in PageStream without problems.
+
+8.	Dropped off ABC386SX Western Digital Service Information at Spinner Printer.
+
+9.	Started work on Diagnostic Flowcharts for the Sparrow Service Guide.
+
+10.	Looked over Sotec manual. Appears to be OK. Will contact J. Tittsler with opinion.
+
+11.	Began conversion of all option manuals to PageStream.
+
+12.	Turned in rough schedule for Falcon Service Guide.
+
+Plans
+
+1.	Ship ABC386SX Western Digital Service Information to Subsidiaries.
+
+2.	Finish Sparrow Block Diagram.
+
+3.	Finish Diagnostic Flowcharts for Sparrow.
+
+4.	Finish Sparrow Service Guide Chapter 3 when Diagnostic code for field is available.
+
+5.	Continue work on Falcon Service Guide once ASIC Specifications are available.
+
+--- Page 2 ---
+
+6.	Finish conversion and printing of camera ready option manuals for Scott Barrows to be shipped to Taiwan.
+
+7.	Complete Sparrow Service Guide.
+
+8.	Get fix for PageStream.
+
+9.	Get disks back from DITEK. (DynaCADD).
+
+10.	Complete Falcon Service Guide.
+
+11.	Complete conversion of MEGA STE Service Guide to PageStream.
+
+Problems
+
+1.	Still having problems with PageStream and GEM file formats. Causing a lot of lost time in converting Service Guides and Option Manuals.
+
+2.	Still have no distribution disks back for DynaCADD.
+
+3.	Some drawings work with PageStream, others don't. Impossible to determine how effective package will be at any one given time.
+
+4.	GEM drawings created with Easy Flow do not always convert correctly in PageStream. Have drawn some of the figures for option manuals, and text call out information does not convert correctly. To make it work takes several hours of data manipulation.

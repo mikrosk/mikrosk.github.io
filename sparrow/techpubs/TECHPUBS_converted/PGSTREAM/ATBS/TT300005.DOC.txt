@@ -1,0 +1,87 @@
+[PageStream 2 document TT300005.DOC: 8.50 x 11.00 in, 99 objects]
+
+--- Page 1 ---
+
+Atari Technical Bulletin
+Number: TT30-0005
+Date: April 2, 1992
+Page 1 of 2
+
+
+Product(s) Affected:	TT030
+Model:				All
+Type of ATB:			As Needed
+ECO #: 				1428
+
+Reason for ATB:
+
+To reduce noise and jitter seen on the high resolution monitor.
+
+
+Notes:
+
+This problem only affects two main PCB FABs. They are as follows:
+
+FAB				REV
+
+C301763-001		D
+C302406-001		A
+
+Symptoms of Problem:
+
+Video jitter on high reolution TT Monitor.
+
+
+Solution:
+
+1.	Remove the top cover of the TT030.
+
+2.	Remove the VME Card Guide.
+
+3.	Locate the 8530 circuit. See Figure 1 on page 2.
+
+4.	Connect a 15pF capacitor from the left side of CD01 to the top left corner of the ground ring. See Figure 1 on page 2.
+
+5.	Re-assemble the unit.
+
+--- Page 2 ---
+[79 drawing objects, see TT300005.DOC.p002.svg]
+
+Atari Technical Bulletin
+Number: TT30-0005
+Date: April 2, 1992
+Page 2 of 2
+
+GROUND RING
+
+15 pF Cap
+
+CD02
+
+CD01
+
+RD02
+
+CD06
+
+CD08
+
+CD03
+
+CD05
+
+UD00
+
+RD04
+
+LD00
+
+CRD00
+
+CD04
+
+CD07
+
+CD09
+
+Figure 1

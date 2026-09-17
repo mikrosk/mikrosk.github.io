@@ -1,0 +1,18 @@
+DynaCADD macro definition file (MACRODEF.INF)
+Source: DYNACADD/PARTS/MACRODEF.INF (3666 bytes)
+Structure: 26 fixed slots of 141 bytes, each a NUL-padded ASCII macro written in the typed command language (abbreviated commands and keywords, X/Y/Z and IX/IY/IZ coordinates, "," after each point, ";" after each command). Empty slots are omitted below.
+Content: 3D modelling macros - view rotation (RO AX/AY/AZ), inserting lines, circles, polygons (I L, I CI, I POL), revolving (REVA angle, REVN steps), rotating (ROTAN, ROTN), projecting (PROJD, PROJS) and translating profiles.
+
+slot  0: INI E DEF CVIEWS .25 X5 Y4,;RO AX -55 AY 0 AZ 45 X5 Y4,;
+slot  1: I L Z1 Y0,Z0 Y1,Y4,Z1,Z2 Y1,Z8,Z9 Y3,Z11 Y5,Z13 Y6,Z14 Y5,Z13,Z11 Y4,Z10 Y3,Z9 Y1,Y0,;T RE REVA 360 REVN 36 BYA ;Z0,Z1,;DZE INI INI E HIDEF
+slot  2: I CI X4 Y0,IX.25,;T RE REVA 90 REVN 5 BYL ;Y1,Y0,;T R ROTAN 360/7 ROTN 6 BYA ;X0,;I POL POLYS 14 Z4,IX1,;T RE REVA 180 REVN 36 BYL ;Z4,X2,;
+slot  3: EDITV DELV X5 Y4,IX-2,IY-2,IX2,; INI
+slot  4: DZE INI INI E HIDEF
+slot  7: T RE REVA 180 REVN 9 BYLAY 1 ; X2 Y-3,IY-4,;SW 2 BYLAY 2 ; BYLAY 3 ;P PROJD 5 PROJS 5 BYLAY 4 ; TRANSL TRANC BYLAY 5 ; X0 Y0 Z0,Y7 Z7,;
+slot  8: C B Z1 Y0,Z0 Y1,Y4,Z1,Z2 Y1,Z8,Z9 Y3,Z11 Y5,Z13 Y6,Z14 Y5,Z13,Z11 Y4,Z10 Y3,Z9 Y1,Y0,;T RE REVA 360 REVN 36 BYL ;Z0,Z1,;DZE INI INI E HIDEF
+slot  9: INI E DEF X22 Y17,;RO AX -55 AY -.3 AZ 45 X22 Y17,;
+slot 10: I L SET X0,PAN 36 PRAD 4,X2 Y0,;T M BYL ,;X0,X1,;T R ROTAN 72 ROTN 4 BYA ;X0 Y0,;
+slot 11: I CI X4 Y4,IX2,;T RE REVA 180 REVN 7 BYL ;X0,IY-4,;I CI X5 Y9,IX2;T P PROJD 4 PROJS 4 BYL ;I FA X0,IX2,IY2,;T TRANSL TRANC BYL ;X0,IZ6 IY6,;
+slot 12: CRE DEFM
+slot 18: I L X5 Y-4 Z-6,X14 Y3,X5 Y4,;T P PROJD 12 BYL BYL ,;E HIDEF
+slot 22: I DE BYA ;

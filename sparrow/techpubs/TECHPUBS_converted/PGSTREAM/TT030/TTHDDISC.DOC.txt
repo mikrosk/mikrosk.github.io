@@ -1,0 +1,16 @@
+[PageStream 2 document TTHDDISC.DOC: 5.50 x 8.50 in, 3 objects, facing pages]
+
+--- Page 1 ---
+
+Reproduction of all or any portions of this manual is not allowed without the specific written consent of Atari Corporation.
+
+
+Every effort has been made to ensure the accuracy of the  product documentation in this manual. However, because Atari Corporation is constantly improving and updating its computer hardware and software, it is unable to guarantee the accuracy of printed material after the date of publication and disclaims liability for changes, errors, or omissions. These documents are for repair service information only. Part numbers are for reference only. Only parts on current dealer parts lists are available. No license is given for any use by the possession of these documents and may not be reproduced in any form without the written approval of Atari Corporation.
+
+
+Atari, the Atari logo, TOS, SHDRIVER.SYS, and TT030 are trademarks or registered trademarks of Atari Corporation.
+
+
+Copyright  1991, Atari Corporation
+Sunnyvale, CA 94089-1302
+All rights reserved.

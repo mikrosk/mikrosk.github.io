@@ -1,0 +1,71 @@
+
+          TT DCU FUNCTIONAL DESCRIPTION
+
+Incarnations:  National ???
+          Styra ST-4130
+
+Pin Description
+The DCU (data control unit) is a combination of a bi-directional
+4 to 1
+mux and a double buffered latch. It is used to interface the 32
+bit
+system data bus to the 8 bit peripheral chip controlled by the TT
+DMAC.
+
+D0-D31    TTL bi-dir     system data bus
+
+PD0-PD7   TTL bi-dir     peripheral data bus
+
+XCEN CMOS input     enables the D0-D31 pins as outputs
+
+XPEN CMOS input     enables the PD0-PD7 pins as outputs
+
+XLDI CMOS input     latches the state of the D0-D31 and
+               PD0-PD7 pins when low
+
+XHOLD     CMOS input     closes the secondary latches in the
+               double buffer when low
+
+XLWRD     CMOS input     causes the lower 16 bits of the latches
+               to be gated onto the upper 16 bits. Used
+               when CPU reads latch contents as a word.
+
+XTHRU     CMOS input     causes the latches to be bypassed. Used
+               to pass data directly thru the chip.
+
+DA0,DA1   CMOS inputs    control which byte of the long word is
+               envolved in a latching operation. The
+               8 bit data from the PDx lines can be latched
+               in one of four latches. Used to assemble
+               bytes from the peripheral into long words
+               or to select bytes from a long word to go to
+               the peripheral.
+
+S16X8     CMOS input     selects which 8 of the Dx lines are used
+               for pass thru operations. Should be tied
+               high in the TT.
+
+Package:
+The circuit has 49 signal pins. The package is a 68 pin PLCC.
+Bonding diagram to be supplied by the ASIC vendor.
+
+Pin Out
+1  - XCEN 18 - D7        35 - D20  52 - PD1
+2  - XPEN 19 - D8        36 - D21  53 - PD2
+3  - XLDI 20 - D9        37 - D22  54 - PD3
+4  - XHOLD     21 - D10  38 - D23  55 - PD4
+5  - XLWRD     22 - D11  39 - D24  56 - PD5
+6  - XTHRU     23 - D12  40 - D25  57 - PD6
+7  - VSS  24 - D13  41 - D26  58 - PD7
+8  - VDD  25 - VSS  42 - VSS  59 - VSS
+9  - VDD  26 - VDD  43 - VDD  60 - VDD
+10 - VSS  27 - VDD  44 - VDD  61 - VDD
+11 - D0        28 - VSS  45 - VSS  62 - VSS
+12 - D1        29 - D14  46 - D27  63 - NC
+13 - D2        30 - D15  47 - D28  64 - NC
+14 - D3        31 - D16  48 - D29  65 - NC
+15 - D4        32 - D17  49 - D30  66 - DA0
+16 - D5        33 - D18  50 - D31  67 - DA1
+17 - D6        34 - D19  51 - PD0  68 - S16X8
+
+There are no internal registers in the DCU.

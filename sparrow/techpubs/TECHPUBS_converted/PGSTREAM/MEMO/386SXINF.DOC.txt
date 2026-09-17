@@ -1,0 +1,26 @@
+[PageStream 2 document 386SXINF.DOC: 8.50 x 11.00 in, 5 objects]
+
+--- Page 1 ---
+[1 drawing objects, see 386SXINF.DOC.p001.svg]
+
+Dallas Office Memo
+
+
+To:		All Subsidiaries
+From:	Marty Pennock
+Subject:	ABC386SX Western Digital Service Information
+
+Date:	February 28, 1992
+
+cc		Ira Goldstein - ATX
+		Tom Ulaszek - ATX
+		Richard Miller - SUVL
+
+
+Enclosed please find a set of servicing information compiled for the ABC386SX original build. The schematic enclosed is as good a release as could be found, but not completely up to date. Bill of Material lists should cover most of the parts needed, except for country specific TOS. Also included are chipset data sheets for the custom chipset used in the design. Standard chip data sheets,  such as the 80386SX, are not included as they may be found off the shelf. I hope that this will help in the troubleshooting and repair of these units.
+
+
+Sincerely
+
+
+Marty Pennock

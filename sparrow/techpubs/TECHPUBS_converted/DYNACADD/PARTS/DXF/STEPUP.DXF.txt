@@ -1,0 +1,158 @@
+DXF drawing: DYNACADD/PARTS/DXF/STEPUP.DXF
+Render: STEPUP.DXF.svg
+
+== Summary ==
+File:        171156 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font romand
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (-14.39, 3) - (319.45, 252.82)
+             rendered (-14.39, 3) - (233.25, 166.9), size 247.64 x 163.89
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version
+Header:      24 variables; $LTSCALE=1, $FILLMODE=1
+Text styles: romand (font romand)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 2 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            139
+  10            7  CONTINUOUS    on            1914
+  unused: 2, 3, 4, 5, 6, 7, 8, 9
+Entities:    model space: LINE 1084, ARC 843, TEXT 114, POLYLINE 12 (24 vertices)
+Blocks:      0 defined
+Notes:
+  - 12 polylines with constant width drawn as thick strokes
+  - 3 TEXT entities are empty or blank
+
+== Text in reading order (111 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (111 items) --
+  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10
+  !  |  @  |  #  |  $  |  %  |  ^  |  &  |  *  |  (  |  )  |  _  |  +  |  ~  |  Undo
+  Esc  |  Backspace  |  Help  |  (  |  )  |  /  |  *
+  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  |  `
+  Tab  |  {  |  }  |  Delete  |  Insert  |  Clr  |  7  |  8  |  9  |  -
+  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  Home
+  [  |  ]
+  Control  |  :  |  Return  |  4  |  5  |  6  |  +
+  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  "  |  |
+  ;
+  '  |  \
+  Shift  |  <  |  >  |  ?  |  Shift  |  1  |  2  |  3  |  Enter
+  Z  |  X  |  C  |  V  |  B  |  N  |  M
+  ,  |  .  |  /
+  Alternate  |  CapsLock  |  0  |  .
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE   TEXT
+  5.48   70.74    1.5673      0  left      1      romand  F1
+ 20.63   70.74    1.5673      0  left      1      romand  F2
+ 35.78   70.74    1.5673      0  left      1      romand  F3
+ 50.93   70.74    1.5673      0  left      1      romand  F4
+ 66.08   70.74    1.5673      0  left      1      romand  F5
+ 81.23   70.74    1.5673      0  left      1      romand  F6
+ 96.38   70.74    1.5673      0  left      1      romand  F7
+111.54   70.74    1.5673      0  left      1      romand  F8
+126.69   70.74    1.5673      0  left      1      romand  F9
+141.84   70.74    1.5673      0  left      1      romand  F10
+  5.48   55.17    1.5673      0  left      1      romand  !
+ 15.43   55.17    1.5673      0  left      1      romand  @
+ 25.37   55.17    1.5673      0  left      1      romand  #
+ 35.56   55.17    1.5673      0  left      1      romand  $
+ 45.29   55.17    1.5673      0  left      1      romand  %
+ 55.24   55.17    1.5673      0  left      1      romand  ^
+  65.2   55.17    1.5673      0  left      1      romand  &
+ 75.15   55.17    1.5673      0  left      1      romand  *
+  85.1   55.17    1.5673      0  left      1      romand  (
+ 95.05   55.17    1.5673      0  left      1      romand  )
+105.01   55.93    1.5673      0  left      1      romand  _
+114.96   55.17    1.5673      0  left      1      romand  +
+124.91   55.17    1.5673      0  left      1      romand  ~
+168.38   55.24    1.5673      0  left      1      romand  Undo
+ -4.87   54.83    1.5673      0  left      1      romand  Esc
+133.97   54.83    1.5673      0  left      1      romand  Backspace
+153.55   54.89    1.5673      0  left      1      romand  Help
+186.85   54.95    1.5673      0  left      1      romand  (
+ 196.8   54.95    1.5673      0  left      1      romand  )
+206.75   54.95    1.5673      0  left      1      romand  /
+216.71   54.95    1.5673      0  left      1      romand  *
+  5.48   52.14    1.5673      0  left      1      romand  1
+ 15.43   52.14    1.5673      0  left      1      romand  2
+ 25.38   52.14    1.5673      0  left      1      romand  3
+ 35.34   52.14    1.5673      0  left      1      romand  4
+ 45.29   52.14    1.5673      0  left      1      romand  5
+ 55.24   52.14    1.5673      0  left      1      romand  6
+  65.2   52.14    1.5673      0  left      1      romand  7
+ 75.15   52.14    1.5673      0  left      1      romand  8
+  85.1   52.14    1.5673      0  left      1      romand  9
+ 95.05   52.14    1.5673      0  left      1      romand  0
+105.01   52.14    1.5673      0  left      1      romand  -
+114.96   52.14    1.5673      0  left      1      romand  =
+124.91   52.14    1.5673      0  left      1      romand  `
+ -4.87   44.65    1.5673      0  left      1      romand  Tab
+110.88   44.65    1.5673      0  left      1      romand  {
+120.82   44.65    1.5673      0  left      1      romand  }
+139.38   44.47    1.5673      0  left      1      romand  Delete
+153.27   44.47    1.5673      0  left      1      romand  Insert
+172.93   44.85    1.5673      0  left      1      romand  Clr
+186.69   44.44    1.5673      0  left      1      romand  7
+196.65   44.44    1.5673      0  left      1      romand  8
+ 206.6   44.44    1.5673      0  left      1      romand  9
+216.55   44.44    1.5673      0  left      1      romand  -
+ 10.29   43.34    2.6122      0  left      10     romand  Q
+ 20.24   43.34    2.6122      0  left      10     romand  W
+ 30.19   43.34    2.6122      0  left      10     romand  E
+ 40.15   43.34    2.6122      0  left      10     romand  R
+  50.1   43.34    2.6122      0  left      10     romand  T
+ 60.05   43.34    2.6122      0  left      10     romand  Y
+    70   43.34    2.6122      0  left      10     romand  U
+ 79.96   43.34    2.6122      0  left      10     romand  I
+ 89.91   43.34    2.6122      0  left      10     romand  O
+ 99.86   43.34    2.6122      0  left      10     romand  P
+172.93   42.79    1.5673      0  left      1      romand  Home
+110.88   41.61    1.5673      0  left      1      romand  [
+120.82   41.61    1.5673      0  left      1      romand  ]
+ -4.87   34.48    1.5673      0  left      1      romand  Control
+103.28   34.83    1.5673      0  left      1      romand  :
+122.43   34.48    1.5673      0  left      1      romand  Return
+186.85   34.49    1.5673      0  left      1      romand  4
+ 196.8   34.49    1.5673      0  left      1      romand  5
+206.75   34.49    1.5673      0  left      1      romand  6
+216.71   34.49    1.5673      0  left      1      romand  +
+ 12.48   33.35    2.6122      0  left      10     romand  A
+ 22.43   33.35    2.6122      0  left      10     romand  S
+ 32.39   33.35    2.6122      0  left      10     romand  D
+ 42.34   33.35    2.6122      0  left      10     romand  F
+ 52.29   33.35    2.6122      0  left      10     romand  G
+ 62.24   33.35    2.6122      0  left      10     romand  H
+  72.2   33.35    2.6122      0  left      10     romand  J
+ 82.15   33.35    2.6122      0  left      10     romand  K
+  92.1   33.35    2.6122      0  left      10     romand  L
+113.95   33.76    1.5673      0  left      1      romand  "
+140.55   33.99    1.5673      0  left      1      romand  |
+103.28    31.8    1.5673      0  left      1      romand  ;
+113.95   30.73    1.5673      0  left      1      romand  '
+140.55   30.96    1.5673      0  left      1      romand  \
+ -4.87    24.3    1.5673      0  left      1      romand  Shift
+ 87.35   24.12    1.5673      0  left      1      romand  <
+ 97.58   24.12    1.5673      0  left      1      romand  >
+107.23   24.12    1.5673      0  left      1      romand  ?
+117.16   24.12    1.5673      0  left      1      romand  Shift
+186.85   24.16    1.5673      0  left      1      romand  1
+ 196.8   24.16    1.5673      0  left      1      romand  2
+206.75   24.16    1.5673      0  left      1      romand  3
+216.71   24.16    1.5673      0  left      1      romand  Enter
+ 17.45   23.36    2.6122      0  left      10     romand  Z
+  27.4   23.36    2.6122      0  left      10     romand  X
+ 37.35   23.36    2.6122      0  left      10     romand  C
+ 47.31   23.36    2.6122      0  left      10     romand  V
+ 57.26   23.36    2.6122      0  left      10     romand  B
+ 67.21   23.36    2.6122      0  left      10     romand  N
+ 77.16   23.36    2.6122      0  left      10     romand  M
+ 87.35   21.45    1.5673      0  left      1      romand  ,
+ 97.58   21.45    1.5673      0  left      1      romand  .
+107.23   21.45    1.5673      0  left      1      romand  /
+  7.55   14.66    1.5673      0  left      1      romand  Alternate
+112.34   14.31    1.5673      0  left      1      romand  CapsLock
+   187   14.58    1.5673      0  left      1      romand  0
+206.91   14.58    1.5673      0  left      1      romand  .

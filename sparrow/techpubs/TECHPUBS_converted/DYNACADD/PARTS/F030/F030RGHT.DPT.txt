@@ -1,0 +1,14 @@
+DynaCADD 2.0 entity file (.DPT)
+Source: DYNACADD/PARTS/F030/F030RGHT.DPT (4999 bytes)
+Record stream: 83 records, ends at offset 0x1387 with FFFF terminator
+Drawing settings from: F030RGHT.DWG
+Sheet: width 454.6495, height 253.6578, scale 1
+Units: not recorded in a field identified so far; coordinates are listed as stored
+Entities: 83 total (LINE 63, ARC 20)
+Extents: x 37.8875 .. 292.3464, y 21.1381 .. 79.3061 (size 254.459 x 58.168)
+Layers used: 0 "L1" (4), 9 "L10" (79)
+Line styles used: 0 "DASHED, drawn solid" (83)
+Colour indices used: 7 (83)
+Groups (unnamed, numbered; 0 = not grouped): 0 (42), 4 (41)
+
+Text strings (0), in file order; x,y = insertion point:

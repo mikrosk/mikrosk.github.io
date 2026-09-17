@@ -1,0 +1,59 @@
+[PageStream 2 document TOMU1127.DOC: 8.50 x 11.00 in, 3 objects]
+
+--- Page 1 ---
+
+Weekly Report
+
+
+To:		Tom Ulaszek
+From:	Marty Pennock
+Subject:	Progress Report
+Date:	November 27, 1991
+
+
+Progress
+
+1.	Started STE+ Service Manual block diagram in PageStream.
+
+2.	Created 2MB Floppy drawing in DynaCADD for the TT030 and MEGA STE.
+
+3.	Generated 2MB Floppy installation manuals with drawing in PageStream.
+
+4.	Started conversion of STE+ Service guide to PageStream format.
+
+5.	Made FGR to Sunnyvale for new copies of PageStream for Jerry Smith and myself.
+
+6.	Helped fix MOUSE.SYS problem for Germany.
+
+7.	Continued evaluation of Multi-I/O card for AUVA ABC386DXII.
+
+
+Plans
+
+1.	Complete layout the STE+ Service guide  on the TT030 using PageStream.
+
+2.	Convert all drawings from PC based applications to the TT030.
+
+3.	Get switch settings for ABC286/60.
+
+4.	Make sure Scott Barrows has released care package of ABC386SX (WD) to field.
+
+5.	Get review of the 2MB floppy drives back and produce final drafts.
+
+6.	Get review copy back and make corrections to the MEGA STE Addendum.
+
+
+Problems
+
+
+1.	TT030 based applications very slow and tedious.
+
+2.	Still have no review copy of the 2MB floppy kit manuals for the TT030 or MEGA STE.
+
+3.	Have no review copy of the MEGA STE Addendum.
+
+4.	PageStream does not work properly with large size files. This will make it almost impossible to create documents of the type we are doing now. Awaiting new copy.
+
+--- Page 2 ---
+
+5.	Ultrascript does not accept certain control codes which causes it not to print certain characters or graphics. This problem may make the use of the TT030 for DTP here impossible. Only solution is to create copy in postscript and send out to be image set. High cost, no guarantee of quality. Should have new release.

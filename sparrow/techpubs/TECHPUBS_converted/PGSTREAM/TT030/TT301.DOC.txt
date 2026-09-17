@@ -1,0 +1,117 @@
+[PageStream 2 document TT301.DOC: 8.50 x 11.00 in, 992 objects]
+
+--- Page 1 ---
+[283 drawing objects, see TT301.DOC.p001.svg]
+
+SECTION ONE
+
+INTRODUCTION
+
+
+1.1 OVERVIEW
+
+
+The Atari® TT030™ is designed as an integrated unit with processor, memory, and I/O
+control in one package. The TT030 provides 2 Mbytes (2,097,142 bytes) of RAM memory and
+is expandable to 26 Mbytes (27,262,846 bytes) by installing daughter boards. The TT030 also
+provides 512 Kbytes (524,288 bytes) of ROM space. A 720 Kbyte or 1.44 Mbyte (formatted)
+floppy, power supply, and floating point coprocessor are also included in the system. An
+optional hard disk drive can also be added.
+
+
+1.2 MAIN COMPONENTS
+
+
+	•	Main Board
+	•	Separate Keyboard Assembly
+	•	Power Supply
+	•	Floppy Disk Drive
+	•	Plastic Case (upper and lower)
+	•	Mouse
+
+
+1.3 CASE DESIGN
+
+
+The front of the TT030 contains the floppy disk drive with an eject button and busy LED.
+An optional hard disk can also be installed and it also contains its own busy LED.
+
+
+Front View
+
+Floppy
+Drive
+
+Power
+Indicator
+
+Floppy
+Activity
+Light
+
+Floppy
+Eject
+Button
+
+Hard Disk
+Activity
+Light
+
+--- Page 2 ---
+[676 drawing objects, see TT301.DOC.p002.svg]
+
+The left side of the TT030 case contains the following items from left to right. Reset button,
+LAN connector, MIDI OUT jack, MIDI IN jack, ROM cartridge port, and keyboard jack.
+
+
+Left Side View
+
+
+The rear of the TT030 contains the following items. SCSI interface jack, External floppy jack,
+external ACSI interface connector, printer connector, monitor jack, VME slot,  modem 1
+connector, on/off switch, power plug, modem 2 connector, fan, audio R connector, and
+audio L connector.
+
+
+Rear View
+
+Reset
+
+LAN
+
+MIDI IN
+
+ROM Cartridgr
+
+Keyboard
+
+MIDI OUT
+
+On/Off
+Switch
+
+VME
+
+AC Power In
+
+Fan
+
+Audio
+Left
+
+Audio
+Right
+
+SCSI
+
+Floppy
+
+ACSI
+
+Printer
+
+Modem 2
+
+Modem1
+
+Monitor

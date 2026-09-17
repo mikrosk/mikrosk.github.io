@@ -1,0 +1,40 @@
+[PageStream 2 document TOMSCHED.DOC: 8.50 x 11.00 in, 2 objects]
+
+--- Page 1 ---
+[1 drawing objects, see TOMSCHED.DOC.p001.svg]
+
+Dallas Office Memo
+
+
+To:		Tom Ulaszek
+From:	Marty Pennock
+Subject:	Projected Schedules for Projects
+Date:	October 28, 1991
+
+cc:		Ira Goldstein - ATX
+
+
+The following are projected scheduled for the completion of current projects. These projections are based on the fact that all of the existing files must be converted to an Atari TT030 using both Word Perfect 4.1 and PageStream 2.1
+
+
+Project				Time Needed					Completion Date
+
+STE+				2-4 Wks				11/11/91-11/25/91
+2 MB Floppy			3 Days from Review		?
+MEGA STE ADD		2 Wks from Review		?
+Marlin Owner's		4-6 Wks from MSDOS Copy	?
+Marlin Service			8 Wks				12/23/91
+TT030 Correct		1 Day	10/29/91
+TT030 Service			3 Wks to Convert		?
+MEGA STE Service	3 Wks to Convert		?
+TT030 Hard Disk		1 Wk to Convert		?
+MEGA STE COPROC	1 Wk to Convert		?
+
+
+The 2MB Floppy Upgrade Manual for the MEGA STE and TT030 as well as the MEGA STE Addendum and TT030 Correction Pages schedules will ultimately depend on when the review copies are turned back in to me. Other manual conversions will depend on when the time is scheduled and they will also be affected by ongoing project schedules.
+
+
+Sincerely
+
+
+Marty Pennock

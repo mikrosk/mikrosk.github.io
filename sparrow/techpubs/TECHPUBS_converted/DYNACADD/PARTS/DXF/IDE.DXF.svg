@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="611.72" height="2448" viewBox="0 0 611.72 2448">
+<title>DYNACADD/PARTS/DXF/IDE.DXF</title>
+<rect x="0" y="0" width="611.72" height="2448" fill="#ffffff"/>
+<g data-layer="1" fill="none" stroke="#000000" stroke-width="27.91" stroke-linecap="butt" stroke-linejoin="miter">
+<path d="M131.44 37.95L131.44 2410.05L480.28 2410.05L480.28 37.95L131.44 37.95Z"/>
+</g>
+<g data-layer="1" fill="#000000" stroke="none">
+<circle cx="201.21" cy="1049.58" r="7.2"/>
+<circle cx="201.21" cy="2200.74" r="7.2"/>
+<circle cx="201.21" cy="2305.4" r="7.2"/>
+<circle cx="201.21" cy="2096.09" r="7.2"/>
+<circle cx="201.21" cy="1991.44" r="7.2"/>
+<circle cx="201.21" cy="1886.79" r="7.2"/>
+<circle cx="201.21" cy="1468.19" r="7.2"/>
+<circle cx="201.21" cy="1677.49" r="7.2"/>
+<circle cx="201.21" cy="1782.14" r="7.2"/>
+<circle cx="201.21" cy="1572.84" r="7.2"/>
+<circle cx="201.21" cy="1258.88" r="7.2"/>
+<circle cx="201.21" cy="1363.53" r="7.2"/>
+<circle cx="201.21" cy="1154.23" r="7.2"/>
+<circle cx="201.21" cy="317.02" r="7.2"/>
+<circle cx="201.21" cy="735.63" r="7.2"/>
+<circle cx="201.21" cy="840.28" r="7.2"/>
+<circle cx="201.21" cy="944.93" r="7.2"/>
+<circle cx="201.21" cy="630.98" r="7.2"/>
+<circle cx="201.21" cy="526.33" r="7.2"/>
+<circle cx="201.21" cy="421.67" r="7.2"/>
+<circle cx="201.21" cy="212.37" r="7.2"/>
+<circle cx="201.21" cy="107.72" r="7.2"/>
+<circle cx="375.63" cy="1049.58" r="7.2"/>
+<circle cx="375.63" cy="2200.74" r="7.2"/>
+<circle cx="375.63" cy="2305.4" r="7.2"/>
+<circle cx="375.63" cy="2096.09" r="7.2"/>
+<circle cx="375.63" cy="1991.44" r="7.2"/>
+<circle cx="375.63" cy="1886.79" r="7.2"/>
+<circle cx="375.63" cy="1468.19" r="7.2"/>
+<circle cx="375.63" cy="1677.49" r="7.2"/>
+<circle cx="375.63" cy="1782.14" r="7.2"/>
+<circle cx="375.63" cy="1572.84" r="7.2"/>
+<circle cx="375.63" cy="1258.88" r="7.2"/>
+<circle cx="375.63" cy="1363.53" r="7.2"/>
+<circle cx="375.63" cy="1154.23" r="7.2"/>
+<circle cx="375.63" cy="317.02" r="7.2"/>
+<circle cx="375.63" cy="735.63" r="7.2"/>
+<circle cx="375.63" cy="944.93" r="7.2"/>
+<circle cx="375.63" cy="840.28" r="7.2"/>
+<circle cx="375.63" cy="630.98" r="7.2"/>
+<circle cx="375.63" cy="526.33" r="7.2"/>
+<circle cx="375.63" cy="421.67" r="7.2"/>
+<circle cx="375.63" cy="212.37" r="7.2"/>
+<circle cx="375.63" cy="107.72" r="7.2"/>
+</g>
+<g data-layer="1" fill="#000000" stroke="none" font-family="Helvetica, Arial, 'Liberation Sans', 'DejaVu Sans', sans-serif" xml:space="preserve">
+<text transform="translate(61.67 2340.28)" y="0" font-size="38.51" text-anchor="middle">2</text>
+<text transform="translate(61.67 2235.63)" y="0" font-size="38.51" text-anchor="middle">4</text>
+<text transform="translate(61.67 2130.98)" y="0" font-size="38.51" text-anchor="middle">6</text>
+<text transform="translate(61.67 2026.33)" y="0" font-size="38.51" text-anchor="middle">8</text>
+<text transform="translate(61.67 1921.67)" y="0" font-size="38.51" text-anchor="middle">10</text>
+<text transform="translate(61.67 1817.02)" y="0" font-size="38.51" text-anchor="middle">12</text>
+<text transform="translate(61.67 1503.07)" y="0" font-size="38.51" text-anchor="middle">18</text>
+<text transform="translate(61.67 1712.37)" y="0" font-size="38.51" text-anchor="middle">14</text>
+<text transform="translate(61.67 1607.72)" y="0" font-size="38.51" text-anchor="middle">16</text>
+<text transform="translate(61.67 1293.77)" y="0" font-size="38.51" text-anchor="middle">22</text>
+<text transform="translate(61.67 1398.42)" y="0" font-size="38.51" text-anchor="middle">20</text>
+<text transform="translate(61.67 1189.12)" y="0" font-size="38.51" text-anchor="middle">24</text>
+<text transform="translate(61.67 770.51)" y="0" font-size="38.51" text-anchor="middle">32</text>
+<text transform="translate(61.67 1084.47)" y="0" font-size="38.51" text-anchor="middle">26</text>
+<text transform="translate(61.67 875.16)" y="0" font-size="38.51" text-anchor="middle">30</text>
+<text transform="translate(61.67 979.81)" y="0" font-size="38.51" text-anchor="middle">28</text>
+<text transform="translate(61.67 665.86)" y="0" font-size="38.51" text-anchor="middle">34</text>
+<text transform="translate(61.67 561.21)" y="0" font-size="38.51" text-anchor="middle">36</text>
+<text transform="translate(61.67 456.56)" y="0" font-size="38.51" text-anchor="middle">38</text>
+<text transform="translate(61.67 351.91)" y="0" font-size="38.51" text-anchor="middle">40</text>
+<text transform="translate(61.67 247.26)" y="0" font-size="38.51" text-anchor="middle">42</text>
+<text transform="translate(61.67 142.6)" y="0" font-size="38.51" text-anchor="middle">44</text>
+<text transform="translate(550.05 2340.28)" y="0" font-size="38.51" text-anchor="middle">1</text>
+<text transform="translate(550.05 2235.63)" y="0" font-size="38.51" text-anchor="middle">3</text>
+<text transform="translate(550.05 2130.98)" y="0" font-size="38.51" text-anchor="middle">5</text>
+<text transform="translate(550.05 2026.33)" y="0" font-size="38.51" text-anchor="middle">7</text>
+<text transform="translate(550.05 1921.67)" y="0" font-size="38.51" text-anchor="middle">9</text>
+<text transform="translate(550.05 1817.02)" y="0" font-size="38.51" text-anchor="middle">11</text>
+<text transform="translate(550.05 1503.07)" y="0" font-size="38.51" text-anchor="middle">17</text>
+<text transform="translate(550.05 1712.37)" y="0" font-size="38.51" text-anchor="middle">13</text>
+<text transform="translate(550.05 1607.72)" y="0" font-size="38.51" text-anchor="middle">15</text>
+<text transform="translate(550.05 1293.77)" y="0" font-size="38.51" text-anchor="middle">21</text>
+<text transform="translate(550.05 1398.42)" y="0" font-size="38.51" text-anchor="middle">`9</text>
+<text transform="translate(550.05 1189.12)" y="0" font-size="38.51" text-anchor="middle">23</text>
+<text transform="translate(550.05 770.51)" y="0" font-size="38.51" text-anchor="middle">31</text>
+<text transform="translate(550.05 1084.47)" y="0" font-size="38.51" text-anchor="middle">25</text>
+<text transform="translate(550.05 979.81)" y="0" font-size="38.51" text-anchor="middle">27</text>
+<text transform="translate(550.05 875.16)" y="0" font-size="38.51" text-anchor="middle">29</text>
+<text transform="translate(550.05 665.86)" y="0" font-size="38.51" text-anchor="middle">33</text>
+<text transform="translate(550.05 561.21)" y="0" font-size="38.51" text-anchor="middle">35</text>
+<text transform="translate(550.05 456.56)" y="0" font-size="38.51" text-anchor="middle">37</text>
+<text transform="translate(550.05 351.91)" y="0" font-size="38.51" text-anchor="middle">39</text>
+<text transform="translate(550.05 247.26)" y="0" font-size="38.51" text-anchor="middle">41</text>
+<text transform="translate(550.05 142.6)" y="0" font-size="38.51" text-anchor="middle">43</text>
+</g>
+</svg>

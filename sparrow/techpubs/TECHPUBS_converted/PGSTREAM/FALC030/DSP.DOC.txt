@@ -1,0 +1,518 @@
+[PageStream 2 document DSP.DOC: 11.00 x 8.50 in, 162 objects, booklet layout: two page halves per sheet, halves listed in text flow order]
+
+--- Page 1, right half ---
+[1 drawing objects, see DSP.DOC.p001.svg]
+
+Atari DSP
+Developer's Documentation
+TOS Host Interface Routines
+
+
+Communication between applications and the DSP on the Atari Hardware must be done through a set of provided TOS calls.  This "virtualization" of the DSP hardware will insure compatibility should the hardware be changed in future machines.
+
+DSP Memory Map
+
+The private RAM that the DSP uses to store data or program that will not fit into internal resources is supplied by three 32K Static RAMS.  This memory appears to the DSP as follows.  Program space is one contiguous block of 32K words.  X and Y data space are each separate 16K blocks.  Both X and Y can be accessed, in the DSP's map, as blocks starting at 0 or 16K.  Program space physically overlaps both X and Y data space so DSP software must take this into account to avoid having program and data memory corrupt each other.  Note that X:0, X:16K and P:16K are the same location in physical memory and that Y:0, Y:16K and P:0 are also mapped to the same physical location.  System services will reside at the top of X memory along with DSP subroutines.  DSP subroutine BSS area will take up the top 256 words of both X and Y memory.  A flush subroutine call by the program will regain some of this memory back for the program.  As discussed in the next section, a Dsp_Available call should always be made to determine the amount of free ram on the DSP.
+
+DSP Programs
+
+Certain steps must be followed when programming for the Atari platform.  Some of the 32K words of DSP memory is allocated for system tasks and resident subroutines and is therefore not available for use by the DSP program.  A host process must therefore make a Dsp_Available call to find out how much memory is left for its DSP program.  If the amount
+
+© 1992, Atari Corporation
+
+DSP .1
+
+--- Page 2, left half ---
+[2 drawing objects, see DSP.DOC.p002.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+is satisfactory, the host process should reserve that memory area using a Dsp_Reserve call.  This call will prevent the program's memory from being corrupted by the system.  It is also necessary for the host process to prevent access to the DSP by another host process by making a Dsp_Lock call.  This call must come before any other calls to manipulate the DSP.  Doing this will insure that the status of the DSP will not be changed by someone else while the application is using it.  When the host process is through using the DSP program it should do a Dsp_Unlock call to allow other processes to use the DSP.  If a call to Dsp_Lock returns a "DSP busy" value, the host process should wait before making DSP system calls until a successful Dsp_Lock can take place.  Failure to adhere to these rules will result in unpredictably bad results when communicating with the DSP.  Before making an unlock call, the host application must make sure that its DSP process has restored the IPR (X:$FFFF) and MR to its original state.
+
+DSP Subroutines
+
+The existence of DSP subroutines allow the system to have multiple DSP processes resident at the same time.  This saves the system the time of loading each program into the DSP every time it needs to be used.  These subroutines will stay resident in the DSP until they are either pushed out by other subroutines or they are flushed out by a DSP program wanting more memory.  DSP subroutines are subject to many more constraints and restrictions than are DSP programs.  Subroutine code must be completely relocatable.  When writing subroutine code, instructions should begin at address 0.  When a subroutine is called through a host command, the subroutine can obtain it's starting PC through the host port.  This beginning location which is sent by TOS should be read by the subroutine whether or not it is needed for relocation.  Subroutine size is limited to 1024 DSP words of instructions.  Anything larger would probably be more appropriately executed as a program. The code will be relocated somewhere into external DSP ram.  Care should be taken to make any addresses used in the program (end addresses for do loops for example) relocatable based off of
+
+DSP .2
+
+© 1992, Atari Corporation
+
+--- Page 2, right half ---
+[2 drawing objects, see DSP.DOC.p002.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+the original program counter.  Any initialized data must be declared within the program space in which it is contained.  A block of X and Y memory has been set aside for a subroutines undeclared variable space.  This area is located in the highest 256 DSP words of memory in both the X and Y memory space (X:3f00 - X:3fff).  This area may be used freely by the subroutine but since this area is used by all subroutines, it should not be assumed that the memory will be preserved the next time the subroutine executes.  Host programs must use the Dsp_Lock function before executing a DSP subroutine.  Since DSP subroutines are executed as interrupts through host commands sent from the system, they need to be terminated by an rti after it has completed execution.  The subroutine should not assume any initial state of the DSP since its state is determined by previously executed programs and subroutines and not from a bootstrap.  A typical sequence of calls to execute a subroutine may look like the following.
+
+if(!Dsp_Lock())
+{
+   ability = Dsp_RequestUniqueAbility();
+   handle = Dsp_LoadSubroutine(ptr,size,ability);
+   status = Dsp_RunSubroutine(handle);
+   Dsp_DoBlock(data_in,size_in,data_out,size_out);
+   Dsp_Unlock();
+}
+
+A more efficient way of executing the subroutine would be to first check to see if a subroutine already exists on the DSP that would satisfy the applications requirements.
+
+if(!Dsp_Lock())
+{
+   handle = Dsp_InqSubrAbility(ability);
+   if(handle)
+   {
+      status = Dsp_RunSubroutine(handle);
+      Dsp_DoBlock(data_in,size_in,data_out,size_out);
+      Dsp_Unlock();
+   }
+}
+
+© 1992, Atari Corporation
+
+DSP .3
+
+--- Page 1, left half ---
+[2 drawing objects, see DSP.DOC.p001.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+Program Ability
+
+A program's ( and subroutine's) ability must be reported to the system when loading the DSP process.  This ability is either a pre-defined ability which has been officially registered with Atari or a unique ability which was acquired by a Dsp_RequestUniqueAbility call.  This ability can be used to determine whether the host needs to reload it's DSP process or whether it can use a process which already exists on board the DSP.  The basic concept behind the host interface is that DSP programs and subroutines are not owned by the host application that loaded it.  Once loaded, DSP programs become shared and freely usable by any host application that wants to use it.
+
+DSP .4
+
+© 1992, Atari Corporation
+
+--- Page 3, right half ---
+[1 drawing objects, see DSP.DOC.p003.svg]
+
+DSP  Library Functions
+Data Transfer Routines
+
+
+Dsp_DoBlock(data_in, size_in, data_out,
+            size_out)
+char *data_in;
+long size_in;
+char *data_out;
+long size_out;
+
+Dsp_DoBlock will handle block transfers of data between the host process and the process inside the DSP.  Data pointed to by data_in will  be passed to the DSP until size_in number of DSP words are transferred over (the number of bytes in a DSP word is returned by the Dsp_GetWordSize call).  It is important to note that no handshaking will occur while the routine is feeding the data to the DSP.  It will be assumed that for the purpose of this call, the DSP will be able to accept the data as fast as we can provide it.  The call will wait for the first DSP word to be accepted by the DSP before beginning transfer of the rest of the buffer.  After all of the data has been transferred to the DSP, Dsp_DoBlock will wait until the DSP has finished processing the data and is ready to send it back to the host (when the RXDF bit is set in the ISR register).  At this time, size_out number of DSP words will be read from the DSP and stored into the buffer pointed to by data_out.  Again, no polling of data ready bits will occur before data transfer.  Also, we will read size_out number of words into the data_out buffer whether or not that much data actually exists for transfer from the DSP.  If no data is expected out of the DSP, a zero should be placed in size_out.  Similarly if no input is to be received by the DSP, size_in should be set to zero.
+
+© 1992, Atari Corporation
+
+DSP .5
+
+--- Page 4, left half ---
+[2 drawing objects, see DSP.DOC.p004.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+Dsp_BlkHandShake(data_in, size_in,
+                 data_out, size_out)
+char *data_in;
+long size_in;
+char *data_out;
+long size_out;
+
+This call is identical to Dsp_DoBlock except that handshaking takes place during the transfer of the entire buffer.  This call will be slower than Dsp_DoBlock and should only be used when the routine is expected to send/receive data faster than the DSP process can accept or send it.
+
+
+Dsp_BlkUnpacked(data_in, size_in,
+                data_out, size_out)
+long *data_in;
+long size_in;
+long *data_out;
+long size_out;
+
+Dsp_BlkUnpacked is another block transfer routine which works in a similar manner to Dsp_DoBlock.  This routine will work only for TOS versions which return a value of 4 or smaller for Dsp_GetWordSize.   Data_in and data_out are arrays of 32 bit long words.  Size_in and size_out are the number of longwords in the array and the number of DSP words to transfer.  Data is fetched from the least significant bytes of the longword and sent to the DSP.  Similarly, data obtained from the DSP is placed into the least significant bytes of the size_out buffer.  For example if Dsp_GetWordSize returned 3 (24 bits of DSP data).  The least significant 24 bits of each longword would contain DSP data while the most significant 8 bits would contain  something meaningless.  (Note: These 8 bits are not guaranteed to contain zero.  If the calling routine expects this byte to be cleared, it must mask it off itself).
+
+DSP .6
+
+© 1992, Atari Corporation
+
+--- Page 4, right half ---
+[2 drawing objects, see DSP.DOC.p004.svg]
+
+4/20/92
+
+DSP Library Functions - Data Transfer Routines
+
+Dsp_InStream(data_in, block_size,
+             num_blocks, blocks_done)
+char *data_in;
+long block_size;
+long num_blocks;
+long *blocks_done;
+
+Dsp_InStream will pass data to the DSP from the given buffer via a DSP interrupt handler.  Each time an interrupt occurs telling the routine that the DSP is ready for more data, block_size DSP words will be transmitted to the DSP.  As with the block move function, no handshaking will occur during this process.  This routine will continue servicing interrupts until it has transferred over "num_blocks" number of blocks to the DSP.  At that time the interrupt routine will tell the DSP to stop sending ready to receive interrupts.  Dsp_InStream will update the long value pointed to by blocks_done to let the caller know how many blocks have been transferred over. The calling routine can periodically check this value to see if transmission has been completed.  This routine allows the calling application to begin processing another batch of data as the current batch is being transferred to the DSP.  As the routine's name implies, this call should be used instead of Dsp_DoBlock when a continuous stream of data is to be transmitted into the DSP.  If on the other hand, a single large chunk of data needs to be transferred, it may be more efficient to use Dsp_DoBlock instead.
+
+
+Dsp_OutStream(data_out, block_size,
+              num_blocks, blocks_done)
+char *data_out;
+long block_size;
+long num_blocks;
+long *blocks_done;
+
+Dsp_OutStream will fill the buffer pointed to by data_out via a DSP interrupt handler.  The call is similar to Dsp_InStream above except that data is transferred from the DSP to the buffer at each interrupt.  Again, block_size number of DSP words are transferred at each interrupt until num_blocks
+
+© 1992, Atari Corporation
+
+DSP .7
+
+--- Page 3, left half ---
+[2 drawing objects, see DSP.DOC.p003.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+number of blocks has been transferred over.  At that time, blocks_done will be equal to num_blocks informing the calling process that transmission has stopped.
+
+
+Dsp_IOStream(data_in, data_out,
+             block_insize,
+             block_outsize,
+             num_blocks,
+             blocks_done);
+char *data_in;
+char *data_out;
+long block_insize;
+long block_outsize;
+long num_blocks;
+long *blocks_done;
+
+Dsp_IOStream is a specialized form of the previously documented stream handlers.  This routine makes the important assumption that every time a block of data is ready to be transferred from the DSP to the host,  the DSP will at the same time be ready to accept as input another block of data.  By handling both the input to and output from the DSP in one interrupt handler, the application can save the overhead of servicing a second interrupt.  When Dsp_IOStream is first called, it "primes the pump" by sending the first block of data to the DSP.  It then installs an interrupt handler to service "output is ready" interrupts from the DSP.  From that point on, each time an interrupt occurs, the handler will fetch the block of data from the DSP and also send a new block of data to the DSP.  The variables which are passed into the function are used in a manner similar to the other stream processing functions.  Data_in and data_out represent the input and output buffers.  Block_insize and block_outsize represent the size of blocks  in DSP words to pass into and receive from the DSP.  Num_blocks is the number of blocks to transfer and blocks_done points to the value which keeps track of the number of blocks which have been transferred.
+
+DSP .8
+
+© 1992, Atari Corporation
+
+--- Page 5, right half ---
+[2 drawing objects, see DSP.DOC.p005.svg]
+
+4/20/92
+
+DSP Library Functions - Data Transfer Routines
+
+Dsp_RemoveInterrupts(mask);
+int mask;
+
+Dsp_RemoveInterrupts will stop the DSP from generating ready to receive or ready to send interrupts to the host.  Mask is an 8 bit mask which represents the interrupt to turn off.  1 = No more interrupts when the DSP has data ready for the host; 2 = Don't generate interrupts when the DSP is ready to receive data from the host; 3 = Remove both types of interrupts.  This call should be made if one of the previously described stream calls are made and a less than expected amount of data is passed to or from the DSP thereby not allowing the interrupt routine to terminate.
+
+
+size = Dsp_GetWordSize();
+
+int size;
+
+Dsp_GetWordSize returns the number of bytes which represents a DSP word in the current system.  It is important for the application to use this routine to determine values such as buffer size and block size.  Buffer sizes for all of the data transfer routines should be modulo the size returned by this function.   The value returned by this routine may change in future versions of hardware.
+
+© 1992, Atari Corporation
+
+DSP .9
+
+--- Page 6, left half ---
+[2 drawing objects, see DSP.DOC.p006.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+Program Control Routines
+
+
+state = Dsp_Lock()
+
+Dsp_Lock should be called before making any other calls to the DSP Library.  The call is intended to provide a way for host applications to tell whether or not the DSP is currently in use.  A value of -1 returned by this function informs the calling application that a call to Dsp_Lock has already been made by another process.  A return value of 0 means that the DSP is available and that you are free to make other DSP calls.  The DSP will stay locked until a call to Dsp_Unlock is made.
+
+
+Dsp_Unlock()
+
+Dsp_Unlock should be used in conjunction with the Dsp_Lock call described above.  A call to this routine tells the system that  you are through with the DSP and that it is safe to allow someone else to begin using it.
+
+
+Dsp_Available(xavailable, yavailable)
+long *xavailable;
+long *yavailable;
+
+Dsp_Available returns to the calling process the amount of memory which is available to use in the DSP ( See previous discussion on DSP memory map).  Upon return from this call,  the longword pointed to by xavailable will contain the amount of free X memory space left in the DSP and yavailable will contain the same for Y memory space.  Free memory for both X and Y will always begin at physical location 0.    Remember that since Program space overlays both X and Y space, the low 64 words of Y memory are used for interrupt vectors.
+
+DSP .10
+
+© 1992, Atari Corporation
+
+--- Page 6, right half ---
+[2 drawing objects, see DSP.DOC.p006.svg]
+
+5/1/92
+
+DSP Library Functions - Program Control Routines
+
+Dsp_Reserve(xreserve, yreserve)
+int xreserve;
+int yreserve;
+
+Dsp_Reserve sets aside DSP memory for a DSP program.  The amount of requested memory should not exceed the amount given by the Dsp_Available call.  This function must be called to insure that your DSP process is not overwritten by a DSP subroutine which may be installed in the same area.  The memory area which is set aside will be preserved until another Dsp_Reserve call is made.  This will allow other processes to use the DSP program residing in this reserved space.  Xreserve is the amount of X memory space that is requested and Yreserve represents the same thing in Y memory space.  A 0 return value indicates that the memory was successfully reserved.  A -1 indicates an error in reserving the requested memory.
+
+
+status = Dsp_LoadProg(file,ability)
+char *file;
+int ability;
+int status;
+
+Dsp_LoadProg will load from disk a program to be executed in the DSP.  The program must be in the ascii ".lod" format and cannot exceed the amount of space reserved by the Dsp_Reserve command.  File should point to the name of the program file to be loaded into the DSP.  Ability represents the 16 bit code which describes the funcionality of the given program.  The DSP program cannot contain initialized x and y internal RAM space.  The loader will handle initialized p space as well as initialized external x and y.  A 0 return value indicates a successful launch.  A return value of -1 indicates an error occurred before the file could be executed.
+
+© 1992, Atari Corporation
+
+DSP .11
+
+--- Page 5, left half ---
+[2 drawing objects, see DSP.DOC.p005.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+Dsp_ExecProg(codeptr,codesize,ability)
+char *codeptr;
+long codesize;
+int ability;
+
+Dsp_ExecProg executes a DSP program which resides in binary format in memory.  This function is much faster than Dsp_LoadProg since it doesn't need to read the file into memory and convert it from ascii to binary format.  Codeptr should point to a block of binary dsp code.  Codesize number of DSP words will be transferred from this location and downloaded into the DSP.  The ability parameter specifies the programs functional ability.  Codesize should not exceed the amount of memory reserved by the Dsp_Reserve call.
+
+
+Dsp_ExecBoot(codeptr, codesize, ability)
+char *codeptr;
+long codesize;
+int ability;
+
+Dsp_ExecBoot will download into the 512 words of internal DSP memory a bootstrap program.  A reset will be performed on the DSP before the program is loaded.  This program can either run as a program or be used to load a larger DSP program.  Note that this call currently exists for developmental test purposes only.  Only debuggers or similar programs wanting to take over the entire DSP system should use this call.  Applications should use Dsp_LoadProg and Dsp_ExecProg instead.  Codeptr should point to a block of binary DSP code.  Codesize number of DSP Words will be transferred from this location and downloaded into the DSP (See function Dsp_GetWordSize for a description of a DSP word).  Only the first 512 DSP words of code will be downloaded.
+
+DSP .12
+
+© 1992, Atari Corporation
+
+--- Page 7, right half ---
+[2 drawing objects, see DSP.DOC.p007.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+size = Dsp_LodToBinary(file, codeptr)
+char *file;
+char *ptr;
+
+Dsp_LodToBinary reads in the ".lod" file whose file name is given in the variable file.  The function will then convert the file into binary form ready to sent to the Dsp_ExecBoot or the Dsp_ExecProg function.  Codeptr should point to a block of memory which is large enough for the routine to place the binary code data. The function will return the size of the program in DSP words.  A negative size means that an error occurred during the conversion process.
+
+
+Dsp_TriggerHC(vector);
+int vector;
+
+Dsp_TriggerHC will cause a host command which is set aside for DSP programs to be executed.  Only two HC vectors are available to use by DSP programs.  Vectors $13 and $14.   All other Host vectors are used by the system and by DSP subroutines.   Note that when a program is loaded for execution, the vector table is overlayed with the system's vector table.  All other vectors except $13 and $14 will be overwritten by the system.
+
+
+ability = Dsp_RequestUniqueAbility();
+
+int ability;
+
+Dsp_RequestUniqueAbility provides a way for host processes to uniquely identify their own DSP process which does not fall under a known ability definition.  Upon return, the system will pass back an ability identifier which is unique to the current system session.  Using this value in calls such as Dsp_InqSubrAbility will allow the host process to check to see if your code is still resident in the DSP making it unnecessary to load it back in.
+
+© 1992, Atari Corporation
+
+DSP .13
+
+--- Page 8, left half ---
+[2 drawing objects, see DSP.DOC.p008.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+ability = Dsp_GetProgAbility()
+
+int ability;
+
+Dsp_GetProgAbility will return to the calling process the ability of the program currently residing in the DSP.  This ability value can then be used to determine if another DSP program needs to be downloaded into the DSP or if the current DSP program will do the required job.
+
+
+Dsp_FlushSubroutines()
+
+Dsp_FlushSubroutines can be called if the host process needs more DSP memory than what is returned by Dsp_Available.  When this call is made, all DSP subroutines currently residing in the DSP will be removed and the memory will be returned back to the pool of usable program memory.  Dsp_Available may then be called again to find out how much memory was returned to the system.  Programs should make an effort to get by with the memory left in the system without making this call whenever possible.  Overall system performance can be greatly enhanced if frequently called DSP code can be left in the DSP instead of having to repeatedly download them.
+
+
+handle = Dsp_LoadSubroutine(ptr, size,
+                            ability);
+char *ptr;
+long size;
+int ability;
+
+Dsp_LoadSubroutine will install a DSP subroutine into the system to be executed at a later time.  Ptr must point to a block of DSP subroutine code.  This code must meet the "DSP subroutine" requirements as explained in an earlier section of this document.  The size of this subroutine as well as its ability are reported in the remaining 2 variables.  Dsp_LoadSubroutine will return a positive handle if the subroutine was installed without problems.  A zero handle will be returned if the system was not able to install the
+
+DSP .14
+
+© 1992, Atari Corporation
+
+--- Page 8, right half ---
+[2 drawing objects, see DSP.DOC.p008.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+subroutine.  The subroutine will remain resident in the DSP until all of the subroutine slots have been filled and it is replaced by another subroutine.  It may also be removed if a process makes a Dsp_FlushSubroutine call.
+
+
+handle = Dsp_InqSubrAbility(ability);
+int ability;
+
+int handle;
+
+Dsp_InqSubrAbility will return the handle of an installed subroutine if the subroutine's ability matches the ability passed into the routine.  By finding a subroutine which already exists on the DSP (whether or not the process is the one that installed it) the calling process will save the time taken to download it to the DSP.  If the system does not find a DSP subroutine whose ability matches the requested one, a zero handle will be returned.  In that case it would be necessary for the calling process to use the Dsp_LoadSubroutine call to install their own subroutine.
+
+
+status = Dsp_RunSubroutine(handle);
+int handle;
+
+Dsp_RunSubroutine will execute a DSP resident subroutine identified by the given handle.  Before this call can be made the subroutine must be identified through either a Dsp_InqSubrAbility call or a Dsp_LoadSubroutine call.  The status which is returned from the call lets the calling process know if the DSP subroutine was properly launched.  A negative status reports that an error occurred and that the process was not launched.  A zero return value represents a successful launch.
+
+© 1992, Atari Corporation
+
+DSP .15
+
+--- Page 7, left half ---
+[2 drawing objects, see DSP.DOC.p007.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+hf0_ret = Dsp_Hf0(flag)
+int flag;
+
+int hf0_ret;
+
+Dsp_Hf0 will read from or write to bit #3 of the HSR.  If flag is either a zero or a one, the value of flag will be written into the HSR bit.  If flag contains a 0xffff, the routine will return into hf0_ret the value of bit #3 in the HSR (either 0  if cleared, 1 if set) without changing its value.
+
+
+hf1_ret = Dsp_Hf1(flag)
+int flag;
+
+int hf1_ret;
+
+Identical to Dsp_Hf0 except sets/checks bits for bit #4 of the HSR.
+
+
+hf2_ret = Dsp_Hf2()
+
+int hf2_ret;
+
+Returns the value of bit #3 in the HCR.  Note that this bit can only be read by the host and cannot be set.
+
+
+hf3_ret = Dsp_Hf3()
+
+int hf3_ret;
+
+Similar to Dsp_Hf2 except returns value of bit #4 of the HCR.
+
+DSP .16
+
+© 1992, Atari Corporation
+
+--- Page 9, left half ---
+[2 drawing objects, see DSP.DOC.p009.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .20
+
+© 1992, Atari Corporation
+
+--- Page 9, right half ---
+[2 drawing objects, see DSP.DOC.p009.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .17
+
+--- Page 10, left half ---
+[2 drawing objects, see DSP.DOC.p010.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .18
+
+© 1992, Atari Corporation
+
+--- Page 10, right half ---
+[2 drawing objects, see DSP.DOC.p010.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .19
+
+--- Page 11, left half ---
+[2 drawing objects, see DSP.DOC.p011.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .2
+
+© 1992, Atari Corporation
+
+--- Page 11, right half ---
+[2 drawing objects, see DSP.DOC.p011.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .3
+
+--- Page 12, left half ---
+[2 drawing objects, see DSP.DOC.p012.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .2
+
+© 1992, Atari Corporation
+
+--- Page 12, right half ---
+[2 drawing objects, see DSP.DOC.p012.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .3

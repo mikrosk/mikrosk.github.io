@@ -1,0 +1,717 @@
+[PageStream 2 document F0302.2: 8.50 x 11.00 in, 347 objects]
+
+--- Page 17 ---
+
+2.1.5.8 BLITTER
+
+The BLITTER contained inside the COMBO IC is a graphics coprocessor designed to handle the extra burden of graphics video generation on the microprocessor. This section performs bit aligned block transfers required in graphics generation, which adds to the capabilities of the microprocessor. The BLITTER section also contains a barrel shifter.
+
+
+2.1.5.9 Light Gun Circuitry
+
+The light gun causes a pulse on the XPEN signal which is used in the COMBO IC to latch the current values of the horizontal and vertical counters. This value can then be read by the microprocessor to determine the raster position of the light gun.
+
+2.1.5.10 COMBO IC Pin List and Signal Description
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+1
+
+BMODE
+
+Input
+
+The BMODE pin is used to indicate to the COMBEL IC whether the current bus master is a 68030 or 68000 type device. When a 68030 type device is the bus master the BMODE pin will be pulled low. The BMODE pin is normally pulled high, indicating 68000 type bus masters.
+
+95,90,82, 68,65,63, 29,24,17, 15,12,7, 188,185, 178,177, 170,162, 143,135, 128,126, 121
+
+A1-A23
+
+I/O
+
+This 23 bit bus is used for address. For MCU it is used only as an input address bus. For Blitter it is used as input address bus when it is a bus  slave or as output address bus when it is a bus master.
+
+122,127, 134,142, 176,169, 184,187, 11,15,23, 25,64,69, 91,94
+
+D0-D15
+
+I/O
+
+This 16 bit bus is used for data.
+
+186
+
+AS-
+
+I/O
+
+Address strobe indicates that there is a valid address on the address bus. For MCU it is an input. For Blitter it is an input when it is a bus slave or an output when it is a bus master.
+
+171
+
+UDS-
+
+I/O
+
+Upper data strobe controls the flow of data on the data bus together with LDS- and R/(W)-. For MCU it is an input. For Blitter it is an input when it is a bus slave or an output when it is a bus master.
+
+--- Page 18 ---
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+179
+
+LDS-
+
+I/O
+
+Lower data strobe controls the flow of data on the data bus together with UDS- and R/(W)-. For MCU it is an input. For Blitter it is an input when it is a bus slave or an output when it is a bus master.
+
+129
+
+R/(W)-
+
+I/O
+
+Read/Write defines the data transfer as read when high or write when low. It also controls
+the flow of data on the data bus together with LDS- and UDS-. For MCU it is an input. For Blitter it is an input when it is a bus slave or an output when it is a bus master.
+
+119
+
+DTACK-
+
+Output
+
+Data transfer acknowledge indicates to the CPU or the current bus master that the data transfer is complete.
+
+116
+
+BR-
+
+Output
+
+Bus Request is an open drain output used to request control on the system bus. Other bus masters can also pull this line low to request control on the system bus.
+
+124
+
+BGI-
+
+Input
+
+Bus Grant is the bus grant input from the CPU in response to bus request.
+
+198
+
+BGACK-
+
+Output
+
+Bus grant acknowledge is sent to the CPU in response to the bus grant. While the Blitter is the bus master BGACK is active.
+
+173,172, 166
+
+IPL0-
+IPL1-
+IPL2-
+
+Output
+
+Interrupt priority outputs to the CPU. The COMBO encodes these lines with the proper interrupt priority code.
+
+42
+
+BERR-
+
+Output
+
+Bus Error indicates to the CPU that the current bus cycle did not terminated in the required timeout, or an address that is not in the correct I/O space was issued. Any other bus master can also pull this line low to indicate a bus error situation.
+
+190
+
+VPA-
+
+Output
+
+Valid peripheral address is output to the CPU and used to control the ACIA devices.
+
+6
+
+VMA-
+
+Input
+
+Valid memory address input from CPU. Used to control the ACIA devices.
+
+141,133,123
+
+FC0
+FC1
+FC2
+
+I/O
+
+Function codes are inputs for MCU. They are inputs for Blitter when it is a bus slave. They are outputs from Blitter when it is a bus master.
+
+20
+
+CLK
+
+Input
+
+Clock is a 32Mhz internal clock from FALCON030 motherboard.
+
+150
+
+TOK
+
+Input
+
+Keyboard transmit OK holds a transmitted character to keyboard until TOK turns HI.
+
+139
+
+TXD
+
+Input
+
+Input to COMBO of data transmitted to keyboard.
+
+--- Page 19 ---
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+151
+
+MFPINT-
+
+Input
+
+MFP interrupt input.
+
+202,175, 174,72
+
+EINT1
+EINT3
+EINT5
+EINT7
+
+Input
+
+External interrupt inputs.
+
+112
+
+BINT-
+
+Output
+
+Not Connected.
+
+19
+
+EVEN_ODD
+
+Input
+
+Even/odd frame input from video shifter. 1=ODD, 0=EVEN.
+
+138,125, 73,
+
+PAD0X-
+PAD1X-
+PAD0Y-
+PAD1Y-
+
+Input
+
+Paddle active low inputs.
+
+191
+
+CPUCLK
+
+Output
+
+16Mhz output clock to CPU and other I/O's.
+
+193,192
+
+CLK4
+CLK8
+
+Output
+
+4Mhz and 8Mhz output clocks.
+
+163
+
+KHZ500
+
+Output
+
+500Khz output clock.
+
+197
+
+MFPCS-
+
+Output
+
+MFP chip select.
+
+199
+
+ ROM2-
+
+Output
+
+Socketed ROM chip select.
+
+200,201
+
+ROM3-
+ROM4-
+
+Output
+
+Cartridge ROM chip select.
+
+8
+
+SNDCS
+
+Output
+
+Chip select for PSG.
+
+9
+
+SNDIR
+
+Output
+
+Direction control for PSG chip.
+
+71
+
+ VCS
+
+Output
+
+Video chip select.
+
+30
+
+ VLD
+
+Output
+
+Active output to strobe DRAM data into shifter INPUT BUFFER.
+
+33
+
+HINT-
+
+Input
+
+Horizontal interrupt from video chip.
+
+34
+
+VINT-
+
+Input
+
+Vertical interrupt from video chip.
+
+60
+
+VREQ
+
+Input
+
+Video request signal.
+
+31
+
+IACK-
+
+Output
+
+Interrupt acknowledge to CPU.
+
+32
+
+N6850
+
+Output
+
+ACIA 6850 chip select.
+
+44
+
+ RDAT-
+
+Output
+
+Read DRAM control line to video chip.
+
+45
+
+WDAT-
+
+Output
+
+Write DRAM control line to video chip.
+
+136
+
+PADRST-
+
+Output
+
+Paddle reset.
+
+137
+
+BUTTON-
+
+Output
+
+Fire buttons read enable.
+
+147,148
+
+JOYRH-
+JOYRL-
+
+Output
+
+Joysticks read enable lines.
+
+140,146
+
+JOYWE-
+JOYWL-
+
+Output
+
+Joysticks write enable lines.
+
+36
+
+IDEIOW-
+
+Output
+
+IDE I/O Write signal.
+
+35
+
+IDEIOR-
+
+Output
+
+IDE I/O Read signal.
+
+37,38
+
+IDECS0
+IDECS1
+
+Output
+
+IDE chip select.
+
+59
+
+RESET-
+
+Input
+
+Reset input from CPU.
+
+--- Page 20 ---
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+43
+
+R8006-
+
+Output
+
+Control line to enable reading I/O address FF8006.
+
+113
+
+FPUCS-
+
+Output
+
+FPU Chip Select.
+
+120,114, 97,96,84, 77,61,39, 10,189, 149
+
+MAD0-10
+
+Output
+
+DRAM address bus.
+
+46
+
+WE-
+
+Output
+
+DRAM write enable.
+
+18,21
+
+RAS0-
+RAS1-
+
+Output
+
+DRAM row address select lines.
+
+22,62
+
+CAS0H-
+CAS1H-
+
+Output
+
+DRAM CAS HIGH select lines.
+
+70,83
+
+CAS0L-
+CAS1L-
+
+Output
+
+DRAM CAS LOW select lines.
+
+74
+
+RAMH
+
+Output
+
+Address select control to the VIDEO SHIFTER  to select the low or high DRAM word in 16 bit video bus. 0 - select the low word.
+
+75
+
+RTCCS-
+
+Output
+
+Real-time clock chip select.
+
+76
+
+RTCAS-
+
+Output
+
+Real-time clock address strobe.
+
+85
+
+RTCDS-
+
+Output
+
+Real-time clock data strobe.
+
+89
+
+SCCAB
+
+Output
+
+SCC Channel select.
+
+165
+
+SCCRD-
+
+Output
+
+SCC read signal.
+
+164
+
+SCCWR-
+
+Output
+
+SCC write signal.
+
+88
+
+SCCIACK-
+
+Output
+
+SCC interrupt acknowledge.
+
+87
+
+SCCWAIT-
+
+Input
+
+Active low input pin to support SCC.
+
+115
+
+BGO
+
+Output
+
+BGO used for arbitration daisy chaining.
+
+86
+
+TEST
+
+Input
+
+Test pin.
+
+163
+
+KHZ500W
+
+Output
+
+Switched 500 KHz clock used for controlling 6850 that transmits keyboard data.
+
+96
+
+POR
+
+Input
+
+Power on reset.
+
+99
+
+TEST2
+
+Input
+
+Test 2 pin.
+
+VDD
+
+Input
+
+Five power lines. Connected to 5V.
+
+GND
+
+Input
+
+Five ground lines.
+
+2.1.6 DMA Support
+
+The FALCON030 system contains a DMA controller which provides three channels of DMA for the computer. The ACSI DMA channel from the ST product line is fully contained and has been modified slightly to accommodate a 5380 SCSI controller as well as the AJAX FDC. A record and playback DMA channel for digital sound data are also contained in this chip. The playback channel is compatible with the existing eight bit stereo and mono modes from the STE and TT products and has sixteen bit stereo added. For audio DMA to take place, the memory controller inside the SDMA IC is programmed with the starting and ending address of the RAM buffer.
+
+--- Page 21 ---
+
+The DMA controller is set up to select the source and the number of 512 byte blocks to transfer, and then the FDC or external peripheral is given the command to send or receive data. The entire block of data is then transferred to or from memory without intervention by the CPU. The FDC or peripheral generally asserts its interrupt line to signal the completion of the transfer (and the availability of status information).
+
+2.1.6.1 DMA Pin and Signal List
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+138,139, 140
+
+FC0-FC2
+
+I/O
+
+68030 bus function code. These lines are normally inputs. They become outputs during DMA when the 68030 bus is granted. Only values of 5 and 6 (supervisor program and data) will allow I/O access. A value of 5 is output during DMA.
+
+30,28,27, 26,25,24, 22,21,20, 18,17,15, 14,13,12, 11,10,8,7,6,5,4,3
+
+A1-A23
+
+I/O
+
+68030 bus address. These lines are normally inputs. They become outputs during DMA                    when the 68030 bus is granted. They are used to select registers during I/O and to address memory during DMA.
+
+136,135, 134,132, 131,130, 129,128, 126,124, 123,122, 121,119, 118,117
+
+D0-D15
+
+I/O
+
+68030 bus data. These lines are inputs for I/O writes and DMA reads and outputs for I/O reads and DMA writes. They are used for data transfer between the chip and the 68030 bus.
+
+36
+
+AS-
+
+I/O
+
+68030 bus address strobe. This line is an input during I/O and an output during DMA. It is used to qualify the value on the address bus.
+
+35
+
+LDS-
+
+I/O
+
+68030 bus lower data strobe. This line is an input during I/O and an output during DMA. It is used to qualify the data on data lines D0-D7.
+
+34
+
+UDS-
+
+I/O
+
+68030 bus upper data strobe. This line is an input during I/O and an output during DMA. It is used to qualify the data on data line D8-D15.
+
+33
+
+R/W
+
+I/O
+
+68030 bus read write. This line is an input during I/O and indicates a read of the chip when high and a write to the chip when low. This line is an output during DMA and indicates a read of the bus when high and a write to the bus when low.

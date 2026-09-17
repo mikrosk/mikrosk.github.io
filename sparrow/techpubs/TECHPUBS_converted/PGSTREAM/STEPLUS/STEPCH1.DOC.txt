@@ -1,0 +1,77 @@
+[PageStream 2 document STEPCH1.DOC: 8.50 x 11.00 in, 2 objects, facing pages]
+
+--- Page 1 ---
+
+SECTION ONE
+INTRODUCTION
+1.0 Overview
+
+The STe+ is an enhancement of the Atari STe series of 68000-based computers.  It is upwardly compatible with the Atari STe and includes a number of new features, including a DOS compatible hardware AT emulator using an 80286 microprocessor, an internal hard drive, and high density 3.5" floppy diskette. The STe+ is designed as an integrated unit with keyboard, processor, memory, and I/O control in one package. The STe+ has 2 or 4 megabytes (2,097,136 or 4,194,272 bytes ) of RAM. The STe+ also comes with a modulator for TV output and power supply integrated into the case.
+
+1.1 System Features
+
+Motorola MC68000 microprocessor running at 8MHz
+80286 microprocessor providing a DOS-compatible AT equivalent system interface.
+2 socketed ROMs, providing 256K of ROM space
+2 to 4 MBytes of system RAM
+Atari ACSI DMA channel (for Atari Hard Disk, Laser Printer, CD-ROM, etc)
+One low speed asynchronous serial I/O port using a 68901 MFP
+Parallel I/O Port, implemented using one of the parallel ports on the sound chip
+ST compatible intelligent keyboard with mouse
+Internal video modes that are compatible with those in the Atari ST series
+Musical subsystem with Programmable Sound Generator, DMA Sound and Musical Instrument Digital Interface (MIDI)
+3.5" Floppy Disk Controller and interface providing 360KB, 720KB and 1.44MB densities sharing the ACSI DMA channel
+2.5" IDE Hard Drive and interface providing 20MB and 30MB densities.
+
+1.2 Case Design
+
+
+The STe and STe+ are nearly identical. The upper case has openings for the keyboard and a lens for both the power indicator LED (front left corner) and the Disk Drive Activity LED (mid right side). (see Fig. 1)
+
+1.2.1 STe+ Upper Case
+
+1.2.2 STe+ Left Side Panel
+
+The left side panels of both machines have slots for the expansion cartridge, two MIDI ports. (see Fig. 2)
+
+Figure 1-2
+
+The right side panel has a slot for the floppy disk drive. (see Fig. 1-3)
+
+STe+ Right Side Panel
+
+Figure 1-4
+
+The STe+ back panel contains (left to right) the modem (RS-232) connector, printer connector, hard disk/DMA connector, external floppy disk connector, television output,
+
+--- Page 2 ---
+
+monitor connector, power switch, stereo output (right and left), AC power input, and reset button. (see Fig. 1-4)
+
+STe+ Back Panel
+
+Figure 1-5
+
+1.3 Power Supply
+
+<T>The STe+ has an integral switching power supply providing +5V and +12V. There is a 2A fuse. Voltage should be adjusted to 5.1V. The power supply has overcurrent protection; if the fuse is blown, a catastrophic failure is likely, such as shorted primary.
+
+ 1.3.1 Power Supply Rating
+
+
+Current out:<T><T>4.0A at +5V, 0.9A at +12V
+Max. power in:<T>30.8W
+
+Typical (in system) Demand:
+
+Typical current:<T><T>1.75A at 5V, 86 mA at +12V
+Max. current:<T><T>2.2A at +5V, 90 mA at +12 (during disk access)
+
+
+ 1.4   Negative Supplies
+
+<T>The STe+ motherboard contains two small switching voltage regulators (the TL497 or equivalent) that are used to provide additional voltages.
+
+<T>U204 is used to generate the positive and negative voltages for the RS232C line drivers. These voltages are normally 12 VDC.
+
+<T>U205 is used to generate a -5 VDC supply for the audio subsection. This output is heavily filtered to reduce the switching noise that might otherwise appear in the audio output.

@@ -1,0 +1,39 @@
+DXF drawing: DYNACADD/PARTS/DXF/LAN.DXF
+Render: LAN.DXF.svg
+
+== Summary ==
+File:        5208 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font ROMAND
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (4.5198, 5.3739) - (6.2439, 6.7662)
+             rendered (4.5011, 5.3972) - (6.243, 6.7206), size 1.7418 x 1.3234
+Limits:      (0, 0) - (12, 12)
+Units:       not stored in this DXF version
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: ROMAND (font ROMAND)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  10            7  CONTINUOUS    on            19
+  unused: 1, 2, 3, 4, 5, 6, 7, 8, 9
+Entities:    model space: POLYLINE 9 (18 vertices), TEXT 6, LINE 3, SOLID 1
+Blocks:      0 defined
+Notes:
+  - 9 polylines with constant width drawn as thick strokes
+
+== Text in reading order (6 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (6 items) --
+  3  |  1
+  6  |  4
+  8  |  7
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE   TEXT
+4.5011  6.2099    0.1308      0  left      10     ROMAND  3
+6.1082  6.2057    0.1308      0  left      10     ROMAND  1
+ 4.504  5.9088    0.1308      0  left      10     ROMAND  6
+6.1318   5.911    0.1308      0  left      10     ROMAND  4
+4.7513  5.3972    0.1308      0  left      10     ROMAND  8
+5.8816  5.4126    0.1308      0  left      10     ROMAND  7

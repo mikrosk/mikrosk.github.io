@@ -1,0 +1,57 @@
+File: EASYDRAW/SUNNYVAL/MIDI.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-3230,-4300)-(3332,-430)
+Page size: 203.2 x 254.0 mm
+Coordinate window: lower-left (-3640,4550), upper-right (3640,-4550); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-3230,-4222.67)-(3250,-569.67)
+Items: 159 (1400 words)
+Objects: polyline 1, bar 1, ellipse 6, elliptical arc 6, justified text 33
+Other records (escapes, application data): write_meta 10 x2, write_meta 150 x1, write_meta 151 x2, write_meta 152 x13, write_meta 153 x13, write_meta 154 x30, write_meta 158 x1, write_meta 160 x1, write_meta 80 x7, write_meta 81 x7
+Text strings: 33
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+  -3230   -3980  [font 7 24pt]  MIDI PORT
+
+  -3210   -3410  [font 7 12pt]  DIN 5 Female
+
+  -3010   -1720  [font 7 12pt]  Pin
+  -3010   -1240  [font 7 12pt]  1
+  -3010   -1080  [font 7 12pt]  2 
+  -3010    -920  [font 7 12pt]  3
+  -3010    -760  [font 7 12pt]  4
+  -3010    -600  [font 7 12pt]  5
+
+  -2370   -1720  [font 7 12pt]  Signal
+  -2370   -1240  [font 7 12pt]  Thru Transmit
+  -2370   -1080  [font 7 12pt]  Ground
+  -2370    -920  [font 7 12pt]  Thru Loop Return
+  -2370    -760  [font 7 12pt]  Out Transmit
+  -2370    -600  [font 7 12pt]  Out Loop Return
+
+   -100   -1730  [font 7 12pt]  Pin
+   -100   -1250  [font 7 12pt]  1
+   -100   -1090  [font 7 12pt]  2 
+   -100    -930  [font 7 12pt]  3
+   -100    -770  [font 7 12pt]  4
+   -100    -610  [font 7 12pt]  5
+
+    260   -1730  [font 7 12pt]  Signal
+    260   -1250  [font 7 12pt]  No Connect
+    260   -1090  [font 7 12pt]  No Connect
+    260    -930  [font 7 12pt]  No Connect
+    260    -770  [font 7 12pt]  In Receive
+    260    -610  [font 7 12pt]  In Loop Return
+
+  -3010   -2030  [font 7 12pt]  MIDI OUT/THRU
+
+    -90   -2020  [font 7 12pt]  MIDI IN
+
+   3130   -3180  [font 7 12pt]   1
+
+   2940   -2760  [font 7 12pt]   4
+
+   2270   -2340  [font 7 12pt]   2
+
+   1610   -2750  [font 7 12pt]   5
+
+   1440   -3170  [font 7 12pt]   3

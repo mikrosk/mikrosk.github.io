@@ -1,0 +1,50 @@
+* Test user interrupt 
+* Designer: Tom Le
+* Atari Micro Electronic
+* Date: 2-7-1992
+
+	.text
+eint6:				;
+        move.w  #$6789,intword
+	bsr	clear_io
+	rte
+
+eint6sp:		;for spurious int
+	lea	spurina0,a5
+	bsr	dspmsg
+	bsr	clear_io
+	rte
+
+testint6:
+	move.b  #int6,intlev
+	bsr	loadvect
+	move.l  $60,spurisave		;
+	move.l  #eint6sp,$60
+	move.l  intvect,intsave0	;save the OP int routine
+	move.l  #eint6,intvect  	;
+	move.l  #10,d2		;setup a sw timer
+	clr.w   intword	        ;
+	bsr	set_io		;gen int
+
+testint6a:
+	move.w  intword,d0
+	cmp.w   #$6789,d0
+	beq     testint6p	
+	sub.l   #1,d2
+	bne    testint6a
+	bsr	clear_io
+.if TOS=0       
+        move    #red,palette
+.endif
+	lea     int6msg1,a5
+	bsr	dspmsg
+	bset    #eint6f,flag
+
+testint6r:
+	move.l  intsave0,intvect	;restore int
+	move.l  spurisave,$60		;
+	btst    #eint6f,flag
+        rts
+
+testint6p:
+	bra	testint6r

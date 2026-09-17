@@ -1,0 +1,64 @@
+[PageStream 2 document TT300007.DOC: 8.50 x 11.00 in, 2 objects]
+
+--- Page 1 ---
+
+Atari Technical Bulletin
+Number: TT30-0007
+Date: June 30, 1992
+Page 1 of 2
+
+
+Product(s) Affected:	TT030
+Model:				All
+Type of ATB:			As Needed
+ECO #: 				1369
+
+Reason for ATB:
+
+To revise the VME circuit to run VME Matrix board and to meet specifications.
+
+Notes:
+
+This change affects the REV B.1 and REV D main logic cards of the TT030. All rework must be done on the component side of the PCB. Keep all wires as short as possible.
+
+Symptoms of Problem:
+
+VME Matrix board and some other VME cards do not run in the TT030.
+
+Solution:
+
+The TT030 main PCB must be reworked in order to fix the problem. The following rework instructions pertain to the REV B.1 and REV D main PCBs.
+
+1. Remove the 74ALS30 at position U711 and replace it with a 7430 part numer C101609-030. Be sure not to solder pin 8 in place.
+
+2. Remove the 74LS244 at position U705 and replace it with a 74F244 part number C300258-244.
+
+3. Cut pin 6 of IC U701.
+
+4. Run a wire from pin 1 of U704 to Pin 11 of U702.
+
+5. Prepare pins 17, 18, and 19 of U703 for soldering in the next three steps. Cut pins 17, 18, and 19 of U703 leaving about 1/32" of lead.
+
+6. Run a wire from U703 pin 17 to U705 pin 13.
+
+7. Run a wire from U703 pin 18 to U705 pin 17.
+
+8. Run a wire from U703 pin 19 to U705 pin 15.
+
+9. Run a wire from U705 pin 3 to U701 pin 12.
+
+--- Page 2 ---
+
+Atari Technical Bulletin
+Number: TT30-0007
+Date: June 30, 1992
+Page 2 of 2
+
+
+10. Run a wire from U705 pin 5 to U702 pin 13.
+
+11. Run a wire from U705 pin 7 to U702 pin 14.
+
+12. Prepare U711 pin 8 for soldering in the next step. Cut pin 8 of U711 leaving 1/32" of lead.
+
+13. Add a resistor, R702 47 Ohms part number 14-5470/A, between U711 pin 8 and the solder pad for U711 pin 8.

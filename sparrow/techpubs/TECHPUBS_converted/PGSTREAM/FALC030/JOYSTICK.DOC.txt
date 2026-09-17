@@ -1,0 +1,362 @@
+[PageStream 2 document JOYSTICK.DOC: 11.00 x 8.50 in, 427 objects, booklet layout: two page halves per sheet, halves listed in text flow order]
+
+--- Page 1, right half ---
+[1 drawing objects, see JOYSTICK.DOC.p001.svg]
+
+Joystick/Keypad Matrix
+
+
+The memory map that follows defines the joystick/keypad matrix.  All of these inputs are read by scanning.  You start the process by writing to FF9202 with the appropriate bit set low (all others set high).  Then FF9200 and FF9202 are read to see if any bits are low.  The button(s) pressed are read off of the matrix.  As an example, FE is written to FF9202 and then FF9202 is read.  Any low bits in FF9202 correspond to the first column in the table.  Only controller 0 is treated in the table but the matrix for controller 1 is the same.  Note that in the following, "ro" means when read and "wo" means when written.
+
+FF9200  ---- ---- ---- xxxx  ro  BUTTON  (Button inputs)
+  bit 0      controller 0 pin 6            Pause
+  bit 1      controller 0 pin 10             	F0	F1	F2	Option
+  bit 2      controller 1 pin 6
+  bit 3      controller 1 pin 10
+FF9202  ---- ---- xxxx xxxx  wo  JOY  (Joystick outputs)
+  bit 0      controller 0 pin 4  ------------ X
+  bit 1      controller 0 pin 3  --------------------- X
+  bit 2      controller 0 pin 2  ------------------------------ X
+  bit 3      controller 0 pin 1  ------------------------------------------ X
+  bit 4      controller 1 pin 1
+  bit 5      controller 1 pin 2
+  bit 6      controller 1 pin 3
+  bit 7      controller 1 pin 4
+FF9202  xxxx xxxx ---- ----  ro  JOY  (Joystick inputs)
+  bit 0      controller 0 pin 4
+  bit 1      controller 0 pin 3
+  bit 2      controller 0 pin 2
+  bit 3      controller 0 pin 1
+  bit 4      controller 1 pin 1
+  bit 5      controller 1 pin 2
+  bit 6      controller 1 pin 3
+  bit 7      controller 1 pin 4
+  bit 8      controller 0 pin 14	 U	 *	  0	     #
+  bit 9      controller 0 pin 13	 D	 7	  8	     9
+  bit 10    controller 0 pin 12	 L	 4	  5	     6
+  bit 11    controller 0 pin 11	 R	 1	  2	     3
+  bit 12    controller 1 pin 14
+  bit 13    controller 1 pin 13
+  bit 14    controller 1 pin 12
+  bit 15    controller 1 pin 11
+
+© 1992, Atari Corporation
+
+Joystick .1
+
+--- Page 1, left half ---
+[2 drawing objects, see JOYSTICK.DOC.p001.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .4
+
+© 1992, Atari Corporation
+
+--- Page 2, left half ---
+[232 drawing objects, see JOYSTICK.DOC.p002.svg]
+
+Joystick/Keypad Matrix
+
+4/20/92
+
+Controllers
+
+Joysticks
+
+FF9200
+
+FF9202
+
+Paddles
+
+FF9210
+
+(X Paddle 0)
+
+FF9212
+
+(Y Paddle 0)
+
+FF9214
+
+(X Paddle 1)
+
+FF9216
+
+(Y Paddle 1)
+
+One pair of paddles can be plugged into Joystick 0 (Paddle 0).   A second set can be plugged into Joystick 1 (Paddle 1).  The current position of each of the four paddles is reported at these locations.  The fire buttons are the same as for the respective joystick.  The triggers for the paddles are read as bits one and two of FF9202
+
+Light Gun / Pen
+
+FF9220
+
+(X Position)
+
+FF9222
+
+(Y Position)
+
+A light gun or pen can be plugged into Joystick 0.  The current position that the gun or pen is pointing to is reported by these registers.
+
+This pinout is for ports 0 and 1.
+Ports 2/3 are on the other
+DB15 connector.
+
+1
+
+6
+
+11
+
+  1   UP 0
+  2   DN 0
+  3   LT 0
+  4   RT 0
+  5   PAD 0Y
+
+  6   FIRE 0
+  7   VCC
+  8   NC
+  9   GND
+10   FIRE 1
+
+11   UP 1
+12   DN 1
+13   LT 1
+14   RT 1
+15   PAD 0X
+
+Joystick .2
+
+© 1992, Atari Corporation
+
+--- Page 2, right half ---
+[2 drawing objects, see JOYSTICK.DOC.p002.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .3
+
+--- Page 3, right half ---
+[1 drawing objects, see JOYSTICK.DOC.p003.svg]
+
+© 1992, Atari Corporation
+
+DSP .5
+
+--- Page 4, left half ---
+[2 drawing objects, see JOYSTICK.DOC.p004.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .6
+
+© 1992, Atari Corporation
+
+--- Page 4, right half ---
+[2 drawing objects, see JOYSTICK.DOC.p004.svg]
+
+4/20/92
+
+DSP Library Functions - Data Transfer Routines
+
+© 1992, Atari Corporation
+
+DSP .7
+
+--- Page 3, left half ---
+[2 drawing objects, see JOYSTICK.DOC.p003.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .8
+
+© 1992, Atari Corporation
+
+--- Page 5, right half ---
+[2 drawing objects, see JOYSTICK.DOC.p005.svg]
+
+4/20/92
+
+DSP Library Functions - Data Transfer Routines
+
+© 1992, Atari Corporation
+
+DSP .9
+
+--- Page 6, left half ---
+[2 drawing objects, see JOYSTICK.DOC.p006.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .10
+
+© 1992, Atari Corporation
+
+--- Page 6, right half ---
+[2 drawing objects, see JOYSTICK.DOC.p006.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+© 1992, Atari Corporation
+
+DSP .11
+
+--- Page 5, left half ---
+[2 drawing objects, see JOYSTICK.DOC.p005.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .12
+
+© 1992, Atari Corporation
+
+--- Page 7, right half ---
+[2 drawing objects, see JOYSTICK.DOC.p007.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+© 1992, Atari Corporation
+
+DSP .13
+
+--- Page 8, left half ---
+[2 drawing objects, see JOYSTICK.DOC.p008.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .14
+
+© 1992, Atari Corporation
+
+--- Page 8, right half ---
+[2 drawing objects, see JOYSTICK.DOC.p008.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+© 1992, Atari Corporation
+
+DSP .15
+
+--- Page 7, left half ---
+[2 drawing objects, see JOYSTICK.DOC.p007.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .16
+
+© 1992, Atari Corporation
+
+--- Page 9, left half ---
+[2 drawing objects, see JOYSTICK.DOC.p009.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .20
+
+© 1992, Atari Corporation
+
+--- Page 9, right half ---
+[2 drawing objects, see JOYSTICK.DOC.p009.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .17
+
+--- Page 10, left half ---
+[2 drawing objects, see JOYSTICK.DOC.p010.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .18
+
+© 1992, Atari Corporation
+
+--- Page 10, right half ---
+[2 drawing objects, see JOYSTICK.DOC.p010.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .19
+
+--- Page 11, left half ---
+[2 drawing objects, see JOYSTICK.DOC.p011.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .2
+
+© 1992, Atari Corporation
+
+--- Page 11, right half ---
+[2 drawing objects, see JOYSTICK.DOC.p011.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .3
+
+--- Page 12, left half ---
+[2 drawing objects, see JOYSTICK.DOC.p012.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .2
+
+© 1992, Atari Corporation
+
+--- Page 12, right half ---
+[2 drawing objects, see JOYSTICK.DOC.p012.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .3

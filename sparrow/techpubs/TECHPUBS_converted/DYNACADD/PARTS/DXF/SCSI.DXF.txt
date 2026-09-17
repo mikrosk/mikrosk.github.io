@@ -1,0 +1,105 @@
+DXF drawing: DYNACADD/PARTS/DXF/SCSI.DXF
+Render: SCSI.DXF.svg
+
+== Summary ==
+File:        29505 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font ROMAND
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (3.851, 0.6835) - (7.4673, 16.05)
+             rendered (3.851, 0.7335) - (7.4776, 16), size 3.6266 x 15.2665
+Limits:      (0, 0) - (9, 12)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: ROMAND (font ROMAND)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            278
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: CIRCLE 127, POLYLINE 101 (206 vertices), TEXT 50
+Blocks:      0 defined
+Notes:
+  - 1 polylines with constant width drawn as thick strokes
+
+== Text in reading order (50 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (50 items) --
+  50  |  49
+  48  |  47
+  46  |  45
+  44  |  43
+  42  |  41
+  40  |  39
+  38  |  37
+  36  |  35
+  34  |  33
+  32  |  31
+  30  |  29
+  28  |  27
+  26  |  25
+  24  |  23
+  22  |  21
+  20  |  19
+  18  |  17
+  16  |  15
+  14  |  13
+  12  |  11
+  10  |  9
+  8  |  7
+  6  |  5
+  4  |  3
+  2  |  1
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+      X        Y    HEIGHT    ROT  JUST      LAYER  STYLE   TEXT
+ 3.8761  15.4698       0.3      0  left      1      ROMAND  50
+ 6.8958  15.4498       0.3      0  left      1      ROMAND  49
+  3.851  14.8608       0.3      0  left      1      ROMAND  48
+ 6.9189  14.8641       0.3      0  left      1      ROMAND  47
+ 3.8761  14.2518       0.3      0  left      1      ROMAND  46
+ 6.9274  14.2569       0.3      0  left      1      ROMAND  45
+ 3.8761  13.6894       0.3      0  left      1      ROMAND  44
+ 6.9206  13.6227       0.3      0  left      1      ROMAND  43
+ 3.9269  13.0803       0.3      0  left      1      ROMAND  42
+ 6.9676  13.0426       0.3      0  left      1      ROMAND  41
+ 3.9018  12.4713       0.3      0  left      1      ROMAND  40
+  6.953  12.4219       0.3      0  left      1      ROMAND  39
+   3.93  11.8558       0.3      0  left      1      ROMAND  38
+ 6.9299  11.8157       0.3      0  left      1      ROMAND  37
+   3.93   11.238       0.3      0  left      1      ROMAND  36
+ 6.9181  11.1812       0.3      0  left      1      ROMAND  35
+ 3.9012  10.6078       0.3      0  left      1      ROMAND  34
+ 6.8958  10.6213       0.3      0  left      1      ROMAND  33
+ 3.9263  10.0221       0.3      0  left      1      ROMAND  32
+  6.942  10.0142       0.3      0  left      1      ROMAND  31
+ 3.9263   9.4221       0.3      0  left      1      ROMAND  30
+ 6.8958   9.3856       0.3      0  left      1      ROMAND  29
+ 3.9012   8.8274       0.3      0  left      1      ROMAND  28
+ 6.8958   8.7998       0.3      0  left      1      ROMAND  27
+ 3.9012    8.195       0.3      0  left      1      ROMAND  26
+ 6.8958   8.2356       0.3      0  left      1      ROMAND  25
+ 3.9012   7.6093       0.3      0  left      1      ROMAND  24
+ 6.8958   7.5855       0.3      0  left      1      ROMAND  23
+ 3.9012   7.0003       0.3      0  left      1      ROMAND  22
+  6.942   6.9998       0.3      0  left      1      ROMAND  21
+ 3.9012   6.4146       0.3      0  left      1      ROMAND  20
+ 6.8958   6.4355       0.3      0  left      1      ROMAND  19
+ 3.8761   5.8055       0.3      0  left      1      ROMAND  18
+ 6.8958   5.7855       0.3      0  left      1      ROMAND  17
+ 3.8761   5.2198       0.3      0  left      1      ROMAND  16
+ 6.8958   5.1998       0.3      0  left      1      ROMAND  15
+  3.851   4.6108       0.3      0  left      1      ROMAND  14
+ 6.9189   4.6141       0.3      0  left      1      ROMAND  13
+ 3.8761   4.0018       0.3      0  left      1      ROMAND  12
+  6.942   4.0069       0.3      0  left      1      ROMAND  11
+ 3.8761   3.4394       0.3      0  left      1      ROMAND  10
+ 7.0344   3.3998       0.3      0  left      1      ROMAND  9
+ 4.0519   2.8304       0.3      0  left      1      ROMAND  8
+ 7.0113   2.7926       0.3      0  left      1      ROMAND  7
+ 4.0268   2.2213       0.3      0  left      1      ROMAND  6
+ 7.0113   2.1854       0.3      0  left      1      ROMAND  5
+  4.055   1.6058       0.3      0  left      1      ROMAND  4
+ 6.9882   1.5927       0.3      0  left      1      ROMAND  3
+  4.055   1.0659       0.3      0  left      1      ROMAND  2
+ 7.0344   0.9784       0.3      0  left      1      ROMAND  1

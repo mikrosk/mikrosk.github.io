@@ -1,0 +1,35 @@
+DynaCADD 2.0 entity file (.DPT)
+Source: DYNACADD/PARTS/TT030/TTHDFIG2.DPT (49043 bytes)
+Record stream: 726 records, ends at offset 0xbf93 with FFFF terminator
+Drawing settings from: TTHDFIG2.DWG
+Sheet: width 13.8466, height 10.6658, scale 1
+Units: not recorded in a field identified so far; coordinates are listed as stored
+Entities: 726 total (LINE 416, CIRCLE 244, ARC 28, TEXT 21, SOLID 17)
+Extents: x 1.1907 .. 12.8908, y 0.8888 .. 9.777 (size 11.7001 x 8.8882)
+Layers used: 0 "L1" (301), 9 "L10" (425)
+Line styles used: 0 "DASHED, drawn solid" (710), 1 "HIDDEN" (12), 2 "CENTER" (4)
+Colour indices used: 1 (726)
+Groups: none
+
+Text strings (21), in file order; x,y = insertion point:
+  x=10.4019    y=8.2584     h=0.15    w=0.1358  angle=0      font=TRIU4RE  layer=L1       "HARD DISK SHIELD"
+  x=5.6415     y=9.2524     h=0.15    w=0.1266  angle=0      font=TRIU4RE  layer=L1       "LED CABLE"
+  x=3.5525     y=2.4817     h=0.15    w=0.1314  angle=0      font=TRIU4RE  layer=L1       "RED STRIPE"
+  x=2.6525     y=4.8955     h=0.15    w=0.1189  angle=0      font=TRIU4RE  layer=L1       "CONNECTOR"
+  x=2.6174     y=5.1291     h=0.15    w=0.1267  angle=0      font=TRIU4RE  layer=L1       "INTERFACE"
+  x=4.1019     y=1.1581     h=0.15    w=0.123   angle=0      font=TRIU4RE  layer=L1       "SURFACE A"
+  x=4.0163     y=1.6228     h=0.15    w=0.123   angle=0      font=TRIU4RE  layer=L1       "SURFACE A"
+  x=3.7846     y=2.2451     h=0.15    w=0.15    angle=0      font=TRIU4RE  layer=L1       "PIN #1"
+  x=2.3989     y=5.7865     h=0.15    w=0.1209  angle=0      font=TRIU4RE  layer=L1       "TERMINATORS"
+  x=1.1285     y=6.8516     h=0.15    w=0.1258  angle=0      font=TRIU4RE  layer=L1       "MOUNTING HOLES FOR"
+  x=2.6241     y=7.6397     h=0.15    w=0.1335  angle=0      font=TRIU4RE  layer=L1       "HARD DISK"
+  x=2.597      y=7.4032     h=0.15    w=0.1378  angle=0      font=TRIU4RE  layer=L1       "DRIVE PCB"
+  x=1.3033     y=6.5736     h=0.15    w=0.1358  angle=0      font=TRIU4RE  layer=L1       "HARD DISK SHIELD"
+  x=1.684      y=6.2986     h=0.15    w=0.1336  angle=0      font=TRIU4RE  layer=L1       "4 HOLES - REF"
+  x=9.625      y=3.8449     h=0.15    w=0.1102  angle=0      font=TRIU4RE  layer=L1       "TOP"
+  x=7.8337     y=2.9709     h=0.15    w=0.131   angle=0      font=TRIU4RE  layer=L1       "HARD DISK CABLE"
+  x=7.0938     y=1.3897     h=0.15    w=0.1226  angle=0      font=TRIU4RE  layer=L1       "CONNECTOR PLUG"
+  x=7.0795     y=1.1737     h=0.15    w=0.137   angle=0      font=TRIU4RE  layer=L1       "IN POSITION 25"
+  x=8.1405     y=8.2784     h=0.15    w=0.1235  angle=0      font=TRIU4RE  layer=L1       "LED CONNECTOR"
+  x=9.9913     y=9.3533     h=0.15    w=0.1266  angle=0      font=TRIU4RE  layer=L1       "LED CABLE"
+  x=6.2138     y=9.4821     h=0.15    w=0.1323  angle=0      font=TRIU4RE  layer=L1       "BLACK WIRE"

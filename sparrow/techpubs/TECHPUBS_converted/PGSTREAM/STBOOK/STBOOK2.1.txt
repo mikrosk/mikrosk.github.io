@@ -1,0 +1,105 @@
+[PageStream 2 document STBOOK2.1: 8.50 x 11.00 in, 21 objects]
+
+--- Page 4 ---
+
+SECTION TWO
+THEORY OF OPERATION
+
+
+2.0 OVERVIEW
+
+The section discusses in general the components which make up the STBook system and how they interrelate with one another. This will give you a basic working knowledge of the system's architecture necessary to repair most hardware failures which may occur. Other sections are provided in this manual to aid in use of diagnostics and troubleshooting techniques. The system is divided into three main categories. Main system, Audio/Video Subsystem, and I/O Subsystem. Each category will be covered separately along with any other components that may lie outside that section as it relates to that section's function within the system. All signals printed in this chapter adhere to the following guidelines:
+
+Negative (Active Low) signals are denoted by a minus sign following the signal name.
+Positive (Active High) signals are denoted by no sign following the signal name.
+
+
+2.1 MAIN SYSTEM
+
+The components which make up the main system are as follows:
+
+• 68HC000 Microprocessor
+• 512 Kbyte ROM
+• 1 or 4 Mbytes RAM
+• COMBO IC
+- Memory Control Unit (MCU)
+- Clock Dividers
+- Interrupt Priority and Illegal Condition Detection
+- Chip Selects
+- Paddle Circuitry
+- Joystick Circuitry
+- Light Gun Circuitry
+- BLITTER
+• External DMA Support
+• Real-Time Clock
+
+
+2.1.1 68HC000 Microprocessor
+
+The 68HC000 is an implementation of the 68000 16-32-bit microprocessor architecture. The 68HC000 has a 16-bit data and 24-bit address bus like that of the 68000 and is upward code compatible with the 68010 and 68020 virtual architectures. The capabilities of the 68HC000 are as follows:
+
+• 17 32-bit Data and Address Registers
+• 16 Megabyte Direct Addressing Range
+• Memory Mapped I/O
+
+--- Page 5 ---
+
+2.1.1.1 Bus Operation
+
+
+2.1.1.1.1 Data Transfer Operations
+
+The transfer of data between devices involves the following signals:
+
+• Address bus signals A1-A23
+• Data bus signals D0-D15
+• Control signals
+
+The address and data buses are seperate parallel mechanisms used to transfer data asynchronously. In all cases the bus master is responsible for the deskew of all signals it issues at  the start and end of the cycle. The bus master must also deskew the acknowledge and data signals from the slave device.
+
+
+2.1.1.1.1.1 Read Cycle
+
+During the read cycle the 68HC000 will receive either one or two bytes of data from system memory or a perpheral device. If the instruction that was issued is a word or long word type instruction, the processor reads both the upper and lower bytes simultaneously. This is accomplished by asserting both the upper and lower data strobes. If the instruction being performed indicates a byte operation, the 68HC000 uses an internal A0 bit to determine which byte to read and issues the proper data strobe. When the internal A0 bit is zero, the upper data strobe is issued. When it equals one, the lower data strobe is issued. When the data is received the processor internally positions the byte properly.
+
+A read cycle consists of eight states. The various signals asserted during these states are as follows:
+
+At the start of the cycle the processor asserts valid function codes FC0-FC2 (Function Code 0-2) and drives the R/W- (Read/Write) signal high to indicate a read cycle. The next step is for the processor to drive a valid address onto the address bus (A1-A23). The processor asserts the AS- (Address Strobe), UDS- (Upper Data Strobe), and LDS- (Lower Data Strobe) signals for the appropriate size of the transfer operation.
+
+The bus signals are then allowed to settle without change. The processor waits for a valid cycle terminantion signal, such as DTACK- (Data Transmit Acknowledge), BERR- (Bus Error), or VPA- (Valid Peripheral Address). If VPA- is asserted the cycle becomes a peripheral cycle. If either of the other two termination signals, (DTACK- or BERR-), are not received before the end of the processing state the processor will begin asserting wait states, full clock cycles, until one is received. Valid Peripheral Address is used by Motorola MC6800 type peripherals.
+
+Again the bus signals are allowed to settle without change. Data from the device is then driven onto the data bus (D0-D15). The processor latches data from the addressed device and negates the Address Strobe (AS-) and Data Strobe (UDS- and LDS-) signals. The device will then negate the Data Transmit Acknowledge (DTACK-) or Bus Error (BERR-) signals.
+
+--- Page 6 ---
+
+2.1.1.1.1.2 Write Cycle
+
+During a write cycle the 68HC000 sends data to memory or the selected peripheral device. If the instruction being performed specifies a word operation, the 68HC000 issues both upper and lower data strobes (UDS- and LDS-) and writes both bytes simultaneously. If the instruction specifies a byte operation, the processor uses the internal A0 bit to determine which byte to write and issues the proper data strobe. When the A0 bit is zero, the Upper Data Strobe (UDS-) is asserted. When the A0 bit is one, the Lower Data Strobe (LDS-) is asserted.
+
+A write cycle, like a read cycle, consists of eight states. The signals asserted during these states are as follows:
+
+The cycle starts by the processor driving the valid function codes onto the Function Code lines (FC0-FC2). The 68HC000 then drived the Read/Write (R/W-) line high if a previous write cycle left it in a low state. The processor then drives a valid address on the Address Bus (A1-A23). Next the processor asserts the Address Strobe signal (AS- ) and drives the Read/Write line (R/W-) low. The data to be written is then placed on the Data Bus and the Upper and Lower Data Strobe signals (UDS- or LDS-) are asserted to latch the proper byte or bytes onto the bus.
+
+The processor waits for a valid cycle terminantion signal, such as DTACK- (Data Transmit Acknowledge), BERR- (Bus Error), or VPA- (Valid Peripheral Address). If VPA- is asserted the cycle becomes a peripheral cycle. If either of the other two termination signals, (DTACK- or BERR-), are not received before the end of the processing state the processor will begin asserting wait states, full clock cycles, until one is received. Valid Peripheral Address is used by Motorola MC6800 type peripherals.
+
+The processor then allows the bus signals to settle without change. The 68HC000 then negates the Address Strobe (AS-), Upper Data STrobe (UDS-), and Lower Data Strobe (LDS-) signals. The processor places the address and data buses in the high impedence state and drives the Read/Write (R/W-) high. The receiving device will then negate the Data Transmit Acknowledge (DTACK-) or Bus Error (BERR-) signal.
+
+
+2.1.1.1.1.3 Interrupt Acknowledge Cycle
+
+During an Interrupt Acknowledge Cycle The Interrupt Priority Level (IPL0-IPL3) lines contain the priority level of the device requesting the interrupt. Address Lines A16-A19 are driven high identifying the cycle as an Interrupt Acknowledge. The level of the interrupt being acknowledged is placed on address lines A1-A3. The Vector Number of the Interrupt to be processed is read after the device places it on the data bus.
+
+2.1.1.2 Bus Arbitration
+
+Bus arbitration is accomplished in the following way:
+
+A request for bus mastership is made by a device asserting the Bus Request (BR-) signal. The 68HC000 will then assert the Bus Grant (BG-) signal. External arbitration logic contained within the COMBO IC will determine the next bus master. After this process the device which has won the external arbitration will wait for the current cycle to end. The selected Bus Master will then assert the Bus Grant Acknowledge (BGACK-) signal and negate its Bus Request (BR-) signal.
+
+--- Page 7 ---
+
+The 68HC000 will negate the Bus Grant (BG-) signal and wait for the BGACK- to be negated. The device holding bus mastership must maintain the BGACK- signal as long as it wishes to keep control of the bus. The device that has gained the bus mastership will read and write data in accordance with the same rules as used by the 68HC000. The device will release bus mastership by negating the BGACK- signal. The 68HC000 will then either re-arbitrate for bus control by another device requesting bus mastership, or resume control of the bus itself.
+
+
+2.1.1.4 Bus Error and Halt Operation
+
+The bus architecture system of the 68HC00 is such that it requires a handshake from an external device to accomplish bus operation. In such a system it is possible that the handshake event may not occur. The Bus Error (BERR-) input to the 68HC000 is provided to terminate a bus cycle in error when the expected hendshake signal is not received. A bus error is recognized when both the DTACK- and HALT- signals are negated and the BERR- signal is asserted (DTACK- and HALT- High and BERR- Low).

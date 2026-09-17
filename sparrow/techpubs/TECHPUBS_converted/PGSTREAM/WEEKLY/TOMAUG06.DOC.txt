@@ -1,0 +1,117 @@
+[PageStream 2 document TOMAUG06.DOC: 8.50 x 11.00 in, 31 objects]
+
+--- Page 1 ---
+[23 drawing objects, see TOMAUG06.DOC.p001.svg]
+
+Weekly Report
+
+
+To:		Tom Ulaszek
+From:	Marty Pennock
+Subject:	Status Report
+Date:	August 6, 1992
+
+
+Accomplishments
+
+1.	Created rough draft of DIAG-0002 to cover TOS ROM and Diagnostics not working when revision levels are mixed. Gave copy to Toomey Freeman for review. 7/30/92.
+
+2.	Moved component engineering locked file into my office. 7/30/92.
+
+3.	Started compiling a list of control documents in my possession. 7/30/92.
+
+4.	Continued to develop an archive procedure for design documentation. 7/31/92.
+
+5.	Generated FAX to Israel for COMBEL, VIDEL, and AJAX Design information. 7/31/92.
+
+6.	Generated memo for criteria regarding design information that is to be archived. 7/31/92.
+
+7.	Generated a memo requesting a fire-proof cabinet for design information. 7/31/92.
+
+8.	Began layout and corrections to COMBEL functional description. 7/31/92.
+
+9.	Finished rough draft of COMBEL product description. 8/3/92.
+
+10.	Rewrite memos to Israel and for design archive criteria. 8/3/92.
+
+11.	Continued correction of COMBEL product specification to cover all revision B changes. 8/3/92.
+
+12.	Completed COMBEL product specification with all changes. 8/3/92.
+
+13.	Backed up TT030. 8/3/92.
+
+14.	Sent FAX to Israel requesting information on COMBEL. VIDEL, and AJAX. 8/3/92.
+
+15.	Got extra information on production procedures for ST-Book from Scott Barrows. 8/5/92.
+
+16.	Circulated final copy of memo regarding archive design documents. 8/5/92.
+
+17.	Printed copy of Hardware Reference Guide done in Sunnyvale for Ira. 8/5/92.
+
+®
+
+--- Page 2 ---
+
+18.	Started review of FALCON030 Hardware Specification while awaiting comments by Richard Miller. 8/5/92.
+
+19.	Talked to Richard Miller about corrections to FALCON030 Hardware Specifications. 8/5/92.
+
+20.	Printed copy of FALCON030 Service Guide for Richard Miller. Will send after his comments to Hardware Specification have been entered to both documents. 8/5/92.
+
+
+Plans
+
+1.	Produce Service Guides for STBook, Portfolio, 2600, Falcon040, and 7800 products.
+
+2.	Complete specifications for archive of COMBEL, VIDEL, and SDMA and ADMA ICs.
+
+3.	Produce FALCON030 Service Guide Final Draft and ship to subs.
+
+4.	Continue work on Falcon040 Service Guide once ASIC Specifications are available.
+
+5.	Get all latest material for FALCON030.
+
+6.	Continue test of PageStream v2.2 beta and convert existing documents to that format.
+
+7.	Complete Falcon040 Service Guide.
+
+8.	Complete conversion of MEGA STE Service Guide to PageStream.
+
+9.	Complete conversions of manuals from Ventura 4.0 to PageStream.
+
+10.	Complete printing of user documents for Windows 3.1.
+
+11.	Finish final copy of Falcon030 Power Supply Spec. for archives.
+
+12.	Continue set up of Engineering Document Control Center.
+
+13.	Create LYNX-II Service Guide.
+
+14.	Complete ATB's for MEGA STE and TT030.
+
+15.	Complete MEGA STE Addendum.
+
+16.	Compile new list of archive documents.
+
+17.	Get filing cabinet and secured ASIC spec documents from component engineer's office.
+
+18.	Compile list of ASIC specs in component engineering file.
+
+Problems
+
+1.	PageStream v2.2 beta works with GEM files now, however, some other problems still remain. Text search and replace causes failure. It is a simple work around and shouldn't cause great problems in document creation.
+
+--- Page 3 ---
+
+2.	Upgrade disks for DynaCADD not fixed. Leonard Tramiel has copy of problem. Working. Leonard has new update which he will send that fixes problems. No word as yet from Leonard.
+
+3.	Need ASIC specifications for Falcon ICs. Have IO controller documentation for FALCON040. Need rest. SDMA done by J. Horton 7/15/92.
+4.	Need memory manager for system that will run concurrently with the NFS network. Have a shortage of memory. Some applications can only be run under Windows, although they are DOS applications. Have tried several. No fix can be found. Will have to live with memory as is.
+
+5.	Need LYNX-II data for Service Guide.
+
+6.	Need ST-Book data for Service Guide.
+
+7.	Need 2600 and 7800 data for Service Guide.
+
+8.	Need fire-proof cabinet for engineering documents.

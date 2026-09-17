@@ -1,0 +1,129 @@
+[PageStream 2 document MSTEADDE.DOC: 8.50 x 11.00 in, 8 objects]
+
+--- Page 1 ---
+
+1.0 ADDENDUM CONTENTS
+
+
+The Atari® MEGA STE™ Service Manual Addendum should contain the following items:
+
+	•	Summary of changes
+	•	New Schematic Pages
+	•	New PCB assembly
+	•	New Bill of Material (BOM)
+	•	ECO History
+
+
+2.0 SUMMARY OF CHANGES
+
+
+Two major areas have been changed in the Atari MEGA STE. These changes affect the Graphics Coprocessor and Floppy Disk Controller.
+
+
+2.1 NEW COMBO IC (BLITTER GRAPHICS COPROCESSOR AND MCU)
+
+
+The Graphics Coprocessor (BLITTER) and Memory Control Unit (MCU) now reside within the Atari COMBO IC. All functionality of the BLITTER and MCU ICs remains the same and are transparent to the system and user.
+
+
+2.2 NEW FLOPPY DISK CONTROLLER (AJAX)
+
+
+The Floppy Disk Controller has been replaced by a new AJAX IC which now allows for 2 MB (1.44 MB formatted) media to be supported. The switch S701 segment 7 must be changed to the "ON" position when a 2MB floppy drive is in the MegaSTe system.
+
+NOTE: The floppy I/O cable for the 2MB floppy disk must also be turned over or reversed when inserted into the floppy drive. This is due to the fact the I/O pins in the 2MB floppy cable are in reverse order from the 1MB floppy interface cable. Interfacing and operation of the Floppy Drive in the system will not change.
+
+--- Page 2 ---
+
+3.0 NEW SCHEMATIC PAGES
+
+--- Page 3 ---
+
+4.0 NEW PCB ASSEMBLY
+
+--- Page 4 ---
+
+5.0 NEW BILL OF MATERIAL
+
+--- Page 5 ---
+
+6.0 ECO HISTORY
+
+
+ECO Number 	Date	Description
+
+1132	10/11/90	Convert Bos Height From 6.8mm To 7.4mm
+1135	11/11/90	Delete Duplicate Part Number On Bom
+1136	10/11/90	Correct Drawing Errors
+1144	10/15/90	Cost Reduction
+1148	10/15/90	Update Drawings
+1150	10/16/90	Add 25mm Length To Specification
+1153	10/18/90	Change PCB Part Number
+1160	11/19/90	Update Drawings To Include 80ns Version
+1161	10/19/90	Correct Rear Shield Holes
+1164	10/30/90	Part Number Change
+1167	11/5/90	Meet Production Requirement
+1168	11/5/90	Meet Production Requirement
+1169	11/5/90	Meet Production Requirement
+1173	11/13/90	Change Fuse Rating
+1174	11/13/90	Change Inductor Specification
+1179	11/13/90	Meet Production Requirement
+1180	11/20/90	Change Hard Disk Power Cable Assembly
+1192	11/26/90	Change U504 To 74F257
+1199	11/29/90	Prevent EMI Between Hard Disk And Main Board
+1200	6/10/91	FCC Class B
+1204	7/16/91	New Power Supply Connector
+1209	12/13/90	Change Supporter And Housing
+1213	12/28/90	Label Changes
+1215	6/4/91	Release To Production
+1216	6/4/91	PLL Problem
+1218	6/10/91	Change Base
+1223	1/7/91	Prevent Hard Disk Drive Separation From Cover
+1224	1/7/91	Change Bom
+1229	4/20/91	Warranty Seal Location
+1238	1/23/91	Conductive Coating Specification Change
+1244	1/22/91	Document Maintenance Procedures And Add Test Items
+1245	6/4/91	Modify VME Bus Control
+1246	6/4/91	Modify PAL VA2
+1247	6/4/91	Release To Production
+1248	1/28/91	Terminantion Fix For Hard Disk
+1253	1/31/91	Change Drawing At JA2
+1254	1/31/91	Correct Modulator Location
+1256	2/5/91	Change Coprocessor To Optional
+1257	6/4/91	Change Hard Disk Cable Length
+1259	2/8/91	Delete Switch Box And RFI Cable From BOM
+1260	6/4/91	Release 80Mb Hard Disk Version
+1261	6/4/91	Change Hard Disk Interface Card
+1262	4/18/91	Fix Hard Disk Cover
+1268	2/25/91	Correct PALB TV Display Problems
+1280	3/28/91	Release 1Mx8 Simm
+1286	4/8/91	Release MEGA STE Without Coprocessor
+1287	4/8/91	Combine Peritel Product Structure With Others
+1288	4/8/91	New Language Disk
+
+--- Page 6 ---
+
+ECO Number 	Date	Description
+
+1289	4/8/91	MEGA STEE Without Coprocessor Shipping BOM
+1307	6/4/91	New Requirements
+1310	5/17/91	Add Simm Reference Designators
+1313	5/17/91	Correct Floppy Test/Ram Bug In Diags.
+1317	4/4/91	Polarize J2 Connector
+1318	5/24/91	Remove Language Specific Kit From Shipping
+1321	6/4/91	PCB Film Corrections
+1325	6/10/91	Remove Language Disk
+1327	6/11/91	Remove Hard Disk Power Pigtail
+1328	6/10/91	Cost Reduction
+1329	6/10/91	FCC Certification
+1333	6/13/91	Change Warranty Card For France
+1334	6/13/91	Change Swiss Warranty Card
+1354	7/22/91	Add New Vendor
+1356	7/22/91	Remove LS02 From Rev D Pcb
+1360	8/23/91	Correct Failure Of Drop Test
+1368	1/10/92	Replace Poly Bag
+1385	2/28/92	2Mb Floppy Cost Reduction
+1410	2/18/92	Clock Switch Fix For Bus Error
+1413	1/15/92	TOS 2.06 Release
+1433	6/2/92	New French Warranty Card
+1438	5/28/92	Correct Hard Disk Sleeve Part Number

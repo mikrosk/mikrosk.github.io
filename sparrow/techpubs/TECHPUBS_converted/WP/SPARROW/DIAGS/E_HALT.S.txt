@@ -1,0 +1,88 @@
+* test ROM3 and ROM4 signals
+* author: Tom Le
+* date: Feb 20, 1992
+
+	.text
+timeria0:
+	move.w  #$3456,intword
+	lea	mfp,a0
+	clr.b   tacr(a0)	;stop timer
+	moveq	#13,d0
+	jsr	disint		;disable int
+        rte
+
+testhalt:
+	lea	mfp,a0
+	move.l  #$50,d0
+testhaltw:
+	sub.l   #1,d0
+	cmp.l   #0,d0
+	bne	testhaltw
+
+	bsr	save_tmr
+	move.b  #0,imra(a0)
+	move.b  #0,imrb(a0)
+
+	move.l  timerint,inttmrsave ;save interrupt
+	move.l	#timeria0,timerint ; Set interrupt vector
+	clr.w   intword
+	bsr	gotimer		;start timer A
+	move.b  #halten,intlev
+	bsr	set_io		;halt the CPU
+	moveq	#2,d2		
+
+thalt0:
+	sub.w   #1,d2
+	cmp.w   #$3456,intword	
+	beq.s	thaltp		;
+	cmp.w   #00,d2
+	bgt	thalt0
+	bset    #ehaltf,flag	;set error
+.if TOS=0
+        move    #red,palette
+.endif
+	lea	testhaltm,a5
+	bsr	dspmsg
+
+thaltrt:
+	move.l  inttmrsave,timerint ;
+	bsr	res_tmr
+	btst    #ehaltf,flag
+        rts
+
+thaltp:
+	bra	thaltrt
+
+gotimer:
+	movea.l	#mfp,a0		;
+	clr.b	tacr(a0)
+	move.b	#6,tadr(a0)     ; 1 counts at 2.4576 MHz / 200 = 325.5 us
+	move.b	keyboard,d0	;read stat to assure no irq at 6850
+	move.b	iodata+keyboard,d0  ;clear data buffer
+	moveq	#13,d0		;timer A
+	jsr	enabint		;set enable, mask bits
+	move.b	#7,tacr(a0)	;start timer /200
+	rts
+
+res_tmr:
+	movea.l	#mfp,a0		;
+	move.b  imra_save,imra(a0)
+	move.b  iera_save,iera(a0)
+	move.b  isra_save,isra(a0)
+	move.b  ipra_save,ipra(a0)
+	move.b  imrb_save,imrb(a0)
+	move.b  tadr_save,tadr(a0)
+	move.b  tacr_save,tacr(a0)
+	rts
+
+save_tmr:
+	movea.l	#mfp,a0		;
+	move.b  imra(a0),imra_save
+	move.b  iera(a0),iera_save
+	move.b  isra(a0),isra_save
+	move.b  ipra(a0),ipra_save
+	move.b  imrb(a0),imrb_save
+	move.b  tadr(a0),tadr_save
+	move.b  tacr(a0),tacr_save
+	rts
+

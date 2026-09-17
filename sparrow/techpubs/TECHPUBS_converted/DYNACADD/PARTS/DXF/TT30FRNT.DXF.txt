@@ -1,0 +1,42 @@
+DXF drawing: DYNACADD/PARTS/DXF/TT30FRNT.DXF
+Render: TT30FRNT.DXF.svg
+
+== Summary ==
+File:        18018 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font ROMAND
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (0.1403, 0.3211) - (5.7598, 2.2466)
+             rendered (0.1403, 0.3211) - (5.7598, 2.2466), size 5.6196 x 1.9254
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: ROMAND (font ROMAND)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            187
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: LINE 127, ARC 43, TEXT 10, SOLID 7
+Blocks:      0 defined
+
+== Text in reading order (10 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (10 items) --
+  OPTIONAL
+  POWER  |  FLOPPY  |  HARD DISK
+  NAME TAG  |  BUSY  |  EJECT  |  BUSY LED
+  LED  |  BUTTON
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE   TEXT
+ 4.404  2.1446     0.102      0  left      1      ROMAND  OPTIONAL
+0.4556  1.9596     0.102      0  left      1      ROMAND  POWER
+2.7354  1.9371     0.102      0  left      1      ROMAND  FLOPPY
+4.3393  1.9529     0.102      0  left      1      ROMAND  HARD DISK
+0.6247  0.5115     0.102      0  left      1      ROMAND  NAME TAG
+2.2219  0.4785     0.102      0  left      1      ROMAND  BUSY
+3.2794  0.4871     0.102      0  left      1      ROMAND  EJECT
+4.5256  0.4957     0.102      0  left      1      ROMAND  BUSY LED
+2.2703  0.3211     0.102      0  left      1      ROMAND  LED
+3.2124  0.3211     0.102      0  left      1      ROMAND  BUTTON

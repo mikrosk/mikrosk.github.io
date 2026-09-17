@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2448" height="2124.91" viewBox="0 0 2448 2124.91">
+<title>DYNACADD/PARTS/DXF/MIDI.DXF</title>
+<rect x="0" y="0" width="2448" height="2124.91" fill="#ffffff"/>
+<g data-layer="1" fill="none" stroke="#000000" stroke-width="101.14" stroke-linecap="butt" stroke-linejoin="miter">
+<path d="M654 327.42A804.56 804.56 0 0 0 1791.81 1465.24A804.56 804.56 0 0 0 654 327.42Z"/>
+</g>
+<g data-layer="1" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M1033.27 74.57L1033.27 453.85L1412.55 453.85L1412.55 74.57L1033.27 74.57Z"/>
+</g>
+<g data-layer="1" fill="#000000" stroke="none">
+<circle cx="620.36" cy="948.05" r="7.2"/>
+<circle cx="816.04" cy="1234.5" r="7.2"/>
+<circle cx="1159.7" cy="1338.82" r="7.2"/>
+<circle cx="1514.78" cy="1234.5" r="7.2"/>
+<circle cx="1699.03" cy="948.05" r="7.2"/>
+</g>
+<g data-layer="1" fill="#000000" stroke="none" font-family="Helvetica, Arial, 'Liberation Sans', 'DejaVu Sans', sans-serif" xml:space="preserve">
+<text transform="translate(1236.63 1974.48)" y="75.86" font-size="209.36" text-anchor="middle">2</text>
+<text transform="translate(445.35 1671.24)" y="75.86" font-size="209.36" text-anchor="middle">5</text>
+<text transform="translate(139.05 1019.66)" y="75.86" font-size="209.36" text-anchor="middle">3</text>
+<text transform="translate(2023.33 1673.89)" y="75.86" font-size="209.36" text-anchor="middle">4</text>
+<text transform="translate(2308.95 1025.85)" y="75.86" font-size="209.36" text-anchor="middle">1</text>
+</g>
+</svg>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2448" height="1393.95" viewBox="0 0 2448 1393.95">
+<title>DYNACADD/PARTS/DXF/CHIPCLK.DXF</title>
+<rect x="0" y="0" width="2448" height="1393.95" fill="#ffffff"/>
+<g data-layer="1" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M889.87 546.95L1104.19 546.95M847 632.68L1104.19 632.68M847 461.22L847 847M418.36 675.54L418.36 375.49L589.82 375.49L589.82 675.54L418.36 675.54ZM75.44 632.68L75.44 332.63L246.9 332.63L246.9 632.68L75.44 632.68ZM889.87 418.36L889.87 546.95M332.63 932.73L1018.46 932.73M246.9 1232.79L418.36 1232.79M246.9 1104.19L418.36 1104.19M75.44 1361.38L75.44 1061.33L246.9 1061.33L246.9 1361.38L75.44 1361.38ZM246.9 504.09L418.36 504.09M246.9 589.82L332.63 589.82M332.63 761.27L332.63 932.73M332.63 589.82L332.63 761.27M847 847L1018.46 847M246.9 418.36L418.36 418.36M161.17 118.3L161.17 332.63M32.57 118.3L32.57 32.57L289.76 32.57L289.76 118.3L32.57 118.3ZM804.14 375.49L1018.46 375.49M804.14 418.36L1018.46 418.36M804.14 461.22L847 461.22M804.14 246.9L1018.46 246.9M804.14 289.76L1018.46 289.76M804.14 332.63L1018.46 332.63M804.14 204.03L1018.46 204.03M804.14 161.17L1018.46 161.17M1532.84 1275.65L1704.3 1275.65M1532.84 1232.79L1704.3 1232.79M1532.84 1189.92L1704.3 1189.92M1104.19 1361.38L1104.19 1061.33L1275.65 1061.33L1275.65 1361.38L1104.19 1361.38ZM1104.19 804.14L1104.19 504.09L1275.65 504.09L1275.65 804.14L1104.19 804.14ZM1747.16 504.09L1875.76 504.09M1875.76 932.73L1961.49 932.73M1875.76 889.87L1961.49 889.87M1875.76 847L1961.49 847M1875.76 804.14L1961.49 804.14M1875.76 761.27L1961.49 761.27M1875.76 718.41L1961.49 718.41M1875.76 675.54L1961.49 675.54M1747.16 418.36L1875.76 418.36M1747.16 461.22L1875.76 461.22"/>
+</g>
+<g data-layer="1" fill="none" stroke="#000000" stroke-width="17.15" stroke-linecap="butt" stroke-linejoin="miter">
+<path d="M589.82 461.22L804.14 461.22L804.14 161.17M1275.65 546.95L1747.16 546.95L1747.16 418.36M1275.65 675.54L1875.76 675.54L1875.76 932.73M1275.65 1147.06L1532.84 1147.06L1532.84 1275.65"/>
+</g>
+<g data-layer="1" fill="#000000" stroke="none" font-family="Helvetica, Arial, 'Liberation Sans', 'DejaVu Sans', sans-serif" xml:space="preserve">
+<text transform="translate(2090.08 418.36)" y="8.57" font-size="23.66" text-anchor="middle">FCCLK FLOPPY CONTROLLER</text>
+<text transform="translate(2004.35 461.22)" y="8.57" font-size="23.66" text-anchor="middle">CLKX5 MC6850'S</text>
+<text transform="translate(2090.08 504.09)" y="8.57" font-size="23.66" text-anchor="middle">CLK8 ACSI DMAC, 8530 SCC</text>
+<text transform="translate(2132.95 932.73)" y="8.57" font-size="23.66" text-anchor="middle">CARTRIDGE ENABLE</text>
+<text transform="translate(2132.95 804.14)" y="8.57" font-size="23.66" text-anchor="middle">6850 CHIP SELECT</text>
+<text transform="translate(2175.81 675.54)" y="8.57" font-size="23.66" text-anchor="middle">ACSI DMA CHIP SELECT</text>
+<text transform="translate(2218.68 718.41)" y="8.57" font-size="23.66" text-anchor="middle">REAL-TIME CLOCK CHIP SELECT</text>
+<text transform="translate(2218.68 761.27)" y="8.57" font-size="23.66" text-anchor="middle">SOUND SHIFTER CHIP SELECT</text>
+<text transform="translate(2175.81 847)" y="8.57" font-size="23.66" text-anchor="middle">TTVIDEO CHIP SELECT</text>
+<text transform="translate(2090.08 889.87)" y="8.57" font-size="23.66" text-anchor="middle">ROM ENABLE</text>
+<text transform="translate(1918.62 1275.65)" y="8.57" font-size="23.66" text-anchor="middle">COPROCESSOR CHIP SELECT</text>
+<text transform="translate(504.09 504.09)" y="8.57" font-size="23.66" text-anchor="middle">74AC244</text>
+<text transform="translate(975.6 504.09)" y="8.57" font-size="23.66" text-anchor="middle">CLK16A</text>
+<text transform="translate(675.54 1104.19)" y="8.57" font-size="23.66" text-anchor="middle">ACSI HARD DISK CHIP SELECT</text>
+<text transform="translate(718.41 1232.79)" y="8.57" font-size="23.66" text-anchor="middle">FLOPPY CONTROLLER CHIP SELECT</text>
+<text transform="translate(161.17 1175.63)" y="8.57" font-size="23.66" text-anchor="middle">ACSI</text>
+<text transform="translate(161.17 1204.21)" y="8.57" font-size="23.66" text-anchor="middle">DMAC</text>
+<text transform="translate(332.63 546.95)" y="8.57" font-size="23.66" text-anchor="middle">CLK4</text>
+<text transform="translate(932.73 589.82)" y="8.57" font-size="23.66" text-anchor="middle">CLK2</text>
+<text transform="translate(161.17 461.22)" y="8.57" font-size="23.66" text-anchor="middle">TTVIDEO</text>
+<text transform="translate(161.17 61.15)" y="8.57" font-size="23.66" text-anchor="middle">OSC</text>
+<text transform="translate(161.17 89.73)" y="8.57" font-size="23.66" text-anchor="middle">32.215605 MHz</text>
+<text transform="translate(332.63 375.49)" y="8.57" font-size="23.66" text-anchor="middle">CLK16</text>
+<text transform="translate(332.63 461.22)" y="8.57" font-size="23.66" text-anchor="middle">CLK2</text>
+<text transform="translate(1404.25 504.09)" y="8.57" font-size="23.66" text-anchor="middle">CLOCKS</text>
+<text transform="translate(1447.11 847)" y="8.57" font-size="23.66" text-anchor="middle">CLK2 SOUND SHIFTER, YM2149, TT EXPANSION BOARD</text>
+<text transform="translate(1189.92 1147.06)" y="8.57" font-size="23.66" text-anchor="middle">SYSTEM</text>
+<text transform="translate(1189.92 1175.63)" y="8.57" font-size="23.66" text-anchor="middle">CONTROL</text>
+<text transform="translate(1189.92 1204.21)" y="8.57" font-size="23.66" text-anchor="middle">UNIT</text>
+<text transform="translate(1189.92 1232.79)" y="8.57" font-size="23.66" text-anchor="middle">(SCU)</text>
+<text transform="translate(1189.92 932.73)" y="8.57" font-size="23.66" text-anchor="middle">CLK4 MC68901'S</text>
+<text transform="translate(1189.92 589.82)" y="8.57" font-size="23.66" text-anchor="middle">MEMORY</text>
+<text transform="translate(1189.92 618.39)" y="8.57" font-size="23.66" text-anchor="middle">CONTROL</text>
+<text transform="translate(1189.92 646.97)" y="8.57" font-size="23.66" text-anchor="middle">UNIT</text>
+<text transform="translate(1189.92 675.54)" y="8.57" font-size="23.66" text-anchor="middle">(MCU)</text>
+<text transform="translate(1447.11 632.68)" y="8.57" font-size="23.66" text-anchor="middle">CHIP SELECTS</text>
+<text transform="translate(1875.76 1189.92)" y="8.57" font-size="23.66" text-anchor="middle">MFP1 CHIP SELECT</text>
+<text transform="translate(1875.76 1232.79)" y="8.57" font-size="23.66" text-anchor="middle">MFP2 CHIP SELECT</text>
+<text transform="translate(1318.52 375.49)" y="8.57" font-size="23.66" text-anchor="middle">CLK16G TT RAM EXPANSION BOARD</text>
+<text transform="translate(1232.79 418.36)" y="8.57" font-size="23.66" text-anchor="middle">CLK16A SCC DMAC PG 9</text>
+<text transform="translate(1318.52 204.03)" y="8.57" font-size="23.66" text-anchor="middle">CLK16C ST RAM EXPANSION BOARD</text>
+<text transform="translate(1232.79 332.63)" y="8.57" font-size="23.66" text-anchor="middle">CLK16F SOUND SHIFTER</text>
+<text transform="translate(1189.92 246.9)" y="8.57" font-size="23.66" text-anchor="middle">CLK16D VME BUS</text>
+<text transform="translate(1147.06 289.76)" y="8.57" font-size="23.66" text-anchor="middle">CLK16E SCU</text>
+<text transform="translate(1189.92 161.17)" y="8.57" font-size="23.66" text-anchor="middle">CLK16B SCSI DMAC</text>
+</g>
+</svg>

@@ -1,0 +1,26 @@
+DynaCADD 2.0 entity file (.DPT)
+Source: DYNACADD/PARTS/F030/F030SPKR.DPT (59043 bytes)
+Record stream: 782 records, ends at offset 0xe6a3 with FFFF terminator
+Drawing settings from: F030SPKR.DWG
+Sheet: width 12.1538, height 7.5079, scale 1
+Units: not recorded in a field identified so far; coordinates are listed as stored
+Entities: 782 total (LINE 137, ARC 627, TEXT 12, SOLID 6)
+Extents: x 0.9842 .. 11.141, y 0.6257 .. 6.881 (size 10.1567 x 6.2553)
+Layers used: 1 "L1" (782)
+Line styles used: 0 "CONTINUOUS" (772), 1 "CENTER" (10)
+Colour indices used: 7 (782)
+Groups: none
+
+Text strings (12), in file order; x,y = insertion point:
+  x=10.5326    y=2.6087     h=0.15    w=0.117   angle=0      font=LEROY_R  layer=L1       "6"
+  x=7.4036     y=3.3613     h=0.15    w=0.117   angle=0      font=LEROY_R  layer=L1       "6"
+  x=10.2558    y=5.1258     h=0.15    w=0.117   angle=0      font=LEROY_R  layer=L1       "6"
+  x=8.3827     y=6.1894     h=0.15    w=0.117   angle=0      font=LEROY_R  layer=L1       "6"
+  x=6.6598     y=6.2826     h=0.18    w=0.1404  angle=0      font=LEROY_R  layer=L1       "HARDWARE"
+  x=6.659      y=2.5985     h=0.18    w=0.1404  angle=0      font=LEROY_R  layer=L1       "FAN MOUNTING HARDWARE"
+  x=6.659      y=3.3505     h=0.18    w=0.1404  angle=0      font=LEROY_R  layer=L1       "FAN"
+  x=6.659      y=5.115      h=0.18    w=0.1404  angle=0      font=LEROY_R  layer=L1       "FAN MOUNTING BRACKET"
+  x=6.659      y=6.5941     h=0.18    w=0.1404  angle=0      font=LEROY_R  layer=L1       "FAN MOUNTING"
+  x=6.4135     y=4.1287     h=0.18    w=0.1404  angle=0      font=LEROY_R  layer=L1       "UPWARD WHEN MOUNTED"
+  x=6.407      y=4.4134     h=0.18    w=0.1404  angle=0      font=LEROY_R  layer=L1       "LABEL OF FAN TO BE FACING"
+  x=0.9484     y=3.9253     h=0.15    w=0.117   angle=0      font=LEROY_R  layer=L1       "FAN WIRES"

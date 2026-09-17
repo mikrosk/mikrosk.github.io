@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="41.58mm" height="110.05mm" viewBox="-834.35 -4110.35 1489.7 3942.7">
+<title>EASYDRAW/SPARFLO1.GEM</title>
+<rect x="-834.35" y="-4110.35" width="1489.7" height="3942.7" fill="#FFFFFF"/>
+<path d="M-583.26 -3913L404.26 -3913A53.74 53.74 0 0 1 458 -3859.26L458 -3696.74A53.74 53.74 0 0 1 404.26 -3643L-583.26 -3643A53.74 53.74 0 0 1 -637 -3696.74L-637 -3859.26A53.74 53.74 0 0 1 -583.26 -3913Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-583.26 -3913L404.26 -3913A53.74 53.74 0 0 1 458 -3859.26L458 -3696.74A53.74 53.74 0 0 1 404.26 -3643L-583.26 -3643A53.74 53.74 0 0 1 -637 -3696.74L-637 -3859.26A53.74 53.74 0 0 1 -583.26 -3913Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="-440" y="-3730" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="700" lengthAdjust="spacingAndGlyphs">START</text>
+<path d="M-637 -2461L458 -2461L458 -3094L-637 -3094Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-637 -2461L458 -2461L458 -3094L-637 -3094L-637 -2461" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-91 -3640L-91 -3094" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-91 -3094L-111.06 -3151.32L-70.94 -3151.32Z" fill="#000000"/>
+<path d="M-637 -1551L458 -1551L458 -2184L-637 -2184Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-637 -1551L458 -1551L458 -2184L-637 -2184L-637 -1551" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-91 -2457L-91 -2184" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-91 -2184L-111.06 -2241.32L-70.94 -2241.32Z" fill="#000000"/>
+<path d="M-89 -1274L-637 -819L-89 -365L458 -819L-89 -1274Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-89 -1274L-637 -819L-89 -365L458 -819L-89 -1274" fill="none" stroke="#000000" stroke-width="7.17"/>
+<text xml:space="preserve" x="-360" y="-910" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="490" lengthAdjust="spacingAndGlyphs">POWER</text>
+<text xml:space="preserve" x="-360" y="-780" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="260" lengthAdjust="spacingAndGlyphs">LED</text>
+<text xml:space="preserve" x="-360" y="-650" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="270" lengthAdjust="spacingAndGlyphs">ON?</text>
+<text xml:space="preserve" x="-270" y="-2000" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="490" lengthAdjust="spacingAndGlyphs">POWER</text>
+<text xml:space="preserve" x="-270" y="-1870" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="190" lengthAdjust="spacingAndGlyphs">ON</text>
+<text xml:space="preserve" x="-270" y="-1740" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="290" lengthAdjust="spacingAndGlyphs">UNIT</text>
+<text xml:space="preserve" x="-450" y="-2910" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="520" lengthAdjust="spacingAndGlyphs">INSTALL</text>
+<text xml:space="preserve" x="-450" y="-2780" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="810" lengthAdjust="spacingAndGlyphs">DIAGNOSTIC</text>
+<text xml:space="preserve" x="-450" y="-2650" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="770" lengthAdjust="spacingAndGlyphs">CARTRIDGE</text>
+<path d="M-91 -1547L-91 -1274" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-91 -1274L-111.06 -1331.32L-70.94 -1331.32Z" fill="#000000"/>
+</svg>

@@ -1,0 +1,40 @@
+[PageStream 2 document DITEKCVR.DOC: 8.50 x 11.00 in, 2 objects]
+
+--- Page 1 ---
+[1 drawing objects, see DITEKCVR.DOC.p001.svg]
+
+To:		Ditek International
+		2800 John St. Unit 15
+		Markham, Ontario
+		Canada L34 0E2
+
+
+From:	Martin Pennock
+		Atari Microsystems
+		4115 Keller Springs Suite 200
+		Dallas, TX 75244
+
+
+Subject:	Updates for Version 2.0
+
+
+cc:		Sam Tramiel - Atari Sunnyvale
+		Leonard Tramiel - Atari Sunnyvale
+		Bill Rehbok - Atari Sunnyvale
+		Ira Goldstein - Atari Dallas
+		Tom Ulazsek - Atari Dallas
+
+
+Dear Sirs:
+
+
+After speaking with Mario on the phone Thursday January 2, 1992 about problems I am having with GEM files created by version 2.0, he suggested that I send in my distribution disks for updates that have been released since 2.0. Enclosed you will find my original release 2.0 SN#14000. Please return a fully updated copy to me at the above address.
+
+
+Thank you very much for your time and support.
+
+
+Sincerely Yours
+
+
+Martin W. Pennock

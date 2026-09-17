@@ -1,0 +1,25 @@
+[PageStream 2 document MCGOWAN1.DOC: 8.50 x 11.00 in, 2 objects]
+
+--- Page 1 ---
+[1 drawing objects, see MCGOWAN1.DOC.p001.svg]
+
+Dallas Office Memo
+
+
+To:		Robert McGowan - Atari Canada
+From:     Marty Pennock
+Subject:	Manual for the ABC286-16/60
+Date:	December 16, 1991
+
+cc:		Tom Ulaszek - ATX
+		Ira Goldstein - ATX
+		Richard Miller - SUVL
+
+
+As per our phone conversation I am sending you a copy of the documentation I received from Atari Sunnyvale. I hope that it will solve your problems. If you need to contact me I am in the Dallas Office at (214) 713-9111.
+
+
+Sincerely Yours
+
+
+Marty Pennock

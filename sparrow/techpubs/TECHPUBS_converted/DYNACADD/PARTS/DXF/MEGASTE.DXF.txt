@@ -1,0 +1,181 @@
+DXF drawing: DYNACADD/PARTS/DXF/MEGASTE.DXF
+Render: MEGASTE.DXF.svg
+
+== Summary ==
+File:        42443 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font ROMANS,txt
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (0.4917, 0.65) - (8.6917, 10.8595)
+             rendered (0.5, 0.65) - (8.6675, 10.85), size 8.1675 x 10.2
+Limits:      (0, 0) - (9, 12)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: ROMANS (font ROMANS), STANDARD (font txt)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            265
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: POLYLINE 135 (473 vertices), TEXT 93, LINE 37
+Blocks:      0 defined
+Notes:
+  - 41 polylines with constant width drawn as thick strokes
+  - 4 TEXT entities are empty or blank
+
+== Text in reading order (89 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (89 items) --
+  Atari MegaSTe Block Diagram
+  Address Bus  |  Modulator  |  RF Out
+  Motorola  |  Video to Monitor
+  Atari
+  MC68000  |  Data Bus
+  GST  |  uWire Control
+  8/16 MHz
+  Video  |  DMA Sound Data
+  Shifter
+  Cache  |  Memory Data
+  RAM
+  Atari
+  Blitter
+  Atari
+  GST
+  Memory  |  Mux'ed
+  Light Gun  |  SIMMs
+  Control  |  Address
+  & Paddles
+  Unit
+  (GSTMCU)
+  Configuration
+  &
+  Controllers  |  ACSI
+  Atari
+  Hard Disk
+  DMAC
+  Int. Floppy
+  256 KB  |  1772
+  FDC
+  Ext. Floppy
+  ROM
+  uWire Control
+  DMA  |  Stereo
+  DACs
+  Sound Data  |  Jacks
+  Filters
+  Mixer  |  Audio
+  Real-Time  |  Volume
+  2149  |  To
+  Monotor
+  Clock  |  PSG
+  Parallel Printer Port
+  Joystick
+  Floppy Drive Selects
+  & Mouse  |  & RS-232 Control
+  Keyboard  |  VME Bus
+  Atari
+  6850
+  TTSCU
+  Keyboard  |  MFP to
+  TTSCU Interrupts
+  MIDI  |  MIDI
+  68901
+  6850  |  Serial Port
+  Jacks
+  MFP
+  Interrupts In
+  MC68881/2  |  8530  |  LAN Port
+  Optional  |  RS-232 Port A
+  Coproc  |  SCC  |  RS-232 Port B
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE     TEXT
+   4.5   10.75       0.2      0  middle    1      ROMANS    Atari MegaSTe Block Diagram
+  3.25   9.875       0.1      0  left      1      STANDARD  Address Bus
+  6.85    9.95       0.1      0  middle    1      STANDARD  Modulator
+ 7.875    9.95       0.1      0  middle    1      STANDARD  RF Out
+  2.25   9.625       0.1      0  center    1      STANDARD  Motorola
+  7.75    9.65       0.1      0  middle    1      STANDARD  Video to Monitor
+ 5.575   9.625       0.1      0  middle    1      STANDARD  Atari
+  2.25  9.4583       0.1      0  center    1      STANDARD  MC68000
+  3.25     9.5       0.1      0  left      1      STANDARD  Data Bus
+ 5.575  9.4583       0.1      0  middle    1      STANDARD  GST
+ 7.625   9.425       0.1      0  middle    1      STANDARD  uWire Control
+  2.25  9.2917       0.1      0  center    1      STANDARD  8/16 MHz
+ 5.575  9.2917       0.1      0  middle    1      STANDARD  Video
+ 7.725    9.25       0.1      0  middle    1      STANDARD  DMA Sound Data
+ 5.575   9.125       0.1      0  middle    1      STANDARD  Shifter
+ 3.925  8.7083       0.1      0  middle    1      STANDARD  Cache
+  6.55    8.75       0.1      0  middle    1      STANDARD  Memory Data
+ 3.925  8.5417       0.1      0  middle    1      STANDARD  RAM
+  2.25    8.25       0.1      0  center    1      STANDARD  Atari
+  2.25  8.0833       0.1      0  center    1      STANDARD  Blitter
+ 5.575  8.0833       0.1      0  middle    1      STANDARD  Atari
+ 5.575  7.9167       0.1      0  middle    1      STANDARD  GST
+ 5.575    7.75       0.1      0  middle    1      STANDARD  Memory
+  6.45    7.75       0.1      0  middle    1      STANDARD  Mux'ed
+ 2.625   7.625       0.1      0  left      1      STANDARD  Light Gun
+   7.5   7.625       0.1      0  middle    1      STANDARD  SIMMs
+ 5.575  7.5833       0.1      0  middle    1      STANDARD  Control
+  6.45   7.575       0.1      0  middle    1      STANDARD  Address
+ 2.625    7.45       0.1      0  left      1      STANDARD  & Paddles
+ 5.575  7.4167       0.1      0  middle    1      STANDARD  Unit
+ 5.575    7.25       0.1      0  middle    1      STANDARD  (GSTMCU)
+ 2.375  7.1167       0.1      0  middle    1      STANDARD  Configuration
+ 2.375    6.95       0.1      0  middle    1      STANDARD  &
+ 2.375  6.7833       0.1      0  middle    1      STANDARD  Controllers
+ 7.625    6.75       0.1      0  middle    1      STANDARD  ACSI
+   5.5   6.625       0.1      0  middle    1      STANDARD  Atari
+     8     6.5       0.1      0  middle    1      STANDARD  Hard Disk
+   5.5   6.375       0.1      0  middle    1      STANDARD  DMAC
+   8.2   6.125       0.1      0  middle    1      STANDARD  Int. Floppy
+  3.25       6       0.1      0  middle    1      STANDARD  256 KB
+  6.75    6.05       0.1      0  middle    1      STANDARD  1772
+  6.75   5.825       0.1      0  middle    1      STANDARD  FDC
+   8.2    5.75       0.1      0  middle    1      STANDARD  Ext. Floppy
+ 3.125   5.625       0.1      0  left      1      STANDARD  ROM
+  5.55    5.45       0.1      0  middle    1      STANDARD  uWire Control
+   5.5    5.25       0.1      0  middle    1      STANDARD  DMA
+ 8.375    5.25       0.1      0  middle    1      STANDARD  Stereo
+   6.9   5.175       0.1      0  middle    1      STANDARD  DACs
+  5.55     5.1       0.1      0  middle    1      STANDARD  Sound Data
+  8.35     5.1       0.1      0  middle    1      STANDARD  Jacks
+   6.9   5.025       0.1      0  middle    1      STANDARD  Filters
+   6.9   4.875       0.1      0  middle    1      STANDARD  Mixer
+   8.2   4.825       0.1      0  middle    1      STANDARD  Audio
+ 2.375    4.75       0.1      0  middle    1      STANDARD  Real-Time
+   6.9     4.7       0.1      0  middle    1      STANDARD  Volume
+ 5.425   4.625       0.1      0  middle    1      STANDARD  2149
+   8.2   4.675       0.1      0  middle    1      STANDARD  To
+   8.2    4.55       0.1      0  middle    1      STANDARD  Monotor
+ 2.375   4.375       0.1      0  middle    1      STANDARD  Clock
+ 5.425   4.325       0.1      0  middle    1      STANDARD  PSG
+ 7.775    4.25       0.1      0  middle    1      STANDARD  Parallel Printer Port
+ 1.125   4.125       0.1      0  middle    1      STANDARD  Joystick
+  7.75    4.05       0.1      0  middle    1      STANDARD  Floppy Drive Selects
+ 1.125   3.875       0.1      0  middle    1      STANDARD  & Mouse
+   7.6   3.875       0.1      0  middle    1      STANDARD  & RS-232 Control
+ 2.375     3.5       0.1      0  middle    1      STANDARD  Keyboard
+   7.4     3.5       0.1      0  middle    1      STANDARD  VME Bus
+   5.5   3.375       0.1      0  middle    1      STANDARD  Atari
+ 2.375    3.25       0.1      0  middle    1      STANDARD  6850
+   5.5   3.125       0.1      0  middle    1      STANDARD  TTSCU
+ 0.875   2.875       0.1      0  middle    1      STANDARD  Keyboard
+   7.2   2.875       0.1      0  middle    1      STANDARD  MFP to
+ 7.325     2.7       0.1      0  middle    1      STANDARD  TTSCU Interrupts
+  0.75     2.5       0.1      0  middle    1      STANDARD  MIDI
+  2.35    2.55       0.1      0  middle    1      STANDARD  MIDI
+ 5.475    2.45       0.1      0  middle    1      STANDARD  68901
+  2.35   2.325       0.1      0  middle    1      STANDARD  6850
+ 7.125   2.325       0.1      0  left      1      STANDARD  Serial Port
+  0.75     2.3       0.1      0  middle    1      STANDARD  Jacks
+ 5.475     2.2       0.1      0  middle    1      STANDARD  MFP
+   7.7   2.125       0.1      0  middle    1      STANDARD  Interrupts In
+   2.5     1.5       0.1      0  middle    1      STANDARD  MC68881/2
+   5.5     1.5       0.1      0  middle    1      STANDARD  8530
+   7.5     1.5       0.1      0  middle    1      STANDARD  LAN Port
+   2.5    1.25       0.1      0  middle    1      STANDARD  Optional
+  7.75    1.25       0.1      0  middle    1      STANDARD  RS-232 Port A
+   2.5       1       0.1      0  middle    1      STANDARD  Coproc
+   5.5       1       0.1      0  middle    1      STANDARD  SCC
+  7.75       1       0.1      0  middle    1      STANDARD  RS-232 Port B

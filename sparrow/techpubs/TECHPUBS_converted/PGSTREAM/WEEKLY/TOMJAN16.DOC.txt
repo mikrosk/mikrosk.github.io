@@ -1,0 +1,46 @@
+[PageStream 2 document TOMJAN16.DOC: 8.50 x 11.00 in, 5 objects]
+
+--- Page 1 ---
+[1 drawing objects, see TOMJAN16.DOC.p001.svg]
+
+Weekly Report
+
+
+To:		Tom Ulazsek
+From:	Marty Pennock
+Subject:	Status Report
+Date:	January 16, 1992
+
+
+Accomplishments
+
+1.	Assembled ECO History for the MEGA STE Addendum.
+2.	Completed large part of Sparrow Service Guide Chapter Two.
+3.	Finished assembling extra ATB Books.
+4.	Wrote ECO to release TT030 Changed Pages (Needs to be re-done).
+5.	Checked TT030 ECO History and pulled missing ECOs.
+6.	Followed up on ATBs needed by product engineers.
+7.	Received new Sparrow and ASIC Specs for Sparrow Service Guide.
+8.	Shipped complete ATB package to subs.
+9.	Got Data books from Western Digital for ABC386SX Documentation Package.
+
+Plans
+
+1.	Finish putting together ABC386SX Documentation Package for SUVL.
+2.	Finish Sparrow Service Guide Chapter 2.
+3.	Get new DynaCADD Disks and upgrade system.
+4.	Re-write ECO and release TT030 Changed Pages.
+5.	Get ATBs needed from product engineers.
+6.	Start Falcon Service Guide.
+7.	Get info and start ST-Book Service Guide.
+8.	Finish MEGA STE Addendum.
+
+--- Page 2 ---
+
+ Problems
+
+1.	Specs for Sparrow and ASICs not very good. Many holes and information lacking.
+2.	Need DynaCADD update to do drawings for Service Guides that can be put into PageStream.
+3.	Need ECOs released by product engineer to incorporate changes to MEGA STE so the Addendum can be finished.
+4.	Need ATBs on TT030 UNIX SCSI fix, Diagnostics and TOS revision level incompatibilities, and others to be written.
+5.	Need Sparrow design to settle a bit so that information being put into the Service Guide will not be worthless by the time the project goes to production.

@@ -1,0 +1,1206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="273.69mm" height="241.11mm" viewBox="-4823.23 -4782.9 9805.47 8638.13">
+<title>EASYDRAW/SUNNYVAL/TTFLOW1.GEM</title>
+<rect x="-4823.23" y="-4782.9" width="9805.47" height="8638.13" fill="#FFFFFF"/>
+<path d="M1439 1866L1466 1813M1412 1813L1439 1866M1439 711L1466 657M1412 657L1439 711M1439 -446L1466 -500M1412 -500L1439 -446M1439 2667L1439 2934M772 2267L986 2267M1439 1510L1439 1866M1439 176L1439 711M745 1111L986 1111M1439 -1380L1439 -446M666 -1380L1439 -1380M1436 3375L1482 3366M1482 3366L1523 3347M1523 3347L1560 3320M1560 3320L1589 3284M1589 3284L1611 3243M1611 3243L1621 3199" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1547 -2902L-1547 -2821L-1456 -2821L-1456 -2912Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1547 -2902L-1547 -2821L-1456 -2821L-1456 -2912M-1456 -2912L-1365 -2912" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1365 -2902L-1365 -2821L-1274 -2821L-1274 -2912Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1365 -2902L-1365 -2821L-1274 -2821L-1274 -2912M-1274 -2912L-1183 -2912" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1183 -2902L-1183 -2821L-1092 -2821L-1092 -2912Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1183 -2902L-1183 -2821L-1092 -2821L-1092 -2912M-1092 -2912L-1001 -2912" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1001 -2902L-1001 -2821L-910 -2821L-910 -2912Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1001 -2902L-1001 -2821L-910 -2821L-910 -2912M-910 -2912L-819 -2912" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-819 -2898L-819 -2821L-728 -2821L-728 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-819 -2898L-819 -2821L-728 -2821L-728 -2908M-728 -2908L-637 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-637 -2898L-637 -2821L-546 -2821L-546 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-637 -2898L-637 -2821L-546 -2821L-546 -2908M-546 -2908L-455 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-455 -2898L-455 -2821L-364 -2821L-364 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-455 -2898L-455 -2821L-364 -2821L-364 -2908M-364 -2908L-273 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-274 -2898L-274 -2821L-183 -2821L-183 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-274 -2898L-274 -2821L-183 -2821L-183 -2908M-183 -2908L-92 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-92 -2898L-92 -2821L-1 -2821L-1 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-92 -2898L-92 -2821L-1 -2821L-1 -2908M-1 -2908L90 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M91 -2898L91 -2821L182 -2821L182 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M91 -2898L91 -2821L182 -2821L182 -2908M182 -2908L273 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M273 -2898L273 -2821L364 -2821L364 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M273 -2898L273 -2821L364 -2821L364 -2908M364 -2908L455 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M455 -2898L455 -2821L546 -2821L546 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M455 -2898L455 -2821L546 -2821L546 -2908M546 -2908L637 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M636 -2898L636 -2821L727 -2821L727 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M636 -2898L636 -2821L727 -2821L727 -2908M727 -2908L818 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M818 -2898L818 -2821L909 -2821L909 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M818 -2898L818 -2821L909 -2821L909 -2908M909 -2908L1000 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1001 -2898L1001 -2821L1092 -2821L1092 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M1001 -2898L1001 -2821L1092 -2821L1092 -2908M1092 -2908L1183 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1183 -2898L1183 -2821L1274 -2821L1274 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M1183 -2898L1183 -2821L1274 -2821L1274 -2908M1274 -2908L1365 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1365 -2898L1365 -2821L1456 -2821L1456 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M1365 -2898L1365 -2821L1456 -2821L1456 -2908M1456 -2908L1547 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1546 -2898L1546 -2821L1637 -2821L1637 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M1546 -2898L1546 -2821L1637 -2821L1637 -2908M1637 -2908L1728 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1728 -2898L1728 -2821L1819 -2821L1819 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M1728 -2898L1728 -2821L1819 -2821L1819 -2908M1819 -2908L1910 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1911 -2898L1911 -2821L2002 -2821L2002 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M1911 -2898L1911 -2821L2002 -2821L2002 -2908M2002 -2908L2093 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2093 -2898L2093 -2821L2184 -2821L2184 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M2093 -2898L2093 -2821L2184 -2821L2184 -2908M2184 -2908L2275 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2275 -2898L2275 -2821L2366 -2821L2366 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M2275 -2898L2275 -2821L2366 -2821L2366 -2908M2366 -2908L2457 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2456 -2898L2456 -2821L2547 -2821L2547 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M2456 -2898L2456 -2821L2547 -2821L2547 -2908M2547 -2908L2638 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2638 -2898L2638 -2821L2729 -2821L2729 -2908Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M2638 -2898L2638 -2821L2729 -2821L2729 -2908" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1729 -2654L-1729 -2730L-1638 -2730L-1638 -2644Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1729 -2654L-1729 -2730L-1638 -2730L-1638 -2644M-1638 -2644L-1547 -2644" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1547 -2654L-1547 -2730L-1456 -2730L-1456 -2644Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1547 -2654L-1547 -2730L-1456 -2730L-1456 -2644M-1456 -2644L-1365 -2644" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1365 -2654L-1365 -2730L-1274 -2730L-1274 -2644Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1365 -2654L-1365 -2730L-1274 -2730L-1274 -2644M-1274 -2644L-1183 -2644" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1183 -2654L-1183 -2730L-1092 -2730L-1092 -2644Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1183 -2654L-1183 -2730L-1092 -2730L-1092 -2644M-1092 -2644L-1001 -2644" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1001 -2654L-1001 -2730L-910 -2730L-910 -2644Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1001 -2654L-1001 -2730L-910 -2730L-910 -2644M-910 -2644L-819 -2644" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-819 -2657L-819 -2730L-728 -2730L-728 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-819 -2657L-819 -2730L-728 -2730L-728 -2648M-728 -2648L-637 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-637 -2657L-637 -2730L-546 -2730L-546 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-637 -2657L-637 -2730L-546 -2730L-546 -2648M-546 -2648L-455 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-455 -2657L-455 -2730L-364 -2730L-364 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-455 -2657L-455 -2730L-364 -2730L-364 -2648M-364 -2648L-273 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-274 -2657L-274 -2730L-183 -2730L-183 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-274 -2657L-274 -2730L-183 -2730L-183 -2648M-183 -2648L-92 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-92 -2657L-92 -2730L-1 -2730L-1 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M-92 -2657L-92 -2730L-1 -2730L-1 -2648M-1 -2648L90 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M89 -2657L89 -2730L180 -2730L180 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M89 -2657L89 -2730L180 -2730L180 -2648M180 -2648L271 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M271 -2657L271 -2730L362 -2730L362 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M271 -2657L271 -2730L362 -2730L362 -2648M362 -2648L453 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M453 -2657L453 -2730L544 -2730L544 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M453 -2657L453 -2730L544 -2730L544 -2648M544 -2648L635 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M634 -2657L634 -2730L725 -2730L725 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M634 -2657L634 -2730L725 -2730L725 -2648M725 -2648L816 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M816 -2657L816 -2730L907 -2730L907 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M816 -2657L816 -2730L907 -2730L907 -2648M907 -2648L998 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M999 -2657L999 -2730L1090 -2730L1090 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M999 -2657L999 -2730L1090 -2730L1090 -2648M1090 -2648L1181 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1181 -2657L1181 -2730L1272 -2730L1272 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M1181 -2657L1181 -2730L1272 -2730L1272 -2648M1272 -2648L1363 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1363 -2657L1363 -2730L1454 -2730L1454 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M1363 -2657L1363 -2730L1454 -2730L1454 -2648M1454 -2648L1545 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1544 -2657L1544 -2730L1635 -2730L1635 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M1544 -2657L1544 -2730L1635 -2730L1635 -2648M1635 -2648L1726 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1726 -2657L1726 -2730L1817 -2730L1817 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M1726 -2657L1726 -2730L1817 -2730L1817 -2648M1817 -2648L1908 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1907 -2657L1907 -2730L1998 -2730L1998 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M1907 -2657L1907 -2730L1998 -2730L1998 -2648M1998 -2648L2089 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2089 -2657L2089 -2730L2180 -2730L2180 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M2089 -2657L2089 -2730L2180 -2730L2180 -2648M2180 -2648L2271 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2271 -2657L2271 -2730L2362 -2730L2362 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M2271 -2657L2271 -2730L2362 -2730L2362 -2648M2362 -2648L2453 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2452 -2657L2452 -2730L2543 -2730L2543 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M2452 -2657L2452 -2730L2543 -2730L2543 -2648M2543 -2648L2634 -2648" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2634 -2657L2634 -2730L2725 -2730L2725 -2648Z" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="7.17"/>
+<path d="M2634 -2657L2634 -2730L2725 -2730L2725 -2648M-1729 -2912L-1820 -2912M-1729 -2639L-1820 -2639M2730 -2912L2821 -2912M2730 -2639L2821 -2639M-1820 -2912L-1820 -2639M-1820 -2639L2821 -2639M2821 -2639L2821 -2912M2821 -2912L-1820 -2912" fill="none" stroke="#000000" stroke-width="7.17"/>
+<text xml:space="preserve" x="2990" y="-2810" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="240" lengthAdjust="spacingAndGlyphs"> 1</text>
+<text xml:space="preserve" x="2970" y="-2610" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="240" lengthAdjust="spacingAndGlyphs"> 26</text>
+<text xml:space="preserve" x="-2290" y="-2610" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="240" lengthAdjust="spacingAndGlyphs"> 50</text>
+<text xml:space="preserve" x="-2360" y="-2810" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="240" lengthAdjust="spacingAndGlyphs"> 25</text>
+<text xml:space="preserve" x="-2920" y="-830" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="-2920" y="-350" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="290" lengthAdjust="spacingAndGlyphs">1-10</text>
+<text xml:space="preserve" x="-2920" y="-190" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs">11 </text>
+<text xml:space="preserve" x="-2920" y="-30" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="370" lengthAdjust="spacingAndGlyphs">12-14</text>
+<text xml:space="preserve" x="-2920" y="130" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="370" lengthAdjust="spacingAndGlyphs">15-25</text>
+<text xml:space="preserve" x="-2920" y="290" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">26</text>
+<text xml:space="preserve" x="-2920" y="450" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">27</text>
+<text xml:space="preserve" x="-2920" y="610" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">28</text>
+<text xml:space="preserve" x="-2920" y="770" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">29</text>
+<text xml:space="preserve" x="-2920" y="930" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">30</text>
+<text xml:space="preserve" x="-2920" y="1090" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">31</text>
+<text xml:space="preserve" x="-2920" y="1250" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">32</text>
+<text xml:space="preserve" x="-2920" y="1410" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">33</text>
+<text xml:space="preserve" x="-2920" y="1570" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">34</text>
+<text xml:space="preserve" x="-2920" y="1730" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="370" lengthAdjust="spacingAndGlyphs">35-36</text>
+<text xml:space="preserve" x="-2310" y="-820" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="-2310" y="-340" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2310" y="-180" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">+ 5V</text>
+<text xml:space="preserve" x="-2310" y="-20" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="-2310" y="140" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2310" y="300" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="460" lengthAdjust="spacingAndGlyphs">SCSI 0</text>
+<text xml:space="preserve" x="-2310" y="460" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="460" lengthAdjust="spacingAndGlyphs">SCSI 1</text>
+<text xml:space="preserve" x="-2310" y="620" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="460" lengthAdjust="spacingAndGlyphs">SCSI 2</text>
+<text xml:space="preserve" x="-2310" y="780" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="460" lengthAdjust="spacingAndGlyphs">SCSI 3</text>
+<text xml:space="preserve" x="-2310" y="940" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="460" lengthAdjust="spacingAndGlyphs">SCSI 4</text>
+<text xml:space="preserve" x="-2310" y="1100" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="460" lengthAdjust="spacingAndGlyphs">SCSI 5</text>
+<text xml:space="preserve" x="-2310" y="1260" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="460" lengthAdjust="spacingAndGlyphs">SCSI 6</text>
+<text xml:space="preserve" x="-2310" y="1420" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="460" lengthAdjust="spacingAndGlyphs">SCSI 7</text>
+<text xml:space="preserve" x="-2310" y="1580" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="400" lengthAdjust="spacingAndGlyphs">Parity</text>
+<text xml:space="preserve" x="-2310" y="1740" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="220" y="-820" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="220" y="-340" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">37</text>
+<text xml:space="preserve" x="220" y="-180" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">38</text>
+<text xml:space="preserve" x="220" y="-20" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">39</text>
+<text xml:space="preserve" x="220" y="140" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">40</text>
+<text xml:space="preserve" x="220" y="300" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">41</text>
+<text xml:space="preserve" x="220" y="460" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">42</text>
+<text xml:space="preserve" x="220" y="620" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">43</text>
+<text xml:space="preserve" x="220" y="780" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">44</text>
+<text xml:space="preserve" x="220" y="940" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">45</text>
+<text xml:space="preserve" x="220" y="1100" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">46</text>
+<text xml:space="preserve" x="220" y="1260" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">47</text>
+<text xml:space="preserve" x="220" y="1420" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">48</text>
+<text xml:space="preserve" x="220" y="1580" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">49</text>
+<text xml:space="preserve" x="220" y="1740" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">50</text>
+<text xml:space="preserve" x="910" y="-830" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="910" y="-350" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="910" y="-190" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">+ 5V</text>
+<text xml:space="preserve" x="910" y="-30" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="910" y="130" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="910" y="290" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="290" lengthAdjust="spacingAndGlyphs">ATN</text>
+<text xml:space="preserve" x="910" y="450" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="910" y="610" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">BSY</text>
+<text xml:space="preserve" x="910" y="770" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">ACK</text>
+<text xml:space="preserve" x="910" y="930" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="290" lengthAdjust="spacingAndGlyphs">RST</text>
+<text xml:space="preserve" x="910" y="1090" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="330" lengthAdjust="spacingAndGlyphs">MSG</text>
+<text xml:space="preserve" x="910" y="1250" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="290" lengthAdjust="spacingAndGlyphs">SEL</text>
+<text xml:space="preserve" x="910" y="1410" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="240" lengthAdjust="spacingAndGlyphs">C/D</text>
+<text xml:space="preserve" x="910" y="1570" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="310" lengthAdjust="spacingAndGlyphs">REQ</text>
+<text xml:space="preserve" x="910" y="1730" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="190" lengthAdjust="spacingAndGlyphs">I/O</text>
+<text xml:space="preserve" x="900" y="-1970" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="480" lengthAdjust="spacingAndGlyphs">Output</text>
+<text xml:space="preserve" x="900" y="-1810" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="140" lengthAdjust="spacingAndGlyphs">-- </text>
+<text xml:space="preserve" x="900" y="-1650" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="140" lengthAdjust="spacingAndGlyphs">-- </text>
+<text xml:space="preserve" x="900" y="-1490" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="180" lengthAdjust="spacingAndGlyphs">--  </text>
+<text xml:space="preserve" x="900" y="-1330" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="140" lengthAdjust="spacingAndGlyphs">-- </text>
+<text xml:space="preserve" x="900" y="-1170" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="140" lengthAdjust="spacingAndGlyphs">-- </text>
+<text xml:space="preserve" x="900" y="-1010" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="140" lengthAdjust="spacingAndGlyphs">-- </text>
+<text xml:space="preserve" x="900" y="-850" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="140" lengthAdjust="spacingAndGlyphs">-- </text>
+<text xml:space="preserve" x="900" y="-690" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="140" lengthAdjust="spacingAndGlyphs">-- </text>
+<text xml:space="preserve" x="900" y="-530" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="140" lengthAdjust="spacingAndGlyphs">-- </text>
+<text xml:space="preserve" x="900" y="-370" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="360" lengthAdjust="spacingAndGlyphs">Input</text>
+<text xml:space="preserve" x="900" y="-210" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="140" lengthAdjust="spacingAndGlyphs">-- </text>
+<text xml:space="preserve" x="900" y="-50" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="140" lengthAdjust="spacingAndGlyphs">-- </text>
+<path d="M-819 -3640L3005 -3640M3094 -3549L2821 -3003" fill="none" stroke="#000000" stroke-width="23"/>
+<path d="M-455 -3437A91 100 0 1 0 -637 -3437A91 100 0 1 0 -455 -3437Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M-455 -3437A91 100 0 1 0 -637 -3437A91 100 0 1 0 -455 -3437Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-182 -3437A91 100 0 1 0 -364 -3437A91 100 0 1 0 -182 -3437Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M-182 -3437A91 100 0 1 0 -364 -3437A91 100 0 1 0 -182 -3437Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M91 -3437A91 100 0 1 0 -91 -3437A91 100 0 1 0 91 -3437Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M91 -3437A91 100 0 1 0 -91 -3437A91 100 0 1 0 91 -3437Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M364 -3437A91 100 0 1 0 182 -3437A91 100 0 1 0 364 -3437Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M364 -3437A91 100 0 1 0 182 -3437A91 100 0 1 0 364 -3437Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M637 -3437A91 100 0 1 0 455 -3437A91 100 0 1 0 637 -3437Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M637 -3437A91 100 0 1 0 455 -3437A91 100 0 1 0 637 -3437Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M910 -3437A91 100 0 1 0 728 -3437A91 100 0 1 0 910 -3437Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M910 -3437A91 100 0 1 0 728 -3437A91 100 0 1 0 910 -3437Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1183 -3437A91 100 0 1 0 1001 -3437A91 100 0 1 0 1183 -3437Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1183 -3437A91 100 0 1 0 1001 -3437A91 100 0 1 0 1183 -3437Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1456 -3437A91 100 0 1 0 1274 -3437A91 100 0 1 0 1456 -3437Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1456 -3437A91 100 0 1 0 1274 -3437A91 100 0 1 0 1456 -3437Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1731 -3437A91 100 0 1 0 1549 -3437A91 100 0 1 0 1731 -3437Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1731 -3437A91 100 0 1 0 1549 -3437A91 100 0 1 0 1731 -3437Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-364 -3134A91 100 0 1 0 -546 -3134A91 100 0 1 0 -364 -3134Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M-364 -3134A91 100 0 1 0 -546 -3134A91 100 0 1 0 -364 -3134Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-91 -3134A91 100 0 1 0 -273 -3134A91 100 0 1 0 -91 -3134Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M-91 -3134A91 100 0 1 0 -273 -3134A91 100 0 1 0 -91 -3134Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M182 -3134A91 100 0 1 0 0 -3134A91 100 0 1 0 182 -3134Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M182 -3134A91 100 0 1 0 0 -3134A91 100 0 1 0 182 -3134Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M455 -3134A91 100 0 1 0 273 -3134A91 100 0 1 0 455 -3134Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M455 -3134A91 100 0 1 0 273 -3134A91 100 0 1 0 455 -3134Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M728 -3134A91 100 0 1 0 546 -3134A91 100 0 1 0 728 -3134Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M728 -3134A91 100 0 1 0 546 -3134A91 100 0 1 0 728 -3134Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1001 -3134A91 100 0 1 0 819 -3134A91 100 0 1 0 1001 -3134Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1001 -3134A91 100 0 1 0 819 -3134A91 100 0 1 0 1001 -3134Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1274 -3134A91 100 0 1 0 1092 -3134A91 100 0 1 0 1274 -3134Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1274 -3134A91 100 0 1 0 1092 -3134A91 100 0 1 0 1274 -3134Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1547 -3134A91 100 0 1 0 1365 -3134A91 100 0 1 0 1547 -3134Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1547 -3134A91 100 0 1 0 1365 -3134A91 100 0 1 0 1547 -3134Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1822 -3134A91 100 0 1 0 1640 -3134A91 100 0 1 0 1822 -3134Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1822 -3134A91 100 0 1 0 1640 -3134A91 100 0 1 0 1822 -3134Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2004 -3438A91 100 0 1 0 1822 -3438A91 100 0 1 0 2004 -3438Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2004 -3438A91 100 0 1 0 1822 -3438A91 100 0 1 0 2004 -3438Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2277 -3438A91 100 0 1 0 2095 -3438A91 100 0 1 0 2277 -3438Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2277 -3438A91 100 0 1 0 2095 -3438A91 100 0 1 0 2277 -3438Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2550 -3438A91 100 0 1 0 2368 -3438A91 100 0 1 0 2550 -3438Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2550 -3438A91 100 0 1 0 2368 -3438A91 100 0 1 0 2550 -3438Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2823 -3438A91 100 0 1 0 2641 -3438A91 100 0 1 0 2823 -3438Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2823 -3438A91 100 0 1 0 2641 -3438A91 100 0 1 0 2823 -3438Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2095 -3135A91 100 0 1 0 1913 -3135A91 100 0 1 0 2095 -3135Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2095 -3135A91 100 0 1 0 1913 -3135A91 100 0 1 0 2095 -3135Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2368 -3135A91 100 0 1 0 2186 -3135A91 100 0 1 0 2368 -3135Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2368 -3135A91 100 0 1 0 2186 -3135A91 100 0 1 0 2368 -3135Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2641 -3135A91 100 0 1 0 2459 -3135A91 100 0 1 0 2641 -3135Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2641 -3135A91 100 0 1 0 2459 -3135A91 100 0 1 0 2641 -3135Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-910 -3549L-637 -3003M-550 -2903L2728 -2903M3096 -3539A91 101 0 0 0 3005 -3640M-637 -3003A91 101 0 0 0 -546 -2902M-819 -3640A91 101 0 0 0 -910 -3539M2730 -2902A91 101 0 0 0 2821 -3003" fill="none" stroke="#000000" stroke-width="23"/>
+<text xml:space="preserve" x="3150" y="-3380" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 1</text>
+<text xml:space="preserve" x="3020" y="-3050" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs"> 14</text>
+<text xml:space="preserve" x="-1020" y="-3050" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs"> 25</text>
+<text xml:space="preserve" x="-1220" y="-3370" font-family="'Courier New',monospace" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs"> 13</text>
+<text xml:space="preserve" x="-3020" y="-4060" font-family="Arial,Helvetica,sans-serif" font-size="303.33" fill="#000000" textLength="2060" lengthAdjust="spacingAndGlyphs">SERIAL PORT </text>
+<text xml:space="preserve" x="-2960" y="-3410" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="640" lengthAdjust="spacingAndGlyphs">DB9 Male</text>
+<text xml:space="preserve" x="-2270" y="-2280" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="-2270" y="-1800" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">1</text>
+<text xml:space="preserve" x="-2270" y="-1640" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs">2 </text>
+<text xml:space="preserve" x="-2270" y="-1480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">3</text>
+<text xml:space="preserve" x="-2270" y="-1320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">4</text>
+<text xml:space="preserve" x="-2270" y="-1160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">5</text>
+<text xml:space="preserve" x="-2270" y="-1000" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">6</text>
+<text xml:space="preserve" x="-2270" y="-840" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">7</text>
+<text xml:space="preserve" x="-2270" y="-680" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">8</text>
+<text xml:space="preserve" x="-2270" y="-520" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="450" lengthAdjust="spacingAndGlyphs">9</text>
+<text xml:space="preserve" x="-740" y="-2280" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="-740" y="-1800" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="930" lengthAdjust="spacingAndGlyphs">Carrier Detect</text>
+<text xml:space="preserve" x="-740" y="-1640" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="540" lengthAdjust="spacingAndGlyphs">Receive</text>
+<text xml:space="preserve" x="-740" y="-1480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="610" lengthAdjust="spacingAndGlyphs">Transmit</text>
+<text xml:space="preserve" x="-740" y="-1320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1420" lengthAdjust="spacingAndGlyphs">Data Terminal Ready</text>
+<text xml:space="preserve" x="-740" y="-1160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-740" y="-1000" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="-740" y="-840" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1150" lengthAdjust="spacingAndGlyphs">Request to Send</text>
+<text xml:space="preserve" x="-740" y="-680" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="930" lengthAdjust="spacingAndGlyphs">Clear to Send</text>
+<text xml:space="preserve" x="-740" y="-520" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="970" lengthAdjust="spacingAndGlyphs">Ring Indicator</text>
+<text xml:space="preserve" x="2680" y="-3370" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 5</text>
+<text xml:space="preserve" x="2630" y="-3160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 9</text>
+<text xml:space="preserve" x="940" y="-3160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 6</text>
+<text xml:space="preserve" x="910" y="-3370" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 1</text>
+<path d="M1167 -3623L2608 -3623M1315 -3017L2438 -3017M1098 -3540L1225 -3110M2670 -3540L2543 -3099M1225 -3109A92 92 0 0 0 1317 -3017M2670 -3540A69 83 0 0 0 2601 -3623M2440 -3015A105 90 0 0 0 2545 -3105M1167 -3623A69 83 0 0 0 1098 -3540" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1429 -3417A91 100 0 1 0 1247 -3417A91 100 0 1 0 1429 -3417Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1429 -3417A91 100 0 1 0 1247 -3417A91 100 0 1 0 1429 -3417Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1702 -3417A91 100 0 1 0 1520 -3417A91 100 0 1 0 1702 -3417Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1702 -3417A91 100 0 1 0 1520 -3417A91 100 0 1 0 1702 -3417Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1975 -3417A91 100 0 1 0 1793 -3417A91 100 0 1 0 1975 -3417Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1975 -3417A91 100 0 1 0 1793 -3417A91 100 0 1 0 1975 -3417Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2248 -3417A91 100 0 1 0 2066 -3417A91 100 0 1 0 2248 -3417Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2248 -3417A91 100 0 1 0 2066 -3417A91 100 0 1 0 2248 -3417Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2521 -3417A91 100 0 1 0 2339 -3417A91 100 0 1 0 2521 -3417Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2521 -3417A91 100 0 1 0 2339 -3417A91 100 0 1 0 2521 -3417Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1596 -3200A91 100 0 1 0 1414 -3200A91 100 0 1 0 1596 -3200Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1596 -3200A91 100 0 1 0 1414 -3200A91 100 0 1 0 1596 -3200Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1871 -3200A92 100 0 1 0 1687 -3200A92 100 0 1 0 1871 -3200Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1871 -3200A92 100 0 1 0 1687 -3200A92 100 0 1 0 1871 -3200Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2142 -3200A91 100 0 1 0 1960 -3200A91 100 0 1 0 2142 -3200Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2142 -3200A91 100 0 1 0 1960 -3200A91 100 0 1 0 2142 -3200Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2415 -3200A91 100 0 1 0 2233 -3200A91 100 0 1 0 2415 -3200Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2415 -3200A91 100 0 1 0 2233 -3200A91 100 0 1 0 2415 -3200Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="-3380" y="-3950" font-family="Arial,Helvetica,sans-serif" font-size="303.33" fill="#000000" textLength="2580" lengthAdjust="spacingAndGlyphs">DSP CONNECTOR</text>
+<text xml:space="preserve" x="-3340" y="-3280" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="900" lengthAdjust="spacingAndGlyphs">DB26 Female</text>
+<text xml:space="preserve" x="-3120" y="-1840" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="-3120" y="-1360" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">1</text>
+<text xml:space="preserve" x="-3120" y="-1200" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs">2 </text>
+<text xml:space="preserve" x="-3120" y="-1040" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">3</text>
+<text xml:space="preserve" x="-3120" y="-880" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">4</text>
+<text xml:space="preserve" x="-3120" y="-720" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">5</text>
+<text xml:space="preserve" x="-3120" y="-560" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">6</text>
+<text xml:space="preserve" x="-3120" y="-400" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">7</text>
+<text xml:space="preserve" x="-3120" y="-240" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">8</text>
+<text xml:space="preserve" x="-3120" y="-80" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">9</text>
+<text xml:space="preserve" x="-3120" y="80" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">10</text>
+<text xml:space="preserve" x="-3120" y="240" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">11</text>
+<text xml:space="preserve" x="-3120" y="400" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">12</text>
+<text xml:space="preserve" x="-3120" y="560" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">13</text>
+<text xml:space="preserve" x="-2510" y="-1830" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="-2510" y="-1350" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1180" lengthAdjust="spacingAndGlyphs">Microwire Enable</text>
+<text xml:space="preserve" x="-2510" y="-1190" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1010" lengthAdjust="spacingAndGlyphs">Microwire Data</text>
+<text xml:space="preserve" x="-2510" y="-1030" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1090" lengthAdjust="spacingAndGlyphs">Microwire Clock</text>
+<text xml:space="preserve" x="-2510" y="-870" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1630" lengthAdjust="spacingAndGlyphs">DMA Sound Enable Out</text>
+<text xml:space="preserve" x="-2510" y="-710" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1540" lengthAdjust="spacingAndGlyphs">DMA Sound Clock Out</text>
+<text xml:space="preserve" x="-2510" y="-550" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1460" lengthAdjust="spacingAndGlyphs">DMA Sound Data Out</text>
+<text xml:space="preserve" x="-2510" y="-390" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="2170" lengthAdjust="spacingAndGlyphs">DMA Sound Channel Select out</text>
+<text xml:space="preserve" x="-2510" y="-230" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2510" y="-70" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="780" lengthAdjust="spacingAndGlyphs">Rate Select</text>
+<text xml:space="preserve" x="-2510" y="90" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2510" y="250" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1660" lengthAdjust="spacingAndGlyphs">Sync Serial I/F Control 0</text>
+<text xml:space="preserve" x="-2510" y="410" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1660" lengthAdjust="spacingAndGlyphs">Sync Serial I/F Control 1</text>
+<text xml:space="preserve" x="-2510" y="570" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1660" lengthAdjust="spacingAndGlyphs">Sync Serial I/F Control 2</text>
+<text xml:space="preserve" x="20" y="-1830" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="20" y="-1350" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">14</text>
+<text xml:space="preserve" x="20" y="-1190" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs">15 </text>
+<text xml:space="preserve" x="20" y="-1030" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">16</text>
+<text xml:space="preserve" x="20" y="-870" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">17</text>
+<text xml:space="preserve" x="20" y="-710" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">18</text>
+<text xml:space="preserve" x="20" y="-550" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">19</text>
+<text xml:space="preserve" x="20" y="-390" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">20</text>
+<text xml:space="preserve" x="20" y="-230" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">21</text>
+<text xml:space="preserve" x="20" y="-70" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">22</text>
+<text xml:space="preserve" x="20" y="90" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">23</text>
+<text xml:space="preserve" x="20" y="250" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">24</text>
+<text xml:space="preserve" x="20" y="410" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">25</text>
+<text xml:space="preserve" x="20" y="570" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">26</text>
+<text xml:space="preserve" x="710" y="-1840" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="710" y="-1360" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="710" y="-1200" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1300" lengthAdjust="spacingAndGlyphs">Sync Serial Data In</text>
+<text xml:space="preserve" x="710" y="-1040" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="710" y="-880" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="380" lengthAdjust="spacingAndGlyphs">+ 12V</text>
+<text xml:space="preserve" x="710" y="-720" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="710" y="-560" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1860" lengthAdjust="spacingAndGlyphs">DMA Sound Data Enable In</text>
+<text xml:space="preserve" x="710" y="-400" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1420" lengthAdjust="spacingAndGlyphs">DMA Sound Clock In</text>
+<text xml:space="preserve" x="710" y="-240" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1340" lengthAdjust="spacingAndGlyphs">DMA Sound Data In</text>
+<text xml:space="preserve" x="710" y="-80" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="2070" lengthAdjust="spacingAndGlyphs">DMA Sound Channel Select In</text>
+<text xml:space="preserve" x="710" y="80" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1670" lengthAdjust="spacingAndGlyphs">Sync Serial I/F Data Out </text>
+<text xml:space="preserve" x="710" y="240" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1420" lengthAdjust="spacingAndGlyphs">Sync Serial I/F Clock</text>
+<text xml:space="preserve" x="710" y="400" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="710" y="560" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1710" lengthAdjust="spacingAndGlyphs">External Clock (Genlock)</text>
+<path d="M0 -3276A91 91 0 1 0 -182 -3276A91 91 0 1 0 0 -3276Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M0 -3276A91 91 0 1 0 -182 -3276A91 91 0 1 0 0 -3276Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M273 -3276A91 91 0 1 0 91 -3276A91 91 0 1 0 273 -3276Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M273 -3276A91 91 0 1 0 91 -3276A91 91 0 1 0 273 -3276Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M546 -3276A91 91 0 1 0 364 -3276A91 91 0 1 0 546 -3276Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M546 -3276A91 91 0 1 0 364 -3276A91 91 0 1 0 546 -3276Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M819 -3276A91 91 0 1 0 637 -3276A91 91 0 1 0 819 -3276Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M819 -3276A91 91 0 1 0 637 -3276A91 91 0 1 0 819 -3276Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1092 -3276A91 91 0 1 0 910 -3276A91 91 0 1 0 1092 -3276Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1092 -3276A91 91 0 1 0 910 -3276A91 91 0 1 0 1092 -3276Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1365 -3276A91 91 0 1 0 1183 -3276A91 91 0 1 0 1365 -3276Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1365 -3276A91 91 0 1 0 1183 -3276A91 91 0 1 0 1365 -3276Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1638 -3276A91 91 0 1 0 1456 -3276A91 91 0 1 0 1638 -3276Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1638 -3276A91 91 0 1 0 1456 -3276A91 91 0 1 0 1638 -3276Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1911 -3276A91 91 0 1 0 1729 -3276A91 91 0 1 0 1911 -3276Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1911 -3276A91 91 0 1 0 1729 -3276A91 91 0 1 0 1911 -3276Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2184 -3276A91 91 0 1 0 2002 -3276A91 91 0 1 0 2184 -3276Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2184 -3276A91 91 0 1 0 2002 -3276A91 91 0 1 0 2184 -3276Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M91 -3003A91 91 0 1 0 -91 -3003A91 91 0 1 0 91 -3003Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M91 -3003A91 91 0 1 0 -91 -3003A91 91 0 1 0 91 -3003Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M364 -3003A91 91 0 1 0 182 -3003A91 91 0 1 0 364 -3003Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M364 -3003A91 91 0 1 0 182 -3003A91 91 0 1 0 364 -3003Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M637 -3003A91 91 0 1 0 455 -3003A91 91 0 1 0 637 -3003Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M637 -3003A91 91 0 1 0 455 -3003A91 91 0 1 0 637 -3003Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M910 -3003A91 91 0 1 0 728 -3003A91 91 0 1 0 910 -3003Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M910 -3003A91 91 0 1 0 728 -3003A91 91 0 1 0 910 -3003Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1183 -3003A91 91 0 1 0 1001 -3003A91 91 0 1 0 1183 -3003Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1183 -3003A91 91 0 1 0 1001 -3003A91 91 0 1 0 1183 -3003Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1456 -3003A91 91 0 1 0 1274 -3003A91 91 0 1 0 1456 -3003Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1456 -3003A91 91 0 1 0 1274 -3003A91 91 0 1 0 1456 -3003Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1729 -3003A91 91 0 1 0 1547 -3003A91 91 0 1 0 1729 -3003Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1729 -3003A91 91 0 1 0 1547 -3003A91 91 0 1 0 1729 -3003Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2002 -3003A91 91 0 1 0 1820 -3003A91 91 0 1 0 2002 -3003Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2002 -3003A91 91 0 1 0 1820 -3003A91 91 0 1 0 2002 -3003Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2275 -3003A91 91 0 1 0 2093 -3003A91 91 0 1 0 2275 -3003Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2275 -3003A91 91 0 1 0 2093 -3003A91 91 0 1 0 2275 -3003Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M182 -2730A91 91 0 1 0 0 -2730A91 91 0 1 0 182 -2730Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M182 -2730A91 91 0 1 0 0 -2730A91 91 0 1 0 182 -2730Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M455 -2730A91 91 0 1 0 273 -2730A91 91 0 1 0 455 -2730Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M455 -2730A91 91 0 1 0 273 -2730A91 91 0 1 0 455 -2730Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M728 -2730A91 91 0 1 0 546 -2730A91 91 0 1 0 728 -2730Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M728 -2730A91 91 0 1 0 546 -2730A91 91 0 1 0 728 -2730Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1001 -2730A91 91 0 1 0 819 -2730A91 91 0 1 0 1001 -2730Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1001 -2730A91 91 0 1 0 819 -2730A91 91 0 1 0 1001 -2730Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1274 -2730A91 91 0 1 0 1092 -2730A91 91 0 1 0 1274 -2730Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1274 -2730A91 91 0 1 0 1092 -2730A91 91 0 1 0 1274 -2730Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1547 -2730A91 91 0 1 0 1365 -2730A91 91 0 1 0 1547 -2730Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1547 -2730A91 91 0 1 0 1365 -2730A91 91 0 1 0 1547 -2730Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1820 -2730A91 91 0 1 0 1638 -2730A91 91 0 1 0 1820 -2730Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1820 -2730A91 91 0 1 0 1638 -2730A91 91 0 1 0 1820 -2730Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2093 -2730A91 91 0 1 0 1911 -2730A91 91 0 1 0 2093 -2730Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2093 -2730A91 91 0 1 0 1911 -2730A91 91 0 1 0 2093 -2730Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-364 -3458L2458 -3458M-455 -3388L-182 -2619M2549 -3388L2276 -2619M-91 -2550L2185 -2550M2549 -3388A91 70 0 0 0 2458 -3458M-182 -2620A91 70 0 0 0 -91 -2550M2185 -2550A91 70 0 0 0 2276 -2620M-364 -3458A91 70 0 0 0 -455 -3388" fill="none" stroke="#000000" stroke-width="23"/>
+<text xml:space="preserve" x="-640" y="-2650" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs"> 26</text>
+<text xml:space="preserve" x="2710" y="-3240" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 1</text>
+<text xml:space="preserve" x="-820" y="-3200" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 9</text>
+<text xml:space="preserve" x="-730" y="-2920" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs"> 18</text>
+<text xml:space="preserve" x="2560" y="-2930" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs"> 10</text>
+<text xml:space="preserve" x="2440" y="-2650" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs"> 19</text>
+<path d="M-4343 2326L4502 2326L4502 -2881L-4343 -2881L-4343 2326" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-4222 1946L4312 1946L4312 -226L-4222 -226Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-4222 1946L4312 1946L4312 -226L-4222 -226L-4222 1946" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="107.48,35.83"/>
+<path d="M174 2067L4450 2067L4450 -916L174 -916L174 2067" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2820 425L4070 425L4070 -755L2820 -755L2820 425" fill="none" stroke="#000000" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="3050" y="-480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="560" lengthAdjust="spacingAndGlyphs">    56001</text>
+<text xml:space="preserve" x="3050" y="-320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="790" lengthAdjust="spacingAndGlyphs">20MHz DSP</text>
+<text xml:space="preserve" x="3060" y="-10" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="690" lengthAdjust="spacingAndGlyphs">8k Words </text>
+<text xml:space="preserve" x="3060" y="150" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="500" lengthAdjust="spacingAndGlyphs">  SRAM</text>
+<path d="M346 434L1596 434L1596 -746L346 -746L346 434" fill="none" stroke="#000000" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="600" y="-340" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs"> 68030</text>
+<text xml:space="preserve" x="630" y="100" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="370" lengthAdjust="spacingAndGlyphs">8MHz</text>
+<path d="M684 2029L1934 2029L1934 849L684 849L684 2029" fill="none" stroke="#000000" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="930" y="1260" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="400" lengthAdjust="spacingAndGlyphs">68882</text>
+<text xml:space="preserve" x="970" y="1700" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="370" lengthAdjust="spacingAndGlyphs">8MHz</text>
+<text xml:space="preserve" x="1850" y="-480" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" textLength="620" lengthAdjust="spacingAndGlyphs">DSP Board</text>
+<text xml:space="preserve" x="-4100" y="1810" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" textLength="550" lengthAdjust="spacingAndGlyphs">Keyboard</text>
+<text xml:space="preserve" x="610" y="3050" font-family="Arial,Helvetica,sans-serif" font-size="303.33" fill="#000000" textLength="3170" lengthAdjust="spacingAndGlyphs">DSP Board Orientation</text>
+<path d="M-3791 -1416L-2325 -1416L-2325 -2571L-3791 -2571L-3791 -1416M2329 -1312L4416 -1312L4416 -2360L2329 -2360L2329 -1312" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="-3410" y="-2080" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="470" lengthAdjust="spacingAndGlyphs">Power </text>
+<text xml:space="preserve" x="-3410" y="-1920" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="490" lengthAdjust="spacingAndGlyphs">Supply</text>
+<text xml:space="preserve" x="2680" y="-1840" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="870" lengthAdjust="spacingAndGlyphs">Floppy Drive</text>
+<path d="M2104 -3356L2104 171M2729 -3356L2729 171M2104 -3356L2729 -3356M2104 171L2730 171" fill="none" stroke="#000000" stroke-width="23"/>
+<path d="M2331 -3185A57 57 0 1 0 2217 -3185A57 57 0 1 0 2331 -3185Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2331 -3185A57 57 0 1 0 2217 -3185A57 57 0 1 0 2331 -3185Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2331 -2958A57 57 0 1 0 2217 -2958A57 57 0 1 0 2331 -2958Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2331 -2958A57 57 0 1 0 2217 -2958A57 57 0 1 0 2331 -2958Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2331 -2730A57 57 0 1 0 2217 -2730A57 57 0 1 0 2331 -2730Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2331 -2730A57 57 0 1 0 2217 -2730A57 57 0 1 0 2331 -2730Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2331 -2503A57 57 0 1 0 2217 -2503A57 57 0 1 0 2331 -2503Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2331 -2503A57 57 0 1 0 2217 -2503A57 57 0 1 0 2331 -2503Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2331 -2275A57 57 0 1 0 2217 -2275A57 57 0 1 0 2331 -2275Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2331 -2275A57 57 0 1 0 2217 -2275A57 57 0 1 0 2331 -2275Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2331 -2048A57 57 0 1 0 2217 -2048A57 57 0 1 0 2331 -2048Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2331 -2048A57 57 0 1 0 2217 -2048A57 57 0 1 0 2331 -2048Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2331 -1820A57 57 0 1 0 2217 -1820A57 57 0 1 0 2331 -1820Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2331 -1820A57 57 0 1 0 2217 -1820A57 57 0 1 0 2331 -1820Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2331 -1593A57 57 0 1 0 2217 -1593A57 57 0 1 0 2331 -1593Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2331 -1593A57 57 0 1 0 2217 -1593A57 57 0 1 0 2331 -1593Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2331 -1366A57 56 0 1 0 2217 -1366A57 56 0 1 0 2331 -1366Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2331 -1366A57 56 0 1 0 2217 -1366A57 56 0 1 0 2331 -1366Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2331 -1138A57 57 0 1 0 2217 -1138A57 57 0 1 0 2331 -1138Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2331 -1138A57 57 0 1 0 2217 -1138A57 57 0 1 0 2331 -1138Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2331 -910A57 57 0 1 0 2217 -910A57 57 0 1 0 2331 -910Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2331 -910A57 57 0 1 0 2217 -910A57 57 0 1 0 2331 -910Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2331 -683A57 57 0 1 0 2217 -683A57 57 0 1 0 2331 -683Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2331 -683A57 57 0 1 0 2217 -683A57 57 0 1 0 2331 -683Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2331 -455A57 57 0 1 0 2217 -455A57 57 0 1 0 2331 -455Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2331 -455A57 57 0 1 0 2217 -455A57 57 0 1 0 2331 -455Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2331 -228A57 57 0 1 0 2217 -228A57 57 0 1 0 2331 -228Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2331 -228A57 57 0 1 0 2217 -228A57 57 0 1 0 2331 -228Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2331 0A57 57 0 1 0 2217 0A57 57 0 1 0 2331 0Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2331 0A57 57 0 1 0 2217 0A57 57 0 1 0 2331 0Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2616 -3185A57 57 0 1 0 2502 -3185A57 57 0 1 0 2616 -3185Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2616 -3185A57 57 0 1 0 2502 -3185A57 57 0 1 0 2616 -3185Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2616 -2958A57 57 0 1 0 2502 -2958A57 57 0 1 0 2616 -2958Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2616 -2958A57 57 0 1 0 2502 -2958A57 57 0 1 0 2616 -2958Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2616 -2730A57 57 0 1 0 2502 -2730A57 57 0 1 0 2616 -2730Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2616 -2730A57 57 0 1 0 2502 -2730A57 57 0 1 0 2616 -2730Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2616 -2503A57 57 0 1 0 2502 -2503A57 57 0 1 0 2616 -2503Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2616 -2503A57 57 0 1 0 2502 -2503A57 57 0 1 0 2616 -2503Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2616 -2275A57 57 0 1 0 2502 -2275A57 57 0 1 0 2616 -2275Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2616 -2275A57 57 0 1 0 2502 -2275A57 57 0 1 0 2616 -2275Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2616 -2048A57 57 0 1 0 2502 -2048A57 57 0 1 0 2616 -2048Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2616 -2048A57 57 0 1 0 2502 -2048A57 57 0 1 0 2616 -2048Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2616 -1820A57 57 0 1 0 2502 -1820A57 57 0 1 0 2616 -1820Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2616 -1820A57 57 0 1 0 2502 -1820A57 57 0 1 0 2616 -1820Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2616 -1593A57 57 0 1 0 2502 -1593A57 57 0 1 0 2616 -1593Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2616 -1593A57 57 0 1 0 2502 -1593A57 57 0 1 0 2616 -1593Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2616 -1366A57 56 0 1 0 2502 -1366A57 56 0 1 0 2616 -1366Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2616 -1366A57 56 0 1 0 2502 -1366A57 56 0 1 0 2616 -1366Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2616 -1138A57 57 0 1 0 2502 -1138A57 57 0 1 0 2616 -1138Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2616 -1138A57 57 0 1 0 2502 -1138A57 57 0 1 0 2616 -1138Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2616 -910A57 57 0 1 0 2502 -910A57 57 0 1 0 2616 -910Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2616 -910A57 57 0 1 0 2502 -910A57 57 0 1 0 2616 -910Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2616 -683A57 57 0 1 0 2502 -683A57 57 0 1 0 2616 -683Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2616 -683A57 57 0 1 0 2502 -683A57 57 0 1 0 2616 -683Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2616 -455A57 57 0 1 0 2502 -455A57 57 0 1 0 2616 -455Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2616 -455A57 57 0 1 0 2502 -455A57 57 0 1 0 2616 -455Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2616 -228A57 57 0 1 0 2502 -228A57 57 0 1 0 2616 -228Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2616 -228A57 57 0 1 0 2502 -228A57 57 0 1 0 2616 -228Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2616 0A57 57 0 1 0 2502 0A57 57 0 1 0 2616 0Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2616 0A57 57 0 1 0 2502 0A57 57 0 1 0 2616 0Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="1820" y="-3130" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 1</text>
+<text xml:space="preserve" x="2790" y="-3130" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 2</text>
+<text xml:space="preserve" x="2790" y="60" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs"> 30</text>
+<text xml:space="preserve" x="1760" y="60" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs"> 29</text>
+<text xml:space="preserve" x="-3360" y="-3950" font-family="Arial,Helvetica,sans-serif" font-size="303.33" fill="#000000" textLength="5330" lengthAdjust="spacingAndGlyphs">SPARROW EXPANSION CONNECTOR</text>
+<text xml:space="preserve" x="-3330" y="-3360" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1320" lengthAdjust="spacingAndGlyphs">30 Pin Header - J20</text>
+<text xml:space="preserve" x="-3010" y="-2430" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="-3010" y="-1950" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs">1 </text>
+<text xml:space="preserve" x="-3010" y="-1790" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">3</text>
+<text xml:space="preserve" x="-3010" y="-1630" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">5</text>
+<text xml:space="preserve" x="-3010" y="-1470" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">7</text>
+<text xml:space="preserve" x="-3010" y="-1310" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">9</text>
+<text xml:space="preserve" x="-3010" y="-1150" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">11</text>
+<text xml:space="preserve" x="-3010" y="-990" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">13</text>
+<text xml:space="preserve" x="-3010" y="-830" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">15</text>
+<text xml:space="preserve" x="-3010" y="-670" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">17</text>
+<text xml:space="preserve" x="-3010" y="-510" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">19</text>
+<text xml:space="preserve" x="-3010" y="-350" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">21</text>
+<text xml:space="preserve" x="-3010" y="-190" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">23</text>
+<text xml:space="preserve" x="-3010" y="-30" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">25</text>
+<text xml:space="preserve" x="-3010" y="130" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">27</text>
+<text xml:space="preserve" x="-3010" y="290" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">29</text>
+<text xml:space="preserve" x="-690" y="-2440" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="-690" y="-1960" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs">2 </text>
+<text xml:space="preserve" x="-690" y="-1800" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">4</text>
+<text xml:space="preserve" x="-690" y="-1640" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">6</text>
+<text xml:space="preserve" x="-690" y="-1480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">8</text>
+<text xml:space="preserve" x="-690" y="-1320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">10</text>
+<text xml:space="preserve" x="-690" y="-1160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">12</text>
+<text xml:space="preserve" x="-690" y="-1000" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">14</text>
+<text xml:space="preserve" x="-690" y="-840" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">16</text>
+<text xml:space="preserve" x="-690" y="-680" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">18</text>
+<text xml:space="preserve" x="-690" y="-520" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">20</text>
+<text xml:space="preserve" x="-690" y="-360" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">22</text>
+<text xml:space="preserve" x="-690" y="-200" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">24</text>
+<text xml:space="preserve" x="-690" y="-40" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">26</text>
+<text xml:space="preserve" x="-690" y="120" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">28</text>
+<text xml:space="preserve" x="-690" y="280" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">30</text>
+<text xml:space="preserve" x="-60" y="-2450" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="-60" y="-1970" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="590" lengthAdjust="spacingAndGlyphs">DATA 13</text>
+<text xml:space="preserve" x="-60" y="-1810" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="590" lengthAdjust="spacingAndGlyphs">DATA 11</text>
+<text xml:space="preserve" x="-60" y="-1650" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="510" lengthAdjust="spacingAndGlyphs">DATA 9</text>
+<text xml:space="preserve" x="-60" y="-1490" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="510" lengthAdjust="spacingAndGlyphs">DATA 7</text>
+<text xml:space="preserve" x="-60" y="-1330" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="510" lengthAdjust="spacingAndGlyphs">DATA 5</text>
+<text xml:space="preserve" x="-60" y="-1170" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="510" lengthAdjust="spacingAndGlyphs">DATA 3</text>
+<text xml:space="preserve" x="-60" y="-1010" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="510" lengthAdjust="spacingAndGlyphs">DATA 1</text>
+<text xml:space="preserve" x="-60" y="-850" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="590" lengthAdjust="spacingAndGlyphs">DATA 15</text>
+<text xml:space="preserve" x="-60" y="-690" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-60" y="-530" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="-60" y="-370" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="410" lengthAdjust="spacingAndGlyphs">EINT5</text>
+<text xml:space="preserve" x="-60" y="-210" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="-60" y="-50" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="620" lengthAdjust="spacingAndGlyphs">MFP_INT</text>
+<text xml:space="preserve" x="-60" y="110" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">VCC</text>
+<text xml:space="preserve" x="-60" y="270" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">VCC</text>
+<text xml:space="preserve" x="-2500" y="-2430" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="-2500" y="-1950" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="590" lengthAdjust="spacingAndGlyphs">DATA 14</text>
+<text xml:space="preserve" x="-2500" y="-1790" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="590" lengthAdjust="spacingAndGlyphs">DATA 12</text>
+<text xml:space="preserve" x="-2500" y="-1630" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="590" lengthAdjust="spacingAndGlyphs">DATA 10</text>
+<text xml:space="preserve" x="-2500" y="-1470" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="510" lengthAdjust="spacingAndGlyphs">DATA 8</text>
+<text xml:space="preserve" x="-2500" y="-1310" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="510" lengthAdjust="spacingAndGlyphs">DATA 6</text>
+<text xml:space="preserve" x="-2500" y="-1150" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="510" lengthAdjust="spacingAndGlyphs">DATA 4</text>
+<text xml:space="preserve" x="-2500" y="-990" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="510" lengthAdjust="spacingAndGlyphs">DATA 2</text>
+<text xml:space="preserve" x="-2500" y="-830" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="510" lengthAdjust="spacingAndGlyphs">DATA 0</text>
+<text xml:space="preserve" x="-2500" y="-670" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2500" y="-510" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2500" y="-350" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="410" lengthAdjust="spacingAndGlyphs">EINT1</text>
+<text xml:space="preserve" x="-2500" y="-190" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="530" lengthAdjust="spacingAndGlyphs">500KHZ</text>
+<text xml:space="preserve" x="-2500" y="-30" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="570" lengthAdjust="spacingAndGlyphs">MFP_IEI</text>
+<text xml:space="preserve" x="-2500" y="130" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="410" lengthAdjust="spacingAndGlyphs">EINT3</text>
+<text xml:space="preserve" x="-2500" y="290" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">VCC</text>
+<path d="M2387 -3468A57 57 0 1 0 2273 -3468A57 57 0 1 0 2387 -3468Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 -3468A57 57 0 1 0 2273 -3468A57 57 0 1 0 2387 -3468Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 -3241A57 57 0 1 0 2273 -3241A57 57 0 1 0 2387 -3241Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 -3241A57 57 0 1 0 2273 -3241A57 57 0 1 0 2387 -3241Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 -3013A57 57 0 1 0 2273 -3013A57 57 0 1 0 2387 -3013Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 -3013A57 57 0 1 0 2273 -3013A57 57 0 1 0 2387 -3013Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 -2786A57 57 0 1 0 2273 -2786A57 57 0 1 0 2387 -2786Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 -2786A57 57 0 1 0 2273 -2786A57 57 0 1 0 2387 -2786Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 -2558A57 57 0 1 0 2273 -2558A57 57 0 1 0 2387 -2558Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 -2558A57 57 0 1 0 2273 -2558A57 57 0 1 0 2387 -2558Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 -2331A57 57 0 1 0 2273 -2331A57 57 0 1 0 2387 -2331Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 -2331A57 57 0 1 0 2273 -2331A57 57 0 1 0 2387 -2331Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 -2103A57 57 0 1 0 2273 -2103A57 57 0 1 0 2387 -2103Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 -2103A57 57 0 1 0 2273 -2103A57 57 0 1 0 2387 -2103Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 -1876A57 57 0 1 0 2273 -1876A57 57 0 1 0 2387 -1876Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 -1876A57 57 0 1 0 2273 -1876A57 57 0 1 0 2387 -1876Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 -1649A57 56 0 1 0 2273 -1649A57 56 0 1 0 2387 -1649Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 -1649A57 56 0 1 0 2273 -1649A57 56 0 1 0 2387 -1649Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 -1421A57 57 0 1 0 2273 -1421A57 57 0 1 0 2387 -1421Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 -1421A57 57 0 1 0 2273 -1421A57 57 0 1 0 2387 -1421Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 -1193A57 57 0 1 0 2273 -1193A57 57 0 1 0 2387 -1193Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 -1193A57 57 0 1 0 2273 -1193A57 57 0 1 0 2387 -1193Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 -966A57 57 0 1 0 2273 -966A57 57 0 1 0 2387 -966Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 -966A57 57 0 1 0 2273 -966A57 57 0 1 0 2387 -966Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 -738A57 57 0 1 0 2273 -738A57 57 0 1 0 2387 -738Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 -738A57 57 0 1 0 2273 -738A57 57 0 1 0 2387 -738Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 -511A57 57 0 1 0 2273 -511A57 57 0 1 0 2387 -511Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 -511A57 57 0 1 0 2273 -511A57 57 0 1 0 2387 -511Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 -283A57 57 0 1 0 2273 -283A57 57 0 1 0 2387 -283Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 -283A57 57 0 1 0 2273 -283A57 57 0 1 0 2387 -283Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 -56A57 57 0 1 0 2273 -56A57 57 0 1 0 2387 -56Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 -56A57 57 0 1 0 2273 -56A57 57 0 1 0 2387 -56Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 172A57 57 0 1 0 2273 172A57 57 0 1 0 2387 172Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 172A57 57 0 1 0 2273 172A57 57 0 1 0 2387 172Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 399A57 57 0 1 0 2273 399A57 57 0 1 0 2387 399Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 399A57 57 0 1 0 2273 399A57 57 0 1 0 2387 399Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 -3468A57 57 0 1 0 2558 -3468A57 57 0 1 0 2672 -3468Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 -3468A57 57 0 1 0 2558 -3468A57 57 0 1 0 2672 -3468Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 -3241A57 57 0 1 0 2558 -3241A57 57 0 1 0 2672 -3241Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 -3241A57 57 0 1 0 2558 -3241A57 57 0 1 0 2672 -3241Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 -3013A57 57 0 1 0 2558 -3013A57 57 0 1 0 2672 -3013Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 -3013A57 57 0 1 0 2558 -3013A57 57 0 1 0 2672 -3013Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 -2786A57 57 0 1 0 2558 -2786A57 57 0 1 0 2672 -2786Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 -2786A57 57 0 1 0 2558 -2786A57 57 0 1 0 2672 -2786Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 -2558A57 57 0 1 0 2558 -2558A57 57 0 1 0 2672 -2558Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 -2558A57 57 0 1 0 2558 -2558A57 57 0 1 0 2672 -2558Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 -2331A57 57 0 1 0 2558 -2331A57 57 0 1 0 2672 -2331Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 -2331A57 57 0 1 0 2558 -2331A57 57 0 1 0 2672 -2331Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 -2103A57 57 0 1 0 2558 -2103A57 57 0 1 0 2672 -2103Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 -2103A57 57 0 1 0 2558 -2103A57 57 0 1 0 2672 -2103Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 -1876A57 57 0 1 0 2558 -1876A57 57 0 1 0 2672 -1876Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 -1876A57 57 0 1 0 2558 -1876A57 57 0 1 0 2672 -1876Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 -1649A57 56 0 1 0 2558 -1649A57 56 0 1 0 2672 -1649Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 -1649A57 56 0 1 0 2558 -1649A57 56 0 1 0 2672 -1649Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 -1421A57 57 0 1 0 2558 -1421A57 57 0 1 0 2672 -1421Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 -1421A57 57 0 1 0 2558 -1421A57 57 0 1 0 2672 -1421Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 -1193A57 57 0 1 0 2558 -1193A57 57 0 1 0 2672 -1193Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 -1193A57 57 0 1 0 2558 -1193A57 57 0 1 0 2672 -1193Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 -966A57 57 0 1 0 2558 -966A57 57 0 1 0 2672 -966Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 -966A57 57 0 1 0 2558 -966A57 57 0 1 0 2672 -966Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 -738A57 57 0 1 0 2558 -738A57 57 0 1 0 2672 -738Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 -738A57 57 0 1 0 2558 -738A57 57 0 1 0 2672 -738Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 -511A57 57 0 1 0 2558 -511A57 57 0 1 0 2672 -511Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 -511A57 57 0 1 0 2558 -511A57 57 0 1 0 2672 -511Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 -283A57 57 0 1 0 2558 -283A57 57 0 1 0 2672 -283Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 -283A57 57 0 1 0 2558 -283A57 57 0 1 0 2672 -283Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 -56A57 57 0 1 0 2558 -56A57 57 0 1 0 2672 -56Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 -56A57 57 0 1 0 2558 -56A57 57 0 1 0 2672 -56Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 172A57 57 0 1 0 2558 172A57 57 0 1 0 2672 172Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 172A57 57 0 1 0 2558 172A57 57 0 1 0 2672 172Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 399A57 57 0 1 0 2558 399A57 57 0 1 0 2672 399Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 399A57 57 0 1 0 2558 399A57 57 0 1 0 2672 399Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 627A57 57 0 1 0 2273 627A57 57 0 1 0 2387 627Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 627A57 57 0 1 0 2273 627A57 57 0 1 0 2387 627Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 854A57 57 0 1 0 2273 854A57 57 0 1 0 2387 854Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 854A57 57 0 1 0 2273 854A57 57 0 1 0 2387 854Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 1082A57 57 0 1 0 2273 1082A57 57 0 1 0 2387 1082Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 1082A57 57 0 1 0 2273 1082A57 57 0 1 0 2387 1082Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 1309A57 57 0 1 0 2273 1309A57 57 0 1 0 2387 1309Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 1309A57 57 0 1 0 2273 1309A57 57 0 1 0 2387 1309Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 627A57 57 0 1 0 2558 627A57 57 0 1 0 2672 627Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 627A57 57 0 1 0 2558 627A57 57 0 1 0 2672 627Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 854A57 57 0 1 0 2558 854A57 57 0 1 0 2672 854Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 854A57 57 0 1 0 2558 854A57 57 0 1 0 2672 854Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 1082A57 57 0 1 0 2558 1082A57 57 0 1 0 2672 1082Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 1082A57 57 0 1 0 2558 1082A57 57 0 1 0 2672 1082Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 1309A57 57 0 1 0 2558 1309A57 57 0 1 0 2672 1309Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 1309A57 57 0 1 0 2558 1309A57 57 0 1 0 2672 1309Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 1536A57 57 0 1 0 2273 1536A57 57 0 1 0 2387 1536Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 1536A57 57 0 1 0 2273 1536A57 57 0 1 0 2387 1536Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 1764A57 57 0 1 0 2273 1764A57 57 0 1 0 2387 1764Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 1764A57 57 0 1 0 2273 1764A57 57 0 1 0 2387 1764Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2387 1991A57 57 0 1 0 2273 1991A57 57 0 1 0 2387 1991Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2387 1991A57 57 0 1 0 2273 1991A57 57 0 1 0 2387 1991Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 1536A57 57 0 1 0 2558 1536A57 57 0 1 0 2672 1536Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 1536A57 57 0 1 0 2558 1536A57 57 0 1 0 2672 1536Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 1764A57 57 0 1 0 2558 1764A57 57 0 1 0 2672 1764Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 1764A57 57 0 1 0 2558 1764A57 57 0 1 0 2672 1764Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2672 1991A57 57 0 1 0 2558 1991A57 57 0 1 0 2672 1991Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2672 1991A57 57 0 1 0 2558 1991A57 57 0 1 0 2672 1991Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2159 -3582L2159 2105M2785 -3582L2785 2105M2159 -3582L2785 -3582M2159 2105L2785 2105" fill="none" stroke="#000000" stroke-width="23"/>
+<text xml:space="preserve" x="1930" y="-3410" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 1</text>
+<text xml:space="preserve" x="2840" y="-3410" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 2</text>
+<text xml:space="preserve" x="2840" y="2050" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs"> 50</text>
+<text xml:space="preserve" x="1820" y="2050" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs"> 49</text>
+<text xml:space="preserve" x="-3410" y="-2960" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1320" lengthAdjust="spacingAndGlyphs">50 Pin Header - J19</text>
+<text xml:space="preserve" x="-3470" y="-3950" font-family="Arial,Helvetica,sans-serif" font-size="303.33" fill="#000000" textLength="5330" lengthAdjust="spacingAndGlyphs">SPARROW EXPANSION CONNECTOR</text>
+<text xml:space="preserve" x="-3070" y="-2200" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="-3070" y="-1720" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs">1 </text>
+<text xml:space="preserve" x="-3070" y="-1560" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">3</text>
+<text xml:space="preserve" x="-3070" y="-1400" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">5</text>
+<text xml:space="preserve" x="-3070" y="-1240" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">7</text>
+<text xml:space="preserve" x="-3070" y="-1080" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">9</text>
+<text xml:space="preserve" x="-3070" y="-920" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">11</text>
+<text xml:space="preserve" x="-3070" y="-760" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">13</text>
+<text xml:space="preserve" x="-3070" y="-600" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">15</text>
+<text xml:space="preserve" x="-3070" y="-440" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">17</text>
+<text xml:space="preserve" x="-3070" y="-280" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">19</text>
+<text xml:space="preserve" x="-3070" y="-120" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">21</text>
+<text xml:space="preserve" x="-3070" y="40" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">23</text>
+<text xml:space="preserve" x="-3070" y="200" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">25</text>
+<text xml:space="preserve" x="-3070" y="360" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">27</text>
+<text xml:space="preserve" x="-3070" y="520" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">29</text>
+<text xml:space="preserve" x="-3070" y="680" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">31</text>
+<text xml:space="preserve" x="-3070" y="840" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">33</text>
+<text xml:space="preserve" x="-3070" y="1000" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">35</text>
+<text xml:space="preserve" x="-3070" y="1160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">37</text>
+<text xml:space="preserve" x="-3070" y="1320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">39</text>
+<text xml:space="preserve" x="-3070" y="1480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">41</text>
+<text xml:space="preserve" x="-3070" y="1640" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">43</text>
+<text xml:space="preserve" x="-3070" y="1800" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">45</text>
+<text xml:space="preserve" x="-3070" y="1960" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">47</text>
+<text xml:space="preserve" x="-3070" y="2120" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">49</text>
+<text xml:space="preserve" x="-30" y="-2210" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="-30" y="-1730" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-30" y="-1570" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs">AS</text>
+<text xml:space="preserve" x="-30" y="-1410" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">UDS</text>
+<text xml:space="preserve" x="-30" y="-1250" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="490" lengthAdjust="spacingAndGlyphs">DTACK</text>
+<text xml:space="preserve" x="-30" y="-1090" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="270" lengthAdjust="spacingAndGlyphs">FC1</text>
+<text xml:space="preserve" x="-30" y="-930" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="-30" y="-770" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="340" lengthAdjust="spacingAndGlyphs">IACK</text>
+<text xml:space="preserve" x="-30" y="-610" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs">BR</text>
+<text xml:space="preserve" x="-30" y="-450" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="270" lengthAdjust="spacingAndGlyphs">Halt</text>
+<text xml:space="preserve" x="-30" y="-290" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="310" lengthAdjust="spacingAndGlyphs">IPL0</text>
+<text xml:space="preserve" x="-30" y="-130" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="310" lengthAdjust="spacingAndGlyphs">IPL2</text>
+<text xml:space="preserve" x="-30" y="30" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">VCC</text>
+<text xml:space="preserve" x="-30" y="190" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="600" lengthAdjust="spacingAndGlyphs">ADDR 23</text>
+<text xml:space="preserve" x="-30" y="350" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="600" lengthAdjust="spacingAndGlyphs">ADDR 21</text>
+<text xml:space="preserve" x="-30" y="510" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="600" lengthAdjust="spacingAndGlyphs">ADDR 19</text>
+<text xml:space="preserve" x="-30" y="670" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="600" lengthAdjust="spacingAndGlyphs">ADDR 17</text>
+<text xml:space="preserve" x="-30" y="830" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="600" lengthAdjust="spacingAndGlyphs">ADDR 15</text>
+<text xml:space="preserve" x="-30" y="990" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="600" lengthAdjust="spacingAndGlyphs">ADDR 13</text>
+<text xml:space="preserve" x="-30" y="1150" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="600" lengthAdjust="spacingAndGlyphs">ADDR 11</text>
+<text xml:space="preserve" x="-30" y="1310" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">ADDR 9</text>
+<text xml:space="preserve" x="-30" y="1470" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">ADDR 7</text>
+<text xml:space="preserve" x="-30" y="1630" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">ADDR 5</text>
+<text xml:space="preserve" x="-30" y="1790" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">ADDR 3</text>
+<text xml:space="preserve" x="-30" y="1950" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">ADDR 1</text>
+<text xml:space="preserve" x="-30" y="2110" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="-750" y="-2210" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="-750" y="-1730" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs">2 </text>
+<text xml:space="preserve" x="-750" y="-1570" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">4</text>
+<text xml:space="preserve" x="-750" y="-1410" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">6</text>
+<text xml:space="preserve" x="-750" y="-1250" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">8</text>
+<text xml:space="preserve" x="-750" y="-1090" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">10</text>
+<text xml:space="preserve" x="-750" y="-930" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">12</text>
+<text xml:space="preserve" x="-750" y="-770" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">14</text>
+<text xml:space="preserve" x="-750" y="-610" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">16</text>
+<text xml:space="preserve" x="-750" y="-450" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">18</text>
+<text xml:space="preserve" x="-750" y="-290" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">20</text>
+<text xml:space="preserve" x="-750" y="-130" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">22</text>
+<text xml:space="preserve" x="-750" y="30" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">24</text>
+<text xml:space="preserve" x="-750" y="190" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">26</text>
+<text xml:space="preserve" x="-750" y="350" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">28</text>
+<text xml:space="preserve" x="-750" y="510" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">30</text>
+<text xml:space="preserve" x="-750" y="670" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">32</text>
+<text xml:space="preserve" x="-750" y="830" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">34</text>
+<text xml:space="preserve" x="-750" y="990" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">36</text>
+<text xml:space="preserve" x="-750" y="1150" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">38</text>
+<text xml:space="preserve" x="-750" y="1310" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">40</text>
+<text xml:space="preserve" x="-750" y="1470" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">42</text>
+<text xml:space="preserve" x="-750" y="1630" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">44</text>
+<text xml:space="preserve" x="-750" y="1790" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">46</text>
+<text xml:space="preserve" x="-750" y="1950" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">48</text>
+<text xml:space="preserve" x="-750" y="2110" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">50</text>
+<text xml:space="preserve" x="-2310" y="-2200" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="-2310" y="-1720" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2310" y="-1560" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="310" lengthAdjust="spacingAndGlyphs">BGK</text>
+<text xml:space="preserve" x="-2310" y="-1400" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="290" lengthAdjust="spacingAndGlyphs">LDS</text>
+<text xml:space="preserve" x="-2310" y="-1240" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="340" lengthAdjust="spacingAndGlyphs">RXW</text>
+<text xml:space="preserve" x="-2310" y="-1080" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="270" lengthAdjust="spacingAndGlyphs">FC2</text>
+<text xml:space="preserve" x="-2310" y="-920" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="270" lengthAdjust="spacingAndGlyphs">FC0</text>
+<text xml:space="preserve" x="-2310" y="-760" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="-2310" y="-600" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="210" lengthAdjust="spacingAndGlyphs">BG</text>
+<text xml:space="preserve" x="-2310" y="-440" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="390" lengthAdjust="spacingAndGlyphs">Reset</text>
+<text xml:space="preserve" x="-2310" y="-280" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="400" lengthAdjust="spacingAndGlyphs">BERR</text>
+<text xml:space="preserve" x="-2310" y="-120" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="310" lengthAdjust="spacingAndGlyphs">IPL1</text>
+<text xml:space="preserve" x="-2310" y="40" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="590" lengthAdjust="spacingAndGlyphs">CPUCLK</text>
+<text xml:space="preserve" x="-2310" y="200" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">VCC</text>
+<text xml:space="preserve" x="-2310" y="360" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="600" lengthAdjust="spacingAndGlyphs">ADDR 22</text>
+<text xml:space="preserve" x="-2310" y="520" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="600" lengthAdjust="spacingAndGlyphs">ADDR 20</text>
+<text xml:space="preserve" x="-2310" y="680" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="600" lengthAdjust="spacingAndGlyphs">ADDR 18</text>
+<text xml:space="preserve" x="-2310" y="840" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="600" lengthAdjust="spacingAndGlyphs">ADDR 16</text>
+<text xml:space="preserve" x="-2310" y="1000" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="600" lengthAdjust="spacingAndGlyphs">ADDR 14</text>
+<text xml:space="preserve" x="-2310" y="1160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="600" lengthAdjust="spacingAndGlyphs">ADDR 12</text>
+<text xml:space="preserve" x="-2310" y="1320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="600" lengthAdjust="spacingAndGlyphs">ADDR 10</text>
+<text xml:space="preserve" x="-2310" y="1480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">ADDR 8</text>
+<text xml:space="preserve" x="-2310" y="1640" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">ADDR 6</text>
+<text xml:space="preserve" x="-2310" y="1800" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">ADDR 4</text>
+<text xml:space="preserve" x="-2310" y="1960" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">ADDR 2</text>
+<text xml:space="preserve" x="-2310" y="2120" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="-3110" y="-3900" font-family="Arial,Helvetica,sans-serif" font-size="303.33" fill="#000000" textLength="3160" lengthAdjust="spacingAndGlyphs">FLOPPY CONNECTOR</text>
+<path d="M1996 -3496L1996 713M2622 -3496L2622 713M1996 -3496L2622 -3496M1996 713L2622 713" fill="none" stroke="#000000" stroke-width="23"/>
+<path d="M2224 -3325A57 57 0 1 0 2110 -3325A57 57 0 1 0 2224 -3325Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2224 -3325A57 57 0 1 0 2110 -3325A57 57 0 1 0 2224 -3325Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2224 -3098A57 57 0 1 0 2110 -3098A57 57 0 1 0 2224 -3098Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2224 -3098A57 57 0 1 0 2110 -3098A57 57 0 1 0 2224 -3098Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2224 -2870A57 57 0 1 0 2110 -2870A57 57 0 1 0 2224 -2870Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2224 -2870A57 57 0 1 0 2110 -2870A57 57 0 1 0 2224 -2870Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2224 -2643A57 57 0 1 0 2110 -2643A57 57 0 1 0 2224 -2643Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2224 -2643A57 57 0 1 0 2110 -2643A57 57 0 1 0 2224 -2643Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2224 -2415A57 57 0 1 0 2110 -2415A57 57 0 1 0 2224 -2415Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2224 -2415A57 57 0 1 0 2110 -2415A57 57 0 1 0 2224 -2415Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2224 -2188A57 57 0 1 0 2110 -2188A57 57 0 1 0 2224 -2188Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2224 -2188A57 57 0 1 0 2110 -2188A57 57 0 1 0 2224 -2188Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2224 -1960A57 57 0 1 0 2110 -1960A57 57 0 1 0 2224 -1960Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2224 -1960A57 57 0 1 0 2110 -1960A57 57 0 1 0 2224 -1960Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2224 -1733A57 57 0 1 0 2110 -1733A57 57 0 1 0 2224 -1733Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2224 -1733A57 57 0 1 0 2110 -1733A57 57 0 1 0 2224 -1733Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2224 -1506A57 56 0 1 0 2110 -1506A57 56 0 1 0 2224 -1506Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2224 -1506A57 56 0 1 0 2110 -1506A57 56 0 1 0 2224 -1506Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2224 -1278A57 57 0 1 0 2110 -1278A57 57 0 1 0 2224 -1278Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2224 -1278A57 57 0 1 0 2110 -1278A57 57 0 1 0 2224 -1278Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2224 -1050A57 57 0 1 0 2110 -1050A57 57 0 1 0 2224 -1050Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2224 -1050A57 57 0 1 0 2110 -1050A57 57 0 1 0 2224 -1050Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2224 -823A57 57 0 1 0 2110 -823A57 57 0 1 0 2224 -823Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2224 -823A57 57 0 1 0 2110 -823A57 57 0 1 0 2224 -823Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2224 -595A57 57 0 1 0 2110 -595A57 57 0 1 0 2224 -595Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2224 -595A57 57 0 1 0 2110 -595A57 57 0 1 0 2224 -595Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2224 -368A57 57 0 1 0 2110 -368A57 57 0 1 0 2224 -368Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2224 -368A57 57 0 1 0 2110 -368A57 57 0 1 0 2224 -368Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2224 -140A57 57 0 1 0 2110 -140A57 57 0 1 0 2224 -140Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2224 -140A57 57 0 1 0 2110 -140A57 57 0 1 0 2224 -140Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2224 87A57 57 0 1 0 2110 87A57 57 0 1 0 2224 87Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2224 87A57 57 0 1 0 2110 87A57 57 0 1 0 2224 87Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2224 315A57 57 0 1 0 2110 315A57 57 0 1 0 2224 315Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2224 315A57 57 0 1 0 2110 315A57 57 0 1 0 2224 315Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2224 542A57 57 0 1 0 2110 542A57 57 0 1 0 2224 542Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2224 542A57 57 0 1 0 2110 542A57 57 0 1 0 2224 542Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2509 -3325A57 57 0 1 0 2395 -3325A57 57 0 1 0 2509 -3325Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2509 -3325A57 57 0 1 0 2395 -3325A57 57 0 1 0 2509 -3325Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2509 -3098A57 57 0 1 0 2395 -3098A57 57 0 1 0 2509 -3098Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2509 -3098A57 57 0 1 0 2395 -3098A57 57 0 1 0 2509 -3098Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2509 -2870A57 57 0 1 0 2395 -2870A57 57 0 1 0 2509 -2870Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2509 -2870A57 57 0 1 0 2395 -2870A57 57 0 1 0 2509 -2870Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2509 -2643A57 57 0 1 0 2395 -2643A57 57 0 1 0 2509 -2643Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2509 -2643A57 57 0 1 0 2395 -2643A57 57 0 1 0 2509 -2643Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2509 -2415A57 57 0 1 0 2395 -2415A57 57 0 1 0 2509 -2415Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2509 -2415A57 57 0 1 0 2395 -2415A57 57 0 1 0 2509 -2415Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2509 -2188A57 57 0 1 0 2395 -2188A57 57 0 1 0 2509 -2188Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2509 -2188A57 57 0 1 0 2395 -2188A57 57 0 1 0 2509 -2188Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2509 -1960A57 57 0 1 0 2395 -1960A57 57 0 1 0 2509 -1960Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2509 -1960A57 57 0 1 0 2395 -1960A57 57 0 1 0 2509 -1960Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2509 -1733A57 57 0 1 0 2395 -1733A57 57 0 1 0 2509 -1733Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2509 -1733A57 57 0 1 0 2395 -1733A57 57 0 1 0 2509 -1733Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2509 -1506A57 56 0 1 0 2395 -1506A57 56 0 1 0 2509 -1506Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2509 -1506A57 56 0 1 0 2395 -1506A57 56 0 1 0 2509 -1506Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2509 -1278A57 57 0 1 0 2395 -1278A57 57 0 1 0 2509 -1278Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2509 -1278A57 57 0 1 0 2395 -1278A57 57 0 1 0 2509 -1278Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2509 -1050A57 57 0 1 0 2395 -1050A57 57 0 1 0 2509 -1050Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2509 -1050A57 57 0 1 0 2395 -1050A57 57 0 1 0 2509 -1050Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2509 -823A57 57 0 1 0 2395 -823A57 57 0 1 0 2509 -823Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2509 -823A57 57 0 1 0 2395 -823A57 57 0 1 0 2509 -823Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2509 -595A57 57 0 1 0 2395 -595A57 57 0 1 0 2509 -595Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2509 -595A57 57 0 1 0 2395 -595A57 57 0 1 0 2509 -595Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2509 -368A57 57 0 1 0 2395 -368A57 57 0 1 0 2509 -368Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2509 -368A57 57 0 1 0 2395 -368A57 57 0 1 0 2509 -368Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2509 -140A57 57 0 1 0 2395 -140A57 57 0 1 0 2509 -140Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2509 -140A57 57 0 1 0 2395 -140A57 57 0 1 0 2509 -140Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2509 87A57 57 0 1 0 2395 87A57 57 0 1 0 2509 87Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2509 87A57 57 0 1 0 2395 87A57 57 0 1 0 2509 87Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2509 315A57 57 0 1 0 2395 315A57 57 0 1 0 2509 315Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2509 315A57 57 0 1 0 2395 315A57 57 0 1 0 2509 315Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2509 542A57 57 0 1 0 2395 542A57 57 0 1 0 2509 542Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2509 542A57 57 0 1 0 2395 542A57 57 0 1 0 2509 542Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="1710" y="-3380" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 1</text>
+<text xml:space="preserve" x="2730" y="-3380" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 2</text>
+<text xml:space="preserve" x="2680" y="600" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs"> 34</text>
+<text xml:space="preserve" x="1710" y="600" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs"> 33</text>
+<text xml:space="preserve" x="-2900" y="-2600" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="-2900" y="-2120" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs">1 </text>
+<text xml:space="preserve" x="-2900" y="-1960" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">3</text>
+<text xml:space="preserve" x="-2900" y="-1800" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">5</text>
+<text xml:space="preserve" x="-2900" y="-1640" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">7</text>
+<text xml:space="preserve" x="-2900" y="-1480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">9</text>
+<text xml:space="preserve" x="-2900" y="-1320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">11</text>
+<text xml:space="preserve" x="-2900" y="-1160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">13</text>
+<text xml:space="preserve" x="-2900" y="-1000" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">15</text>
+<text xml:space="preserve" x="-2900" y="-840" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">17</text>
+<text xml:space="preserve" x="-2900" y="-680" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">19</text>
+<text xml:space="preserve" x="-2900" y="-520" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">21</text>
+<text xml:space="preserve" x="-2900" y="-360" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">23</text>
+<text xml:space="preserve" x="-2900" y="-200" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">25</text>
+<text xml:space="preserve" x="-2900" y="-40" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">27</text>
+<text xml:space="preserve" x="-2900" y="120" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">29</text>
+<text xml:space="preserve" x="-2900" y="280" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">31</text>
+<text xml:space="preserve" x="-2900" y="440" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">33</text>
+<text xml:space="preserve" x="-2350" y="-2600" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="-2350" y="-2120" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2350" y="-1960" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2350" y="-1800" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2350" y="-1640" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2350" y="-1480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2350" y="-1320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2350" y="-1160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2350" y="-1000" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2350" y="-840" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2350" y="-680" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2350" y="-520" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2350" y="-360" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2350" y="-200" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2350" y="-40" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2350" y="120" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1010" lengthAdjust="spacingAndGlyphs">Media Detect 2</text>
+<text xml:space="preserve" x="-2350" y="280" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2350" y="440" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1010" lengthAdjust="spacingAndGlyphs">Media Detect 1</text>
+<text xml:space="preserve" x="310" y="-2620" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="310" y="-2140" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="970" lengthAdjust="spacingAndGlyphs">Mode Select 1</text>
+<text xml:space="preserve" x="310" y="-1980" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="310" y="-1820" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="970" lengthAdjust="spacingAndGlyphs">Mode Select 2</text>
+<text xml:space="preserve" x="310" y="-1660" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">Index Pulse</text>
+<text xml:space="preserve" x="310" y="-1500" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="940" lengthAdjust="spacingAndGlyphs">Drive Select 0</text>
+<text xml:space="preserve" x="310" y="-1340" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="940" lengthAdjust="spacingAndGlyphs">Drive Select 1</text>
+<text xml:space="preserve" x="310" y="-1180" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="310" y="-1020" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="640" lengthAdjust="spacingAndGlyphs">Motor On</text>
+<text xml:space="preserve" x="310" y="-860" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1090" lengthAdjust="spacingAndGlyphs">Direction Select</text>
+<text xml:space="preserve" x="310" y="-700" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="320" lengthAdjust="spacingAndGlyphs">Step</text>
+<text xml:space="preserve" x="310" y="-540" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="710" lengthAdjust="spacingAndGlyphs">Write Data</text>
+<text xml:space="preserve" x="310" y="-380" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="720" lengthAdjust="spacingAndGlyphs">Write Gate</text>
+<text xml:space="preserve" x="310" y="-220" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="500" lengthAdjust="spacingAndGlyphs">Track 0</text>
+<text xml:space="preserve" x="310" y="-60" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="900" lengthAdjust="spacingAndGlyphs">Write Protect</text>
+<text xml:space="preserve" x="310" y="100" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="700" lengthAdjust="spacingAndGlyphs">Read Data</text>
+<text xml:space="preserve" x="310" y="260" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="780" lengthAdjust="spacingAndGlyphs">Side Select</text>
+<text xml:space="preserve" x="310" y="420" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="870" lengthAdjust="spacingAndGlyphs">Disk Change</text>
+<text xml:space="preserve" x="-580" y="-2610" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="-580" y="-2130" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs">2 </text>
+<text xml:space="preserve" x="-580" y="-1970" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">4</text>
+<text xml:space="preserve" x="-580" y="-1810" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">6</text>
+<text xml:space="preserve" x="-580" y="-1650" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">8</text>
+<text xml:space="preserve" x="-580" y="-1490" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">10</text>
+<text xml:space="preserve" x="-580" y="-1330" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">12</text>
+<text xml:space="preserve" x="-580" y="-1170" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">14</text>
+<text xml:space="preserve" x="-580" y="-1010" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">16</text>
+<text xml:space="preserve" x="-580" y="-850" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">18</text>
+<text xml:space="preserve" x="-580" y="-690" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">20</text>
+<text xml:space="preserve" x="-580" y="-530" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">22</text>
+<text xml:space="preserve" x="-580" y="-370" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">24</text>
+<text xml:space="preserve" x="-580" y="-210" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">26</text>
+<text xml:space="preserve" x="-580" y="-50" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">28</text>
+<text xml:space="preserve" x="-580" y="110" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">30</text>
+<text xml:space="preserve" x="-580" y="270" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">32</text>
+<text xml:space="preserve" x="-580" y="430" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">34</text>
+<text xml:space="preserve" x="-3070" y="-3390" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1340" lengthAdjust="spacingAndGlyphs">34 Pin Header - U76</text>
+<text xml:space="preserve" x="-3240" y="-3950" font-family="Arial,Helvetica,sans-serif" font-size="303.33" fill="#000000" textLength="3210" lengthAdjust="spacingAndGlyphs">ENHANCED JOYSTICK</text>
+<text xml:space="preserve" x="-3250" y="-3300" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="720" lengthAdjust="spacingAndGlyphs">DB15 Male</text>
+<text xml:space="preserve" x="-3290" y="-1730" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="-3290" y="-1250" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">1</text>
+<text xml:space="preserve" x="-3290" y="-1090" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs">2 </text>
+<text xml:space="preserve" x="-3290" y="-930" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">3</text>
+<text xml:space="preserve" x="-3290" y="-770" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">4</text>
+<text xml:space="preserve" x="-3290" y="-610" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">5</text>
+<text xml:space="preserve" x="-3290" y="-450" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">6</text>
+<text xml:space="preserve" x="-3290" y="-290" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">7</text>
+<text xml:space="preserve" x="-3290" y="-130" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">8</text>
+<text xml:space="preserve" x="-3290" y="30" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">9</text>
+<text xml:space="preserve" x="-3290" y="190" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">10</text>
+<text xml:space="preserve" x="-3290" y="350" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">11</text>
+<text xml:space="preserve" x="-3290" y="510" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">12</text>
+<text xml:space="preserve" x="-3290" y="670" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">13</text>
+<text xml:space="preserve" x="-3290" y="830" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">14</text>
+<text xml:space="preserve" x="-3290" y="990" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">15</text>
+<text xml:space="preserve" x="-2680" y="-1720" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="-2680" y="-1240" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="320" lengthAdjust="spacingAndGlyphs">UP 2</text>
+<text xml:space="preserve" x="-2680" y="-1080" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="320" lengthAdjust="spacingAndGlyphs">DN 2</text>
+<text xml:space="preserve" x="-2680" y="-920" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">LT 2</text>
+<text xml:space="preserve" x="-2680" y="-760" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="270" lengthAdjust="spacingAndGlyphs">RT2</text>
+<text xml:space="preserve" x="-2680" y="-600" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="420" lengthAdjust="spacingAndGlyphs">PAD 2</text>
+<text xml:space="preserve" x="-2680" y="-440" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="320" lengthAdjust="spacingAndGlyphs">PR 2</text>
+<text xml:space="preserve" x="-2680" y="-280" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">VCC</text>
+<text xml:space="preserve" x="-2680" y="-120" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="-2680" y="40" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2680" y="200" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="320" lengthAdjust="spacingAndGlyphs">PR 3</text>
+<text xml:space="preserve" x="-2680" y="360" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="320" lengthAdjust="spacingAndGlyphs">UP 3</text>
+<text xml:space="preserve" x="-2680" y="520" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="320" lengthAdjust="spacingAndGlyphs">DN 3</text>
+<text xml:space="preserve" x="-2680" y="680" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">LT 3</text>
+<text xml:space="preserve" x="-2680" y="840" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="310" lengthAdjust="spacingAndGlyphs">RT 3</text>
+<text xml:space="preserve" x="-2680" y="1000" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="420" lengthAdjust="spacingAndGlyphs">PAD 3</text>
+<text xml:space="preserve" x="-210" y="-1730" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="-210" y="-1250" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">1</text>
+<text xml:space="preserve" x="-210" y="-1090" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs">2 </text>
+<text xml:space="preserve" x="-210" y="-930" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">3</text>
+<text xml:space="preserve" x="-210" y="-770" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">4</text>
+<text xml:space="preserve" x="-210" y="-610" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">5</text>
+<text xml:space="preserve" x="-210" y="-450" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">6</text>
+<text xml:space="preserve" x="-210" y="-290" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">7</text>
+<text xml:space="preserve" x="-210" y="-130" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">8</text>
+<text xml:space="preserve" x="-210" y="30" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">9</text>
+<text xml:space="preserve" x="-210" y="190" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">10</text>
+<text xml:space="preserve" x="-210" y="350" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">11</text>
+<text xml:space="preserve" x="-210" y="510" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">12</text>
+<text xml:space="preserve" x="-210" y="670" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">13</text>
+<text xml:space="preserve" x="-210" y="830" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">14</text>
+<text xml:space="preserve" x="-210" y="990" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">15</text>
+<text xml:space="preserve" x="440" y="-1720" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="440" y="-1240" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="320" lengthAdjust="spacingAndGlyphs">UP 0</text>
+<text xml:space="preserve" x="440" y="-1080" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="320" lengthAdjust="spacingAndGlyphs">DN 0</text>
+<text xml:space="preserve" x="440" y="-920" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">LT 0</text>
+<text xml:space="preserve" x="440" y="-760" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="270" lengthAdjust="spacingAndGlyphs">RT0</text>
+<text xml:space="preserve" x="440" y="-600" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="420" lengthAdjust="spacingAndGlyphs">PAD 0</text>
+<text xml:space="preserve" x="440" y="-440" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="320" lengthAdjust="spacingAndGlyphs">PR 0</text>
+<text xml:space="preserve" x="440" y="-280" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">VCC</text>
+<text xml:space="preserve" x="440" y="-120" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="440" y="40" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="440" y="200" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="320" lengthAdjust="spacingAndGlyphs">PR 1</text>
+<text xml:space="preserve" x="440" y="360" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="320" lengthAdjust="spacingAndGlyphs">UP 1</text>
+<text xml:space="preserve" x="440" y="520" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="320" lengthAdjust="spacingAndGlyphs">DN 1</text>
+<text xml:space="preserve" x="440" y="680" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">LT 1</text>
+<text xml:space="preserve" x="440" y="840" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="310" lengthAdjust="spacingAndGlyphs">RT 1</text>
+<text xml:space="preserve" x="440" y="1000" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="420" lengthAdjust="spacingAndGlyphs">PAD 1</text>
+<text xml:space="preserve" x="-2990" y="-2170" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" text-decoration="underline" textLength="240" lengthAdjust="spacingAndGlyphs">J15</text>
+<text xml:space="preserve" x="180" y="-2160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" text-decoration="underline" textLength="240" lengthAdjust="spacingAndGlyphs">J14</text>
+<path d="M2011 -3263A94 100 0 1 0 1823 -3263A94 100 0 1 0 2011 -3263Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2011 -3263A94 100 0 1 0 1823 -3263A94 100 0 1 0 2011 -3263Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1239 -3267A97 100 0 1 0 1045 -3267A97 100 0 1 0 1239 -3267Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1239 -3267A97 100 0 1 0 1045 -3267A97 100 0 1 0 1239 -3267Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M852 -3267A97 100 0 1 0 658 -3267A97 100 0 1 0 852 -3267Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M852 -3267A97 100 0 1 0 658 -3267A97 100 0 1 0 852 -3267Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2398 -3263A94 100 0 1 0 2210 -3263A94 100 0 1 0 2398 -3263Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2398 -3263A94 100 0 1 0 2210 -3263A94 100 0 1 0 2398 -3263Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1627 -3263A94 100 0 1 0 1439 -3263A94 100 0 1 0 1627 -3263Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1627 -3263A94 100 0 1 0 1439 -3263A94 100 0 1 0 1627 -3263Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2203 -3064A94 100 0 1 0 2015 -3064A94 100 0 1 0 2203 -3064Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2203 -3064A94 100 0 1 0 2015 -3064A94 100 0 1 0 2203 -3064Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1431 -3068A97 100 0 1 0 1237 -3068A97 100 0 1 0 1431 -3068Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1431 -3068A97 100 0 1 0 1237 -3068A97 100 0 1 0 1431 -3068Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1044 -3068A97 100 0 1 0 850 -3068A97 100 0 1 0 1044 -3068Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1044 -3068A97 100 0 1 0 850 -3068A97 100 0 1 0 1044 -3068Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2590 -3064A94 100 0 1 0 2402 -3064A94 100 0 1 0 2590 -3064Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2590 -3064A94 100 0 1 0 2402 -3064A94 100 0 1 0 2590 -3064Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1819 -3064A94 100 0 1 0 1631 -3064A94 100 0 1 0 1819 -3064Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1819 -3064A94 100 0 1 0 1631 -3064A94 100 0 1 0 1819 -3064Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2011 -2857A94 100 0 1 0 1823 -2857A94 100 0 1 0 2011 -2857Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2011 -2857A94 100 0 1 0 1823 -2857A94 100 0 1 0 2011 -2857Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1239 -2861A97 100 0 1 0 1045 -2861A97 100 0 1 0 1239 -2861Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1239 -2861A97 100 0 1 0 1045 -2861A97 100 0 1 0 1239 -2861Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M852 -2861A97 100 0 1 0 658 -2861A97 100 0 1 0 852 -2861Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M852 -2861A97 100 0 1 0 658 -2861A97 100 0 1 0 852 -2861Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2398 -2857A94 100 0 1 0 2210 -2857A94 100 0 1 0 2398 -2857Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2398 -2857A94 100 0 1 0 2210 -2857A94 100 0 1 0 2398 -2857Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1627 -2857A94 100 0 1 0 1439 -2857A94 100 0 1 0 1627 -2857Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1627 -2857A94 100 0 1 0 1439 -2857A94 100 0 1 0 1627 -2857Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2587 -2660A100 102 0 0 0 2687 -2762M564 -3469A100 102 0 0 0 464 -3367M563 -2762A96 102 0 0 0 659 -2660M2787 -3367A100 102 0 0 0 2687 -3469M659 -2660L2591 -2660M560 -3469L2687 -3469M2787 -3367L2687 -2758M464 -3367L564 -2758" fill="none" stroke="#000000" stroke-width="23"/>
+<text xml:space="preserve" x="2960" y="-3240" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 1</text>
+<text xml:space="preserve" x="170" y="-3010" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs"> 10</text>
+<text xml:space="preserve" x="2900" y="-3010" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 6</text>
+<text xml:space="preserve" x="2840" y="-2790" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs"> 11</text>
+<text xml:space="preserve" x="230" y="-2790" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs"> 15</text>
+<text xml:space="preserve" x="170" y="-3240" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 5</text>
+<text xml:space="preserve" x="-3120" y="-3890" font-family="Arial,Helvetica,sans-serif" font-size="303.33" fill="#000000" textLength="2460" lengthAdjust="spacingAndGlyphs">IDE CONNECTOR</text>
+<path d="M2243 -3489L2243 1629M2925 -3489L2925 1629M2243 -3489L2925 -3489M2243 1629L2925 1629" fill="none" stroke="#000000" stroke-width="23"/>
+<path d="M2527 -3319A57 57 0 1 0 2413 -3319A57 57 0 1 0 2527 -3319Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 -3319A57 57 0 1 0 2413 -3319A57 57 0 1 0 2527 -3319Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 -3092A57 57 0 1 0 2413 -3092A57 57 0 1 0 2527 -3092Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 -3092A57 57 0 1 0 2413 -3092A57 57 0 1 0 2527 -3092Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 -2864A57 57 0 1 0 2413 -2864A57 57 0 1 0 2527 -2864Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 -2864A57 57 0 1 0 2413 -2864A57 57 0 1 0 2527 -2864Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 -2637A57 57 0 1 0 2413 -2637A57 57 0 1 0 2527 -2637Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 -2637A57 57 0 1 0 2413 -2637A57 57 0 1 0 2527 -2637Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 -2409A57 57 0 1 0 2413 -2409A57 57 0 1 0 2527 -2409Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 -2409A57 57 0 1 0 2413 -2409A57 57 0 1 0 2527 -2409Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 -2182A57 57 0 1 0 2413 -2182A57 57 0 1 0 2527 -2182Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 -2182A57 57 0 1 0 2413 -2182A57 57 0 1 0 2527 -2182Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 -1954A57 57 0 1 0 2413 -1954A57 57 0 1 0 2527 -1954Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 -1954A57 57 0 1 0 2413 -1954A57 57 0 1 0 2527 -1954Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 -1727A57 57 0 1 0 2413 -1727A57 57 0 1 0 2527 -1727Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 -1727A57 57 0 1 0 2413 -1727A57 57 0 1 0 2527 -1727Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 -1500A57 56 0 1 0 2413 -1500A57 56 0 1 0 2527 -1500Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 -1500A57 56 0 1 0 2413 -1500A57 56 0 1 0 2527 -1500Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 -1272A57 57 0 1 0 2413 -1272A57 57 0 1 0 2527 -1272Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 -1272A57 57 0 1 0 2413 -1272A57 57 0 1 0 2527 -1272Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 -1044A57 57 0 1 0 2413 -1044A57 57 0 1 0 2527 -1044Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 -1044A57 57 0 1 0 2413 -1044A57 57 0 1 0 2527 -1044Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 -817A57 57 0 1 0 2413 -817A57 57 0 1 0 2527 -817Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 -817A57 57 0 1 0 2413 -817A57 57 0 1 0 2527 -817Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 -589A57 57 0 1 0 2413 -589A57 57 0 1 0 2527 -589Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 -589A57 57 0 1 0 2413 -589A57 57 0 1 0 2527 -589Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 -362A57 57 0 1 0 2413 -362A57 57 0 1 0 2527 -362Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 -362A57 57 0 1 0 2413 -362A57 57 0 1 0 2527 -362Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 -134A57 57 0 1 0 2413 -134A57 57 0 1 0 2527 -134Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 -134A57 57 0 1 0 2413 -134A57 57 0 1 0 2527 -134Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 93A57 57 0 1 0 2413 93A57 57 0 1 0 2527 93Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 93A57 57 0 1 0 2413 93A57 57 0 1 0 2527 93Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 321A57 57 0 1 0 2413 321A57 57 0 1 0 2527 321Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 321A57 57 0 1 0 2413 321A57 57 0 1 0 2527 321Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 548A57 57 0 1 0 2413 548A57 57 0 1 0 2527 548Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 548A57 57 0 1 0 2413 548A57 57 0 1 0 2527 548Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 -3319A57 57 0 1 0 2698 -3319A57 57 0 1 0 2812 -3319Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 -3319A57 57 0 1 0 2698 -3319A57 57 0 1 0 2812 -3319Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 -3092A57 57 0 1 0 2698 -3092A57 57 0 1 0 2812 -3092Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 -3092A57 57 0 1 0 2698 -3092A57 57 0 1 0 2812 -3092Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 -2864A57 57 0 1 0 2698 -2864A57 57 0 1 0 2812 -2864Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 -2864A57 57 0 1 0 2698 -2864A57 57 0 1 0 2812 -2864Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 -2637A57 57 0 1 0 2698 -2637A57 57 0 1 0 2812 -2637Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 -2637A57 57 0 1 0 2698 -2637A57 57 0 1 0 2812 -2637Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 -2409A57 57 0 1 0 2698 -2409A57 57 0 1 0 2812 -2409Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 -2409A57 57 0 1 0 2698 -2409A57 57 0 1 0 2812 -2409Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 -2182A57 57 0 1 0 2698 -2182A57 57 0 1 0 2812 -2182Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 -2182A57 57 0 1 0 2698 -2182A57 57 0 1 0 2812 -2182Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 -1954A57 57 0 1 0 2698 -1954A57 57 0 1 0 2812 -1954Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 -1954A57 57 0 1 0 2698 -1954A57 57 0 1 0 2812 -1954Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 -1727A57 57 0 1 0 2698 -1727A57 57 0 1 0 2812 -1727Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 -1727A57 57 0 1 0 2698 -1727A57 57 0 1 0 2812 -1727Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 -1500A57 56 0 1 0 2698 -1500A57 56 0 1 0 2812 -1500Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 -1500A57 56 0 1 0 2698 -1500A57 56 0 1 0 2812 -1500Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 -1272A57 57 0 1 0 2698 -1272A57 57 0 1 0 2812 -1272Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 -1272A57 57 0 1 0 2698 -1272A57 57 0 1 0 2812 -1272Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 -1044A57 57 0 1 0 2698 -1044A57 57 0 1 0 2812 -1044Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 -1044A57 57 0 1 0 2698 -1044A57 57 0 1 0 2812 -1044Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 -817A57 57 0 1 0 2698 -817A57 57 0 1 0 2812 -817Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 -817A57 57 0 1 0 2698 -817A57 57 0 1 0 2812 -817Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 -589A57 57 0 1 0 2698 -589A57 57 0 1 0 2812 -589Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 -589A57 57 0 1 0 2698 -589A57 57 0 1 0 2812 -589Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 -362A57 57 0 1 0 2698 -362A57 57 0 1 0 2812 -362Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 -362A57 57 0 1 0 2698 -362A57 57 0 1 0 2812 -362Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 -134A57 57 0 1 0 2698 -134A57 57 0 1 0 2812 -134Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 -134A57 57 0 1 0 2698 -134A57 57 0 1 0 2812 -134Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 93A57 57 0 1 0 2698 93A57 57 0 1 0 2812 93Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 93A57 57 0 1 0 2698 93A57 57 0 1 0 2812 93Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 321A57 57 0 1 0 2698 321A57 57 0 1 0 2812 321Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 321A57 57 0 1 0 2698 321A57 57 0 1 0 2812 321Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 548A57 57 0 1 0 2698 548A57 57 0 1 0 2812 548Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 548A57 57 0 1 0 2698 548A57 57 0 1 0 2812 548Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 776A57 57 0 1 0 2413 776A57 57 0 1 0 2527 776Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 776A57 57 0 1 0 2413 776A57 57 0 1 0 2527 776Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 1003A57 57 0 1 0 2413 1003A57 57 0 1 0 2527 1003Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 1003A57 57 0 1 0 2413 1003A57 57 0 1 0 2527 1003Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 1231A57 57 0 1 0 2413 1231A57 57 0 1 0 2527 1231Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 1231A57 57 0 1 0 2413 1231A57 57 0 1 0 2527 1231Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2527 1458A57 57 0 1 0 2413 1458A57 57 0 1 0 2527 1458Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2527 1458A57 57 0 1 0 2413 1458A57 57 0 1 0 2527 1458Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 776A57 57 0 1 0 2698 776A57 57 0 1 0 2812 776Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 776A57 57 0 1 0 2698 776A57 57 0 1 0 2812 776Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 1003A57 57 0 1 0 2698 1003A57 57 0 1 0 2812 1003Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 1003A57 57 0 1 0 2698 1003A57 57 0 1 0 2812 1003Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 1231A57 57 0 1 0 2698 1231A57 57 0 1 0 2812 1231Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 1231A57 57 0 1 0 2698 1231A57 57 0 1 0 2812 1231Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2812 1458A57 57 0 1 0 2698 1458A57 57 0 1 0 2812 1458Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2812 1458A57 57 0 1 0 2698 1458A57 57 0 1 0 2812 1458Z" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="1950" y="-3330" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="190" lengthAdjust="spacingAndGlyphs"> 1</text>
+<text xml:space="preserve" x="2970" y="-3340" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="190" lengthAdjust="spacingAndGlyphs"> 2</text>
+<text xml:space="preserve" x="2980" y="1570" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="270" lengthAdjust="spacingAndGlyphs"> 44</text>
+<text xml:space="preserve" x="1840" y="1570" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="270" lengthAdjust="spacingAndGlyphs"> 43</text>
+<text xml:space="preserve" x="-3110" y="-3390" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1260" lengthAdjust="spacingAndGlyphs">43 Pin Header - P7</text>
+<text xml:space="preserve" x="-2960" y="-2880" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="-2960" y="-2400" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs">1 </text>
+<text xml:space="preserve" x="-2960" y="-2240" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">3</text>
+<text xml:space="preserve" x="-2960" y="-2080" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">5</text>
+<text xml:space="preserve" x="-2960" y="-1920" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">7</text>
+<text xml:space="preserve" x="-2960" y="-1760" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">9</text>
+<text xml:space="preserve" x="-2960" y="-1600" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">11</text>
+<text xml:space="preserve" x="-2960" y="-1440" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">13</text>
+<text xml:space="preserve" x="-2960" y="-1280" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">15</text>
+<text xml:space="preserve" x="-2960" y="-1120" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">17</text>
+<text xml:space="preserve" x="-2960" y="-960" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">19</text>
+<text xml:space="preserve" x="-2960" y="-800" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">21</text>
+<text xml:space="preserve" x="-2960" y="-640" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">23</text>
+<text xml:space="preserve" x="-2960" y="-480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">25</text>
+<text xml:space="preserve" x="-2960" y="-320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">27</text>
+<text xml:space="preserve" x="-2960" y="-160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">29</text>
+<text xml:space="preserve" x="-2960" y="0" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">31</text>
+<text xml:space="preserve" x="-2960" y="160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">33</text>
+<text xml:space="preserve" x="-2960" y="320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">35</text>
+<text xml:space="preserve" x="-2960" y="480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">37</text>
+<text xml:space="preserve" x="-2960" y="640" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">39</text>
+<text xml:space="preserve" x="-2960" y="800" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">41</text>
+<text xml:space="preserve" x="-2960" y="960" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">43</text>
+<text xml:space="preserve" x="-2410" y="-2880" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="-2410" y="-2400" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="670" lengthAdjust="spacingAndGlyphs">IDE Reset</text>
+<text xml:space="preserve" x="-2410" y="-2240" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="430" lengthAdjust="spacingAndGlyphs">Data 7</text>
+<text xml:space="preserve" x="-2410" y="-2080" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="430" lengthAdjust="spacingAndGlyphs">Data 6</text>
+<text xml:space="preserve" x="-2410" y="-1920" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="430" lengthAdjust="spacingAndGlyphs">Data 5</text>
+<text xml:space="preserve" x="-2410" y="-1760" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="430" lengthAdjust="spacingAndGlyphs">Data 4</text>
+<text xml:space="preserve" x="-2410" y="-1600" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="430" lengthAdjust="spacingAndGlyphs">Data 3</text>
+<text xml:space="preserve" x="-2410" y="-1440" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="430" lengthAdjust="spacingAndGlyphs">Data 2</text>
+<text xml:space="preserve" x="-2410" y="-1280" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="430" lengthAdjust="spacingAndGlyphs">Data 1</text>
+<text xml:space="preserve" x="-2410" y="-1120" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="430" lengthAdjust="spacingAndGlyphs">Data 0</text>
+<text xml:space="preserve" x="-2410" y="-960" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2410" y="-800" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="-2410" y="-640" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="290" lengthAdjust="spacingAndGlyphs">IOW</text>
+<text xml:space="preserve" x="-2410" y="-480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="250" lengthAdjust="spacingAndGlyphs">IOR</text>
+<text xml:space="preserve" x="-2410" y="-320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="-2410" y="-160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="-2410" y="0" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="250" lengthAdjust="spacingAndGlyphs">IRQ</text>
+<text xml:space="preserve" x="-2410" y="160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="480" lengthAdjust="spacingAndGlyphs">ADDR3</text>
+<text xml:space="preserve" x="-2410" y="320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="480" lengthAdjust="spacingAndGlyphs">ADDR2</text>
+<text xml:space="preserve" x="-2410" y="480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="280" lengthAdjust="spacingAndGlyphs">CS0</text>
+<text xml:space="preserve" x="-2410" y="640" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="580" lengthAdjust="spacingAndGlyphs">IDE-ACT</text>
+<text xml:space="preserve" x="-2410" y="800" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">VCC</text>
+<text xml:space="preserve" x="-2410" y="960" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="250" y="-2880" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="250" y="-2400" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="250" y="-2240" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="430" lengthAdjust="spacingAndGlyphs">Data 8</text>
+<text xml:space="preserve" x="250" y="-2080" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="430" lengthAdjust="spacingAndGlyphs">Data 9</text>
+<text xml:space="preserve" x="250" y="-1920" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="510" lengthAdjust="spacingAndGlyphs">Data 10</text>
+<text xml:space="preserve" x="250" y="-1760" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="510" lengthAdjust="spacingAndGlyphs">Data 11</text>
+<text xml:space="preserve" x="250" y="-1600" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="510" lengthAdjust="spacingAndGlyphs">Data 12</text>
+<text xml:space="preserve" x="250" y="-1440" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="510" lengthAdjust="spacingAndGlyphs">Data 13</text>
+<text xml:space="preserve" x="250" y="-1280" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="510" lengthAdjust="spacingAndGlyphs">Data 14</text>
+<text xml:space="preserve" x="250" y="-1120" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="510" lengthAdjust="spacingAndGlyphs">Data 15</text>
+<text xml:space="preserve" x="250" y="-960" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="530" lengthAdjust="spacingAndGlyphs">Key Pin</text>
+<text xml:space="preserve" x="250" y="-800" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="250" y="-640" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="250" y="-480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="250" y="-320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="250" y="-160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="250" y="0" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="250" y="160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="250" y="320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="480" lengthAdjust="spacingAndGlyphs">ADDR4</text>
+<text xml:space="preserve" x="250" y="480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="240" lengthAdjust="spacingAndGlyphs">CSI</text>
+<text xml:space="preserve" x="250" y="640" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="250" y="800" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">VCC</text>
+<text xml:space="preserve" x="250" y="960" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="-410" y="-2880" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="-410" y="-2400" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs">2 </text>
+<text xml:space="preserve" x="-410" y="-2240" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">4</text>
+<text xml:space="preserve" x="-410" y="-2080" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">6</text>
+<text xml:space="preserve" x="-410" y="-1920" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">8</text>
+<text xml:space="preserve" x="-410" y="-1760" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">10</text>
+<text xml:space="preserve" x="-410" y="-1600" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">12</text>
+<text xml:space="preserve" x="-410" y="-1440" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">14</text>
+<text xml:space="preserve" x="-410" y="-1280" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">16</text>
+<text xml:space="preserve" x="-410" y="-1120" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">18</text>
+<text xml:space="preserve" x="-410" y="-960" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">20</text>
+<text xml:space="preserve" x="-410" y="-800" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">22</text>
+<text xml:space="preserve" x="-410" y="-640" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">24</text>
+<text xml:space="preserve" x="-410" y="-480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">26</text>
+<text xml:space="preserve" x="-410" y="-320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">28</text>
+<text xml:space="preserve" x="-410" y="-160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">30</text>
+<text xml:space="preserve" x="-410" y="0" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">32</text>
+<text xml:space="preserve" x="-410" y="160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">34</text>
+<text xml:space="preserve" x="-410" y="320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">36</text>
+<text xml:space="preserve" x="-410" y="480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">38</text>
+<text xml:space="preserve" x="-410" y="640" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">40</text>
+<text xml:space="preserve" x="-410" y="800" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">42</text>
+<text xml:space="preserve" x="-410" y="960" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">44</text>
+</svg>

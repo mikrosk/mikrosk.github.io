@@ -1,0 +1,94 @@
+[Footer: -  #   -]
+SECTION FOUR:
+DISASSEMBLY/ASSEMBLY
+
+
+4.1   STE DISASSEMBLY
+
+Use the following procedure to disassemble the STE. Refer to Assembly Drawing,
+Section 6.
+
+
+4.1.1   Top Cover/Keyboard Removal
+
+1. Turn unit upside down.
+
+2. Remove the 6 screws from the square holes. These fasten the top case to the bottom. If the printed circuit board is to be exposed, or the disk drive is to be removed, also remove the three screws from the round holes. These hold the disk drive in place.
+
+3. Turn the unit upright and remove the top case.
+
+4. Remove the keyboard by unplugging the keyboard harness connector located in the right front corner.
+
+
+4.1.2   Disk Drive Removal
+
+Remove the the screws in the round holes. Lift the disk drive slightly and unplug the power harness connector and the ribbon cable.
+
+
+4.1.3   Power Supply Removal
+
+The power supply may be left in place and the upper shield removed in one piece for troubleshooting, as follows:
+
+1. Remove one screw on the right side of the power supply shield. Remove three screws from the back panel EMR shield to the power supply shield.
+
+2. Straighten the two twist tabs.
+
+3. Lift off the power supply shield from the rear.
+
+4. Unplug the wire harness connector in the right front corner of the power supply.
+
+5. Remove two screws at front corners of power supply.
+
+6. Lift the power supply up out of the main assembly.
+
+4.1.4   Removal of Main Assembly from Bottom Case
+
+1. Remove three screws from the front of the shield/printed circuit board assembly.
+
+2. If power supply has not already been removed, remove the two screws securing the power supply to the case at the front corners of the power supply. This can be done by inserting a screwdriver through the holes in the power supply shield or by removing the shield.
+
+3. Lift the assembly up from the front and pull forward.
+
+
+4.1.5   Removal of Shield from Printed Circuit Board
+
+1. Straighten twist tabs (usually four).
+
+2. Remove copper tape (if present).
+
+3. Lift upper shield straight up.
+
+      Note: Now that the major components are exposed, this is a convenient configuration for troubleshooting. The keyboard and disk drive may be re-connected and placed off to the side if those components are needed.
+
+4. Lift printed circuit assembly away from bottom shield. It may be necessary to pull the twist tabs away from the board slightly.
+
+
+4.2   STE RE-ASSEMBLY
+
+  1.  Place insulation panel on Bottom Shield.
+
+  2.  Place Main Board on top of Bottom Shield over insulator panel.
+
+  3.  Plug in power supply connector and position power supply with tabs in slots.
+
+  4.  Align tabs on bottom shield with slots on top shield and fit top shield over main assembly. Twist the tabs to lock in place.
+
+  5.  Place assembly in lower plastic case.
+
+  6.  Fasten the power supply to the bottom case at both front corners with two screws. This can be done with the power supply shield in place, using a magnetized screwdriver to hold the screw, or by by removing the shield.
+
+    If power supply shield was removed from main shield, position it over the power supply. Front tabs slide under slots. Twist rear tabs and replace the screw.
+
+    Replace three screws holding back panel EMR shield to the power supply shield.
+
+  7.  Plug disk drive power and ribbon cables into drive (cables go under shield), and position drive over standoffs.
+
+  8.  Replace four screws at the front edge of the main assembly.
+
+  9.  Connect keyboard harness to main board through the opening in the upper shield, and place keyboard on the supporting ribs of the bottom case.
+
+10. Place the top cover over the assembly.
+
+11. Turn over the assembly and replace the nine screws. The three longer screws go in the round holes to secure the disk drive.
+
+      Warning: It is strongly recommended that the computer be retested once in plastic to make sure that the reassembly was done correctly and there are no shorts to the shield.

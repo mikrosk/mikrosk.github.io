@@ -1,0 +1,562 @@
+[Footer: -  #   -]
+SECTION TWO:
+THEORY OF OPERATION
+
+
+2.0   OVERVIEW
+
+The 520STE and 1040STE share a common architecture, using the same LSI chip set. The most significant difference is the addition (to the 1040STE) of one bank of 512K of RAM, for a total of 1024K (1,048,568 bytes). Except for the additional RAM, the differences between the 520STE and 1040STE are transparent to software. The hardware can be considered as consisting of a main system (central processing unit and support chips) and several Input/Output subsystems.
+
+
+2.1   MAIN SYSTEM
+
+      ∙ MC68000 running at 8 MHz
+      ∙ 256 kbyte ROM
+      ∙ 512/1024 kbyte RAM
+      ∙ Direct Memory Access Support
+      ∙ System Timing and Bus Control
+      ∙ Interrupt Control
+
+
+2.2   AUDIO/VIDEO SUBSYSTEM
+
+The STE has bit-mapped video display, normally using 32,000 bytes of RAM, relocatable anywhere in memory. There are three display modes available:
+
+      RGB, with the ability to be GenLocked:
+            1. 320 x 200 pixel, 16 color palette from 4096 selections
+            2. 640 x 200 pixel, 4 color palette from 4096 selections
+      Monochrome:
+            3. 640 x 400 pixel, monochrome monitor interface
+
+
+2.2.1   Audio Output
+
+The STE has a programmable sound chip and 8-bit stereo DMA at 4 playback frequencies.
+
+
+2.2.2   Television Interface
+
+NTSC, PALI and PALB.
+
+2.3   INPUT/OUTPUT SUBSYSTEMS
+
+      ∙ Intelligent keyboard with 2 button mouse/joystick interface
+      ∙ Parallel printer interface
+      ∙ RS232C serial interface
+      ∙ Floppy disk drive and connector for external drive
+      ∙ Game controller ports
+      ∙ Hard disk drive interface (ACSI)
+      ∙ Musical instrument network communication: Musical Instrument
+       Digital Interface (MIDI)
+
+
+2.4   MICROPROCESSING UNIT
+
+The STE uses the Motorola MC68000 16-bit external/32-bit internal data bus, 24-bit address bus microprocessor, running at 8 MHz.
+
+
+2.5   GSTMCU
+
+GSTMCU is such an important component that it is involved in nearly every operation in the computer. The functions may be summarized as follows:
+
+      CLOCK DIVIDERS  takes the 16-MHz clock and outputs 8-MHz, 4-MHz, and 500-kHz clocks.
+
+      VIDEO TIMING  Blank, DE (Display Enable), Vsync and Hsync are used to generate signals for the video display. There is a Read/Write register in GSTMCU which may be written to configure for 50 or 60 Hz operation or 71 Hz monochrome operation (done by the Operating System).
+
+      INTERRUPT PRIORITY  interrupts from the MFP and video timing are coded into four levels of priority on outputs IPL0 and IPL1 to the 68000. These levels correspond to no interrupts, MFP interrupts, VSYNC interrupt, HSYNC interrupt.
+
+                  level 7           reserved
+                  level 6           MFP
+                  level 5           unused
+                  level 4           VSYNC
+                  level 3           unused
+                  level 2           HSYNC
+                  level 1           unused
+
+      SIGNAL AND BUS ARBITRATION  GSTMCU decodes addresses to generate chip selects to the 6850s, MFP, DMA Controller, Programmable Sound Generator, Memory Controller, and ROMS. It receives signals from the MFP, DMA, Memory Controller, to synchronize data transfer. It arbitrates the bus during DMA transfers to prevent CPU and DMA devices from interfering with each other (see DMA below).
+
+      ILLEGAL CONDITION DETECTION  GSTMCU asserts Bus Error (BERR) if certain conditions are violated, such as writing to ROM,  writing to system memory when the processor is in user mode, or if no device responds within 64 cycles of the 8 MHz clock (8µs). For example, if the CPU tries to read from beyond the end of memory, the Memory Controller will not assert DTACK, resulting in a bus error which will terminate the memory cycle.
+
+      MEMORY CONTROLLER  takes addresses from the address bus and converts to Row Address Strobe (RAS) and Column Address Strobe (CAS). All RAM accesses are controlled by this Atari proprietary chip, which is programmable for up to 4 Megabytes of memory. The Operating System determines how much memory is present and configures the Memory Controller at power-up. The Memory Controller refreshes the dynamic RAMs, loads the Video Shifter with display data, and gives or receives data during direct memory access (DMA). The Memory Controller produces all of the addresses for video, sound, and DMA on the multiplexed address bus. These addresses never appear on the system address bus.
+
+      CHIP SELECTS  Decodes addresses for RAM and ROM and asserts output signals to enable these devices.
+
+
+2.6   MAIN MEMORY
+
+Main memory consists of 256 kbytes of ROM and one or two banks (512 kbyte each) of dynamic RAM. In addition, the cartridge slot allows access to 128 kbytes of ROM. All memory is directly addressable. The components of the memory system are: ROM, RAM, GSTMCU and shifter. The Operating System resides mostly in ROM, with optional segments loaded from disk into RAM.
+
+Each bank of RAM in the STE is made up of a pair of 8-bit wide SIMMs to create the
+16-bit wide system memory bus. All of the SIMMs in the system must be the same size. It is not possible to mix 256 kbit SIMMs and 1 Mbit SIMMs in the same system. All of the SIMMs used should have the same access time, which can be no greater than 150 ns.
+It is possible to use 9-bit wide SIMMs, with the hardware simply ignoring the ninth bit.
+
+
+      RAM MEMORY MAP:
+
+      000008-000800     System Memory (privileged access)
+      000800-07FFFF     Low Bank
+      080000-0FFFFF     High Bank (1040 only)
+
+      Note: The first 8 bytes of ROM are mapped into addresses 0-7. These are reset vectors which the 68000 uses on start-up.
+
+The Operating System is located in two 128K x 8 ROM chips.
+
+
+      ROM MEMORY MAP:
+
+      E00000 - E3FFFF
+
+
+2.7   DIRECT MEMORY ACCESS
+
+A single direct memory access (DMA) channel is provided that is shared between the internal floppy disk controller and external devices connected to the ACSI port. Data can be transferred at up to 10 Megabits/sec (1.25 Megabytes/sec) across the 8-bit wide ACSI port.
+
+For DMA to take place, the memory controller is programmed with the starting address at the RAM buffer. The DMA controller is set up to select the source and the number of 512 byte blocks to transfer, and then the FDC or external peripheral is given the command to
+send or receive data. The entire block of data is then transferred to or from memory without intervention by the CPU. The FDC or peripheral generally asserts its interrupt line to signal the completion of the transfer (and the availability of status information).
+
+To access registers in the FDC or ACSI bus peripherals, the 68000 talks through the DMA chip. The state of two address lines that are generated by the DMAC is set by writing to the DMA control register. Then a 68000 read or write cycle causes the corresponding cycle on the peripheral side of the DMAC.
+
+
+2.8   MULTI-FUNCTION PERIPHERAL CONTROL
+
+2.8.1   Interrupt Control
+
+The 68901 MFP can generate up to 16 interrupts, 8 internally and 8 from external sources. Each interrupt can be masked off or disabled by programming the MFP. The 8 inputs are also directly readable by the CPU. When the MFP receives an interrupt internally, if the interrupt is enabled, MFPINT will be driven low. When the CPU is ready to respond, it signals interrupt acknowledge (FC2-FC0 high, A3-A1=6, and R/W low) and GSTMCU will assert the MFPs IACK signal (interrupt acknowledge). The MFP will assert DTACK and put a vector number on the data bus, which the CPU will read and use to calculate the address of the interrupt routine.
+
+The interrupts controlled by the MFP are: monochrome monitor detect (MONOMON), RS232 (including CTS, DCD, RI), disk (FDINT and HDINT), parallel port BUSY, display enable (DE, equals the active part of a display line), 6850 IRQs for keyboard and MIDI data, and MFP timers.
+
+Not all I/O operations use interrupts. The CPU can also poll the MFP while waiting for an operation to complete or to check the current status.
+
+2.8.2   MFP Counter/Timers
+
+The MFP clock runs at 2.4576 MHz. The MFP contains four timers:
+
+Timer A     Reserved for application software used in the original ST. In the STE, its external event input is used to count DMA sound subsystem cycles.
+Timer B     External input can be used to count horizontal display lines.
+Timer C     Reserved for use by the operating system as a periodic interrupt (nominally 200 Hz when running TOS).
+Timer D     Baud rate generator for the MFP's RS232 port. Its output is used to drive both the receiver and transmitter clock inputs. It will normally be programmed to be 16 times the desired asynchronous baud rate.
+
+
+2.9  AUDIO/VIDEO SUBSYSTEM
+
+The video subsystem consists of the video display memory (an arbitrary block of RAM starting on any word boundary), the GSTMCU, a graphics control chip (Video Shifter), some discrete components to drive the video output, and an RF modulator. The audio subsystem consists of a Programmable Sound Generator chip, DMA sound circuit, and a programmable mixer (LMC 1992).
+
+
+2.9.1   Video Shifter (GSTShifter)
+
+There are 16 color palette registers in the shifter. All 16 may be used in low resolution, 4 may be used in medium resolution, and only one is used in high resolution (actually, only bit 0 of register 0 is used for inverse/normal video). Each palette is programmed for 16 levels of intensity of red, blue, and green, so there are 16 x 16 x 16 = 4096 colors possible. For a given pixel, the color which is displayed is taken from the palette pointed to by assembling the bits from each logical plane (see description of video display memory below). The shifter will output the red, green and blue levels specified by the palette. Note that there are four outputs for each color. Each output is either on or off. Thus, the number of possible output levels is 2 to the 4th power = 16 levels. The four outputs are summed through a resistor network to proportion the voltage level to give 16 equal steps. In monochrome mode, the color palettes are bypassed and there is a separate output.
+
+
+2.9.2   Video Display Memory
+
+Display memory is part of main memory with the physical screen origin located at the top left corner of the screen. Display memory is configured as 1, 2, or 4 (high, medium, or low resolution) logical planes are interwoven as 16 bit words into contiguous memory to form one 32,000-byte physical plane starting at any word boundary. The starting address of display memory is placed in the Memory Controller's Video Base Address register by the Operating System or application. The Memory Controller will load display information into the Video Shifter 16 bits at a time, and the Video Shifter will decode this information to generate a serial display stream. In monochrome mode, each bit represents 1 pixel on or off. In color, bits are combined from each plane to generate the correct level of red, green and blue.
+
+For example, in low resolution (4 planes) 4 words are loaded into the Video Shifter for each word (16 pixels displayed on the screen. The Video Shifter combines bit 0 from each word to form a four bit number (0-15), and takes the color from the palette referenced by that number (e.g., 01001 = 5, use color from palette register 5) and outputs those levels, then takes bit 1 from each plane and outputs the color from the palette referenced by those 4 bits, etc.
+
+
+2.9.3   GSTMCU
+
+GSTMCU provides timing control to the Memory Controller, video output, and monitor/RF output. VSYNC input to the Memory Controller causes the starting address of the display memory to be reloaded into the address counter during vertical blanking. DISPLAY ENABLE (DE) tells the Memory Controller and Video Shifter that a display line is being scanned and data should be loaded into the Video Shifter. BLANK shuts off the video output from the Video Shifter during periods when the scan is not in a displayable part of the screen. VSYNC and HSYNC both go to the monitor output and RF modulator. These signals synchronize the monitor or TV vertical and horizontal sweep to the display signal.
+
+
+2.9.4   Memory Controller
+
+In addition to the inputs from GSTMCU mentioned above, there are two output control signals associated with video. DCYC strobes data from the display memory into the Video Shifter. CMPCS (color map select) is active only when changing the color attributes in the color palettes.
+
+
+2.9.5   Sound Synthesizer
+
+The YM2149 Programmable Sound Generator (PSG) produced music synthesis, sound effects, and audio feedback (e.g. alarms and key clicks). The clock input is 2 MHz; the frequency response range is 30 Hz to 125 kHz. There are three sound channels output from the chip, which are mixed and sent to the monitor speaker.
+
+The PSG is also used in the system for various I/O functions relating to printer port, disk drive, and RS232.
+
+
+2.9.6   Video Interface
+
+The three types of video output interface provided by the STEs are analog RGB and monochrome, composite and modulated RF. The presence of a monochrome monitor is detected by the MONOMON input (when a monochrome monitor is connected, it will be TTL low). The possible displays are:
+
+      MONOCHROME: single emitter follower amplifier driving the output of the Video Shifter.
+      RGB: resistor network sums outputs for each color. The three colors each have an emitter follower amplifier to drive output.
+      COMPOSITE: the outputs of the emitter followers are input to the modulator box, where the vertical and horizontal sync signals are added to form the composite signal.
+      TELEVISION: the composite signal is modulated onto an RF carrier. The signal is locked onto the color burst frequency by the phase locked loop (PLL). Without the PLL, the colors will shift or dance on the TV screen.
+
+
+2.10   STE DIGITIZED SOUND
+
+The Atari ST family of computers is equipped to reproduce digitized sound using DMA (direct memory access; that is, without using the 68000). This section provides the information required to understand and use this feature.
+
+
+2.10.1   Overview
+
+Sound is stored in memory as digitized samples. Each sample is a number, from -128 to +127, which represents displacement of the speaker from the "neutral" or middle position. During horizontal blanking (transparent to the processor) the DMA sound chip fetches samples from memory and provides them to a digital-to-analog converter (DAC) at one of several constant rates, programmable as (approximately) 50 kHz (kilohertz), 25 kHz, 12.5 kHz, and 6.25 kHz. This rate is called the sample frequency.
+
+The output of the DAC is then filtered to a frequency equal to 40% of the sample frequency by a four-pole switched low-pass filter. This performs "anti-aliasing" of the sound data in a sample-frequency-sensitive way. The signal is further filtered by a two-pole fixed frequency (16 KHz) low-pass filter and provided to a National LMX 1992 Volume/Tone Controller. Finally, the output is available at an RCA-style output jack on the back of the computer. This can be fed into an amplifier, and then to speakers, headphones, or tape recorders.
+
+There are two channels which behave as described above; they are intended to be used as the left and right channels of a stereo system when using the audio inputs of the machine. A monophonic mode is provided which will send the same sample data to each channel.
+
+The stereo sound output is also mixed onto the standard ST audio output sent to the monitor's speaker. The ST's GI sound chip output can be mixed to the monitor and to both stereo output jacks as well.
+
+
+2.11  GENLOCK AND THE STE
+
+The ST (and STE) chip set have the ability to accept external sync. This is controlled by bit 0 at FF820A, as documented in the ST Hardware Specification. This is provided to allow the synchronization of the ST video. In order to do this reliably the system clock must also be phase-locked (or synchronized in some other way) to the input sync signals. No way to achieve this was provided in the ST. As a result, the only GENLOCKs available were internal modifications (usually for the MEGA).
+
+The STE, on the other hand, allows this to be done without opening the case. To inject a system clock ground pin three (GPO) on the monitor connector and then inject the clock into pin 4 (mono detect). The internal frequency of this clock is 32.215905 MHz (NTSC) and 32.084988 MHz (PAL).
+
+      Note: DO NOT SWITCH CLOCK SOURCE WHILE THE SYSTEM IS ACTIVE.
+
+As a result the GPO is no longer available.
+
+
+      MONITOR INPUTS:
+
+      HSYNC             TTL level, negative, 3.3k ohm.
+      VSYNC             TTL level, negative, 3.3k ohm.
+      Monochrome        Digital 1.0 Vpp, 75 ohm.
+      RGB               Analog 0-1.0 Vpp, 75 ohm.
+      Audio             1 Vpp, 1k ohm.
+
+
+                        Monitor
+
+                          1 -  Audio Out
+                          2 -  Composite Video
+                          3 -  General Purpose Output
+                          4 -  Monochrome Detect
+                          5 -  Audio In
+                          6 -  Green
+                          7 -  Red
+                          8 -  +12 Volt Pullup
+                          9 -  Horizontal Sync
+                         10 -  Blue
+                         11 -  Monochrome
+                         12 -  Vertical Sync
+                         13 -  Ground
+
+Figure 2-1:  Monitor Ports
+
+
+
+2.12   INPUT/OUTPUT SUBSYSTEMS
+
+2.12.1   Musical Instrument Communication
+
+The Musical Instrument Digital Interface (MIDI) allows the integration of the STE with music synthesizers, sequencers, drum boxes and other devices possessing a MIDI interface. High speed (31.25 kilobaud) asynchronous current loop serial communication of keyboard and program information is provided by two ports, MIDI OUT and MIDI IN (MIDI OUT also supports the optional MIDI THRU port). MIDI specifies that data consist of 8 data bits preceded by one start bit and followed by one stop bit.
+
+Communication takes place via a 6850 ACIA. The CPU writes to the 6850 in response to interrupts which are passed from the 6850 to the MFP interrupt controller. The system is interfaced to the outside via two inverters on the transmit side and an LED/photo-transistor chip on the input side. The input signal is also routed around through two inverters to the output connector where it is called MIDI THRU in order to allow chaining of multiple devices on the MIDI bus.
+
+                        MIDI Out
+
+                        1 -  THRU Transmit Data
+                        2 -  Shield Ground
+                        3 -  THRU Loop Return
+                        4 -  OUT Transmit Data
+                        5 -  OUT Loop Return
+
+                        MIDI In
+
+                        1 -  Not Connected
+                        2 -  Not Connected
+                        3 -  Not Connected
+                        4 -  IN Receive Data
+                        5 -  IN Loop Return
+
+Figure 2-2:  MIDI Ports
+
+
+2.12.2   Intelligent Keyboard
+
+The keyboard transmits make/break key scan codes, ASCII codes, mouse data, and joystick data, in response to external events, and time-of-day (year, month, day, hour, minute, second) in response to requests by the CPU. Communication is controlled on the main board by a 6850 device and on the keyboard assembly by the 1 MHz 8 bit HD6301 Microcomputer Unit. The HD6301 has internal RAM and ROM. Included in ROM are self-test diagnostics which are performed at power-up and whenever the RESET command is sent over the serial communication line by the CPU. The MC6850 is read from and written to by the CPU in response to interrupts which are passed to the CPU by the MFP interrupt controller.
+
+
+
+
+2.12.3   Mouse/Joysticks
+
+The 2 Button Mouse is an opto-mechanical device with the following characteristics: a resolution of 100 counts/inch, a maximum velocity of 10 inches/second and a maximum pulse phase error of 50 percent. The joystick/mouse port has inputs for up, down, left, right, right button, left button. The right button equals the joystick trigger, the left button is wired to the second joystick port trigger. The joystick has four directions (up, down, etc.) and one trigger.
+
+      Note: The Atari CX24 joystick cannot be installed during initialization.
+
+                        Mouse/Joystick
+
+                        1 -  Up/XB
+                        2 -  Down/XA
+                        3 -  Left/YA
+                        4 -  Right/YB
+                        5 -  Not Connected
+                        6 -  Fire/Left Button
+                        7 -  + 5 VDC
+                        8 -  Ground
+                        9 -  Joy1 Fire/Right Button
+
+
+                        Joystick
+
+                        1 -  Up
+                        2 -  Down
+                        3 -  Left
+                        4 -  Right
+                        5 -  Reserved
+                        6 -  Fire Button
+                        7 - +5 VDC
+                        8 -  Ground
+                        9 -  Not Connected
+
+Figure 2-3:  Mouse/Joystick Ports
+
+
+2.12.4   Parallel Interface
+
+The parallel port is primarily intended as a Centronics type printer interface, but can also be used as a general purpose I/O port. Centronics STROBE and BUSY are supported. BUSY is read by the MFP chip. Data and strobe signals are output by the YM2149 PSG chip. Not all Centronics printers are compatible with this port. The current loading on the data lines should not exceed 2.3 mA. (This corresponds to a 2.2k ohm resistor pull-up on the printer side).
+
+The port can be programmed to be input or output. The PSG chip is read directly by the CPU, with GSTMCU doing address decode to provide chip select.
+
+                        Printer
+
+                        1 -  STROBE
+                        2 -  Data 0
+                        3 -  Data 1
+                        4 -  Data 2
+                        5 -  Data 3
+                        6 -  Data 4
+                        7 -  Data 5
+                        8 -  Data 6
+                        9 -  Data 7
+                       10 -  Not Connected
+                       11 -  BUSY
+                  12 - 17 -  Not Connected
+                  18 - 25 -  Ground
+
+Figure 2-4:  Printer Port
+
+2.12.5   RS232C Interface
+
+The RS232C interface provides asynchronous serial communication with five handshake control signals: Request to Send and Data Terminal Ready are output by the PSG chip; Clear to Send, Data Carrier Detect, and Ring Indicator are input to the MFP chip. The MFP contains a USART (Universal Synchronous/Asynchronous Receiver/Transmitter) which handles data transmission and reception. The 2.4576 MHz clock to the MFP is divided by the timer D (pin 16) output of the MFP to provide the basic clock for receiver and transmitter. Data rate of 50 to 19200 bits per second are supported. 1488 line drivers and 1489 line receivers with ±12V supply (supplied by the TL947 DC:DC inverter) meet the EIA RS232C standard for electrical interface.
+
+                           Modem
+
+                         1 -  Protective Ground
+                         2 -  Transmitted Data
+                         3 -  Received Data
+                         4 -  Request to Send
+                         5 -  Clear to Send
+                         6 -  Not Connected
+                         7 -  Signal Ground
+                         8 -  Data Carrier Detect
+                    9 - 19 -  Not Connected
+                        20 -  Data Terminal Ready
+                        21 -  Not Connected
+                        22 -  Ring Indicaor
+                   23 - 25 -  Not Connected
+
+Figure 2-5.  RS232 Port
+
+
+2.12.6   Disk Drive Interface
+
+The STE computers have a built-in floppy disk controller and logic for selecting up to two single or double sided drives. The 1040 STE has one built-in floppy disk drive and provision for one external disk drive. A single 1772 Controller services both drives. Drive and side selection is done by outputs on the YM2149 PSG chip. The CPU reads and writes to the 1772 through the DMA Controller. The 1772 interrupts the CPU on the INTR line, via the MFP interrupt controller. The 1772 accepts high level commands, such as seek, format track, write sector, read sector, etc. and passes data to the DMA Controller (see DMA controller under Main System, above, for details on DMA transfer). The 1772 interrupts the CPU when the operation is complete. The CPU is freed from much of the overhead of disk I/O.
+
+      Note: Several of the 1772 output signals are externally buffered or inverted. See Block Diagram.
+
+                            Floppy Disk
+
+                          1 -  Read Data
+                          2 -  Side 0 Select
+                          3 -  Logic Ground
+                          4 -  Index Pulse
+                          5 -  Drive 0 Select
+                          6 -  Drive 1 Select
+                          7 -  Logic Ground
+                          8 -  Motor On
+                          9 -  Direction In
+                         10 -  Step
+                         11 -  Write Data
+                         12 -  Write Gate
+                         13 -  Track 00
+                         14 -  Write Protect
+
+Figure 2-5:  Floppy Port
+
+
+2.12.7   Hard Disk Interface
+
+The hard disk drive interface is provided through the DMA controller. The hard disk controller is off-board and is sent commands via a SCSI-like (Small Computer System Interface) command parameter block. Data is transferred via DMA. Writing to the external controller causes HDCS (Hard Disk Chip Select) to go low and CA1 to go high. DMA transfers are controlled by the external device. When data is available, or the device is ready to accept data, HDRQ will be driven high by the external controller. The DMA chip must respond within 250 nanoseconds with ACK (low) to knowledge that data is on the bus or has been read from the bus. The Memory Controller feeds data to or accepts data from the DMA Controller. Transfers can take place at up to 1 Mbyte/second.
+
+                           Hard Disk
+
+                          1 -  Data 0
+                          2 -  Data 1
+                          3 -  Data 2
+                          4 -  Data 3
+                          5 -  Data 4
+                          6 -  Data 5
+                          7 -  Data 6
+                          8 -  Data 7
+                          9 -  Chip Select
+                         10 -  Interrupt Request
+                         11 -  Ground
+                         12 -  Reset
+                         13 -  Ground
+                         14 -  Acknowledge
+                         15 -  Ground
+                         16 -  A1
+                         17 -  Ground
+                         18 -  Read/Write
+                         19 -  Data Request
+
+Figure 2-6:  Hard Disk Port
+
+                            Controller A
+
+                          1 -  Up 0
+                          2 -  Dn 0
+                          3 -  LT 0
+                          4 -  RT 0
+                          5 -  Pad 0Y
+                          6 -  Fire 0
+                          7 -  +5 VDC
+                          8 -  Not Connected
+                          9 -  Ground
+                         10 -  Fire 1
+                         11 -  Up 1
+                         12 -  Dn 1
+                         13 -  LT 1
+                         14 -  RT 1
+                         15 -  Pad 0X
+
+
+                            Controller B
+
+                          1 -  Up 2
+                          2 -  Dn 2
+                          3 -  LT 2
+                          4 -  RT 2
+                          5 -  Pad 1X
+                          6 - Fire 2
+                          7 -  +5 VDC
+                          8 -  Not Connected
+                          9 -  Ground
+                         10 -  Fire 3
+                         11 -  Up 3
+                         12 -  Dn 31
+                         13 -  LT 3
+                         14 -  RT 3
+                         15 -  Pad 1Y
+
+Figure 2-7:  Game Controller Ports
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 2-8:  STE Functional Block Diagram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 2-9:  STE DMA Block Diagram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 2-10:  STE Audio Block Diagram
+
+2.12.8   Controllers
+
+The controllers allow the integration of the STE with joysticks, paddles, and light gun/pen.
+
+
+2.12.8.1   JOYSTICKS
+
+Four new joystick ports are added.  These ports are controlled directly by the CPU.  The current state may be sampled at any time by reading the above locations.  Joystick 0 and Joystick 2 direction bits are read/write.  If written to they will be driven until a read is performed.  Similarly, they will not be driven after a read until a write is performed.
+
+2.12.8.2   PADDLES
+
+One pair of paddles can be plugged into Joystick 0 (Paddle 0).  A second set can be plugged into Joystick 1 (Paddle 1).  The current position of each of the four paddles is reported at these locations.  The fire buttons are the same as for the respective joystick.  The triggers for the paddles are read as bits one and two of FF9202 (JOY0 Left and Right).
+
+2.12.8.3   LIGHT GUN/PEN
+
+A light gun or pen can be plugged into Joystick 0.  The current position that the gun or pen is pointing to is reported by these registers.  The position is accurate to within (X direction only):
+
+                                  4 Pixels in 320 x 200 Mode
+                                  8 Pixels in 640 x 200 Mode
+                                16 Pixels in 640 x 400 Mode
+
+Accurate to 1 pixel in the Y direction in all modes.  Accuracies do not account for the quality of the light gun or pen.  Note that the X position is given in pixels for 320 x 200 only.  In order to get correct results in 640 x 200 mode this number needs to be shifted left one bit and in 640 x 400 modes this number needs to be shifted left two bits.
+
+
+2.13   SYSTEM STARTUP
+
+After a RESET (power-up or reset button) the 68000 will start executing at the address pointed to by locations 4-7, which is ROM (GSTMCU maps the first 8 bytes of ROM at E00000 into the addresses 0-7). Location 000004 points to the start of the operating system code in ROM. The following sequence is then executed:
+
+   1. Perform a reset instruction (outputs a reset pulse). (RESET.)
+   2. Read the longword at cartridge address FA0000. If the data read is a "magic number", execute from the cartridge (cartridge takes over here). If not, continue.
+   3. Check for a warm start (see if RAM locations are valid).  If not, initialize the memory controller.
+   4. Initialize the PSG chip, deselect disk drives.
+   5. Initialize color palettes and set screen address.
+   6. If not a warm start, zero memory.
+   7. Set up operating system variables in RAM.
+   8. Set up exception vectors.
+   9. Initialize MFP.
+  10. Set screen resolution.
+  11. Attempt to boot floppy; attempt to boot hard disk; run program if successful.
+  12. If no boot disk, load the desktop ROM on board 256K ROM.
+
+
+2.14   SYSTEM ERRORS
+
+The 68000 has a feature called exception processing, which takes place when an interrupt or bus error is indicated by external logic, or when the CPU detects an error internally, or when certain types of instructions are executed. An exception will cause the CPU to fetch a vector (address to a routine) from RAM and start processing at the routine pointed to by the vector. Exception vectors are initialized by the operating system. Those exceptions which do not have legitimate occurrences (interrupts being legitimate) have vectors pointing to a general purpose routine which will display some number of bombs showing on the screen. The number of bombs equals the number of exceptions which occurred.
+
+System errors may or may not be recoverable. Errors in loading files from disk may cause the system to crash, necessitating a reset. Verify the diskette and disk drive before attempting to repair the computer.
+
+2.14.1   Number of Bombs and Meaning
+
+       2:     BUS ERROR. GSTMCU asserted bus error.
+       3:     ADDRESS ERROR. Processor attempted to access word or long word sized data on an odd address.
+       4:     ILLEGAL INSTRUCTION. Processor fetched an instruction from ROM or RAM which was not a legal instruction.
+       5:     ZERO DIVIDE. Processor was asked to perform a division by zero.
+       6:     CHK INSTRUCTION. This is a legal instruction, if software uses this, it must install a handler.
+       7:     TRAPV INSTRUCTION. See Chk instruction.
+       8:     PRIVILEGE VIOLATION. CPU was in user mode, tried to execute a 68000 instruction that can only be performed in supervisor mode.
+       9:     TRACE. If trace bit is set in the status register, the CPU will execute this exception after every instruction. Used to debug software.
+      10:     LINE 1010 EMULATOR. CPU read an instruction which has `1010' as its most significant nibble. Used by TOS for low level graphics software routines.
+      11:     LINE 1111 EMULATOR. CPU read an instruction which has `1111' as its most significant nibble. Used internally in earlier versions of TOS, but reserved on STE.
+      12:     12-23 Unassigned, should be no occurrence.
+      24:     SPURIOUS INTERRUPT. Bus error during interrupt processing.
+   25-31:     AUTOVECTOR INTERRUPT. Numbers 4 and 2 are used, others should have no occurrence.
+   32-63:     TRAP INSTRUCTION. CPU read instruction which is used to generate a software exception (such as the entry to GEMDOS, VDI, or AES).
+   64-79:     MFP interrupts.
+  80-127:     Reserved for Atari use.
+ 128-255:     Unused.

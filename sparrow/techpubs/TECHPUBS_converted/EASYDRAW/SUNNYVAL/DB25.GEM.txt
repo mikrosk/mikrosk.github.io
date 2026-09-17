@@ -1,0 +1,68 @@
+File: EASYDRAW/SUNNYVAL/DB25.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-3460,-4370)-(3350,59)
+Page size: 203.2 x 254.0 mm
+Coordinate window: lower-left (-3640,4550), upper-right (3640,-4550); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-3460,-4292.67)-(3270,-9.67)
+Items: 280 (2258 words)
+Objects: polyline 4, ellipse 25, elliptical arc 29, justified text 48
+Other records (escapes, application data): write_meta 10 x4, write_meta 150 x1, write_meta 151 x4, write_meta 152 x9, write_meta 153 x9, write_meta 154 x46, write_meta 158 x1, write_meta 160 x1, write_meta 80 x33, write_meta 81 x33
+Text strings: 48
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+  -3460   -4050  [font 7 24pt]  PARALLEL PORT
+
+  -3280   -3470  [font 7 12pt]  DB25 Female
+
+  -2550   -2440  [font 7 12pt]  Pin
+  -2550   -1960  [font 7 12pt]  1
+  -2550   -1800  [font 7 12pt]  2 
+  -2550   -1640  [font 7 12pt]  3
+  -2550   -1480  [font 7 12pt]  4
+  -2550   -1320  [font 7 12pt]  5
+  -2550   -1160  [font 7 12pt]  6
+  -2550   -1000  [font 7 12pt]  7
+  -2550    -840  [font 7 12pt]  8
+  -2550    -680  [font 7 12pt]  9
+  -2550    -520  [font 7 12pt]  10
+  -2550    -360  [font 7 12pt]  11
+  -2550    -200  [font 7 12pt]  12-17
+  -2550     -40  [font 7 12pt]  18-25
+
+  -1910   -2440  [font 7 12pt]  Signal
+  -1910   -1960  [font 7 12pt]  Strobe
+  -1910   -1800  [font 7 12pt]  Data 0
+  -1910   -1640  [font 7 12pt]  Data 1
+  -1910   -1480  [font 7 12pt]  Data 2 
+  -1910   -1320  [font 7 12pt]  Data 3
+  -1910   -1160  [font 7 12pt]  Data 4
+  -1910   -1000  [font 7 12pt]  Data 5
+  -1910    -840  [font 7 12pt]  Data 6
+  -1910    -680  [font 7 12pt]  Data 7
+  -1910    -520  [font 7 12pt]  Acknowledge
+  -1910    -360  [font 7 12pt]  Busy
+  -1910    -200  [font 7 12pt]  Not Connected
+  -1910     -40  [font 7 12pt]  Ground
+
+    900   -2450  [font 7 12pt]  I/O
+    900   -1970  [font 7 12pt]  Output
+    900   -1810  [font 7 12pt]  -- 
+    900   -1650  [font 7 12pt]  -- 
+    900   -1490  [font 7 12pt]  --  
+    900   -1330  [font 7 12pt]  -- 
+    900   -1170  [font 7 12pt]  -- 
+    900   -1010  [font 7 12pt]  -- 
+    900    -850  [font 7 12pt]  -- 
+    900    -690  [font 7 12pt]  -- 
+    900    -530  [font 7 12pt]  -- 
+    900    -370  [font 7 12pt]  Input
+    900    -210  [font 7 12pt]  -- 
+    900     -50  [font 7 12pt]  -- 
+
+   3150   -3380  [font 7 12pt]   1
+
+   3020   -3050  [font 7 12pt]   14
+
+  -1020   -3050  [font 7 12pt]   25
+
+  -1220   -3370  [font 7 12pt]   13

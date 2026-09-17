@@ -1,0 +1,37 @@
+File: EASYDRAW/SUNNYVAL/DSPBOARD.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-4343,-2881)-(4502,3256)
+Page size: 254.0 x 203.2 mm
+Coordinate window: lower-left (-4550,3640), upper-right (4550,-3640); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-4343,-2881)-(4502,2326)
+Items: 97 (999 words)
+Objects: polyline 5, bar 1, justified text 18
+Other records (escapes, application data): write_meta 10 x1, write_meta 150 x1, write_meta 151 x1, write_meta 152 x3, write_meta 153 x3, write_meta 154 x18, write_meta 157 x4, write_meta 158 x1, write_meta 160 x1, write_meta 80 x5, write_meta 81 x4
+Warning: no end marker (file truncated or damaged)
+Warning: damaged file; data blocks belonging to other drawings may appear in the text list and the render
+Warning: damaged data skipped, words 521-522
+Warning: damaged data skipped, words 979-999; text fragments in skipped data: "Sync Seria"
+Text strings: 18
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+   3050    -480  [font 7 12pt]      56001
+   3050    -320  [font 7 12pt]  20MHz DSP
+
+   3060     -10  [font 7 12pt]  8k Words 
+   3060     150  [font 7 12pt]    SRAM
+
+  -3120     560  [font 7 12pt]  13
+
+  -2510   -1830  [font 7 12pt]  Signal
+  -2510   -1350  [font 7 12pt]  Microwire Enable
+  -2510   -1190  [font 7 12pt]  Microwire Data
+  -2510   -1030  [font 7 12pt]  Microwire Clock
+  -2510    -870  [font 7 12pt]  DMA Sound Enable Out
+  -2510    -710  [font 7 12pt]  DMA Sound Clock Out
+  -2510    -550  [font 7 12pt]  DMA Sound Data Out
+  -2510    -390  [font 7 12pt]  DMA Sound Channel Select out
+  -2510    -230  [font 7 12pt]  Ground
+  -2510     -70  [font 7 12pt]  Rate Select
+  -2510      90  [font 7 12pt]  Ground
+  -2510     250  [font 7 12pt]  Sync Serial I/F Control 0
+  -2510     410  [font 7 12pt]  Sync Serial I/F Control 1

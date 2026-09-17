@@ -1,0 +1,69 @@
+File: EASYDRAW/SUNNYVAL/MONITOR.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-3180,-4150)-(2475,284)
+Page size: 203.2 x 254.0 mm
+Coordinate window: lower-left (-3640,4550), upper-right (3640,-4550); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-3180,-4072.67)-(2420,250.33)
+Items: 254 (2137 words)
+Objects: polyline 4, ellipse 19, elliptical arc 23, justified text 48
+Other records (escapes, application data): write_meta 10 x3, write_meta 150 x1, write_meta 151 x3, write_meta 152 x10, write_meta 153 x10, write_meta 154 x48, write_meta 158 x1, write_meta 160 x1, write_meta 80 x27, write_meta 81 x27
+Text strings: 48
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+  -3180   -3830  [font 7 24pt]  MONITOR CONNECTOR
+
+  -3130   -3070  [font 7 12pt]  DB19 Male
+
+   2280   -3010  [font 7 12pt]   1
+
+   -650   -3010  [font 7 12pt]   10
+
+   2220   -2790  [font 7 12pt]   19
+
+   -570   -2790  [font 7 12pt]   11
+
+  -3070   -1710  [font 7 12pt]  Pin
+  -3070   -1230  [font 7 12pt]  1
+  -3070   -1070  [font 7 12pt]  2 
+  -3070    -910  [font 7 12pt]  3
+  -3070    -750  [font 7 12pt]  4
+  -3070    -590  [font 7 12pt]  5
+  -3070    -430  [font 7 12pt]  6
+  -3070    -270  [font 7 12pt]  7
+  -3070    -110  [font 7 12pt]  8
+  -3070      50  [font 7 12pt]  9
+  -3070     210  [font 7 12pt]  10
+
+  -2460   -1700  [font 7 12pt]  Signal
+  -2460   -1220  [font 7 12pt]  Red Out
+  -2460   -1060  [font 7 12pt]  Green Out
+  -2460    -900  [font 7 12pt]  Blue Out
+  -2460    -740  [font 7 12pt]  Mono Detect
+  -2460    -580  [font 7 12pt]  Ground
+  -2460    -420  [font 7 12pt]  Red Return
+  -2460    -260  [font 7 12pt]  Green Return
+  -2460    -100  [font 7 12pt]  Blue Return
+  -2460      60  [font 7 12pt]  Audio
+  -2460     220  [font 7 12pt]  Ground
+
+     70   -1700  [font 7 12pt]  Pin
+     70   -1220  [font 7 12pt]  11
+     70   -1060  [font 7 12pt]  12 
+     70    -900  [font 7 12pt]  13
+     70    -740  [font 7 12pt]  14
+     70    -580  [font 7 12pt]  15
+     70    -420  [font 7 12pt]  16
+     70    -260  [font 7 12pt]  17
+     70    -100  [font 7 12pt]  18
+     70      60  [font 7 12pt]  19
+
+    760   -1710  [font 7 12pt]  Signal
+    760   -1230  [font 7 12pt]  Ground
+    760   -1070  [font 7 12pt]  Composite Sync
+    760    -910  [font 7 12pt]  Horizontal Sync
+    760    -750  [font 7 12pt]  Vertical Sync
+    760    -590  [font 7 12pt]  External Clock
+    760    -430  [font 7 12pt]  External Genlock
+    760    -270  [font 7 12pt]  + 12V
+    760    -110  [font 7 12pt]  V1
+    760      50  [font 7 12pt]  V0

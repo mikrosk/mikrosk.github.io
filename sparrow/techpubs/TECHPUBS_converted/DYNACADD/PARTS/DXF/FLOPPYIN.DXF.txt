@@ -1,0 +1,82 @@
+DXF drawing: DYNACADD/PARTS/DXF/FLOPPYIN.DXF
+Render: FLOPPYIN.DXF.svg
+
+== Summary ==
+File:        11488 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font txt
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (4.0833, -0.35) - (7.9167, 13.1)
+             rendered (4.08, -0.25) - (7.92, 13), size 3.84 x 13.25
+Limits:      (0, 0) - (12, 13)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: STANDARD (font txt)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            69
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: POLYLINE 35 (72 vertices), TEXT 34
+Blocks:      0 defined
+Notes:
+  - 34 zero-length polylines (all vertices identical, e.g. pin dots) drawn as dots
+  - 1 polylines with constant width drawn as thick strokes
+
+== Text in reading order (34 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (34 items) --
+  34  |  33
+  32  |  31
+  30  |  29
+  28  |  27
+  26  |  25
+  24  |  23
+  22  |  21
+  20  |  `9
+  18  |  17
+  16  |  15
+  14  |  13
+  12  |  11
+  10  |  9
+  8  |  7
+  6  |  5
+  4  |  3
+  2  |  1
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE     TEXT
+  4.25   12.25       0.2      0  center    1      STANDARD  34
+  7.75   12.25       0.2      0  center    1      STANDARD  33
+  4.25    11.5       0.2      0  center    1      STANDARD  32
+  7.75    11.5       0.2      0  center    1      STANDARD  31
+  4.25   10.75       0.2      0  center    1      STANDARD  30
+  7.75   10.75       0.2      0  center    1      STANDARD  29
+  4.25      10       0.2      0  center    1      STANDARD  28
+  7.75      10       0.2      0  center    1      STANDARD  27
+  4.25    9.25       0.2      0  center    1      STANDARD  26
+  7.75    9.25       0.2      0  center    1      STANDARD  25
+  4.25     8.5       0.2      0  center    1      STANDARD  24
+  7.75     8.5       0.2      0  center    1      STANDARD  23
+  4.25    7.75       0.2      0  center    1      STANDARD  22
+  7.75    7.75       0.2      0  center    1      STANDARD  21
+  4.25       7       0.2      0  center    1      STANDARD  20
+  7.75       7       0.2      0  center    1      STANDARD  `9
+  4.25    6.25       0.2      0  center    1      STANDARD  18
+  7.75    6.25       0.2      0  center    1      STANDARD  17
+  4.25     5.5       0.2      0  center    1      STANDARD  16
+  7.75     5.5       0.2      0  center    1      STANDARD  15
+  4.25    4.75       0.2      0  center    1      STANDARD  14
+  7.75    4.75       0.2      0  center    1      STANDARD  13
+  4.25       4       0.2      0  center    1      STANDARD  12
+  7.75       4       0.2      0  center    1      STANDARD  11
+  4.25    3.25       0.2      0  center    1      STANDARD  10
+  7.75    3.25       0.2      0  center    1      STANDARD  9
+  4.25     2.5       0.2      0  center    1      STANDARD  8
+  7.75     2.5       0.2      0  center    1      STANDARD  7
+  4.25    1.75       0.2      0  center    1      STANDARD  6
+  7.75    1.75       0.2      0  center    1      STANDARD  5
+  4.25       1       0.2      0  center    1      STANDARD  4
+  7.75       1       0.2      0  center    1      STANDARD  3
+  4.25    0.25       0.2      0  center    1      STANDARD  2
+  7.75    0.25       0.2      0  center    1      STANDARD  1

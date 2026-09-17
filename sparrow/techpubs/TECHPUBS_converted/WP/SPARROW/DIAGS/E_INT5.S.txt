@@ -1,0 +1,51 @@
+* Software Designer: Tom Le
+* Atari Micro Electronic
+* Date: 2-20-1992
+
+	.text
+spurint5:			;
+	bsr	clear_io
+	lea	spurina5,a5
+	bsr	dspmsg
+        move.w  #$1234,intword
+	rte
+
+eint5:			;
+	bsr	clear_io
+        move.w  #$4567,intword
+	rte
+
+testint5:
+;	move.l  #spurint5,$60    ;
+	move.b  #int5,intlev
+	bsr	loadvect
+	move.l  intvect,intsave0	;save the OP int routine
+	move.l  #eint5,intvect  ;
+	move.l  #10,d1		;setup a sw timer
+	clr.w   intword	        ;clear int flag
+	bsr	set_io
+
+testint5a:
+	move.w  intword,d0
+	cmp.w   #$4567,d0
+	beq     testint5p	
+	sub.l   #1,d1
+	bne     testint5a
+	bsr	clear_io
+.if (TOS=0)
+        move    #red,palette
+.endif
+	lea     int5msg1,a5
+	bsr	dspmsg
+	bset    #eint5f,flag
+
+testint5r:
+	move.l  intsave0,intvect  ;save the OP int routine
+	btst    #eint5f,flag
+        rts
+
+testint5p:
+	bra	testint5r
+
+
+	

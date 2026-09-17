@@ -1,0 +1,10 @@
+DynaCADD 2.0 drawing settings file (.DWG)
+Source: DYNACADD/PARTS/F030/FO3OFLPY.DWG (21262 bytes)
+Holds no entity geometry. The drawing content is in FO3OFLPY.DPT (34 entities, 0 text strings); see FO3OFLPY.DPT.txt and FO3OFLPY.DPT.svg.
+Sheet: width 11, height 8.5, scale 1, origin (0, 0)
+Saved view window: 11 x 8.5706
+Units: not recorded in a field identified so far
+Global line style scale: 0.5
+Named layers: 0 "L1" colour 7, 1 "L2" colour 7, 2 "L3" colour 7, 3 "L4" colour 7, 4 "L5" colour 7, 5 "L6" colour 7, 6 "L7" colour 7, 7 "L8" colour 7, 8 "L9" colour 7, 9 "L10" colour 7
+Line style table: 0 "DASHED" scale 0.75, 1 "HIDDEN" scale 0.25, 2 "CENTER" scale 2, 3 "PHANTOM" scale 2.5, 4 "DOT" scale 0.25, 5 "DASHDOT" scale 1, 6 "BORDER" scale 1.75, 7 "DIVIDE" scale 1.25, 8 "DOTS" scale 0.1
+Construction planes: Top, Front, Right, Bottom, Rear, Left, Iso

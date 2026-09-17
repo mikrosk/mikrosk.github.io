@@ -1,0 +1,151 @@
+[PageStream 2 document SPCON.DOC: 8.50 x 11.00 in, 182 objects]
+
+--- Page 1 ---
+[1 drawing objects, see SPCON.DOC.p001.svg]
+
+Dallas Office FAX
+
+
+To:		Richard Miller
+From:	Marty Pennock
+Subject:	Sparrow Connectors
+Date:	January 29. 1992
+
+cc		Tom Ulaszek - ATX
+		Ira Goldstein - ATX
+
+
+Here are some of the connectors I have mapped out for Sparrow using specs and schematic. A full detail will follow shortly.
+
+
+Sincerely Yours
+
+
+Marty Pennock
+
+--- Page 2 ---
+[37 drawing objects, see SPCON.DOC.p002.svg]
+
+Sparrow Serial Port 9-pin Male Connector
+
+
+Pin List
+
+Pin			Signal
+
+1			Carrier Detect
+2			Receive
+3			Transmit
+4			Data Terminal Ready
+5			Ground
+6			Not Connected
+7			Request to Send
+8			Clear to Send
+9			Ring Indicator
+
+Sparrow MIDI Port 5-Pin Female Connectors
+
+MIDI OUT/THRU		MIDI IN
+
+Pin List
+
+Pin		Signal			Pin		Signal
+
+1		Thru Transmit		1	No Connect
+2		Ground			2	No Connect
+3		Thru Loop Return		3	No Connect
+4		Out Transmit		4	In Receive
+5		Out Loop Return		5	In Loop Return
+
+4
+
+5
+
+1
+
+2
+
+3
+
+9
+
+8
+
+6
+
+7
+
+1
+
+3
+
+4
+
+5
+
+2
+
+--- Page 3 ---
+[110 drawing objects, see SPCON.DOC.p003.svg]
+
+Sparrow 26-pin DSP Female Connector
+
+
+Pin List
+
+Pin		Signal				Pin	Signal
+
+1		Microwire Enable			2	Microwire Data
+3		Microwire Clock			4	DMA Sound Enable Out
+5		DMA Sound Clock Out		6	DMA Sound Data Out
+7		DMA Sound Channel Select Out		8	Ground
+9		Rate Select			10	Ground
+11		SYNC Serial I/F Control 0		12	SYC Serial I/F Control 1
+13		SYNC Serial I/F Control 2		14	Ground
+15		SYNC Serial Data In		16	Ground
+17		+12V				18	Ground
+19		DMA Sound Data Enable In		20	DMA Sound Clock In
+21		DMA Sound Data In		22	DMA Sound Channel Select In
+23		SYNC Serial I/F Data Out		24	SYNC Serial I/F Clock
+25		Ground				26	External Clock (GENLOCK)
+
+Sparrow 15-pin Female Parallel Connector
+
+
+Pin List
+
+Pin		Signal
+
+1		Strobe
+2		Data 0
+3		Data 1
+4		Data 2
+5		Data 3
+6		Data 4
+7		Data 5
+8		Data 6
+9		Data 7
+10		Acknowledge
+11		Busy
+12-17	No Connect
+18-25	Ground
+
+9
+
+1
+
+18
+
+10
+
+26
+
+19
+
+1
+
+13
+
+14
+
+25

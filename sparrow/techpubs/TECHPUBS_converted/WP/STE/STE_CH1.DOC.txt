@@ -1,0 +1,135 @@
+[Footer: -  #   -]
+SECTION ONE:
+INTRODUCTION
+
+
+1.0   OVERVIEW
+
+The 520STE and 1040STE are designed as integrated units with keyboard, processor, memory, and I/O control in one package. The 520STE has 520 kbytes (524,280 bytes ) of RAM, and the 1040STE has 1040 kbytes (1,048,568 bytes) of RAM. The 1040STE and 520STE both have a built-in 1 megabyte floppy disk drive (unformatted). Both the 520STE and 1040STE come with a modulator for TV output. The 520STE and 1040STE both have the power supply integrated into the case.
+
+
+1.1   MAIN COMPONENTS
+
+      ∙ 524K RAM (1048K for the 1040STE)
+      ∙ Main Board with modulator (except French Peritel)
+      ∙ Keyboard Assembly
+      ∙ RF Shield (upper and lower) and Power Supply
+      ∙ Plastic Case (upper and lower)
+      ∙ Mouse
+      ∙ Power Supply
+      ∙ Disk Drive
+
+
+1.2   CASE DESIGN
+
+The 520STE and the 1040STE are nearly identical.  The upper case has openings for the keyboard and a lens for both the power indicator LED (front left corner) and the Disk Drive Activity LED (mid right side). (see Fig. 1-1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 1-1:  520STE Upper Case
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 1-2:  1040STE Upper Case
+
+
+The left side panels of both machines have slots for the expansion cartridge, two MIDI ports and two game controllers.
+
+
+
+
+
+
+
+
+
+
+
+Figure 1-3:  STE Left Side Panel
+
+
+The right side panel has a slot for the floppy disk drive.
+
+
+
+
+
+
+
+
+
+
+
+Figure 1-4:  STE Right Side Panel
+
+
+The STE back panel contains (left to right) the modem (RS232) connector, printer connector, hard disk/DMA connector, external floppy disk connector, television output,
+monitor connector, power switch, stereo output (right and left), AC power input, and reset button. (see Fig. 1-5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 1-5:  STE Back Panel
+
+
+1.3   POWER SUPPLY
+
+The 520STE and 1040STE have an integral switching power supply providing +5V and +12V. There is a 2A fuse. Voltage should be adjusted to 5.1V. The power supply has overcurrent protection; if the fuse is blown, a catastrophic failure is likely, such as shorted primary.
+
+
+Power Supply Rating
+
+      Current out:            3A at 5V, 0.9A at +12V
+      Max. power in:          33.5W
+
+
+Typical (in system) Demand:
+
+      Typical current:        1.75A at 5V, 86 mA at +12V
+      Max. current:           2.2A at +5V, 90 mA at +12 (during disk access)
+
+
+1.4   NEGATIVE SUPPLIES
+
+The STE motherboard contains two small switching voltage regulators (the TL497 or equivalent) that are used to provide additional voltages.
+
+U204 is used to generate the positive and negative voltages for the RS232C line drivers. These voltages are normally ±12 VDC.
+
+U205 is used to generate a -5 VDC supply for the audio subsection. This output is heavily filtered to reduce the switching noise that might otherwise appear in the audio output.

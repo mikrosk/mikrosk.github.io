@@ -1,0 +1,80 @@
+DXF drawing: DYNACADD/PARTS/DXF/MEGASTE2.DXF
+Render: MEGASTE2.DXF.svg
+
+== Summary ==
+File:        10098 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font ROMAND
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (162.5, 10.5) - (413.75, 589.25)
+             rendered (162.5, 10.5) - (413.75, 589.25), size 251.25 x 578.75
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: ROMAND (font ROMAND)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            94
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: LINE 49, TEXT 35, ARC 10
+Blocks:      0 defined
+
+== Text in reading order (35 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (35 items) --
+  A
+  WON'T  |  YES  |  RUN DISK
+  LOAD DISK?  |  DIAGNOSTIC OR
+  REPLACE DISK
+  NO
+  TRACE SIGNAL
+  VIDEO  |  YES  |  FROM VIDEO
+  PROBLEM?  |  SHIFTER
+  TO OUTPUT
+  NO
+  RUN
+  PROBLEM  |  NO  |  APPROPRIATE
+  FOUND?  |  TEST
+  CONTINUOUSLY
+  YES
+  CONTACT ATARI
+  TECH SUPPORT
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE   TEXT
+ 209.4   562.5    6.3333      0  left      1      ROMAND  A
+198.55  466.83    6.3333      0  left      1      ROMAND  WON'T
+265.92  466.83    6.3333      0  left      1      ROMAND  YES
+340.82  467.35    6.3333      0  left      1      ROMAND  RUN
+367.02  467.35    6.3333      0  left      1      ROMAND  DISK
+186.85  456.83    6.3333      0  left      1      ROMAND  LOAD
+ 217.1  456.83    6.3333      0  left      1      ROMAND  DISK?
+326.93  456.83    6.3333      0  left      1      ROMAND  DIAGNOSTIC
+ 384.9  456.83    6.3333      0  left      1      ROMAND  OR
+329.57  446.83    6.3333      0  left      1      ROMAND  REPLACE
+371.25  446.83    6.3333      0  left      1      ROMAND  DISK
+217.41  411.47    6.3333      0  left      1      ROMAND  NO
+332.04  336.83    6.3333      0  left      1      ROMAND  TRACE
+367.31  336.83    6.3333      0  left      1      ROMAND  SIGNAL
+199.12   325.8    6.3333      0  left      1      ROMAND  VIDEO
+265.92  326.83    6.3333      0  left      1      ROMAND  YES
+336.98  326.32    6.3333      0  left      1      ROMAND  FROM
+368.89  326.32    6.3333      0  left      1      ROMAND  VIDEO
+186.92  316.83    6.3333      0  left      1      ROMAND  PROBLEM?
+ 343.9  315.37     6.333      0  left      1      ROMAND  SHIFTER
+337.68  304.99    6.3333      0  left      1      ROMAND  TO
+356.77  305.29    6.3333      0  left      1      ROMAND  OUTPUT
+219.08  269.92    6.3333      0  left      1      ROMAND  NO
+351.61  197.35    6.3333      0  left      1      ROMAND  RUN
+192.42  186.32    6.3333      0  left      1      ROMAND  PROBLEM
+264.86  186.83    6.3333      0  left      1      ROMAND  NO
+329.11  186.83    6.3333      0  left      1      ROMAND  APPROPRIATE
+194.28  176.83    6.3333      0  left      1      ROMAND  FOUND?
+349.87  176.83    6.3333      0  left      1      ROMAND  TEST
+328.57  166.32    6.3333      0  left      1      ROMAND  CONTINUOUSLY
+219.03  127.86    6.3333      0  left      1      ROMAND  YES
+174.84   46.83    6.3333      0  left      1      ROMAND  CONTACT
+217.87   46.83    6.3333      0  left      1      ROMAND  ATARI
+174.75   36.83    6.3333      0  left      1      ROMAND  TECH
+203.59   36.83    6.3333      0  left      1      ROMAND  SUPPORT

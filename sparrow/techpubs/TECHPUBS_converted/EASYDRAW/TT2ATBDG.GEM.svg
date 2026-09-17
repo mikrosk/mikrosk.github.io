@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="186.57mm" height="124.77mm" viewBox="-3340.07 -2241.18 6684.14 4470.25">
+<title>EASYDRAW/TT2ATBDG.GEM</title>
+<rect x="-3340.07" y="-2241.18" width="6684.14" height="4470.25" fill="#FFFFFF"/>
+<path d="M0 -1024L997 -1024M997 -1024L997 -754M997 -754L0 -754M0 -823A101 67 0 0 0 101 -890M101 -890A101 67 0 0 0 0 -957M0 -820L0 -753M0 -1024L0 -957" fill="none" stroke="#000000" stroke-width="7.17"/>
+<text xml:space="preserve" x="210" y="-880" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" textLength="630" lengthAdjust="spacingAndGlyphs">U112</text>
+<path d="M-1092 -1024L-376 -1024M-376 -1024L-376 -753M-376 -753L-1092 -753M-1092 -823A73 67 0 0 0 -1019 -890M-1019 -890A73 67 0 0 0 -1092 -957M-1092 -819L-1092 -752M-1092 -1024L-1092 -957" fill="none" stroke="#000000" stroke-width="7.17"/>
+<text xml:space="preserve" x="-940" y="-870" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" textLength="450" lengthAdjust="spacingAndGlyphs">U114</text>
+<path d="M0 -1570L1000 -1570M1000 -1570L1000 -1316M1000 -1316L0 -1316M0 -1381A101 63 0 0 0 101 -1444M101 -1444A101 63 0 0 0 0 -1507M0 -1379L0 -1316M0 -1570L0 -1507" fill="none" stroke="#000000" stroke-width="7.17"/>
+<text xml:space="preserve" x="220" y="-1420" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" textLength="630" lengthAdjust="spacingAndGlyphs">U111</text>
+<path d="M-2275 -751L-2275 -660" fill="none" stroke="#000000" stroke-width="23"/>
+<path d="M-2275 -1024L-1559 -1024M-1559 -1024L-1559 -753M-1559 -753L-2275 -753M-2275 -823A73 67 0 0 0 -2202 -890M-2202 -890A73 67 0 0 0 -2275 -957M-2275 -819L-2275 -752M-2275 -1024L-2275 -957" fill="none" stroke="#000000" stroke-width="7.17"/>
+<text xml:space="preserve" x="-2120" y="-870" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" textLength="450" lengthAdjust="spacingAndGlyphs">U110</text>
+<path d="M1365 -1115L1911 -1115L1911 -1297L1365 -1297Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M1365 -1115L1911 -1115L1911 -1297L1365 -1297L1365 -1115" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="1460" y="-1160" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">R888</text>
+<path d="M-1365 -387L-819 -387L-819 -569L-1365 -569Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-1365 -387L-819 -387L-819 -569L-1365 -569L-1365 -387" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="-1270" y="-420" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">R951</text>
+<path d="M-2184 -387L-1638 -387L-1638 -569L-2184 -569Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-2184 -387L-1638 -387L-1638 -569L-2184 -569L-2184 -387" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="-2090" y="-420" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">R899</text>
+<path d="M-273 -478L-91 -478L-91 -1024L-273 -1024Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-273 -478L-91 -478L-91 -1024L-273 -1024L-273 -478" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="-360" y="-300" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" textLength="360" lengthAdjust="spacingAndGlyphs">C215</text>
+<path d="M-1365 -569L-1183 -569L-1183 -1115L-1365 -1115Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-1365 -569L-1183 -569L-1183 -1115L-1365 -1115L-1365 -569" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="-1460" y="-1300" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" textLength="370" lengthAdjust="spacingAndGlyphs">C115</text>
+<path d="M1092 -478L1274 -478L1274 -1024L1092 -1024Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M1092 -478L1274 -478L1274 -1024L1092 -1024L1092 -478" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="1000" y="-300" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" textLength="360" lengthAdjust="spacingAndGlyphs">C599</text>
+<path d="M1365 -1206L1183 -1297M1911 -1206L2184 -1206" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2197 -1202A42 45 0 1 0 2113 -1202A42 45 0 1 0 2197 -1202Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2197 -1202A42 45 0 1 0 2113 -1202A42 45 0 1 0 2197 -1202Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-2275 -660L-1456 -660L-1456 -1206L1183 -1206M1183 -1206L1183 -1297" fill="none" stroke="#000000" stroke-width="23"/>
+<text xml:space="preserve" x="-3090" y="-660" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" textLength="460" lengthAdjust="spacingAndGlyphs">Pin 1</text>
+<path d="M-2624 -695L-2314 -705" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-2314 -705L-2370.65 -683.1L-2371.94 -723.2Z" fill="#000000"/>
+<path d="M1729 978L3094 978L3094 -478L1729 -478L1729 978M-273 1979L1183 1979L1183 523L-273 523L-273 1979" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3094 796L2912 978" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-2821 1954L-1427 1954L-1427 523L-2821 523L-2821 1954" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="2090" y="250" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" textLength="640" lengthAdjust="spacingAndGlyphs">U206</text>
+<text xml:space="preserve" x="100" y="1260" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" textLength="630" lengthAdjust="spacingAndGlyphs">UA00</text>
+<path d="M1001 1979L1183 1797" fill="none" stroke="#000000" stroke-width="7.17"/>
+<text xml:space="preserve" x="1270" y="-1800" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" textLength="1020" lengthAdjust="spacingAndGlyphs">Left Side of R888</text>
+<text xml:space="preserve" x="-1270" y="-1890" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" textLength="1160" lengthAdjust="spacingAndGlyphs">Wire From Pin 1 of </text>
+<text xml:space="preserve" x="-1270" y="-1760" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">U110</text>
+<path d="M1729 -1706L1274 -1251" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1274 -1251L1300.35 -1305.72L1328.72 -1277.35Z" fill="#000000"/>
+<path d="M-728 -1888L-728 -1342" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-728 -1342L-748.06 -1399.32L-707.94 -1399.32Z" fill="#000000"/>
+</svg>

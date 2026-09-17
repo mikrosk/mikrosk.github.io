@@ -1,0 +1,485 @@
+[PageStream 2 document F0302.6: 8.50 x 11.00 in, 386 objects]
+
+--- Page 38 ---
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+30
+
+C/D-
+
+I/O
+
+Control/Data is sent by the target to indicate that control or command information is on the SCSI bus.
+
+29
+
+MSG-
+
+I/O
+
+Message is controlled by the target device and indicates a message phase of operation.
+
+34
+
+REQ-
+
+I/O
+
+The Request signal is asserted by the target device to begin the handshake needed to transfer a byte of data over the bus. The REQ- signal is negated upon the receipt of an ACK- signal by the initiator.
+
+17
+
+CS-
+
+Input
+
+Chip Select enables reading or writing from the 5380.
+
+9
+
+DRQ
+
+Output
+
+DMA Request is used to request DMA service from the DMA controller.
+
+8
+
+IRQ
+
+Output
+
+Interrupt Request is used to send an interrupt to the microprocessor.
+
+19
+
+IOR-
+
+Input
+
+The I/O Read signal is used to read the controller's registers.
+
+13
+
+READY-
+
+Output
+
+The READY signal can be used as an alternate DRQ device. This pin is not connected in the FALCON030 system.
+
+11
+
+DTACK-
+
+Input
+
+DMA Acknowledge is used to enable reading or writing of the SCSI controller's internal registers.
+
+10
+
+EOP-
+
+Input
+
+The End Of Process signal is used to indicate that a DMA transfer is to be concluded.
+
+7
+
+RESET-
+
+Input
+
+The Reset signal is used to reset the SCSI controller.
+
+18
+
+IOW-
+
+Input
+
+The I/O Write signal is used to write information to the SCSI controller's registers.
+
+14-16
+
+A0-2
+
+Input
+
+Address lines 0-2 are used to select the internal SCSI controller register which is to be accessed.
+
+28-24,22-20
+
+D0-7
+
+I/O
+
+Data lines 0-7 are the microprocessor data bus.
+
+--- Page 39 ---
+[164 drawing objects, see F0302.6.p039.svg]
+
+2.3.1.2 External SCSI Connector Pin List
+
+The SCSI interface uses a 50 pin connector with the following pin assignment:
+
+25
+
+1
+
+50
+
+26
+
+Pin
+
+Signal
+
+Pin
+
+Signal
+
+1-10
+11
+12-14
+15-25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35-36
+
+Ground
++5 Volts
+No Connect
+Ground
+SCSI 0
+SCSI 1
+SCSI 2
+SCSI 3
+SCSI 4
+SCSI 5
+SCSI 6
+SCSI 7
+Parity
+Ground
+
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+
+No Connect
++5 Volts 1A Fuse
+No Connect
+Ground
+ATN
+Ground
+Busy
+Acknowledge
+Reset
+Message
+Select
+Code/Data (C/D)
+Request
+I/O
+
+2.3.2 Floppy Disk (FDD)
+
+The FALCON030 floppy disk subsystem is designed around the AJAX Floppy Disk Controller supporting one floppy disk drive. It is a higher speed version of the 1772 and supports 1.44Mb (formatted) capacity drives.
+
+The subsystem interfaces to the dual-purpose RAM through the ACSI DMA controller, which is part of the SDMA IC. Commands and arguments are sent to the FDC by first writing to the DMA Mode Control Register to select the desired FDC register and then writing the data bytes. The standard floppy for the FALCON030 is the 3.5 inch floppy disk with the capacity of 1.44 Mbyte (formatted).
+
+--- Page 40 ---
+
+2.3.2.1 AJAX Pin and Signal List
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+1
+
+CS-
+
+Input
+
+Chip Select is used to enable communications between the chip and the host interface.
+
+2
+
+R(W)-
+
+Input
+
+Read/Write- is used to control the direction of data from the internal registers in the device. A low enables a read of the registers, a high enables a write to the registers over the DAL0-7 lines.
+
+3,4
+
+A0,A1
+
+Input
+
+Address 0-1 are used to select the internal register in the device that is to be read or written.
+
+5-12
+
+DAL0-DAL7
+
+I/O
+
+The Data 0-7 lines are an 8-bit bus used to transfer data, commands, or status.
+
+13
+
+MR-
+
+Input
+
+Master Reset is used to reset the AJAX chip.
+
+14
+
+GND
+
+Input
+
+Ground for the AJAX chip.
+
+15
+
+Vcc
+
+Input
+
+Power Supply (+5V) for the AJAX chip.
+
+16
+
+STEP
+
+Output
+
+Step is used to step the read/write heads of the FDD.
+
+17
+
+DIRC
+
+Output
+
+Direction is used to select whether the FDD heads are stepped toward the center or out from the center of the FDD. A high causes the heads to step toward the center.
+
+18
+
+CLK
+
+Input
+
+Free running clock input.
+
+19
+
+RD-
+
+Input
+
+Read Data is the raw data line containing both clock and data pulses from the FDD.
+
+20
+
+MO
+
+Output
+
+Motor On is used to enable the spindle motor of the FDD.
+
+21
+
+WG
+
+Output
+
+Write Gate is used to enable writing to the FDD.
+
+22
+
+WD
+
+Input
+
+Write Data is the clock and data pulses to be written to the FDD.
+
+23
+
+TR00-
+
+Input
+
+Track 00 informs the AJAX chip that the FDD's heads are over track 0.
+
+24
+
+IP-
+
+Input
+
+Index Pulse tells the AJAX chip when the Index Hole on the Diskette has been encountered.
+
+25
+
+WPRT-
+
+Input
+
+Write Protect tells the AJAX chip that the diskette in the FDD is write protected.
+
+--- Page 41 ---
+[35 drawing objects, see F0302.6.p041.svg]
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+26
+
+DDEN-
+
+Input
+
+Double Density Enable is used selects FM or MFM operation of the FDD. A low is MFM.
+
+27
+
+DRQ
+
+Output
+
+Data Request is used to indicate that the internal data register is full on a read, or empty on a write.
+
+28
+
+INTRQ
+
+Output
+
+Interrupt Request is used to tell the host system that a command has been completed.
+
+2.3.2.2 Internal Floppy Connector Pin List
+
+33
+
+1
+
+34
+
+2
+
+Pin
+
+Signal
+
+Pin
+
+Signal
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+31
+33
+
+Ground
+Ground
+Ground
+Ground
+Ground
+Ground
+Ground
+Ground
+Ground
+Ground
+Ground
+Ground
+Ground
+Ground
+Media Detect 2
+Ground
+Media Detect 1
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+32
+34
+
+Mode Select 1
+Not Connected
+Mode Select 2
+Index Pulse
+Drive Select 0
+Not Connected
+Not Connected
+Motor On
+Direction Select
+Step
+Write Data
+Write Gate
+Track 0
+Write Protect
+Read Data
+Side Select
+Disk Change

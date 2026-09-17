@@ -1,0 +1,10 @@
+DynaCADD 2.0 drawing settings file (.DWG)
+Source: DYNACADD/PARTS/F030/F030FLW1.DWG (21262 bytes)
+Holds no entity geometry. The drawing content is in F030FLW1.DPT (194 entities, 52 text strings); see F030FLW1.DPT.txt and F030FLW1.DPT.svg.
+Sheet: width 684, height 1212, scale 1, origin (0, 0)
+Saved view window: 1555.5591 x 1212
+Units: not recorded in a field identified so far
+Global line style scale: 1
+Named layers: 0 "PEN1" colour 1, 1 "PEN2" colour 2, 2 "PEN3" colour 3, 3 "PEN4" colour 4, 4 "PEN5" colour 5, 5 "PEN6" colour 6, 6 "PEN7" colour 7, 7 "PEN8" colour 8, 8 "PEN1D" colour 1, 9 "PEN2D" colour 2, 10 "PEN3D" colour 3, 11 "PEN4D" colour 4, 12 "PEN5D" colour 5, 13 "PEN6D" colour 6, 14 "PEN7D" colour 7, 15 "PEN8D" colour 8
+Line style table: 0 "Continuous" scale 0, 1 "Dashed" scale 6
+Construction planes: Top, Front, Right, Bottom, Rear, Left, Iso

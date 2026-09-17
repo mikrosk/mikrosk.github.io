@@ -1,0 +1,41 @@
+File: EASYDRAW/HDDFIG1A.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-3276,-2776)-(8720,2888)
+Page size: 203.2 x 254.0 mm
+Coordinate window: lower-left (-3640,4550), upper-right (3640,-4550); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-3280,-2792)-(8720,2845.28)
+Items: 384 (2724 words)
+Objects: polyline 60, ellipse 8, elliptical arc 33, justified text 18
+Other records (escapes, application data): write_meta 10 x1, write_meta 150 x1, write_meta 151 x1, write_meta 152 x12, write_meta 153 x12, write_meta 154 x7, write_meta 155 x1, write_meta 157 x1, write_meta 158 x1, write_meta 160 x1, write_meta 80 x93, write_meta 81 x93
+Text strings: 18
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+   1920    2150  [font 2 10pt]  POWER
+   1920    2280  [font 2 10pt]  EXTENSION CABLE
+
+  -3280    -470  [font 2 10pt]  FRONT
+
+   -720   -1660  [font 2 10pt]  HARD DISK
+   -720   -1530  [font 2 10pt]  COVER
+
+  -1450   -2610  [font 2 18pt]  ACCESSORY COVER
+
+   1920    -470  [font 2 10pt]  HARD DISK
+   1920    -340  [font 2 10pt]  MOUNTING
+   1920    -210  [font 2 10pt]  BRACKET
+
+   1560     250  [font 2 10pt]  REAR
+
+  -2270     650  [font 2 10pt]  HOLES FOR
+  -2270     780  [font 2 10pt]  MOUNTING
+  -2270     910  [font 2 10pt]  HARD DISK
+
+   1010    2710  [font 2 10pt]  INTERFACE CONNECTOR
+
+    280     960  [font 2 18pt]  HARD DISK DRIVE
+
+  -1460    2820  [font 2 10pt]  HARD DISK
+
+   1190    1990  [font 2 10pt]  REAR
+
+  -2730    1840  [font 2 10pt]  FRONT

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="612pt" height="792pt" viewBox="0 0 61200 79200">
+<rect x="0" y="0" width="61200" height="79200" fill="#fff"/>
+<g><rect x="7200" y="7200" width="46800" height="64800" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/><text y="9853.8" xml:space="preserve"><tspan x="21413.7 22778.2 23303.7 24142.8 24772.2 25297.6 25770.1 26924.9 27764.1 28603.2 29548.2 30493.2 31018.6 31857.8 32697 33222.4 33694.9 34955.5 35900.5 36425.9 36951.3 37790.5 38315.9 38841.3" font-size="1800" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">Atari Technical Bulletin</tspan></text><text y="11653.8" xml:space="preserve"><tspan x="22699.8 24064.4 25009.4 26479.8 27424.8 28264 28893.3 29418.8 29891.2 31046 32200.8 33145.8 34090.8 34720.2 35665.2 36610.2 37555.2" font-size="1800" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">Number: TT30-0003</tspan></text><text y="13453.8" xml:space="preserve"><tspan x="22306.7 23671.3 24510.4 25035.8 25875 26400.4 26872.9 28553.1 29392.3 30021.7 30860.8 31805.8 32278.3 33223.3 34168.3 34640.8 35113.3 36058.3 37003.3 37948.3" font-size="1800" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">Date: March 24, 1992</tspan></text><text y="15253.8" xml:space="preserve"><tspan x="26322 27372.8 28212 29157 29996.1 30468.6 31413.6 31886.1 32831.1 33460.5 33933" font-size="1800" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">Page 2 of 2</tspan></text></g>
+<text y="37740.3" xml:space="preserve"><tspan x="28447 29262.6 29670.4 30403.8 31137.2 31625.7 32276.9 32643.7" font-size="1418" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">Figure 1</tspan></text>
+<rect x="18512" y="18150" width="13994" height="13498" fill="none" stroke="#000" stroke-width="100" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="33789" y="29216" width="1250" height="2438" fill="#000" fill-opacity="0.6" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="33789" y="27988" width="1256" height="1210" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<text transform="translate(23610 25282.7) scale(1.13 1)" x="0 915.8 1550 2184.2" xml:space="preserve" font-size="1208" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">U204</text>
+<rect x="36337" y="24307" width="3702" height="1212" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<text transform="translate(36358 21875.7) scale(1.14 1)" x="0 915.8 1550 2184.2" xml:space="preserve" font-size="1208" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">U210</text>
+<line x1="18514" y1="30449" x2="19773" y2="31662" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<text y="34772.2" xml:space="preserve"><tspan x="33153 34605.1 35374.2 36143.4" font-size="1408" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">W101</tspan></text>
+<text y="32643.4" xml:space="preserve"><tspan x="32853" font-size="1402" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">1</tspan></text>
+<text y="28196" xml:space="preserve"><tspan x="32768" font-size="1690" font-family="'Times New Roman', Times, 'Liberation Serif', serif">3</tspan></text>
+<text transform="translate(27715 33733.5) scale(1.44 1)" x="0 413.2 723 1032.7" xml:space="preserve" font-size="590" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">R962</text>
+<text transform="translate(39205 32479.5) scale(1.43 1)" x="0 413.2 723 1032.7" xml:space="preserve" font-size="590" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">R960</text>
+<text transform="translate(37960 29384.5) scale(1.43 1)" x="0 413.2 723 1032.7" xml:space="preserve" font-size="590" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">R993</text>
+<text transform="translate(37907 28196.2) scale(1.42 1)" x="0 414.6 725.4 1036.2" xml:space="preserve" font-size="592" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">R992</text>
+<text transform="translate(37881 26967.9) scale(1.43 1)" x="0 411.8 720.5 1029.2" xml:space="preserve" font-size="588" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">R990</text>
+<text transform="translate(37961 30661.2) scale(1.43 1)" x="0 414.6 725.4 1036.2" xml:space="preserve" font-size="592" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">R991</text>
+<text transform="translate(37224 25139.9) scale(1.32 1)" x="0 448.2 784.2 1120.2" xml:space="preserve" font-size="640" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">C191</text>
+<rect x="27221" y="32911" width="3008" height="1212" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="26162" y1="33532" x2="27160" y2="33532" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="30289" y1="33522" x2="31311" y2="33522" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="38654" y="31679" width="2962" height="1210" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="37615" y1="32301" x2="38597" y2="32301" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="41678" y1="32289" x2="42694" y2="32289" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="37399" y="29834" width="3016" height="1210" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="36338" y1="30455" x2="37341" y2="30455" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="40476" y1="30443" x2="41509" y2="30443" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="37399" y="26149" width="3022" height="1210" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="36338" y1="26767" x2="37343" y2="26767" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="40479" y1="26753" x2="41516" y2="26753" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="37399" y="27374" width="3022" height="1212" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="36338" y1="27995" x2="37343" y2="27995" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="40479" y1="27981" x2="41516" y2="27981" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="37399" y="28602" width="3022" height="1214" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="36338" y1="29223" x2="37343" y2="29223" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="40479" y1="29209" x2="41516" y2="29209" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="35068" y1="19381" x2="40136" y2="19381" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="40163" y1="19381" x2="40163" y2="23656" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="40136" y1="23683" x2="35068" y2="23683" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="35068" y1="23661" x2="35068" y2="21957" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="35068" y1="19381" x2="35068" y2="21088" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="35068" y1="21107" x2="36071" y2="21107" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="36091" y1="21107" x2="36091" y2="21107" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="36091" y1="21957" x2="36091" y2="21957" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="36091" y1="21107" x2="36091" y2="21934" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="35068" y1="21957" x2="36071" y2="21957" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<text y="70266.9" xml:space="preserve"><tspan x="28388 29204.2 29612.2 30346.2 31080.1 31568.9 32220.7 32587.7" font-size="1420" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">Figure 2</tspan></text>
+<rect x="15915" y="44067" width="14680" height="13498" fill="none" stroke="#000" stroke-width="100" stroke-linecap="butt" stroke-linejoin="round"/>
+<g transform="matrix(0,1,-1,0,70473,14407)"><rect x="27407" y="41221" width="1252" height="2438" fill="#000" fill-opacity="0.6" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/></g>
+<g transform="matrix(0,1,-1,0,72278,12602)"><rect x="29210" y="41835" width="1256" height="1210" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/></g>
+<text transform="translate(21958 51089.3) scale(1.13 1)" x="0 917.3 1552.6 2187.8" xml:space="preserve" font-size="1210" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">U101</text>
+<rect x="18502" y="42336" width="3704" height="1214" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<text transform="translate(38379 62320.3) scale(1.13 1)" x="0 917.3 1552.6 2187.8" xml:space="preserve" font-size="1210" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">U605</text>
+<line x1="28870" y1="44064" x2="30595" y2="45791" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<text y="40882.8" xml:space="preserve"><tspan x="27142 28595.1 29364.7 30134.4" font-size="1410" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">W101</tspan></text>
+<text y="42607.6" xml:space="preserve"><tspan x="25414" font-size="1406" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">1</tspan></text>
+<text y="42838.6" xml:space="preserve"><tspan x="31462" font-size="1692" font-family="'Times New Roman', Times, 'Liberation Serif', serif">3</tspan></text>
+<text transform="translate(20059 59576.2) scale(1.43 1)" x="0 414.6 725.4 1036.2" xml:space="preserve" font-size="592" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">C114</text>
+<text transform="translate(19389 43170.5) scale(1.32 1)" x="0 449.6 786.7 1123.7" xml:space="preserve" font-size="642" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">C116</text>
+<rect x="19565" y="58752" width="3010" height="1214" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="34926" y1="57892" x2="45224" y2="57892" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="45287" y1="57892" x2="45287" y2="67329" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="45224" y1="67396" x2="34926" y2="67396" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="34926" y1="67332" x2="34926" y2="57897" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="37007" y1="61707" x2="37007" y2="61707" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="37007" y1="63581" x2="37007" y2="63581" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="35785" y1="57888" x2="34923" y2="58750" fill="none" stroke="#000" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+</svg>

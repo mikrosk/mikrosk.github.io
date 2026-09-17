@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="799.51" height="2448" viewBox="0 0 799.51 2448">
+<title>DYNACADD/PARTS/DXF/HARDDISK.DXF</title>
+<rect x="0" y="0" width="799.51" height="2448" fill="#ffffff"/>
+<g data-layer="10" fill="none" stroke="#000000" stroke-width="43.39" stroke-linecap="butt" stroke-linejoin="miter">
+<path d="M185.6 2301.33L185.6 132.47M560.03 2231.23L560.03 194.12M439.79 760.2A16.53 16.53 0 0 0 439.79 727.14A16.53 16.53 0 0 0 439.79 760.2ZM297.15 1577.91A16.53 16.53 0 0 0 297.15 1544.85A16.53 16.53 0 0 0 297.15 1577.91ZM560.17 2221.48A86.77 86.77 0 0 1 501.41 2307.26M301.44 2381.07L507.42 2303.47M185.6 2295.98L185.6 2301.33A86.77 86.77 0 0 0 303.09 2382.48L315.66 2377.73M297.15 2045.18A16.53 16.53 0 0 0 297.15 2012.11A16.53 16.53 0 0 0 297.15 2045.18ZM297.15 2278.81A16.53 16.53 0 0 0 297.15 2245.74A16.53 16.53 0 0 0 297.15 2278.81ZM297.15 1811.54A16.53 16.53 0 0 0 297.15 1778.48A16.53 16.53 0 0 0 297.15 1811.54ZM439.79 1694.73A16.53 16.53 0 0 0 439.79 1661.67A16.53 16.53 0 0 0 439.79 1694.73ZM439.79 1928.36A16.53 16.53 0 0 0 439.79 1895.3A16.53 16.53 0 0 0 439.79 1928.36ZM439.79 2161.99A16.53 16.53 0 0 0 439.79 2128.93A16.53 16.53 0 0 0 439.79 2161.99ZM297.15 1344.28A16.53 16.53 0 0 0 297.15 1311.22A16.53 16.53 0 0 0 297.15 1344.28ZM297.15 1110.65A16.53 16.53 0 0 0 297.15 1077.59A16.53 16.53 0 0 0 297.15 1110.65ZM297.15 877.02A16.53 16.53 0 0 0 297.15 843.96A16.53 16.53 0 0 0 297.15 877.02ZM439.79 993.83A16.53 16.53 0 0 0 439.79 960.77A16.53 16.53 0 0 0 439.79 993.83ZM439.79 1227.47A16.53 16.53 0 0 0 439.79 1194.4A16.53 16.53 0 0 0 439.79 1227.47ZM439.79 1461.1A16.53 16.53 0 0 0 439.79 1428.03A16.53 16.53 0 0 0 439.79 1461.1ZM560.17 211.86A86.77 86.77 0 0 0 501.41 126.08M302.85 51.15L516 131.46M297.15 643.39A16.53 16.53 0 0 0 297.15 610.32A16.53 16.53 0 0 0 297.15 643.39ZM297.15 409.76A16.53 16.53 0 0 0 297.15 376.69A16.53 16.53 0 0 0 297.15 409.76ZM185.6 137.81L185.6 132.47A86.77 86.77 0 0 1 303.09 51.31L315.66 56.07M297.15 176.12A16.53 16.53 0 0 0 297.15 143.06A16.53 16.53 0 0 0 297.15 176.12ZM439.79 526.57A16.53 16.53 0 0 0 439.79 493.51A16.53 16.53 0 0 0 439.79 526.57ZM439.79 292.94A16.53 16.53 0 0 0 439.79 259.88A16.53 16.53 0 0 0 439.79 292.94Z"/>
+</g>
+<g data-layer="10" fill="#000000" stroke="none" font-family="Helvetica, Arial, 'Liberation Sans', 'DejaVu Sans', sans-serif" xml:space="preserve">
+<text transform="translate(129.77 1615.69) rotate(-90)" y="0" font-size="116.02">7</text>
+<text transform="translate(129.77 2402.31) rotate(-90)" y="0" font-size="116.02">10</text>
+<text transform="translate(129.77 1849.32) rotate(-90)" y="0" font-size="116.02">8</text>
+<text transform="translate(129.77 2080.95) rotate(-90)" y="0" font-size="116.02">9</text>
+<text transform="translate(129.77 1148.43) rotate(-90)" y="0" font-size="116.02">5</text>
+<text transform="translate(129.77 1380.06) rotate(-90)" y="0" font-size="116.02">6</text>
+<text transform="translate(129.77 924.38) rotate(-90)" y="0" font-size="116.02">4</text>
+<text transform="translate(129.77 683) rotate(-90)" y="0" font-size="116.02">3</text>
+<text transform="translate(129.77 449.37) rotate(-90)" y="0" font-size="116.02">2</text>
+<text transform="translate(129.77 197.72) rotate(-90)" y="0" font-size="116.02">1</text>
+<text transform="translate(753.82 2289.21) rotate(-90)" y="0" font-size="116.02">19</text>
+<text transform="translate(753.82 1823.95) rotate(-90)" y="0" font-size="116.02">17</text>
+<text transform="translate(753.82 2057.58) rotate(-90)" y="0" font-size="116.02">18</text>
+<text transform="translate(753.82 1590.32) rotate(-90)" y="0" font-size="116.02">16</text>
+<text transform="translate(753.82 1125.06) rotate(-90)" y="0" font-size="116.02">14</text>
+<text transform="translate(753.82 1356.69) rotate(-90)" y="0" font-size="116.02">15</text>
+<text transform="translate(752.93 873.43) rotate(-90)" y="0" font-size="116.02">13</text>
+<text transform="translate(752.93 639.79) rotate(-90)" y="0" font-size="116.02">12</text>
+<text transform="translate(752.93 394.15) rotate(-90)" y="0" font-size="116.02">11</text>
+</g>
+</svg>

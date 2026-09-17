@@ -1,0 +1,85 @@
+* test the address latch
+* author: Tom Le
+* date: Feb 4, 1992
+
+	.text
+latbe:				;bus error routine  
+	move.l  spsave0,sp
+	bra	latch1
+	rte	
+
+latbeer:				;bus error routine  
+	move.l  spsave0,sp
+	bra	latch1er
+	rte	
+
+testlat:
+	movea.l #$0000,a0	;start test address
+	move.l  #$10000,d2	;test address increment
+	lea     expandio,a1 	;address latch
+	move.w  sr,srsave0
+	move.l  sp,spsave0
+	move.l  8,besave0
+	move.l  #latbe,8	;load the latch bus error routine
+	move.w  #$2700,sr	;
+	
+	move.b   #1,(a1)		;set the latchen bit
+	move.b   (a0),d1		;  and clear it
+
+latch:
+	move.b  #1,(a1)		;enable address latch
+	move.b  (a0),d1		;latch a16-a23
+
+latch1:
+	move.w  (a1),d1		;read from latch
+	and.l   #$ff,d1		;
+	swap    d1
+	cmp.l   d1,a0
+	bne     latcher
+latch2:
+	add.l   d2,a0
+	cmp.l   #$1000000,a0
+	blt     latch
+	
+latchrt:
+	move.w  srsave0,sr
+	move.l  spsave0,sp
+	move.l  besave0,8
+	btst    #elatf,flag
+        rts
+
+latcher:
+	swap    d1
+	move.l  a0,d0
+	swap    d0
+.if TOS=0
+        move    #red,palette
+.endif
+        lea     latchmsg,a5
+	bsr	dspmsg
+	bsr     dspa0	;fail address
+	bsr	dspspc
+	bsr     dspd0b
+	bsr	dspspc
+	bsr     dspd1b
+	lea	expandio,a1
+	move.b  1(a1),d1
+	bsr	dspspc
+	bsr	dspd1b
+	bsr	dspspc
+	bsr	dspd2w
+	bset    #elatf,flag
+	bra	latchrt
+
+	bra failloop
+failloop:
+	move.l  #latbeer,8	;load the latch bus error routine
+
+latchl:
+
+	move.b  #1,(a1)		;enable address latch
+	move.b  (a0),d1		;latch a16-a23, and reset
+
+latch1er:
+	move.w  (a1),d1		;read from latch
+	bra     latchl

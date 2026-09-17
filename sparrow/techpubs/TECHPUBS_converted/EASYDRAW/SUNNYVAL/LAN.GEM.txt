@@ -1,0 +1,51 @@
+File: EASYDRAW/SUNNYVAL/LAN.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-3220,-4240)-(2940,740)
+Page size: 203.2 x 254.0 mm
+Coordinate window: lower-left (-3640,4550), upper-right (3640,-4550); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-3220,-4162.67)-(2860,-89.67)
+Items: 174 (1556 words)
+Objects: polyline 13, fill area 2, bar 11, ellipse 1, elliptical arc 1, justified text 28
+Other records (escapes, application data): write_meta 10 x2, write_meta 150 x1, write_meta 151 x2, write_meta 152 x12, write_meta 153 x12, write_meta 154 x22, write_meta 155 x2, write_meta 158 x1, write_meta 160 x1, write_meta 80 x14, write_meta 81 x14
+Text strings: 28
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+  -3220   -3920  [font 7 24pt]  SCC CONNECTOR
+
+  -3110   -1730  [font 7 12pt]  Pin
+  -3110   -1250  [font 7 12pt]  1
+  -3110   -1090  [font 7 12pt]  2 
+  -3110    -930  [font 7 12pt]  3
+  -3110    -770  [font 7 12pt]  4
+  -3110    -610  [font 7 12pt]  5
+  -3110    -450  [font 7 12pt]  6
+  -3110    -290  [font 7 12pt]  7
+  -3110    -130  [font 7 12pt]  8
+
+  -2530   -1720  [font 7 12pt]  Signal
+  -2530   -1240  [font 7 12pt]  Handshake Output (DTR RS423)
+  -2530   -1080  [font 7 12pt]  Input Handshake (TR0CA External Clock)
+  -2530    -920  [font 7 12pt]  - Transmit Data
+  -2530    -760  [font 7 12pt]  Ground
+  -2530    -600  [font 7 12pt]  - Received Data
+  -2530    -440  [font 7 12pt]  + Transmitted Data
+  -2530    -280  [font 7 12pt]  Reserved
+  -2530    -120  [font 7 12pt]  + Receive
+
+  -3190   -3270  [font 7 12pt]  8 pin Mini DIN Female RS - 422
+
+   2300   -1960  [font 7 12pt]   1
+
+   1470   -1960  [font 7 12pt]   2
+
+    930   -2700  [font 7 12pt]   5
+
+   1670   -2630  [font 7 12pt]   4
+
+   2740   -2690  [font 7 12pt]   3
+
+   1200   -3380  [font 7 12pt]   8
+
+   2440   -3370  [font 7 12pt]   6
+
+   1840   -3630  [font 7 12pt]   7

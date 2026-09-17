@@ -1,0 +1,76 @@
+[PageStream 2 document TOMU13.DOC: 8.50 x 11.00 in, 3 objects]
+
+--- Page 1 ---
+
+Weekly Report
+
+
+To:		Tom Ulaszek
+From:	Marty Pennock
+Subject:	Progress Report
+Date:	October 24, 1991
+
+
+Progress
+
+1. Finished changes to the MEGA STE Coprocessor Manual and sent final copy to SUVL for transfer to film.
+
+2. Finished changes to the TT030 Hard Disk Installation Manual and sent final copy to SUVL for transfer to film.
+
+3. Developed and drew new logo for the ATARI manuals.
+
+4. Started conversion of files and data to a TT030.
+
+5. Sent manuals for Sandra Miller to Spinner Printers for production.
+
+6. Installed most of the applications needed to produce DTP on the Atari TT030.
+
+7. Completed TT030 hardware upgrade.
+
+8. Converted several files for use with PageStream.
+
+9. Contacted SUVL on proposed User's and Service Manual for Marlin. Requested information from SUVL for same.
+
+Plans
+
+1. Layout the STE+ Service guide on the TT030 using PageStream.
+
+2. Ship Manuals to Sandra Miller in SUVL.
+
+3. Develop schedule for the Marlin Manuals.
+
+4. Send out info on the ABC286 and PC3.
+
+5. Send out info on the ABC386SX.
+
+6. Convert all files from PC based application to TT030.
+
+7. Convert all drawings from PC based applications to the TT030.
+
+8. Revise document schedules for all projects to reflect TT030 layout and production times.
+
+9. Finish Chapter 3 of the STE+ Service Guide.
+
+--- Page 2 ---
+
+10. Get review of the 2MB floppy drives back and produce final drafts.
+
+11. Get review copy back and make corrections to the MEGA STE Addendum.
+
+12. Get Review copy back from SUVL on the TT030 Correction pages and finish for final shipment.
+
+Problems
+
+1. Still need BOM's for the ABC286, PC3, and ABC386SX. Current copies not legible.
+
+2. TT030 based applications very slow and tedious.
+
+3. Still have no review copy of the 2MB floppy kit manuals for the TT030 or MEGA STE.
+
+4. Still have no review copy of the TT030 Correction Pages.
+
+5. Have no review copy of the MEGA STE Addendum.
+
+6. Need a copy of Word Perfect for the Atari with a manual. Have barrowed copy.
+
+7. Need more info from SUVL on MARLIN MSDOS Manual to use as base for Users Guide.

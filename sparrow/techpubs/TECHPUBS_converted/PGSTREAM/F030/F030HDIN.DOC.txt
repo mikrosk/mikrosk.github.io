@@ -1,0 +1,42 @@
+[PageStream 2 document F030HDIN.DOC: 8.50 x 11.00 in, 4 objects]
+
+--- Page 1 ---
+
+FALCON030
+Hard Disk Installation Kit
+
+
+Kit Contents
+
+Mounting Bracket P/N
+Mounting Screws P/N
+Interface Cable P/N
+Hard Disk
+
+
+Installation
+
+1.	Turn the unit over and remove the seven screws holding the top cover in place.
+
+
+2.	Turn the unitback over and remove the top cover.
+
+--- Page 2 ---
+
+3.	Using four mounting screws install the Hard Disk in the mounting bracket so that the interface connector is on the side of the bracket without mounting flanges.
+
+
+4.	Install the interface cable on the main PCB connector J14. Be sure pin 1 (side of cable with red stripe) is located toward the front of the unit.
+
+
+5.	Dress the interface cable so it is pointed toward the front of the unit and the connector is positioned with pin 1 to the left.
+
+--- Page 3 ---
+
+6.	With four mounting screws install the hard disk and bracket in the unit. Be sure the flanges on the bracket are at the back of the unit.
+
+
+7.	Plug the interface cable into the hard disk. Be sure not to place the interface cable over the Master/Slave jumper pins.
+
+
+8.	Replace the top cover.

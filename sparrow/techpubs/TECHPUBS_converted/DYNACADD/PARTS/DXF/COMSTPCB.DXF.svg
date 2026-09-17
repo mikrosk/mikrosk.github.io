@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2448" height="1248" viewBox="0 0 2448 1248">
+<title>DYNACADD/PARTS/DXF/COMSTPCB.DXF</title>
+<rect x="0" y="0" width="2448" height="1248" fill="#ffffff"/>
+<g data-layer="10" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M24 24L2424 24M2424 1224L24 1224M24 1224L24 24M201.06 702.19L875.01 702.19M201.06 24L201.06 702.19M875.01 702.19L875.01 24M2424 24L2424 1224"/>
+</g>
+<g data-layer="1" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="99" cy="1186.5" r="18.75"/>
+<circle cx="1224" cy="1186.5" r="18.75"/>
+<circle cx="2349" cy="1186.5" r="18.75"/>
+<circle cx="1674" cy="399" r="18.75"/>
+<path d="M286.5 961.5L286.5 755.25M511.5 755.25L511.5 924M774 1186.5L586.5 1186.5M586.5 980.25L811.5 980.25M605.25 999L792.75 999M763.5 1167.75L605.25 1167.75M586.5 1186.5L586.5 980.25M605.25 1167.75L605.25 999M174 1186.5L174 1111.5L324 1111.5L324 1186.5L174 1186.5ZM399 1186.5L399 1111.5L549 1111.5L549 1186.5L399 1186.5ZM474 961.5L286.5 961.5M511.5 924L474 961.5M305.25 774L492.75 774M305.25 942.75L305.25 774M492.75 774L492.75 914M463.5 942.75L305.25 942.75M492.75 914L463.5 942.75M396.88 925.83A5.31 5.31 0 1 0 397.12 925.43L396.88 925.83ZM174 1074L174 999L324 999L324 1074L174 1074ZM399 1074L399 999L549 999L549 1074L399 1074ZM811.5 980.25L811.5 1149M792.75 999L792.75 1139M811.5 1149L774 1186.5M792.75 1139L763.5 1167.75M696.88 1150.83A5.31 5.31 0 1 0 697.12 1150.43L696.88 1150.83ZM924 999L924 961.5L1074 961.5L1074 999L924 999ZM849 1017.75L849 999L905.25 999L905.25 1017.75L849 1017.75ZM286.5 755.25L511.5 755.25"/>
+</g>
+<g data-layer="1" fill="#000000" stroke="none" font-family="Helvetica, Arial, 'Liberation Sans', 'DejaVu Sans', sans-serif" xml:space="preserve">
+<text transform="translate(1399.26 368.1)" y="0" font-size="41.4">STANDOFF</text>
+<text transform="translate(586.5 905.25)" y="0" font-size="41.4">COPROCESSOR</text>
+<text transform="translate(586.5 955.25)" y="0" font-size="41.4">SOCKET</text>
+<text transform="translate(361.5 849)" y="0" font-size="41.4">CPU</text>
+<text transform="translate(849 1074)" y="0" font-size="41.4">W3</text>
+<text transform="translate(642.75 1092.75)" y="0" font-size="41.4">UB2</text>
+<text transform="translate(1092.75 961.5)" y="0" font-size="41.4">UB1</text>
+<text transform="translate(1092.75 1011.5)" y="0" font-size="41.4">PAL</text>
+<text transform="translate(332.85 428.09)" y="0" font-size="41.4">POWER SUPPLY</text>
+<text transform="translate(1843.7 706.17)" y="0" font-size="41.4">MAIN PCB</text>
+</g>
+</svg>

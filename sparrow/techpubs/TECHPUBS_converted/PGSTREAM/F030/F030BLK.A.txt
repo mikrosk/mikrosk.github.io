@@ -1,0 +1,261 @@
+[PageStream 2 document F030BLK.A: 8.50 x 11.00 in, 229 objects]
+
+--- Page 1 ---
+[118 drawing objects, see F030BLK.A.p001.svg]
+
+Data Bus 32
+
+Data Bus 32
+
+MC68030FG
+Microprocessor
+
+Address Bus 24
+
+Control Bus
+
+COMBEL
+IC
+
+Address 10
+
+Memeory
+Daughter
+Card
+1/4/14
+Megabytes
+
+Control Bus
+
+Data 32
+
+Red 6
+
+Optional
+MC68881/
+MC68882
+Coprocessor
+
+Address 4
+
+Data 16
+
+Address 10
+
+VIDEL
+IC
+
+Blue 6
+
+Green 6
+
+Video
+DAC
+
+I/F Cable
+
+ST or VGA
+Monitor
+
+Modulator
+
+TV
+
+Control
+
+SYNC
+
+Data 16
+
+Color
+
+1377
+
+Address 16
+
+System
+ROM
+
+Control
+
+Ring Indicator
+
+Data 8
+
+Hard Disk Interrupt
+
+Data 8
+
+MC68901
+MFP
+
+MIDI Interrupt
+
+Address 5
+
+DSP Interrupt
+
+Keyboard
+
+MC6850
+Keyboard
+Controller
+
+Address 2
+
+Control
+
+Control
+
+Keyboard Interrupt
+
+Printer Acknowledge
+
+Printer Busy
+
+Data 8
+
+Printer Data
+
+Data 8
+
+DS1287
+Real-Time
+Clock
+
+Control
+
+YM-3439
+PSG
+
+Printer Select In
+
+IDE Reset
+
+Control
+
+Floppy Disk 0 Select
+
+Floppy Side 0 Select
+
+Data 8
+
+Speaker Gate
+
+MIDI In
+
+MIDI Out
+
+MC6850
+MIDI
+Controller
+
+Address 2
+
+Serial Data
+
+MONO Out
+
+Control
+
+Data 15
+
+MONO Out
+
+Data
+
+Data 8
+
+Address 23
+
+SDMA
+
+Master Clock
+
+Serial Clock
+
+CODEC
+ADC
+DAC
+
+AMP
+
+Stereo
+
+Internal
+Speaker
+
+Control
+
+Microphone
+
+Address 1
+
+Serial Port
+
+Handshake
+
+8530
+SCC
+
+Serial SYNC
+
+Stereo
+
+Headphones
+
+Control
+
+Data 8
+
+LAN Data
+
+LAN Port
+
+Address 3
+
+Control
+
+AJAX
+Floppy
+Controller
+
+Interal
+Floppy
+Disk
+
+5380
+SCSI
+Controller
+
+External
+SCSI
+Hard
+Disk
+
+Record Data
+
+Data 8
+
+Play Data
+
+Address 3
+
+Control
+
+DSP Connector
+
+Control
+
+56001
+Digital
+Signal
+Processor
+
+Serial Data
+
+Data 24
+
+Address 16
+
+32K SRAM

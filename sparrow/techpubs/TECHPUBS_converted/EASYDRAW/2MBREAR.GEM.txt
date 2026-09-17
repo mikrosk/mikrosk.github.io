@@ -1,0 +1,39 @@
+File: EASYDRAW/2MBREAR.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-3094,-819)-(3094,1274)
+Page size: 203.2 x 254.0 mm
+Coordinate window: lower-left (-3640,4550), upper-right (3640,-4550); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-3094,-831.11)-(3094,1105.28)
+Items: 353 (2627 words)
+Objects: polyline 68, bar 35, justified text 15
+Other records (escapes, application data): write_meta 10 x13, write_meta 150 x1, write_meta 151 x13, write_meta 152 x13, write_meta 153 x13, write_meta 154 x2, write_meta 158 x1, write_meta 160 x1, write_meta 80 x68, write_meta 81 x68
+Text strings: 15
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+  -1360       0  [font 14 10pt bold]  1
+
+  -1360     180  [font 14 10pt bold]  9
+
+    360       0  [font 14 10pt bold]  8
+
+    360     180  [font 14 10pt bold]  16
+
+    640     180  [font 14 10pt bold]  1
+
+    640       0  [font 14 10pt bold]  2
+
+   2730     180  [font 14 10pt bold]  33
+
+   2730       0  [font 14 10pt bold]  34
+
+   -820    -730  [font 14 10pt bold]  Top of Floppy Drive
+
+    460     820  [font 14 10pt bold]  #3 Pin is removed
+    460     950  [font 14 10pt bold]  to prevent
+    460    1080  [font 14 10pt bold]  improper insertion
+
+  -2280     750  [font 14 10pt bold]  J1
+
+   -820     820  [font 14 10pt bold]  SS01
+
+   2140     770  [font 14 10pt bold]  J2

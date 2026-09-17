@@ -1,0 +1,194 @@
+DXF drawing: DYNACADD/PARTS/DXF/401280D1.DXF
+Render: 401280D1.DXF.svg
+
+== Summary ==
+File:        111896 bytes, CR/LF line ends
+Dialect:     group codes right-aligned in 3 columns; full AutoCAD header with $ACADVER=AC1006 (R10), 112 header variables, tables VPORT/LTYPE/LAYER/STYLE/VIEW/UCS/DWGMGR
+Sections:    HEADER, TABLES, BLOCKS, ENTITIES
+Menu:        $MENU=acad
+Dates:       created 1992-06-18 02:29, last saved 1992-06-26 23:38 ($TDCREATE/$TDUPDATE)
+Extents:     header (0, 0) - (420.5, 297)
+             rendered (0, 0) - (420.5, 297), size 420.5 x 297
+Limits:      (0, 0) - (420, 300)
+Units:       not stored in this DXF version; $LUNITS=2 (decimal); limits and extents suggest millimetres; a label says millimetres
+Header:      112 variables; $LTSCALE=10.0, $TEXTSIZE=3.0, $DIMSCALE=1.0, $FILLMODE=1
+Text styles: STANDARD (font txt), ROMAND (font romand), ROMANS (font romans)
+Linetypes:   CONTINUOUS, HIDDEN
+Layers:      6 in table, 6 used
+  name      color  linetype      state         objects
+  0             7  CONTINUOUS    on            700
+  DIM           1  CONTINUOUS    on            21
+  BORDER        4  CONTINUOUS    on            57
+  TITLE         2  CONTINUOUS    on            118
+  MPHAN         1  HIDDEN        on            6
+  TEXT          2  CONTINUOUS    on            1
+Entities:    model space: LINE 251, TEXT 94, ARC 21, POLYLINE 8 (32 vertices), INSERT 6, SOLID 3, CIRCLE 2
+             in block definitions: LINE 518
+Blocks:      6 defined
+  *X0: base (0, 0), LINE 127; inserted 1 time
+      at (53.12, 303.4) scale 0.25,0.25 rotation 326.319 layer TITLE
+  *X1: base (0, 0), LINE 66; inserted 1 time
+      at (52.88, 302.93) scale 0.25,0.25 rotation 326.319 layer TITLE
+  *X2: base (0, 0), LINE 66; inserted 1 time
+      at (52.77, 303) scale 0.25,0.25 rotation 326.319 layer TITLE
+  *X3: base (0, 0), LINE 127; inserted 1 time
+      at (-414.85, 11.85) scale 1,1 rotation 0 layer TITLE
+  *X4: base (0, 0), LINE 66; inserted 1 time
+      at (-414.6, 9.75) scale 1,1 rotation 0 layer TITLE
+  *X5: base (0, 0), LINE 66; inserted 1 time
+      at (-415.1, 9.75) scale 1,1 rotation 0 layer TITLE
+Notes:
+  - 1 TEXT entities are empty or blank
+
+== Text in reading order (93 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (78 items) --
+  4  |  3  |  2  |  1
+  REV  |  REVISION DESCRIPTION  |  DATE  |  APPROVED
+  1  |  ENGINEERING RELEASE
+  D  |  D
+  C
+  TOP CASE ASSY
+  NAMEPLATE
+  C
+  B  |  B
+  INDICATOR
+  2 PLS
+  UNLESS OTHERWISE SPECIFIED DRAWN BY:  |  DATE:
+  TOLERANCES  |  ATARI MICROSYSTEMS
+  ON LINIER  |  ON ANGULAR
+  CORPORATION
+  DIMENSIONS  |  DIMENSIONS  |  R
+  CHECKED:  |  DATE:
+  4115 KELLER SPRING RD., SUITE 200
+  UNDER 30 ±0.1  |  ATARI  |  DALLAS, TEXAS  75244
+  30 THRU 300 ±0.2 ±1/4°
+  TITLE
+  ENGINEER:  |  DATE:
+  ±0.4
+  OVER 300
+  ASSY TOP CASE FALCON030
+  A  |  A
+  MATERIAL
+  APPROVED:  |  DATE:  |  SIZE DRAWING NO.  |  REV
+  CA401273  |  FALCON030
+  A3  |  CA401280  |  1
+  USED ON
+  NEXT ASSY
+  NOTES: UNLESS OTHERWISE SPECIFIED:  |  ORIGINAL MODEL FINISH
+  APPROVED:  |  DATE:
+  SCALE  |  NONE  |  SHEET     OF 1 1
+  APPLICATION
+  ALL DIMENSIONS ARE MILLIMETERS
+  4  |  3  |  2  |  1
+
+-- direction 90 deg (6 items) --
+  DRAWING NO.  |  SHEET  |  REV
+  CA401280  |  1  |  1
+
+-- direction 270 deg (6 items) --
+  DRAWING NO.  |  SHEET  |  REV
+  CA401280  |  1  |  1
+
+-- direction 328 deg (2 items) --
+  ATARI FALCON030
+
+-- direction 326 deg (1 items) --
+  R
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER   STYLE     TEXT
+ 53.34  291.56       3.5      0  left      BORDER  ROMAND    4
+159.13  291.56       3.5      0  left      BORDER  ROMAND    3
+264.08  291.56       3.5      0  left      BORDER  ROMAND    2
+338.22  291.56       3.5      0  left      BORDER  ROMAND    1
+240.94  283.38         2      0  middle    TITLE   ROMANS    REV
+306.25   283.5         2      0  middle    TITLE   ROMANS    REVISION DESCRIPTION
+365.84   283.5         2      0  middle    TITLE   ROMANS    DATE
+390.24   283.5         2      0  middle    TITLE   ROMANS    APPROVED
+240.79  275.65         3      0  middle    TITLE   ROMAND    1
+252.52  274.31    2.6455      0  left      TITLE   ROMAND    ENGINEERING RELEASE
+   9.2  260.03       3.5      0  left      BORDER  ROMAND    D
+408.19  260.03       3.5      0  left      BORDER  ROMAND    D
+408.19  211.21       3.5      0  left      BORDER  ROMAND    C
+ 80.58  195.94         3      0  left      DIM     STANDARD  TOP CASE ASSY
+243.04  181.83         3      0  left      DIM     STANDARD  NAMEPLATE
+   9.2  156.29       3.5      0  left      BORDER  ROMAND    C
+   9.2  110.52       3.5      0  left      BORDER  ROMAND    B
+408.19  110.52       3.5      0  left      BORDER  ROMAND    B
+ 67.26  102.91         3      0  left      DIM     STANDARD  INDICATOR
+  72.2   96.92         3      0  left      DIM     STANDARD  2 PLS
+245.89   62.69       1.9      0  middle    TITLE   ROMAND    UNLESS OTHERWISE SPECIFIED
+270.05    61.8         2      0  left      TITLE   ROMAND    DRAWN BY:
+306.51   61.67         2      0  right     TITLE   ROMAND    DATE:
+245.89   58.49       1.9      0  middle    TITLE   ROMAND    TOLERANCES
+333.07   58.34         4      0  left      TITLE   ROMAND    ATARI MICROSYSTEMS
+237.53   55.19       1.6      0  middle    TITLE   ROMAND    ON LINIER
+260.32   55.19       1.6      0  middle    TITLE   ROMAND    ON ANGULAR
+344.17    53.2         4      0  left      TITLE   ROMAND    CORPORATION
+237.53   52.22       1.6      0  middle    TITLE   ROMAND    DIMENSIONS
+260.32   52.22       1.6      0  middle    TITLE   ROMAND    DIMENSIONS
+327.81   51.71       0.5      0  middle    TITLE   ROMAND    R
+270.05   50.61         2      0  left      TITLE   ROMAND    CHECKED:
+306.51   50.67         2      0  right     TITLE   ROMAND    DATE:
+336.13   49.46         2      0  left      TITLE   ROMANS    4115 KELLER SPRING RD., SUITE 200
+232.07   47.79       1.5      0  middle    TITLE   ROMAND    UNDER 30
+246.52   47.76       2.5      0  middle    TITLE   ROMAND    ±0.1
+ 314.5   47.15         4      0  fit       TITLE   ROMAND    ATARI
+346.85   46.42         2      0  left      TITLE   ROMANS    DALLAS, TEXAS  75244
+232.11   42.79       1.5      0  middle    TITLE   ROMAND    30 THRU 300
+246.52   43.71       2.5      0  middle    TITLE   ROMAND    ±0.2
+259.27   42.67       2.5      0  middle    TITLE   ROMAND    ±1/4°
+310.36   41.37         2      0  left      TITLE   ROMAND    TITLE
+270.05   39.68         2      0  left      TITLE   ROMAND    ENGINEER:
+306.51   39.67         2      0  right     TITLE   ROMAND    DATE:
+246.52   39.67       2.5      0  middle    TITLE   ROMAND    ±0.4
+232.07   37.35       1.5      0  middle    TITLE   ROMAND    OVER 300
+   317      35       3.5      0  left      TITLE   ROMANS    ASSY TOP CASE FALCON030
+   9.2   33.21       3.5      0  left      BORDER  ROMAND    A
+408.19   33.21       3.5      0  left      BORDER  ROMAND    A
+224.56   31.15         3      0  left      TITLE   ROMAND    MATERIAL
+270.05   28.75         2      0  left      TITLE   ROMAND    APPROVED:
+306.51   28.67         2      0  right     TITLE   ROMAND    DATE:
+ 314.9   29.86         2      0  middle    TITLE   ROMAND    SIZE
+ 321.8   29.26         2      0  left      TITLE   ROMAND    DRAWING NO.
+393.89   29.41         2      0  left      TITLE   ROMAND    REV
+178.26    27.8         3      0  middle    TITLE   ROMAND    CA401273
+207.91   27.96         3      0  middle    TITLE   ROMAND    FALCON030
+ 314.9   24.77         3      0  middle    TITLE   ROMAND    A3
+349.39    23.7         4      0  left      TITLE   ROMANS    CA401280
+396.53   25.47         3      0  middle    TITLE   ROMAND    1
+207.42   23.02         2      0  middle    TITLE   ROMAND    USED ON
+177.93   21.11         2      0  middle    TITLE   ROMAND    NEXT ASSY
+ 27.47   18.99       3.5      0  left      TEXT    ROMANS    NOTES: UNLESS OTHERWISE SPECIFIED:
+207.42   19.85         2      0  middle    TITLE   ROMAND    ORIGINAL MODEL
+224.56   18.71         3      0  left      TITLE   ROMAND    FINISH
+270.05   17.79         2      0  left      TITLE   ROMAND    APPROVED:
+306.51   17.67         2      0  right     TITLE   ROMAND    DATE:
+311.27   14.88         2      0  left      TITLE   ROMAND    SCALE
+325.91   14.08         3      0  left      TITLE   ROMAND    NONE
+362.29   14.55         2      0  left      TITLE   ROMAND    SHEET     OF
+377.39   14.08         3      0  left      TITLE   ROMAND    1
+387.51   14.08         3      0  left      TITLE   ROMAND    1
+192.73    13.8         5      0  middle    TITLE   ROMAND    APPLICATION
+375.75    7.12         2      0  middle    TITLE   ROMAND    ALL DIMENSIONS ARE MILLIMETERS
+ 53.34    4.74       3.5      0  left      BORDER  ROMAND    4
+159.13    4.74       3.5      0  left      BORDER  ROMAND    3
+264.08    4.74       3.5      0  left      BORDER  ROMAND    2
+338.22    4.74       3.5      0  left      BORDER  ROMAND    1
+407.51   156.6         2     90  left      TITLE   ROMAND    DRAWING NO.
+407.23  183.56         2     90  left      TITLE   ROMAND    SHEET
+407.36   196.6         2     90  left      TITLE   ROMAND    REV
+411.24  167.09    3.4495     90  middle    TITLE   ROMAND    CA401280
+411.24  188.09    3.4495     90  middle    TITLE   ROMAND    1
+411.01  199.16    3.4495     90  middle    TITLE   ROMAND    1
+ 12.99  214.07         2    270  left      TITLE   ROMAND    DRAWING NO.
+ 13.27  187.11         2    270  left      TITLE   ROMAND    SHEET
+ 13.14  174.07         2    270  left      TITLE   ROMAND    REV
+  9.26  203.57    3.4495    270  middle    TITLE   ROMAND    CA401280
+  9.26  182.57    3.4495    270  middle    TITLE   ROMAND    1
+  9.49   171.5    3.4495    270  middle    TITLE   ROMAND    1
+213.35  209.21         2  327.6  fit       TITLE   ROMAND    ATARI
+219.66  205.22         2  327.6  fit       TITLE   ROMAND    FALCON030
+213.14  208.73     0.125  326.3  middle    TITLE   ROMAND    R

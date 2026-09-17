@@ -1,0 +1,45 @@
+@TITLEPG = Atari MegaSTe■ Hard disk Installation Manual
+@A HEAD = Kit Contents
+Your Atari MegaSTe 1.44 Megabyte Floppy Disk kit P/N CA400677-001 should contain
+the following items:
+@BULLET = AJAX Disk Controller Chip Part Number: C302096-001
+@BULLET = PAL Chip UA2 Part Number: C301901-002
+@BULLET = 2MB 3<$E1/2>" Floppy Disk Drive Part Number: C301371-001
+@BULLET = Installation Manual Part Number:
+If any of these components are missing from your kit please contact the outlet from
+which the kit was ordered.
+@A HEAD = Tools Required:
+@BULLET = Phillips screwdriver.
+@BULLET = Flat blade (slotted) screwdriver
+@A HEAD = Installation
+The following steps should be completed in the following order to install the 1.44
+Megabyte floppy drive in your Atari MegaSTe computer. Carefully read each step all the
+way through before taking any action required by that step.
+@WARNING = WARNING
+This installation should be performed in a static free environment. Static can cause
+damage to the components in this kit. Failure to perform each step completely or
+skipping steps could result in damage to the floppy drive, electrical components, or your
+computer.
+@NUMBER LIST = 1. If a Hard Disk is installed in the computer, remove it.
+@NUMBER LIST = 2. Remove the top cover from the computer.
+@NUMBER LIST = 3. Locate and remove the Floppy Disk Controller Chip at location
+U405. Replace it with the AJAX chip part number C302096-001.
+@NUMBER LIST = 4. Locate and remove the PAL chip at location UA2.
+@NUMBER LIST = 5. If the main PCB is lower than a REV B, remove the main PCB and
+add a jumper wire in the solder side of the board from U7 pin 32 to UA2 pin 19. Replace
+the main PCB.
+@NUMBER LIST = 6. Replace the PAL that was in socket UA2 with the PAL chip part
+number C301901-002 included in the upgrade kit.
+@NUMBER LIST = 7. If the TOS ROMs in the computer are lower than REV 2.05, replace
+them with REV 2.05 TOS ROMs or higher.
+@NUMBER LIST = 8. Locate switch S701 on the main PCB and turn segment 7 on.
+@NUMBER LIST = 9. Set the jumpers on the rear of the 1.44 megabyte  floppy drive to
+1-2, 5-13, and 14-15. See Figure 1.
+@NUMBER LIST 2 = 10. Remove the old 720KB floppy drive from the top cover and
+replace it with the 1.44 megabyte floppy drive part number C301371-001.
+@NUMBER LIST 2 = 11. Plug the floppy drive interface cable into J2 of the floppy drive.
+@NOTE = NOTE: Pin 1 is in the opposite position of pin 1 on the 720KB floppy drive.
+@NUMBER LIST 2 = 12. Plug the power cable into J1 on the 1.44 megabyte floppy drive.
+@NUMBER LIST 2 = 13. Replace the top cover.
+@NUMBER LIST 2 = 14. If you removed a Hard Disk from the computer, replace it
+@NUMBER LIST 2 = .

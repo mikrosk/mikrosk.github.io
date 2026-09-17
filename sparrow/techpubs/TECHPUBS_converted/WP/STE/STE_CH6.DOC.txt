@@ -1,0 +1,82 @@
+[Footer: -  #   -]
+SECTION SIX:
+DIAGNOSTIC FLOW CHARTS
+
+
+This section summarizes in diagrammatic form the steps taken in troubleshooting the STE using the diagnostic cartridge. The details of using the cartridge are not shown; this shows the context in which the cartridge would be used, including some problems for which the cartridge would not be useful. Usage of the cartridge is covered in the troubleshooting guide. In general, the user would run all tests, look up errors in the troubleshooting guide, and take the action recommended.
+
+Although a thorough understanding of the system may be necessary in solving some problems, in most cases following the flowchart, reading the documentation on the diagnostic cartridge where necessary, and swapping out the indicated component(s) will result in repair of the problem.
+
+
+6.1   REPLACEMENT PROCEDURES
+
+Where replacement is indicated, replace the component (if more than one is indicated, replace one at a time) with a known good part. If other components are later replaced, verify whether the first part is good by replacing it in the system once the system has been repaired.
+
+
+6.2   HANDLING OF INTEGRATED CIRCUITS
+
+      Warning: Extreme care should be taken when handling the integrated circuit chips. They are very sensitive to static electricity and can easily be damaged by careless handling. Keep chips in their plastic carriers or on conductive foam when not in use. The operator handling such components should wear a properly grounded ground strap and work on a properly grounded conductive surface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 6-1:  STE Diagnostic Flow Chart
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 6-2: STE Diagnostic Flow Chart
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 6-3: STE Diagnostic Flow Chart
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 6-4: STE Diagnostic Flow Chart

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="205.04mm" height="126.13mm" viewBox="-3662.93 -4655.6 7345.87 4518.87">
+<title>EASYDRAW/SUNNYVAL/MIDI.GEM</title>
+<rect x="-3662.93" y="-4655.6" width="7345.87" height="4518.87" fill="#FFFFFF"/>
+<text xml:space="preserve" x="-3230" y="-3980" font-family="Arial,Helvetica,sans-serif" font-size="303.33" fill="#000000" textLength="1520" lengthAdjust="spacingAndGlyphs">MIDI PORT</text>
+<text xml:space="preserve" x="-3210" y="-3410" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="900" lengthAdjust="spacingAndGlyphs">DIN 5 Female</text>
+<text xml:space="preserve" x="-3010" y="-1720" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="-3010" y="-1240" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">1</text>
+<text xml:space="preserve" x="-3010" y="-1080" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs">2 </text>
+<text xml:space="preserve" x="-3010" y="-920" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">3</text>
+<text xml:space="preserve" x="-3010" y="-760" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">4</text>
+<text xml:space="preserve" x="-3010" y="-600" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">5</text>
+<text xml:space="preserve" x="-2370" y="-1720" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="-2370" y="-1240" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="970" lengthAdjust="spacingAndGlyphs">Thru Transmit</text>
+<text xml:space="preserve" x="-2370" y="-1080" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2370" y="-920" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1220" lengthAdjust="spacingAndGlyphs">Thru Loop Return</text>
+<text xml:space="preserve" x="-2370" y="-760" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="900" lengthAdjust="spacingAndGlyphs">Out Transmit</text>
+<text xml:space="preserve" x="-2370" y="-600" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1150" lengthAdjust="spacingAndGlyphs">Out Loop Return</text>
+<text xml:space="preserve" x="-100" y="-1730" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="-100" y="-1250" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">1</text>
+<text xml:space="preserve" x="-100" y="-1090" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs">2 </text>
+<text xml:space="preserve" x="-100" y="-930" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">3</text>
+<text xml:space="preserve" x="-100" y="-770" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">4</text>
+<text xml:space="preserve" x="-100" y="-610" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">5</text>
+<text xml:space="preserve" x="260" y="-1730" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="260" y="-1250" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="260" y="-1090" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="260" y="-930" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="260" y="-770" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="710" lengthAdjust="spacingAndGlyphs">In Receive</text>
+<text xml:space="preserve" x="260" y="-610" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1030" lengthAdjust="spacingAndGlyphs">In Loop Return</text>
+<text xml:space="preserve" x="-3010" y="-2030" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" text-decoration="underline" textLength="1070" lengthAdjust="spacingAndGlyphs">MIDI OUT/THRU</text>
+<text xml:space="preserve" x="-90" y="-2020" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" text-decoration="underline" textLength="480" lengthAdjust="spacingAndGlyphs">MIDI IN</text>
+<path d="M3010 -3300A640 640 0 1 0 1730 -3300A640 640 0 1 0 3010 -3300Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M3010 -3300A640 640 0 1 0 1730 -3300A640 640 0 1 0 3010 -3300Z" fill="none" stroke="#000000" stroke-width="43" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2010 -3240A70 70 0 1 0 1870 -3240A70 70 0 1 0 2010 -3240Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2010 -3240A70 70 0 1 0 1870 -3240A70 70 0 1 0 2010 -3240Z" fill="none" stroke="#000000" stroke-width="43" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2118 -2972A70 70 0 1 0 1978 -2972A70 70 0 1 0 2118 -2972Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2118 -2972A70 70 0 1 0 1978 -2972A70 70 0 1 0 2118 -2972Z" fill="none" stroke="#000000" stroke-width="43" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2426 -2814A70 70 0 1 0 2286 -2814A70 70 0 1 0 2426 -2814Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2426 -2814A70 70 0 1 0 2286 -2814A70 70 0 1 0 2426 -2814Z" fill="none" stroke="#000000" stroke-width="43" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2744 -2966A70 70 0 1 0 2604 -2966A70 70 0 1 0 2744 -2966Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2744 -2966A70 70 0 1 0 2604 -2966A70 70 0 1 0 2744 -2966Z" fill="none" stroke="#000000" stroke-width="43" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2862 -3248A70 70 0 1 0 2722 -3248A70 70 0 1 0 2862 -3248Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2862 -3248A70 70 0 1 0 2722 -3248A70 70 0 1 0 2862 -3248Z" fill="none" stroke="#000000" stroke-width="43" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2237 -3587L2487 -3587L2487 -3927L2237 -3927Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2237 -3587L2487 -3587L2487 -3927L2237 -3927L2237 -3587" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="3130" y="-3180" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 1</text>
+<text xml:space="preserve" x="2940" y="-2760" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 4</text>
+<text xml:space="preserve" x="2270" y="-2340" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 2</text>
+<text xml:space="preserve" x="1610" y="-2750" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 5</text>
+<text xml:space="preserve" x="1440" y="-3170" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 3</text>
+</svg>

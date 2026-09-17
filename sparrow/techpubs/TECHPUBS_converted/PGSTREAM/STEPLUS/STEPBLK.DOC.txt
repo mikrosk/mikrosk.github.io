@@ -1,0 +1,49 @@
+[PageStream 2 document STEPBLK.DOC: 8.50 x 11.00 in, 85 objects]
+
+--- Page 1 ---
+[57 drawing objects, see STEPBLK.DOC.p001.svg]
+
+STE+ Functional Block Diagram
+
+Address
+
+68000
+
+Data
+
+Video
+Shifter
+
+SIMMs
+
+80286
+
+COMBO
+
+256KB
+ROM
+
+MIDI
+6850
+
+MIDI In
+
+MIDI Out
+
+ROM
+Cart.
+
+68901
+MFP
+
+Serial Port
+
+Mouse &
+Joystick
+
+Keyboard
+
+Keybd
+6850
+
+PSG

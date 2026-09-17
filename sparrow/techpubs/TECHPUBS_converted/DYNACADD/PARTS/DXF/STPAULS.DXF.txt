@@ -1,0 +1,41 @@
+DXF drawing: DYNACADD/PARTS/DXF/STPAULS.DXF
+Render: STPAULS.DXF.svg
+
+== Summary ==
+File:        33772 bytes, CR/LF line ends, ends with ^Z (0x1A)
+Dialect:     group codes right-aligned in 3 columns; full AutoCAD header with $ACADVER=AC1002 (AutoCAD 2.5), 90 header variables, tables LTYPE/LAYER/STYLE/VIEW
+Sections:    HEADER, TABLES, BLOCKS, ENTITIES
+Menu:        $MENU=ACAD
+Dates:       created 1986-06-10 22:03, last saved 1986-06-11 00:05 ($TDCREATE/$TDUPDATE)
+Extents:     header (1.4, 1.5) - (9.4, 6.2)
+             rendered (1.4, 1.6) - (9.4, 6.2), size 8 x 4.6
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version; $LUNITS=2 (decimal); limits and extents suggest inches
+Header:      90 variables; $LTSCALE=1.0, $TEXTSIZE=0.1, $DIMSCALE=1.0, $FILLMODE=0
+Text styles: STANDARD (font TXT), COMPLEX (font COMPLEX)
+Linetypes:   CONTINUOUS, CENTER
+Layers:      6 in table, 6 used
+  name      color  linetype      state         objects
+  0             6  CONTINUOUS    on            1
+  ROOF          4  CONTINUOUS    on            88
+  DOME          4  CONTINUOUS    on            84
+  COLUMN        7  CONTINUOUS    on            44
+  WALL          5  CONTINUOUS    on            16
+  STEP          4  CONTINUOUS    on            11
+Entities:    model space: SOLID 146, CIRCLE 94, POLYLINE 3 (28 vertices), TEXT 1
+Blocks:      0 defined
+Notes:
+  - line 2816: corrupted entity name 'SOLI\x01\t' read as SOLID
+  - 242 entities carry elevation/thickness (3D); drawn as plan view
+  - 3 polylines with constant width drawn as thick strokes
+  - $FILLMODE=0: solids drawn as outlines
+
+== Text in reading order (1 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (1 items) --
+  St. Paul's Cathedral
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE    TEXT
+   5.8     1.6       0.3      0  center    0      COMPLEX  St. Paul's Cathedral

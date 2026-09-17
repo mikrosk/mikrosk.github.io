@@ -1,0 +1,44 @@
+Problems with rev. 3 board (not including pre-me problems)
+==========================================================
+Roy Stedman : 10JUL92
+
+Symptom			Problem				Solution
+-----------------------------------------------------------------
+--- Board 1
+
+Doubling characters 	siz0, siz1 shorted		unshort 
+			(or uds, lds)
+
+System would not come	exp board jumper was		add jumper
+up (DMA's hang)	 	not present
+
+No Sound		Audio caps can short		unshort
+			out 9v or 5v to ground.
+			(no solder mask)
+
+ASCO CODEC shuts up 	undetermined			use Crystal part
+occasionally while
+playing. 						
+
+Static/garbage on	ASCO codec only			use Crystal part 
+audio output with bad
+sample rates.
+
+DSP failiures		solder short under SRAMS	unshort
+(RAM 200200, Not Exec.
+SSI)
+
+DSP SSI failed		R101 R60 not connected		touch up.
+
+--- Board 2
+
+No video (stripes)	series resistor on VINT not	install properly
+Video Address counter	installed properly		
+didn't count
+
+Doubling characters	A0 shorted to pullup		unshort
+
+Speaker not playing	R122 not installed		install
+
+FPU not working		Open etch on u33-37		close
+

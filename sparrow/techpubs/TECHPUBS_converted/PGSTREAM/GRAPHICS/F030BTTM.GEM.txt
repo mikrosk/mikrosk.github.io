@@ -1,0 +1,15 @@
+File: PGSTREAM/GRAPHICS/F030BTTM.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (0,0)-(17408,11264)
+Page size: 435.2 x 281.6 mm
+Coordinate window: lower-left (0,0), upper-right (17408,11264); rendered with y axis down, 40.00 units/mm
+Drawing bounding box (file units): (92,1001)-(16633,11170)
+Items: 1523 (10976 words)
+Objects: polyline 909
+Other records (escapes, application data): clip x5
+Text strings: 0
+
+No text objects in this file (any lettering is drawn as vector strokes or outlines).
+
+LABELS READ FROM THE RENDERED IMAGE (lettering here is vector graphics, not text data; transcribed visually in reading order, may contain reading errors)
+(no lettering)

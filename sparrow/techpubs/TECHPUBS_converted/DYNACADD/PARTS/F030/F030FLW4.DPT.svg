@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1147" height="2000" viewBox="23.3141 -733.4817 378.3537 659.6676">
+<title>DYNACADD/PARTS/F030/F030FLW4.DPT</title>
+<rect x="23.3141" y="-733.4817" width="378.3537" height="659.6676" fill="#ffffff"/>
+<g fill="none" stroke="#000000" stroke-width="0.3042" stroke-linecap="round" stroke-linejoin="round">
+<path data-layer="PEN1" data-style="Continuous, drawn solid" d="M113.75 -651.5A22.4172 22.4172 0 0 0 92.75 -675.25M92.75 -626.5A23.0868 23.0868 0 0 0 113.75 -651.5M72.5 -651.5A22.7493 22.7493 0 0 0 92.75 -626.5M92.75 -675.25A22.0695 22.0695 0 0 0 72.5 -651.5M92.75 -605.25L140.75 -565.25M140.75 -556.4999A5.7112 5.7112 0 0 0 140.75 -565.25M140.75 -556.5L92.75 -516.5M92.75 -516.5L44.75 -556.5M44.75 -565.2501A5.7112 5.7112 0 0 0 44.75 -556.5M44.75 -565.25L92.75 -605.25M168.5 -595.25L269.75 -595.25M269.75 -595.25L269.75 -526.5M269.75 -526.5L168.5 -526.5M168.5 -526.5L168.5 -595.25M168.5 -485.25L269.75 -485.25M269.75 -485.25L269.75 -416.5M269.75 -416.5L168.5 -416.5M168.5 -416.5L168.5 -485.25M92.75 -395.25L140.75 -355.25M140.75 -346.4999A5.7112 5.7112 0 0 0 140.75 -355.25M140.75 -346.5L92.75 -306.5M92.75 -306.5L44.75 -346.5M44.75 -355.2501A5.7112 5.7112 0 0 0 44.75 -346.5M44.75 -355.25L92.75 -395.25M168.5 -385.25L269.75 -385.25M269.75 -385.25L269.75 -316.5M269.75 -316.5L168.5 -316.5M168.5 -316.5L168.5 -385.25M218.75 -275.25L266.75 -235.25M266.75 -226.4999A5.7112 5.7112 0 0 0 266.75 -235.25M266.75 -226.5L218.75 -186.5M218.75 -186.5L170.75 -226.5M170.75 -235.2501A5.7112 5.7112 0 0 0 170.75 -226.5M170.75 -235.25L218.75 -275.25M42.5 -265.25L143.75 -265.25M143.75 -265.25L143.75 -196.5M143.75 -196.5L42.5 -196.5M42.5 -196.5L42.5 -265.25M314.75 -245.25L374.75 -245.25M374.7501 -216.5A14.3755 14.3755 0 0 0 374.75 -245.25M374.7501 -216.5L314.7501 -216.5M314.75 -245.25A14.3755 14.3755 0 0 0 314.7501 -216.5M168.5 -155.25L269.75 -155.25M269.75 -155.25L269.75 -86.5M269.75 -86.5L168.5 -86.5M168.5 -86.5L168.5 -155.25M90 -612L93 -606M93 -606L96 -612M93 -626L93 -606M144 -561L168 -561M162 -558L168 -561M168 -561L162 -564M219 -526L219 -486M216 -492L219 -486M219 -486L222 -492M93 -516L93 -396M90 -402L93 -396M93 -396L96 -402M144 -351L168 -351M162 -348L168 -351M168 -351L162 -354M219 -316L219 -276M216 -282L219 -276M219 -276L222 -282M93 -306L93 -266M90 -272L93 -266M93 -266L96 -272M270 -231L300 -231M294 -228L300 -231M300 -231L294 -234M219 -186L219 -156M216 -162L219 -156M219 -156L222 -162"/>
+</g>
+<g fill="#000000" font-family="DejaVu Sans Mono, Consolas, Courier New, monospace">
+<text x="36" y="-708" font-size="17.7719" textLength="22.3355" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="72" y="-708" font-size="17.7719" textLength="59.767" lengthAdjust="spacingAndGlyphs">DISPLY</text>
+<text x="36" y="-688" font-size="17.7719" textLength="22.3355" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="72" y="-688" font-size="17.7719" textLength="54.2166" lengthAdjust="spacingAndGlyphs">ERROR</text>
+<text x="90" y="-646" font-size="8.7962" textLength="4.0547" lengthAdjust="spacingAndGlyphs">C</text>
+<text x="84" y="-576" font-size="8.7962" textLength="7.3445" lengthAdjust="spacingAndGlyphs">16</text>
+<text x="66" y="-566" font-size="8.7962" textLength="14.8154" lengthAdjust="spacingAndGlyphs">MHz</text>
+<text x="90" y="-566" font-size="8.7962" textLength="27.2351" lengthAdjust="spacingAndGlyphs">CLOCK</text>
+<text x="144" y="-566" font-size="8.7962" textLength="11.1679" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="186" y="-566" font-size="8.7962" textLength="38.2765" lengthAdjust="spacingAndGlyphs">REPLACE</text>
+<text x="234" y="-566" font-size="8.7962" textLength="15.4983" lengthAdjust="spacingAndGlyphs">THE</text>
+<text x="66" y="-556" font-size="8.7962" textLength="44.162" lengthAdjust="spacingAndGlyphs">PRESENT?</text>
+<text x="198" y="-556" font-size="8.7962" textLength="39.3817" lengthAdjust="spacingAndGlyphs">CRYSTAL</text>
+<text x="96" y="-506" font-size="8.7962" textLength="15.1389" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="198" y="-446" font-size="8.7962" textLength="39.6708" lengthAdjust="spacingAndGlyphs">RESTART</text>
+<text x="60" y="-356" font-size="8.7962" textLength="36.1302" lengthAdjust="spacingAndGlyphs">OUTPUT</text>
+<text x="102" y="-356" font-size="8.7962" textLength="23.2474" lengthAdjust="spacingAndGlyphs">FROM</text>
+<text x="144" y="-356" font-size="8.7962" textLength="11.1679" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="186" y="-356" font-size="8.7962" textLength="38.2765" lengthAdjust="spacingAndGlyphs">REPLACE</text>
+<text x="234" y="-356" font-size="8.7962" textLength="15.7321" lengthAdjust="spacingAndGlyphs">GST</text>
+<text x="66" y="-346" font-size="8.7962" textLength="15.7321" lengthAdjust="spacingAndGlyphs">GST</text>
+<text x="90" y="-346" font-size="8.7962" textLength="23.6596" lengthAdjust="spacingAndGlyphs">VIDEO</text>
+<text x="180" y="-346" font-size="8.7962" textLength="23.6596" lengthAdjust="spacingAndGlyphs">VIDEO</text>
+<text x="216" y="-346" font-size="8.7962" textLength="34.1744" lengthAdjust="spacingAndGlyphs">SHIFTER</text>
+<text x="66" y="-336" font-size="8.7962" textLength="40.3013" lengthAdjust="spacingAndGlyphs">SHIFTER?</text>
+<text x="96" y="-296" font-size="8.7962" textLength="15.1389" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="54" y="-246" font-size="8.7962" textLength="27.7655" lengthAdjust="spacingAndGlyphs">TRACE</text>
+<text x="90" y="-246" font-size="8.7962" textLength="36.1302" lengthAdjust="spacingAndGlyphs">OUTPUT</text>
+<text x="54" y="-236" font-size="8.7962" textLength="12.0125" lengthAdjust="spacingAndGlyphs">TO</text>
+<text x="72" y="-236" font-size="8.7962" textLength="54.8263" lengthAdjust="spacingAndGlyphs">CONNECTOR,</text>
+<text x="270" y="-236" font-size="8.7962" textLength="15.1389" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="60" y="-226" font-size="8.7962" textLength="38.2765" lengthAdjust="spacingAndGlyphs">REPLACE</text>
+<text x="108" y="-226" font-size="8.7962" textLength="15.4983" lengthAdjust="spacingAndGlyphs">THE</text>
+<text x="210" y="-226" font-size="8.7962" textLength="14.7434" lengthAdjust="spacingAndGlyphs">OK?</text>
+<text x="324" y="-226" font-size="8.7962" textLength="39.6708" lengthAdjust="spacingAndGlyphs">RESTART</text>
+<text x="54" y="-216" font-size="8.7962" textLength="30.5675" lengthAdjust="spacingAndGlyphs">FAILING</text>
+<text x="102" y="-216" font-size="8.7962" textLength="23.3815" lengthAdjust="spacingAndGlyphs">PART</text>
+<text x="222" y="-176" font-size="8.7962" textLength="11.1679" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="198" y="-126" font-size="8.7962" textLength="38.2765" lengthAdjust="spacingAndGlyphs">REPLACE</text>
+<text x="198" y="-116" font-size="8.7962" textLength="35.0513" lengthAdjust="spacingAndGlyphs">GSTMCU</text>
+</g>
+</svg>

@@ -1,0 +1,261 @@
+[PageStream 2 document GL_GAMES.DOC: 11.00 x 8.50 in, 152 objects, booklet layout: two page halves per sheet, halves listed in text flow order]
+
+--- Page 1, right half ---
+[1 drawing objects, see GL_GAMES.DOC.p001.svg]
+
+Game/Entertainment
+Software Guidelines
+
+
+The following points should be followed...
+
+●  Instalable on a harddisk
+
+●  Should be able to be launched from any video resolution
+
+●  The user should be presented with a single executable file; leave ancillary data files, high score files, etc. inside a companion folder.
+
+●  Allow the user to exit and return to the desktop exactly where and how s/he left off.
+
+●  Use the Falcon enhanced joystick for all joystick-oriented games; CX-40 style controls should not be supported.
+
+●  Ideally, where possible, allow the game to be run in a window; this is well-suited for users that want to play games in the MultiTOS multi-tasking environment (such as while downloading a file).
+
+●  We expect most users to run in 640x480x256 color mode; you may want to keep this in mind.
+
+●  If you use the O/S call, vr_trn_fm() (transform form), you can easily convert video data from standard form to the correct form for the current resolution.
+
+© 1992, Atari Corporation
+
+Guidelines .7
+
+--- Page 2, left half ---
+[2 drawing objects, see GL_GAMES.DOC.p002.svg]
+
+Atari Developer Guidelines
+
+4/23/92
+
+Guidelines .8
+
+© 1992, Atari Corporation
+
+--- Page 2, right half ---
+[2 drawing objects, see GL_GAMES.DOC.p002.svg]
+
+4/23/92
+
+Atari MultioTOS User Interface
+
+© 1992, Atari Corporation
+
+Guidelines .3
+
+--- Page 1, left half ---
+[2 drawing objects, see GL_GAMES.DOC.p001.svg]
+
+Atari Developer Guidelines
+
+4/23/92
+
+Guidelines .4
+
+© 1992, Atari Corporation
+
+--- Page 3, right half ---
+[2 drawing objects, see GL_GAMES.DOC.p003.svg]
+
+4/23/92
+
+Atari MultiTOS User Interface
+
+© 1992, Atari Corporation
+
+guidelines .5
+
+--- Page 3, left half ---
+[2 drawing objects, see GL_GAMES.DOC.p003.svg]
+
+Atari Developer guidelines
+
+4/23/92
+
+guidelines .8
+
+© 1992, Atari Corporation
+
+--- Page 4, right half ---
+[2 drawing objects, see GL_GAMES.DOC.p004.svg]
+
+4/20/92
+
+DSP Library Functions - Data Transfer Routines
+
+© 1992, Atari Corporation
+
+DSP .9
+
+--- Page 5, left half ---
+[2 drawing objects, see GL_GAMES.DOC.p005.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .10
+
+© 1992, Atari Corporation
+
+--- Page 5, right half ---
+[2 drawing objects, see GL_GAMES.DOC.p005.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+© 1992, Atari Corporation
+
+DSP .11
+
+--- Page 4, left half ---
+[2 drawing objects, see GL_GAMES.DOC.p004.svg]
+
+Atari Developer guidelines
+
+4/23/92
+
+guidelines .6
+
+© 1992, Atari Corporation
+
+--- Page 6, right half ---
+[2 drawing objects, see GL_GAMES.DOC.p006.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+© 1992, Atari Corporation
+
+DSP .13
+
+--- Page 7, left half ---
+[2 drawing objects, see GL_GAMES.DOC.p007.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .14
+
+© 1992, Atari Corporation
+
+--- Page 7, right half ---
+[2 drawing objects, see GL_GAMES.DOC.p007.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+© 1992, Atari Corporation
+
+DSP .15
+
+--- Page 6, left half ---
+[2 drawing objects, see GL_GAMES.DOC.p006.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .16
+
+© 1992, Atari Corporation
+
+--- Page 8, left half ---
+[2 drawing objects, see GL_GAMES.DOC.p008.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .20
+
+© 1992, Atari Corporation
+
+--- Page 8, right half ---
+[2 drawing objects, see GL_GAMES.DOC.p008.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .17
+
+--- Page 9, left half ---
+[2 drawing objects, see GL_GAMES.DOC.p009.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .18
+
+© 1992, Atari Corporation
+
+--- Page 9, right half ---
+[2 drawing objects, see GL_GAMES.DOC.p009.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .19
+
+--- Page 10, left half ---
+[2 drawing objects, see GL_GAMES.DOC.p010.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .2
+
+© 1992, Atari Corporation
+
+--- Page 10, right half ---
+[2 drawing objects, see GL_GAMES.DOC.p010.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .3
+
+--- Page 11, left half ---
+[2 drawing objects, see GL_GAMES.DOC.p011.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .2
+
+© 1992, Atari Corporation
+
+--- Page 11, right half ---
+[2 drawing objects, see GL_GAMES.DOC.p011.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .3

@@ -1,0 +1,335 @@
+[PageStream 2 document GL_MTOS.DOC: 11.00 x 8.50 in, 151 objects, booklet layout: two page halves per sheet, halves listed in text flow order]
+
+--- Page 1, right half ---
+[1 drawing objects, see GL_MTOS.DOC.p001.svg]
+
+Atari MultiTOS
+User Interface Guidelines
+Application Elements
+
+
+User-friendly GEM applications should provide the user with a consistent, predictable means of interacting with the computer.  The most popular applications to-date have always been those that the user feels at home with, because of general familiarity with other applications that they have previously used.  User interface design is a critical consideration during product development and should be well thought out before actually sitting down and laying out and coding the interface.
+
+The basic elements of a GEM application are the menu bar, the application's window (or windows), dialog boxes, alert boxes, and if the application warrants them, toolbox windows.  GEM applications may optionally install their own desktop background, which is swapped out by the AES to reflect the active application.
+
+The Menu Bar
+
+Applications should normally consist of a MENU BAR, which will generally have the titles from left to right, "Prgname", "File", "Edit", and then the additional application-specific main menu titles.  "Prgname" should be replaced with the application name so that users can quickly identify which application's menu bar they are looking at.
+
+For user convenience, the standard entries under "File" should start with "New", "Open...", followed by other load-oriented operations, then in the next section of the menu, "Close", "Save", "Save as...", and the other application-specific save-oriented functions.  The next section down should be used for other file operations such as "Import..." and "Export...".  This should be followed by the menu items for printing, usually "Page Setup...", then "Print...".  The last item under "File" should always be "Quit".
+
+© 1992, Atari Corporation
+
+Guidelines .1
+
+--- Page 2, left half ---
+[2 drawing objects, see GL_MTOS.DOC.p002.svg]
+
+Atari Developer Guidelines
+
+4/23/92
+
+Note -- A menu item must be followed by an ellipsis to indicate that additional action or input will be required by the user to carry out the requested task.  For instance, "Save" indicates that the file will be saved directly, using the current name, whereas "Save as..." will require the additional input of a filename.
+
+The "Edit" menu should start with "Undo", then in the next section, "Cut", "Copy", "Paste", and "Delete".  The rest of the "Edit" menu is usually application-specific, but the next menu item, if used should be "Select all".
+
+If applicable, the fourth main menu title should be "Options", where menu items such as "Document defaults...", or "Preferences..." should appear.
+
+Note -- Menu titles and items should never be displayed in all uppercase letters.  Menu titles should have one space before and after each title.  There should be one space to the left of menu items.
+
+Keyboard Equivalents for Menu Items
+
+The standard sytem-wide keyboard equivalents that should be used system-wide for no other purpose other than those listed are:
+
+ [Control-N]	New
+ [Control-O]	Open
+ [Control-W]      Close
+ [Control-S]	Save
+ [Control-P]	Print
+ [Control-Q]	Quit
+
+ [Control-X]	Cut
+ [Control-C]	Copy
+ [Control-V]	Paste
+ [Control-A]	Select all
+
+Guidelines .2
+
+© 1992, Atari Corporation
+
+--- Page 2, right half ---
+[2 drawing objects, see GL_MTOS.DOC.p002.svg]
+
+4/23/92
+
+Atari MultiTOS User Interface
+
+ [Control-F]	Find
+ [Control-H]	Replace
+ [Control-G]	Find next
+
+ [Delete]	Delete
+ [Undo]	Undo
+ [Help]	Invoke help
+
+The [Alternate] key is used as a character modifier on non-U.S. keyboards to access the necessary extended characters in applicable countries, and should not be used for keyboard equivalents in most cases.
+
+Windows
+
+The primary stage for user interaction with the application is the window.  Most of the user input, whether typing, drawing, or editing, is performed in the confines of windows.  All of an application's output should be constrained to the application's own windows only.  See the VDI and AES manuals for further information regarding window work areas and clipping rectangles.
+
+Document windows should have at a minimum, a mover/title bar so that even if the window is not resizable, the user can move the window off to the side of the desktop to have access to other items.  The other window elements are the Info bar, Closer, Sizer, Full box, Sliders, and Arrows.  The general use of these is apparent in the GEM Desktop.  It should be noted that GEM sliders are always proportional so that the user has constant feedback as to the percentage of the document that is being viewed.
+
+Operating system calls allow every element of windows to be set to any color and fill pattern.  The user generally selects these attributes using the Window Colors CPX in the Control Panel and they should not be altered by an application.  In color modes other than True Color, the first 16 color entries should be reserved for use by the system for drawing elements for which the user has set preferences.
+
+© 1992, Atari Corporation
+
+Guidelines .3
+
+--- Page 1, left half ---
+[2 drawing objects, see GL_MTOS.DOC.p001.svg]
+
+Atari Developer Guidelines
+
+4/23/92
+
+Keyboard Equivalents for Cursor Movement
+Inside Windows
+
+The system-wide standard for keyboard cursor manipulation is as follows:
+
+[Control-Left/Right Arrow]   Move cursor to beginning of word to the left/right
+
+[Control-Backspace]   Delete from cursor position to start of next word to the left
+
+[Control-Delete]   Delete from cursor position to start of next word to the right
+
+[ClrHome]   Move cursor to beginning of document
+
+[Shift-ClrHome]   Move cursor to end of document
+
+[Shift-Delete]   Delete line
+
+Dialog Boxes
+
+Dialog boxes are used for modal input, that is, input that the user must provide before any further processing may be done. They are generally used for parameter setting and other selections that require the undivided attention of the user. They should never be used for on-going informational or status output, as it would interfere with the normal real-time user interaction with the system.
+
+Alerts
+
+Alerts should be used to call the user's attention to conditions that develop that require immediate user knowledge. The simplest and most common would be an alert notifying the user that he is quitting an application without having saved the open document. Alerts should also be used to notify the user that a time-consuming or unalterable function is about to be performed.
+
+Alerts usually have two or three buttons that allow the user to make some sort of decision based on the information provided. Alerts with only one button are very frustrating to the user, as it implies a lack of control over what is about to happen. The general rule for alerts is to have the "OK" button
+
+Guidelines .4
+
+© 1992, Atari Corporation
+
+--- Page 3, right half ---
+[2 drawing objects, see GL_MTOS.DOC.p003.svg]
+
+4/23/92
+
+Atari MultiTOS User Interface
+
+to the left of the "Cancel" button. "Cancel" should always be capitalized, and "OK" is uppercase.
+
+Note -- Buttons in general should be capitalized words, not all uppercase.
+
+Toolbox Windows
+
+Toolbox Windows are a special class of window that are used for providing the user with non-modal control or information. The most common use would be for drawing tool selection in a paint program, or color selection. The tools are usually shown as logical groups of icons that the user can easily associate with their functions.  Another use of this type of window is continual status output, such as the progress of a file download or recalculation time.
+
+Other General Notes
+
+Applications should make no assumptions on what type of system the user will have. Be able to deal with any screen size and color resolution. Use the operating system calls to determine the screen dimensions and system capabilities to provide the user with the richest computing experience possible. Users have grown to expect unsurpassed ease of use from applications available for Atari computers. If you have any questions regarding user interface design for Atari computers, please feel free to call your developer support representative.
+
+© 1992, Atari Corporation
+
+Guidelines .5
+
+--- Page 3, left half ---
+[2 drawing objects, see GL_MTOS.DOC.p003.svg]
+
+Atari Developer Guidelines
+
+4/23/92
+
+Guidelines .8
+
+© 1992, Atari Corporation
+
+--- Page 4, right half ---
+[2 drawing objects, see GL_MTOS.DOC.p004.svg]
+
+4/20/92
+
+DSP Library Functions - Data Transfer Routines
+
+© 1992, Atari Corporation
+
+DSP .9
+
+--- Page 5, left half ---
+[2 drawing objects, see GL_MTOS.DOC.p005.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .10
+
+© 1992, Atari Corporation
+
+--- Page 5, right half ---
+[2 drawing objects, see GL_MTOS.DOC.p005.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+© 1992, Atari Corporation
+
+DSP .11
+
+--- Page 4, left half ---
+[2 drawing objects, see GL_MTOS.DOC.p004.svg]
+
+Atari Developer Guidelines
+
+4/23/92
+
+Guidelines .6
+
+© 1992, Atari Corporation
+
+--- Page 6, right half ---
+[2 drawing objects, see GL_MTOS.DOC.p006.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+© 1992, Atari Corporation
+
+DSP .13
+
+--- Page 7, left half ---
+[2 drawing objects, see GL_MTOS.DOC.p007.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .14
+
+© 1992, Atari Corporation
+
+--- Page 7, right half ---
+[2 drawing objects, see GL_MTOS.DOC.p007.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+© 1992, Atari Corporation
+
+DSP .15
+
+--- Page 6, left half ---
+[2 drawing objects, see GL_MTOS.DOC.p006.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .16
+
+© 1992, Atari Corporation
+
+--- Page 8, left half ---
+[2 drawing objects, see GL_MTOS.DOC.p008.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .20
+
+© 1992, Atari Corporation
+
+--- Page 8, right half ---
+[2 drawing objects, see GL_MTOS.DOC.p008.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .17
+
+--- Page 9, left half ---
+[2 drawing objects, see GL_MTOS.DOC.p009.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .18
+
+© 1992, Atari Corporation
+
+--- Page 9, right half ---
+[2 drawing objects, see GL_MTOS.DOC.p009.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .19
+
+--- Page 10, left half ---
+[2 drawing objects, see GL_MTOS.DOC.p010.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .2
+
+© 1992, Atari Corporation
+
+--- Page 10, right half ---
+[2 drawing objects, see GL_MTOS.DOC.p010.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .3
+
+--- Page 11, left half ---
+[2 drawing objects, see GL_MTOS.DOC.p011.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .2
+
+© 1992, Atari Corporation
+
+--- Page 11, right half ---
+[2 drawing objects, see GL_MTOS.DOC.p011.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .3

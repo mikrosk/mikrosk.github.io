@@ -1,0 +1,67 @@
+[PageStream 2 document TOMU15.DOC: 8.50 x 11.00 in, 4 objects]
+
+--- Page 1 ---
+[1 drawing objects, see TOMU15.DOC.p001.svg]
+
+Weekly Report
+
+
+To:		Tom Ulaszek
+From:	Marty Pennock
+Subject:	Progress Report
+Date:	November 14, 1991
+
+
+Progress
+
+1. Finished text edits of all BOM's for the STE+ Service Guide.
+
+2. Finished layout and printed Chapter 7 of the STE+ Service Guide.
+
+3. Contacted Mel Stevens on Marlin issues regarding the Service and Owner's Guides.
+
+4. Finished edit and layout of the STE+ Sevice Guide Chapter 8.
+
+5. Printed STE+ Service Guide Chapter 8.
+
+6. Coordinated effort to get Owner's Manual from SOTEC marked up by David Voigts.
+
+7. Made corrections and reprinted STE+ Service Guide Chapters 5 and 7.
+
+8. Sent out a copy of MEGA STE ATB number 4.
+
+9. Converted all ATB's to the Atari TT030.
+
+10. Got most of the assembly drawings for the STE+ Service Guide together.
+
+11. Put together rough draft of the STE+ Service Guide and distributed it among ATX for review.
+
+12. Converted and gave copies in ASCII of all ATB's to Toomey Freeman for edits.
+
+
+Plans
+
+1. Complete corrections after review of  the STE+ Service guide and send to subs.
+
+2. Begin entering Marlin Owner's Guide in PageStream on the TT030.
+
+3. Begin entering Marlin Service Guide in PageStream on the TT030.
+
+4. Get all drawings and necessary input for Marlin Manuals.
+
+5. Finish corrections and release 2 MB Floppy Drive Upgrades and MEGA STE Service Guide Addendum.
+
+6. Convert all drawings from PC based applications to theTT030.
+
+--- Page 2 ---
+
+Problems
+
+1. Still have no review copy of the 2MB floppy kit manuals for the TT030 or MEGA STE.
+
+2. Have no review copy of the MEGA STE Addendum.
+
+3. Need info from David Viogts on MARLIN Owner's Manual to use as base for Users Guide.
+
+
+5. Need to generate copy of the STE+ test harness hookup from hand drawing.

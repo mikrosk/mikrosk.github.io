@@ -1,0 +1,901 @@
+[PageStream 2 document COMBEL.DOC: 8.50 x 11.00 in, 317 objects]
+
+--- Page 1 ---
+
+1.0  GENERAL DESCRIPTION
+
+The new COMBEL chip will be based on the STE COMBO (4153 COMBO). So, many functions that already exist in the STE COMBO will remain unchanged in the new COMBEL. Apart from that, functions related to the video that resided in the STE COMBO are removed from the new COMBEL and placed in the new VIDEO SHIFTER (VIDEL) and functions related to DMA and sound DMA are removed and placed in the new SDMA chip.
+
+
+1.1 UNCHANGED BLOCKS
+
+The blocks that remain from the STE COMBO and are basically unchanged are:
+
+	• The GLUE I/O support functions that contained:
+ 		- ROM/RAM/IO address decode.
+		- Register decode (only for registers that remain in the COMBEL).
+		- Interrupt priority encoding and Interrupt Acknowledge logic.
+		- Paddle circuit.
+		- joystick circuit.
+		-  Clock dividers.
+	• The video registers (with modifications to support up to 14MB DRAM memory space) that contain:
+		- Video base address registers.
+		- Video address counter (with modifications explained later).
+		- Horizontal offset register.
+	• The Blitter.
+
+
+1.2 REMOVED BLOCKS
+
+
+1.2.1 Blocks Removed to VIDEL IC
+
+The blocks that are removed to the new VIDEL IC are:
+
+	• Horizontal sync generator.
+	• Vertical sync generator.
+	• Video control logic that contain the sync control bit, PAL/NTSC bit and the related sync control logic and interlace logic.
+	• Horizontal DE/Blank counter.
+	• Vertical DE/Blank counter.
+	• Light gun/pen circuit.
+
+--- Page 2 ---
+
+1.2.2 Blocks Removed to SDMA IC
+
+The blocks that are removed to the new SDMA chip are:
+
+	• The bus arbitration logic that was in the MCU/GLUE. (The bus arbitration of the Blitter remains unchanged as the whole Blitter remains unchanged).
+	• Sound frame base address registers.
+	• Sound frame end address registers and the logic supporting frame end detect and sound interrupt.
+	• Sound address counter.
+	• DMA address counter.
+	• DMA R/W control bit.
+
+
+1.3 MODIFIED BLOCKS
+
+The logic that remains but will be modified and the logic that will be added will include:
+
+	• The DRAM control logic.
+	• The timing generator.
+	• Additional video register to support interlace.
+	• CAS before RAS refresh circuit.
+	• MC146818A Real Time Clock support.
+	• IDE (Internal Hard Disk) support.
+	• SCC (85C30) support.
+	• Bus Error circuitry.
+
+
+2.0 COMBEL FUNCTIONAL BLOCKS
+
+In the previous section the content of the new COMBEL IC was described in comparison to the content of the STE COMBO. The following will describe the new COMBEL IC functions as a whole entity, not necessarilly by the boundaries of logic that was in the STE COMBO, and logic that is new or modified.
+
+The functional blocks of the new COMBEL IC are:
+
+	• MCU - Memory Control Unit.
+	• Blitter
+	• Video support registers.
+	• Glue Logic
+		- ROM/DRAM/IO address decode
+		- Interupt Priority Encoding
+		- Bus Error Timeout & Decode
+		- Paddle circuit
+		- Joystick circuit
+		- Register Decode
+		- Clock dividers
+	• RTC, IDE and SCC support.
+
+--- Page 3 ---
+
+2.1  MCU
+
+This block is responsible for :
+
+	• DTACK handling.
+	• Video Address Counter.
+	• DRAM refresh circuit.
+	• RAS/CAS signal generation.
+
+
+2.1.1 DTACK Handling
+
+Bus arbitration will be basically the same as in the STE, apart from the logic that controls DTACK. As in the STE, there will be only two devices that arbitrate for the system bus, in a normal arbitration scheme. These are the DMA and the Blitter internal to the COMBEL IC. The Blitter remains unchanged, including its arbitration logic and the interface of its arbitration logic with the SDMA arbitration logic.
+
+The DMA and sound DMA arbitration is done now by the new SDMA device and is external to the COMBEL IC. The DMA arbitration will have priority over the Blitter arbitration.  As a result a Blitter operation will be interrupted by the SDMA.  The Blitter will resume control on the system bus when the DMA operation terminates.  The other resources that require access to memory are video and refresh. In STe, those resources shared the CPU bus cycles in a timeshare scheme, with refresh active only during video blanking time. This way the video could access the memory continously, witout being interrupted by any bus master or the CPU.  Now the video and refresh will get access to memory by stalling any bus master that is active on the memory bus while the video or refresh request exist. This is done by controlling the DTACK line. So, when video or refresh request is active, the current bus cycle will be extended by holding DTACK inactive. While the current bus cycle is in wait states, the memory bus (which is separate from the system data bus) will be used to serve the video or refresh request.  When this request is served, the DTACK signal will be activated to terminate the current bus cycle.
+
+
+2.1.2 Video Address Counter
+
+The Video Address Counter Block has to:
+
+	• Address count at max freq of 16MHz
+	• Support Horizontal and Vertical Scrolling.
+	• Support Interlace mode.
+	• Support Page mode reads from DRAM.
+	• Support 16/32 bit data bus video reads from DRAM.
+	• Support up to 14MB DRAM memory space.
+	• Support the repetition of lines (for VGA).
+
+--- Page 4 ---
+
+2.1.3 DRAM Refreash and RAS CAS Generation
+
+The DRAM control logic and RAS/CAS generation logic has to be modified to support:
+
+	• Regular read/write from DRAM.
+	• Page mode read from DRAM during video cycles.
+	• CAS before RAS refresh cycles.
+	• Support 512KB, 1MB, 2MB, 4MB, 8MB  or 14MB DRAM 16-bit configurations.
+1MB, 4MB or 14MB DRAM 32-bit configurations.
+
+
+2.2  BLITTER
+
+The Blitter is identical to the one in the STE COMBO.
+
+
+2.3  VIDEO SUPPORT REGISTERS
+
+Several registers are used by the Video address counter:
+
+	• Video Base Address for loading the address counter with the starting address after each Vsync.
+	• Displayed Line Width register.
+	• Video Address counter itself (mentioned above).
+	• Horizontal Offset register which contains in scroll mode the amount of Extra line width.
+
+These registers (apart from Displayed Line Width Register) are basically the same as in the STE COMBO with the additions to support up to 14 MB of DRAM memory and the modifications mentioned above relating to the video address counter.
+
+This scheme will support skip lines for interlace to enable the display of 400 lines on TV. It will also support the display of video with 200 lines resolution on a VGA monitor by repeating each line once.
+
+At the end of each line several things can happen, depending which video mode and monitor is being used.
+
+MODE			ACTION
+
+Normal			FIELD=1,  add DLW and "pixel scrol adjust value" on LCLK.
+				ILINE=1, FIELD=0  add Horiz. Offset on LCLK.
+				Reset counter and ILINE=0.
+
+Interlace			FIELD=1,  add DLW and "pixel scrol adjust value" on LCLK.
+				ILINE=1, FIELD=0  add Horiz. Offset on LCLK.
+				Reset counter and ILINE=0.
+
+Double lines		Reset counter and ILINE=0.
+(odd lines)
+
+--- Page 5 ---
+
+MODE			ACTION
+
+Double lines		FIELD=1,  add DLW and "pixel scrol adjust value" on LCLK.
+(even lines)		ILINE=1, FIELD=0  add Horiz. Offset on LCLK.
+				Reset counter and ILINE=0.
+
+* DLW is Displayed line width register. Pixel scrol adjust value is 0 if scroll register (FF8264) is 0, otherwise it has the value of the number of color planes.
+
+* For 32 bit video bus operation the address of the next line has to be on an even word boundary.
+
+To support Interlace the Base Address has to be modified to point on the beginning of the second line of the display on odd fields. This is done in the following manner:
+
+After VINT if we are in an even field then activate the following signals:
+
+IFRAME=1, load Base Address on LCLK.
+Then IFRAME=0.
+
+After Vsync if we are in an odd field:
+
+IFRAME=1, load Base Address on LCLK. Then IFRAME=0.
+FIELD=1, add Dispalyed Line Width and "pixel scrol adjust value" on LCLK.
+Then, ILINE=1, FIELD=0 add Horz. Offset on LCLK. Then ILINE=0.
+
+The signal FIELD, ILINE, IFRAME, HRESET are generated inside the COMBO using signals like VINT.
+
+
+2.4   I/O Logic Previously Resided in the MCUG
+
+This logic is basically unchanged from the STe COMBO. It contains:
+
+	• ROM/RAM/IO address decode.
+	• Interrupt priority encoding.
+	• Bus error timeout.
+	• Paddle circuit.
+	• Joystick circuit.
+	• Register decode.
+	• Clock dividers.
+
+--- Page 6 ---
+
+3.0 COMBEL REGISTER LIST
+
+All Addresses are offsets from starting address of FF0000.
+
+I/O address		Register
+
+8001				Memory Configuration Register.
+8006				Configuration switches.
+8007				CPU clock control and misc controls.
+8200 - 8201		Video Base Address High.
+8202 - 8203		Video Base Address Mid.
+8204 - 8205		Video Address Counter High.
+8206 - 8207		Video Address Counter Mid.
+8208 - 8209		Video Address Counter Low.
+820C - 820D		Video Base Address Low.
+820E - 820F		Video Offset Register.
+8210 - 8211		Displayed Line Width Register.
+8800				PSG Read Data/ PSG Register Select.
+8802				PSG Write Data.
+8960				Real Time Clock Address Register.
+8962				Real Time Clock Data Register.
+8A00 - 8A3F		Blitter addresses.
+8C80			SCC A Control.
+8C82			SCC A Data.
+8C84			SCC B Control.
+8C86			SCC B Data.
+9200				Control Switch Register.
+9201				Joystick fire Buttons.
+9202 - 9203		Joystick ports.
+9210 - 9211		Paddle 0 X Control.
+9212 - 9213		Paddle 0 Y Control.
+9214 - 9215		Paddle 1 X Control.
+9216 - 9217		Paddle 1 Y Control.
+FA00 - FA2F		MFP Addresses (For MFPCS).
+FC00 - FC03		iKBD ACIA Addresses (For ACIA CS)
+FC04 - FC07		MIDI ACIA Addresses (For ACIA CS)
+
+Also the COMBEL IC detects addresses FF8200-FF82C3 and FF9800-FF9BFF to generate the VCS (Video Chip Select).
+
+In addition the COMBEL IC controls the chip select for the RAM, ROM, Cartridge ROM,  and internal hard disk interface (IDE) which are at addresses:
+
+I/O address			Register
+
+000000 - 000007		ROM Based RESET VECTOR.
+000008 - DFFFFF		RAM.
+E00000 - EFFFFF		ROM.
+F00000 - F0003F		IDE.
+FA0000 - FBFFFF		Cartridge Boot ROM.
+
+--- Page 7 ---
+
+Some of the video registers that are used in the VIDEL are also copied to internal registers in the COMBO for internal control purposes. These registers are:
+
+I/O address			Register
+
+FF820A				SP Sync Mode Register.
+FF8260				ST Shift Mode Register.
+FF8265				Horizontal Pixel Scroll Register.
+FF8266 - FF8267		SP Shift Mode Register.
+FF82C2				Video Timing Control.
+
+
+4.0 COMBEL PIN LIST
+
+The new COMBEL has 144 pins with the following pin assignment:
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+1
+
+BMODE
+
+Input
+
+The BMODE pin is used to indicate to the COMBEL IC whether the current bus master is a 68030 or 68000 type device. When a 68030 type device is the bus master the BMODE pin will be pulled low. The BMODE pin is normally pulled high, indicating 68000 type bus masters.
+
+95,90,82, 68,65,63, 29,24,17, 15,12,7, 188,185, 178,177, 170,162, 143,135, 128,126, 121
+
+A1-A23
+
+I/O
+
+This 23 bit bus is used for address. For MCU it is used only as an input address bus. For Blitter it is used as input address bus when it is a bus  slave or as output address bus when it is a bus master.
+
+122,127, 134,142, 176,169, 184,187, 11,15,23, 25,64,69, 91,94
+
+D0-D15
+
+I/O
+
+This 16 bit bus is used for data.
+
+186
+
+AS-
+
+I/O
+
+Address strobe indicates that there is a valid address on the address bus. For MCU it is an input. For Blitter it is an input when it is a bus slave or an output when it is a bus master.
+
+171
+
+UDS-
+
+I/O
+
+Upper data strobe controls the flow of data on the data bus together with LDS- and R/(W)-. For MCU it is an input. For Blitter it is an input when it is a bus slave or an output when it is a bus master.
+
+--- Page 8 ---
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+179
+
+LDS-
+
+I/O
+
+Lower data strobe controls the flow of data on the data bus together with UDS- and R/(W)-. For MCU it is an input. For Blitter it is an input when it is a bus slave or an output when it is a bus master.
+
+129
+
+R/(W)-
+
+I/O
+
+Read/Write defines the data transfer as read when high or write when low. It also controls
+the flow of data on the data bus together with LDS- and UDS-. For MCU it is an input. For Blitter it is an input when it is a bus slave or an output when it is a bus master.
+
+119
+
+DTACK-
+
+Output
+
+Data transfer acknowledge indicates to the CPU or the current bus master that the data transfer is complete.
+
+116
+
+BR-
+
+Output
+
+Bus Request is an open drain output used to request control on the system bus. Other bus masters can also pull this line low to request control on the system bus.
+
+124
+
+BGI-
+
+Input
+
+Bus Grant is the bus grant input from the CPU in response to bus request.
+
+198
+
+BGACK-
+
+Output
+
+Bus grant acknowledge is sent to the CPU in response to the bus grant. While the Blitter is the bus master BGACK is active.
+
+173,172, 166
+
+IPL0-
+IPL1-
+IPL2-
+
+Output
+
+Interrupt priority outputs to the CPU. The COMBO encodes these lines with the proper interrupt priority code.
+
+42
+
+BERR-
+
+Output
+
+Bus Error indicates to the CPU that the current bus cycle did not terminated in the required timeout, or an address that is not in the correct I/O space was issued. Any other bus master can also pull this line low to indicate a bus error situation.
+
+59
+
+RESET-
+
+Input
+
+Reset input from CPU.
+
+190
+
+VPA-
+
+Output
+
+Valid peripheral address is output to the CPU and used to control the ACIA devices.
+
+6
+
+VMA-
+
+Input
+
+Valid memory address input from CPU. Used to control the ACIA devices.
+
+141,133,123
+
+FC0
+FC1
+FC2
+
+I/O
+
+Function codes are inputs for MCU. They are inputs for Blitter when it is a bus slave. They are outputs from Blitter when it is a bus master.
+
+20
+
+CLK
+
+Input
+
+Clock is a 32Mhz internal clock from FALCON030 motherboard.
+
+150
+
+TOK
+
+Input
+
+Keyboard transmit OK holds a transmitted character to keyboard until TOK turns HI.
+
+--- Page 9 ---
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+139
+
+TXD
+
+Input
+
+Input to COMBO of data transmitted to keyboard.
+
+151
+
+MFPINT-
+
+Input
+
+MFP interrupt input.
+
+202,175, 174,72
+
+EINT1
+EINT3
+EINT5
+EINT7
+
+Input
+
+External interrupt inputs.
+
+112
+
+BINT-
+
+Output
+
+Not Connected.
+
+19
+
+EVEN_ODD
+
+Input
+
+Even/odd frame input from video shifter. 1=ODD, 0=EVEN.
+
+138,125, 73,
+
+PAD0X-
+PAD1X-
+PAD0Y-
+PAD1Y-
+
+Input
+
+Paddle active low inputs.
+
+191
+
+CPUCLK
+
+Output
+
+16Mhz output clock to CPU and other I/O's.
+
+193,192
+
+CLK4
+CLK8
+
+Output
+
+4Mhz and 8Mhz output clocks.
+
+163
+
+KHZ500
+
+Output
+
+500Khz output clock.
+
+197
+
+MFPCS-
+
+Output
+
+MFP chip select.
+
+199
+
+ ROM2-
+
+Output
+
+Socketed ROM chip select.
+
+200,201
+
+ROM3-
+ROM4-
+
+Output
+
+Cartridge ROM chip select.
+
+8
+
+SNDCS
+
+Output
+
+Chip select for PSG.
+
+9
+
+SNDIR
+
+Output
+
+Direction control for PSG chip.
+
+71
+
+ VCS
+
+Output
+
+Video chip select.
+
+30
+
+ VLD
+
+Output
+
+Active output to strobe DRAM data into shifter INPUT BUFFER.
+
+33
+
+HINT-
+
+Input
+
+Horizontal interrupt from video chip.
+
+34
+
+VINT-
+
+Input
+
+Vertical interrupt from video chip.
+
+60
+
+VREQ
+
+Input
+
+Video request signal.
+
+31
+
+IACK-
+
+Output
+
+Interrupt acknowledge to CPU.
+
+32
+
+N6850
+
+Output
+
+ACIA 6850 chip select.
+
+44
+
+ RDAT-
+
+Output
+
+Read DRAM control line to video chip.
+
+45
+
+WDAT-
+
+Output
+
+Write DRAM control line to video chip.
+
+136
+
+PADRST-
+
+Output
+
+Paddle reset.
+
+137
+
+BUTTON-
+
+Output
+
+Fire buttons read enable.
+
+147,148
+
+JOYRH-
+JOYRL-
+
+Output
+
+Joysticks read enable lines.
+
+140,146
+
+JOYWE-
+JOYWL-
+
+Output
+
+Joysticks write enable lines.
+
+36
+
+IDEIOW-
+
+Output
+
+IDE I/O Write signal.
+
+35
+
+IDEIOR-
+
+Output
+
+IDE I/O Read signal.
+
+--- Page 10 ---
+
+Pin
+
+ Signal
+
+Type
+
+Description
+
+37,38
+
+IDECS0
+IDECS1
+
+Output
+
+IDE chip select.
+
+43
+
+R8006-
+
+Output
+
+Control line to enable reading I/O address FF8006.
+
+113
+
+FPUCS-
+
+Output
+
+FPU Chip Select.
+
+120,114, 97,96,84, 77,61,39, 10,189, 149
+
+MAD0-10
+
+Output
+
+DRAM address bus.
+
+46
+
+WE-
+
+Output
+
+DRAM write enable.
+
+18,21
+
+RAS0-
+RAS1-
+
+Output
+
+DRAM row address select lines.
+
+22,62
+
+CAS0H-
+CAS1H-
+
+Output
+
+DRAM CAS HIGH select lines.
+
+70,83
+
+CAS0L-
+CAS1L-
+
+Output
+
+DRAM CAS LOW select lines.
+
+74
+
+RAMH
+
+Output
+
+Address select control to the VIDEO SHIFTER  to select the low or high DRAM word in 16 bit video bus. 0 - select the low word.
+
+75
+
+RTCCS-
+
+Output
+
+Real-time clock chip select.
+
+76
+
+RTCAS-
+
+Output
+
+Real-time clock address strobe.
+
+85
+
+RTCDS-
+
+Output
+
+Real-time clock data strobe.
+
+89
+
+SCCAB
+
+Output
+
+SCC Channel select.
+
+165
+
+SCCRD-
+
+Output
+
+SCC read signal.
+
+164
+
+SCCWR-
+
+Output
+
+SCC write signal.
+
+88
+
+SCCIACK-
+
+Output
+
+SCC interrupt acknowledge.
+
+87
+
+SCCWAIT-
+
+Input
+
+Active low input pin to support SCC.
+
+115
+
+BGO
+
+Output
+
+BGO used for arbitration daisy chaining.
+
+86
+
+TEST
+
+Input
+
+Test pin.
+
+163
+
+KHZ500W
+
+Output
+
+Switched 500 KHz clock used for controlling 6850 that transmits keyboard data.
+
+96
+
+POR
+
+Input
+
+Power on reset.
+
+99
+
+TEST2
+
+Input
+
+Test 2 pin.
+
+VDD
+
+Input
+
+Five power lines. Connected to 5V.
+
+GND
+
+Input
+
+Five ground lines.

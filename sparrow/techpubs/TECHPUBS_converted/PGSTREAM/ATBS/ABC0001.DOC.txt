@@ -1,0 +1,132 @@
+[PageStream 2 document ABC0001.DOC: 8.50 x 11.00 in, 4 objects]
+
+--- Page 1 ---
+
+Atari Technical Bulletin
+Number: ABC286-0001
+Date: November 11, 1991
+Page 1 of 3
+
+
+Product(s) Affected:	ABC 286, PC4X
+Model:				ABC 286/12/16, PC4X-12MHZ, PC4X-16MHZ
+Type of ATB:			As Needed
+ECO #:				N/A
+
+Reason for ATB:
+
+1.)	Field reporting problems with HIMEM not loading after the line 'DEVICE=HIMEM.SYS' is added to the CONFIG.SYS file.
+
+2.)	This remedy will also cure the problems where software being loaded through an INSTALL program reports 'COMPACT FILE ERRORS'.
+
+3.)	This procedure will also cure any problem with applications attempting to access protected mode.
+
+
+Notes:
+
+PC4X-Bios revision 1.7, part numbers C301768-002 and C301769-001 has been identified with this problem.
+
+
+Symptoms of Problem:
+
+1.)	If the line 'DEVICE=HIMEM.SYS' is in your CONFIG.SYS file and an error message appears on screen after system MEMORY test:
+
+ERROR: Unrecognized A20 hardware
+XMS Driver not installed
+
+
+2.)	Software being loaded through an INSTALL program reports:
+
+"COMPACT FILE ERRORS".
+
+
+3.)	Errors with applications attempting to access protected mode.
+
+--- Page 2 ---
+
+Atari Technical Bulletin
+Number:	 ABC286-0001
+Date: November 11, 1991
+Page 2 of 3
+
+Tests to Determine if Problem Exists:
+
+TEST for Symptom 1
+
+Turn on computer.  While the system is booting, look for the message on the screen:
+
+HIMEM:  DOS XMS Driver, Version X.xx - mm/dd/yy
+Copyright 19xx, Microsoft Corp.
+
+64K High Memory Area is available
+
+
+If this message appears, then you do not have a problem.  However, if the following error message appears:
+
+ERROR: Unrecognized A20 hardware
+XMS Driver not installed
+
+Read and follow the 'SOLUTION' section of this Technical Bulletin.
+
+**NOTE**  If neither message appears on the screen (no mention of HIMEM Driver at all) then you will need to add the line:
+
+'DEVICE=HIMEM.SYS' to your CONFIG.SYS file.
+
+(Be sure the file 'HIMEM.SYS' is in your root directory)
+
+TEST for Symptom 2 and 3
+
+If you are having one of the other problems listed under the 'Symptoms of Problem' heading in this Technical Bulletin, then read and follow the 'Solution' section.
+
+Solution:
+
+1.)	Boot system from a Cold Boot (from a powered down condition to a powered up condition).  After the MEMORY test is completed, Press the  DEL key after the message:
+
+Press DEL if you want to run SETUP/EXTD-SET
+
+--- Page 3 ---
+
+Atari Technical Bulletin
+Number: ABC286-0001
+Date: November 11, 1991
+Page 3 of 3
+
+
+Use the down arrow key to highlight RUN XCMOS SETUP, and hit <ENTER>.
+
+**NOTE** If EXTD-SET option does not exist, you have an earlier BIOS Rom version.
+
+If this is the case, Insert the MS-DOS/Utilities Disk that came with your computer and type:
+
+A: <ENTER>.
+
+At the A> prompt, type cd util <ENTER>.
+
+Now type neat <ENTER>.
+
+2.)	Use the down arrow key to highlight:
+
+ADVANCED NEAT CHIPSET REGISTER SETUP, and then hit <ENTER>.
+
+3.)	Hit the <ENTER> key again to continue.  Use the down arrow key to scroll down to 6FH under the 82C212B heading.  Use the right arrow key to highlight Bit 1 of 6FH.  The Dialogue Box on the right side of the screen should show:
+
+Miscellaneous Register RB12
+
+Enable CPUA20 onto A20
+0=Enable
+1=Disable
+
+This definition of the Bit is incorrect. The true definition is:
+
+0=Disable   1=Enable
+
+4.)	Use the PgDn key to toggle this bit to a 1.  Hit the <Esc> key to return to the MAIN MENU.  Use the down arrow key to highlight:
+
+WRITE CMOS REGISTERS AND EXIT
+
+5.)	System will re-boot automatically.  After the MEMORY test, the screen  will display:
+
+HIMEM:  DOS XMS Driver, Version 2.04 - 8/17/88
+Copyright 1988, Microsoft Corp.
+
+64K High Memory Area is available.

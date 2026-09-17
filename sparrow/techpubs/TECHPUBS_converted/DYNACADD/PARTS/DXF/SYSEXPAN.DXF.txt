@@ -1,0 +1,75 @@
+DXF drawing: DYNACADD/PARTS/DXF/SYSEXPAN.DXF
+Render: SYSEXPAN.DXF.svg
+
+== Summary ==
+File:        32442 bytes, CR/LF line ends, ends with ^Z (0x1A)
+Dialect:     group codes right-aligned in 3 columns; full AutoCAD header with $ACADVER=AC1006 (R10), 124 header variables, tables VPORT/LTYPE/LAYER/STYLE/VIEW/UCS/DWGMGR
+Sections:    HEADER, TABLES, BLOCKS, ENTITIES
+Menu:        $MENU=FONT
+Dates:       created 1991-05-21 04:41, last saved 1992-06-09 22:08 ($TDCREATE/$TDUPDATE)
+Extents:     header (23.39, 31.59) - (343.85, 204.58)
+             rendered (22.96, 71.85) - (335.34, 202.55), size 312.38 x 130.7
+Limits:      (0, 0) - (420, 297)
+Units:       not stored in this DXF version; $LUNITS=2 (decimal); limits and extents suggest millimetres; a label says millimetres
+Header:      124 variables; $LTSCALE=12.7, $TEXTSIZE=4.0, $DIMSCALE=1.0, $FILLMODE=1
+Text styles: STANDARD (font txt), ROMAND (font romand)
+Linetypes:   CONTINUOUS, HIDDEN, CENTER
+Layers:      3 in table, 3 used
+  name       color  linetype      state         objects
+  0              7  CONTINUOUS    on            94
+  1              7  CONTINUOUS    on            146
+  DEFPOINTS      7  CONTINUOUS    off           30
+Entities:    model space: LINE 108, CIRCLE 78, POINT 30, SOLID 29, TEXT 25
+Blocks:      0 defined
+Notes:
+  - 30 objects on layers that are off/frozen are not drawn
+
+== Text in reading order (25 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (25 items) --
+  CENTER LINE OF
+  50 PIN CONNECTOR  |  SURFACE A
+  ON MOTHERBOARD
+  20.03  |  57.27
+  5.58 MAX COMP. HEIGHT
+  PIN #2  |  10.92
+  PIN #1
+  50.8  |  PIN #2  |  CENTER LINE OF  |  44.76  |  1.6 TH'K.
+  30 PIN CONNECTOR
+  ON MOTHERBOARD
+  SURFACE A
+  PIN #1  |  3.02
+  2 MAX LEAD LENGTH AND/OR
+  COMPONENT HEIGHT
+  109.22
+  SYSTEM EXPANSION PCB (SPARROW)
+  ALL DIMENSIONS IN MILLIMETERS
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE   TEXT
+157.63  199.55         3      0  left      1      ROMAND  CENTER LINE OF
+157.63  195.26         3      0  left      1      ROMAND  50 PIN CONNECTOR
+240.68  194.16         3      0  center    1      ROMAND  SURFACE A
+157.63  190.97         3      0  left      1      ROMAND  ON MOTHERBOARD
+ 40.63  189.15         3      0  left      0      ROMAND  20.03
+105.84  189.15         3      0  left      0      ROMAND  57.27
+270.54  182.05         3      0  left      0      ROMAND  5.58 MAX COMP. HEIGHT
+121.63  175.16         3      0  left      1      ROMAND  PIN #2
+283.06  174.72         3      0  left      0      ROMAND  10.92
+ 84.44  157.08         3      0  left      1      ROMAND  PIN #1
+ 22.96  144.65         3      0  left      0      ROMAND  50.8
+ 42.18  145.11         3      0  left      1      ROMAND  PIN #2
+ 96.87  145.14         3      0  left      1      ROMAND  CENTER LINE OF
+191.28  144.65         3      0  left      0      ROMAND  44.76
+272.14  144.99         3      0  left      0      ROMAND  1.6 TH'K.
+ 96.87  140.85         3      0  left      1      ROMAND  30 PIN CONNECTOR
+ 96.87  136.56         3      0  left      1      ROMAND  ON MOTHERBOARD
+148.02  128.53         3      0  center    1      ROMAND  SURFACE A
+ 81.12   113.2         3      0  left      1      ROMAND  PIN #1
+181.07  112.25         3      0  left      0      ROMAND  3.02
+274.14  111.64         3      0  left      0      ROMAND  2 MAX LEAD LENGTH AND/OR
+280.82  106.77         3      0  left      1      ROMAND  COMPONENT HEIGHT
+ 110.6  100.71         3      0  left      0      ROMAND  109.22
+171.29   78.75    3.9561      0  center    1      ROMAND  SYSTEM EXPANSION PCB (SPARROW)
+171.29   71.85         3      0  center    1      ROMAND  ALL DIMENSIONS IN MILLIMETERS

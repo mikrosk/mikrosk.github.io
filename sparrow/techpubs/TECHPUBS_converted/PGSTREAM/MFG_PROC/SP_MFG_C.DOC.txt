@@ -1,0 +1,91 @@
+[PageStream 2 document SP_MFG_C.DOC: 8.50 x 11.00 in, 53 objects]
+
+--- Page 2 ---
+
+TABLE OF CONTENTS
+
+1.0	Overview
+
+2.0	Assembly flow chart
+
+2.1	Incoming inspection
+2.2	1/4 MB DRAM PCB assembly
+2.3	Falcon 030 PCB assembly
+2.4	PCBA test
+2.5	System assembly
+2.6	System test
+2.7	Shipping assembly
+2.8	Outgoing inspection
+
+3.0	Incoming inspection
+
+3.1	Power supply
+3.2	Keyboard
+3.3	Floppy drive
+3.4	Hard drive
+3.5	Electrical parts
+3.6	PCB parts
+3.7	Fab parts
+3.8	Printed material
+3.9	Other purchased parts
+
+4.0	assembly procedure
+
+4.1	Memory PCB assembly
+4.2	Motherboard PCB assembly
+4.3	System assembly
+4.4	Shipping assembly
+
+5.0	Production test
+
+5.1	In-circuit automated test
+5.2	PCB initial  test
+5.3	PCB burn-in
+5.4	PCB functional test
+5.5	System aging
+5.6 	System final test
+
+6.0	Outgoing inspection
+
+7.0	Reliability
+
+--- Page 3 ---
+
+8.0	Option / Upgrade kit assembly
+
+7.1	HDD upgrade
+7.2	4MB RAM upgrade
+7.3	14MB RAM upgrade
+7.4	Microphone option
+7.5	Video adapter / cable options
+7.6	External SCSI II cable option
+
+--- Master page (repeated on pages; # = page number) ---
+[32 drawing objects, see SP_MFG_C.DOC.mR.svg]
+
+SIZE
+
+DRAWING NO.
+
+REV
+
+®
+
+ATARI
+CORPORATION
+
+A
+
+SCALE
+
+NONE
+
+C302758-001
+
+SHEET
+
+OF
+
+1
+
+_

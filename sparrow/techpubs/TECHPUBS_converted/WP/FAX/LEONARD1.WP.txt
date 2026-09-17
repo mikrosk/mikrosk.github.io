@@ -1,0 +1,108 @@
+                       Dallas Office Memo
+
+
+
+
+To:       Leonard Tramiel/Richard Miller
+From:     Marty Pennock
+Subject:  Soft-Logik Response to Problems with PageStream
+Date:     October 31, 1991
+
+cc:       Sam Tramiel - SUVL
+          Robert Shen - SUVL
+          Stephen Chan - SUVL
+          Sam Chin - SUVL
+          Ira Goldstein - ATX
+          Tom Ulaszek - ATX
+
+
+
+
+After having several problems with PageStream, both Jerry Smith
+and I attempted to contact Soft-Logik Technical Support to
+discuss possible fixes. I was able to establish contact with them
+on 10/31/91 and here is the result of that conversation.
+
+
+
+1.   PageStream will lose its place and lock up after 20 pages of
+     text (NO GRAPHICS) have been entered. The file is from then
+     on locked out and no further editing can be done.
+     Furthermore, the file may not be entered again and all data
+     in that file is lost, for all intent and purpose. I also
+     indicated that the application was being run on a TT030.
+
+     Soft-Logik responded by stating that they had heard of this
+     problem and patches or updates were being done. No date or
+     time for when they would be released. "Not for a while" was
+     the official response.
+
+2.   PageStream will lose its place and lock up after 20 pages or
+     so of GRAPHICS WITH TEXT RUNAROUNDS. No indication is given,
+     the application just refuses to runaround text and as above,
+     the file is then locked out and all is lost. I also
+     indicated that the application was being run on a TT030.
+
+     Soft-Logik responded to this problem the same as above. They
+     had heard of this problem and updates or patches were being
+     worked on. No date or time for when they would be released.
+     "Not for a While" was again the official response.
+
+
+
+
+                             Page 1
+3.   PageStream does not work well with Ultrascript when using
+     some special characters, as in TM, Bullet, and Registered
+     TM, in certain fonts, such as Garamond, and even CS
+     Triumvirate, which is the default font for PageStream. Also,
+     some graphics created by DynaCADD will not import properly.
+     These are IMG image files and GEM based drawings. The image
+     files import but appear to be very light, of broken up. The
+     import filter recognized the format of these graphics files,
+     however. When printed the drawings are barely legible. The
+     GEM files will not display or print. I also indicated that
+     the application was being run on a TT030.
+
+     Soft-Logik responded to this problem by offering to send a
+     new Postscript driver. They also mentioned an Ultrascript
+     Font Disk but made no offer to send one. They could not
+     even find a registration number for our version. It was
+     suggested that I contact Atari Sunnyvale and request copies
+     of this font disk.
+
+     Please make note I am now making a formal request for the
+     Ultrascript Font Disk for PageStream.
+
+So far this covers the total of problems encountered with
+PageStream. It is my wish to make you aware of these as they will
+certainly cause a problem for any of our customers using an Atari
+system for DTP.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sincerely
+
+
+
+
+
+Marty Pennock
+
+
+
+
+                             Page 2

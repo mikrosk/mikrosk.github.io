@@ -1,0 +1,28 @@
+[PageStream style sheet, IFF FORM DTAG format: 5 tags]
+
+Tag 1: A Head
+  font:          CS Triumvirate
+  style:         bold
+  size:          16.00 pt
+
+Tag 2: B Head
+  font:          CS Triumvirate
+  style:         bold
+  size:          14.00 pt
+
+Tag 3: C Head
+  font:          CS Triumvirate
+  style:         bold
+  size:          12.00 pt
+
+Tag 4: Chapter Title
+  font:          CS Triumvirate
+  style:         bold
+  size:          18.00 pt
+  attr 0x22:     1
+
+Tag 5: Body Text
+  font:          Garamond Antiqua
+  style:         normal
+  size:          12.00 pt
+  attr 0x22:     5

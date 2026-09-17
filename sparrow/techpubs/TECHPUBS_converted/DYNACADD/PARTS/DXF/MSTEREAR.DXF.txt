@@ -1,0 +1,52 @@
+DXF drawing: DYNACADD/PARTS/DXF/MSTEREAR.DXF
+Render: MSTEREAR.DXF.svg
+
+== Summary ==
+File:        23117 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font ROMAND
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (-18.0952, 20.1435) - (-8.7933, 23.6168)
+             rendered (-18.1279, 20.1435) - (-8.8428, 23.5841), size 9.285 x 3.4406
+Limits:      (0, 0) - (12, 12)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: ROMAND (font ROMAND)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 2 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            199
+  10            7  CONTINUOUS    on            39
+  unused: 2, 3, 4, 5, 6, 7, 8, 9
+Entities:    model space: LINE 174, ARC 30, SOLID 13, TEXT 13, CIRCLE 5, POLYLINE 3 (13 vertices)
+Blocks:      0 defined
+
+== Text in reading order (13 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (13 items) --
+  MONITOR  |  ON/OFF
+  FAN
+  VME POWER
+  AUDIO R
+  FLOPPY
+  AUDIO L
+  MODEM 2
+  TELEVISION
+  PRINTER MODEM 1
+  ACSI
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+       X         Y    HEIGHT    ROT  JUST      LAYER  STYLE   TEXT
+-16.1301   23.3405    0.1719      0  left      10     ROMAND  MONITOR
+-12.9807   23.4122    0.1719      0  left      10     ROMAND  ON/OFF
+-11.6309   23.3044    0.1719      0  left      10     ROMAND  FAN
+-14.8125   23.1337    0.1719      0  left      10     ROMAND  VME
+-14.0996   23.1286    0.1719      0  left      10     ROMAND  POWER
+ -9.8757   22.5366    0.1719      0  left      10     ROMAND  AUDIO R
+-18.1279   22.4298    0.1719      0  left      10     ROMAND  FLOPPY
+ -9.8654   21.1608    0.1719      0  left      10     ROMAND  AUDIO L
+ -11.962   20.9645    0.1719      0  left      10     ROMAND  MODEM 2
+-15.9112   20.8753    0.1719      0  left      10     ROMAND  TELEVISION
+-14.1946   20.5547    0.1719      0  left      10     ROMAND  PRINTER
+-13.0363   20.5431    0.1719      0  left      10     ROMAND  MODEM 1
+-14.6018   20.1435    0.1719      0  left      10     ROMAND  ACSI

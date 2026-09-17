@@ -1,0 +1,34 @@
+DXF drawing: DYNACADD/PARTS/DXF/S-LAYOUT.DXF
+Render: S-LAYOUT.DXF.svg
+
+== Summary ==
+File:        717588 bytes, CR/LF line ends, ends with ^Z (0x1A)
+Dialect:     group codes right-aligned in 3 columns; full AutoCAD header with $ACADVER=AC1006 (R10), 112 header variables, tables VPORT/LTYPE/LAYER/STYLE/VIEW/UCS/DWGMGR
+Sections:    HEADER, TABLES, BLOCKS, ENTITIES
+Menu:        $MENU=FONT
+Dates:       created 1991-12-28 02:32, last saved 1992-01-10 04:09 ($TDCREATE/$TDUPDATE)
+Extents:     header (37.05, 55.03) - (687.96, 556.74)
+             rendered (37.05, 55.23) - (687.96, 556.74), size 650.91 x 501.5
+Limits:      (0, 0) - (699.85, 564.98)
+Units:       not stored in this DXF version; $LUNITS=2 (decimal); limits and extents suggest millimetres
+Header:      112 variables; $LTSCALE=20.0, $TEXTSIZE=0.2, $DIMSCALE=1.0, $FILLMODE=1
+Text styles: STANDARD (font txt)
+Linetypes:   CONTINUOUS, HIDDEN, BORDER, PHANTOM, DIVIDE
+Layers:      11 in table, 10 used
+  name       color  linetype      state         objects
+  BTM-HSG       15  CONTINUOUS    on            976
+  TOP-HSG        4  CONTINUOUS    on            161
+  POWER          2  CONTINUOUS    on            221
+  NS-COVER       1  CONTINUOUS    on            272
+  MS-TOP         5  CONTINUOUS    on            587
+  PCB-MOD        4  CONTINUOUS    on            2205
+  NP-BTM         1  CONTINUOUS    on            282
+  NS-PLATE       7  CONTINUOUS    on            446
+  INSULATOR      2  CONTINUOUS    on            126
+  NS-BTM         3  CONTINUOUS    on            724
+  unused: 0
+Entities:    model space: LINE 4498, ARC 1035, CIRCLE 398, POLYLINE 67 (383 vertices), SOLID 2
+Blocks:      0 defined
+
+== Text in reading order (0 text items) ==
+(no text in drawing)

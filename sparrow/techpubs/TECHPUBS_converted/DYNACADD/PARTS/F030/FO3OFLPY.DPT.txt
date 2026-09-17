@@ -1,0 +1,14 @@
+DynaCADD 2.0 entity file (.DPT)
+Source: DYNACADD/PARTS/F030/FO3OFLPY.DPT (1873 bytes)
+Record stream: 34 records, ends at offset 0x751 with FFFF terminator
+Drawing settings from: FO3OFLPY.DWG
+Sheet: width 11, height 8.5, scale 1
+Units: not recorded in a field identified so far; coordinates are listed as stored
+Entities: 34 total (LINE 34)
+Extents: x 0.617 .. 10.4538, y 1.8369 .. 4.9547 (size 9.8368 x 3.1178)
+Layers used: 0 "L1" (21), 9 "L10" (13)
+Line styles used: 0 "DASHED, drawn solid" (34)
+Colour indices used: 7 (34)
+Groups: none
+
+Text strings (0), in file order; x,y = insertion point:

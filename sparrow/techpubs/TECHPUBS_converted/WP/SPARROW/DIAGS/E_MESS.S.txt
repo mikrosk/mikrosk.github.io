@@ -1,0 +1,65 @@
+   .data
+msgexc14: dc.b cr,lf,'  $14: Zero  Divide ',eot
+msgexc18: dc.b cr,lf,'  $18: CHK,CHK2 instruction ',eot
+msgexc1c: dc.b cr,lf,'  $1c: TRAP instruction ',eot
+msgexc20: dc.b cr,lf,'  $20: priviledge violation ',eot
+msgexc24: dc.b cr,lf,'  $24: Trace exception ',eot
+msgint5v: dc.b cr,lf,'  Interrupt 5 user vector  ',eot
+msgint6: dc.b cr,lf,'   Interrupt 6 user vector  ',eot
+msgint1a: dc.b cr,lf,'  Interrupt 1 auto vector  ',eot
+spurina5: dc.b cr,lf,'  Spurious interrupt 5  ',eot
+spurina1: dc.b cr,lf,'  Spurious interrupt 1  ',eot
+spurina6: dc.b cr,lf,'  Spurious interrupt 6  ',eot
+msgbe6: dc.b cr,lf,'  Bus error from int level 6  ',eot
+msgbe0: dc.b cr,lf,'  Bus error ',eot
+spurina0: dc.b   cr,lf,'  Spurious Interrupt ',eot
+msgii0: dc.b    cr,lf,'  Illegal Instruction  ',eot     
+msgae0: dc.b    cr,lf,'  Address Error  ',eot
+msgaccadd: dc.b    ' Access Address: ',eot
+msgpc:  dc.b    ' Program Counter: ',eot
+
+mess1: dc.b cr,lf,'  Block test: ',eot
+mess2: dc.b cr,lf,'  Adddress test: ',eot
+mess3: dc.b cr,lf,'  Hilo test: ',eot
+mess4: dc.b cr,lf,'  Copy test: ',eot
+testhaltm: dc.b cr,lf,'  Halt Test failed  ',eot
+msgtmr: dc.b cr,lf,'      timer interrupt...: ',eot
+test500l: dc.b cr,lf,'  500 KHZ clock stuck low',eot
+test500h: dc.b cr,lf,'  500 KHZ clock stuck high',eot
+prnfmsg:  dc.b cr,lf,'  printer is not responding... ',eot
+prnmsg0:  dc.b cr,lf,'  printer is working',eot
+testbel: dc.b cr,lf,'  Bus error signal stuck low',eot
+testbeh: dc.b cr,lf,'  Bus error signal stuck high',eot
+bltmsg1:  dc.b cr,lf,'  Blitter test failed  ',eot
+bemsg:   dc.b '*',eot
+msgtr:  dc.b cr,'  Testing Target Ram               Test No. ',eot
+msgtrq: dc.b cr,'  Testing Videl Data Latch         Test No. ',eot
+msgexpram: 
+	dc.b cr,'  Testing Expansion Ram            Test No. ',eot
+msgexp: dc.b  'Testing Expansion ',eot
+msgexpno: dc.b cr,lf,'  Expansion port is not connected ',eot
+passmsg: dc.b    '     Passed: ',eot
+failmsg: dc.b    '     Failed: ',eot
+
+.if !(^^defined falmsg)
+falmsg = failmsg
+.endif
+
+.if !(^^defined pasmsg)
+pasmsg = passmsg
+.endif
+
+latchmsg: dc.b cr,lf,'  Address Latch failed at addr\exp\read: ',eot
+int1msg1: dc.b cr,lf,'  Interrupt level 1 failed ',eot
+int3msg1: dc.b cr,lf,'  Interrupt level 3 failed ',eot
+int5msg1: dc.b cr,lf,'  Interrupt level 5 failed ',eot
+int6msg1: dc.b cr,lf,'  Interrupt level 6 failed ',eot
+primsg1: dc.b cr,lf,'  Interrupt priority failed ',eot
+rammsg1: dc.b     cr,lf,'  RAM test start.end: ',eot
+ramfmsg: dc.b    cr,lf,'    RAM failed addr.write.read: ',eot
+startmsg: dc.b   'Testing in progress sp/sr: ',eot
+donemsg2: dc.b    cr,lf,lf,'Test is done sp/sr: ',eot
+spacemsg: dc.b   '  ',eot
+crlfmsg: dc.b    cr,lf,eot
+crmsg: dc.b    cr,eot
+

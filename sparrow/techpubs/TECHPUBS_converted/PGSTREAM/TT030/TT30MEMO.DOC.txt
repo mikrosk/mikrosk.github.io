@@ -1,0 +1,30 @@
+[PageStream 2 document TT30MEMO.DOC: 8.50 x 11.00 in, 2 objects]
+
+--- Page 1 ---
+[1 drawing objects, see TT30MEMO.DOC.p001.svg]
+
+Dallas Office Memo
+
+
+To:		All Subsidiaries
+From:	Marty Pennock
+Subject:	TT030 Correction Pages
+Date:	October 29, 1991
+
+cc:		Tom Ulaszek - ATX
+		Ira Goldstein - ATX
+		Leonard Tramiel - SUVL
+		Sam Tramiel - SUVL
+		Robert Shen - SUVL
+		Stephen Chan - SUVL
+		Richard Miller - SUVL
+		Maxie Smith - SUVL
+
+
+The following pages are replacements for the pages of the same number in the original release of the TT030 Service Guide. The same page numbers that are in your current copy of the TT030 Service Guide should be removed and the new pages inserted in their place. Note that there is a new page 28a that will follow page 28 in the original document. A new Bill Of Materials is also included to replace the computer printout shipped with the original revision. The new BOM contains main assemblies and easily replaceable parts only. An ECO history for the TT030 is also being sent.
+
+
+Sincerely
+
+
+Marty Pennock

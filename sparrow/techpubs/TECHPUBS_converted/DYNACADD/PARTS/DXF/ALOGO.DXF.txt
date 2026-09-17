@@ -1,0 +1,49 @@
+DXF drawing: DYNACADD/PARTS/DXF/ALOGO.DXF
+Render: ALOGO.DXF.svg
+
+== Summary ==
+File:        38266 bytes, CR/LF line ends, ends with ^Z (0x1A)
+Dialect:     group codes right-aligned in 3 columns; full AutoCAD header with $ACADVER=AC1006 (R10), 112 header variables, tables VPORT/LTYPE/LAYER/STYLE/VIEW/UCS/DWGMGR
+Sections:    HEADER, TABLES, BLOCKS, ENTITIES
+Menu:        $MENU=acad
+Dates:       created 1991-02-26 01:18, last saved 1991-02-26 01:18 ($TDCREATE/$TDUPDATE)
+Extents:     header (3.1009, 4.292) - (6.3687, 4.9335)
+             rendered (3.0953, 4.307) - (6.2359, 4.9335), size 3.1407 x 0.6265
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version; $LUNITS=2 (decimal); limits and extents suggest inches
+Header:      112 variables; $LTSCALE=1.0, $TEXTSIZE=2.752, $DIMSCALE=1.0, $FILLMODE=1
+Text styles: STANDARD (font txt), ROMANS (font romans), ROMAND (font romand)
+Linetypes:   CONTINUOUS
+Layers:      4 in table, 2 used
+  name      color  linetype      state         objects
+  0             7  CONTINUOUS    on            259
+  TITLE         2  CONTINUOUS    on            16
+  unused: DIM, BORDER
+Entities:    model space: TEXT 6, LINE 4, INSERT 3, POLYLINE 2 (12 vertices), CIRCLE 1
+             in block definitions: LINE 259
+Blocks:      3 defined
+  *X0: base (0, 0), LINE 127; inserted 1 time
+      at (-25.6191, 2.9458) scale 0.03937,0.03937 rotation 0 layer TITLE
+  *X1: base (0, 0), LINE 66; inserted 1 time
+      at (-25.6092, 2.8632) scale 0.03937,0.03937 rotation 0 layer TITLE
+  *X2: base (0, 0), LINE 66; inserted 1 time
+      at (-25.6289, 2.8632) scale 0.03937,0.03937 rotation 0 layer TITLE
+
+== Text in reading order (6 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (6 items) --
+  ATARI MICROSYSTEMS
+  CORPORATION
+  R
+  4115 KELLER SPRING RD., SUITE 200
+  ATARI  |  DALLAS, TEXAS  75244
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE   TEXT
+3.8265  4.7761    0.1575      0  left      TITLE  ROMAND  ATARI MICROSYSTEMS
+4.2634  4.5737    0.1575      0  left      TITLE  ROMAND  CORPORATION
+3.6192  4.5152    0.0197      0  middle    TITLE  ROMAND  R
+ 3.947  4.4266    0.0787      0  left      TITLE  ROMANS  4115 KELLER SPRING RD., SUITE 200
+3.0953  4.3356    0.1575      0  fit       TITLE  ROMAND  ATARI
+4.3689   4.307    0.0787      0  left      TITLE  ROMANS  DALLAS, TEXAS  75244

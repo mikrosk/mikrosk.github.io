@@ -1,0 +1,35 @@
+[PageStream 2 document MSTE0003.DOC: 8.50 x 11.00 in, 1 objects]
+
+--- Page 1 ---
+
+Atari Technical Bulletin
+Number: MSTE-0003
+Date: September 5, 1991
+Page 1 of 1
+
+
+Product(s) Affected:			MEGA STE
+Model:					MEGA STE/1/2/4
+Type of ATB:				Mandatory
+ECO #: 					N/A
+
+Reason for ATB:
+
+MEGA STE/MC68882 coprocessor problems in some application software.
+
+
+Notes:
+
+1.)	To use coprocessors in the MEGASTE, a handler must be integrated into the application software to interface between the CPU and the coprocessor.  In 68000 based machines I.E. MEGASTE this handler may or may not be written to work with both MC68881 and MC68882 coprocessors.
+
+2.)	Machines based on the 68030 (such as the TT030), still require handlers but the hardware differences between the 68881/68882 coprocessors are transparent to the software.
+
+
+Symptoms of Problem:
+
+An application works with the 68881 but fails with the 68882 coprocessor
+
+
+Solution:
+
+Notify the software vendor for a solution. There may be a later revision that addresses the problem.

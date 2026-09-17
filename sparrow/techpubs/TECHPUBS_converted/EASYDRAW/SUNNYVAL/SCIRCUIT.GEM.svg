@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="219.68mm" height="168.07mm" viewBox="-3925.19 -3351.19 7870.37 6021.37">
+<title>EASYDRAW/SUNNYVAL/SCIRCUIT.GEM</title>
+<rect x="-3925.19" y="-3351.19" width="7870.37" height="6021.37" fill="#FFFFFF"/>
+<path d="M730 -346L1890 -346L1890 -743L730 -743Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M730 -346L1890 -346L1890 -743L730 -743L730 -346" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="770" y="-560" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="950" lengthAdjust="spacingAndGlyphs">Programmable</text>
+<text xml:space="preserve" x="770" y="-400" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1110" lengthAdjust="spacingAndGlyphs">Sound Generator</text>
+<path d="M-2728 -1368L-2728 2373L3634 2373" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M3634 2373L3576.68 2393.06L3576.68 2352.94Z" fill="#000000"/>
+<path d="M-216 -690L-608 -690L-798 -420L-10 -420L-218 -692L-218 -690Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-216 -690L-608 -690L-798 -420L-10 -420L-218 -692L-218 -690" fill="none" stroke="#000000" stroke-width="23"/>
+<path d="M-550 -418L-550 1202L3630 1202" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-3240 -1364L3640 -1364" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M3640 -1364L3582.68 -1343.94L3582.68 -1384.06Z" fill="#000000"/>
+<path d="M-3628 247L3295 247" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-3628 247L-3570.68 226.94L-3570.68 267.06Z" fill="#000000"/>
+<path d="M2651 -2874L2831 -3054L2831 -2524L2651 -2704L2651 -2874L2571 -2874L2571 -2714L2641 -2714Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M2651 -2874L2831 -3054L2831 -2524L2651 -2704L2651 -2874L2571 -2874L2571 -2714L2641 -2714" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2802 260A90 90 0 1 0 2622 260A90 90 0 1 0 2802 260Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M2802 260A90 90 0 1 0 2622 260A90 90 0 1 0 2802 260Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2654 202L2764 312M2772 200L2662 310" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1502 -1576L1502 -1136L1872 -1136L2062 -1366L1882 -1606L1502 -1606L1502 -1486Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M1502 -1576L1502 -1136L1872 -1136L2062 -1366L1882 -1606L1502 -1606L1502 -1486" fill="none" stroke="#000000" stroke-width="23"/>
+<path d="M-2050 -1157L-1153 -1157L-1153 -1554L-2050 -1554Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-2050 -1157L-1153 -1157L-1153 -1554L-2050 -1554L-2050 -1157" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M125 -1153L1022 -1153L1022 -1550L125 -1550Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M125 -1153L1022 -1153L1022 -1550L125 -1550L125 -1153" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1557 37L1557 477L1927 477L2117 247L1937 7L1557 7L1557 127Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M1557 37L1557 477L1927 477L2117 247L1937 7L1557 7L1557 127" fill="none" stroke="#000000" stroke-width="23"/>
+<path d="M2174 -1950L2622 -1950L2622 -2353L2174 -2353Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M2174 -1950L2622 -1950L2622 -2353L2174 -2353L2174 -1950" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-314 -1367A90 90 0 1 0 -494 -1367A90 90 0 1 0 -314 -1367Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-314 -1367A90 90 0 1 0 -494 -1367A90 90 0 1 0 -314 -1367Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-462 -1425L-352 -1315M-344 -1427L-454 -1317M-222 -420L-222 246M-1291 446L-556 446" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1291 50L-913 50L-913 -1364Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-1291 50L-913 50L-913 -1364" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2554 -2795L2364 -2795L2364 -2355Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M2554 -2795L2364 -2795L2364 -2355M2398 -1940L2398 -1370" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1924 -571L2710 -571L2710 -71Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M1924 -571L2710 -571L2710 -71" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2710 -71L2689.94 -128.32L2730.06 -128.32Z" fill="#000000"/>
+<path d="M2400 -1686L2958 -1686L2958 -2106L3640 -2106Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M2400 -1686L2958 -1686L2958 -2106L3640 -2106" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M3640 -2106L3582.68 -2085.94L3582.68 -2126.06Z" fill="#000000"/>
+<path d="M-3609 -1356L-3264 -1356" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-3264 -1356L-3321.32 -1335.94L-3321.32 -1376.06Z" fill="#000000"/>
+<path d="M3277 1201L3620 1201" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M3277 1201L3334.32 1180.94L3334.32 1221.06Z" fill="#000000"/>
+<path d="M3303 247L3648 247" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M3303 247L3360.32 226.94L3360.32 267.06Z" fill="#000000"/>
+<path d="M2275 246L2622 246" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2275 246L2332.32 225.94L2332.32 266.06Z" fill="#000000"/>
+<path d="M2711 -68L2711 170" fill="none" stroke="#000000" stroke-width="7.17"/>
+<text xml:space="preserve" x="-1860" y="-1360" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="530" lengthAdjust="spacingAndGlyphs">Channel</text>
+<text xml:space="preserve" x="-1860" y="-1200" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="560" lengthAdjust="spacingAndGlyphs">Selector</text>
+<text xml:space="preserve" x="-580" y="-500" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="320" lengthAdjust="spacingAndGlyphs">MUX</text>
+<text xml:space="preserve" x="1620" y="300" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">ADC</text>
+<text xml:space="preserve" x="1580" y="-1310" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">DAC</text>
+<text xml:space="preserve" x="150" y="-1350" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">Tone, Scale,</text>
+<text xml:space="preserve" x="150" y="-1190" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="870" lengthAdjust="spacingAndGlyphs">Volume, DSP</text>
+<text xml:space="preserve" x="2250" y="-2070" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="300" lengthAdjust="spacingAndGlyphs">�⇩c</text>
+<text xml:space="preserve" x="-2460" y="-260" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="910" lengthAdjust="spacingAndGlyphs">Green Return</text>
+<text xml:space="preserve" x="-2460" y="-100" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">Blue Return</text>
+<text xml:space="preserve" x="-2460" y="60" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="410" lengthAdjust="spacingAndGlyphs">Audio</text>
+<text xml:space="preserve" x="-2460" y="220" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="70" y="-1700" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="70" y="-1220" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">11</text>
+<text xml:space="preserve" x="70" y="-1060" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="200" lengthAdjust="spacingAndGlyphs">12 </text>
+<text xml:space="preserve" x="70" y="-900" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">13</text>
+<text xml:space="preserve" x="70" y="-740" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">14</text>
+<text xml:space="preserve" x="70" y="-580" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">15</text>
+<text xml:space="preserve" x="70" y="-420" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">16</text>
+<text xml:space="preserve" x="70" y="-260" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">17</text>
+<text xml:space="preserve" x="70" y="-100" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">18</text>
+<text xml:space="preserve" x="70" y="60" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">19</text>
+<text xml:space="preserve" x="760" y="-1710" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="760" y="-1230" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="760" y="-1070" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1140" lengthAdjust="spacingAndGlyphs">Composite Sync</text>
+<text xml:space="preserve" x="760" y="-910" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1090" lengthAdjust="spacingAndGlyphs">Horizontal Sync</text>
+<text xml:space="preserve" x="760" y="-750" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="910" lengthAdjust="spacingAndGlyphs">Vertical Sync</text>
+<text xml:space="preserve" x="760" y="-590" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1000" lengthAdjust="spacingAndGlyphs">External Clock</text>
+<text xml:space="preserve" x="760" y="-430" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1180" lengthAdjust="spacingAndGlyphs">External Genlock</text>
+<text xml:space="preserve" x="760" y="-270" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="380" lengthAdjust="spacingAndGlyphs">+ 12V</text>
+<text xml:space="preserve" x="760" y="-110" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="180" lengthAdjust="spacingAndGlyphs">V1</text>
+<text xml:space="preserve" x="760" y="50" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="180" lengthAdjust="spacingAndGlyphs">V0</text>
+<text xml:space="preserve" x="-3180" y="-760" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">13</text>
+<text xml:space="preserve" x="-3180" y="-600" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">15</text>
+<text xml:space="preserve" x="-3180" y="-440" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">17</text>
+<text xml:space="preserve" x="-3180" y="-280" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">19</text>
+<text xml:space="preserve" x="-3180" y="-120" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">21</text>
+<text xml:space="preserve" x="-3180" y="40" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">23</text>
+<text xml:space="preserve" x="-3180" y="200" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">25</text>
+<text xml:space="preserve" x="-3180" y="360" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">27</text>
+<text xml:space="preserve" x="-3180" y="520" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">29</text>
+<text xml:space="preserve" x="-3180" y="680" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">31</text>
+<text xml:space="preserve" x="-3180" y="840" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">33</text>
+<text xml:space="preserve" x="-3180" y="1000" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">35</text>
+<text xml:space="preserve" x="-3180" y="1160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">37</text>
+<text xml:space="preserve" x="-3180" y="1320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">39</text>
+<text xml:space="preserve" x="-3180" y="1480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">41</text>
+<text xml:space="preserve" x="-3180" y="1640" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">43</text>
+<text xml:space="preserve" x="-3180" y="1800" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">45</text>
+</svg>

@@ -1,0 +1,123 @@
+NOTES ON VIDEO TESTS
+
+Roy Stedman : 08APR92
+----------------------------------------------------------------
+The system should be started with a STe color monitor or VGA
+monitor plugged in. 
+
+Both monitors will work for most tests. Starting with a STe monitor is 
+required for the 'M' video modes test. The STe monitor will be slightly
+more compatible and should be used if a choice is available.
+
+The VGA monitor is recommended for a test station running the 'V' tests.
+after running the 'V' tests, the submenu background will be black to
+signify a VGA monitor. Returning to the main menu will restore the
+screen background color.
+
+==========
+
+Video Test Menu, option C - Color test
+
+	This is the same as the old STe Color test,
+it can be viewed on the monitor the system was started with,
+color or VGA.
+
+==========
+ 
+Video Test Menu, option M - Monitors test
+
+	This tests the Videl, the TV modulator, and the
+other video output circuitry. This test should be run
+with a RS232 terminal attached so all messages will be
+shown to the tester. 
+	The test starts with the color monitor attached,
+shows the screen from option 1 (below). Then the tester
+should connect a TV monitor to the modulator connector and
+verify proper output. 
+	The tester then connects a monochrome monitor and
+presses SPACE to advance to the monochrome test (option 3, below) 
+After verifying monochrome output, the tester then connects
+a VGA monitor and again presses SPACE. After checking (option 4, below)
+the VGA output, the tester connectes the color monitor again and
+presses SPACE to return to the video test menu.
+
+note: if the tester presses ESC instead of SPACE, the rest of 
+the test will be skipped and the video test menu will return
+after a color monitor is connected.
+
+each test may be run independantly by using the numbered tests.
+
+==========
+
+Video Test Menu, option V - VGA Modes test
+
+	This test tests more of the Videl circuits by displaying
+several different video modes on a VGA monitor. Again, a RS232
+terminal should be connected in order to recieve the test prompts
+
+	The first screen is the same as option 4, below. The
+second screen tests 320 x 480 XGA. 
+
+NOTE: The second screen does not work on rev. 1 combels and should
+be skipped by pressing 'B' instead of space after the first screen. 
+The system will most likely crash otherwise.
+
+	The third screen tests 640 x 200 STe modes and shows the
+video test menu screen while changing the background colors. There
+should be four of each color, in order: dim, bright, less, less..
+if there are not, there are problems with the STe palette.
+
+==========
+
+Video Test Menu, option 1 - Color
+
+Screen: 640 x 200 XGA
+	A set of R,G,B color bars on the left half,
+and a rainbow of colors in a block on the right half.
+System is ok if all colors are in the bars, and the
+rainbow colors are the same as a good system.
+
+note that the color bars are each one DAC bit. If one
+is missing, check connections to the DAC. 
+
+==========
+
+Video Test Menu, option 2 - TV 
+
+Screen: 640 x 200 XGA
+	same as above, viewed on the TV monitor
+
+==========
+
+Video Test Menu, option 3 - Mono
+
+Screen: 640 x 400, monochrome
+	A black screen with white blocks,
+alternating to a white screen with black blocks
+(same as old STe Hires test)
+
+==========
+
+Video Test Menu, option 4 - VGA
+
+Screen: 640 x 480, 256 Colors
+	A black screen with crossed white lines,
+(vertical and horizontal centered, diagonal shifted left)
+a set of color bars on the right, just left of the
+color bars, a white block with black lines through it,
+and the contents of the Sparrow palette in a 16x16 square on the left
+
+The system is ok if the screen is stable, the color bars are of
+increasing intensity for each color, and in the order G,B,R from top down.
+
+The system has a problem if the colors are in the wrong
+order, are mixed, or if the lines or blocks are not
+steady and clear.
+
+note that the color bars are each one DAC bit. If one
+is missing, check connections to the DAC. 
+
+NOTE: A rev. 1 combel will show mixed and out of order color bars.
+
+==========
+

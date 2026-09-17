@@ -1,0 +1,70 @@
+File: TEMP/CORDRAWS/SPARX50.CDR
+Format: CorelDRAW 2.x drawing, pre-RIFF "WL" (Waldo) container, version byte 0xC9 (201)
+File size: 13353 bytes
+Page: 11.000 x 8.500 in (landscape); native units 0.001 in, origin at page centre, y up
+Drawing extent (in, page-centred): x -4.951 .. 4.951, y -0.552 .. 0.552
+Preview bitmap: 90x90 monochrome
+Record index: type1=53, type2=51
+Objects: groups 1, rectangle 0, ellipse 0, curve 51, text 0, bitmap 0
+Curve nodes total: 655
+Fills: solid 51
+Outlines: solid 51
+Colours used: CMYK(0,0,0,100) x101, CMYK(0,0,0,0) x1
+Fonts: none
+
+Text strings: 0
+(position = text anchor point in inches from page top-left, x right / y down; listed top-to-bottom, left-to-right)
+
+Object tree (stored order = front-most first; bbox in inches from page top-left):
+  group [0.551,3.700-10.449,4.800]
+    curve 13 nodes [10.143,4.342-10.300,4.500]
+    curve 13 nodes [9.750,4.342-9.907,4.500]
+    curve 13 nodes [9.356,4.342-9.513,4.500]
+    curve 13 nodes [8.963,4.342-9.120,4.500]
+    curve 13 nodes [10.143,3.942-10.300,4.100]
+    curve 13 nodes [9.750,3.942-9.907,4.100]
+    curve 13 nodes [9.356,3.942-9.513,4.100]
+    curve 13 nodes [8.963,3.942-9.120,4.100]
+    curve 13 nodes [7.389,4.342-7.546,4.500]
+    curve 13 nodes [7.782,4.342-7.939,4.500]
+    curve 13 nodes [6.995,4.342-7.152,4.500]
+    curve 13 nodes [8.569,4.342-8.726,4.500]
+    curve 13 nodes [8.176,4.342-8.333,4.500]
+    curve 13 nodes [7.389,3.942-7.546,4.100]
+    curve 13 nodes [7.782,3.942-7.939,4.100]
+    curve 13 nodes [6.995,3.942-7.152,4.100]
+    curve 13 nodes [8.569,3.942-8.726,4.100]
+    curve 13 nodes [8.176,3.942-8.333,4.100]
+    curve 13 nodes [6.600,4.341-6.757,4.499]
+    curve 13 nodes [6.206,4.341-6.363,4.499]
+    curve 13 nodes [5.813,4.341-5.970,4.499]
+    curve 13 nodes [5.421,4.341-5.576,4.499]
+    curve 13 nodes [6.600,3.943-6.757,4.101]
+    curve 13 nodes [6.206,3.943-6.363,4.101]
+    curve 13 nodes [5.813,3.943-5.970,4.101]
+    curve 13 nodes [5.421,3.943-5.576,4.101]
+    curve 13 nodes [5.028,4.342-5.185,4.500]
+    curve 13 nodes [4.634,4.342-4.791,4.500]
+    curve 13 nodes [4.241,4.342-4.398,4.500]
+    curve 13 nodes [3.847,4.342-4.004,4.500]
+    curve 13 nodes [3.454,4.342-3.611,4.500]
+    curve 13 nodes [5.028,3.942-5.185,4.100]
+    curve 13 nodes [4.634,3.942-4.791,4.100]
+    curve 13 nodes [4.241,3.942-4.398,4.100]
+    curve 13 nodes [3.847,3.942-4.004,4.100]
+    curve 13 nodes [3.454,3.942-3.611,4.100]
+    curve 13 nodes [1.093,4.342-1.250,4.500]
+    curve 13 nodes [0.700,4.342-0.857,4.500]
+    curve 13 nodes [2.667,4.342-2.824,4.500]
+    curve 13 nodes [2.273,4.342-2.430,4.500]
+    curve 13 nodes [1.880,4.342-2.037,4.500]
+    curve 13 nodes [1.486,4.342-1.643,4.500]
+    curve 13 nodes [3.060,4.342-3.217,4.500]
+    curve 13 nodes [2.667,3.942-2.824,4.100]
+    curve 13 nodes [2.273,3.942-2.430,4.100]
+    curve 13 nodes [1.880,3.942-2.037,4.100]
+    curve 13 nodes [1.486,3.942-1.643,4.100]
+    curve 13 nodes [1.093,3.942-1.250,4.100]
+    curve 13 nodes [3.060,3.942-3.217,4.100]
+    curve 13 nodes [0.700,3.942-0.857,4.100]
+    curve 5 nodes [0.551,3.700-10.449,4.800]

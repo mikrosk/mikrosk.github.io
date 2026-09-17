@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="792pt" height="612pt" viewBox="0 0 79200 61200">
+<rect x="0" y="0" width="79200" height="61200" fill="#fff"/>
+<g><rect x="4931" y="5383" width="27876" height="50372" fill="#fff" stroke="none"/><text y="7321.5" xml:space="preserve"><tspan x="15484.5 16479 17228 17977 18399.7 18903.2 19652.2 20074.8 20497.5 21164.2 21667.7" font-size="1400" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-weight="bold">Controllers</tspan></text></g>
+<line x1="75563" y1="3738" x2="44995" y2="3738" fill="none" stroke="#000" stroke-width="100" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="75565" y1="57404" x2="44996" y2="57404" fill="none" stroke="#000" stroke-width="100" stroke-linecap="butt" stroke-linejoin="round"/>
+<g><rect x="51421" y="2167" width="24288" height="1120" fill="#fff" stroke="none"/><text y="2974.7" xml:space="preserve"><tspan x="64506.7 65083.6 65760.4 66287.8 66539.8 67216.6 67693.6 68070.7 68347.9 68599.9 68926.6 69403.6 69680.8 70107.4 70434.1 70760.8 71187.4 71614 72040.6 72292.6 72919.9 73396.9 73873.9 74151.1 74428.3 74905.3 75331.9" font-size="900" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-style="italic">TOS Host Interface Routines</tspan></text></g>
+<g><rect x="61363" y="57931" width="14350" height="1118" fill="#fff" stroke="none"/><text y="58738.7" xml:space="preserve"><tspan x="73000.4 73677.2 74204.6 74732 74984 75236" font-size="900" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-style="italic">DSP .3</tspan></text></g>
+<text y="58809.7" xml:space="preserve"><tspan x="44997 45405" font-size="800" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-style="italic">© </tspan><tspan x="45613 46090 46567 47044 47521 47773 48025 48701.8 48979 49405.6 49732.3 50009.5 50261.5 50888.8 51365.8 51692.5 52169.5 52646.5 52973.2 53399.8 53677 53954.2 54431.2" font-size="900" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-style="italic">1992, Atari Corporation</tspan></text>
+<text y="3051.7" xml:space="preserve"><tspan x="45445.6 45904.6 46163.8 46622.8 47081.8 47341 47800" font-size="900" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-style="italic">4/20/92</tspan></text>
+<line x1="34182" y1="3738" x2="3614" y2="3738" fill="none" stroke="#000" stroke-width="100" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="34184" y1="57404" x2="3615" y2="57404" fill="none" stroke="#000" stroke-width="100" stroke-linecap="butt" stroke-linejoin="round"/>
+<g><rect x="3612" y="2167" width="23214" height="1116" fill="#fff" stroke="none"/><text y="2974.7" xml:space="preserve"><tspan x="3612 3989.1 4466.1 4943.1 5320.2 5597.4 5874.6 6301.2 6778.2 7055.4 7732.2 8158.8 8635.8 9112.8 9539.4 10016.4 10268.4 11095.5 11522.1 11799.3 12126 12403.2" font-size="900" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-style="italic">Joystick/Keypad Matrix</tspan></text></g>
+<g><rect x="3613" y="57931" width="16190" height="1116" fill="#fff" stroke="none"/><text y="58738.7" xml:space="preserve"><tspan x="3613 3990.1 4467.1 4944.1 5321.2 5598.4 5875.6 6302.2 6779.2 7031.2 7283.2" font-size="900" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-style="italic">Joystick .2</tspan></text></g>
+<text y="58809.7" xml:space="preserve"><tspan x="22824 23232" font-size="800" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-style="italic">© </tspan><tspan x="23440 23917 24394 24871 25348 25600 25852 26528.8 26806 27232.6 27559.3 27836.5 28088.5 28715.8 29192.8 29519.5 29996.5 30473.5 30800.2 31226.8 31504 31781.2 32258.2" font-size="900" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-style="italic">1992, Atari Corporation</tspan></text>
+<text y="3051.7" xml:space="preserve"><tspan x="31489.6 31948.6 32207.8 32666.8 33125.8 33385 33844" font-size="900" font-family="'Times New Roman', Times, 'Liberation Serif', serif" font-style="italic">4/20/92</tspan></text>
+<path d="M9620 46508 L9620 48384 A1881 1876 0 0 0 11472.4 46833.8 Z" fill="#fff" stroke="none"/>
+<path d="M9620 48384 A1881 1876 0 0 0 11472.4 46833.8" fill="none" stroke="#000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9620 48380 L9620 46508 L11470 46832" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M9998 44757 L11850.4 45082.8 A1881 1876 0 0 0 11438.9 43551.1 A1881 1876 0 0 0 9998 42881 Z" fill="#fff" stroke="none"/>
+<path d="M11850.4 45082.8 A1881 1876 0 0 0 11438.9 43551.1 A1881 1876 0 0 0 9998 42881" fill="none" stroke="#000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11848 45081 L9998 44757 L9998 42885" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M6475 46508 L4622.6 46833.8 A1881 1876 0 0 0 6475 48384 Z" fill="#fff" stroke="none"/>
+<path d="M4622.6 46833.8 A1881 1876 0 0 0 6475 48384" fill="none" stroke="#000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4625 46832 L6475 46508 L6475 48380" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M6101 44757 L6101 42881 A1881 1876 0 0 0 4660.1 43551.1 A1881 1876 0 0 0 4248.6 45082.8 Z" fill="#fff" stroke="none"/>
+<path d="M6101 42881 A1881 1876 0 0 0 4660.1 43551.1 A1881 1876 0 0 0 4248.6 45082.8" fill="none" stroke="#000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6101 42885 L6101 44757 L4252 45081" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M10007 42881 L10007 44757 L11816 45086 Z" fill="#fff" stroke="none"/>
+<path d="M10007 42881 L10007 44757 L11816 45086" fill="none" stroke="#fff" stroke-width="252" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M6142 42881 L6142 44757 L4333 45086 Z" fill="#fff" stroke="none"/>
+<path d="M6142 42881 L6142 44757 L4333 45086" fill="none" stroke="#fff" stroke-width="92" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="6016" y1="42881" x2="10111" y2="42881" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M9634 48357 L9634 46508 L11465 46832 Z" fill="#fff" stroke="none"/>
+<path d="M9634 48357 L9634 46508 L11465 46832" fill="none" stroke="#fff" stroke-width="172" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M6493 48357 L6493 46508 L4661 46832 Z" fill="#fff" stroke="none"/>
+<path d="M6493 48357 L6493 46508 L4661 46832" fill="none" stroke="#fff" stroke-width="172" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="4270" y1="45086" x2="4657" y2="46935" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="11843" y1="45032" x2="11465" y2="46841" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="6934" cy="44195" rx="175" ry="175" fill="#fff" stroke="none"/>
+<ellipse cx="6934" cy="44195" rx="175" ry="175" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="5791" cy="44195" rx="175" ry="175" fill="#fff" stroke="none"/>
+<ellipse cx="5791" cy="44195" rx="175" ry="175" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="8077" cy="44195" rx="175" ry="175" fill="#fff" stroke="none"/>
+<ellipse cx="8077" cy="44195" rx="175" ry="175" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="9215" cy="44195" rx="175" ry="175" fill="#fff" stroke="none"/>
+<ellipse cx="9215" cy="44195" rx="175" ry="175" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="10399" cy="44195" rx="211" ry="175" fill="#fff" stroke="none"/>
+<ellipse cx="10399" cy="44195" rx="211" ry="175" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="7438" cy="45468" rx="175" ry="175" fill="#fff" stroke="none"/>
+<ellipse cx="7438" cy="45468" rx="175" ry="175" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="6295" cy="45468" rx="175" ry="175" fill="#fff" stroke="none"/>
+<ellipse cx="6295" cy="45468" rx="175" ry="175" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="8581" cy="45468" rx="175" ry="175" fill="#fff" stroke="none"/>
+<ellipse cx="8581" cy="45468" rx="175" ry="175" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="9719" cy="45468" rx="175" ry="175" fill="#fff" stroke="none"/>
+<ellipse cx="9719" cy="45468" rx="175" ry="175" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="10876" cy="45450" rx="184" ry="180" fill="#fff" stroke="none"/>
+<ellipse cx="10876" cy="45450" rx="184" ry="180" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="6983" cy="46769" rx="175" ry="175" fill="#fff" stroke="none"/>
+<ellipse cx="6983" cy="46769" rx="175" ry="175" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="5840" cy="46769" rx="175" ry="175" fill="#fff" stroke="none"/>
+<ellipse cx="5840" cy="46769" rx="175" ry="175" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="8126" cy="46769" rx="175" ry="175" fill="#fff" stroke="none"/>
+<ellipse cx="8126" cy="46769" rx="175" ry="175" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="9265" cy="46769" rx="175" ry="175" fill="#fff" stroke="none"/>
+<ellipse cx="9265" cy="46769" rx="175" ry="175" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<ellipse cx="10444" cy="46769" rx="207" ry="175" fill="#fff" stroke="none"/>
+<ellipse cx="10444" cy="46769" rx="207" ry="175" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="6326" y1="48375" x2="9773" y2="48375" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<text y="44502.7" xml:space="preserve"><tspan x="12369" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">1</tspan></text>
+<text y="45818.7" xml:space="preserve"><tspan x="12256" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">6</tspan></text>
+<text y="47105.7" xml:space="preserve"><tspan x="12002 12502" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">11</tspan></text>
+<text y="17123.5" xml:space="preserve"><tspan x="8756 9367.6 9856 10406 10956 11261.8 11750.2" font-size="1100" font-family="'Times New Roman', Times, 'Liberation Serif', serif">Paddles</tspan></text>
+<text y="18493.7" xml:space="preserve"><tspan x="4701 5257 5813 6313 6813 7313" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">FF9210</tspan></text>
+<text y="19483.7" xml:space="preserve"><tspan x="4701 5257 5813 6313 6813 7313" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">FF9212</tspan></text>
+<rect x="10843" y="17884" width="2048" height="513" fill="#000" fill-opacity="0.5" stroke="none"/>
+<path d="M10843 18397 L12891 18397 L12891 17884 L10843 17884 L10843 18397" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="11352" y1="17884" x2="11352" y2="18397" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="11865" y1="17884" x2="11865" y2="18397" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="12378" y1="17884" x2="12378" y2="18397" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="12891" y="17884" width="2047" height="513" fill="#fff" stroke="none"/>
+<path d="M12891 18397 L14938 18397 L14938 17884 L12891 17884 L12891 18397" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="13399" y1="17884" x2="13399" y2="18397" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="13912" y1="17884" x2="13912" y2="18397" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="14425" y1="17884" x2="14425" y2="18397" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="14938" y="17884" width="2048" height="513" fill="#fff" stroke="none"/>
+<path d="M14938 18397 L16986 18397 L16986 17884 L14938 17884 L14938 18397" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="15447" y1="17884" x2="15447" y2="18397" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="15960" y1="17884" x2="15960" y2="18397" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="16473" y1="17884" x2="16473" y2="18397" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="8796" y1="18397" x2="8796" y2="18397" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="8796" y="17884" width="2047" height="513" fill="#000" fill-opacity="0.5" stroke="none"/>
+<path d="M8796 18397 L10843 18397 L10843 17884 L8796 17884 L8796 18397" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="9304" y1="17884" x2="9304" y2="18397" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="9817" y1="17884" x2="9817" y2="18397" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="10330" y1="17884" x2="10330" y2="18397" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="10843" y="18910" width="2048" height="508" fill="#000" fill-opacity="0.5" stroke="none"/>
+<path d="M10843 19418 L12891 19418 L12891 18910 L10843 18910 L10843 19418" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="11352" y1="18910" x2="11352" y2="19418" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="11865" y1="18910" x2="11865" y2="19418" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="12378" y1="18910" x2="12378" y2="19418" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="12891" y="18910" width="2047" height="508" fill="#fff" stroke="none"/>
+<path d="M12891 19418 L14938 19418 L14938 18910 L12891 18910 L12891 19418" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="13399" y1="18910" x2="13399" y2="19418" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="13912" y1="18910" x2="13912" y2="19418" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="14425" y1="18910" x2="14425" y2="19418" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="14938" y="18910" width="2048" height="508" fill="#fff" stroke="none"/>
+<path d="M14938 19418 L16986 19418 L16986 18910 L14938 18910 L14938 19418" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="15447" y1="18910" x2="15447" y2="19418" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="15960" y1="18910" x2="15960" y2="19418" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="16473" y1="18910" x2="16473" y2="19418" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="8796" y1="19418" x2="8796" y2="19418" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="8796" y="18910" width="2047" height="508" fill="#000" fill-opacity="0.5" stroke="none"/>
+<path d="M8796 19418 L10843 19418 L10843 18910 L8796 18910 L8796 19418" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="9304" y1="18910" x2="9304" y2="19418" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="9817" y1="18910" x2="9817" y2="19418" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="10330" y1="18910" x2="10330" y2="19418" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<text y="18493.7" xml:space="preserve"><tspan x="18021 18354 19076 19326 19882 20326 20826 21326 21604 22048 22298 22798" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">(X Paddle 0)</tspan></text>
+<text y="19528.7" xml:space="preserve"><tspan x="18021 18354 19076 19326 19882 20326 20826 21326 21604 22048 22298 22798" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">(Y Paddle 0)</tspan></text>
+<text y="20563.7" xml:space="preserve"><tspan x="4701 5257 5813 6313 6813 7313" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">FF9214</tspan></text>
+<text y="21598.7" xml:space="preserve"><tspan x="4701 5257 5813 6313 6813 7313" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">FF9216</tspan></text>
+<rect x="10843" y="19931" width="2048" height="513" fill="#000" fill-opacity="0.5" stroke="none"/>
+<path d="M10843 20444 L12891 20444 L12891 19931 L10843 19931 L10843 20444" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="11352" y1="19931" x2="11352" y2="20444" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="11865" y1="19931" x2="11865" y2="20444" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="12378" y1="19931" x2="12378" y2="20444" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="12891" y="19931" width="2047" height="513" fill="#fff" stroke="none"/>
+<path d="M12891 20444 L14938 20444 L14938 19931 L12891 19931 L12891 20444" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="13399" y1="19931" x2="13399" y2="20444" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="13912" y1="19931" x2="13912" y2="20444" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="14425" y1="19931" x2="14425" y2="20444" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="14938" y="19931" width="2048" height="513" fill="#fff" stroke="none"/>
+<path d="M14938 20444 L16986 20444 L16986 19931 L14938 19931 L14938 20444" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="15447" y1="19931" x2="15447" y2="20444" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="15960" y1="19931" x2="15960" y2="20444" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="16473" y1="19931" x2="16473" y2="20444" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="8796" y1="20444" x2="8796" y2="20444" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="8796" y="19931" width="2047" height="513" fill="#000" fill-opacity="0.5" stroke="none"/>
+<path d="M8796 20444 L10843 20444 L10843 19931 L8796 19931 L8796 20444" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="9304" y1="19931" x2="9304" y2="20444" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="9817" y1="19931" x2="9817" y2="20444" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="10330" y1="19931" x2="10330" y2="20444" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="10843" y="20957" width="2048" height="509" fill="#000" fill-opacity="0.5" stroke="none"/>
+<path d="M10843 21466 L12891 21466 L12891 20957 L10843 20957 L10843 21466" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="11352" y1="20957" x2="11352" y2="21466" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="11865" y1="20957" x2="11865" y2="21466" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="12378" y1="20957" x2="12378" y2="21466" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="12891" y="20957" width="2047" height="509" fill="#fff" stroke="none"/>
+<path d="M12891 21466 L14938 21466 L14938 20957 L12891 20957 L12891 21466" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="13399" y1="20957" x2="13399" y2="21466" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="13912" y1="20957" x2="13912" y2="21466" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="14425" y1="20957" x2="14425" y2="21466" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="14938" y="20957" width="2048" height="509" fill="#fff" stroke="none"/>
+<path d="M14938 21466 L16986 21466 L16986 20957 L14938 20957 L14938 21466" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="15447" y1="20957" x2="15447" y2="21466" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="15960" y1="20957" x2="15960" y2="21466" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="16473" y1="20957" x2="16473" y2="21466" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="8796" y1="21466" x2="8796" y2="21466" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="8796" y="20957" width="2047" height="509" fill="#000" fill-opacity="0.5" stroke="none"/>
+<path d="M8796 21466 L10843 21466 L10843 20957 L8796 20957 L8796 21466" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="9304" y1="20957" x2="9304" y2="21466" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="9817" y1="20957" x2="9817" y2="21466" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="10330" y1="20957" x2="10330" y2="21466" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<text y="20563.7" xml:space="preserve"><tspan x="18021 18354 19076 19326 19882 20326 20826 21326 21604 22048 22298 22798" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">(X Paddle 1)</tspan></text>
+<text y="21598.7" xml:space="preserve"><tspan x="18021 18354 19076 19326 19882 20326 20826 21326 21604 22048 22298 22798" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">(Y Paddle 1)</tspan></text>
+<text y="10388.5" xml:space="preserve"><tspan x="8643 9070.9 9620.9 10170.9 10598.8 10904.6 11210.4 11698.8 12248.8" font-size="1100" font-family="'Times New Roman', Times, 'Liberation Serif', serif">Joysticks</tspan></text>
+<text y="11691.7" xml:space="preserve"><tspan x="4611 5167 5723 6223 6723 7223" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">FF9200</tspan></text>
+<line x1="8706" y1="11734" x2="8706" y2="11734" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="8706" y="11226" width="2047" height="508" fill="#000" fill-opacity="0.5" stroke="none"/>
+<path d="M8706 11734 L10753 11734 L10753 11226 L8706 11226 L8706 11734" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="10753" y="11226" width="2048" height="508" fill="#000" fill-opacity="0.5" stroke="none"/>
+<path d="M10753 11734 L12801 11734 L12801 11226 L10753 11226 L10753 11734" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="9214" y1="11226" x2="9214" y2="11734" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="9727" y1="11226" x2="9727" y2="11734" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="10240" y1="11226" x2="10240" y2="11734" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="11262" y1="11226" x2="11262" y2="11734" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="11775" y1="11226" x2="11775" y2="11734" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="12288" y1="11226" x2="12288" y2="11734" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="14848" y="11226" width="2048" height="508" fill="#fff" stroke="none"/>
+<path d="M14848 11734 L16896 11734 L16896 11226 L14848 11226 L14848 11734" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="16383" y1="11226" x2="16383" y2="11734" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="15870" y1="11226" x2="15870" y2="11734" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="15357" y1="11226" x2="15357" y2="11734" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="12828" y="11226" width="2047" height="508" fill="#fff" stroke="none"/>
+<path d="M12828 11734 L14875 11734 L14875 11226 L12828 11226 L12828 11734" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="14290" y1="11235" x2="14290" y2="11743" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="13759" y1="11226" x2="13759" y2="11734" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="13264" y1="11217" x2="13264" y2="11725" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<text y="32453.5" xml:space="preserve"><tspan x="8688 9360.1 9665.9 10215.9 10765.9 11071.7 11346.7 12140.9 12690.9 13240.9 13515.9 13821.7 14096.7 14708.3 15196.7" font-size="1100" font-family="'Times New Roman', Times, 'Liberation Serif', serif">Light Gun / Pen</tspan></text>
+<text y="33895.7" xml:space="preserve"><tspan x="4611 5167 5723 6223 6723 7223" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">FF9220</tspan></text>
+<text y="34930.7" xml:space="preserve"><tspan x="4611 5167 5723 6223 6723 7223" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">FF9222</tspan></text>
+<text y="33895.7" xml:space="preserve"><tspan x="17931 18264 18986 19236 19792 20292 20681 20959 21237 21515 22015 22515" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">(X Position)</tspan></text>
+<text y="34930.7" xml:space="preserve"><tspan x="17931 18264 18986 19236 19792 20292 20681 20959 21237 21515 22015 22515" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">(Y Position)</tspan></text>
+<rect x="10753" y="33323" width="1022" height="508" fill="#000" fill-opacity="0.5" stroke="none"/>
+<path d="M10753 33831 L11775 33831 L11775 33323 L10753 33323 L10753 33831" fill="none" stroke="#000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="12801" y="33323" width="2047" height="508" fill="#fff" stroke="none"/>
+<path d="M12801 33831 L14848 33831 L14848 33323 L12801 33323 L12801 33831" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="13309" y1="33323" x2="13309" y2="33831" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="13822" y1="33323" x2="13822" y2="33831" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="14335" y1="33323" x2="14335" y2="33831" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="14848" y="33323" width="2048" height="508" fill="#fff" stroke="none"/>
+<path d="M14848 33831 L16896 33831 L16896 33323 L14848 33323 L14848 33831" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="15357" y1="33323" x2="15357" y2="33831" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="15870" y1="33323" x2="15870" y2="33831" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="16383" y1="33323" x2="16383" y2="33831" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="8706" y1="33831" x2="8706" y2="33831" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="8706" y="33323" width="2047" height="508" fill="#000" fill-opacity="0.5" stroke="none"/>
+<path d="M8706 33831 L10753 33831 L10753 33323 L8706 33323 L8706 33831" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="9214" y1="33323" x2="9214" y2="33831" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="9727" y1="33323" x2="9727" y2="33831" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="10240" y1="33323" x2="10240" y2="33831" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M10753 33831 L12801 33831 L12801 33323 L10753 33323 L10753 33831" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="11262" y1="33323" x2="11262" y2="33831" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="11775" y1="33323" x2="11775" y2="33831" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="12288" y1="33323" x2="12288" y2="33831" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="10753" y="34344" width="1022" height="513" fill="#000" fill-opacity="0.5" stroke="none"/>
+<path d="M10753 34857 L11775 34857 L11775 34344 L10753 34344 L10753 34857" fill="none" stroke="#000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="12801" y="34344" width="2047" height="513" fill="#fff" stroke="none"/>
+<path d="M12801 34857 L14848 34857 L14848 34344 L12801 34344 L12801 34857" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="13309" y1="34344" x2="13309" y2="34857" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="13822" y1="34344" x2="13822" y2="34857" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="14335" y1="34344" x2="14335" y2="34857" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="14848" y="34344" width="2048" height="513" fill="#fff" stroke="none"/>
+<path d="M14848 34857 L16896 34857 L16896 34344 L14848 34344 L14848 34857" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="15357" y1="34344" x2="15357" y2="34857" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="15870" y1="34344" x2="15870" y2="34857" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="16383" y1="34344" x2="16383" y2="34857" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="8706" y1="34857" x2="8706" y2="34857" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="8706" y="34344" width="2047" height="513" fill="#000" fill-opacity="0.5" stroke="none"/>
+<path d="M8706 34857 L10753 34857 L10753 34344 L8706 34344 L8706 34857" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="9214" y1="34344" x2="9214" y2="34857" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="9727" y1="34344" x2="9727" y2="34857" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="10240" y1="34344" x2="10240" y2="34857" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M10753 34857 L12801 34857 L12801 34344 L10753 34344 L10753 34857" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="11262" y1="34344" x2="11262" y2="34857" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="11775" y1="34344" x2="11775" y2="34857" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="12288" y1="34344" x2="12288" y2="34857" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<text y="12868.7" xml:space="preserve"><tspan x="4566 5122 5678 6178 6678 7178" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">FF9202</tspan></text>
+<rect x="12823" y="11226" width="2048" height="508" fill="#000" fill-opacity="0.5" stroke="none"/>
+<path d="M12823 11734 L14871 11734 L14871 11226 L12823 11226 L12823 11734" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="8661" y1="12780" x2="8661" y2="12780" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="8661" y="12267" width="2047" height="513" fill="#fff" stroke="none"/>
+<path d="M8661 12780 L10708 12780 L10708 12267 L8661 12267 L8661 12780" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="9169" y1="12267" x2="9169" y2="12780" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="9682" y1="12267" x2="9682" y2="12780" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="10195" y1="12267" x2="10195" y2="12780" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="10708" y1="12780" x2="10708" y2="12780" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="10708" y="12267" width="2048" height="513" fill="#fff" stroke="none"/>
+<path d="M10708 12780 L12756 12780 L12756 12267 L10708 12267 L10708 12780" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="11730" y1="12267" x2="11730" y2="12780" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="12243" y1="12267" x2="12243" y2="12780" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="12756" y1="12780" x2="12756" y2="12780" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="12756" y="12267" width="2047" height="513" fill="#fff" stroke="none"/>
+<path d="M12756 12780 L14803 12780 L14803 12267 L12756 12267 L12756 12780" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="13264" y1="12267" x2="13264" y2="12780" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="13777" y1="12267" x2="13777" y2="12780" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="14290" y1="12267" x2="14290" y2="12780" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="14803" y1="12780" x2="14803" y2="12780" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<rect x="14803" y="12267" width="2048" height="513" fill="#fff" stroke="none"/>
+<path d="M14803 12780 L16851 12780 L16851 12267 L14803 12267 L14803 12780" fill="none" stroke="#000" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="15312" y1="12267" x2="15312" y2="12780" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="15825" y1="12267" x2="15825" y2="12780" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="16338" y1="12267" x2="16338" y2="12780" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<line x1="11316" y1="12303" x2="11316" y2="12816" fill="none" stroke="#000" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<g><rect x="8691" y="22235" width="24882" height="6312" fill="#fff" stroke="none"/><text y="23042.7" xml:space="preserve"><tspan x="8691 9413 9913 10357 10607 11107 11551 11829 12162 12412 12912 13245 13495 13995 14439 14939 15439 15717 16161 16550 16800 17244 17688 18188 18438 18938 19382 19632 20132 20410 20910 21410 21910 22354 22854 23104 23382 23882 24160 24660 24910 25299 25799 26299 26688 26966 27244 27688 28188 28438 28938 29188 29521 30077 30521 31021 31521 31799" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">One pair of paddles can be plugged into Joystick 0 (Paddle</tspan></text><text y="24042.7" xml:space="preserve"><tspan x="8691 9191 9524 9774 10024 10274 10524 11246 11496 11885 12329 12773 13273 13773 14273 14523 14912 15356 15634 15884 16328 16772 17272 17522 18022 18466 18716 19216 19494 19994 20494 20994 21438 21938 22188 22466 22966 23244 23744 23994 24383 24883 25383 25772 26050 26328 26772 27272 27522 28022 28272 28605 29161 29605 30105 30605 30883 31327 31577 32077 32410" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">0).   A second set can be plugged into Joystick 1 (Paddle 1).</tspan></text><text y="25042.7" xml:space="preserve"><tspan x="8691 9302 9802 10246 10496 10940 11440 11773 12106 12550 13050 13328 13578 14078 14578 14967 15245 15523 15801 16301 16801 17051 17551 17884 18134 18578 19022 19466 19966 20216 20716 21049 21299 21577 22077 22521 22771 23104 23604 24104 24437 24687 25187 25631 26131 26631 26909 27353 27742 27992 28270 28659 28909 29242 29686 30186 30686 31019 31297 31741 32241 32491 32935" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">The current position of each of the four paddles is reported at</tspan></text><text y="26042.7" xml:space="preserve"><tspan x="8691 8969 9469 9913 10302 10746 10996 11274 11774 12218 12662 12940 13218 13718 14218 14607 14857 15107 15357 15968 16468 16912 17162 17495 17773 18106 18550 18800 19300 19800 20078 20356 20856 21356 21745 21995 22439 22772 23216 23466 23744 24244 24688 24938 25327 25771 26549 26993 27243 27687 28076 28326 28659 29159 29492 29742 30020 30520" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">these locations.  The fire buttons are the same as for the</tspan></text><text y="27042.7" xml:space="preserve"><tspan x="8691 9024 9468 9857 10357 10801 11245 11523 11801 12301 12745 12995 13273 13773 14273 14662 14940 15218 15662 16162 16412 16662 16912 17523 18023 18467 18717 18995 19328 19606 20106 20606 21050 21383 21772 22022 22355 22855 23188 23438 23716 24216 24660 24910 25410 25854 26354 26854 27132 27576 27965 28215 28659 28992 29436 29686 30019 30463 30907 31407 31657 32101" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">respective joystick.  The triggers for the paddles are read as</tspan></text><text y="28042.7" xml:space="preserve"><tspan x="8691 9191 9469 9747 10136 10386 10886 11386 11830 12080 12524 13024 13524 13774 14052 14774 15274 15524 16024 16357 16607 17163 17719 18219 18719 19219" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">bits one and two of FF9202</tspan></text></g>
+<g><rect x="8659" y="35760" width="24880" height="3250" fill="#fff" stroke="none"/><text y="36567.7" xml:space="preserve"><tspan x="8659 9381 9631 9909 10187 10687 11187 11465 11715 12215 12715 13215 13465 13965 14298 14548 15048 15492 15992 16242 16686 17130 17630 17880 18380 18824 19074 19574 19852 20352 20852 21352 21796 22296 22546 22824 23324 23602 24102 24352 24741 25241 25741 26130 26408 26686 27130 27630 27880 28380 28630 28880 29130 29741 30241" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">A light gun or pen can be plugged into Joystick 0.  The</tspan></text><text y="37567.7" xml:space="preserve"><tspan x="8659 9103 9603 9936 10269 10713 11213 11491 11741 12241 12741 13130 13408 13686 13964 14464 14964 15214 15492 15992 16436 16714 16964 17242 17742 18186 18436 18936 19436 19936 20186 20686 21019 21269 21769 22213 22713 22963 23241 23630 23880 24380 24880 25158 25658 25936 26214 26714 27214 27464 27742 28242 28492 28770 29159 29409 29742 30186 30686 31186 31519 31797 32241" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">current position that the gun or pen is pointing to is reported</tspan></text><text y="38567.7" xml:space="preserve"><tspan x="8659 9159 9659 9909 10187 10687 11131 11520 11964 12214 12547 12991 13491 13769 14158 14436 14880 15213 15602" font-size="1000" font-family="'Times New Roman', Times, 'Liberation Serif', serif">by these registers.</tspan></text></g>
+<g><rect x="15770" y="43394" width="16888" height="3914" fill="#fff" stroke="none"/><text y="44282.5" xml:space="preserve"><tspan x="15770 16442.1 16992.1 17297.9 17725.8 18000.8 18550.8 18856.6 19406.6 19956.6 20506.6 20812.4 21087.4 21393.2 21821.1 22096.1 22462.4 23012.4 23378.7 23653.7 24203.7 24753.7 25120 25425.8 25853.7 26128.7 26678.7 26953.7 27442.1 27992.1 28542.1 28817.1 29367.1" font-size="1100" font-family="'Times New Roman', Times, 'Liberation Serif', serif">This pinout is for ports 0 and 1.</tspan></text><text y="45382.5" xml:space="preserve"><tspan x="15770 16381.6 16931.6 17297.9 17603.7 18031.6 18306.6 18856.6 19162.4 19712.4 19987.4 20475.8 20842.1 21330.5 21605.5 22155.5 22705.5 22980.5 23286.3 23836.3 24324.7 24599.7 25149.7 25455.5 26005.5 26493.9" font-size="1100" font-family="'Times New Roman', Times, 'Liberation Serif', serif">Ports 2/3 are on the other</tspan></text><text y="46482.5" xml:space="preserve"><tspan x="15770 16564.2 17297.9 17847.9 18397.9 18672.9 19161.3 19711.3 20261.3 20811.3 21299.7 21788.1 22093.9 22643.9 23010.2" font-size="1100" font-family="'Times New Roman', Times, 'Liberation Serif', serif">DB15 connector.</tspan></text></g>
+<g><rect x="5916" y="49907" width="7384" height="6220" fill="#fff" stroke="none"/><text y="50876.2" xml:space="preserve"><tspan x="5916 6249.6 6583.2 7250.4 7584 7917.6 8251.2 9117.6 9918 10251.6" font-size="1200" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">  1   UP 0</tspan></text><text y="52076.2" xml:space="preserve"><tspan x="5916 6249.6 6583.2 7250.4 7584 7917.6 8251.2 9117.6 9984 10317.6" font-size="1200" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">  2   DN 0</tspan></text><text y="53276.2" xml:space="preserve"><tspan x="5916 6249.6 6583.2 7250.4 7584 7917.6 8251.2 8918.4 9651.6 9985.2" font-size="1200" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">  3   LT 0</tspan></text><text y="54476.2" xml:space="preserve"><tspan x="5916 6249.6 6583.2 7250.4 7584 7917.6 8251.2 9117.6 9850.8 10184.4" font-size="1200" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">  4   RT 0</tspan></text><text y="55676.2" xml:space="preserve"><tspan x="5916 6249.6 6583.2 7250.4 7584 7917.6 8251.2 9051.6 9852 10718.4 11052 11719.2" font-size="1200" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">  5   PAD 0Y</tspan></text></g>
+<g><rect x="14686" y="49907" width="7384" height="6220" fill="#fff" stroke="none"/><text y="50876.2" xml:space="preserve"><tspan x="14686 15019.6 15353.2 16020.4 16354 16687.6 17021.2 17754.4 18088 18954.4 19754.8 20088.4" font-size="1200" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">  6   FIRE 0</tspan></text><text y="52076.2" xml:space="preserve"><tspan x="14686 15019.6 15353.2 16020.4 16354 16687.6 17021.2 17821.6 18688" font-size="1200" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">  7   VCC</tspan></text><text y="53276.2" xml:space="preserve"><tspan x="14686 15019.6 15353.2 16020.4 16354 16687.6 17021.2 17887.6" font-size="1200" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">  8   NC</tspan></text><text y="54476.2" xml:space="preserve"><tspan x="14686 15019.6 15353.2 16020.4 16354 16687.6 17021.2 17954.8 18821.2" font-size="1200" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">  9   GND</tspan></text><text y="55676.2" xml:space="preserve"><tspan x="14686 15353.2 16020.4 16354 16687.6 17021.2 17754.4 18088 18954.4 19754.8 20088.4" font-size="1200" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">10   FIRE 1</tspan></text></g>
+<g><rect x="23604" y="49907" width="7384" height="6220" fill="#fff" stroke="none"/><text y="50876.2" xml:space="preserve"><tspan x="23604 24271.2 24938.4 25272 25605.6 25939.2 26805.6 27606 27939.6" font-size="1200" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">11   UP 1</tspan></text><text y="52076.2" xml:space="preserve"><tspan x="23604 24271.2 24938.4 25272 25605.6 25939.2 26805.6 27672 28005.6" font-size="1200" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">12   DN 1</tspan></text><text y="53276.2" xml:space="preserve"><tspan x="23604 24271.2 24938.4 25272 25605.6 25939.2 26606.4 27339.6 27673.2" font-size="1200" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">13   LT 1</tspan></text><text y="54476.2" xml:space="preserve"><tspan x="23604 24271.2 24938.4 25272 25605.6 25939.2 26805.6 27538.8 27872.4" font-size="1200" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">14   RT 1</tspan></text><text y="55676.2" xml:space="preserve"><tspan x="23604 24271.2 24938.4 25272 25605.6 25939.2 26739.6 27540 28406.4 28740 29407.2" font-size="1200" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">15   PAD 0X</tspan></text></g>
+<line x1="6352" y1="41033" x2="31391" y2="41033" fill="none" stroke="#000" stroke-width="200" stroke-linecap="butt" stroke-linejoin="round"/>
+</svg>

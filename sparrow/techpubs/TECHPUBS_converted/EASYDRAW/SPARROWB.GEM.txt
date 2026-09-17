@@ -1,0 +1,211 @@
+File: EASYDRAW/SPARROWB.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-5641,-7644)-(4550,6651)
+Page size: 279.4 x 431.8 mm
+Coordinate window: lower-left (-5005,7735), upper-right (5005,-7735); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-5641,-7657)-(4445,6651)
+Items: 1042 (8016 words)
+Objects: polyline 121, fill area 1, bar 22, ellipse 3, elliptical arc 4, justified text 116
+Other records (escapes, application data): write_meta 10 x30, write_meta 150 x1, write_meta 151 x30, write_meta 152 x84, write_meta 153 x84, write_meta 154 x39, write_meta 155 x1, write_meta 157 x2, write_meta 158 x1, write_meta 160 x1, write_meta 80 x125, write_meta 81 x125
+Text strings: 116
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+  -3095   -2345  [font 2 10pt bold]  MC6850
+  -3095   -2215  [font 2 10pt bold]  Keyboard
+  -3095   -2085  [font 2 10pt bold]  Controller
+
+  -3095    -915  [font 2 10pt bold]  DS1287
+  -3095    -785  [font 2 10pt bold]  Real-Time
+  -3095    -655  [font 2 10pt bold]  Clock
+
+  -3095   -3665  [font 2 10pt bold]  System
+  -3095   -3535  [font 2 10pt bold]  ROM
+
+  -2095   -6915  [font 2 10pt bold]  Data Bus 32
+
+  -2085   -6555  [font 2 10pt bold]  Address Bus 24
+
+  -2095   -6185  [font 2 10pt bold]  Control Bus
+
+  -3455   -6555  [font 2 10pt bold]  MC68030
+  -3455   -6425  [font 2 10pt bold]  Microprocessor
+
+  -2185   -5365  [font 2 10pt bold]  Data 32
+
+  -2185   -5005  [font 2 10pt bold]  Address 4
+
+  -2275   -3915  [font 2 10pt bold]  Data 16
+
+  -2275   -3545  [font 2 10pt bold]  Address 16
+
+  -2275   -3185  [font 2 10pt bold]  Control
+
+  -2275   -2545  [font 2 10pt bold]  Data 8
+
+  -2275   -2185  [font 2 10pt bold]  Address 2
+
+  -2275   -1825  [font 2 10pt bold]  Control
+
+  -4275   -2275  [font 2 10pt bold]  Keyboard
+
+      5   -4965  [font 2 10pt bold]  VIDEL
+      5   -4835  [font 2 10pt bold]  IC
+
+  -3455   -5185  [font 2 10pt bold]  MC68881
+  -3455   -5055  [font 2 10pt bold]  MC68882
+  -3455   -4925  [font 2 10pt bold]  Optional
+  -3455   -4795  [font 2 10pt bold]  Coprocessor
+
+  -2455   -7475  [font 2 18pt bold]  Overall System Block Diagram
+
+   -815   -5555  [font 2 10pt bold]  Data 16
+
+   -815   -5185  [font 2 10pt bold]  Address 10
+
+   -815   -4825  [font 2 10pt bold]  Control
+
+   1455   -5365  [font 2 10pt bold]  VIideo
+   1455   -5235  [font 2 10pt bold]  DAC
+
+    815   -5555  [font 2 10pt bold]  Red 6
+
+    815   -5285  [font 2 10pt bold]  Blue 6
+
+    815   -5005  [font 2 10pt bold]  Green 6
+
+   2915   -5275  [font 2 10pt bold]  ST or
+   2915   -5145  [font 2 10pt bold]  VGA
+   2915   -5015  [font 2 10pt bold]  Monitor
+
+   2095   -5275  [font 2 10pt bold]  I/F Cable 
+
+    815   -6915  [font 2 10pt bold]  Data Bus 32
+
+    815   -6555  [font 2 10pt bold]  Address 10
+
+    815   -6185  [font 2 10pt bold]  Control
+
+     -5    5845  [font 2 12pt bold]  8530
+     -5    6005  [font 2 12pt bold]  SCC
+
+    815   -4735  [font 2 10pt bold]  SYNC
+
+    815   -4455  [font 2 10pt bold]  Color
+
+   2455   -4455  [font 2 10pt bold]  1377
+
+   3095   -4455  [font 2 10pt bold]  Modulator
+
+   4275   -4455  [font 2 10pt bold]  TV
+
+  -2185   -1095  [font 2 10pt bold]  Data 8
+
+  -2185    -815  [font 2 10pt bold]  Control
+
+     95    -815  [font 2 10pt bold]  SDMA
+
+   -815   -1275  [font 2 10pt bold]  Data 15
+
+   -815    -915  [font 2 10pt bold]  Address 23
+
+   -815    -545  [font 2 10pt bold]  Control
+
+      5   -2185  [font 2 10pt bold]  YM-3439
+      5   -2055  [font 2 10pt bold]  PSG
+
+   -815   -2275  [font 2 10pt bold]  Control
+
+   -815   -2635  [font 2 10pt bold]  Data 8
+
+    815   -2005  [font 2 10pt bold]  Printer
+
+      5   -3645  [font 2 10pt bold]  MC68901
+      5   -3515  [font 2 10pt bold]  MFP
+
+    815   -3825  [font 2 10pt bold]  RS232
+
+   -815   -3365  [font 2 10pt bold]  Control
+
+   -815   -3645  [font 2 10pt bold]  Address 5
+
+   -815   -4005  [font 2 10pt bold]  Data 8
+
+   1005   -3545  [font 2 10pt bold]  DTR
+
+   1005   -3275  [font 2 10pt bold]  RTS
+
+   1635   -3455  [font 2 10pt bold]  Serial Port
+
+      5   -6555  [font 2 10pt bold]  COMBEL
+      5   -6425  [font 2 10pt bold]  IC
+
+   -815    4365  [font 2 10pt bold]  Data 8
+
+   -815    4645  [font 2 10pt bold]  Address 2
+
+   -815    4915  [font 2 10pt bold]  Control
+
+      5    4365  [font 2 10pt bold]  MC6550
+      5    4495  [font 2 10pt bold]  MIDI
+      5    4625  [font 2 10pt bold]  Controller
+
+    815    4185  [font 2 10pt bold]  MIDI Out
+
+    815    4455  [font 2 10pt bold]  MIDI In
+
+   3095   -1095  [font 2 10pt bold]  Internal Speaker
+
+   2005   -1075  [font 2 10pt bold]  AMP
+
+   1275   -1185  [font 2 10pt bold]  MONO
+
+    815   -1725  [font 2 10pt bold]  MONO
+
+   2855    -595  [font 2 10pt bold]  Microphone
+
+   2865    -295  [font 2 10pt bold]  Headphones
+
+   1725    -725  [font 2 10pt bold]  Stereo
+
+   1725    -455  [font 2 10pt bold]  Stereo
+
+   1735   -6835  [font 2 10pt bold]  Memory
+   1735   -6705  [font 2 10pt bold]  Daughter
+   1735   -6575  [font 2 10pt bold]  Card
+   1735   -6445  [font 2 10pt bold]  1/4/14
+   1735   -6315  [font 2 10pt bold]  MegaBytes
+
+   -815     905  [font 2 10pt bold]  Control
+
+   -815     635  [font 2 10pt bold]  Address 3
+
+   -815     365  [font 2 10pt bold]  Data 8
+
+      5     585  [font 2 10pt bold]  56001
+      5     715  [font 2 10pt bold]  Digital
+      5     845  [font 2 10pt bold]  Signal
+      5     975  [font 2 10pt bold]  Processor
+
+   1635    1275  [font 2 10pt bold]  32K SRAM
+
+    815    1275  [font 2 10pt bold]  Address 16
+
+    815    1005  [font 2 10pt bold]  Data 24
+
+   3275     635  [font 2 10pt bold]  DSP Connector
+
+    815     725  [font 2 10pt bold]  SSI 8-Bits
+
+   1365     185  [font 2 10pt bold]  Microwire Interface
+
+  -3915    2845  [font 2 12pt bold]  AJAX
+  -3915    3005  [font 2 12pt bold]  Floppy
+  -3915    3165  [font 2 12pt bold]  Controller
+
+  -4545     835  [font 2 12pt bold]  5380
+  -4545     995  [font 2 12pt bold]  SCSI
+  -4545    1155  [font 2 12pt bold]  Controller
+
+  -3185     905  [font 2 10pt bold]  External 
+  -3185    1035  [font 2 10pt bold]  SCSI
+  -3185    1165  [font 2 10pt bold]  Disk

@@ -1,0 +1,27 @@
+DynaCADD 2.0 entity file (.DPT)
+Source: DYNACADD/PARTS/F030/F030ASM3.DPT (222323 bytes)
+Record stream: 3466 records, ends at offset 0x36473 with FFFF terminator
+Drawing settings from: F030ASM3.DWG
+Sheet: width 17, height 11, scale 1
+Units: not recorded in a field identified so far; coordinates are listed as stored
+Entities: 3466 total (LINE 2056, CIRCLE 9, ARC 1379, TEXT 13, SOLID 9)
+Extents: x 1.5695 .. 13.272, y 0.9501 .. 10.6385 (size 11.7025 x 9.6883)
+Layers used: 1 "L1" (3466)
+Line styles used: 0 "CONTINUOUS" (3428), 1 "HIDDEN" (38)
+Colour indices used: 1 (1), 7 (3465)
+Groups (unnamed, numbered; 0 = not grouped): 11 (3466)
+
+Text strings (13), in file order; x,y = insertion point:
+  x=6.575      y=9.1732     h=0.1897  w=0.148   angle=0      font=LEROY_R  layer=L1       "2PLCS"
+  x=6.84       y=9.6151     h=0.1897  w=0.148   angle=0      font=LEROY_R  layer=L1       "80"
+  x=7.4528     y=8.228      h=0.1897  w=0.148   angle=0      font=LEROY_R  layer=L1       "3PLCS"
+  x=10.0829    y=1.8132     h=0.1897  w=0.148   angle=0      font=LEROY_R  layer=L1       "3PLCS"
+  x=1.5695     y=5.1689     h=0.1897  w=0.148   angle=0      font=LEROY_R  layer=L1       " PCBA SHEILD ASSY"
+  x=4.6002     y=8.7886     h=0.1897  w=0.148   angle=0      font=LEROY_R  layer=L1       "90"
+  x=7.4755     y=8.7484     h=0.1897  w=0.148   angle=0      font=LEROY_R  layer=L1       "140"
+  x=8.6292     y=6.9481     h=0.1897  w=0.148   angle=0      font=LEROY_R  layer=L1       "100"
+  x=11.6169    y=8.6407     h=0.1897  w=0.148   angle=0      font=LEROY_R  layer=L1       "130"
+  x=10.7915    y=10.2204    h=0.1897  w=0.148   angle=0      font=LEROY_R  layer=L1       "120"
+  x=12.7225    y=5.789      h=0.1897  w=0.148   angle=0      font=LEROY_R  layer=L1       "110  "
+  x=9.4525     y=1.7891     h=0.1897  w=0.148   angle=0      font=LEROY_R  layer=L1       "150"
+  x=3.6023     y=5.7155     h=0.1897  w=0.148   angle=0      font=LEROY_R  layer=L1       "REF"

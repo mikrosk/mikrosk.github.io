@@ -1,0 +1,10 @@
+DynaCADD 2.0 drawing settings file (.DWG)
+Source: DYNACADD/PARTS/STBOOK/TOP.DWG (21262 bytes)
+Holds no entity geometry. The drawing content is in TOP.DPT (0 entities, 0 text strings); see TOP.DPT.txt and TOP.DPT.svg.
+Sheet: width 34, height 22, scale 1, origin (0, 0)
+Saved view window: 35.6245 x 27.7565
+Units: not recorded in a field identified so far
+Global line style scale: 1
+Named layers: none
+Line style table: 0 "CONTINUOUS" scale 1, 1 "HIDDEN" scale 0.2, 2 "CENTER" scale 1.25, 3 "PHANTOM" scale 1.25, 4 "STITCH" scale 0.5, 5 "DASHED" scale 1, 6 "Undefined Style" scale 1, 7 "Undefined Style" scale 1, 8 "Undefined Style" scale 1, 9 "Undefined Style" scale 1, 10 "Undefined Style" scale 1, 11 "Undefined Style" scale 1, 12 "Undefined Style" scale 1, 13 "Undefined Style" scale 1, 14 "Undefined Style" scale 1, 15 "Undefined Style" scale 1, 16 "Undefined Style" scale 1, 17 "Undefined Style" scale 1, 18 "Undefined Style" scale 1, 19 "Undefined Style" scale 1, 20 "Undefined Style" scale 1, 21 "Undefined Style" scale 1, 22 "Undefined Style" scale 1, 23 "Undefined Style" scale 1, 24 "Undefined Style" scale 1, 25 "Undefined Style" scale 1, 26 "Undefined Style" scale 1, 27 "Undefined Style" scale 1, 28 "Undefined Style" scale 1, 29 "Undefined Style" scale 1, 30 "Undefined Style" scale 1, 31 "Undefined Style" scale 1, 32 "Undefined Style" scale 1, 33 "Undefined Style" scale 1, 34 "Undefined Style" scale 1, 35 "Undefined Style" scale 1, 36 "Undefined Style" scale 1, 37 "Undefined Style" scale 1, 38 "Undefined Style" scale 1, 39 "Undefined Style" scale 1, 40 "Undefined Style" scale 1, 41 "Undefined Style" scale 1, 42 "Undefined Style" scale 1, 43 "Undefined Style" scale 1, 44 "Undefined Style" scale 1, 45 "Undefined Style" scale 1, 46 "Undefined Style" scale 1, 47 "Undefined Style" scale 1, 48 "Undefined Style" scale 1, 49 "Undefined Style" scale 1, 50 "Undefined Style" scale 1, 51 "Undefined Style" scale 1, 52 "Undefined Style" scale 1, 53 "Undefined Style" scale 1, 54 "Undefined Style" scale 1, 55 "Undefined Style" scale 1, 56 "Undefined Style" scale 1, 57 "Undefined Style" scale 1
+Construction planes: Top, Front, Right, Bottom, Rear, Left, Iso

@@ -1,0 +1,579 @@
+                       Sparrow DMA ASIC Description
+
+     This chip provides three channels of DMA for the Atari Sparrow Computer. The ACSI DMA channel from the ST product line is fully contained and has been modified slightly to accomodate a 5380 SCSI controller as well as the 1772 FDC. A record and playback DMA channel for digital sound data are also contained in this chip. The playback channel is compatible with the existing eight bit stereo and mono modes from the STE and TT products and has sixteen bit stereo added.
+
+
+Pin List
+QFP pin# (PGA pin#) Signal
+
+25 (N2)  A1
+24 (L3)  A2
+23 (M2)  A3
+21 (M1)  A4
+20 (L2)  A5
+19 (L1)  A6
+18 (K2)  A7
+17 (K1)  A8
+16 (J3)  A9
+15 (H1)  A10
+14 (G1)  A11
+13 (G3)  A12
+12 (G2)  A13
+11 (E1)  A14
+10 (F2)  A15
+8  (D1)  A16
+7  (E2)  A17
+6  (C1)  A18
+5  (E3)  A19
+4  (D2)  A20
+3  (B1)  A21
+2  (C2)  A22
+119 (B2) A23
+26 (P1)  R/W
+27 (M3)  UDS_
+28 (N3)  LDS_
+29 (P2)  AS_
+31 (N4)  BCLK
+32 (P3)  DTACK_
+33 (R2)  BERR_
+34 (P4)  BR_
+35 (N5)  BGI_
+37 (P5)  BGO_
+38 (R4)  BGACK_
+39 (N6)  RESET_
+40 (P6)  UWD
+41 (R5)  UWC
+42 (P7)  UWEN_
+43 (N7)  SMCLK
+44 (R7)  FSAMP
+47 (R10) RCHAN
+48 (P10) RSDAT
+49 (R11) RSDCLK
+50 (P11) RSDEN_
+51 (R12) PCHAN
+52 (R13) PSDAT
+53 (P12) PSDCLK
+55 (P13) PMONEN_
+56 (R14) PSDEN_
+57 (N12) SINT
+58 (N13) SCNT
+59 (P14) DSKIRQ_
+60 (R15) TEST
+62 (N14) FDINT
+63 (P15) HDINT_
+64 (M14) FRQ
+65 (L13) FCS_
+66 (N15) ACK_
+67 (L14) HRQ
+68 (M15) HCS_
+69 (K13) CD0
+71 (L15) CD1
+72 (J14) CD2
+73 (J13) CD3
+74 (K15) CD4
+75 (J15) CD5
+76 (H14) CD6
+77 (H13) CD7
+78 (G15) CA0
+80 (E14) CA1
+81 (D15) CA2
+82 (C15) CRW_
+83 (D14) CRW
+84 (E13) DISKCHNG
+85 (C14) MODE1
+86 (B15) MODE2
+87  (D13) CLK32I
+88  (C13) CLK32O
+89  (B14) CLK8
+92  (B13) FCCLK
+93  (A14) CLK2
+94  (B12) MDET1
+95  (C11) MDET2
+96  (A13) D0
+97  (B11) D1
+98  (A12) D2
+99  (C10) D3
+100 (B10) D4
+101 (A11) D5
+103 (C9)  D6
+104 (A9)  D7
+115 (B3)  D8
+114 (C5)  D9
+113 (B4)  D10
+112 (A3)  D11
+111 (A4)  D12
+110 (B5)  D13
+108 (B6)  D14
+107 (A6)  D15
+116 (A2)  FC0
+117 (C4)  FC1
+118 (C3)  FC2
+Power Supply Pins
+
+VSS:
+9   (F3)
+30  (R1)
+45  (R8)
+54  (N11)
+70  (K14)
+90  (A15)
+102 (B9)
+105 (A8)
+120 (A1)
+VDD:
+1   (D3)
+22  (N1)
+36  (R3)
+46  (N9)
+61  (M13)
+79  (F14)
+91  (C12)
+106 (C7)
+109 (A5)
+Pin Description
+
+FC0-FC2   BiDir     68000 bus function code. These lines are normaly inputs. They become outputs during DM A when the 68000 bus is granted. Only values of 5 and 6 (supervisor program and data) will allow IO access. A value of 5 is output during DMA.
+
+A1-A23    BiDir     68000 bus address. These lines are normaly inputs. They become outputs during DMA when the 68000 bus is granted. They are used to select registers during IO and to address memory during DMA.
+
+D0-D15    BiDir     68000 bus data. These lines are inputs for IO writes and DMA reads and outputs for IO reads and DMA writes. They are used for data transfer between the chip and the 68000 bus.
+
+AS_       BiDir     68000 bus address strobe. This line is an input during IO and an output during DMA. It is used to qualify the value on the address bus.
+
+LDS_      BiDir     68000 bus lower data strobe. This line is an input during IO and an output during DMA. It is used to qualify the data on data lines D0- D7.
+
+UDS_      BiDir     68000 bus upper data strobe. This line is an input during IO and an output during DMA. It is used to qualify the data on data line D8- D15.
+
+R/W       BiDir     68000 bus read write. This line is an input during IO and indicates a read of the chip when high and a write to the chip when low. This line is an output during DMA and indicates a read of the bus when high and a write to the bus when low.
+
+DTACK_    BiDir     68000 bus data acknowledge. This line is an output during IO and indicates to the 68000 bus master that the current cycle can be terminated. During DMA this line is input to determine when to terminate a DMA cycle.
+
+BERR_     Input     This signal is used to terminate a DMA cycle when the system detects a bus error. It is provided to prevent system lockup when a bus error occurs during DMA.
+
+BR_       OD output This output is driven low when the 68000 bus is needed to perform DMA cycles.
+
+BGI_      Input     A low on this input indicates that the 68000 bus is granted and that the chip can assume control of the bus at the completion of the current cycle, if one is in progress, or imediately.
+
+BGO_      Output    This output is provided to support a daisy chain on the bus grant line to arbitrate multiple bus requests. When the chip is not requesting the bus, this output is driven to match the BGI_ input else it is driven high (inactive).
+
+
+BGACK_    TS out/in This output is driven low when the chip assumes the bus after the request grant handshake. When DMA operations have been completed and the chip releases the bus, this line is driven high then tri-stated.
+
+RESET_    Input     A low on this input resets the chip and clears any current operational mode.
+
+UWD       Output    This output is the data signal of the three wire MicroWire bus.
+
+UWC       Output    This output is the clock signal of the three wire MicroWire bus.
+
+UWEN_     Output    This output is the enable signal of the three wire MicroWire bus.
+
+SMCLK     Input     This input is the master timing clock for the sound DMA channel.
+
+FSAMP     Output    This output is the sound channel master clock divided by the currently selected prescale.
+
+RCHAN     Input     This input is the channel select signal of the four wire sound data input bus.
+
+RSDAT     Input     This input is the serial data signal of the four wire sound data input bus.
+
+RSDCLK    Input     This input is the data clock signal of the four wire sound data input bus.
+
+RSDEN_    Input     This input is the enable signal of the four wire sound data input bus.
+
+PCHAN     Output    This input is the channel select signal of the four wire sound data output bus.
+
+PSDAT     Output    This output is the serial data signal of the four wire sound data output bus.
+
+PSDCLK    Output    This output is the data clock signal of the four wire sound data output bus.
+
+PSDEN_    Output    This output is the enable signal of the four wire sound data output bus.
+
+PMONEN_   Output    This output is the alternate enable signal for selecting output sound data samples for monitoring.
+
+SINT      Output    This output is low when sound DMA is active and high otherwise. It will make a high to low transition at the beginning of a frame of sound data and a low to high transition at the end of the frame. This signal can be programmed to come from either the record or play channels.
+
+SCNT      Output    This output is similar to SINT but is wider.
+
+TEST      Input     When this input is high, the ACSI sector count can be read in the high byte of the ACSI status register. Also a low to high transition on this signal increments the sound DMA address counters and the ACSI sector prescale and count. This pin should be tied low for normal system operation.
+
+DSKIRQ_   OD output FDINT high or HDINT_ low make this output low.
+
+FDINT     Input     This input affects DSKIRQ_ only.
+
+HDINT     Input     This input affects DSKIRQ_ only.
+
+FRQ       Input     Active high DMA request from the FDC.
+
+FCS_      Output    Active low chip select to the FDC.
+
+HRQ       Input     Active high DMA request from the SCSI controller.
+
+HCS_      Output    Active low chip select to the SCSI controller.
+
+ACK_      Output    Active low DMA acknowledge to the SCSI controller.
+
+CD0-CD7   BiDir     Data bus for the FDC and SCSI controller.
+
+CA0-CA2   Output    Register address to the FDC and SCSI controller. Used to select FDC or SCSI controller registers during IO.
+
+CRW       Output    A high means transfer from the FDC or SCSI controller. A low means transfer to the FDC or SCSI controller.
+
+CRW_      Output    The inverse of CRW
+
+DISKCHNG  Input     Status input for the floppy density select register.
+
+MODE0-MODE1 Outputs Status outputs for the floppy density select register.
+
+MDET0-MDET1 Inputs  Status inputs for the floppy density select register.
+
+CLK32I    Input     Feedback for the 32 Mhz oscillator.
+
+CLK32O    Output    32 Mhz oscillator output.
+
+CLK8      Output    Freerunning 32 Mhz clock divided by four.
+
+CLK2      Output    Freerunning 32 Mhz clock divided by 16.
+
+FCCLK     Output    32 Mhz clock divided by 1, 2, or 4 as selected by the floppy density select register.
+
+Hiearchical Map and Description
+
+SDMA      The 10 page schematic SDMA is the highest level of the chip. Page 1 contains the address IO buffers. Page 2 contains the data IO buffers and data selector (DMUX). Page 3 contains several other IO buffers.Page 4 is the reference to the address decoder (DECODER). Page 5 contains the MicroWire interface (UWIRE and associated circuitry). Page 6 contains the bus interface circuitry for DMA (BCYLGEN, ARBIT, and AOUTMUX). Page 7 is the reference to the ACSI DMA channel. Page 8 is the IO buffers for the ACSI channel data. Page 9 is the refernce to the sound DMA channel. Page 10 contains the 32 Mhz clock divider chain, the pulse stretcher circuits for SINT and SCNT, and the disk interrupt gate.
+
+DECODER   The 6 page schematic DECODER is the address decoding for the chip. This circuit decodes the internal register selects, data path, and IO acknowledges.
+
+DMUX      This circuit is a 1 of 3 by 16 data selector with a fixed ID byte. It is used to select from internal data during IO reads.
+
+ARBIT     This state machine controls each DMA channels arbitration for the 68000 bus.
+
+BCYLGEN   This state machine generates the bus control strobes during DMA.
+
+
+AOUTMUX   This 1 of 3 by 23 selector with imbedded latches is used to select the current DMA channels address for output during DMA.
+
+UWIRE     This shift register generates the 3 wire MicroWire serial interface.
+
+ACSIDMA   This collecton of circuits form the ACSI DMA channel.
+
+ACSI      These 12 pages of schematic are the ST DMA (ST-4140) chip converted to an internal cell.
+
+THRUCNTL  This state machine generates IO control for the ACSI cell.
+
+DMACNTL   This state machine generates DMA control for the ACSI cell.
+
+MFIFO     A 16X8 bidirectional FIFO.
+
+ADCNTR    23 bit counter for address generation during ACSI DMA.
+
+ACSICNTL  Small circuit to interface with ARBIT from ACSI control logic.
+
+DOUTMUX   1 of 3 by 16/8 selector for data selection.
+
+RGLH16    16 LH latches.
+
+RGMUX16   16 MX21 selectors.
+
+FDSELRG   Floppy density select register. Contains the register and circuit for generating FCCLK.
+
+SNDCHAN   Three pages integrate the playback and record sound DMA channels. Page 1 contains the part of the sound DMA control register which selects the playback or record channel source for the SINT and SCNT signals. Pages two and three reference the Playback and Record channels.
+
+SDOUTMUX  Data selector for the sound channel. Also contains buffers to drive otherwise tri-stated data lines.
+
+SNDTOP    23 bit register to hold the address of the top of the sound frame.
+
+SNDCOMP   23 bit comparitor to detect when the sound address equals the top of the frame.
+
+SNDCNTR   23 bit counter to hold the sound address.
+
+SNDBASE   23 bit register to hold the base address of the sound frame.
+
+PLAYMREG  Play mode register.
+
+SAMPTGEN  This sample rate timing generater contains the logic to divide the master clock providing the sample rate clock (FSAMP) and other signals controlling the playback data output.
+
+F16X16    A 16 x 16 bit FIFO for sound data.
+
+SNDSTEER  A circuit to convert the data from 8 bit stereo or mono to 16 bit stereo for output.
+
+SDOUT     A shift register to serialize play data for output.
+
+SDIN      A shift register to receive the serial record data.
+
+PLAYCNTL  A small circuit to interface the ARBIT logic to the playback channel.
+
+RECCNTL   A small circuit to interface the ARBIT logic to the record channel.
+
+Registers
+
+The following registers are contained with the chip:
+
+FF8604    rw   ACSI DMA data register (WDC)
+FF8606    w    ACSI mode register (WDL)
+FF8606    r    ACSI DMA status register
+
+Note: The ACSI registers must be accessed as words eventhough less than 16 bits are defined for the registers.
+
+Detail of the ACSI DMA data register:
+
+
+
+
+FF8604 - ACSI DMA Data Register
+
+
+D15                           D8
+D7D0
+
+
+XX
+write only sector counter (14 bits)
+
+
+XXXXXXXX
+IO data (8 bits)
+
+
+Detail of the ACSI mode register:
+
+
+
+
+FF8606 - ACSI Mode Register
+
+
+ D15                             D8 
+ D7D0 
+
+
+0000000
+dir
+src
+rvd
+scs
+ts
+ad
+
+
+     dir - ACSI DMA direction (0=into mem)
+     src - ACSI DMA source (0=SCSI, 1=floppy)
+     rvd - reserved
+     scs - sector counter select (1 enables sector counter access)
+     ts  - IO target select (0=FDC, 1=SCSI)
+     ad  - IO register select (CA2-CA0)
+
+FF8609    rw   ACSI base addr high byte
+FF860B    rw   ACSI base addr middle byte
+FF860D    rw   ACSI base addr low (7 bits, bit 0 fixed)
+
+Note: The ACSI base address registers exist on the odd bytes only.
+
+FF860F    rw   Floppy density select register
+
+Detail of the floppy density select register:
+
+
+
+
+FF860F - Floppy Density Select Register
+
+
+ D15                 D8 
+D7D0
+
+
+00000000
+dc
+mt2
+md2
+fs1
+sta
+mt1
+md1
+fs0
+
+
+     dc  - DISKCHNG input pin state (read only)
+     mt2 - MDET2 input pin state (read only)
+     md2 - MODE2 output pin state
+     sta - Internal DMA status (read only) note 1
+     mt1 - MDET1 input pin state (read only)
+     md1 - MODE1 output pin state
+     fs  - FCCLK frequency select
+          00 - 8Mhz (default)
+          01 - 16 Mhz
+          10 - 32 Mhz
+          11 - off
+
+note 1: Software should poll the sta bit before any access to either the WDC or WDL registers. If the bit reads high, continue polling until it reads low.
+
+FF8900    rw   Sound DMA control
+
+Detail of the sound DMA control register:
+
+
+
+
+FF8900 - Sound DMA Control Register
+
+
+ D15                     D8 
+ D7D0 
+
+
+0
+0
+0
+0
+si
+sc
+rs
+0
+rf
+re
+0
+0
+pf
+pe
+
+
+     si - SINT source select
+          00 - SINT high
+          01 - play (default)
+          10 - record
+          11 - play OR record
+
+     sc - SCNT source select
+          00 - SCNT high
+          01 - play (default)
+          10 - record
+          11 - play OR record
+
+     rs - register set select (0=playback register set)
+
+     rf - record frame repeat (0=single frame)
+     re - record DMA enable (1=on)
+
+     pf - playback frame repeat (0=single frame)
+     pe - playback DMA enable (1=on)
+
+FF8903    rw   Sound frame base addr high byte
+FF8905    rw   Sound frame base addr middle byte
+FF8907    rw   Sound frame base addr low (7 bits)
+
+FF8909    r    Sound frame addr high byte
+FF890B    r    Sound frame addr middle byte
+FF890D    r    Sound frame addr low (7 bits)
+
+FF890F    rw   Sound frame top addr high byte
+FF8911    rw   Sound frame top addr middle byte
+FF8913    rw   Sound frame top addr low (7 bits)
+
+Note: the sound frame address registers exist on the odd bytes only.
+
+FF8920    rw   Sound mode control
+
+Detail of the sound mode control register:
+
+
+
+
+Sound Mode Control Register
+
+
+D15                               D8
+D7D0
+
+
+0
+pms
+0
+pts
+md
+0
+0
+0
+0
+pc
+
+
+     pms - Playback monitor select
+          000 - tracks 1 & 2
+          001 - tracks 3 & 4
+          010 - tracks 5 & 6
+          011 - tracks 7 & 8
+          100 - tracks 9 & 10
+          101 - reserved
+          110 - reserved
+          111 - no monitor
+
+     pts - Playback track select
+          000 - 2 tracks
+          001 - 4 tracks
+          010 - 6 tracks
+          011 - 8 tracks
+          100 - 10 tracks
+          101 - reserved
+          110 - reserved
+          111 - none
+
+     md - play mode
+          00 - 8 bit stereo
+          01 - 16 bit stereo
+          10 - 8 bit mono
+          11 - 16 bit stereo
+
+     pc - sample rate prescaler select
+          00 - /1280
+          01 - /640
+          10 - /320
+          11 - /160
+
+FF8922    rw   MicroWire data register
+FF8924    rw   MicroWire mask register
+
+Note: The Microwire registers must be accessed as words.
+
+Description
+
+     The Sparrow DMA system extends the STE and TT digital sound modes to include 16-bit stereo and allows the sample clock to come from external circuitry making it possible to connect to wide variety of external digital audio sources.
+     The Sparrow DMA chip provides a DMA-driven digital sound system that allows the playback or synthesis of complex waveforms and recording at a variety of sampling rates.
+     Sound in the form of digitized samples can be stored in or retrieved from system memory. Samples are fetched from memory via DMA and provided to a digital-to-analog converter (DAC) at a constant sample frequency specified by the user. A mono mode is provided which will feed the same data to both channels simultaneously (STE/TT compatible 8 bit modes only). The only restriction placed on mono mode is that there must be an even number of samples.
+     Analog sound from an external source or from the PSG can be digitized via an internal A-to-D circuit and stored in memory. External digital sound data may also be stored.
+     In the 8-bit modes each sample is stored as an eight bit quantity. The most significant bit is the sign and the other seven bits are magnitude. In the stereo 8-bit modes there is one word per sample, the upper byte contains the left channel sample and the lower byte contains the right channel sample. In the 8-bit mono mode bytes are accessed sequentially. However, they are still fetched a word at a time. Therefore, there must be an even number of samples.
+     In the 16-bit stereo mode each sample is stored as a word in memory. The most significant bit is the sign and the other fifteen bits are magnitude. The left channel word is first with the remaining words alternating right-left-right etc. Therefore, there must be an even number of samples. The DMA channel into memory (record) can only store samples in the 16 bit form.
+     A group of samples is called a frame. A frame may be played once or can automatically be repeated forever.  Frames occupy a contiguous block of memory and are specified by their starting and ending addresses. The ending address is the address of the last sample + 2 (the address of the word following the last sample). The SCNT and SINT signals are generated at each frame boundary. Frames may be linked together by defining a new frame while the current frame is being played. The new frame will begin at the end of the current frame.
+     The DMA channel does not determine how the samples are defined, only their location in memory and the order in which they are handled. The data need not be digitized sound at all. If the data is to be monitored by the internal DAC, or if the track selection is to function correctly, then the samples must be stored in a certain order.
+     A general purpose MICROWIRE interface is provided to access certain sound control registers and allow the future addition of other MICROWIRE devices. For this reason, the following description of its use will make no assumptions about the device being addressed.
+     The MICROWIRE bus is a three wire serial connection and protocol designed to allow multiple devices to be individually addressed by the controller. The length of the serial data stream depends on the destination device. In general, the stream consists of N bits of address, followed by zero or more don't care bits, followed by M bits of data. The hardware interface which has been provided consists of two 16 bit read/write registers. One data register which contains the actual bit stream to be shifted out and one mask register which indicates which bits are valid.
+     Let's consider a mythical device which requires two address bits and one data bit. For this device the total bit stream is three bits (minimum). Any contiguous three bits of the register pair may be used. However, since the most significant bit is shifted first, the command will be received by the device soonest if the three most significant bits are used. Let's assume: 01 is the device's address, D is the data to be written, and X's are don't cares. Then all of the following register combinations will provide the same information to the device.
+
+     1110 0000 0000 0000  Mask
+     01DX XXXX XXXX XXXX  Data
+
+     0000 0000 0000 0111  Mask
+     XXXX XXXX XXXX X01D  Data
+
+     0000 0001 1100 0000  Mask
+     XXXX XXX0 1DXX XXXX  Data
+
+     0000 1111 1111 0000  Mask
+     XXXX 01XX XXXD 0000  Data
+
+     1111 1111 1111 1111  Mask
+     01XX XXXX XXXX XXXD  Data
+
+     The mask register needs to be written before the data register. Sending commences when the data register is written and takes approximately 16uS. Subsequent writes to the data and mask registers are blocked until sending is complete. Reading the registers while sending is in progress will return a snapshot of the shift register shifting the data and mask out. This means that you know it is safe to send the next command when these registers (or either one) return to their original state. Note that the mask register does not need to be rewritten if it is already correct.  That is, when sending a series of commands the mask register only needs to be written once.
+
+
+     The Sound Mode Control register (IO+8920h) is used to select the sample rate clock prescale. Bits 0 and 1 select the prescale value. With the internal clock (8 Mhz) selected and the prescale value set to 160, the sample rate would be 50 Khz.
+     Bits 8, 9, and 10 of the Sound Mode Control register (IO+8920h) select the number of playback tracks (samples per sample period). A track is a series of related samples which when converted to analog produce a single audio signal. There must be one sample per sample period per track. Two tracks (for one stereo channel) is the default (track1,AL and track2,AR). The internal DAC can only process two tracks. If more than two tracks are selected, the two which the DAC monitors is selected by bits 12, 13, and 14 of the Sound Mode Control register. Samples are always stored in memory as words with the left channel sample (track1,AL) first followed by alternating right-left-right channel samples. For example, suppose six tracks are selected. The first eight words of the frame would contain track1 (AL), track2 (AR), track3 (BL), track4 (BR), track5 (CL), track6 (CR), track1 (AL), track2 (AR) . . . The DMA hardware always fetches the samples sequentially from memory. The meaning of the samples is up to external hardware. For example, if four tracks are selected, four samples per sample period are output. The four samples are fetched from ascending word memory locations. The four samples may represent four tracks (independent audio channels) as is the normal case, or four samples of the same audio track (4x the selected sample rate). The first case could use the internal DAC to monitor two channels. The latter case could not use the internal DAC since it would not see all the samples and the output would be garbled. The internal A-to-D always produces two samples (left and right channels) per sample period. A maximum of ten tracks (five stereo channels) can be selected. Note that selecting more tracks for a given sample rate increases both the memory required and the memory bandwidth used by DMA.
+
+
+     Digital sound data can be recorded into memory. Any data present in the area of memory defined by the frame will be replaced with incoming samples. The frame is defined for record exactly as it is for playback. Bit 7 in the DMA Sound Control register (IO+8900h) selects whether the playback or record register set is addressed. The two independent register sets are identical and occupy the same IO locations. When recording the output of the A-to-D converter, the sample rate is the same as that set for playback. The DMA channel itself is not sensitive to the sample rate when recording external data. DMA stores the first left channel sample after enable then alternating right and left samples (same format as 16-bit stereo playback). Multiple frames can be combined just as during playback. However, if the frame is allowed to repeat, that is store data into the same memory range, the original data will be overwritten. Software doing record will probably use the frame repeat to alternate between two buffers so that one buffer can be written to disk while the other is filling. Note that the Sound Mode control register does not affect the record DMA channel. Incoming samples are stored sequentially in memory irrespective of track format, sample rate, etc.
+     Sparrow will have a rear panel connector for input and output of the digital sound data. The data is transferred via a four wire serial interface. The channel select (CHAN) determines which channel (0 = left or 1 = right) is selected for the current sample. The enable signal (EN) is active low to enable the data transfer. The other three signals are ignored when enable is high (the enable signal should be brought high for a minimum of six clock periods between samples). The clock signal (CK) clocks the data on its rising edge. The data signal (D) consists of 16 bit samples (MSB first). A master clock may be generated by the external device to produce specific sample rates or to synchronize with an external device. The sample rate is determined from the master clock frequency and the sample rate prescale. The internal master clock is always 8 Mhz. The sample rate clock is the output derived from the sample rate prescaler. The external device may elect to use this output for data synchronization. The output data is synchronous with the sample rate clock. Input data may be asynchronous unless it is intended to be monitored via the internal DAC. Then it must be synchronized to the sample rate clock. (Only one each left and right channel sample per sample rate clock cycle can be monitored.)
+
+
+
+     Details of the ACSI DMA channel are explained in the Atari ACSI/DMA Integration Guide. There are three design differences from the original ACSI.
+     An additional address bit has been added to facilitate the 5380 SCSI controller. Bit 0 of the WDL register defines the LSB of the SCSI register select. This bit does not affect accesses to the FDC.
+     The sector count register is now 14 bits wide. When writing to the WDC register with the sector counter selected, the least significant 14 bits of the word are used to program the counter.
+     The software must now poll the internal DMA status bit in the floppy density select register before an access to either the WDL or WDC registers. Failure to do this might result in a bus error on the access. 

@@ -1,0 +1,229 @@
+[PageStream 2 document 1415.DOC: 8.50 x 11.00 in, 141 objects]
+
+--- Page 1 ---
+[48 drawing objects, see 1415.DOC.p001.svg]
+
+ATARI CORPORATION
+ENGINEERING CHANGE ORDER
+
+ECO  NO.
+
+SHEET  1  OF
+
+MODEL
+
+DWG. NO.
+
+TT030
+
+ORIGINATOR
+
+TITLE
+
+M. Pennock
+
+DATE
+
+01/14/92
+
+PRIORITY
+
+X
+
+ROUTINE
+RUSH
+
+OLD REV
+
+NEW REV
+
+C302483-001	TT030 Service Guide	A	B
+
+REASON FOR CHANGE
+
+Changes to existing TT030 manual addressing corrections and updates not available at the time the manual was produced
+
+DESCRIPTION OF CHANGE
+
+(ATTACH CONTINUATION SHEETS AND MARKED PRINTS AS APPROPRIATE)
+
+Replace existing pages of the TT030 Service Guide with the pages in the Change Pages release of the same page number. (See Attachment)
+
+Add ECO History of TT030 to back of TT030 Service Guide.
+
+OTHER FUNCTIONS AFFECTED
+
+AGENCY APPROVAL REQUIRED
+MANUAL CHANGE REQUIRED
+PART NOT INTERCHANGEABLE
+OTHER
+
+CHANGE EFFECTIVITY
+
+DISPOSITION CODE
+
+APPLIES TO
+
+1. NEW RELEASE
+2. USE AS IS
+3. RUNNING CHANGE
+4. IMMEDIATE CHANGE
+5. REWORK
+6. SCRAP PARTS
+7. REORDER
+8. DOCUMENT ONLY
+
+NEW PURCHASE
+MATERIAL ON HAND
+NEW BUILDS
+WORK IN PROCESS
+FINISHED GOODS
+FIELD
+
+CODE
+
+2
+3
+3
+3
+5
+8
+
+ENGINEER
+DOC. CTRL.
+ENG.  MNGR.
+GEN. MNGR.
+PURCHASING
+QUALITY
+V. P. ENG.
+
+APPROVALS
+
+DATE
+DATE
+DATE
+DATE
+DATE
+DATE
+DATE
+
+DOCUMENT CONTROL INCORPORATION
+
+PRODUCTION CONTROL INCORPORATION
+
+DRAWING NUMBER
+
+DATE
+
+INITIAL
+
+START DATE AND SERIAL NUMBER
+
+DATE
+
+INITIAL
+
+C302371-001    Rev. C
+
+--- Page 2 ---
+[15 drawing objects, see 1415.DOC.p002.svg]
+
+DWG. NO.
+
+ATARI CORPORATION
+ENGINEERING CHANGE ORDER
+
+TITLE
+
+ECO  NO.
+
+SHEET        OF
+
+2
+
+OLD REV
+
+NEW REV
+
+C302483-001	TT030 Service Guide Front Cover	A	B
+C302483-001	TT030 Service Guide Page 5	A	B
+C302483-001	TT030 Service Guide Page 6	A	B
+C302483-001	TT030 Service Guide Page 11	A	B
+C302483-001	TT030 Service Guide Page 12	A	B
+C302483-001	TT030 Service Guide Page 79	A	B
+C302483-001	TT030 Service Guide Page 80	A	B
+C302483-001	TT030 Service Guide Page 81	A	B
+C302483-001	TT030 Service Guide Page 82	A	B
+C302483-001	TT030 Service Guide Page 83	A	B
+C302483-001	TT030 Service Guide Page 84	A	B
+C302483-001	TT030 Service Guide Page 85	A	B
+C302483-001	TT030 Service Guide Page 86	A	B
+C302483-001	TT030 Service Guide Page 28	A	B
+C302483-001	TT030 Service Guide Page 28a	A	B
+C302483-001	TT030 Service Guide Page 109	A	B
+C302483-001	TT030 Service Guide Page 110	A	B
+C302483-001	TT030 Service Guide Page 111	A	B
+
+DOCUMENT CONTROL INCORPORATION
+
+PRODUCTION CONTROL INCORPORATION
+
+DRAWING NUMBER
+
+DATE
+
+INITIAL
+
+START DATE AND SERIAL NUMBER
+
+DATE
+
+INITIAL
+
+C302371-002    Rev. B
+
+--- Page 3 ---
+[4 drawing objects, see 1415.DOC.p003.svg]
+
+ATARI CORPORATION
+ENGINEERING CHANGE ORDER
+
+ECO  NO.
+
+SHEET        OF
+
+3
+
+See Attached Sheets for Replacement Pages
+
+Added REV B to Front Cover Page
+
+Page 5 included due to the document being double sided. No changes were made to page.
+
+Page 6 changes section 2.2.2 COPROCESSOR to reflect an MC68882 on-board instead of the MC68881 in the original document.
+
+Page 11 changes section 2.2.8.2 VIDEO TIMING to reflect DE, VSYNC and HSYNC are input signals from TTVIDEO.
+
+Page 12 is included  due to the document being double sided. No changes were made to page.
+
+Pages 79-84 were added as a formatted Bill Of Material to replace the direct system printout from the VAX provided in the original document.
+
+A blank page was added in the place of Page 85 to correct page pagination and allow for the main assembly drawing in the original double sided dicument.
+
+The Page Number was added to the bottom of the page on page 86.
+
+Page numbers were added to the bottom of pages 109-111.
+
+A blank page was added to the back of page 111 to compensate for the document being double sided. No changes were made to page.
+
+Page 28 added much more detail to the block diagram than the orininal. VME Bus, Volume Control, and LS244 latches were added.
+
+Page 28a was added as a detailed block of Clocks and Chip Selects.
+
+C302371-003    Rev. A
+
+--- Master page (repeated on pages; # = page number) ---
+
+1415
+
+21

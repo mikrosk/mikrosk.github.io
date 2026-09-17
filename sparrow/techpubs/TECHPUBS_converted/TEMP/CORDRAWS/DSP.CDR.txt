@@ -1,0 +1,57 @@
+File: TEMP/CORDRAWS/DSP.CDR
+Format: CorelDRAW 2.x drawing, pre-RIFF "WL" (Waldo) container, version byte 0xC9 (201)
+File size: 8229 bytes
+Page: 11.000 x 8.500 in (landscape); native units 0.001 in, origin at page centre, y up
+Drawing extent (in, page-centred): x -1.692 .. 1.693, y -0.543 .. 0.543
+Preview bitmap: 90x90 monochrome
+Record index: type1=40, type2=34, type7=3
+Objects: groups 5, rectangle 0, ellipse 30, curve 4, text 0, bitmap 0
+Curve nodes total: 8
+Fills: none 8, solid 26
+Outlines: solid 34
+Colours used: CMYK(0,0,0,100) x60
+Fonts: none
+
+Text strings: 0
+(position = text anchor point in inches from page top-left, x right / y down; listed top-to-bottom, left-to-right)
+
+Object tree (stored order = front-most first; bbox in inches from page top-left):
+  group [3.850,3.749-7.151,4.751]
+    group [3.850,3.749-7.151,4.751]
+      ellipse 0.200x0.152 in arc 90.0..180.0 deg [3.850,3.752-4.050,3.904]
+      ellipse 0.200x0.152 in arc 270.0..0.0 deg [6.651,4.596-6.851,4.748]
+      ellipse 0.200x0.152 in arc 180.0..270.0 deg [4.150,4.596-4.350,4.748]
+      ellipse 0.200x0.152 in arc 0.0..90.0 deg [6.951,3.752-7.151,3.904]
+      curve 2 nodes [4.250,4.747-6.751,4.751]
+      curve 2 nodes [6.851,3.828-7.151,4.673]
+      curve 2 nodes [3.850,3.828-4.150,4.673]
+      curve 2 nodes [3.950,3.749-7.051,3.753]
+    group [4.150,3.851-6.850,4.651]
+      ellipse 0.200x0.200 in [6.450,4.451-6.650,4.651]
+      ellipse 0.200x0.200 in [6.150,4.451-6.350,4.651]
+      ellipse 0.200x0.200 in [5.850,4.451-6.050,4.651]
+      ellipse 0.200x0.200 in [5.550,4.451-5.750,4.651]
+      ellipse 0.200x0.200 in [5.250,4.451-5.450,4.651]
+      ellipse 0.200x0.200 in [4.950,4.451-5.150,4.651]
+      ellipse 0.200x0.200 in [4.650,4.451-4.850,4.651]
+      ellipse 0.200x0.200 in [4.350,4.451-4.550,4.651]
+      group [4.250,4.151-6.850,4.351]
+        ellipse 0.200x0.200 in [6.650,4.151-6.850,4.351]
+        ellipse 0.200x0.200 in [6.350,4.151-6.550,4.351]
+        ellipse 0.200x0.200 in [6.050,4.151-6.250,4.351]
+        ellipse 0.200x0.200 in [5.750,4.151-5.950,4.351]
+        ellipse 0.200x0.200 in [5.450,4.151-5.650,4.351]
+        ellipse 0.200x0.200 in [5.150,4.151-5.350,4.351]
+        ellipse 0.200x0.200 in [4.850,4.151-5.050,4.351]
+        ellipse 0.200x0.200 in [4.550,4.151-4.750,4.351]
+        ellipse 0.200x0.200 in [4.250,4.151-4.450,4.351]
+      group [4.150,3.851-6.750,4.051]
+        ellipse 0.200x0.200 in [6.550,3.851-6.750,4.051]
+        ellipse 0.200x0.200 in [6.250,3.851-6.450,4.051]
+        ellipse 0.200x0.200 in [5.950,3.851-6.150,4.051]
+        ellipse 0.200x0.200 in [5.650,3.851-5.850,4.051]
+        ellipse 0.200x0.200 in [5.350,3.851-5.550,4.051]
+        ellipse 0.200x0.200 in [5.050,3.851-5.250,4.051]
+        ellipse 0.200x0.200 in [4.750,3.851-4.950,4.051]
+        ellipse 0.200x0.200 in [4.450,3.851-4.650,4.051]
+        ellipse 0.200x0.200 in [4.150,3.851-4.350,4.051]

@@ -1,0 +1,270 @@
+[PageStream 2 document VIDEO.DOC: 11.00 x 8.50 in, 162 objects, booklet layout: two page halves per sheet, halves listed in text flow order]
+
+--- Page 1, right half ---
+[1 drawing objects, see VIDEO.DOC.p001.svg]
+
+Video Documentation
+
+
+We recommend that all screen output be done via the GEM VDI.  This technique allows an application to take advantage of higher resolutions and greater color  capabilities of new screen modes yet still function in more limited situations. We do however recognize that direct screen output is something that applications authors are going to want to do.  As a result we are documenting the screen memory organizations in all modes in Sparrow.
+
+The 1, 2, 4 and 8 bit per pixel modes are arranged as they are in an  ST,STE or TT.  This organization consists of 16 bits of each plane in adjacent words until all planes are accounted for.
+
+The 16 bit per pixel (true color) mode of Sparrow is organized as packed pixels.  Each 16 bit word contains all of the information for a pixel.
+
+Since this mode is a true color mode there is no palette to convert the data into RGB information for the video system.  The information is encoded in each pixel as follows RRRRRGGGGGXBBBBB.  The least significant G bit is also used as an overlay bit (designated as X).  We suggest that this bit NOT be used in graphic data.
+
+A video (_VDO) cookie (yet to be defined or implemented) will allow quick identification that you are on a machine that supports the video that you require.
+
+© 1992, Atari Corporation
+
+Video .1
+
+--- Page 2, left half ---
+[2 drawing objects, see VIDEO.DOC.p002.svg]
+
+Video Documentation
+
+4/29/92
+
+Video .2
+
+© 1992, Atari Corporation
+
+--- Page 2, right half ---
+[2 drawing objects, see VIDEO.DOC.p002.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .3
+
+--- Page 1, left half ---
+[2 drawing objects, see VIDEO.DOC.p001.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .4
+
+© 1992, Atari Corporation
+
+--- Page 3, right half ---
+[1 drawing objects, see VIDEO.DOC.p003.svg]
+
+© 1992, Atari Corporation
+
+DSP .5
+
+--- Page 4, left half ---
+[2 drawing objects, see VIDEO.DOC.p004.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .6
+
+© 1992, Atari Corporation
+
+--- Page 4, right half ---
+[2 drawing objects, see VIDEO.DOC.p004.svg]
+
+4/20/92
+
+DSP Library Functions - Data Transfer Routines
+
+© 1992, Atari Corporation
+
+DSP .7
+
+--- Page 3, left half ---
+[2 drawing objects, see VIDEO.DOC.p003.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .8
+
+© 1992, Atari Corporation
+
+--- Page 5, right half ---
+[2 drawing objects, see VIDEO.DOC.p005.svg]
+
+4/20/92
+
+DSP Library Functions - Data Transfer Routines
+
+© 1992, Atari Corporation
+
+DSP .9
+
+--- Page 6, left half ---
+[2 drawing objects, see VIDEO.DOC.p006.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .10
+
+© 1992, Atari Corporation
+
+--- Page 6, right half ---
+[2 drawing objects, see VIDEO.DOC.p006.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+© 1992, Atari Corporation
+
+DSP .11
+
+--- Page 5, left half ---
+[2 drawing objects, see VIDEO.DOC.p005.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .12
+
+© 1992, Atari Corporation
+
+--- Page 7, right half ---
+[2 drawing objects, see VIDEO.DOC.p007.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+© 1992, Atari Corporation
+
+DSP .13
+
+--- Page 8, left half ---
+[2 drawing objects, see VIDEO.DOC.p008.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .14
+
+© 1992, Atari Corporation
+
+--- Page 8, right half ---
+[2 drawing objects, see VIDEO.DOC.p008.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+© 1992, Atari Corporation
+
+DSP .15
+
+--- Page 7, left half ---
+[2 drawing objects, see VIDEO.DOC.p007.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .16
+
+© 1992, Atari Corporation
+
+--- Page 9, left half ---
+[2 drawing objects, see VIDEO.DOC.p009.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .20
+
+© 1992, Atari Corporation
+
+--- Page 9, right half ---
+[2 drawing objects, see VIDEO.DOC.p009.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .17
+
+--- Page 10, left half ---
+[2 drawing objects, see VIDEO.DOC.p010.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .18
+
+© 1992, Atari Corporation
+
+--- Page 10, right half ---
+[2 drawing objects, see VIDEO.DOC.p010.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .19
+
+--- Page 11, left half ---
+[2 drawing objects, see VIDEO.DOC.p011.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .2
+
+© 1992, Atari Corporation
+
+--- Page 11, right half ---
+[2 drawing objects, see VIDEO.DOC.p011.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .3
+
+--- Page 12, left half ---
+[2 drawing objects, see VIDEO.DOC.p012.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .2
+
+© 1992, Atari Corporation
+
+--- Page 12, right half ---
+[2 drawing objects, see VIDEO.DOC.p012.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .3

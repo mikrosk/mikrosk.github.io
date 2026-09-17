@@ -1,0 +1,26 @@
+DXF drawing: DYNACADD/PARTS/DXF/STEPRT.DXF
+Render: STEPRT.DXF.svg
+
+== Summary ==
+File:        10951 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font romand
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (-59.43, 41.44) - (319.45, 252.82)
+             rendered (-59.43, 41.44) - (195.04, 99.61), size 254.46 x 58.17
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: romand (font romand)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 2 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            2
+  10            7  CONTINUOUS    on            103
+  unused: 2, 3, 4, 5, 6, 7, 8, 9
+Entities:    model space: LINE 70, ARC 32, TEXT 3
+Blocks:      0 defined
+Notes:
+  - 3 TEXT entities are empty or blank
+
+== Text in reading order (0 text items) ==
+(no text in drawing)

@@ -1,0 +1,15 @@
+File: EASYDRAW/SUNNYVAL/FUGI.GEM
+Format: GEM Metafile version 3.10, 24-word header, RC coordinates (flag 2)
+Header extents: (-2380,-2020)-(2373,2019)
+Page size: 120.8 x 102.7 mm
+Coordinate window: lower-left (-2383,2023), upper-right (2376,-2022); rendered with y axis down, 39.40 units/mm
+Drawing bounding box (file units): (-2380,-2020)-(2373,2019)
+Items: 37 (1587 words)
+Objects: fill area (bezier) 22
+Other records (escapes, application data): bezier on/off x2, write_meta 10 x7
+Text strings: 0
+
+No text objects in this file (any lettering is drawn as vector strokes or outlines).
+
+LABELS READ FROM THE RENDERED IMAGE (lettering here is vector graphics, not text data; transcribed visually in reading order, may contain reading errors)
+(no lettering)

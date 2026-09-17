@@ -1,0 +1,23 @@
+DynaCADD 2.0 entity file (.DPT)
+Source: DYNACADD/PARTS/F030/F030ASM5.DPT (299803 bytes)
+Record stream: 4239 records, ends at offset 0x4931b with FFFF terminator
+Drawing settings from: F030ASM5.DWG
+Sheet: width 152.5238, height 261.6853, scale 1
+Units: not recorded in a field identified so far; coordinates are listed as stored
+Entities: 4239 total (LINE 1323, CIRCLE 6, ARC 2889, ELLIPSE 3, ELLIPTICAL ARC 3, TEXT 9, SOLID 6)
+Extents: x 12.6265 .. 140.8944, y 25.4381 .. 239.8782 (size 128.2679 x 214.4401)
+Layers used: 0 "L0" (74), 1 "L1" (4165)
+Line styles used: 0 "CONTINUOUS" (4227), 1 "HIDDEN" (12)
+Colour indices used: 7 (4239)
+Groups: none
+
+Text strings (9), in file order; x,y = insertion point:
+  x=20.738     y=185.4463   h=2       w=2       angle=0      font=LEROY_R  layer=L0       "200"
+  x=12.7391    y=233.1325   h=2       w=2       angle=0      font=LEROY_R  layer=L0       "210"
+  x=114.2076   y=52.3959    h=2       w=2       angle=0      font=LEROY_R  layer=L0       "220"
+  x=124.1684   y=52.1016    h=2       w=2       angle=0      font=LEROY_R  layer=L0       "4 PLCS"
+  x=118.7262   y=81.5375    h=2       w=2       angle=0      font=LEROY_R  layer=L0       "REF"
+  x=89.7758    y=28.5528    h=2       w=2       angle=0      font=LEROY_R  layer=L0       "230"
+  x=101.7971   y=28.5528    h=2       w=2       angle=0      font=LEROY_R  layer=L0       "4 PLCS"
+  x=15.7919    y=30.0246    h=2       w=2       angle=0      font=LEROY_R  layer=L0       "3 PLCS"
+  x=34.4363    y=30.0246    h=2       w=2       angle=0      font=LEROY_R  layer=L0       "240"

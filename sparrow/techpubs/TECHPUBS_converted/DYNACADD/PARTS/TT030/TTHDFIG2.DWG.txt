@@ -1,0 +1,10 @@
+DynaCADD 2.0 drawing settings file (.DWG)
+Source: DYNACADD/PARTS/TT030/TTHDFIG2.DWG (21166 bytes)
+Holds no entity geometry. The drawing content is in TTHDFIG2.DPT (726 entities, 21 text strings); see TTHDFIG2.DPT.txt and TTHDFIG2.DPT.svg.
+Sheet: width 13.8466, height 10.6658, scale 1, origin (0, 0)
+Saved view window: 13.8466 x 10.7884
+Units: not recorded in a field identified so far
+Global line style scale: 0.5
+Named layers: 0 "L1" colour 1, 1 "L2" colour 1, 2 "L3" colour 1, 3 "L4" colour 1, 4 "L5" colour 1, 5 "L6" colour 1, 6 "L7" colour 1, 7 "L8" colour 1, 8 "L9" colour 1, 9 "L10" colour 1
+Line style table: 0 "DASHED" scale 0.75, 1 "HIDDEN" scale 0.25, 2 "CENTER" scale 2, 3 "PHANTOM" scale 2.5, 4 "DOT" scale 0.25, 5 "DASHDOT" scale 1, 6 "BORDER" scale 1.75, 7 "DIVIDE" scale 1.25, 8 "DOTS" scale 0.1
+Construction planes: Top, Front, Right, Bottom, Rear, Left, Iso

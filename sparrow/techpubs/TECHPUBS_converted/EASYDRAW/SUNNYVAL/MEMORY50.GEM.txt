@@ -1,0 +1,128 @@
+File: EASYDRAW/SUNNYVAL/MEMORY50.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-3356,-4266)-(3130,2220)
+Page size: 203.2 x 254.0 mm
+Coordinate window: lower-left (-3640,4550), upper-right (3640,-4550); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-3360,-4192.67)-(3040,2150.33)
+Items: 486 (4211 words)
+Objects: polyline 4, ellipse 50, elliptical arc 50, justified text 103
+Other records (escapes, application data): write_meta 10 x8, write_meta 150 x1, write_meta 151 x8, write_meta 152 x9, write_meta 153 x10, write_meta 154 x102, write_meta 158 x1, write_meta 160 x1, write_meta 80 x54, write_meta 81 x54
+Warning: premature end marker at word 3763 with 447 words following
+Warning: damaged file; data blocks belonging to other drawings may appear in the text list and the render
+Warning: damaged data skipped, words 3596-3601
+Warning: damaged data skipped, words 3763-3775; text fragments in skipped data: "Reset"
+Text strings: 103
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+  -3360   -3950  [font 7 24pt]  SPARROW MEMORY CONNECTOR
+
+  -3300   -3070  [font 7 12pt]  50 Pin Header - J17
+
+   1930   -3410  [font 7 12pt]   1
+
+   2840   -3410  [font 7 12pt]   2
+
+   2840    2050  [font 7 12pt]   50
+
+   1820    2050  [font 7 12pt]   49
+
+  -3180   -2200  [font 7 12pt]  Pin
+  -3180   -1720  [font 7 12pt]  1 
+  -3180   -1560  [font 7 12pt]  3
+  -3180   -1400  [font 7 12pt]  5
+  -3180   -1240  [font 7 12pt]  7
+  -3180   -1080  [font 7 12pt]  9
+  -3180    -920  [font 7 12pt]  11
+  -3180    -760  [font 7 12pt]  13
+  -3180    -600  [font 7 12pt]  15
+  -3180    -440  [font 7 12pt]  17
+  -3180    -280  [font 7 12pt]  19
+  -3180    -120  [font 7 12pt]  21
+  -3180      40  [font 7 12pt]  23
+  -3180     200  [font 7 12pt]  25
+  -3180     360  [font 7 12pt]  27
+  -3180     520  [font 7 12pt]  29
+  -3180     680  [font 7 12pt]  31
+  -3180     840  [font 7 12pt]  33
+  -3180    1000  [font 7 12pt]  35
+  -3180    1160  [font 7 12pt]  37
+  -3180    1320  [font 7 12pt]  39
+  -3180    1480  [font 7 12pt]  41
+  -3180    1640  [font 7 12pt]  43
+  -3180    1800  [font 7 12pt]  45
+  -3180    1960  [font 7 12pt]  47
+  -3180    2120  [font 7 12pt]  49
+
+  -2630   -2200  [font 7 12pt]  Signal
+  -2630   -1720  [font 7 12pt]  Ground
+  -2630   -1560  [font 7 12pt]  MDATA 15
+  -2630   -1400  [font 7 12pt]  MDATA 13
+  -2630   -1240  [font 7 12pt]  MDATA 11
+  -2630   -1080  [font 7 12pt]  Ground
+  -2630    -920  [font 7 12pt]  MDATA 9
+  -2630    -760  [font 7 12pt]  MDATA 7
+  -2630    -600  [font 7 12pt]  MDATA 5
+  -2630    -440  [font 7 12pt]  VCC
+  -2630    -280  [font 7 12pt]  MDATA 3
+  -2630    -120  [font 7 12pt]  MDATA 1
+  -2630      40  [font 7 12pt]  Ground
+  -2630     200  [font 7 12pt]  VCC
+  -2630     360  [font 7 12pt]  VCC
+  -2630     520  [font 7 12pt]  MDATA 17
+  -2630     680  [font 7 12pt]  MDATA 19
+  -2630     840  [font 7 12pt]  MDATA 21
+  -2630    1000  [font 7 12pt]  VCC
+  -2630    1160  [font 7 12pt]  MDATA 23
+  -2630    1320  [font 7 12pt]  MDATA 25
+  -2630    1480  [font 7 12pt]  Ground
+  -2630    1640  [font 7 12pt]  MDATA 27
+  -2630    1800  [font 7 12pt]  MDATA 29
+  -2630    1960  [font 7 12pt]  MDATA 31
+  -2630    2120  [font 7 12pt]  Ground
+
+     30   -2220  [font 7 12pt]  Signal
+     30   -1740  [font 7 12pt]  VCC
+     30   -1580  [font 7 12pt]  MDATA 14
+     30   -1420  [font 7 12pt]  MDATA 12
+     30   -1260  [font 7 12pt]  MDATA 10
+     30   -1100  [font 7 12pt]  VCC
+     30    -940  [font 7 12pt]  MDATA 8
+     30    -780  [font 7 12pt]  MDATA 6
+     30    -620  [font 7 12pt]  Ground
+     30    -460  [font 7 12pt]  MDATA 4
+     30    -300  [font 7 12pt]  MDATA 2
+     30    -140  [font 7 12pt]  MDATA 0
+     30      20  [font 7 12pt]  Ground
+     30     180  [font 7 12pt]  Ground
+     30     340  [font 7 12pt]  MDATA 16
+     30     500  [font 7 12pt]  MDATA 18
+     30     660  [font 7 12pt]  MDATA 20
+     30     820  [font 7 12pt]  Ground
+     30     980  [font 7 12pt]  MDATA 22
+     30    1140  [font 7 12pt]  MDATA 24
+     30    1300  [font 7 12pt]  �♪⇩⇦🔔��á
+   -410    -160  [font 7 12pt]  30
+   -410       0  [font 7 12pt]  32
+   -410     160  [font 7 12pt]  34
+   -410     320  [font 7 12pt]  36
+   -410     480  [font 7 12pt]  38
+   -410     640  [font 7 12pt]  40
+   -410     800  [font 7 12pt]  42
+   -410     960  [font 7 12pt]  44
+
+  -2310    -280  [font 7 12pt]  BERR
+  -2310    -120  [font 7 12pt]  IPL1
+  -2310      40  [font 7 12pt]  CPUCLK
+  -2310     200  [font 7 12pt]  VCC
+  -2310     360  [font 7 12pt]  ADDR 22
+  -2310     520  [font 7 12pt]  ADDR 20
+  -2310     680  [font 7 12pt]  ADDR 18
+  -2310     840  [font 7 12pt]  ADDR 16
+  -2310    1000  [font 7 12pt]  ADDR 14
+  -2310    1160  [font 7 12pt]  ADDR 12
+  -2310    1320  [font 7 12pt]  ADDR 10
+  -2310    1480  [font 7 12pt]  ADDR 8
+  -2310    1640  [font 7 12pt]  ADDR 6
+  -2310    1800  [font 7 12pt]  ADDR 4
+  -2310    1960  [font 7 12pt]  ADDR 2
+  -2310    2120  [font 7 12pt]  No Connect

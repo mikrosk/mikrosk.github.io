@@ -1,0 +1,11 @@
+[PageStream style sheet, IFF FORM DTAG format: 2 tags]
+
+Tag 1: Title
+  font:          CS Triumvirate
+  style:         bold
+  size:          18.00 pt
+
+Tag 2: body text
+  font:          CS Times
+  style:         normal
+  size:          12.00 pt

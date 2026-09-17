@@ -1,0 +1,8 @@
+make sparrow.out
+#mac sparrow
+#mac fonts
+#mac sysctrl
+#mac dsp
+#aln -m -a fa0000 x 0 sparrow sysctrl fonts dsp
+#glue -b fa0000 -o sparrow.out sparrow.abs
+

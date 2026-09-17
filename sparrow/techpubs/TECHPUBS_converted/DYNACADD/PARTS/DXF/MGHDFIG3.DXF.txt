@@ -1,0 +1,75 @@
+DXF drawing: DYNACADD/PARTS/DXF/MGHDFIG3.DXF
+Render: MGHDFIG3.DXF.svg
+
+== Summary ==
+File:        43115 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font txt
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (1.4621, -3.6581) - (9.698, 7.0393)
+             rendered (1.4621, -3.6581) - (9.6639, 7.0393), size 8.2018 x 10.6974
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: STANDARD (font txt)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 2 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            277
+  10            7  CONTINUOUS    on            125
+  unused: 2, 3, 4, 5, 6, 7, 8, 9
+Entities:    model space: LINE 291, POLYLINE 52 (104 vertices), TEXT 24, SOLID 21, ARC 12, CIRCLE 2
+Blocks:      0 defined
+Notes:
+  - 52 polylines with constant width drawn as thick strokes
+
+== Text in reading order (24 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (24 items) --
+  POWER SUPPLY  |  STANDOFF  |  J402
+  PIN #1
+  J404
+  PIN #1
+  POWER
+  SUPPLY
+  CABLE
+  MAIN PCB
+  HARD DISK CONTROLLER BOARD
+  J2  |  J1
+  STANDOFF
+  PIN #1
+  HOLE
+  PIN #1  |  MISSING PIN
+  CONNECTOR PLUG
+  SURFACE A
+  HARD DISK
+  CABLE
+  RED STRIPE
+  PIN #1
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+      X        Y    HEIGHT    ROT  JUST      LAYER  STYLE     TEXT
+ 2.9991   6.9618     0.135      0  middle    1      STANDARD  POWER SUPPLY
+ 5.5268   6.9718     0.135      0  middle    1      STANDARD  STANDOFF
+  7.521   6.9153     0.135      0  middle    1      STANDARD  J402
+ 9.2659   6.8805     0.135      0  middle    1      STANDARD  PIN #1
+ 9.3319   6.0091     0.135      0  middle    1      STANDARD  J404
+ 9.3197   4.9036     0.135      0  middle    1      STANDARD  PIN #1
+ 9.3155   4.5057     0.135      0  middle    1      STANDARD  POWER
+ 9.3155   4.2807     0.135      0  middle    1      STANDARD  SUPPLY
+ 9.2748   4.0732     0.135      0  middle    1      STANDARD  CABLE
+ 4.8795   2.5158     0.135      0  middle    1      STANDARD  MAIN PCB
+ 4.4941   1.0699       0.1      0  center    1      STANDARD  HARD DISK CONTROLLER BOARD
+ 3.8087   0.7323       0.1      0  center    1      STANDARD  J2
+ 6.2494   0.7534       0.1      0  center    1      STANDARD  J1
+ 2.6129   0.1456       0.1      0  center    1      STANDARD  STANDOFF
+ 7.2081   0.0761       0.1      0  center    1      STANDARD  PIN #1
+ 2.6129  -0.0102       0.1      0  center    1      STANDARD  HOLE
+ 3.0711  -1.1107       0.1      0  center    1      STANDARD  PIN #1
+ 5.6692  -1.1563       0.1      0  center    1      STANDARD  MISSING PIN
+ 6.0754  -1.5256       0.1      0  center    1      STANDARD  CONNECTOR PLUG
+ 2.9513   -2.158       0.1      0  center    1      STANDARD  SURFACE A
+ 6.5398  -2.5289       0.1      0  center    1      STANDARD  HARD DISK
+ 6.3541   -2.692       0.1      0  center    1      STANDARD    CABLE
+ 3.1913  -3.0985       0.1      0  center    1      STANDARD  RED STRIPE
+ 3.2064  -3.2734       0.1      0  center    1      STANDARD  PIN #1

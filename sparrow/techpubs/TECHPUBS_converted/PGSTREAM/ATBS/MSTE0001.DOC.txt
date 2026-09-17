@@ -1,0 +1,79 @@
+[PageStream 2 document MSTE0001.DOC: 8.50 x 11.00 in, 3 objects]
+
+--- Page 1 ---
+
+Atari Technical Bulletin
+Number:  MSTE-0001
+Date:  August 23, 1991
+Page 1 of 3
+
+
+Product(s) Affected:	MEGASTE
+Model:				MEGASTE/1 w/o HDD
+Type of ATB:			As Needed
+ECO #: 				N/A
+
+Reason for ATB:
+
+While installing hard disk drive option kits in the field, system will not boot from hard disk drive.
+
+Notes:
+
+1.)	Some hard disk drives shipped from manufacturer were not factory formatted.
+
+2.)	Some hard disk drives shipped from the manufacturer were factory formatted but the root/boot sector was not installed.
+
+Symptoms of Problem:
+
+System will not boot from internal hard disk drive.
+
+Tests to Determine if Problem Exists:
+
+Install the hard drive option kit. Boot the system with the MEGASTE Advanced Hard Disk Utilities diskette in drive A:. Do not press any keys. Wait 90 seconds for the system to startup. If the drive C: icon does not display on the desktop, follow the steps 1 through 10 outlined below. (HDD not formatted).
+
+If the drive C: icon displays, remove the MEGASTE Advanced Hard Disk Utilities diskette and cold boot the system by pressing the [Control] [Alternate] [Right Shift] and [Delete] keys simultaneously.  Do not press any keys. Wait 90 seconds for the system to startup. If the drive C: icon does not display on the desktop, insert the MEGASTE Advanced Hard Disk Utilities diskette in drive A: and restart the system. Then follow the steps 7 through 10 outlined below. (root/boot sector not installed)
+
+--- Page 2 ---
+
+Atari Technical Bulletin
+Number:  MSTE-0001
+Date:  August 23, 1991
+Page 2 of 3
+
+
+Solution:
+
+1.)	You must use the MEGASTE Advanced Hard Disk Utilities diskette which contains the following folders and files.
+
+			AUTO
+			AHDI.PRG
+			HDX
+			WINCAP, HDX.PRG, and HDX.RSC
+			HINSTALL
+			HINSTALL.PRG, SHDRIVER.RAW, AND HINSTALL.RSC
+
+2.)	Ensure that no other hard disk is attached to the system. This includes external as well as internal drives.
+
+3.)	Install the HDD upgrade kit. Ensure the SCSI drive ID is set to zero. Refer to hard drive product manual shipped with the drive for location of jumpers. Set the hard disk controller card address to 0 - switch SW1, all three positions set to ON.
+
+4.)	Power up the system with the MEGASTE Advanced Hard Disk Utilities diskette in the A: drive. Do Not press any keys until the desktop displays -this takes approximately 90 seconds. If you press a key before the HDD is ready, the HDD will not be recognized by the system.
+
+5.)	Display the directory of drive A: then Display the directory of the HDX folder and run HDX.PRG. Once the HDX program is running, select the Format option from the Disk menu. When the Alert message appears, select OK to continue. Select The Physical Unit dialog box will appear. Select UNIT 0 (highlighted) and it will change to reverse video - YOU MUST CLICK UNIT 0 WITH THE MOUSE EVEN THOUGH IT IS ALREADY HIGHLIGHTED - then select OK to continue. Another Alert message will appear. Select OK to start formatting the hard drive.
+
+6.)	The HDX program will format the hard drive, mark bad sectors, then partition the drive. When the partitioning message disappears, the formatting operation is complete. Select Quit from the File menu then select OK from the dialog box to restart the system.
+
+7.)	When the system restarts, ensure that drive A:, B:, and C: icons display on the desktop. If the drive C: icon doesn't display, coldboot the system by pressing the [Control] [Alternate] [Right Shift] and [Delete] keys simultaneously.
+
+--- Page 3 ---
+
+Atari Technical Bulletin
+Number:  MSTE-0001
+Date:  August 23, 1991
+Page 3 of 3
+
+
+8.)	Display the directory of drive A: then Display the directory of the HINSTALL folder and run HINSTALL.PRG. Once the HINSTALL program is running, select the Install option from the File menu. When Select the Logical Drive dialog box appears, select drive C: (highlighted) and it will change to reverse video - YOU MUST CLICK DRIVE C: WITH THE MOUSE EVEN THOUGH IT IS ALREADY HIGHLIGHTED - then select OK to continue. Select OK from the Install Driver dialog box to install the driver. When the File menu is no longer highlighted, the driver installation is complete. Select Quit from the File menu.
+
+9.)	Coldboot the system by pressing the [Control] [Alternate] [Right Shift] and [Delete] keys simultaneously. The system will now boot from the internal hard drive.
+
+10.)	The final step is to copy the Language Disk to the hard drive. Remove the MEGASTE Advanced Hard Disk Utilities diskette and insert the MEGASTE Language Disk. Drag the drive A: icon onto the drive C: icon. Select OK to continue when the Copy Files dialog box appears. Select Copy to continue when the Name Conflict dialog box appears. The copy process is complete when the Copy Files dialog box disappears.  Coldboot the system by pressing the [Control] [Alternate] [Right Shift] and [Delete] keys simultaneously. This time when the desktop displays, floppy drive icons A: and B: will display along with the four logical drive icons C:, D:, E:, and F:.

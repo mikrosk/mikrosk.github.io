@@ -1,0 +1,58 @@
+[PageStream 2 document TTHDIN1.DOC: 5.50 x 8.50 in, 5 objects, facing pages]
+
+--- Page 1 ---
+
+Atari® TT030™ Hard Disk Installation Manual
+
+
+Kit Contents
+
+
+Your Atari Hard Disk kit should contain the following items:
+
+	•	Hard Disk Drive with Product Manual
+	•	Hard Disk Drive Cover Assembly Part Number:  CA401082-001
+	•	Hard Disk Shield Part Number: C300835-001
+	•	8 Mounting Screws Part Number: C301333-001
+	•	Interface Cable Part Number: CA401131-001
+	•	Power Supply Extension Cable Part Number: CA400972-001
+	•	Installation Manual Part Number: C302322-001
+	•	HDX Advanced Hard Disk Utilities Disk Part Number: CA400870-001
+
+If any of these components are missing from your kit please contact the outlet from which the kit was ordered.
+
+
+Tools Required:
+
+
+	•	Phillips screwdriver.
+	•	Flat blade (slotted) screwdriver. -
+
+--- Page 2 ---
+
+Installation
+
+
+The following steps should be completed in the following order to install the hard disk in your Atari TT030 computer. Carefully read each step all the way through before taking any action required by that step.
+
+WARNING
+
+This installation should be performed in a static  free environment. Static can cause damage to the components in this kit. Failure to perform each step completely or skipping steps could result in damage to the hard disk or your computer.
+
+
+Mounting the Hard Disk to the Accessory Cover
+
+
+The following instructions pertain to attaching the hard disk to the accessory cover so that it can be installed in the computer.
+
+1.	Remove the hard disk from its box.
+
+2.	Depending on what kind of hard disk you are installing the power supply connector could be hard to access once the drive is installed in the bracket. If this is the case install the short power supply extension cable. If the drive already has an extension cable installed do not install the one supplied with the kit.
+
+3.	Locate the SCSI ID jumpers on the  hard disk. Refer to the hard disk product manual for their location. Make sure the SCSI ID jumper is set for drive 0.
+
+4.	Attach the hard  disk to the bracket assembly as shown in Figure 1 with the four (4) mounting screws.
+
+5.	Locate the Hard Disk LED Connector. Refer to the hard disk product manual for its location. If the hard disk you are installing does not have an LED connector, skip to step 7, otherwise continue with this step and step 6. Plug the LED cable into the LED connector on the hard disk as shown in the Seagate ST157a example in Figure 2.
+
+6.	Push the LED cable into the accessory cover so it will not get pinched when installing the accessory cover into the computer.

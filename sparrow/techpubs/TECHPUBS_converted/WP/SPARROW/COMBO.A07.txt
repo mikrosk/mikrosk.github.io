@@ -1,0 +1,600 @@
+
+                                           ****
+Date       : 12-19-91                      ****
+Ver        :  A7                           ****
+Written by : Eran Dariel, Segal Moshe     ******
+                                        ** **** **
+                                      **   ****   **
+                                    **     ****     **
+
+                               SPARROW - (SP)
+
+                            COMBO SPECIFICATION
+
+   1.  General Description
+
+
+The new COMBO chip will be based on the STe COMBO (4153 COMBO). So,
+many functions that already exist in the STe COMBO will remain
+unchanged in the new COMBO. Apart from that, functions related to the
+video that resided in the STe COMBO are removed from the new COMBO and
+placed in the new VIDEO SHIFTER and functions related to DMA and sound
+DMA are removed and placed in the new DMA chip.
+
+The blocks that remain from the STe COMBO and are basically unchanged
+contain:
+
+1) The GLUE I/O support functions that contained:
+ 1.1) ROM/RAM/IO address decode.
+ 1.2) Register decode (only for registers that remain in the COMBO).
+ 1.3) Interrupt priority encoding and IACK logic.
+ 1.4) Paddle circuit.
+ 1.5) joystick circuit.
+ 1.6) Clock dividers.
+2) The video registers (with modifications to support up to 14MB DRAM
+memory
+space) that contain:
+ 2.1) Video base address registers.
+ 2.2) Video address counter (with modifications explained later).
+ 2.3) Horizontal offset register.
+3) The Blitter.
+
+
+The blocks that are removed to the new VIDEO SHIFTER are:
+
+1) Horizontal sync generator.
+2) Vertical sync generator.
+3) Video control logic that contain the sync control bit, PAL/NTSC
+bit and the related sync control logic and interlace logic.
+4) Horizontal DE/Blank counter.
+5) Vertical DE/Blank counter.
+6) Light gun/pen circuit.
+
+
+The blocks that are removed to the new DMA chip are:
+
+1) The bus arbitration logic that was in the MCUG. (The bus
+arbitration
+of the Blitter remains unchanged as the whole Blitter remains
+unchanged).  2) Sound frame base address registers.
+
+COMBEL SPEC REV A07                                    page 2
+
+3) Sound frame end address registers and the logic supporting frame
+end detect and sound interrupt.
+4) Sound address counter.
+5) DMA address counter.
+6) DMAR/W control bit.
+
+The logic that remains but will be modified and the logic that will be
+added will include:
+
+1) The DRAM control logic.
+2) The timing generator.
+3) Additional video register to support interlace.
+4) CAS before RAS refresh circuit.
+5) MC146818A Real Time Clock support.
+6) IDE (Internal Hard Disk) support.
+7) SCC (85C30) support.
+8) Bus Error circuitry.
+
+  2. Combo Functional Blocks
+
+In the previous section the content of the new COMBO was described in
+comparison to the content of the STe COMBO. The following will
+describe the new COMBO functions as a whole entity, not necessarilly
+by the boundaries of logic that was in the STe COMBO and logic that is
+new or modified.
+
+The functional blocks of the new COMBO are:
+
+1)  MCU - Memory Control Unit.
+2)  Blitter..
+3)  Video support registers.
+4)  ROM/DRAM/IO address decode    \
+5)  Interupt Priority Encoding      \
+6)  Bus Error Timeout & Decode       |
+7)  Paddle circuit                   |  previous
+8)  Joystick circuit                 | GLUE logic
+9) Register Decode                  /
+10) Clock dividers                /
+11) RTC, IDE and SCC support.
+
+
+  2.1  MCU
+
+This block is responsible for :
+ 1) DTACK handling.
+ 2) Video Address Counter.
+ 3) DRAM refresh circuit.
+ 4) RAS/CAS signal generation.
+
+Bus arbitration will be basically the same as in the STe, apart from
+the logic that controls DTACK. As in the STe, there will be only two
+devices that arbitrate for the system bus, in a normal arbitration
+scheme: the DMA and the Blitter. The Blitter remains unchanged,
+including its arbitration logic and the interface of its arbitration
+logic with DMA arbitration logic.
+
+
+
+COMBEL SPEC REV A07                                    page 3
+
+The DMA and sound DMA arbitration is done now by the new DMA device
+and is external to the COMBO. The DMA arbitration will have priority
+over the Blitter arbitration.  So, a Blitter operation will be
+interrupted by the DMA.  The Blitter will resume control on the system
+bus when the DMA op eration terminates.  The other resources that
+require access to memory are: video and refresh. In STe those
+resources shared the CPU bus cycles in a timeshare scheme, with
+refresh active only during video blanking time. This way the video
+could access the memory continously, witout being interrupted by any
+bus master or the CPU.  In Sparrow this timeshare scheme can no longer
+be accomplished since the CPU operates now twice as fast (16Mhz) and
+video memory accesses are PAGE MODE accesses. So, now the video and
+refresh will get access to memory by stalling any bus master that is
+active on the memory bus while the video or refresh request exist.
+This is done by controlling the DTACK line. So, when video or refresh
+request will exist the current bus cycle will be extended by holding
+DTACK not active. While the current bus cycle is in wait states, the
+memory bus (which is separate from the system data bus) will be used
+to serve the video or refresh request.  When this request is served,
+the DTACK will be activated to terminate the current bus cycle.
+
+The Video Address Counter Block has to:
+
+   1) Address count at max freq of 16MHz
+   2) Support Horizontal and Vertical Scrolling.
+   3) Support Interlace mode.
+   4) Support Page mode reads from DRAM.
+   5) Support 16/32 bit data bus video reads from DRAM.
+   6) Support up to 14MB DRAM memory space.
+   7) Support the repetition of lines (for VGA).
+
+The DRAM control logic and RAS/CAS generation logic has to be modified
+to support:
+
+1) Regular read/write from DRAM.
+2) Page mode read from DRAM during video cycles.
+3) CAS before RAS refresh cycles.
+4) Support 512KB, 1MB, 2MB, 4MB, 8MB  or 14MB DRAM configurations,
+organized
+as 16 bit wide or 1MB, 4MB or 14MB DRAM configurations organized as 32
+bit wide.
+
+
+2.2  Blitter
+
+The Blitter is identical to the one in the STe COMBO.
+
+
+2.3  Video Support Registers
+
+Several registers are used by the Video address counter:
+
+   1) Video Base Address for loading the address counter with the
+   starting address after each Vsync.
+   2)  Displayed Line Width register.
+   2) Video Address counter itself (mentioned above).
+   3) Horizontal Offset register which contains in scroll mode the
+   amount of Extra line width.
+COMBEL SPEC REV A07                                    page 4
+
+
+These registers (apart from Displayed Line Width Register) are
+basically the
+same as in the STe COMBO with the additions to support up to 14MBytes
+DRAM memory and the modifications mentioned above relating to the
+video address counter.
+
+See Fig. 1 for explanation of video address generation using the video
+registers.
+
+This scheme will support skip lines for interlace to enable the
+display of 400 lines on TV. It will also support the display of video
+with 200 lines resolution on a VGA monitor by repeating each line
+once.
+
+At the end of each line several things can happen, depending which
+video mode
+and monitor is being used (signals ILINE, IFRAME etc. appear in Fig.
+1, signals FIELD and IFRAME are 0 during Display Enable):
+
+ mode                        action
+
+Normal          FIELD=1,  add DLW and "pixel scrol adjust value" on
+LCLK.  ILINE=1, FIELD=0  add Horiz. Offset on LCLK.
+                Reset counter and ILINE=0.
+
+Interlace       FIELD=1,  add DLW and "pixel scrol adjust value" on
+LCLK.  ILINE=1, FIELD=0  add Horiz. Offset on LCLK.
+                FIELD=1,  add DLW and "pixel scrol adjust value" on
+                LCLK.  ILINE=1, FIELD=0  add Horiz. Offset on LCLK.
+                Reset counter and ILINE=0.
+
+Double lines    Reset counter and ILINE=0.
+(odd lines)
+
+Double lines    FIELD=1,  add DLW and "pixel scrol adjust value" on
+LCLK.  (even lines)    ILINE=1, FIELD=0  add Horiz. Offset on LCLK.
+                Reset counter and ILINE=0.
+
+* DLW is Displayed line width register. Pixel scrol adjust value is 0
+if scrol
+register (FF8264) is 0, otherwise it has the value of the number of
+color planes.
+
+* For 32 bit video bus operation the address of the next line has to
+be on an
+even word boundary.
+
+To support Interlace the Base Address has to be modified to point on
+the beginning of the second line of the display on odd fields. This is
+done in the following manner:
+
+After VINT if we are in an even field then activate the following
+signals:
+
+IFRAME=1, load Base Address on LCLK. Then IFRAME=0.
+
+
+COMBEL SPEC REV A07                                    page 5
+
+After Vsync if we are in an odd field:
+
+IFRAME=1, load Base Address on LCLK. Then IFRAME=0.
+FIELD=1, add Dispalyed Line Width and "pixel scrol adjust value" on
+LCLK.  Then, ILINE=1, FIELD=0 add Horz. Offset on LCLK. Then ILINE=0.
+
+The signal FIELD, ILINE, IFRAME, HRESET are generated inside the COMBO
+using
+signals like VINT.
+
+
+
+
+2.4   I/O Logic Previously Resided in the MCUG
+
+This logic is basically unchanged from the STe COMBO. It contains:
+
+1) ROM/RAM/IO address decode.
+2) Interrupt priority encoding.
+3) Bus error timeout.
+4) Paddle circuit.
+5) Joystick circuit.
+6) Register decode.
+7) Clock dividers.
+
+
+
+4.  COMBO Register List
+
+I/O address                 Register
+
+All Addresses are offsets from starting address of FF0000.
+
+8001                Memory Configuration Register.
+8006                Configuration switches.
+8007                CPU clock control and misc controls.
+8200 - 8201         Video Base Address High.
+8202 - 8203         Video Base Address Mid.
+8204 - 8205         Video Address Counter High.
+8206 - 8207         Video Address Counter Mid.
+8208 - 8209         Video Address Counter Low.
+820C - 820D         Video Base Address Low.
+820E - 820F         Video Offset Register.
+8210 - 8211         Displayed Line Width Register.
+8800                PSG Read Data/ PSG Register Select.
+8802                PSG Write Data.
+8960                Real Time Clock Address Register.
+8962                Real Time Clock Data Register.
+8A00 - 8A3F         Blitter addresses.
+8C80                SCC A Control.
+8C82                SCC A Data.
+8C84                SCC B Control.
+8C86                SCC B Data.
+9200                Control Switch Register.
+9201                Joystick fire Buttons.
+9202 - 9203         Joystick ports.
+9210 - 9211         Paddle 0 X Control.
+9212 - 9213         Paddle 0 Y Control.
+COMBEL SPEC REV A07                                    page 6
+
+
+9214 - 9215         Paddle 1 X Control.
+9216 - 9217         Paddle 1 Y Control.
+FA00 - FA2F         MFP Addresses (For MFPCS).
+FC00 - FC03         iKBD ACIA Addresses (For ACIA CS)
+FC04 - FC07         MIDI ACIA Addresses (For ACIA CS)
+
+Also the COMBO detects addresses FF8200-FF82C3 and FF9800-FF9BFF to
+generate
+the VCS (Video Chip Select).
+
+In addition The COMBO controls the CS for the RAM, ROM and Cartridge
+ROM and internal hard disk interface (IDE) which are at address es:
+
+000000 - 000007     ROM Based RESET VECTOR.
+000008 - DFFFFF     RAM.
+E00000 - EFFFFF     ROM.
+F00000 - F0003F     IDE.
+FA0000 - FBFFFF     Cartridge Boot ROM.
+
+
+Some of the video registers that are used in the VIDEO SHIFTER are
+also copied to internal registers in the COMBO for internal control
+purposes .  These registers are:
+
+FF820A              SP Sync Mode Register.
+FF8260              ST Shift Mode Register.
+FF8265              Horizontal Pixel Scroll Register.
+FF8266 - FF8267     SP Shift Mode Register.
+FF82C2              Video Timing Control.
+
+
+4.  COMBO Pinlist
+
+The new COMBO has 144 pins with the following pin assignment:
+
+4.1 A1-A23. This 23 bit, bidirectional tristate active high bus is
+used for address. For MCUG it is used only as input address bus. For
+Blitter it is used as input address bus when it is a bus slave or as
+output address bus when it is a bus master.
+
+4.2  D0-D15. This 16 bit  bidirectional tristate active high bus is
+used for
+data.
+
+4.3  AS. Address strobe. This is a bidirectional tristate active low
+line.  It
+indicates that there is a valid address on the address bus. For MCUG
+it is an
+input. For Blitter it is an input when it is a bus slave or an output
+when it
+is a bus master.
+
+4.4  UDS. Upper data strobe. This is a bidirectional tristate active
+low line.
+It controls the flow of data on the data bus together with LDS and
+R/W. For MCUG it is an input. For Blitter it is an input when it is a
+bus slave or an output when it is a bus master.
+COMBEL SPEC REV A07                                    page 7
+
+
+4.5  LDS. Lower  data strobe. This is a bidirectional tristate active
+low line.
+It controls the flow of data on the data bus together with UDS and
+R/W. For MCUG it is an input. For Blitter it is an input when it is a
+bus slave or an
+output when it is a bus master.
+
+4.6  R/W. Read/Write. This is a bidirectional tristate line. It
+defines the data transfer as read when high or write when low. It also
+controls the flow
+of data on the data bus together with LDS and UDS. For MCUG it is an
+input.  For Blitter it is an input when it is a bus slave or an output
+when it is a bus master.
+
+4.7  DTACK. Data tansfer acknowledge tri-state, active low output. It
+outputs
+DTACK to the CPU or the current bus master (DMA chip). It indicates to
+the CPU
+or the current bus master that the data transfer is complete.
+
+4.8   BR. Bus Request active low output. This is an open drain output
+used to
+request control on the system bus. Other bus masters can also pull
+this line
+low to request control on the system bus.
+
+4.9   BGI. Bus Grant active low input. This is the bus grant input
+from the CPU in response to bus request.
+
+4.10  BGACK. Bus grant acknowledge active low output to the CPU in
+response to
+the bus grant. While the Blitter is the bus master BGACK is active.
+
+4.11  IPL0,IPL1,IPL2. Interrupt priority active low outputs to the
+CPU. The COMBO encodes these lines with the proper interrupt priority
+code.
+
+4.12   BERR. Bus Error active low output to the CPU. This is  an open
+drain
+output. It indicates the CPU that the current bus cycle did not
+terminated in
+the required timeout, or an address that is not in the correct I/O
+space was
+issued. Any other bus master can also pull this line low to indicate a
+bus error situation.
+
+4.13  RESET. Reset active low input from CPU.
+
+4.14 VPA. Valid peripheral address active low output to CPU.  Used to
+control
+the ACIA devices.
+
+4.15  VMA. Valid memory address active low input from CPU. Used to
+control the ACIA devices.
+
+
+
+COMBEL SPEC REV A07                                    page 8
+
+4.16  FC0,FC1,FC2. Function codes.  These are bidirectional tristate
+active high lines. They are inputs for MCUG. They are inputs for
+Blitter when it is a bus slave. They are outputs from Blitter when it
+is a bus master.
+
+4.17 CLK. Clock input. This is a 32Mhz internal clock from Sparrow
+motherboard.
+
+4.18  TOK. Keyboard transmit OK handshake input line. Holds a
+transmitted character to keyboard until TOK turns HI.
+
+4.19   TXD. Input to COMBO of data transmitted to keyboard.
+
+4.20  MFPINT. MFP interrupt active low input.
+
+4.21 EINT1,EINT3,EINT5,EINT7. External interrupt inputs. EINT7, EINT5
+are active low. EINT1, EINT3 are active high.
+
+4.22  BINT. Blitter interrupt active low output.
+
+4.23  EVEN_ODD. Even/odd frame input from video shifter. 0-EVEN.
+
+4.24   PAD0X,PAD0Y,PAD1X,PAD1Y. Paddle active low inputs.
+
+4.25  CPUCLK. 16Mhz or 8Mhz output clock to CPU and other I/O's.
+
+4.26  CLK4, CLK8. 4Mhz and 8Mhz output clocks.
+
+4.27  KHZ500. 500Khz output clock.
+
+4.28  MFPCS. MFP chip select active low output.
+
+4.29  ROM2. Socketted ROM active low chip select output.
+
+4.30  ROM3,ROM4. Cartrige ROM active low chip select outputs.
+
+4.31  SNDCS,SNDIR. Control lines for PSG.
+
+4.32  VCS. Video chip select active high output.
+
+4.33  VLD. Active high strobe output to strobe DRAM data into shifter
+INPUT BUFFER.
+
+4.34  HINT. Horizontal interrupt active low input from video chip.
+
+4.35 VINT. Vertical interrupt  active low input from video chip.
+
+4.36  VREQ. Video request active high input signal.
+
+4.37  IACK. Interrupt acknowledge active low output to CPU.
+
+4.38  N6850. ACIA active high chip select output.
+
+4.39  RDAT. Read DRAM active low control line to video chip.
+
+4.40  WDAT. Write DRAM active low control line to video chip.
+
+4.41  PADRST. Paddle reset active low output.
+COMBEL SPEC REV A07                                    page 9
+
+4.42  BUTTON. Fire buttons read enable. active low output.
+
+4.43  JOYRH,JOYRL. Joysticks read enable active low output lines.
+
+4.44  JOYWH,JOYWL. Joysticks write enable active low output lines.
+
+4.45  IDE SUPPORT output active low pins (HIDEIOW, HIDEIOR, HIDECS0,
+HIDECS1).
+Pins for supporting IDE interface option.
+
+4.46  R8006. Active low control line to enable reading I/O address
+FF8006.
+
+4.47  FPUCS. FPU Chip Select active low output.
+
+4.48  MAD0-MAD10. This is the 11 bits outputs DRAM address  bus.
+
+4.49  WE. DRAM write enable active low output.
+
+4.50  RAS0,RAS1. These are the DRAM row address select active low
+output lines.
+RAS0 selects SIMM 1. RAS1 selects SIMM 2.
+
+4.51  CAS0H,CAS1H. This is the DRAM CAS HIGH select active high ouput
+lines.
+CAS0H is used as SIMM1 CAS for high byte. CAS1H is used the same way
+for SIMM2.
+
+4.52   CAS0L,CAS1L. This is the DRAM CAS LOW select active low output
+lines.
+CAS0L is used as SIMM1 CAS for low byte. CAS1L is used the same way
+for SIMM2.
+
+4.53   RAMH. This is an address select control to the VIDEO SHIFTER to
+select
+the low or high DRAM word in 16 bit video bus. 0 - select the low
+word.
+
+4.54  RTCCS, RTCAS, RTCDS. Active low output pins to support MC146818A
+Real Time Clock.
+
+4.55  SCCAB, SCCRD, SCCWR, SCCIACK. Output pins to support 85C30 SCC.
+SCCRD,
+SCCWR and SCCIACK are active low.
+
+4.56   SCCWAIT. Active low input pin to support SCC.
+
+4.57   BGO. BGO used for arbitration daisy chaining.
+
+4.58   TEST.
+
+4.59  KH500SW. Switched 500 KHz clock output. Used for controlling
+6850 that
+transmitts keyboard data.
+
+4.60  POR. Power on reset input.
+
+4.61  PRTACK. Printer acknowledge input.
+COMBEL SPEC REV A07                                    page 10
+
+4.62  VDD. Five power lines. Connected to 5V.
+
+4.63  GND. Five ground lines.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,232 @@
+
+     DESIGN SPECIFICATION FOR THE TT INTERRUPT CONTROLLER (SCU)
+     Atari part #:
+
+Incarnations:  National AAD rev. A
+            *National ADS rev. B
+            *Styra ST-4129 (rev. B only)
+
+          *May be used in production.
+
+Pin Description
+
+A0-A31    cmos input     address bus from CPU
+     (change to TTL if chip ever revised)
+
+FC0-FC2   cmos input     CPU function codes
+     (change to TTL if chip ever revised)
+
+SIZ0-1    cmos input     CPU data size code
+     (change to TTL if chip ever revised)
+
+XAS  cmos input     Address strobe from CPU
+     (change to TTL if chip ever revised)
+
+XDS  cmos input     data strobe from CPU
+     (change to TTL if chip ever revised)
+
+CLK  cmos input     16 Mhz clock input
+
+RXW  cmos input     CPU read write line
+     (change to TTL if chip ever revised)
+
+XPOR TTL input power on reset (active low), clears all internal
+               registers and interrupt masks.
+
+D0-D7     TTL bi-dir     CPU data bus
+
+XFPUCS    output         chip select to FPU (active low)
+XIOCS1    output         general IO select 1 (active low)
+XIOCS2    output         general IO select 2 (active low)
+XMFP1     output         chip select to MFP1 (active low)
+XMFP2     output         chip select to MFP2 (active low)
+
+XDSACK1   ts output data size acknowledge
+
+XBERR     ts output bus error output, goes low after 256 clocks
+if XAS
+               remains low
+
+XVIRQ1-7 ttl input  VME bus interrupt inputs lines
+
+HSYNC     ttl input horizontal sync pulse, generates system
+interrupt 2
+VSYNC     ttl input vertical sync pulse, generates system
+interrupt 4
+
+XSIRQ5-7 ttl input  system interrupt inputs
+
+XIPL0-2   output         interrupt output lines to CPU
+
+XSYSI     output         system iack signal to VME circuit, when
+low a system
+               interrupt is being acknowledged, else a VME
+interrupt
+               is being acknowledged
+
+XAVEC     ts output auto-vector acknowledge, terminates system
+interrupt
+               acknowledge cycles for levels 1,2,3,4, and 7
+
+XIACK5-6 output          Interrupt ackowledge outputs, low
+indicates a
+               interrupt ackowledge cycle is in progress for
+               system interrupt levels 5 or 6
+
+
+
+PACKAGE
+The circuit needs 77 signal pins. Package is a 84 pin PLCC.
+
+PIN-OUT
+1  - XIOCS2    22 - A6        43 - A25  64 - XIPL1
+2  - XIOCS1    23 - A7        44 - A26  65 - XIPL2
+3  - XMFP2     24 - A8        45 - A27  66 - XSIRQ
+4  - XMFP1     25 - A9        46 - A28  67 - XSYSI
+5  - XFPUCS    26 - A10  47 - A29  68 - XSIRQ5
+6  - XDSACK1   27 - A11  48 - A30  69 - XSIRQ6
+7  - XBERR     28 - A12  49 - A31  70 - XSIRQ7
+8  - SIZ1 29 - A13  50 - FC0  71 - XVIRQ1
+9  - SIZ0 30 - A14  51 - FC1  72 - XVIRQ2
+10 - CLK  31 - A15  52 - FC2  73 - XVIRQ3
+11 - VDD  32 - XPOR 53 - VDD  74 - VDD
+12 - VSS  33 - VSS  54 - VSS      **75 - TMC
+13 - XAS  34 - A16  55 - D0        76 - XVIRQ4
+14 - XDS  35 - A17  56 - D1        77 - XVIRQ5
+15 - RXW  36 - A18  57 - D2        78 - XVIRQ6
+16 - A0        37 - A19  58 - D3        79 - XVIRQ7
+17 - A1        38 - A20  59 - D4        80 - HSYNC
+18 - A2        39 - A21  60 - D5        81 - VSYNC
+19 - A3        40 - A22  61 - D6        82 - XIACK5
+20 - A4        41 - A23  62 - D7        83 - XIACK6
+21 - A5        42 - A24  63 - XIPL0     84 - XAVEC
+
+** pin 75 is connected to a test mode control in the National
+   AAD and ADS parts, it is not connected in the ST-4129. It
+   should always be open in the system.
+
+=================================================================
+=
+
+          TT INTERRUPT CONTROLLER (SCU)
+
+
+-----------------------------------------------------------------
+-
+GLUE FUNCTIONS
+
+xxFFA000-xxFFA1FF   GENERATES XIOCS1    uncommitted IO 
+xxFFA200-xxFFA3FF   GENERATES XIOCS2
+
+XFPUCS is generated for CPU space cycles with ID 01.
+(FC0=FC1=FC2=A17=A13= 1  A19=A18=A16=A15=A14= 0)
+
+xxFFFA00-xxFFFA3F   GENERATES MFP1
+xxFFFA80-xxFFFABF   GENERATES MFP2
+
+Where xx is A24-A31 = 00h or FFh
+
+XBERR is driven low when XAS remains low for more than 256
+clocks.
+
+-----------------------------------------------------------------
+-
+INTERRUPT CONTROLLER
+
+ADDR      D7  -  D0
+xxFF8E01  XXXX XXX0 SYSTEM INTERRUPT MASK
+                    0 in a bit position masks the corresponding
+                    system interrupt. Reset state is all masked.
+
+xxFF8E03  XXXX XXX1 SYSTEM INTERRUPT STATE
+                    Inverse of the actual state of the system
+                    interrupts taken before the mask gates.
+
+xxFF8E05  XXXX XXX* SYSTEM INTERRUPTER REGISTER
+                    Setting bit 0 will generate system
+                    interrupt 1 unless masked.
+                    Otherwise all bits are general read/write.
+
+xxFF8E07  XXXX XXX* VME INTERRUPTER REGISTER
+                    Setting bit 0 will cause XSIRQ to go low
+                    if not masked by system interrupt mask 3.
+                    Otherwise all bits are general read/write.
+
+xxFF8E09  XXXX XXXX GENERAL PURPOSE REGISTER 1
+                    8 bit read/write.
+
+xxFF8E0B  XXXX XXXX GENERAL PURPOSE REGISTER 2
+                    8 bit read/write.
+
+xxFF8E0D  XXXX XXX0 VME INTERRUPT MASK
+                    0 in a bit position masks the corresponding
+                    VME interrupt. Reset state is all masked.
+
+xxFF8E0F  XXXX XXX0 VME INTERRUPT STATE
+                    Inverse of the actual state of the VME
+                    interrupts taken before the mask gates.
+
+There are two ways each interrupt level can be generated; via the
+system
+or local interrupt source or by the XVIRQx input pins. The system
+interrupt sources are masked by the system interrupt mask
+register bits.
+The XVIRQx inputs are masked by the VME interrupt mask register
+bits.
+
+Interrupt 1 is caused by setting bit 0 in the system interrupter
+register or a low on XVIRQ1. The bit must be explicitly reset or
+the
+external interrupt removed or masked to clear.
+
+Interrupt 2 is caused by a rising edge on HSYNC or a low on
+XVIRQ2. If caused by HSYNC it is reset by an IACK 2 cycle else
+the
+external interrupt must be removed or masked. Caution should be
+taken
+that an IACK 2 cycle as a result of XVIRQ2 does not clear a
+subsequent
+HSYNC interrupt.
+
+Interrupt 3 is caused by setting bit 0 in the VME interrupter
+register or a low on XVIRQ3. The bit must be explicitly reset or
+the
+external interrupt removed or masked to clear.
+
+Interrupt 4 is caused by a rising edge on VSYNC or a low on
+XVIRQ4. If caused by VSYNC it is reset by an IACK 4 cycle else
+the
+external interrupt must be removed or masked. Caution should be
+taken
+that an IACK 4 cycle as a result of XVIRQ4 does not clear a
+subsequent
+VSYNC interrupt.
+
+Interrupts 5 and 6 are caused by a low on XVIRQ5 or XVIRQ6 
+respectivly. An IACK 5 or IACK 6  cycle will generate a low on
+XIACK5
+or XIACK6 respectivly only if the XSIRQ5 or XSIRQ6 inputs are
+low.
+The external interrupt must be removed or the interrupt masked to
+clear.
+
+A low on XSIRQ7 or XVIRQ7 will cause interrupt 7. The external
+interrupt
+must be removed or the interrupt masked to clear.
+
+During the interrupt acknowledge cycle, if the local interrupt
+state
+exists for the level being acknowledged (ie. VSYNC, HSYNC, the
+interrupter
+bits set, or the appropriate XSIRQ pin low), then the XSYSI line
+is
+driven low and either the XIACK pin for level 5 or 6, or the
+XAVEC pin
+for levels 1,2,3,4,or 7, is driven low. If the local interrupt
+state is
+not present, the interrupt must have come from the VME bus. In
+this case
+the XSYSI pin remains high and both the XIACK pins and the XAVEC
+pin
+remain high.
+

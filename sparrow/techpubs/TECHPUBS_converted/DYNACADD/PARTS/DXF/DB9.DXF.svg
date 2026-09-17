@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1303.22" height="2448" viewBox="0 0 1303.22 2448">
+<title>DYNACADD/PARTS/DXF/DB9.DXF</title>
+<rect x="0" y="0" width="1303.22" height="2448" fill="#ffffff"/>
+<g data-layer="1" fill="none" stroke="#000000" stroke-width="84.96" stroke-linecap="butt" stroke-linejoin="miter">
+<path d="M478.06 2356.64L945.31 1889.38A84.96 84.96 0 0 0 970.2 1829.31L970.2 618.69A84.96 84.96 0 0 0 945.31 558.62L478.06 91.36A84.96 84.96 0 0 0 333.03 151.43L333.03 2296.57A84.96 84.96 0 0 0 478.06 2356.64Z"/>
+</g>
+<g data-layer="1" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M754.09 1058.18A53.49 53.49 0 1 0 742.95 1055.6L754.09 1058.18ZM540.22 2133.78A53.49 53.49 0 1 0 529.08 2131.2L540.22 2133.78ZM754.09 1499.94A53.49 53.49 0 1 0 742.95 1497.36L754.09 1499.94ZM745.18 1922.5A53.49 53.49 0 1 0 734.04 1919.92L745.18 1922.5ZM540.22 1701.62A53.49 53.49 0 1 0 529.08 1699.04L540.22 1701.62ZM540.22 1279.06A53.49 53.49 0 1 0 529.08 1276.48L540.22 1279.06ZM754.09 645.22A53.49 53.49 0 1 0 742.95 642.64L754.09 645.22ZM540.22 856.5A53.49 53.49 0 1 0 529.08 853.92L540.22 856.5ZM540.22 433.94A53.49 53.49 0 1 0 529.08 431.36L540.22 433.94Z"/>
+</g>
+<g data-layer="1" fill="#000000" stroke="none" font-family="Helvetica, Arial, 'Liberation Sans', 'DejaVu Sans', sans-serif" xml:space="preserve">
+<text transform="translate(120.64 2076.89)" y="63.72" font-size="175.86" text-anchor="middle">1</text>
+<text transform="translate(120.64 1652.11)" y="63.72" font-size="175.86" text-anchor="middle">2</text>
+<text transform="translate(120.64 1227.33)" y="63.72" font-size="175.86" text-anchor="middle">3</text>
+<text transform="translate(120.64 802.55)" y="63.72" font-size="175.86" text-anchor="middle">4</text>
+<text transform="translate(120.64 377.77)" y="63.72" font-size="175.86" text-anchor="middle">5</text>
+<text transform="translate(1182.59 1014.94)" y="63.72" font-size="175.86" text-anchor="middle">8</text>
+<text transform="translate(1182.59 1439.72)" y="63.72" font-size="175.86" text-anchor="middle">7</text>
+<text transform="translate(1182.59 1864.5)" y="63.72" font-size="175.86" text-anchor="middle">6</text>
+<text transform="translate(1182.59 590.16)" y="63.72" font-size="175.86" text-anchor="middle">9</text>
+</g>
+</svg>

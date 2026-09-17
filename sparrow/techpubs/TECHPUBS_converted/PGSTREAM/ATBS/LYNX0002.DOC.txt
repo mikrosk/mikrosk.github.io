@@ -1,0 +1,66 @@
+[PageStream 2 document LYNX0002.DOC: 8.50 x 11.00 in, 2 objects]
+
+--- Page 1 ---
+
+Atari Technical Bulletin
+Number: LYNX-0002
+Date: June 25, 1992
+Page 1 of 2
+
+
+Product(s) Affected:	LYNX II
+Model:				LYNX II
+Type of ATB:			As Needed
+ECO#:				N/A
+
+Reason for ATB:
+
+To repair failures of the front panel controls on the LYNX II (joystick: Up, Down, Left and Right, and the two (2) A and B fire buttons).
+
+Notes:
+
+The Sub-PCB (flexible printed circuit board / keyboard) and Conductive Rubber Buttons, under the plastic key caps, can fail prematurely causing a switch closure, both when the switch is and is not depressed.
+
+Symptoms of Problem:
+
+Either the joystick and / or the A and B Fire Buttons do not respond properly when the game is being played.
+
+Solution of Problem:
+
+The LYNX II will have to be opened, in order to replace the Sub-PCB and the Conductive Rubber Buttons. The procedure is listed below :
+
+1. Remove the bottom case
+2. Disconnect all interconnections on the Printed Circuit Board
+3. Remove LCD Assembly
+4. Remove FPC Supporter Assembly
+5. Completely disassemble the FPC Supporter
+6. Remove all Rubber Guides and Rubber Contacts from the assembly
+7. Remove Sub-PCB from the FPC Supporter
+8. Replace new Sub-PCB on the FPC Supporter
+9. Install new Rubber Contacts using the old Rubber Guides
+10. Re-assemble the LYNX in the the opposite order of dis-asembly.
+11. Using the Production Test Software, recheck all functions of the LYNX.
+
+--- Page 2 ---
+
+Atari Technical Bulletin
+Number: LYNX-0002
+Date: June 25, 1992
+Page 2 of 2
+
+
+The FPC Supporter
+
+The Sub-PCB and all the Rubber Contact will be replaced. Their Atari Part Numbers are listed below :
+
+C104126-001     SUB PCB UNIT
+C104144-001     RUBBER CONTACT F1
+C104145-001     RUBBER CONTACT F2
+C104146-001     RUBBER DONTACT D
+
+The FPC Supporter and the Rubber Guides are reused for the rebuild process. Their Atari Part Numbers and Descriptions are listed below :
+
+C104150-001     FPC SUPPORTER
+C104153-001     RUBBER GUIDE F1
+C104154-001     RUBBER GUIDE F2
+C104155-001     RUBBER GUIDE D

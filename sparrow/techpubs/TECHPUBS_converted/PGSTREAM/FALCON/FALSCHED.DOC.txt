@@ -1,0 +1,40 @@
+[PageStream 2 document FALSCHED.DOC: 8.50 x 11.00 in, 3 objects]
+
+--- Page 1 ---
+[1 drawing objects, see FALSCHED.DOC.p001.svg]
+
+Dallas Office Memo
+
+
+To:		Tom Ulaszek
+From:	Marty Pennock
+Subject:	Basic Time Schedules for Falcon Manual Generation
+
+Date:	2/3/92
+
+
+cc:		Ira Goldstein - ATX
+
+
+The following is a guideline for the production of a Service Manual for the Falcon project on the Atari TT030 using PageStream and DynaCADD is as follows:
+
+
+Text Creation
+
+Manual text creation from scratch involving having to enter the text from scratch with no prior information present on paper or floppy that can be used. Creation of text from this type of input should run 15-20 working days. This takes for granted that other schedules permit full time work on entering the into the system and that base information such as data sheets and schematics is available.
+
+
+Drawing Figure Creation
+
+Some drawings do exist in the Doc Center and will be converted to DXF type files and input into the DynaCADD package directly. This method would take 1-2 hours per drawing to accomplish. A total of 15-19 drawings are needed, which will take approximately 30-40 hours, or 5 working days.
+
+
+Layout
+
+Layout will generally depend on the size of the manual being produced. I would base my estimates on 3-7 pages per day. This would equate to 20 days worst case and 10 days best case.
+
+
+Sincerely
+
+
+Marty Pennock

@@ -1,0 +1,94 @@
+[PageStream 2 document TOMSCH1.DOC: 8.50 x 11.00 in, 5 objects]
+
+--- Page 1 ---
+[1 drawing objects, see TOMSCH1.DOC.p001.svg]
+
+Dallas Office Memo
+
+
+To:		Tom Ulaszek
+From:	Marty Pennock
+Subject:	Basic Time Schedules for Manual Generation
+
+Date:	10/29/91
+
+
+cc:		Ira Goldstein - ATX
+		Leonard Tramiel - SUVL
+		Sam Tramiel - SUVL
+		Robert Shen - SUVL
+		Stephen Chan - SUVL
+		Richard Miller - SUVL
+		Maxie Smith - SUVL
+
+
+A good generic guideline for production of service, technical reference, and option kit manuals produced on the Atari TT030 using PageStream and DynaCADD is as follows:
+
+
+1.	Text Creation
+
+Text creation for each manual, especially service guides will vary depending upon the type of input material that is already available. There are three distinct possibilities in this area. They are:
+
+A. Existing text material from a previous manual on electronic copy that can be used as a foundation. This involves having a manual on floppy that can be imported into the system and changed where necessary. This is the best of the three scenarios as far as time is concerned. Creation of text from this type of input should run 5-10 working days. This takes for granted that the input from floppy occurs without any difficulties in file transfer.
+
+B.  Existing text material from a previous manual on hard copy that can be used as a foundation. This involves having a manual on paper that can be marked up and entered into the system with changes where necessary. This is the second best of the three scenarios as far as time is concerned. Creation of text from this type of input should run 10-15 working days. This takes for granted that other schedules permit full time work on entering the into the system.
+
+C.  Manual text creation from scratch. This involves having to enter the text from scratch with no information present on paper or floppy that can be used. This is the worst case of the three scenarios as far as time is concerned. Creation of text from this type of input should run 15-25 working days. This takes for granted that other schedules permit full time work on entering the into the system and that base information such as data sheets and schematics is available.
+
+--- Page 2 ---
+
+Overview
+
+
+Type of Input					Number of Days
+
+Floppy Based			5-10
+Hard Copy Based		10-15
+No Input			15-25
+
+
+2.	 Drawing Figure Creation
+
+
+There are basically two scenarios that we are concerned with here. One is that files already exist on the ACAD system in the Document Control Center, and the other is that no drawings yet exist.
+
+
+A. If drawings do exist in the Doc Center they can be stored as DXF type files and input into the DynaCADD package directly. This is the most efficient method as far as time is concerned. The drawings would then be fixed and labels (call outs) would be assigned to them and they would be converted to output which is compatible with the PageStream system. This method would take 1-2 hours per drawing to accomplish. There are some questions concerning the input of drawing files into PageStream. A suitable file format must yet be determined. So far only Encapsulated Postscript files have worked properly.
+
+B.  Drawings that have to be created from scratch may take as long as 1 day per drawing depending on the complexity of the drawing itself. This can vary slightly based on how many drawings are needed for a particular document. If the document is to be done as was the old STE Service Guide, then it is relatively simple. There are not that many drawings to be done. If the document is to be done based on an input of the existing SOTEC service guide, as was requested by Richard Miller, then many more detailed drawings taking a much larger amount of time would be required. One solution to this problem would be to have Mike Beland in the Doc Control Center do the initial drawings on spec and give them to me in the DXF format for conversion 2and placement in the manual. This type of scheduling, however, is completely dependent on the Doc Control Center.
+
+
+Overview
+
+
+Type of Drawings			Number of Days
+
+
+Existing Drawings to DXF		1-2 Hours per drawing
+No Drawing				1 Day per Drawing
+
+--- Page 3 ---
+
+3.	 Layout
+
+
+Layout is probably the most time consuming of all of the procedures in creating manuals. It is solely dependent on the ability of the PageStream package to import both text and graphics files for layout into final form. There are some difficulties that have already been encountered by myself and Jerry Smith in this area. Problems so far documented are that PageStream will not allow over 20 pages to be done at a time, some drawings will not import unless in Encapsulated Postscript, which shows on the page as a square box. This method is hard because a page with a drawing must be typeset, printed to check the size of the figure, typeset again to fix and sizing errors, printed again, and so on. Layout will generally depend on the size of the manual being produced. I would base my estimates on 3-7 pages per day. This would equate to 33 days worst case and 13 days best case.
+
+
+	Overview
+
+
+	Case					Number of Days
+
+
+	Worst			33
+	Best				13
+
+
+I hope this will clear up some of the scheduling dilemma surrounding DTP on the Atari TT030.
+
+
+Sincerely
+
+
+Marty Pennock

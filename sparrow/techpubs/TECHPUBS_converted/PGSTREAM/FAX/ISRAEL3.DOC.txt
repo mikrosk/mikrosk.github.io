@@ -1,0 +1,27 @@
+[PageStream 2 document ISRAEL3.DOC: 8.50 x 11.00 in, 2 objects]
+
+--- Page 1 ---
+[1 drawing objects, see ISRAEL3.DOC.p001.svg]
+
+Dallas Office FAX
+
+
+To:		Moshe Segal, Atari Israel 011-972-52-501873
+From:     Marty Pennock
+Subject:	COMBO IC (COMBEL) and VIDEL ASIC Product Specification for Sparrow
+Date:	January 13, 1992
+
+cc:		Ira Goldstein - ATX
+		Tom Ulaszek - ATX
+		Sam Tramiel - SUVL
+		Leonard Tramiel - SUVL
+		Richard Miller - SUVL
+
+
+	Would it be possible for you to send me the ASIC specification for the COMBO IC (COMBEL) in the Sparrow project. I am working on the Service Guide and need this information to go along with the schematic that I have. If you also have a VIDEL ASIC product specification I would be very grateful if you could also send that. Your help in this matter would be greatly appreciated.
+
+
+Sincerely Yours
+
+
+Marty Pennock

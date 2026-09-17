@@ -1,0 +1,26 @@
+[PageStream 2 document STEPMEMO.DOC: 8.50 x 11.00 in, 2 objects]
+
+--- Page 1 ---
+[1 drawing objects, see STEPMEMO.DOC.p001.svg]
+
+Dallas Office Memo
+
+
+To:		Tom Ulaszek
+From:	Marty Pennock
+Subject:	STE+ Service Manual Rough Draft
+Date:	November 12, 1991
+
+cc:		Ira Goldstein - ATX
+		Rick Holman
+		Jerry Smith
+		Toomey Freeman
+
+
+Here is the rough draft of the STE+ Service manual for review by ATX personnel. One copy will be distributed to Rick Holman, another to Jerry Smith, another to Toomey Freeman. I will need this review done within two weeks in order to keep up with the schedules on this project. That should put the due date at about November 26, 1991.
+
+
+Sincerely
+
+
+Marty Pennock

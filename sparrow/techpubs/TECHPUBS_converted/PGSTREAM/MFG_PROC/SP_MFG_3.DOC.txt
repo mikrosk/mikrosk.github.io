@@ -1,0 +1,697 @@
+[PageStream 2 document SP_MFG_3.DOC: 8.50 x 11.00 in, 66 objects]
+
+--- Page 11 ---
+
+3.0	INCOMING INSPECTION
+
+1.	Application
+This procedure shall be applied for incoming inspection of all listed components.
+
+2.	Purpose
+To prevent the use of materials in the finished product which do not conform to the specifications.
+
+3.	Inspection method
+
+3.1	Type
+Lot by lot acceptance sampling
+
+3.2	Standard
+MIL-STD-105D normal inspection with single sampling
+
+3.3	Level
+Inspection level II unless otherwise specified
+
+4.	Defect classification
+Critical defect - a defect likely to result in hazardous or unsafe conditions for individuals using maintaining, or storing the product.
+Major defect - a defect, other than critical, that is likely to result in failure, or to reduce materially the usability of the product for its intended purpose.
+Minor defect - a defect that is not likely to reduce materially the usability of the product for its intended purpose, or is a departure from established standards having little bearing on the effective use or operation of the product.
+
+5.	Acceptable Quality Level (AQL)
+The following AQL will be used unless otherwise specified.
+Critical defect:	0
+Major defect:	0.65
+Minor defect:	1.5
+
+6.	Inspection lots
+Many practical matters influence the formation of inspection lots. The following rules should govern decisions on this matter.
+
+6.1	Within each lot, the factors that seem likely to cause marked variability in product quality should be as nearly constant as practicable.
+6.2	Inspection lots should be as large as possible, subject to the foregoing rule.
+
+7.	Inspection results
+Inspection results must be recorded in the inspection report. Refer to the section for items to be inspected.
+
+7.1	Rejected lots must not be used in any products unless the lot has been reworked, re-inspected and found to be qualified.
+
+7.2	The inspection report must be submitted to Atari Quality Assurance for final approval.
+
+--- Page 12 ---
+
+3.1	POWER SUPPLY
+C302866-001	117 VAC
+C302867-001	230 VAC
+
+			      	          DEFECT CLASS
+INSPECTION ITEM	DEFECT	       CRIT    MAJ     MIN
+
+1.	Appearance	a) scratch, dirt				X
+		b) damaged			X
+		c) loose parts			X
+		d) rating label				X
+			manufacturer's logo
+			manufacturer's part number and revision
+			serial number
+			Atari part number and revision
+			appropriate safety marks
+			input power requirements
+			rated output current and voltage
+		e) outline dimensions			X
+		f) mounting bracket dimensions			X
+
+2.	Spec drawing	a) electrical parameter out of spec			X
+	compliance		part must meet or exceed Atari drawing parameters
+		b) physical dimensions			X
+			part must meet Atari drawing parameters
+		c) material/finish			X
+			part must meet Atari drawing parameters
+		d) operating conditions/safety requirements		X
+			part must meet or exceed Atari drawing parameters
+
+3.	Load test	a) output #1: +5VDC ± 5%			X
+			Input voltage: nominal
+			load current: 7.0 Amps
+		b) output #2: +12VDC ± 10%			X
+			Input voltage: nominal
+			load current: 0.2 Amps
+
+4.	Ripple test	a) output #1: 100mv p-p			X
+			Input voltage: -10% from nominal
+			load current: 7.0 Amps
+		b) output #2: 100mv p-p			X
+			Input voltage: -10% from nominal
+			load current: 0.2 Amps
+
+4.	+5VDC set point	+5.05 ± 0.1 VDC				X
+			Input voltage: nominal
+			load current: 4.0 Amps
+
+5.	Safety test	a) dielectric withstand voltage: 1500 VAC, 10ma, 60sec	X
+		b) insulation resistance: 10 megohms minimum		X
+
+--- Page 13 ---
+
+3.2	KEYBOARD
+CA401297-001	US
+CA401297-003	UK
+CA401297-004	FRA
+CA401297-005	GER
+CA401297-006	ITA
+CA401297-009	SPA
+CA401297-010	SWG
+CA401297-012	SWD
+CA401297-020	SWF
+
+			      	          DEFECT CLASS
+INSPECTION ITEM	DEFECT	       CRIT    MAJ     MIN
+
+1.	Appearance	a) scratch, stain, dirt				X
+		b) color/finish flaw				X
+		c) damaged			X
+		d) loose parts			X
+		e) missing keycap			X
+		f) wrong keycap			X
+		g) rating label				X
+			manufacturer's logo
+			manufacturer's part number and revision
+			serial number
+			Atari part number and revision
+			country designation
+		h) outline dimensions			X
+
+2.	Spec drawing	a) electrical parameter out of spec			X
+	compliance		part must meet or exceed Atari drawing parameters
+		b) physical dimensions			X
+			part must meet Atari drawing parameters
+		c) material/finish			X
+			part must meet Atari drawing parameters
+		d) operating conditions			X
+			part must meet or exceed Atari drawing parameters
+
+3.	Function test	a) initialization			X
+	 (production	b) key matrix, all keys function normally			X
+	   test cartridge)	c) joy 0			X
+		d) joy 1		X
+
+--- Page 14 ---
+
+3.3	FLOPPY DRIVE
+C303073-001	2MB
+
+			      	          DEFECT CLASS
+INSPECTION ITEM	DEFECT	       CRIT    MAJ     MIN
+
+1.	Appearance	a) scratch, stain, dirt				X
+		b) color/finish flaw				X
+		c) damaged			X
+		d) loose parts			X
+		e) rating label				X
+			manufacturer's logo
+			manufacturer's part number and revision
+			serial number
+			Atari part number and revision
+		f) outline dimensions			X
+
+2.	Spec drawing	a) electrical parameter out of spec			X
+	compliance		part must meet or exceed Atari drawing parameters
+		b) physical dimensions			X
+			part must meet Atari drawing parameters
+		c) material/finish			X
+			part must meet Atari drawing parameters
+		d) operating conditions			X
+			part must meet or exceed Atari drawing parameters
+
+3.	Alignment test	a) rotation speed			X
+	 (alignment disk)	b) index pulse position			X
+	  	c) head azimuth alignment			X
+		d) head radial alignment			X
+
+4.	Function test	a) format			X
+	 (production	b) read/write			X
+	   test cartridge)	c) disk change			X
+		d) write protect			X
+
+--- Page 15 ---
+
+3.4	HARD DRIVE
+C302486-001	CP2044
+C302597-001	CP2064
+C302598-001	CP2084
+C302489-001	ST9051A
+ASSIGN	ST9052A
+ASSIGN	ST9077A
+ASSIGN	ST9096A
+ASSIGN	ST9144A
+
+			      	          DEFECT CLASS
+INSPECTION ITEM	DEFECT	       CRIT    MAJ     MIN
+
+1.	Appearance	a) scratch, stain, dirt				X
+		b) color/finish flaw				X
+		c) damaged			X
+		d) rating label				X
+			manufacturer's logo
+			model number
+			manufacturer's part number and revision
+			firmware revision
+			serial number
+		e) outline dimensions			X
+
+2.	Spec drawing	a) electrical parameter out of spec			X
+	compliance		part must meet or exceed Atari drawing parameters
+		b) physical dimensions			X
+			part must meet Atari drawing parameters
+		c) material/finish			X
+			part must meet Atari drawing parameters
+		d) operating conditions			X
+			part must meet or exceed Atari drawing parameters
+
+3.	Function test	a) initialization			X
+		b) controller test			X
+		c) DMA read/write test			X
+
+4.	System benchmark	a) benchmark comparison test			X
+
+--- Page 16 ---
+
+3.5	ELECTRICAL PARTS
+C303077-001	SPEAKER FALCON 030
+	CABLE PERITEL FALCON 030
+C303031-001	CABLE SCSI II FALCON 030
+C070349-001	AC CORD US
+C070483	AC CORD CONTINENTAL
+C100273	AC CORD ITA
+C100274	AC CORD SWISS
+C100944-001	AC CORD AUS
+C303066-001	AC CORD UK
+	CABLE 2MM 44P
+C303032-001	ADAPTER ST VIDEO FALCON 030
+C303033-001	ADAPTER VGA VIDEO FALCON 030
+CA070025	MOUSE STE
+302883	FAN 12V 40*40*10MM
+
+			      	          DEFECT CLASS
+INSPECTION ITEM	DEFECT	       CRIT    MAJ     MIN
+
+1.	Appearance	a) scratch, stain, dirt				X
+		b) color/finish flaw				X
+		c) damaged			X
+		d) marking				X
+			manufacturer's logo
+			manufacturer's part number and revision
+			serial number or date code
+			appropriate safety marks
+			Atari part number and revision
+		e) outline dimensions			X
+
+2.	Spec drawing	a) electrical parameter out of spec			X
+	compliance		part must meet or exceed Atari drawing parameters
+		b) physical dimensions			X
+			part must meet Atari drawing parameters
+		c) material/finish			X
+			part must meet Atari drawing parameters
+		d) operating conditions/safety requirements			X
+			part must meet or exceed Atari drawing parameters
+
+3.	Function test	a) improper fit			X
+( assembly part into	b) requires adjustment				X
+   final product)	c) malfunction			X
+
+--- Page 17 ---
+
+3.6	PCB PARTS
+
+A.	Fab PCBs
+C302763-001	1/4 MEG PCB
+C302767-001	14 MEG PCB
+C303006-001	FALCON 030 PCB
+
+			      	          DEFECT CLASS
+INSPECTION ITEM	DEFECT	       CRIT    MAJ     MIN
+
+1.	Appearance	a) scratch, stain, dirt				X
+		b) damaged			X
+		c) tooling hole location and size tolerance			X
+		d) component hole location and size tolerance			X
+		e) conductor pattern irregularities				X
+			conductive trace width reduced less than 25%
+		f) conductor pattern defects			X
+			conductive trace width reduced greater than 25%
+		g) thickness				X
+		h) warp and twist greater than 1.5%				X
+		j) laminate defects			X
+			measling, crazing, blistering, delamination
+		k) plating defects			X
+			PTH, solder plating, solder mask
+		l) silk screen printing defects				X
+		m) vendor ID, date code				X
+		n) outline dimensions			X
+
+2.	Spec drawing	a) electrical parameter out of spec			X
+	compliance		part must meet or exceed Atari drawing parameters
+		b) physical dimensions			X
+			part must meet Atari drawing parameters
+		c) material/finish			X
+			part must meet Atari drawing parameters
+		d) operating conditions			X
+			part must meet or exceed Atari drawing parameters
+
+B.	Integrated circuits
+C025988-001	PC900 PHOTO COUPLER 6P DIP	purchase to AVL
+C070447	TL497A SW REGULATOR 14P DIP	purchase to AVL
+C070734-003	LM78L09 9 VOLT REG 3P TO92	purchase to AVL
+100117	MC1377 ENCODER 20P DIP	purchase to AVL
+C101762-003	DRAM 256K*4 FAST PAGE 80NS SOJ	purchase to AVL
+C103803-001	LM386 AUDIO AMP 8P SOIC	purchase to AVL
+C104522-001	LM555 TIMER 8P SOIC	purchase to AVL
+C302096-001	AJAX FDD CTRL 28P DIP 600MIL	purchase to AVL
+C302624-004	74HC04 14P SOIC	purchase to AVL
+C302624-244	74HC244 20P SOIC 300MIL	purchase to AVL
+C302799-002	PSG 2MHz 44P QFP	purchase to AVL
+C302824-001	3 X 8BIT DAC 44P PQFP	purchase to AVL
+C302829-001	VIDEL 120P PQFP	purchase to AVL
+C302830-001	GAL16V8-12 DIP 20P ECLK	purchase to AVL
+C302831-001	GAL16V8-12 DIP 20P UDS/LDS	purchase to AVL
+
+--- Page 18 ---
+
+B.	Integrated circuits
+C302832-001	GAL16V8-12 DIP 20P DSACK	purchase to AVL
+C302833-001	GAL16V8-12 DIP 20P AS/BG	purchase to AVL
+C302834-001	GAL20V8-12 DIP 24P DSP	purchase to AVL
+C302889-008	74LS08 14P SOIC	purchase to AVL
+C302889-074	74LS74 14P SOIC	purchase to AVL
+C302889-373	74LS373 20P SOIC 300MIL	purchase to AVL
+C302892-004	74HCT04 14P SOIC	purchase to AVL
+C302893-006	7406 14P SOIC	purchase to AVL
+C302897-001	SCSI CTRL 44P PLCC	purchase to AVL
+C302900-001	LM387 DUAL PRE-AMP 8P DIP	purchase to AVL
+C302902-001	FPU MC68882 16MHZ 68P PLCC	purchase to AVL
+C302941-001	DRAM 1MEG*4 FAST PAGE 80NS SOJ	purchase to AVL
+C302942-001	DRAM 4MEG*1 FAST PAGE 80NS SOJ	purchase to AVL
+302995-001	CUSTOM COMBEL AT4181 208P QFP	purchase to AVL
+C302996-001	CUSTOM SDMA AT4182 144 QFP	purchase to AVL
+C302997-001	MC3486 16P SOIC	purchase to AVL
+C302998-001	LM556 14P SOIC	purchase to AVL
+C302999-001	EPROM 4MB 44P PLCC	purchase to AVL
+C303001-001	MC68LC030 132P QFP	purchase to AVL
+C303002-001	DSP56K 80P QFP	purchase to AVL
+C303003-001	STEREO AUDIO CODEC 44P PLCC	purchase to AVL
+C303004-001	SRAM 32K X 8 28P SOJ	purchase to AVL
+C303030-001	LF347 14P SOIC	purchase to AVL
+C398016-001	1488 14P SOIC	purchase to AVL
+C398017-002	1489A 14P SOIC	purchase to AVL
+C398106-001	68901 52P PLCC	purchase to AVL
+C398109-001	8530 SCC 44P PLCC	purchase to AVL
+C398112-030	26LS3016P DIP	purchase to AVL
+C398112-031	26LS31 16P DIP	purchase to AVL
+C398170-001	RTC DS1287 DIP 24P 600mil	purchase to AVL
+C398173-074	74ACT74 14P SOIC	purchase to AVL
+C398173-157	74ACT157 16P SOIC	purchase to AVL
+C398784-001	68B50 24P DIP	purchase to AVL
+
+			      	          DEFECT CLASS
+INSPECTION ITEM	DEFECT	       CRIT    MAJ     MIN
+
+1.	Appearance	a) anti-static packing			X
+		b) damaged			X
+		c) marking				X
+			manufacturer's logo
+			manufacturer's part number
+			date code
+			Atari part number (custom ASICs only)
+		d) package style			X
+		e) outline dimensions			X
+
+2.	Spec drawing	a) manufacturer not approved			X
+	compliance		approved sources listed on MANMAN only
+		b) wrong device type			X
+			approved mfr p/n listed on MANMAN only
+
+--- Page 19 ---
+
+C.	Connectors
+C014386-05	SOCKET DIP 300MIL 20P	purchase to spec
+C014386-11	SOCKET DIP 300MIL 24P	purchase to spec
+C070033	DIN FEMALE R/A 5P 	purchase to AVL
+C070129	CINCH R/A 40P	purchase to AVL
+C070133-002	DSUB FEMALE R/A 25P	purchase to AVL
+C070446-002	HEADER POLARIZED 1X9	purchase to AVL
+C070645-005	SOCKET CONN STRAIGHT 2X15	purchase to AVL
+C070645-008	SOCKET CONN STRAIGHT 2X25	purchase to AVL
+C070761	SHUNT 2P	purchase to spec
+C100013-001	HEADER STRAIGHT 1X2	purchase to spec
+C100307-001	HEADER STRAIGHT 1X3	purchase to spec
+C101901-005	HEADER STRAIGHT 2X15	purchase to AVL
+C101901-008	HEADER STRAIGHT 2X25	purchase to AVL
+C101990-001	JACK STEREO 3.5MM	purchase to AVL
+C300269-001	DSUB MALE R/A 9P	purchase to AVL
+C302387-044	HEADER 2MM STRAIGHT 2X22	purchase to AVL
+C302821-001	DSUB HD FEMALE R/A 26P	purchase to AVL
+C302822-001	SCSI-II FEMALE R/A 50P	purchase to AVL
+C302823-001	DSUB MALE R/A 19P	purchase to AVL
+C302967-001	SOCKET PLCC SMT 44P	purchase to AVL
+C302967-003	SOCKET PLCC SMT 68P	purchase to AVL
+C303005-008	HEADER LOCKING STRAIGHT 1X8	purchase to AVL
+C398064-002	DSUB HD FEMALE R/A 15P	purchase to AVL
+C398087-001	MINI DIN FEMALE R/A 8P	purchase to AVL
+CA070023-009	CABLE 280MM 4P	purchase to AVL
+CA070024	CABLE FLAT RIBBON 34P	purchase to AVL
+
+			      	          DEFECT CLASS
+INSPECTION ITEM	DEFECT	       CRIT    MAJ     MIN
+
+1.	Appearance	a) finish flaw				X
+		b) damaged			X
+		c) marking				X
+			manufacturer's logo
+			manufacturer's part number
+		d) outline dimensions			X
+
+2.	Approved source	Applies only to parts indicated by purchase to AVL
+	compliance	a) manufacturer not approved			X
+			approved sources listed on MANMAN only
+		b) wrong device type			X
+			approved mfr p/n listed on MANMAN only
+
+3.	Spec drawing	Applies only to parts indicated by purchase to spec
+	compliance	a) electrical parameter out of spec			X
+			part must meet or exceed Atari drawing parameters
+		b) physical dimensions			X
+			part must meet Atari drawing parameters
+		c) material/finish			X
+			part must meet Atari drawing parameters
+		d) operating conditions			X
+			part must meet or exceed Atari drawing parameters
+
+--- Page 20 ---
+
+D.	Capacitors / Resistors
+C070450-(TAB)	ELEC (value)UF 35V 20% AX	purchase to spec
+C070474    	CERA TRIMMER 5-30PF	purchase to spec
+C070499-(TAB)	ELEC (value)UF 16V 20% AX	purchase to spec
+C101205-472	ELEC 4700UF 16V AX	purchase to spec
+C101212-(TAB)	ELEC (value) 50V 20% AX	purchase to spec
+C101219-(TAB)	CERA CHIP (value)PF 50V 5%	purchase to spec
+C101220-(TAB)	CERA CHIP (value)PF 50V 10%	purchase to spec
+C101221-(TAB)	CERA CHIP (value)UF 50V +80-20%	purchase to spec
+C302904-(TAB)	CERA CHIP (value)UF 50V +80-20%	purchase to spec
+C302985-001	ELEC 0.1UF 35V 20% AX	purchase to spec
+C303013-(TAB)	CERA CHIP (value)UF 25V 10%	purchase to spec
+C303020-103	CERA CHIP .01UF 50V 5% NPO	purchase to spec
+C303021-(TAB)	ELEC (value)UF 16V 20% AX	purchase to spec
+C398069-001	TANT 15UF 25V +-20% RA	purchase to spec
+C398768-001	MYLAR 1000PF 100V +-5% RA	purchase to spec
+14-5(TAB)	RES CF (value) 1/4W 5% AX	purchase to spec
+C060629    	RES, JMPR 0 AX	purchase to spec
+C070448    	RES NET SIP 10K 9P	purchase to spec
+070567-006 	RES NET SIP 1K 9P	purchase to spec
+C070737-005	RES NET 220/330 SIP 8P	purchase to spec
+C101008-(TAB)	RES NET (value) SIP 9P	purchase to spec
+C101013-(TAB)	RES CHIP (value) 1/10W 5%	purchase to spec
+C101021-(TAB)	RES CHIP (value) 1/4W 5%	purchase to spec
+
+			      	          DEFECT CLASS
+INSPECTION ITEM	DEFECT	       CRIT    MAJ     MIN
+
+1.	Appearance	a) packaged for machine insertion			X
+		b) finish flaw				X
+		c) damaged			X
+		d) marking				X
+			value
+			tolerance
+		e) outline dimensions			X
+
+2.	Spec drawing	a) electrical parameter out of spec			X
+	compliance		part must meet or exceed Atari drawing parameters
+		b) physical dimensions			X
+			part must meet Atari drawing parameters
+		c) material/finish
+			part must meet Atari drawing parameters
+		d) operating conditions
+			part must meet or exceed Atari drawing parameters
+
+E.	Other purchased components
+C014384	FERRITE BEAD AXIAL	purchase to spec
+C017222	1.5UH 5% AXIAL	purchase to spec
+C017948-08	1UH AXIAL	purchase to spec
+C070205	0.27UH 20% AXIAL	purchase to spec
+C070471-002	220UH 10% AXIAL	purchase to spec
+C100210	VARIABLE COIL 24UH	purchase to AVL
+C100214	VARIABLE COIL 14UH	purchase to AVL
+
+--- Page 21 ---
+
+E.	Other purchased components
+C101403-102	NOISE FILTER 1000PF	purchase to AVL
+C101411-680	68UH 10% AXIAL	purchase to spec
+31-1N4001	DIODE 1N4001	purchase to spec
+33-2N3906	TRAN PNP 2N3906 TO92	purchase to spec
+34-2N3904	TRAN NPN 2N3904 TO92	purchase to spec
+C060607	DIODE SWITCHING 1N4148	purchase to spec
+C070177	DIODE VARICAP 1SV69	purchase to AVL
+C303029-001	DIODE FAST RECOVERY 1N4935	purchase to AVL
+C025993-001	CRYSTAL 2.4576MHZ HC49U	purchase to AVL
+C070176	CRYSTAL 32.084988MHZ HC49U	purchase to AVL
+C070760	CRYSTAL 4.433618MHZ HC49U	purchase to AVL
+C303023-001	OSC 3.672MHz 8P DIP W/DIS	purchase to AVL
+C303023-002	OSC 25.175MHz OSC 8P DIP W/DIS	purchase to AVL
+C303023-003	OSC 32MHz 8P DIP W/DIS	purchase to AVL
+C303023-004	OSC 32.084988MHZ 8P DIP W/DIS	purchase to AVL
+C303023-005	OSC 32.215905 MHZ 8P DIP W/DIS	purchase to AVL
+C070119	SWITCH PB SPJ312U	purchase to AVL
+C100184	RF MODU NTSC	purchase to AVL
+C100185	RF MODU PAL I	purchase to AVL
+C100186	RF MODU PAL B	purchase to AVL
+C100209	DELAY LINE 3.58MHz	purchase to AVL
+C100213	DELAY LINE 4.43MHz	purchase to AVL
+C101403-102	NOISE FILTER 1000PF	purchase to spec
+C101814	FUSE 5A AXIAL	purchase to AVL
+
+1.	Appearance	a) finish flaw				X
+		b) damaged			X
+		c) marking				X
+			manufacturer's logo
+			manufacturer's part number
+			value
+			tolerance
+		d) outline dimensions			X
+
+2.	Approved source	Applies only to parts indicated by purchase to AVL
+	compliance	a) manufacturer not approved			X
+			approved sources listed on MANMAN only
+		b) wrong device type			X
+			approved mfr p/n listed on MANMAN only
+
+3.	Spec drawing	Applies only to parts indicated by purchase to spec
+	compliance	a) electrical parameter out of spec			X
+			part must meet or exceed Atari drawing parameters
+		b) physical dimensions			X
+			part must meet Atari drawing parameters
+		c) material/finish			X
+			part must meet Atari drawing parameters
+		d) operating conditions			X
+			part must meet or exceed Atari drawing parameters
+
+--- Page 22 ---
+
+3.7	FAB MECHANICAL PARTS
+C302784	TOP COVER
+C302774	BOTTOM COVER
+C302770	BOTTOM SHIELD
+C302769	TOP SHIELD
+C302779	I/O  SHIELD
+C302780	COVER SHIELD
+C302771	PCB INSULATOR
+C302781	SPEAKER INSULATOR
+C302782	SPEAKER RETAINER
+C302777	NAMEPLATE
+C302775	FAN BRACKET
+C302772	HARD DRIVE BRACKET
+
+			      	          DEFECT CLASS
+INSPECTION ITEM	DEFECT	       CRIT    MAJ     MIN
+
+1.	Appearance	a) scratch, stain, dirt				X
+		b) color/finish flaw				X
+		c) warp and twist greater than 1.5%				X
+		d) damaged			X
+		e) dimension check			X
+		f) incorrect material			X
+		g)marking				X
+			manufacturer's logo
+			serial number or date code
+			Atari part number and revision
+
+2.	Function test	a) improper fit			X
+( assembly part into	b) requires adjustment				X
+   final product)	c) malfunction			X
+
+--- Page 23 ---
+
+3.8	PRINTED MATERIAL
+C302778-TAB	RATING LABEL (country)
+C300339-001	WARRANTY CARD US
+C302252-001	WARRANTY CARD FRANCE
+C026076-001	WARRANTY CARD GERMANY
+C103369-002	WARRANTY CARD ITALY
+C026075-001	WARRANTY CARD NET
+C100571-001	WARRANTY CARD SPAIN
+C302201-010	WARRANTY CARD SWITZERLAND
+C100653-001	WARRANTY CARD AUSTRALIA
+C103312-TAB	WARRANTY SEAL (country)
+C302952-TAB	OWNER'S MANUAL (language)
+C303072-001	APPLICATION MANUAL
+C303071-001	LANGUAGE DISK LABEL
+C303070-001	APPLICATION DISK LABEL
+	HD UTILITIES DISK LABEL
+CA401340-001	INDIVIDUAL CARTON
+CA401343-001	SHIPPING CARTON
+
+			      	          DEFECT CLASS
+INSPECTION ITEM	DEFECT	       CRIT    MAJ     MIN
+
+1.	Appearance	a) scratch, stain, dirt				X
+		b) registration			X
+			no apparent variation
+		c)color balance/ ink density			X
+			uniform across the page
+		d) large solids and halftones, 			X
+			dense, even, no mottling or ghosts
+		e) flaws			X
+			smudges
+			scumming
+			wrinkles
+		f) trimming				X
+			trims square
+			variation greater than ±1/64 inch
+		g) folding				X
+			no single fold varies greater than ±1/32 inch
+		h) marking				X
+			Atari part number and revision
+			country designation
+		j) outline dimensions			X
+
+2.	Spec drawing	a) physical dimensions			X
+	compliance		part must meet Atari drawing parameters
+		b) material/finish			X
+			part must meet Atari drawing parameters
+		c) artwork			X
+			correct artwork used
+
+--- Page 24 ---
+
+3.9	OTHER PURCHASED PARTS
+C070571-004	SCREW, PHIL FLAT HD,M3X 12MM
+C070512-003	NUT M3
+C070200-001	SCREW PAN HEAD M3*5
+C070200-003	SCREW PAN HEAD M3X8
+C070323-003 	COLLAR B
+C070322-003	COLLAR A BLACK 18.5MM ST
+C303075-001	SCREW PPH 6-32x1"
+C070031	INDICATOR
+C070004-004	SCREW SELF TAP PAN HD 3*10
+C070004-015	SCREW SELF TAP M3*7
+C070012	RUBBER FOOT
+C302332-032	POLYBAG W/WARNING LABEL
+C070295	STYROFOAM LEFT ST/STE
+C070294	STYROFOAM RIGHT ST/STE
+C070293	CTN ACC BOX ST/STE
+C302332-014	POLYBAG W250xL200x0.04
+
+			      	          DEFECT CLASS
+INSPECTION ITEM	DEFECT	       CRIT    MAJ     MIN
+
+1.	Appearance	a) scratch, stain, dirt				X
+		b) color/finish flaw				X
+		c) damaged			X
+		d) outline dimensions			X
+		e) incorrect material			X
+		f)marking				X
+			per specification drawing
+
+2.	Spec drawing	a) physical dimensions			X
+	compliance		part must meet Atari drawing parameters
+		b) material/finish			X
+			part must meet Atari drawing parameters
+		c) operating conditions			X
+			part must meet or exceed Atari drawing parameters
+
+--- Master page (repeated on pages; # = page number) ---
+[32 drawing objects, see SP_MFG_3.DOC.mR.svg]
+
+SIZE
+
+DRAWING NO.
+
+REV
+
+®
+
+ATARI
+CORPORATION
+
+A
+
+SCALE
+
+NONE
+
+C302758-001
+
+SHEET
+
+OF
+
+1
+
+_

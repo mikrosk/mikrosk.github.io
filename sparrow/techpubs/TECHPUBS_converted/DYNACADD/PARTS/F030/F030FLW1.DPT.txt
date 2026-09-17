@@ -1,0 +1,66 @@
+DynaCADD 2.0 entity file (.DPT)
+Source: DYNACADD/PARTS/F030/F030FLW1.DPT (17373 bytes)
+Record stream: 194 records, ends at offset 0x43dd with FFFF terminator
+Drawing settings from: F030FLW1.DWG
+Sheet: width 684, height 1212, scale 1
+Units: not recorded in a field identified so far; coordinates are listed as stored
+Entities: 194 total (LINE 112, ARC 30, TEXT 52)
+Extents: x 129.3757 .. 554.75, y 231.5 .. 990.25 (size 425.3743 x 758.75)
+Layers used: 0 "PEN1" (194)
+Line styles used: 0 "Continuous, drawn solid" (194)
+Colour indices used: 1 (194)
+Groups: none
+
+Text strings (52), in file order; x,y = insertion point:
+  x=349.6686   y=971        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "START"
+  x=217.7144   y=911        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "CONNECT"
+  x=206.0045   y=901        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "TERMINAL "
+  x=260.0045   y=901        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "TO "
+  x=301.6278   y=901        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "NO "
+  x=343.574    y=901        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "DISPLAY"
+  x=205.6547   y=891        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "RS232"
+  x=241.7085   y=891        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "PORT "
+  x=337.6547   y=891        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "READABLE?"
+  x=212.0045   y=881        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "AND"
+  x=235.7144   y=881        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "CYCLE"
+  x=223.7085   y=871        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "POWER"
+  x=367.7892   y=841        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "YES"
+  x=175.6278   y=771        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "NO "
+  x=205.574    y=771        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "DISPLAY"
+  x=253.9899   y=771        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "ON "
+  x=349.574    y=771        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "ERROR"
+  x=415.6278   y=771        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "NO "
+  x=212.0045   y=761        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "TERMINAL?"
+  x=338.0583   y=761        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "MESSAGE? "
+  x=241.7892   y=711        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "YES"
+  x=367.7892   y=711        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "YES"
+  x=145.5202   y=701        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "B"
+  x=325.6547   y=641        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "REPLACE"
+  x=373.7085   y=641        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "PARTS"
+  x=175.6278   y=631        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "NO "
+  x=355.7085   y=631        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "PER"
+  x=205.574    y=621        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "DIAGNOSTIC "
+  x=331.574    y=621        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "DIAGNOSTIC "
+  x=463.6547   y=621        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "RUN"
+  x=488.0045   y=621        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "ALL"
+  x=512.0045   y=621        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "TESTS"
+  x=217.574    y=611        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "ERROR? "
+  x=349.7144   y=611        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "GUIDE"
+  x=241.7892   y=571        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "YES"
+  x=145.7144   y=561        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "C"
+  x=199.6547   y=501        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "REPLACE"
+  x=247.7085   y=501        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "PARTS"
+  x=229.7085   y=491        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "PER"
+  x=205.574    y=481        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "DIAGNOSTIC "
+  x=331.7144   y=481        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "CYCLE"
+  x=367.7085   y=481        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "POWER"
+  x=481.574    y=481        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "ERROR? "
+  x=223.7144   y=471        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "GUIDE"
+  x=433.7892   y=471        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "YES"
+  x=505.6278   y=431        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "NO "
+  x=439.6278   y=361        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "NO "
+  x=217.6547   y=351        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "RESTART"
+  x=367.574    y=351        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "DONE "
+  x=481.9899   y=351        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "OTHER? "
+  x=505.7892   y=301        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "YES"
+  x=500.0045   y=251        h=6.3538  w=4.6596  angle=0      font=TRIU4RE  layer=PEN1     "A"

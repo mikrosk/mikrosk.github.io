@@ -1,0 +1,50 @@
+File: TEMP/CORDRAWS/SPARXP30.CDR
+Format: CorelDRAW 2.x drawing, pre-RIFF "WL" (Waldo) container, version byte 0xC9 (201)
+File size: 8884 bytes
+Page: 11.000 x 8.500 in (landscape); native units 0.001 in, origin at page centre, y up
+Drawing extent (in, page-centred): x -3.025 .. 3.025, y -0.552 .. 0.552
+Preview bitmap: 90x90 monochrome
+Record index: type1=33, type2=31, type7=1
+Objects: groups 1, rectangle 0, ellipse 0, curve 31, text 0, bitmap 0
+Curve nodes total: 395
+Fills: solid 31
+Outlines: solid 31
+Colours used: CMYK(0,0,0,100) x61, CMYK(0,0,0,0) x1
+Fonts: none
+
+Text strings: 0
+(position = text anchor point in inches from page top-left, x right / y down; listed top-to-bottom, left-to-right)
+
+Object tree (stored order = front-most first; bbox in inches from page top-left):
+  group [2.477,3.700-8.523,4.800]
+    curve 13 nodes [8.132,4.341-8.289,4.499]
+    curve 13 nodes [7.739,4.341-7.896,4.499]
+    curve 13 nodes [7.347,4.341-7.502,4.499]
+    curve 13 nodes [8.132,3.943-8.289,4.101]
+    curve 13 nodes [7.739,3.943-7.896,4.101]
+    curve 13 nodes [7.347,3.943-7.502,4.101]
+    curve 13 nodes [6.954,4.342-7.111,4.500]
+    curve 13 nodes [6.560,4.342-6.717,4.500]
+    curve 13 nodes [6.167,4.342-6.324,4.500]
+    curve 13 nodes [5.773,4.342-5.930,4.500]
+    curve 13 nodes [5.380,4.342-5.537,4.500]
+    curve 13 nodes [6.954,3.942-7.111,4.100]
+    curve 13 nodes [6.560,3.942-6.717,4.100]
+    curve 13 nodes [6.167,3.942-6.324,4.100]
+    curve 13 nodes [5.773,3.942-5.930,4.100]
+    curve 13 nodes [5.380,3.942-5.537,4.100]
+    curve 13 nodes [3.019,4.342-3.176,4.500]
+    curve 13 nodes [2.626,4.342-2.783,4.500]
+    curve 13 nodes [4.593,4.342-4.750,4.500]
+    curve 13 nodes [4.199,4.342-4.356,4.500]
+    curve 13 nodes [3.806,4.342-3.963,4.500]
+    curve 13 nodes [3.412,4.342-3.569,4.500]
+    curve 13 nodes [4.986,4.342-5.143,4.500]
+    curve 13 nodes [4.593,3.942-4.750,4.100]
+    curve 13 nodes [4.199,3.942-4.356,4.100]
+    curve 13 nodes [3.806,3.942-3.963,4.100]
+    curve 13 nodes [3.412,3.942-3.569,4.100]
+    curve 13 nodes [3.019,3.942-3.176,4.100]
+    curve 13 nodes [4.986,3.942-5.143,4.100]
+    curve 13 nodes [2.626,3.942-2.783,4.100]
+    curve 5 nodes [2.477,3.700-8.523,4.800]

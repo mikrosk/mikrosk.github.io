@@ -1,0 +1,51 @@
+DXF drawing: DYNACADD/PARTS/DXF/HARDDISK.DXF
+Render: HARDDISK.DXF.svg
+
+== Summary ==
+File:        9590 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font ROMAND
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (3.3489, 3.084) - (4.8611, 7.4556)
+             rendered (3.4488, 3.097) - (4.6728, 7.1707), size 1.2241 x 4.0737
+Limits:      (0, 0) - (9, 12)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: ROMAND (font ROMAND)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  10            7  CONTINUOUS    on            46
+  unused: 1, 2, 3, 4, 5, 6, 7, 8, 9
+Entities:    model space: POLYLINE 27 (58 vertices), TEXT 19
+Blocks:      0 defined
+Notes:
+  - 27 polylines with constant width drawn as thick strokes
+
+== Text in reading order (19 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 90 deg (19 items) --
+  10  |  9 8 7 6 5 4  |  3 2  |  1
+  19 18 17 16 15 14 13 12 11
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE   TEXT
+3.5941   3.097    0.1453     90  left      10     ROMAND  10
+3.5941  3.6525    0.1453     90  left      10     ROMAND  9
+3.5941  4.0529    0.1453     90  left      10     ROMAND  8
+3.5941  4.4567    0.1453     90  left      10     ROMAND  7
+3.5941  4.8641    0.1453     90  left      10     ROMAND  6
+3.5941  5.2645    0.1453     90  left      10     ROMAND  5
+3.5941  5.6517    0.1453     90  left      10     ROMAND  4
+3.5941   6.069    0.1453     90  left      10     ROMAND  3
+3.5941  6.4729    0.1453     90  left      10     ROMAND  2
+3.5941  6.9079    0.1453     90  left      10     ROMAND  1
+4.6728  3.2925    0.1453     90  left      10     ROMAND  19
+4.6728  3.6929    0.1453     90  left      10     ROMAND  18
+4.6728  4.0967    0.1453     90  left      10     ROMAND  17
+4.6728  4.5006    0.1453     90  left      10     ROMAND  16
+4.6728  4.9044    0.1453     90  left      10     ROMAND  15
+4.6728  5.3049    0.1453     90  left      10     ROMAND  14
+4.6713  5.7398    0.1453     90  left      10     ROMAND  13
+4.6713  6.1437    0.1453     90  left      10     ROMAND  12
+4.6713  6.5683    0.1453     90  left      10     ROMAND  11

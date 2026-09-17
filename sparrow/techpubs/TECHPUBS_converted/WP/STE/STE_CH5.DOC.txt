@@ -1,0 +1,88 @@
+[Footer: -  #   -]
+SECTION FIVE:
+SYMPTOM CHECKLIST
+
+
+This section gives a brief summary of common problems and their most probable causes. For more detail, refer to the section of troubleshooting in this document, or the Diagnostic Cartridge Troubleshooting Guide.
+
+
+5.1   DISPLAY PROBLEMS
+
+Symptom                     Probable Cause
+
+Black Screen                No power (check LED), bad GSTMCU chip, bad Video Shifter. See Section 3.3: Troubleshooting a Dead Unit.
+
+White Screen                Video Shifter, GSTMCU, Memory Controller, DMA Controller, 68000. Use diagnostic cartridge with terminal connected via RS232 port.
+
+Dots/Bars on Screen         RAM, Memory Controller, Video Shifter. Use the diagnostic cartridge.
+
+One Color Missing           Video cable or connector. Video summer, buffer, Video Shifter. Check signals with oscilloscope.
+
+Monochrome Monitor          Verify that the monochrome monitor detect bit is being
+Fails to Synch but          grounded when monochrome monitor is plugged in.
+Color Monitor Okay          Check MFP GPIP bit 7; replace MFP.
+
+Scrambled Screen            GSTMCU, Memory Controller. Use diagnostic cartridge.
+
+TV Output Bad               Modulator, phase locked loop. Trace signal with oscilloscope.
+
+
+5.2   DISK DRIVE PROBLEMS
+
+Symptom                     Probable Cause
+
+Disk Won't Boot             Power supply, 1772, DMA Controller, PSG chip, disk drive external ACSI buffer, external HD IRQ lines shorted to ground. See if Select light goes on, if not, check PSG outputs. Listen for motor spinning. If not, check power supply. Swap disk drive or try external drive. If not working, check DMA Controller 1772 with diagnostic chart.
+
+Disk Won't Format:          1772, DMA Controller, disk drive.
+
+System Crash after          Data on diskette, disk drive, 1772, DMA, or GSTMCU.
+Loading Files               Swap diskette, retry. Use diagnostic cartridge to check 1772, DMA Controller, GSTMCU; replace disk drive.
+
+5.3   KEYBOARD PROBLEMS
+
+Symptom                     Probable Cause
+
+Red Screen: Keyboard        Bad keyboard, 6850, MFP.
+not responding
+
+
+5.4   MIDI PROBLEMS
+
+Symptom                     Probable Cause
+
+Red Screen: Error           Bad opto-isolator chip, 6850, inverter (74LS06).
+Codes M0, M1, M2,           See Section 3.11.1
+M3, or M4
+
+
+5.5   RS232 PROBLEMS
+
+Symptom                     Probable Cause
+
+Red Screen:  Error          Bad MFP, 1489 receiver, 1488 driver, or PSG chips,
+Codes S0 through SB         ±12 VDC:DC inverting power supply.  See Section 3.12.1.
+
+
+5.6   PRINTER PORT PROBLEMS
+
+Symptom                     Probable Cause
+
+Red Screen:  Error          Bad PSG, MFP chips.  See Section 3.17.1
+Codes P0, P1:
+
+Shadow Printing             Bad ASCI port cables, terminator resistors, bad LS244, LS245 drivers.
+
+
+5.7   HARD DISK PORT PROBLEMS
+
+Symptom                     Probable Cause
+
+Red Screen:  Error          Bad DMA Controller, Memory Controller, 1772 (loading the
+Codes D0, D1, D2            bus). See Section 3.15.1
+
+
+5.8   DMA SOUND
+
+Symptom                     Probable Cause
+
+No Sound                    +8V regulator, ±supplies, 1992 Volume Control, R542, R543

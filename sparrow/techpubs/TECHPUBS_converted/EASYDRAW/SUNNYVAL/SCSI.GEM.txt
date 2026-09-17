@@ -1,0 +1,19 @@
+File: EASYDRAW/SUNNYVAL/SCSI.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-2730,-182)-(2821,364)
+Page size: 203.2 x 254.0 mm
+Coordinate window: lower-left (-3640,4550), upper-right (3640,-4550); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-2730,-191.33)-(2820,320.33)
+Items: 591 (4134 words)
+Objects: polyline 110, fill area 50, elliptical arc 4, justified text 4
+Other records (escapes, application data): write_meta 10 x54, write_meta 150 x1, write_meta 151 x54, write_meta 152 x4, write_meta 153 x4, write_meta 155 x50, write_meta 158 x1, write_meta 160 x1, write_meta 80 x114, write_meta 81 x114
+Text strings: 4
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+   2640     -70  [font 2 12pt bold]  1
+
+   2640     290  [font 2 12pt bold]  26
+
+  -2730     290  [font 2 12pt bold]  50
+
+  -2730     -70  [font 2 12pt bold]  25

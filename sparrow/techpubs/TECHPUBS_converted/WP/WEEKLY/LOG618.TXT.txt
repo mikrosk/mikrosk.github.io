@@ -1,0 +1,33 @@
+Log File for Week of 6/11/92 - 6/18/92 
+ 
+Finished Sparrow Service Guide Chapter two edits through CODEC 
+Pin Descriptions. 
+ 
+Faxed Bob Brodie numbers to obtain Genie Account for myself and 
+personal developer roundtable accout for product engineering. 
+ 
+Printed copy of corrected Falcon030 Expansion connector drawing 
+and turned in for review. 
+ 
+Gave Jerry Smith copies of all my GEM files to use in his 
+documents. 
+ 
+Finished text edits of Sparrow Service Guide Chapter 2.
+
+Started layout of Sparrow Service Guide in PageStream.
+
+Received and installed coprocessor in ABC386DXII system.
+
+Completed layout of Sparrow Service Guide Chapter 1 in
+PageStream.
+
+Got partial ECO History for MEGA STE Addendum from MANMAN.
+
+Broke apart and finished layout of Sparoow Service Guide Chapter
+two sections one and two.
+
+Began installation of network hardware and software on TT030.
+
+Got 2MB floppy and AJAX for home TT030.
+
+Completed Sparrow Service Guide Chapter 2 section 3 layout.

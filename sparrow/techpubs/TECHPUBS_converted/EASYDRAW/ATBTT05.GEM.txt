@@ -1,0 +1,15 @@
+File: EASYDRAW/ATBTT05.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-3867,-3128)-(1392,-824)
+Page size: 203.2 x 254.0 mm
+Coordinate window: lower-left (-3640,4550), upper-right (3640,-4550); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-967,-3128)-(1392,-824)
+Items: 286 (1841 words)
+Objects: polyline 57, fill area 1, bar 4, ellipse 2, elliptical arc 8
+Other records (escapes, application data): write_meta 10 x16, write_meta 150 x1, write_meta 151 x16, write_meta 155 x1, write_meta 157 x5, write_meta 158 x1, write_meta 160 x1, write_meta 80 x65, write_meta 81 x65
+Text strings: 0
+
+No text objects in this file (any lettering is drawn as vector strokes or outlines).
+
+LABELS READ FROM THE RENDERED IMAGE (lettering here is vector graphics, not text data; transcribed visually in reading order, may contain reading errors)
+(no lettering)

@@ -1,0 +1,78 @@
+[PageStream 2 document TOMFEB13.DOC: 8.50 x 11.00 in, 4 objects]
+
+--- Page 1 ---
+[1 drawing objects, see TOMFEB13.DOC.p001.svg]
+
+Weekly Report
+
+
+To:		Tom Ulazsek
+From:	Marty Pennock
+Subject:	Status Report
+Date:	February 13, 1992
+
+
+Accomplishments
+
+1.	Re generated drawings for Sparrow Service Manual Chapter 1 and completed layout page 1 and 2.
+
+2.	Put together drawings for Richard Miller of all external and internal connectors for the Sparrow project and E-Mailed  information to Richard Miller as requested..
+
+3.	Started Block Diagram for Sparrow Service Guide.
+
+4.	Started layout of Sparrow Service Guide Chapter 3.
+
+5.	Found another possible work-around for problems with GEM type drawings and PageStream. Used work-around to generate the first two pages of drawings for the Sparrow Service Guide.
+
+6.	Continued Falcon Chapter 2.
+
+7.	Got logged into MANMAN and began requesting all the parts lists needed to finish ABC386SX Service Information..
+
+8.	Edited, corrected, and finished camera ready layout of 2MB floppy installation manuals for the MEGA STE and TT030.
+
+9.	Finished editing views from Sparrow mechanical drawings for Case Design.
+
+10.	Scott Barrows intercepted 2MB manuals and shipped camera ready copy to factory.
+
+11.	Contacted Soft-Logik and Ditek about DynaCADD and PageStream to find out where distribution disks were and if any known fixes were available.
+
+12.	 drawings and layout pages for TT030 Service Guide in PageStream.
+
+Plans
+
+1.	Finish ABC386SX Service info and ship to SUBs.
+
+2.	Finish Sparrow Chapter 3.
+
+3.	Finish editing Sparrow case drawings.
+
+--- Page 2 ---
+
+4.	Finish layout of Sparrow Service Guide chapter 3.
+
+5.	Continue Sparrow Service Guide Chapter 4.
+
+6.	Get new DynaCADD software and continue to generate art for service guides.
+
+7.	Complete conversion of TT030 and MEGA STE Service guides.
+
+8.	Check on MEGA STE Addendum. Find out if full addendum is necessary.
+
+9.	Finish Falcon Service Guide chapter 2.
+
+
+Problems
+
+1.	No new software yet received from Ditek (DynaCADD). Need it to complete projects. Have contacted Bill Rehbok and Richard Miller on problem. No results as yet.
+
+2.	No ASIC documentation for Falcon chips. Need them to continue work on the Service Guide. They have not yet been written.
+
+3.	Need more knowledge of MANMAN commands.
+
+4.	MEGA STE addendum may be unnecessary due to the fact that the build is being phased out. Must determine if ant 2MB floppy units were built. Must also determine if only the ECO history is determined at this point.
+
+5.	Need diagnostic and start-up code for Sparrow to continue the Service Guide.
+
+6.	Need to develop a way to get specs on components and devices in a more timely manner. Current manner requires someone to sit in the Doc Center until it is pulled, or wait 1-2 weeks for info.
+
+7.	Need to get problems with PageStream and GEM file formats fixed to make creating documents more efficient.

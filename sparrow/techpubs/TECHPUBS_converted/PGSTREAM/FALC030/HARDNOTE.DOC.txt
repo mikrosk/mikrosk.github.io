@@ -1,0 +1,352 @@
+[PageStream 2 document HARDNOTE.DOC: 11.00 x 8.50 in, 152 objects, booklet layout: two page halves per sheet, halves listed in text flow order]
+
+--- Page 1, right half ---
+[1 drawing objects, see HARDNOTE.DOC.p001.svg]
+
+Falcon030
+Developer Hardware
+ Release Notes
+29 April 1992
+
+
+DSP and Audio
+
+The DSP and audio hardware in the developer release machines are very different from the final production version.  Many of the final production version features are not possible with the developer release machines.
+
+The following paragraphs list the things that are different.  At the end of this list are the things that are compatible, and that can be developed using developer release machines.
+
+DSP Host Port interface
+
+The memory mapping of the DSP port B (host) interface is substantially different on developer machines from previous and future machines.
+
+Do not write code which directly accesses this port.  It will not work on production machines.  Use the supplied operating system calls.
+
+DSP SSI interface
+
+The SSI interface to the external connector is on the same pins as production machines.  Since developer release machines do not have the connection matrix circuit (see DSP and Audio Subsystem) built in, the SSI cannot be connected directly to Sound DMA, or the internal DAC or ADC.
+
+Since the SSI pins come out on the DSP connector, developers can connect external DACs, ADCs and so forth in a compatible way.  The SSI port can also be connected to the DMA sound record channel.  It cannot be connected to the playback channel, since the playback bit rate is 16MHz, and SSI will only support up to 8MHz.
+
+© 1992, Atari Corporation
+
+Notes .1
+
+--- Page 2, left half ---
+[2 drawing objects, see HARDNOTE.DOC.p002.svg]
+
+Atari Falcon030 Developer Hardware Documentation
+
+4/29/92
+
+DACs and ADCs
+
+Developer machines do have built in 8 bit stereo ADCs, and 13 bit stereo DACs.  Production machines have a 16 bit stereo Codec, which has substantially better performance.  Developer machines have VERY poor sound quality.
+
+Microwire
+
+Microwire has gone away on production machines.  So have all the previous microwire registers.  You will be able to change volume and input gain, but only through new, not yet documented operating system calls.  Use these calls.
+
+Developer machines do not support variable input gain.  Do not use this feature on developer release machines.
+
+Since Microwire has gone away, it will also not be available on the DSP connector.  Do not use it.
+
+So now the good news.  The external DSP connector looks like this:
+
+       Dev Rel  Production            Dev Rel  Production
+Pin #  Signal   Signal         Pin #  Signal   Signal
+---------------------------------------------------------
+1      MWEN     GP0            14   * GND      GND
+2      MWD      GP1            15   * SRD      SRD
+3      MWC      GP2            16   * GND      GND
+4      P_EN     P_DATA         17   * +12V     +12V
+5      P_CLK    P_CLK          18   * GND      GND
+6      P_DATA   P_SYNC         19     R_EN     R_DATA
+7      P_CHAN   n/c            20	     R_CLK    R_CLK
+8    * GND      GND            21	     R_DAT    R_SYNC
+9      FSAMP    +12V           22	     R_CHAN   EXT_INT
+10   * GND      GND            23	   * STD      STD
+11   * SC0      SC0            24	   * SCK      SCK
+12   * SC1      SC1            25	   * GND      GND
+13   * SC2      SC2            26	     EXCLK    EXCLK
+
+Signals that are compatible between developer machines and production machines are marked with '*'.  Unfortunately, none of the others are compatible.
+
+Notes .2
+
+© 1992, Atari Corporation
+
+--- Page 2, right half ---
+[2 drawing objects, see HARDNOTE.DOC.p002.svg]
+
+4/29/92
+
+Release Notes
+
+Compatible Things Which Can Be Done On Developer Release Machines Are:
+
+DSP SSI stuff.  Since the 56001 SSI port has not changed, any applications which connect to it, can still be developed.  For example, fax modems, or even sound synthesis. An external DAC and/or ADC can be used for sound or other applications, which go through the DSP.
+
+Sound record stuff.  The external sound DMA channel is very similar to production machines.  Connect a bit clock to R_CLK, bit data to R_DATA, frame sync to R_EN, and left right select to R_CHAN.
+
+For more details on this, call Atari and we will help figure out a way to do sound recording.
+
+DMA Sound playback.  Although we only have a 13 bit DAC on developer machines, you can do DMA sound playback, at 50KHz, 25KHz or 12.5KHz.
+
+Please note however that the signal to noise ratio is not very good, and that the DAC is not very well behaved in certain circumstances.  Despite this, programs like Quartet seem to work OK.
+
+DSP SSI record to memory.  The three wire SSI transmit channel can be connected to DMA sound record.  This way, the DSP can send data to memory at about 1MByte per second.  Call Atari if you really need to do this.
+
+Video
+
+Developer release machines have an old version of the memory controller, which prevents the following resolutions from working correctly:
+
+640 pixels horizontally, on TVs or SCxxxx type monitors, in true color mode
+
+320 pixels horizontally, on any VGA monitors, in true color mode
+(Of course, 640 wide true color is also not possible on VGA monitors, since this uses too much bus bandwidth.  It will not be available on production machines either)
+
+© 1992, Atari Corporation
+
+Notes .3
+
+--- Page 1, left half ---
+[2 drawing objects, see HARDNOTE.DOC.p001.svg]
+
+Atari Falcon030 Developer Hardware Documentation
+
+4/29/92
+
+Serial Port
+
+On developer machines, the serial port is connected to the MFP, in the same way as STEs and STs.  Production machines have the serial port connected to port B of the SCC chip.  This is just like Serial 1 on the TT with the addition of ring indicator.  The ring indicator is compatible between developer and production machines.
+
+Parallel Port
+
+Production machines have added support of the 'Acknowledge' and 'Select' pins on the parallel port (pins 10 and 17 respectively).  Use the OS to talk to this port.
+
+Keyboard
+
+Production machines support 300 DPI mice, and will not allow the keyboard UART to overrun.  Further information coming in future documentation.
+
+Memory Cycles
+
+On developer machines CPU memory cycles take five 16MHz clock cycles.  On production machines they only take four cycles.  Blitter, DMA and Sound DMA cycles all take five cycles on all machines.
+
+Expansion Bus
+
+Connector   Developer    Production
+Pin #       machines     machines
+----------------------------------------
+J20/20	    n/c	         CPUBGO
+J20/22	    EINT5	        CPUBGI
+
+J19/12	    n/c	         BMODE
+----------------------------------------
+
+For information regarding the new signals, see the hardware developer manual.  Note that CPUBGI and CPUBGO must be connected together on production machines in order that they work at all.
+
+Notes .4
+
+© 1992, Atari Corporation
+
+--- Page 3, right half ---
+[2 drawing objects, see HARDNOTE.DOC.p003.svg]
+
+4/29/92
+
+Release Notes
+
+The Kludge We Forgot
+
+There are two other incompatibilities between developer machines and production machines.  I'll buy a beer for the first developer to spot them.
+
+© 1992, Atari Corporation
+
+Notes .5
+
+--- Page 3, left half ---
+[2 drawing objects, see HARDNOTE.DOC.p003.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .6
+
+© 1992, Atari Corporation
+
+--- Page 4, right half ---
+[2 drawing objects, see HARDNOTE.DOC.p004.svg]
+
+4/20/92
+
+DSP Library Functions - Data Transfer Routines
+
+© 1992, Atari Corporation
+
+DSP .9
+
+--- Page 5, left half ---
+[2 drawing objects, see HARDNOTE.DOC.p005.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .10
+
+© 1992, Atari Corporation
+
+--- Page 5, right half ---
+[2 drawing objects, see HARDNOTE.DOC.p005.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+© 1992, Atari Corporation
+
+DSP .11
+
+--- Page 4, left half ---
+[2 drawing objects, see HARDNOTE.DOC.p004.svg]
+
+Atari Falcon030 Developer Hardware Documentation
+
+4/29/92
+
+Hardware .6
+
+© 1992, Atari Corporation
+
+--- Page 6, right half ---
+[2 drawing objects, see HARDNOTE.DOC.p006.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+© 1992, Atari Corporation
+
+DSP .13
+
+--- Page 7, left half ---
+[2 drawing objects, see HARDNOTE.DOC.p007.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .14
+
+© 1992, Atari Corporation
+
+--- Page 7, right half ---
+[2 drawing objects, see HARDNOTE.DOC.p007.svg]
+
+4/20/92
+
+DSP Library Functions - Program Control Routines
+
+© 1992, Atari Corporation
+
+DSP .15
+
+--- Page 6, left half ---
+[2 drawing objects, see HARDNOTE.DOC.p006.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .16
+
+© 1992, Atari Corporation
+
+--- Page 8, left half ---
+[2 drawing objects, see HARDNOTE.DOC.p008.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .20
+
+© 1992, Atari Corporation
+
+--- Page 8, right half ---
+[2 drawing objects, see HARDNOTE.DOC.p008.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .17
+
+--- Page 9, left half ---
+[2 drawing objects, see HARDNOTE.DOC.p009.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .18
+
+© 1992, Atari Corporation
+
+--- Page 9, right half ---
+[2 drawing objects, see HARDNOTE.DOC.p009.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .19
+
+--- Page 10, left half ---
+[2 drawing objects, see HARDNOTE.DOC.p010.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .2
+
+© 1992, Atari Corporation
+
+--- Page 10, right half ---
+[2 drawing objects, see HARDNOTE.DOC.p010.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .3
+
+--- Page 11, left half ---
+[2 drawing objects, see HARDNOTE.DOC.p011.svg]
+
+Atari DSP Developer's Documentation
+
+4/20/92
+
+DSP .2
+
+© 1992, Atari Corporation
+
+--- Page 11, right half ---
+[2 drawing objects, see HARDNOTE.DOC.p011.svg]
+
+4/20/92
+
+TOS Host Interface Routines
+
+© 1992, Atari Corporation
+
+DSP .3

@@ -1,0 +1,119 @@
+File: EASYDRAW/SUNNYVAL/IDE.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-3120,-4210)-(3250,1629)
+Page size: 203.2 x 254.0 mm
+Coordinate window: lower-left (-3640,4550), upper-right (3640,-4550); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-3120,-4132.67)-(3250,1629)
+Items: 450 (3764 words)
+Objects: polyline 4, ellipse 44, elliptical arc 44, justified text 98
+Other records (escapes, application data): write_meta 10 x7, write_meta 150 x1, write_meta 151 x7, write_meta 152 x10, write_meta 153 x10, write_meta 154 x97, write_meta 158 x1, write_meta 160 x1, write_meta 80 x48, write_meta 81 x48
+Text strings: 98
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+  -3120   -3890  [font 7 24pt]  IDE CONNECTOR
+
+   1950   -3330  [font 7 12pt]   1
+
+   2970   -3340  [font 7 12pt]   2
+
+   2980    1570  [font 7 12pt]   44
+
+   1840    1570  [font 7 12pt]   43
+
+  -3110   -3390  [font 7 12pt]  43 Pin Header - P7
+
+  -2960   -2880  [font 7 12pt]  Pin
+  -2960   -2400  [font 7 12pt]  1 
+  -2960   -2240  [font 7 12pt]  3
+  -2960   -2080  [font 7 12pt]  5
+  -2960   -1920  [font 7 12pt]  7
+  -2960   -1760  [font 7 12pt]  9
+  -2960   -1600  [font 7 12pt]  11
+  -2960   -1440  [font 7 12pt]  13
+  -2960   -1280  [font 7 12pt]  15
+  -2960   -1120  [font 7 12pt]  17
+  -2960    -960  [font 7 12pt]  19
+  -2960    -800  [font 7 12pt]  21
+  -2960    -640  [font 7 12pt]  23
+  -2960    -480  [font 7 12pt]  25
+  -2960    -320  [font 7 12pt]  27
+  -2960    -160  [font 7 12pt]  29
+  -2960       0  [font 7 12pt]  31
+  -2960     160  [font 7 12pt]  33
+  -2960     320  [font 7 12pt]  35
+  -2960     480  [font 7 12pt]  37
+  -2960     640  [font 7 12pt]  39
+  -2960     800  [font 7 12pt]  41
+  -2960     960  [font 7 12pt]  43
+
+  -2410   -2880  [font 7 12pt]  Signal
+  -2410   -2400  [font 7 12pt]  IDE Reset
+  -2410   -2240  [font 7 12pt]  Data 7
+  -2410   -2080  [font 7 12pt]  Data 6
+  -2410   -1920  [font 7 12pt]  Data 5
+  -2410   -1760  [font 7 12pt]  Data 4
+  -2410   -1600  [font 7 12pt]  Data 3
+  -2410   -1440  [font 7 12pt]  Data 2
+  -2410   -1280  [font 7 12pt]  Data 1
+  -2410   -1120  [font 7 12pt]  Data 0
+  -2410    -960  [font 7 12pt]  Ground
+  -2410    -800  [font 7 12pt]  No Connect
+  -2410    -640  [font 7 12pt]  IOW
+  -2410    -480  [font 7 12pt]  IOR
+  -2410    -320  [font 7 12pt]  No Connect
+  -2410    -160  [font 7 12pt]  No Connect
+  -2410       0  [font 7 12pt]  IRQ
+  -2410     160  [font 7 12pt]  ADDR3
+  -2410     320  [font 7 12pt]  ADDR2
+  -2410     480  [font 7 12pt]  CS0
+  -2410     640  [font 7 12pt]  IDE-ACT
+  -2410     800  [font 7 12pt]  VCC
+  -2410     960  [font 7 12pt]  Ground
+
+    250   -2880  [font 7 12pt]  Signal
+    250   -2400  [font 7 12pt]  Ground
+    250   -2240  [font 7 12pt]  Data 8
+    250   -2080  [font 7 12pt]  Data 9
+    250   -1920  [font 7 12pt]  Data 10
+    250   -1760  [font 7 12pt]  Data 11
+    250   -1600  [font 7 12pt]  Data 12
+    250   -1440  [font 7 12pt]  Data 13
+    250   -1280  [font 7 12pt]  Data 14
+    250   -1120  [font 7 12pt]  Data 15
+    250    -960  [font 7 12pt]  Key Pin
+    250    -800  [font 7 12pt]  Ground
+    250    -640  [font 7 12pt]  Ground
+    250    -480  [font 7 12pt]  Ground
+    250    -320  [font 7 12pt]  No Connect
+    250    -160  [font 7 12pt]  Ground
+    250       0  [font 7 12pt]  No Connect
+    250     160  [font 7 12pt]  No Connect
+    250     320  [font 7 12pt]  ADDR4
+    250     480  [font 7 12pt]  CSI
+    250     640  [font 7 12pt]  Ground
+    250     800  [font 7 12pt]  VCC
+    250     960  [font 7 12pt]  No Connect
+
+   -410   -2880  [font 7 12pt]  Pin
+   -410   -2400  [font 7 12pt]  2 
+   -410   -2240  [font 7 12pt]  4
+   -410   -2080  [font 7 12pt]  6
+   -410   -1920  [font 7 12pt]  8
+   -410   -1760  [font 7 12pt]  10
+   -410   -1600  [font 7 12pt]  12
+   -410   -1440  [font 7 12pt]  14
+   -410   -1280  [font 7 12pt]  16
+   -410   -1120  [font 7 12pt]  18
+   -410    -960  [font 7 12pt]  20
+   -410    -800  [font 7 12pt]  22
+   -410    -640  [font 7 12pt]  24
+   -410    -480  [font 7 12pt]  26
+   -410    -320  [font 7 12pt]  28
+   -410    -160  [font 7 12pt]  30
+   -410       0  [font 7 12pt]  32
+   -410     160  [font 7 12pt]  34
+   -410     320  [font 7 12pt]  36
+   -410     480  [font 7 12pt]  38
+   -410     640  [font 7 12pt]  40
+   -410     800  [font 7 12pt]  42
+   -410     960  [font 7 12pt]  44

@@ -1,0 +1,99 @@
+File: EASYDRAW/SUNNYVAL/FLOPPY.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-3110,-4220)-(2931,713)
+Page size: 203.2 x 254.0 mm
+Coordinate window: lower-left (-3640,4550), upper-right (3640,-4550); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-3110,-4142.67)-(2880,713)
+Items: 376 (3215 words)
+Objects: polyline 4, ellipse 36, elliptical arc 36, justified text 78
+Other records (escapes, application data): write_meta 10 x6, write_meta 150 x1, write_meta 151 x6, write_meta 152 x10, write_meta 153 x10, write_meta 154 x77, write_meta 158 x1, write_meta 160 x1, write_meta 80 x40, write_meta 81 x40
+Text strings: 78
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+  -3110   -3900  [font 7 24pt]  FLOPPY CONNECTOR
+
+   1710   -3380  [font 7 12pt]   1
+
+   2730   -3380  [font 7 12pt]   2
+
+   2680     600  [font 7 12pt]   34
+
+   1710     600  [font 7 12pt]   33
+
+  -2900   -2600  [font 7 12pt]  Pin
+  -2900   -2120  [font 7 12pt]  1 
+  -2900   -1960  [font 7 12pt]  3
+  -2900   -1800  [font 7 12pt]  5
+  -2900   -1640  [font 7 12pt]  7
+  -2900   -1480  [font 7 12pt]  9
+  -2900   -1320  [font 7 12pt]  11
+  -2900   -1160  [font 7 12pt]  13
+  -2900   -1000  [font 7 12pt]  15
+  -2900    -840  [font 7 12pt]  17
+  -2900    -680  [font 7 12pt]  19
+  -2900    -520  [font 7 12pt]  21
+  -2900    -360  [font 7 12pt]  23
+  -2900    -200  [font 7 12pt]  25
+  -2900     -40  [font 7 12pt]  27
+  -2900     120  [font 7 12pt]  29
+  -2900     280  [font 7 12pt]  31
+  -2900     440  [font 7 12pt]  33
+
+  -2350   -2600  [font 7 12pt]  Signal
+  -2350   -2120  [font 7 12pt]  Ground
+  -2350   -1960  [font 7 12pt]  Ground
+  -2350   -1800  [font 7 12pt]  Ground
+  -2350   -1640  [font 7 12pt]  Ground
+  -2350   -1480  [font 7 12pt]  Ground
+  -2350   -1320  [font 7 12pt]  Ground
+  -2350   -1160  [font 7 12pt]  Ground
+  -2350   -1000  [font 7 12pt]  Ground
+  -2350    -840  [font 7 12pt]  Ground
+  -2350    -680  [font 7 12pt]  Ground
+  -2350    -520  [font 7 12pt]  Ground
+  -2350    -360  [font 7 12pt]  Ground
+  -2350    -200  [font 7 12pt]  Ground
+  -2350     -40  [font 7 12pt]  Ground
+  -2350     120  [font 7 12pt]  Media Detect 2
+  -2350     280  [font 7 12pt]  Ground
+  -2350     440  [font 7 12pt]  Media Detect 1
+
+    310   -2620  [font 7 12pt]  Signal
+    310   -2140  [font 7 12pt]  Mode Select 1
+    310   -1980  [font 7 12pt]  No Connect
+    310   -1820  [font 7 12pt]  Mode Select 2
+    310   -1660  [font 7 12pt]  Index Pulse
+    310   -1500  [font 7 12pt]  Drive Select 0
+    310   -1340  [font 7 12pt]  Drive Select 1
+    310   -1180  [font 7 12pt]  No Connect
+    310   -1020  [font 7 12pt]  Motor On
+    310    -860  [font 7 12pt]  Direction Select
+    310    -700  [font 7 12pt]  Step
+    310    -540  [font 7 12pt]  Write Data
+    310    -380  [font 7 12pt]  Write Gate
+    310    -220  [font 7 12pt]  Track 0
+    310     -60  [font 7 12pt]  Write Protect
+    310     100  [font 7 12pt]  Read Data
+    310     260  [font 7 12pt]  Side Select
+    310     420  [font 7 12pt]  Disk Change
+
+   -580   -2610  [font 7 12pt]  Pin
+   -580   -2130  [font 7 12pt]  2 
+   -580   -1970  [font 7 12pt]  4
+   -580   -1810  [font 7 12pt]  6
+   -580   -1650  [font 7 12pt]  8
+   -580   -1490  [font 7 12pt]  10
+   -580   -1330  [font 7 12pt]  12
+   -580   -1170  [font 7 12pt]  14
+   -580   -1010  [font 7 12pt]  16
+   -580    -850  [font 7 12pt]  18
+   -580    -690  [font 7 12pt]  20
+   -580    -530  [font 7 12pt]  22
+   -580    -370  [font 7 12pt]  24
+   -580    -210  [font 7 12pt]  26
+   -580     -50  [font 7 12pt]  28
+   -580     110  [font 7 12pt]  30
+   -580     270  [font 7 12pt]  32
+   -580     430  [font 7 12pt]  34
+
+  -3070   -3390  [font 7 12pt]  34 Pin Header - U76

@@ -1,0 +1,553 @@
+[Footer: -  #   -]
+SECTION THREE:
+TESTING
+
+
+3.1   OVERVIEW
+
+This section pertains to the test equipment, diagnostic software, and test procedures used to verify correct operation and repair of the STE computers. The diagnostic cartridge should be used if possible. If the unit gives no display or RS232 output when running the cartridge, see Section 3.3: Troubleshooting a Dead Unit.
+
+Since the STE system is quite complex, it should not be expected that this document can cover all possible problems or pinpoint the causes; rather, the intent here is to give a systematic approach which a technician can use to narrow down a problem to its most likely source. Experience in troubleshooting computer systems is assumed. Knowledge of the 68000 processor may be helpful.
+
+Economics will be an important consideration; due to the low cost of the STE computer line, little time can be justified in troubleshooting down to the component level when it may be cheaper to replace the functional sub-assembly.
+
+
+3.1.1   Test Equipment
+
+The following equipment may be needed to test the STE computer:
+
+      ∙ Atari SC1224 or SC1435 RGB Monitor (or similar)
+      ∙ Atari SM124 Monochrome Monitor (or similar)
+      ∙ Atari SF354 or SF314 External Floppy Disk Drive
+      ∙ ST Port Test Fixture, C103589-001 (DMA Test Fixture)
+      ∙ STE Port Test Fixture, C301153-001 (Genlock Test Fixture)
+      ∙ RS232 Loop-Back Connector
+      ∙ MIDI Loop-Back Connector, C302272-001
+      ∙ STE Test Diagnostic Cartridge, Revision 1.5 or later (p/n C302260-001)
+      ∙ Blank Double Sided 3.5" Diskettes (2)
+      ∙ RS232 Terminal (or STE with VT52 emulator)
+      ∙ RS232 Null Modem Cable (25 Pin Female-Female)
+
+In addition, the following items may be needed to troubleshoot and repair failed computers:
+
+      ∙ Two Channel Oscilloscope
+      ∙ Small Hand Tools
+      ∙ Spare Parts
+
+
+3.2   TEST CONFIGURATION
+
+With the power switch off, install the Diagnostic Cartridge with the label facing UP.
+
+      Important: if the cartridge does not have the plastic enclosure; BE SURE THE CARTRIDGE IS INSTALLED WITH THE CHIPS FACING DOWN.
+
+Connect cables from STE test fixture into the hard disk port, parallel port, and joystick/ mouse ports. The joystick cables should be plugged in so that, if the fixture ports were directly facing the computer ports, the cables would not be crossed. Plug the RS232 and MIDI loopback connectors into their ports. Plug the color monitor into the monitor output (a monochrome monitor can be used instead).
+
+Make sure the switch on the STE test fixture is in the position marked INT, otherwise the program will not proceed past the initialization.
+
+Power on the unit. Some tests will be run automatically, in a few seconds the menu screen should appear. If the screen appears, skip down to Section 3.4: ST Diagnostic Cartridge, below. If not read the next Section 3.3: Troubleshooting a Dead Unit.
+
+If the unit is being used as a terminal for a host computer, it should be disconnected from the host before using the diagnostic; otherwise, the host may think someone is logged on, and will send messages which will act like keystrokes input to the diagnostic.
+
+
+3.3   TROUBLESHOOTING A DEAD UNIT
+
+In the event that the system is correctly configured and powered and no display appears, this is the procedure to use for determining the problem. This assumes elementary steps have been taken, such as checking the LED in the forward left corner of the computer to verify the unit is powered and making sure the monitor is working.
+
+1. Connect a terminal to the RS232 port of the unit under test  (U.U.T.). you can use an STE running the VT52 terminal emulator program -- see the owner's manual for setting up the VT52. The cable should connect pin 2 (serial out) of the U.U.T. to pin 3 (serial in) of the terminal and vice versa. Connect pin 7 (ground) to pin 7. The terminal should be set up for 9600 bps, 8 bits of data, 1 stop bit, no parity (this is the default condition for the VT52 emulator).
+   Insert the Diagnostic Cartridge into the U.U.T., and power on the unit. If the Diagnostic Cartridge messages appear on the display of the terminal, use the diagnostic to troubleshoot the computer. If not, the computer will have to be disassembled to troubleshoot. Refer to Section 3.4: STE Diagnostic Cartridge for information on using the cartridge.
+   If no activity is seen on the RS232 port or display, continue with (2) below.
+2. Disassemble the computer so that the printed circuit board is exposed (see section 4. Disassembly). Power up the computer. Using an oscilloscope, verify the 8 MHz clock to the 68000 CPU. Replace the oscillator if necessary. Then check the HALT pin of the 68000 CPU. It should be TTL high. If so, go on to 3 below. If not, the CPU is halted. The reasons may be: (a) bad reset circuit, (b) double bus error. (c) bad CPU.
+
+   Check (a) by observing signal on input of the two inverters on the HALT line. Check (b) by observing BERR of the CPU as the unit is powered on. It should be high always. If there are logic low pulses, some component is malfunctioning and GSTMCU is generating the error. Verify the clocks to GTMCU, tracing back to the Shifter and MC (master clock) if necessary.
+   If still failing, the CPU is unable to read ROM or there is a component which is not responding to a read or write by the CPU, probably the MFP 68901 or DMA Controller. The MFP should respond to an MFPCS with DTACK. The DMA chip should respond to FCS by asserting RDY. There is no way to check for a bad CPU other than by elimination of the other two possibilities, although a hot CPU (too hot to touch for more than a second) strongly indicates a bad CPU.
+3. If the CPU is not halted, it should be reading instructions from the ROM (cartridge, if installed) and data and address lines will be toggling (if not, replace CPU). At this point, there is the possibility that both the video and RS232 subsystems are failing. Verify the output of the MFP chip (pin 8) while powering on the unit with the cartridge installed. If the data is being sent, trace it through the 1488 driver. Note that ±12V is required for RS232. If all looks good, there may be something wrong with the connection to the terminal.
+   Verify also the output of the Video Shifter. If using an RGB monitor, check the outputs to the summing resistors for R, G, and B. Note that if BLANK is not going high, no picture will be output. If using monochrome, check the MONO output pin. Also check the input to the MFP, pin 29, MONOMON. Note that if the CPU does not read a low on this signal on power-up, it will cause RGB output on the Video Shifter instead of MONO.
+   If the Video Shifter is outputting a signal, but the picture is unreadable, there is probably a problem with the screen RAM. The cartridge should be used to diagnose this problem, with the RS232 terminal as a display device.
+
+
+3.4   STE DIAGNOSTIC CARTRIDGE
+
+The STE Diagnostic Cartridge is used to detect and isolate component failures in STE computers. This section gives a brief guide to its use with a description of each test, error codes or pass/fail criteria, and recommendations on repair.
+
+
+3.5   POWER UP SEQUENCE
+
+The diagnostic program performs several tests on power-up. The messages "Checking Exception Handling" and "testing MFP, GSTMCU timing, Video" will appear, and the screen will appear scrambled for a few seconds before the menu is printed. The screen will turn red (dark background in monochrome) if an error occurs in the initial testing, with a message indicating the failure. The lowest 2 kbytes of RAM is tested on power-up; if a location fails, the error will be printed to the RS232 device. It is assumed that if RAM is failing, the screen may not be readable and program execution will fail because there are no stack or system variables. The program will continue to test RAM and print errors, but no screen will be displayed (the screen may turn red). Repair RAM.
+
+If the keyboard fails, it will be inactivated. The user must connect a terminal to the RS232 port. The diagnostic program looks for keystrokes from the RS232 device.
+
+If the display is unreadable, the RS232 terminal should be used. All messages are printed to the RS232 port as well as on the screen.
+
+
+3.5.1    Power-Up Initialization Errors
+
+I1    Error in RAM or Data Bus. (Test walks 1 or 0 across data bus.)
+I2    RAM Disturbance Error. (Writing to one location alters data in another location.)
+I3    RAM Addressing Error. (Test shows bad RAM cell or incorrect address code.)
+I4    Memory Configuration Error. (Problem with Memory Controller or RAM.)
+I5    RAM Sizing Error. (Incorrect amount of good RAM found.)
+I6    Checking Exception Handling. (This message is always printed on power-up initialization. If the system can fetch the vector from RAM and execute the handling routine, the message will be erased later.)
+I7    Bus Error Not Service. (If the GSTMCU does not assert the Bus Error signal, this error will occur.)
+T0    MFP Timer Error. (One or more of the four timers in the MFP did not generate an interrupt.)
+T1    Vertical Sync (GSTMCU is not generating vertical sync in the required time period.)
+T2    Horizontal Sync. (GSTMCU is not generating horizontal sync in the required time period.)
+T3    Display Enable. (GSTMCU is not generating DE output or the MFP is not generating an interrupt.)
+T4    Video Counter Error. (The Memory Controller is not generating the correct address for the display. This will result in a broken-up display in some or all display modes.)
+T5    PSG Bus Error. The PSG chip is defective. (Replace chip.)
+T6    1772 Bus Error. The 1772 chip is defective. (Replace chip.)
+K0    Stuck Key. A key closure was detected while the keyboard self test was executing.
+K1    Keyboard Not Responding. A command was sent to the keyboard processor and no status was returned within the allowed time. Verify that the keyboard is connected to the STE.  Verify that Pin 4 of J202 is +5 VDC.  Verify that Pin 3 of U201 is 500 KHz ±50 KHz.  Replace the keyboard, U201, R210, R209.
+K2    Keyboard Status Error. The self test command was sent to the keyboard, on completion of the test, the keyboard sent an error status. Replace the keyboard.
+
+3.6   TEST MENU
+
+The normal screen will be dark blue with white letters. The test title and revision number are displayed at the top, with the amount of RAM and keyboard controller revision below, and a test menu below that. To select tests, the user types the keys corresponding to those tests and the [Return] key. Many iterations of the test or tests chosen can be run by typing in the number of cycles just before typing RETURN. Typing a zero will cause the test sequence to run continuously. To stop a cycle before completion, hit the [Esc] key (there may be some delay in some tests before the test stops). As each cycle completes, the total number of cycles will be displayed on the screen.
+
+
+3.6.1   Main Menu (Typical)
+
+                        STE Field Service Diagnostic Test Rev. X.X
+                        © 1990, Atari Corp.
+                        XMbytes RAM     Keyboard Revision 2  60 HZ
+                        O.S. Version X USA NTSC
+
+
+UNATTENDED
+R   RAM Test            O   O.S. ROMs                       M   MIDI
+S   Serial Port         T   Timing                          D   DMA Port
+F   Floppy Disk         P   Printer/Mouse/Joy & Game Ports
+G   Short BLiT          Y   Long BLiT
+
+Q   Run all unattended tests (R,O,M,S,T,D,F,P,Y
+Z   Run unattended internal tests (R,O,T,F,G
+
+OPERATOR
+A   Audio               C   Color                           K   Keyboard
+H   High Resolution     J   Hard Disk Write/Read
+
+E   Examine/Modify memory
+B   Set RS232 rate
+X   Toggle video output -- 50/60 Hz
+?   Help
+
+Enter letter(s) and RETURN:
+
+
+The RAM size, keyboard revision, O.S. version, country (or language), and television standard (PAL or NTSC) are shown.
+
+The `Q' selection sequences through all the tests which do not require operator interaction. The `Z' selection sequences through RAM, ROM, Color, Keyboard, and Timing, Audio and short BLiT tests. Selection `E' enables the operator to examine or modify RAM or hardware registers. `B' enables the operator to change the baud rate on the RS232 port. Pressing the up arrow increases it, pressing the down arrow decreases it.
+
+Pressing `?' or the [Help] key brings up a brief synopsis of the cartridge functions.
+
+After a test (or series of tests) completes. the pass/fail status and error report, if any, will be displayed. Press the space bar to return to the menu.
+
+If multiple tests are selected, the sequence can be halted before completion by pressing the [Esc] key. At the completion of the current test, the sequence will halt, with the options of either continuing or returning to the menu. In some cases there will be considerable delay before the current test completes and the keystroke is detected.
+
+
+3.7   RAM TEST (R)
+
+RAM is tested in three stages: low 2 kbytes, middle (up to 64K), and from 64K to top. The test patterns used are: all 1's, all 0's, a counting pattern (data = low word of the address), reverse counting pattern (data = complement of address low word). The counting pattern is copied from the top and bottom of a 32 kbyte buffer into the current 32 kbytes of video RAM to a new area, verifies the pattern, and repeats the test, until the top of RAM is reached. Finally, addressing at 64K boundaries is checked by writing unique patterns in the last 256 bytes of each 64K block.
+
+If an error occurs, the error code is displayed, followed by the address, data written, data read, and the bits which did not agree.
+
+E.g.: "R2 45603E W: 603E R: 613C bad bits: 1,8"
+
+
+3.7.1   RAM Error Codes
+
+Except where noted, repair by replacing the RAM chip corresponding to the indicated bit(s).
+
+      R0    low memory failed while setting up to run test.
+      R1    failed walking 1s or 0s.
+      R2    failed address (counting pattern).
+      R3    failed 64K boundary test. Probable failure in GSTMCU.
+      R4    failed while displaying area tested (video RAM).
+
+
+3.8   ROM TEST (O)
+
+This test reads the configuration bytes of the operating system to determine the version, language/country, and TV standard (PAL or NTSC). All bytes from operating system ROMs are then read and the checksums and CRCs (cyclic redundancy check) are calculated. The configuration byte is then read to determine the language and version of the ROM. The correct checksum and CRC is then read from a look-up table. The unit fails if the values found do not match the values from the look-up table.
+
+Incorrect checksums are indicated by a message. If an error is displayed, replace the corresponding ROM.
+
+New versions of TOS will not cause this test to fail since the calculated CRC is compared with a value found in the new TOS ROMs and is independent of a fixed look up table.
+
+3.9   COLOR TEST (C)
+
+There are four screens in this selection. The first two are used to verify the color circuitry, the third verifies the vertical scrolling circuit, and the fourth verifies horizontal scrolling.
+
+Screen One: red, green, blue, and white color bands are shown. Each band consists of 16 levels of intensity. All 16 color palettes are represented, each palette is a vertical strip across the screen (strips should not be discernible, but each color should be a straight line across the screen). Because of the tight timing involved, keystroke interrupts will cause the display to jitter.
+
+Screen Two: This is the same as screen one except cyan, magenta, yellow, and white color bands are shown. These colors are formed by adding together two primary colors (blue + green, blue + red, red + green). The operator should see that there are no gaps or missing scan lines in the display. If lines are missing, check the three outputs on the Video Shifter for that color, and verify the values of the resistors on the output. Too low a brightness setting on the monitor will cause the monitor not to distinguish between fine levels, making it appear there are only four levels being output.
+
+The Video Shifter has four outputs for red (R0, R1, R2, R3), green (G0, G1, G2, G3) and blue (B0, B1, B2, B3). each of these quadruples is summed together by a resistor network to give 16 levels of intensity for each color, depending on which of the outputs are on. The values of the resistors give different weight to each output. The values of the resistor at R0 is twice that of R1, which is twice that of R2, etc. This allows us to get 16 equal steps on the summed outputs. For example, R0 on and R1, R2 and R3 off = 1/16. R0 off, R1, R2 and R3 on = 15/16. This signal then passes through a transistor amplifier, and from there to the video monitor connector.
+
+
+3.9.1   Symptoms and Fixes
+
+1.  Missing primary color. Check the output of the transistor amplifier. Q402 is blue, Q401 is green, Q400 is red. Look for a staircase pattern (eight levels of intensity). If the signal is there, trace forward to the video connector, if not, trace backward to the Video Shifter, until the faulty component is found.
+2.  Primary colors present, secondaries missing or incorrect. Replace the Video Shifter.
+3.  Coarse change in the intensity (not a smooth dark to light transition). Replace Video Shifter or look for a short on the output of one of the three color outputs for the appropriate color.
+4.  Specks or lines on the screen. This can be caused by bad RAM; if RAM has been tested and is good, replace the Video Shifter.
+5.  Wavering display, horizontal lines not occurring in the same place every time. The processor may be getting extra interrupts (if the processor is required to handle additional interrupts it will not have time to change all 16 color registers during a horizontal scan time). Examine the MFP interrupt request (pin 32).There should be an interrupt every 126 microseconds (2 display lines) from Display Enable (pin 20). If additional interrupts occur, locate the source: the inputs at pins 22-29 should all be high. If no external (to the MFP) source for the interrupts is found, replace the MFP.
+
+    Note:  If the keyboard is not connected, the input to the 6850 will be low, causing continual interrupts.
+
+Screen Three: This tests the vertical scrolling function. The screen is divided diagonally, white on top/right, and black on the bottom/left. The screen is scrolled, making more of the screen black, until the entire width of the screen is black. Then the reverse takes place, so that the black portion becomes smaller again. Any break in the border or gaps or sudden shifts indicates a problem in the MCU or RAM.
+
+Screen Four: This tests horizontal scrolling. A series of triangles moves across the screen from right to left. The border should be a straight line and there must be no gaps or sudden shifts. EXCEPT THERE WILL BE SOME SHIFTING ON THE TOP TWO LINES. Any other irregularity indicates a problem in the MCU or RAM.
+
+
+
+3.10   KEYBOARD TEST (K)
+
+Two types of tests are run. The keyboard self-test is done first, and if this passes, a screen is displayed representing the keyboard. If multiple tests have been selected, only the self-test is run. The operator presses keys and observes that the corresponding character on the screen changes (reverses background color). The key will also be displayed in the lower half of the screen. The mouse buttons and four directions are also shown on the screen. Connect the mouse, move in any direction, and that arrow will flicker.
+
+      Note: It is possible, if pressing keys very rapidly, to leave the representation of the key on screen in a depressed state. This does not indicate a problem with the hardware.
+
+The self-test checks communication between the CPU and the keyboard microcomputer, checks RAM and ROM in the keyboard microcomputer, and scans the keyboard for stuck keys.
+
+
+
+3.10.1   Keyboard Error Codes
+
+KO   Stuck key. A key closure was detected while the keyboard self-test was executing.
+K1   Keyboard not responding. A command was sent to the keyboard processor and no status was returned within the allowed time. The keyboard needs to be replaced or the communication channel through the 6850 is not functional (see Sec. 3.5.1).
+K2   Keyboard status error. The self-test command was sent to the keyboard, on completion of the self-test, the keyboard sent an error status. Replace the keyboard.
+
+3.11   MIDI TESTS (M)
+
+This test sends data out the MIDI port, (data loops back through the cable) and reads from the input and verifies the data is current. This also tests the interrupt from the 6850 through the MFP chip. The LED in the loopback cable will blink as data is sent (not all cables have the LED).
+
+
+3.11.1   MIDI Error Codes
+
+M0   Data not received. Trace the signal from the output of the 6850, through the drivers, loopback cable, and receivers to the input of the 6850. Replace the defective component as found.
+M1   Write/Read data mismatch. The data written was not the same as the data read. Replace 6850.
+M2   Input frame error. Bad 6850 or bad driver or receiver causing noisy signal.
+M3   Input parity error. Bad 6850 or bad driver or receiver causing noisy signal.
+M4   Bad 6850 received a byte before the previous byte was read. Input data overrun.  Replace the 6850.
+
+
+3.12   RS232 TESTS (S)
+
+      Note:  Install Loopback Plug after power up.
+
+First the RS232 control lines are tested (which are tied together by the loopback connector), the data loopback is tested. Data is checked transmitting/receiving using a polling method first, then using interrupts.
+
+Data is transmitted at 300, 600, 1200...19200 bps. Data transmission is performed by the MFP and the 1488 and 1489 driver and receiver chips. Interrupts are a function of the MFP. Control lines are output by the PSG and input on the MFP. Note that this test does not thoroughly test the drive capability of the port. If the unit passes but fails in use, it is likely that the 1488 or 1489 chips are bad.
+
+
+3.12.1   RS232 Error Codes
+
+S0   Data Not Received. Check signal path, MFP pin 8 to J204 pin 2 via 1488 to J204 pin 3 to MFP pin 9 via 1489.
+S1   Data Mismatch. Data read was not what was sent. Check integrity of the signal. May be bad driver, receiver, or MFP.
+S2   Input Frame Error. Incorrect time between start and stop bits. Probable MFP failure.
+S3   Input Parity Error. Input data had incorrect parity. Probable MFP failure.
+S4   Input Data Overrun. A byte was received before the CPU read the previous byte. MFP failure.
+S5   No IRQ. CPU did not detect an interrupt by the MFP. MFP or GSTMCU failure.
+S6   Transmit Error. MFP transmitter failed.
+S7   Transmit Error Interrupt. An error condition was created intentionally to cause an interrupt, and the MFP did not respond.
+S8   Receive Error Interrupt. An error condition was created intentionally to cause an interrupt, and the MFP did not respond.
+S9   RI/DTR Connection. Signal sent at DTR is not detected at RI.
+SA   DCD/DTR Connection. Signal sent at DTR is not detected at DCD.
+SB   RTS/CTS Connection. Signal sent at RTS is not detected at CTS.
+
+
+3.13   AUDIO TEST (A)
+
+This test requires the operator to decide if the unit passes or fails.
+
+There are two sound generating circuits: the Programmable Sound Generator (PSG) and DMA sound. Both are controlled by the LMC1992 chip and associated circuitry, so if the unit fails both parts of the test, look at the LMC1992 chip first.
+
+
+3.13.1   PSG Sound
+
+A sound is output on each of the three programmable sound generator channels. The 5/8 sound is a sweep from low to high frequency. Verify that sound can be heard throughout the range, with no dropping of audio level.
+
+
+3.13.2   DMA Sound
+
+Connect an oscilloscope at the stereo output jacks. The setting should be 1 ms/division, 5 volts/division. There are four parts to this test. After observing the signals, proceed to the next part by pressing the space bar. In each case, the output signal amplitude should go from 0 volts to maximum amplitude in steps.
+
+  a. Mono 1 kHz: Both channels output the same signal; it should approximate a sine wave and be 5-6 volts in amplitude.
+  b. Stereo 1 kHz/500 Hz: Verify that the right and left channels have correct frequencies. As one channel increases in amplitude, the other channel decreases. Maximum amplitude is 5-6 volts.
+  c. Treble: A 12.5 kHz signal is output on both channels. Maximum amplitude is about 6 volts.
+  d. Bass: A 50 Hz signal is output on both channels. Maximum amplitude is about 6 volts.
+
+3.14   TIMING TESTS (T)
+
+These tests are run at power-up as well as being selectable from the menu. The MFP timers, the GSTMCU timing for VSYNC and HSYNC, and the Memory Controller video display counters are tested. The video display test redirects display memory throughout RAM and verifies that the correct addresses are generated. Odd patterns may flash on screen as this test is run. There are two tests which check the bus timing for the 1772 and PSG chips. An error message is printed on the screen then the test is run. If the test passes, the message is erased. If not, a Bus Error will occur and the message will remain. If a terminal is connected to the RS232 port, the message will not be erased, but "Pass" will be printed.
+
+
+3.14.1   Timing Test Error Codes
+
+T0   MFP Timer Error. One or more of the four timers in the MFP did not generate an interrupt on counting down.
+T1   Vertical Sync. GSTMCU is not generating vertical sync in the required time period.
+T2   Horizontal Sync. GSTMCU is not generating horizontal sync in the required time period.
+T3   Display Enable. GSTMCU is not generating DE output or the MFP is not generating an interrupt.
+T4   Video Counter Error. The memory controller is not generating the correct addresses for the display. This will result in a broken-up display in some or all display modes.
+T5   PSG Bus Error. The PSG chip is defective.
+T6   1772 Bus Error. The 1772 chip is defective.
+
+
+3.15   DMA TESTS (D)
+
+Four sectors (2048 bytes) of data are written to the RAM on the port test fixture via high speed DMA, then read back and verified. This test is repeated many times for RAM addresses throughout the range of RAM.
+
+
+3.15.1   DMA Test Error Codes
+
+D0    DMA Timed Out. No DMA occurred due to faulty DMA Controller, GSTMCU, or Memory Controller, or the HDINT interrupt was not processed by the MFP. The failure can be isolated by seeing if the DMA Controller responds to HDRQ from the test fixture with ACK. Verify the MFP by seeing that the HDINT input causes an INTR output from the MFP.
+D1    DMA Counter Error. The number of bytes transferred was incorrect. The Memory Controller or DMA Controller is bad.
+D2    Data Mismatch Error. The data received from the DMA port was not the same as the data sent. Replace the DMA Controller If the problem persists, check the data lines to the port for opens and shorts. A third possibility is that a defective 1772 is loading the bus.
+
+D3    DMA Controller Not Responding.
+
+
+3.16   FLOPPY DISK TESTS (F)
+
+In a single test mode, a menu is displayed showing seven options:
+
+1. Quick Test. For each disk installed, formats, writes, and reads tracks 0, 1, and 79 of side 0. If double sided, formats and writes track 79 of side 1 and verifies that side 0 was not overwritten. If no disks are installed, checks to see what drives are online and if they are double or single sided. To assure that the drives are correctly tested, the operator should install menu option 6 before calling the test. Once the test is run, the drives become installed, and will be displayed on the menu screen.
+2. Read Track. Continuously reads a track, for checking alignment with an analog alignment diskette. The choice of track to be read may be input by the operator. If [Return] is pressed without entering a number,
+3. Interchangeability Test. Checks to see if diskettes from two disk drives each can be read by the other disk drive.
+4. Disk Exerciser. A more thorough disk test; tests all sectors used on the disk for an indefinite period of time.
+5. Copy Protect Tracks. Tests tracks 80-82, which are used by some software companies for copy protection. Not all manufacturers disk drives will write to these tracks.
+
+      Note:  This test is for information only and should not be used to reject a mechanism.
+
+6. Test Speed. The rotational speed of the drive is tested and displayed on the screen as the period of rotation. The acceptable range is 196-203 milliseconds. The highest and lowest values measured are displayed. The test stops when any key is pressed.
+7. Install Disks. Specify how many and what type of disk drives to test.
+
+One additional test which can be performed is testing the write protect detection. Slide the write protect tab to the protected position, and run test #1. You should see "F5 Write Protected" displayed if the drive has been installed, or "Unable To Write Disk" displayed if the drive has not been installed.
+
+If more than one test is selected from the Main Menu, the Floppy Menu will not appear, but the Quick Test will be selected automatically.
+
+
+3.16.1   Floppy Disk Test Error Codes
+
+No Floppies Connected -- The controller cannot read index pulses. The cable may be improperly connected, or the drive has no power, or the drive is faulty.
+
+F0   Drive not selected. Drive was installed, but failed attempting restore (seek track 0). Check connection of cables, power to drive. Verify that the light on the front of the drive goes on. Listen for the sound of the head seeking (the slide on the diskette should open). If all this occurs, TR0 (pin 23 on the 1772) should go low. If so, check for an interrupt on pin 28 of the 1772. If none, replace the 1772. Else trace the interrupt to the MFP, verify that the MFP responds by asserting INTR. If the drive is not being selected (no light), check the PSG chip. Pin 20 should go low when drive A is selected, and pin 19 should go low when drive B is selected. If not, replace the PSG.
+F1   Error of previous version that has been deleted. Error message now says "Error Writing" (or reading or formatting), and displays a more specific error message,
+     e.g., "F9 CRC error."
+F2   Error of previous version that has been deleted. Error message now says "Error Writing" (or reading or formatting), and displays a more specific error message,
+     e.g., "F9 CRC error."
+F3   Error of previous version that has been deleted. Error message now says "Error Writing" (or reading or formatting), and displays a more specific error message,
+     e.g., "F9 CRC error."
+F4   Seek Error. Verify that the STEP, MO, and DIRC outputs from the 1772 are sent to the drive. Probable failure in the 1772, but the drive is also suspect.
+F5   Write Protected. Check the write protect tab on the diskette. If OK, verify that the WP input (1772, pin 25) is getting low during the test; if it is then the 1772 is defective; if not, the problem is with the disk drive.
+F6   Read Compare Error. Data read from the disk was not what was supposed to be written. Check in the following order: diskette, disk drive, 1772, and DMA Controller.
+F7   DMA Error. DMA Controller could not respond to a request for DMA. Replace the DMA Controller. If error persists, check FDRQ while running the test. It should normally be low and go high with each data byte transferred. If stuck high, push the reset button and verify that MR (1772, pin 13) goes low. If not, trace RESET to its source. If MR is OK, but FDRQ is still stuck, replace the 1772.
+F8   DMA Count Error. Replace the Memory Controller, if that does not fix it, replace the DMA Controller.
+F9   CRC Error. The diskette or disk drive may be bad, else replace the 1772.
+FA   Record Not Found. The 1772 could not read a sector header. May be a bad diskette, drive or 1772. If the test fails drive A but not drive B, the 1772 is not at fault (likewise fails B but not A).
+FB   Lost Data. Data was transferred to the 1772 faster than the 1772 could transfer data to the DMA Controller. If DMA Port passes the test, the 1772 is probably bad. The DMA Controller could also be at fault.
+FC   Side Select Error -- Single Sided Drive. The test tried to write both sides of the diskette, but writing side 1 caused side 0 to be overwritten.
+FD    Drive Not Ready. The format/write/read operation timed-out. Probably a bad disk drive. Verify by checking another drive. Could also be a faulty 1772.
+
+3.17   PRINTER AND JOYSTICK PORT TESTS
+
+The ST Port Test Fixture and STE Game Port Test Fixture must be properly connected for this test.
+
+The port test fixture is used to test the parallel printer port, DMA,  and joystick ports. The parallel port test writes to a latch on the test fixture and reads back data. The joystick port tests output data on the parallel port, which is directed through the test fixture to the joystick ports. The keyboard reads the joystick data in response to commands from the CPU. The cables connecting the joystick ports to the test fixture must not be reversed, or the printer and joystick tests will fail.
+
+The game controller port test simulates joystick direction input, fire button input, paddle controller input, and light gun inputs. The STE game port test fixture used the joystick outputs and control lines from the STE Port Test Fixture to generate the signals input to the STE.
+
+
+3.17.1   Printer/Joystick Error Codes
+
+P0    Printer Port Error. Data read from the printer port was not what was written. Verify that the data lines on the PSG chip (pins 6-13) are toggling when the test is run. If not, run the RS232 test. If the RI-DTR and DCD-DTR errors occur, the chip is probably not being selected. Check if the chip selects are being activated and the 2 MHz clock is present. If the PSG is selected and not outputting signals, replace it. If the data lines toggle, verify continuity. Also verify that J11 (Joystick 0) pin 3 is pulled up. Verify the test fixture is good by testing another computer. If it is OK, replace the PSG
+P1    Busy Input Error. The input to the MFP is not being read, or the STROBE output from the PSG is not functioning, or Joystick 0 pin 3 is not connected. If the P0 error also occurs, see handling for that. Otherwise, look for a signal arriving at MFP pin 22 from J5 pin 11. If no signal at J5, the test fixture may be bad. Verify with another computer.
+J0    Joystick Port 0. The keyboard input is not functioning. If the busy input error occurs, fix that first. Otherwise, replace the keyboard. If error persists, check continuity from J11 , pins 1, 2, 3, 4 to J12 pins 12, 10, 9, 8 respectively.
+J1    Joystick Port 1. The keyboard input is not functioning. If the busy input error occurs, fix that first. Otherwise, replace the keyboard. If error persists, check continuity from J11 , pins 1, 2, 3, 4 to J12 pins 7, 5, 4, 3 respectively.
+J2    Joystick Time-Out. Joystick inputs were simulated by outputting data on the printer port and routing it via the test fixture to the joystick ports. Joystick inputs are detected by the keyboard and sent to the CPU via the 6850. This error can be caused by printer port failure (code P0), keyboard failure, keyboard-CPU communication line 1, or a faulty test fixture. If the power-up keyboard test passes, this eliminates any problem with keyboard-CPU communication.
+J3    Left Button Input. If P1 error occurs, fix that first. Otherwise replace the keyboard. On the STE, also check continuity from J10 pin 6 to J12 pin 11.
+J4    Right Button Input. If P1 error occurs, fix that first. Otherwise replace the keyboard. On the STE, also check continuity from J10 pin 6 to J12 pin 6.
+J5    Aux Joystick Direction. Game controller port (J500, J501) direction bits. U511 is used to drive the input via the test fixture. The hexadecimal data following corresponds to the bits read from latches U510 and U512, where a 1 indicates an error. For example, 0002 indicates an error at J500 pin 3.
+J6    Aux Fire Button. Fire buttons are read from U509. Signal is driven via the test fixture from the output of U511.
+J7    Paddle. The inputs are driven by either 5V/100 ohms or 5V/1M on the test fixture. This current charges the RC network on the STE, varying the output pulse of the LM556. The pulse width is measured by the GSTMCU chip.
+J8    Light Gun. The light gun (XPEN) input is toggled at three points on the screen (the video address counter is used to find the position of the screen). The MCU should return the X/Y coordinates of the screen position. If the XPEN signal is toggling and this error occurs, there is a problem with the GSTMCU.
+
+
+3.18   MONOCHROME MONITOR (H)
+
+If this test is selected while a color monitor is connected, a message is displayed to connect the monochrome monitor. The CPU waits for an interrupt from the MONOMON input to the MFP, and when received (the operator connects the monochrome monitor), changes the display to high resolution. The display screen will reverse every two seconds. When the operator sees the display is correct, he unplugs the monochrome monitor and re-connects the RGB monitor and the display should return to normal.
+
+
+3.19   HARD DISK WRITE/READ (J)
+
+This tests the hard disk interface by writing and reading one complete track of the hard disk. It is not intended to test the hard disk drive, but tests the computer DMA circuitry. The test has been found to be more effective than the DMA test for some types of failures; these show up as "Data Compare" errors.
+
+The test program will save the data on the cylinder used for testing and restore the data when the test is done (when "quit" or "park heads" is selected).
+
+      NOTE:  Always back up the hard disk before running this test.  Bad hardware can           still destroy the data on the disk.
+
+The test will run until the operator presses the [Esc] key. There is no "Pass" condition. A failure will usually show up within a few seconds if it is going to occur at all. The following messages can appear if there is an error:
+
+Controller Not Responding  There is no communication between the computer and hard disk. Cycling power on the hard disk may correct this condition.
+Operation Timed Out  The computer sent a command, which was accepted by the hard disk, but the hard disk did not return a completion code in time.
+Command Error  The hard disk attempted to execute a command, but an error occurred in the hard disk.
+DMA Count Error  After completing a data transfer, the byte count of the data in the computer memory controller was incorrect.
+Data Compare Error  This is followed by the data written to the disk and the data read from the disk. The error is the condition this test was meant to detect. The circuitry involves the custom LSI chips (GSTMCU, Memory Controller, and DMA Controller).  The comparison is done by the CPU, and it has found an error in the read/write buffers in memory.
+
+
+3.20   GRAPHICS CHIP BLiT (G,Y)
+
+Two tests are available for this chip. The "Short BLiT Test" checks the ability of the BLiTTER to move blocks of memory around and perform logical operations on the data. No patterns appear on the screen. If an error is detected, one of the error codes (G1-G12) is displayed.
+
+In the "Long BLiT Test", a triangle is drawn on the screen and rotated 180 degrees until a rectangle is formed. If a color monitor is used, two identical images will be drawn. If an error occurs, a message will appear telling you
+ to replace the BLiTTER.
+
+Corrective action for any error is the same:
+
+  a.  Verify the jumpers for the BLiT chip are installed correctly.
+  b.  Replace the chip (and if that does not cure the problem, replace the 68000).
+
+
+3.21   ERROR CODES QUICK REFERENCE
+
+This is a brief summary of all error codes which may occur when running the diagnostic.
+
+
+3.21.1   Initialization
+
+Error occuring before the title and menu appear.  (see section 3.5.1)
+
+I1    RAM data line is stuck.
+I2    RAM disturbance. Location is altered by write to another location.
+I3    RAM addressing. Wrong location is being addressed.
+I4    MMU error. No DTACK after RAM access.
+I5    RAM Sizing Error. Uppermost address fails.
+I6    Bus Error Handling Failed. Bus Error occurred (on purpose), but caused a crash (e.g. System was unable to read the vector from RAM).
+
+I7    Bus Error not detected.  Glue not asserting Bus Error or the signal is not reaching the CPU.
+
+3.21.2   Exception (may occur at any time.)
+
+E1    Not used
+E2    Not used
+E3    Not used
+E4    Not used
+E5    Not used
+E6    Autovector Error. IPLO is grounded or 68000 is bad.
+E7    Spurious Interrupt. Bus error during exception processing. Device interrupted, but did not provide interrupt vector.
+E8    Internal Exception (generated by 68000).
+E9    Bad Instruction Fetch.
+EA    Address Error. Tried to read an instruction from an odd address or read or write word or long word at an odd address. Usually this error is preceded by a bus error or bad instruction fetch.
+EB    Bus Error. Generated internally by the 68000 or externally by GSTMCU. Usually caused by device not responding. Displays the address of the device being accessed.
+
+
+3.21.3   RAM
+
+R0    Error in low memory, possibly affecting program execution.
+R1    Error in RAM chip.
+R2    Address Error. Bad RAM chip or Memory Controller. Address line not working.
+R3    Address error at 64K boundary.
+R4    Error during video RAM test. Bad RAM chip.
+
+
+3.21.4   Keyboard
+
+K0    Stuck key.
+K1    Keyboard controller is not responding.
+K2    Keyboard controller reports error.
+
+
+3.21.5   MIDI
+
+M0    Data not received.
+M1    Data received is not what was sent.
+M2    Data input framing error.
+M3    Parity error.
+M4    Data overrun. Byte was not read from the 6850 before next byte arrived.
+
+
+
+3.21.6   Printer and Joystick/Game Ports
+
+P0    Printer port error.
+P1    Busy (printer port input) failed.
+J0    Joystick port 0 failed.
+J1    Joystick port 1 failed.
+J2    Joystick (keyboard controller) timed-out.
+J3    Left button line failed.
+J4    Right button line failed.
+J5    Auxiliary joystick direction (game controller port).
+J6    Auxiliary fire button (game controller port).
+J7    Paddle (game controller port).
+J8    Light gun (game controller port).
+
+
+3.21.7   RS232
+
+S0    Data not received.
+S1    Data received is not what was sent.
+S2    Data input framing error.
+S3    Parity error.
+S4    Data overrun. Byte was not read from the MFP before the next byte arrived.
+S5    IRQ. The MFP is not generating interrupts for transmit or receive.
+S6    Transmitter error -- MFP
+S7    No interrupt from transmit error (MFP).
+S8    No interrupt from receiver error (MFP).
+S9    DTR-RI. These signals are connected by the loopback connector. Changing DTR does not cause change in RI.
+SA    DTR-DCD. Same as S9 for these signals.
+SB    RTS-CTS. Same as S9 for these signals.
+
+
+3.21.8   DMA
+
+D0    Time-out. DMA did not take place, or interrupt not detected.
+D1    DMA Count Error. Not all bytes arrived. Possible Memory Controller or GSTMCU error.
+D2    Data Mismatch Error.
+
+D3    DMA Controller not responding.
+
+
+3.21.9   Timing
+
+T0    MFP timers failed.
+T1    Vertical sync timing failed.
+T2    Horizontal sync failed.
+T3    Display Enable Interrupt failed.
+T4    Memory Controller video address counter failed.
+T5    PSG Bus test. PSG chip is causing a bus error by staying on the data bus too long.
+T6    1772 Bus test. 1772 chip is causing a bus error by staying on the data bus too long.
+
+
+3.21.10   Floppy Disk Drive
+
+F0    Drive offline. Not responding to restore (seek track 0).
+F1    Format error.  The message will say "error writing" (or reading) and display the specific error found.
+F2    Error Writing. Gives specific error found.
+F3    Error Reading. Gives specific error found.
+F4    Seek error.
+F5    Write protected.
+F6    Data compare. Data read not equal to data written.
+F7    DMA error.
+F8    DMA count error (GSTMCU).
+F9    CRC error.
+FA    Record not found.
+FB    Lost data.
+FC    Side select error.
+FD    Drive not ready. Timed-out performing the command.
+
+
+3.21.11   BLiTTER
+
+G1   Halftone RAM (internal RAM in BLiT chip).
+G2   Endmask.
+G3   Operation.
+G4   Halftone Op.
+G5   Skew.
+G6   Reverse Bit.
+G7   Force Extra Source Read.
+G8   Smudge.
+G9   X Count.
+GA   Y Count.
+GB   Time-out.
+GC   Address Count.
+
+BUS ERROR during BLiT Test -- Replace BLiTTER chip.

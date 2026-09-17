@@ -1,0 +1,36 @@
+* author: Tom Le
+* date: Feb 21, 1992
+
+	.text
+excepbebe:
+	move.l  spsave0,sp
+	bra	testber0
+	rts
+
+testber:
+	move.l  sp,spsave0
+	move.l  8,intsave0
+	move.l  #excepbebe,8
+        lea     expandio,a0
+	move.b  2(a0),d0 		;clear bus error
+	move.w   #0,$f10000		;set bus error bit
+
+testber0:
+	move.b  (a0),d0
+	btst	#wasber,d0
+	beq	tberhi	;stuck hi
+
+tbert:
+	move.l  intsave0,8
+	btst    #eberf,flag
+        rts
+
+tberhi:
+.if (TOS = 0)
+        move    #red,palette
+.endif
+	lea	testbeh,a5
+	bsr	dspmsg
+	bset    #eberf,flag
+	bra	tbert
+

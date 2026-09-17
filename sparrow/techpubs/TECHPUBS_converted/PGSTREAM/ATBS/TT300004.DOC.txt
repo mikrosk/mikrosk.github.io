@@ -1,0 +1,152 @@
+[PageStream 2 document TT300004.DOC: 8.50 x 11.00 in, 211 objects]
+
+--- Page 1 ---
+
+Atari Technical Bulletin
+Number: TT30-0004
+Date: March 27, 1992
+Page 1 of 3
+
+
+Product(s) Affected:	TT030
+Model:				All
+Type of ATB:			As Needed
+ECO #: 				1434
+
+Reason for ATB:
+
+To correct boot up problems on C301763-001 REV D FAB boards after ATB TT30-0002 or ECO 1425 was applied.
+
+
+Notes:
+
+After installing the fix described in ATB TT30-0002 or ECO 1425 several TT030 systems using the C301763-001 REV D FAB main board exhibited problems booting when a TT RAM board is installed. The following procedure will correct those problems. The problem only pertains to the C301763-001 REV D FAB.
+
+
+Symptoms of Problem:
+
+During boot-up the system will fail with X's when TT RAM test is performed or bomb on Boot-up if TT RAM is installed.
+
+
+Solution:
+
+1.	Remove the top cover.
+
+2.	Remove the VME Card Guide.
+
+--- Page 2 ---
+[68 drawing objects, see TT300004.DOC.p002.svg]
+
+Atari Technical Bulletin
+Number: TT30-0004
+Date: March 27, 1992
+Page 2 of 3
+
+
+3.	If ECO 1425 or ATB TT30-0002 is not installed, skip to step 4. If the first oscillator modification is installed, ECO 1425 or ATB TT30-0002, remove the wire from the left side of R888 and R997. See Figure 1.
+
+4.	Lift pins 3 and 17 of U210 so the pins are clear of the pads on the main PCB. See Figure 2.
+
+5.	Connect a wire from the right side of R997 to U210 pin 17. See Figure 2.
+
+6.	Connect a wire from U210 pin 3 to the left side of R888. See Figure 2.
+
+7.	Insulate the connection at R888 with Heatshrink Tubing to guard against any possible shorts. See Figure 2.
+
+8.	Re-assemble the unit.
+
+Heatshrink Tubing
+
+Wire From R997
+
+Left Side of R888
+
+U111
+
+R997
+
+R888
+
+U110
+
+U114
+
+U112
+
+C115
+
+C599
+
+C215
+
+R899
+
+R951
+
+VME
+Backplane
+
+U206
+
+U900
+
+UA00
+
+Figure 1
+
+--- Page 3 ---
+[94 drawing objects, see TT300004.DOC.p003.svg]
+
+Atari Technical Bulletin
+Number: TT30-0004
+Date: March 27, 1992
+Page 3 of 3
+
+C911
+
+Wire From U210 Pin 17
+
+Heatshrink Tubing
+
+U210
+
+U203
+
+Wire From U210 Pin 3
+
+U204
+
+Left Side of R888
+
+U111
+
+R997
+
+R888
+
+U110
+
+U114
+
+U112
+
+C115
+
+C599
+
+C215
+
+R899
+
+R951
+
+VME
+Backplane
+
+U206
+
+U900
+
+UA00
+
+Figure 2

@@ -1,0 +1,540 @@
+                                                           ****
+Date       : 12-19-91                                      ****
+Ver        :  A5                                           ****
+Written by : Eran Dariel, Segal Moshe                    ********
+                                                        ** **** **
+                                                      **   ****   **
+                                                    **     ****     **
+
+                               SPARROW - (SP)
+                          VIDEO CHIP SPECIFICATION
+
+  1.  General Description
+
+The new video chip will include blocks that previously resided in the STe
+COMBO (4153 COMBO). Also, the functions that were in the STe video shifter
+and remain in the new video chip will be modified to include new enhanced
+video features. Finally, functions that relate to the Sound DMA and resided
+in the STe video shifter will be removed to the new DMA chip.
+
+The blocks that are removed from STe COMBO to the new video chip are:
+
+1) Horizontal sync generator.
+2) Vertical sync generator.
+3) Video control logic that contained the sync control bit, PAL/NTSC bit
+and the related control logic and interlace logic.
+4) Horizontal DE/Blank counter.
+5) Vertical DE/Blank counter.
+6) Light gun/pen circuit.
+
+All Sound DMA logic that resided in STe video shifter will be removed to
+the new DMA chip This includes:
+
+1) Sound timing and control logic including: XLD, XRD, Sound Mono, Sound
+repeat etc.
+2) FCLK generation.
+3) Sound load control and registers.
+4) Microwire circuitry.
+
+The remaining logic that was in the STe video shifter will be also in the
+new video chip, but new logic will be included to add the enhanced video
+features.
+
+ 2.  Functional Requirements
+
+1.  1,2,4,8 color planes  ( up to 256 colors ).
+2.  6 bit color resolution.
+3.  XGA high color mode ( 6 bit green, 5 bit blue, 5 bit red) which gives
+    up to 65536 possible color combin ations.
+4.  Pixel scrolling capability.
+5.  Supports programmable  Video modes in SP mode ( Listed in table 1).
+6.  Supports 3 Video modes in ST mode ( Listed in table 2).
+7.  Video signal generation for PAL, SECAM, NTSC TV standards.
+8.  Retrieves Video data by Page mode from DRAM.
+9.  Supports both 16 or 32 bit wide, data bus width.
+10. Pixel clock rate of 32MHz, 16MHz, 8MHz,  25Mhz or 12.5MHz.
+11. Full timing programmability of video control signals: Horizonal and
+    Vertical sync, Display enable, Blanking, Field sync, Equalization
+    pulses etc, to support wide range of monitors (including VGA monitor)
+    or TV standards.
+
+VIDEL SPEC A05                                                page 2
+
+
+12. Full interlace support and full support of related control signals for
+TV: Field sync, Equalization pulses etc .
+
+SP resolution and timing is programmable. Table 1 below list some examples
+of
+SP video modes.
+
+              TABLE 1 - EXAMPLES OF SP VIDEO MODES
+                  # of    dotck    dotck   CPU %      CPU%
+          HxV    colors  No VGA   VGA     16 bit     32 bit
+        640x480     256   16M(TV)  25M**    --         80.0
+        320x200     256     8M     12.5M    89.4       94.1
+        320x400      16     8M     12.5M    94.7       97.1
+        320x400     256     8M     12.5M    89.4       94.1
+        640x200      16    16M     25M      89.4       94.1
+        640x200     256    16M     25M**    78.8       88.2
+        640x400      16    16M     25M      89.4       94.1
+        640x400     256    16M     25M**    78.8       88.2
+
+Modes with 400 (or more) lines are supported on VGA  monitors or monitors
+with interlace. These modes are supported on TV using INTERLACE mode. Modes
+with 200 lines are supported on VGA monitor by repeating each line once.
+Apart from the above, special bit in the SP Shift Mode Register initiates
+the XGA high color mode.
+
+           TABLE 2 - ST VIDEO MODES
+                  # of    dotck    dotck   CPU %
+s s       HxV     colors  No VGA   VGA     16 bit
+0 0     320x200      16     8M     12.5M   94.7
+0 1     640x200       4    16M     25M     94.7
+1 0     640x400       1    32M     25M**   94.7
+** - Only with 32 bit wide Video bus.
+
+640x400 is supported on monochrome (32M dotck) or VGA monitors (25M).
+
+The shifter will switch to either SP or ST mode when the proper Shift Mode
+Register (ST or SP CLUT) is written.
+
+All video modes that are operated in 32 bit video bus must have the video
+memory organized such that each video line contains a whole number of
+double
+memory words (32 bits).
+
+The Video Timing Control register (address FF82C2) has to be loaded by the
+operating system according to the video mode and the choice of video
+monitor
+or TV. In case of STe the video shifter is responsible to load (via
+hardware)
+the VTC with the data listed in the table below. This is necessary to cope
+with mode changes initiated by STe software, since in these cases the
+operating system has no way to update the VTC. The table shows the content
+of the 'mmir' bits of the VTC register with 'mm' bits as the most
+significant.
+
+
+
+
+VIDEL SPEC A05                                                page 3
+
+
+                VTC loading in STe mode
+   ss     HxV      TV     ST color     ST mono      VGA
+   00   320x200    0000     0000        xxxx        0101
+   01   640x200    0100     0100        xxxx        1001
+   10   640x400    0110     0110        1000        1000
+
+The XGA high color mode uses one memory word for each pixel, using 6 bits
+for green, 5 for red and 5 for blue. While in XGA and Genlock the green is
+reduced to 5 bits and the remaining bit is used to enable switching between
+internal or external video on each pixel. This switching is done by the
+external Genlock hardware only if the pixel control bit in SP shift mode
+register is set.
+
+
+ 3. Functional block diagram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+VIDEL SPEC A05                                                page 4
+
+
+
+ 4.  Description of Blocks
+
+4.1  DATA BUFFER
+
+The buffer stores the Video data retrieved in each burst from the DRAM
+and supplies it to the SHIFT  ARRAY block.
+
+     The block comprises of:
+
+1) Dual 34x16 Ram Buffers working in ping pong mode.
+2) Control circuit.
+
+The depth of the buffers (34) was determined according  to CPU utilization
+calculations. The two RAM Buffers work in ping pong mode. While one is read
+from, the other is loaded.  When the one that is read reaches its end a
+VREQ
+signal is issued to the MCU (in the COMBO chip) and reading continues from
+the second buffer while the first buffer is being loaded with new data.
+
+The control circuit:
+
+1) Extracts data from the RAM Buffers and supplies it to the SHIFT ARRAY.
+Eight words (of 16 bits each) of video data are loaded into the "back end"
+of the shifter whenever the shifting of information contained in the
+previous
+8 words of video data was shifted out . For 8 color planes this means that
+this loading takes place after 16 pels, for 4 color planes after 32 pels,
+for
+2 color planes after 64 pels and for 1 color plane (monochrome) after 128
+pels.
+Proper feedback paths enable serialization of the data shifted out. This
+serialization is required for video modes with less than 8 color planes.
+Since
+the "back end" of the shifter is always loaded with 8 video words, this is
+exactly the data required for shifting out 16 pels in 8 color planes cases.
+For less than 8 color planes the information contained in 8 video word
+lasts
+for more pels. So, in those cases the serializtion utilizes properly the
+information in the 8 video words that was loaded, so that it can be used
+throughout the shifting period.
+2) Requests data from the MCU as soon as the RAM buffer that is read from
+is empty.
+3) Writes DRAM data into the INPUT BUFFER and controls the input mux.
+4) Reload both RAM Buffers and SHIFT ARRAY upon each VSYNC and Hsync and
+enable work during DE (Display enable) periods.
+
+
+4.2  INPUT BUF
+
+The 32 bit wide latch, latches the DRAM outputs into the device. The valid
+data period is only 6ns under WC conditions so this sampling is critical.
+The latching uses the same CAS signals that enable the DRAM reading, and
+the
+logic is designed to delay the DRAM data read by the same delay that exists
+on the CAS signals to cope with the above mentioned WC conditions.
+
+VIDEL SPEC A05                                                page 5
+
+
+The input mux selects between the upper and lower word . In 16 bit mode
+signal RAMH from the COMBO selects either the lower or higher word. The
+select signal is provided by the control logic in the DATA BUFFER block.
+
+
+4.3  SHIFT ARRAY
+
+A shift up and right array, 8 bit deep and 16 bit wide. Each cell is made
+out of two F.F levels. The one in the "back" is for shifting data up into
+the array, and the "front" one for shifting data right, out of the array.
+The array can be serialized to support 1,2,4 or 8 bit wide CLUT. As
+explained in the previous section, the front level is loaded with data
+present in the back level after 16 dot clocks in case of 8 color planes, 32
+dot clocks in case of 4 color planes, 64 dot clocks in case of 2 color
+planes
+and 128 dot clocks in case of 1 color plane. As soon as this occurs the
+BUFFER CONTROL circuit starts shifting new data into the back level at the
+dotck rate.
+
+
+4.4 DELAY ARRAY
+
+This 8x15 bit register array is used for delaying the Video data by  0-15
+pixels clocks thus enabling fine scrolling. The amount of delay is
+determined
+by the content of the Pixel scroll register (FF8264), programmed by the
+user.
+
+
+
+4.5  CLUR RAM
+
+In STe mode dual port RAM of 16x12 bit is used for CLUT. It contains the
+color Pallete information. PORT A (read only) is used for transporting the
+8
+bit data into the 3x4 RGB color bits.  PORT B (read+write) is used for
+writing
+or reading the programmed color options.  In Sparrow mode only a 256x18
+single
+port RAM is used.  Bit 0 of address 0 is used during MONO mode for
+Inverse/Normal mode selection.  The Four Bank bits out of the SP Shift Mode
+register (FF8266),  can be used in less than 8 color planes modes, for
+selecting one out of 16 color groups.
+
+
+
+4.6  TIMING GENERATOR
+
+The timing generator block will support all the modes described in tables
+1+2.
+It is responsible for generating HSYNC, VSYNC, DE, BLANK signals for the
+color, monochrome or VGA monitors. The Hsync and the Vsync can be
+individually
+programmed to be either generated internally in the chip or be supplied
+externally, to facilitate Genlock. The video shifter supports interlace on
+color monitors.  It can also support INTERLACE mode on TV and the three TV
+modes PAL, SECAM, NTSC including all the support required for implementing
+VIDEL SPEC A05                                                page 6
+
+true interlace (Field sync, Equalization pulses etc.).  This enables higher
+resolution video displays (400 line s or more) on TV's.  The timing of all
+those signals (Hsync, Vsync, DE, Blank, Field sync, Equalization pulses
+etc.)
+will be programmable to support a large variety of monitors or TV
+standards.
+The full programmability of Display Enable (both horizontal and vertical
+will
+support the OVERSCAN option.  However, the overscan has to be defined on
+whole
+word boundaries in 16 bits video bus or double word boundaries in 32 bits
+video bus.  In VGA the programmable counters are defined on a two pixel
+resolution.
+
+4.8  Light Gun / Pen Circuit
+
+The Light/gun pen circuit that resided in the STe COMBO will be included in
+the new video chip since this circuit uses signals related to video like
+DE.
+
+4.9  XGA High Color Mode
+
+The XGA High Color Mode is achieved by bypassing the CLUT. The output of
+the
+Data Buffer is fed to the DAC, thus offering the full range of 65536 colors
+in virtually "true color" mode. The software written to use this option
+must
+therefore have the Video Data organized differently then the usual color
+planes format. The data for each pixel is located in one 16 bit word.
+
+
+bit  15 14 13 12 11 10  9  8  7  6  5  4  3  2  1  0
+      R  R  R  R  R  G  G  G  G  G  G  B  B  B  B  B
+
+Bit 5 is used as PIXCNT while in Genlock.
+
+This enables automatic pixel scroll, since this is achieved simply by
+changing
+the address of the video memory. So, in XGA mode the pixel scroll register
+must be loaded with zeroes (no scroll).
+
+XGA High Color Mode is only available with a 32 bit wide Video Bus, and not
+in
+VGA 25MHz mode. As already mentioned, in XGA and Genlock the green is
+reduced
+to 5 bits to enable Genlock keying if the pixel control bit in SP shift
+mode
+register is set.
+
+5.  List of Registers in Chip
+
+820A           SP  Sync mode.
+8240 - 825F    STe Color Palletes (0-15)
+8260           STe Shift mode
+8265           SP  Horizontal Pixell scroll.
+8266 - 8267    SP  Shift mode
+8280 - 8281    Horizontal Counter (HC).
+8282 - 8283    Horz. Half line total (HHT).
+VIDEL SPEC A05                                                page 7
+
+8284 - 8285    Horz. Blank begin (HBB).
+8286 - 8287    Horz. Blank end (HBE).
+8288 - 8289    Horz. Dislpay begin (HDB).
+828A - 828B    Horz. Display end (HDE).
+828C - 828D    Horz. Sync start (HSS).
+828E - 828F    Horz. Field Sync end (HFS).
+8290 - 8291    Horz. Equaliz. End  (HEE).
+82A0 - 82A1    Vertical Counter (VC).
+82A2 - 82A3    Ver. Field total (VFT).
+82A4 - 82A5    Ver. Blank begin (VBB).
+82A6 - 82A7    Ver. Blank end (VBE).
+82A8 - 82A9    Ver. Display begin (VDBO).
+82AA - 82AB    Ver. Display end (VDEO).
+82AC - 82AD    Ver. Sync begin (VSS).
+82C0 - 82C1    Video Master Control (VMC).
+82C2 - 82C3    Video timing control (VTC).
+9220 - 9221    Light gun/ pen X position.
+9222 - 9223    Light/gun pen Y position.
+9800 - 9BFF    SP Color PAlletes (0-255).
+
+The Video Base Address Register, Displayed Line Width Register, Horizontal
+Offset Register and Video Address Counter  reside in the new COMBO chip.
+
+
+7. Video Chip Pinlist
+
+The new video chip has 1116 pins with the following pin assignment
+
+7.1 A1-A11. These are the 11 LSB of the CPU address bus. These lines are
+inputs to the video chip.
+
+7.2 D0-D15. This is the CPU data bus. It is a bidirectional tristate active
+high bus.
+
+7.3 MD0-MD31. This is the 32 bit DRAM data bus. It is a bidirectional
+tristate active high bus. Data is read from this bus when the DRAM is read.
+Data is written onto this bus when the DRAM is written.
+
+7.4  R0-R5,B0-B5,G0-G5. These are the 3x6 digital RGB outputs.
+
+7.5  DOTCLK. This is the clock for the DAC.
+
+7.6  PIXEL CONTROL / MONO. This is the monochrome output when not in XGA.
+In  XGA mode it is the pixel control.
+
+7.7 COLOR. This is a timing signal for composite video generation for NTSC
+TV.
+
+7.8  CSYNC. This signal is the composite sync output.
+
+7.9  VREQ. This is the video request active high output.
+
+7.10 CLK32. This is a 32 Mhz clock input. Used in non VGA cases.
+
+7.11  CLK25. This is a 25 Mhz clock input for VGA cases.
+
+7.12  EXTCLK. This is the external Genlock clock input.
+
+VIDEL SPEC A05                                                page 8
+
+
+7.13 VSYNC. This is the vertical sync active low signal. It is programmable
+as input or out.
+
+7.14  TEST.
+
+7.15 HSYNC. This is the horizontal sync active low signal. It is
+programmable
+as input or out. In case of TV it containes the full interlcae support.
+
+7.16 HINT. This is the horizontal display enable active low output signal
+used for Hsync interrupt generation.
+
+7.17  VINT. This is the vertical display enable active low signal used for
+Vsync interrupt generation.
+
+7.18 R/W. This is the CPU R/W input signal. It is used to access the
+internal
+registers including CLUT. When high the registers are read to the CPU. When
+low the registers are written with data from the CPU.
+
+7.19  VCS. This is the chip select active high input. It selects the video
+chip for CPU read/write accesses (according to R/W) to/from the video chip
+internal registers or CLUT. It is controlled by the CPU DS.
+
+7.20 VLD. This active high signals informs the video chip that the data
+read
+from the DRAM is to be loaded into the video INPUT BUFFER.
+
+7.21  RDAT. This active low signal enables the data read from the DRAM into
+the CPU data bus to enable CPU reading from the DRAM.
+
+7.22 WDAT. This active low signal enables the CPU data bus into the DRAM
+data
+bus to enable CPU writing into DRAM.
+
+7.23 CAS0,CAS1. These are the SIMMs active low CAS signals. They are ORed
+in
+the video chip and used to latch the DRAM data into the INPUT BUFFER.
+
+7.24  PEN. This is the Light/gun pen active low input.
+
+7.25  LOWP. Low Power active high pin. Can be used to disable the clocks.
+It
+is grounded in normal applications.
+
+7.26  RAMH. This is an address control signal from COMBO to select the high
+or low DRAM word in 16 bit video bus. 0 selects low word.
+
+7.27  ODD_EVEN. An output pin to indicate odd/even video frames. 0 - EVEN.
+
+7.28 DE. Display Enable.
+
+7.29 RESET.
+
+7.30  DGND. There are five digital ground pins.
+
+7.31  DVCC. There are six digital power pins.
+VIDEL SPEC A05                                                page 9
+
+
+7.32  EXT. Used to turn on the external Genlock logic.
+
+7.33  TN. Used for VLSI parametric testing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

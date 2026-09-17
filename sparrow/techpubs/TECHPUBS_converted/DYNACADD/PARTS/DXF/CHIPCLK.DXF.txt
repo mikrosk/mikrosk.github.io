@@ -1,0 +1,105 @@
+DXF drawing: DYNACADD/PARTS/DXF/CHIPCLK.DXF
+Render: CHIPCLK.DXF.svg
+
+== Summary ==
+File:        11699 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font txt
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (0, 1) - (14.05, 8.75)
+             rendered (0, 1) - (13.8975, 8.75), size 13.8975 x 7.75
+Limits:      (0, 0) - (12, 12)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: STANDARD (font txt)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            90
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: TEXT 45, LINE 35, POLYLINE 10 (36 vertices)
+Blocks:      0 defined
+Notes:
+  - 4 polylines with constant width drawn as thick strokes
+
+== Text in reading order (45 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (45 items) --
+  OSC
+  32.215605 MHz
+  CLK16B SCSI DMAC
+  CLK16C ST RAM EXPANSION BOARD
+  CLK16D VME BUS
+  CLK16E SCU
+  CLK16F SOUND SHIFTER
+  CLK16  |  CLK16G TT RAM EXPANSION BOARD
+  CLK16A SCC DMAC PG 9  |  FCCLK FLOPPY CONTROLLER
+  TTVIDEO  |  CLK2  |  CLKX5 MC6850'S
+  74AC244  |  CLK16A  |  CLOCKS  |  CLK8 ACSI DMAC, 8530 SCC
+  CLK4
+  CLK2  |  MEMORY
+  CONTROL
+  CHIP SELECTS
+  UNIT
+  (MCU)  |  ACSI DMA CHIP SELECT
+  REAL-TIME CLOCK CHIP SELECT
+  SOUND SHIFTER CHIP SELECT
+  6850 CHIP SELECT
+  CLK2 SOUND SHIFTER, YM2149, TT EXPANSION BOARD  |  TTVIDEO CHIP SELECT
+  ROM ENABLE
+  CLK4 MC68901'S  |  CARTRIDGE ENABLE
+  ACSI HARD DISK CHIP SELECT
+  SYSTEM
+  ACSI  |  CONTROL
+  MFP1 CHIP SELECT
+  DMAC  |  UNIT
+  FLOPPY CONTROLLER CHIP SELECT  |  (SCU)  |  MFP2 CHIP SELECT
+  COPROCESSOR CHIP SELECT
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE     TEXT
+  0.75  8.5833       0.1      0  middle    1      STANDARD  OSC
+  0.75  8.4167       0.1      0  middle    1      STANDARD  32.215605 MHz
+  6.75       8       0.1      0  middle    1      STANDARD  CLK16B SCSI DMAC
+   7.5    7.75       0.1      0  middle    1      STANDARD  CLK16C ST RAM EXPANSION BOARD
+  6.75     7.5       0.1      0  middle    1      STANDARD  CLK16D VME BUS
+   6.5    7.25       0.1      0  middle    1      STANDARD  CLK16E SCU
+     7       7       0.1      0  middle    1      STANDARD  CLK16F SOUND SHIFTER
+  1.75    6.75       0.1      0  middle    1      STANDARD  CLK16
+   7.5    6.75       0.1      0  middle    1      STANDARD  CLK16G TT RAM EXPANSION BOARD
+     7     6.5       0.1      0  middle    1      STANDARD  CLK16A SCC DMAC PG 9
+    12     6.5       0.1      0  middle    1      STANDARD  FCCLK FLOPPY CONTROLLER
+  0.75    6.25       0.1      0  middle    1      STANDARD  TTVIDEO
+  1.75    6.25       0.1      0  middle    1      STANDARD  CLK2
+  11.5    6.25       0.1      0  middle    1      STANDARD  CLKX5 MC6850'S
+  2.75       6       0.1      0  middle    1      STANDARD  74AC244
+   5.5       6       0.1      0  middle    1      STANDARD  CLK16A
+     8       6       0.1      0  middle    1      STANDARD  CLOCKS
+    12       6       0.1      0  middle    1      STANDARD  CLK8 ACSI DMAC, 8530 SCC
+  1.75    5.75       0.1      0  middle    1      STANDARD  CLK4
+  5.25     5.5       0.1      0  middle    1      STANDARD  CLK2
+  6.75     5.5       0.1      0  middle    1      STANDARD  MEMORY
+  6.75  5.3333       0.1      0  middle    1      STANDARD  CONTROL
+  8.25    5.25       0.1      0  middle    1      STANDARD  CHIP SELECTS
+  6.75  5.1667       0.1      0  middle    1      STANDARD  UNIT
+  6.75       5       0.1      0  middle    1      STANDARD  (MCU)
+  12.5       5       0.1      0  middle    1      STANDARD  ACSI DMA CHIP SELECT
+ 12.75    4.75       0.1      0  middle    1      STANDARD  REAL-TIME CLOCK CHIP SELECT
+ 12.75     4.5       0.1      0  middle    1      STANDARD  SOUND SHIFTER CHIP SELECT
+ 12.25    4.25       0.1      0  middle    1      STANDARD  6850 CHIP SELECT
+  8.25       4       0.1      0  middle    1      STANDARD  CLK2 SOUND SHIFTER, YM2149, TT EXPANSION BOARD
+  12.5       4       0.1      0  middle    1      STANDARD  TTVIDEO CHIP SELECT
+    12    3.75       0.1      0  middle    1      STANDARD  ROM ENABLE
+  6.75     3.5       0.1      0  middle    1      STANDARD  CLK4 MC68901'S
+ 12.25     3.5       0.1      0  middle    1      STANDARD  CARTRIDGE ENABLE
+  3.75     2.5       0.1      0  middle    1      STANDARD  ACSI HARD DISK CHIP SELECT
+  6.75    2.25       0.1      0  middle    1      STANDARD  SYSTEM
+  0.75  2.0833       0.1      0  middle    1      STANDARD  ACSI
+  6.75  2.0833       0.1      0  middle    1      STANDARD  CONTROL
+ 10.75       2       0.1      0  middle    1      STANDARD  MFP1 CHIP SELECT
+  0.75  1.9167       0.1      0  middle    1      STANDARD  DMAC
+  6.75  1.9167       0.1      0  middle    1      STANDARD  UNIT
+     4    1.75       0.1      0  middle    1      STANDARD  FLOPPY CONTROLLER CHIP SELECT
+  6.75    1.75       0.1      0  middle    1      STANDARD  (SCU)
+ 10.75    1.75       0.1      0  middle    1      STANDARD  MFP2 CHIP SELECT
+    11     1.5       0.1      0  middle    1      STANDARD  COPROCESSOR CHIP SELECT

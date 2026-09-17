@@ -1,0 +1,48 @@
+DXF drawing: DYNACADD/PARTS/DXF/COMSTPCB.DXF
+Render: COMSTPCB.DXF.svg
+
+== Summary ==
+File:        7048 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font txt
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (1, 3) - (9, 7)
+             rendered (1, 3) - (9, 7), size 8 x 4
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: STANDARD (font txt)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 2 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            42
+  10            7  CONTINUOUS    on            7
+  unused: 2, 3, 4, 5, 6, 7, 8, 9
+Entities:    model space: LINE 27, TEXT 10, POLYLINE 8 (28 vertices), CIRCLE 4
+Blocks:      0 defined
+
+== Text in reading order (10 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (10 items) --
+  STANDOFF
+  POWER SUPPLY
+  MAIN PCB
+  CPU
+  COPROCESSOR
+  SOCKET  |  UB1
+  PAL
+  W3
+  UB2
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE     TEXT
+5.5842   5.853       0.1      0  left      1      STANDARD  STANDOFF
+2.0295   5.653       0.1      0  left      1      STANDARD  POWER SUPPLY
+7.0657  4.7261       0.1      0  left      1      STANDARD  MAIN PCB
+ 2.125    4.25       0.1      0  left      1      STANDARD  CPU
+ 2.875  4.0625       0.1      0  left      1      STANDARD  COPROCESSOR
+ 2.875  3.8958       0.1      0  left      1      STANDARD  SOCKET
+4.5625   3.875       0.1      0  left      1      STANDARD  UB1
+4.5625  3.7083       0.1      0  left      1      STANDARD  PAL
+  3.75     3.5       0.1      0  left      1      STANDARD  W3
+3.0625  3.4375       0.1      0  left      1      STANDARD  UB2

@@ -1,0 +1,53 @@
+DynaCADD 2.0 entity file (.DPT)
+Source: DYNACADD/PARTS/F030/F030FLW2.DPT (10207 bytes)
+Record stream: 98 records, ends at offset 0x27df with FFFF terminator
+Drawing settings from: F030FLW2.DWG
+Sheet: width 417.6, height 852, scale 1
+Units: not recorded in a field identified so far; coordinates are listed as stored
+Entities: 98 total (LINE 49, ARC 10, TEXT 39)
+Extents: x 76.8 .. 322.6241, y 171.5 .. 775.9706 (size 245.8241 x 604.4706)
+Layers used: 0 "PEN1" (98)
+Line styles used: 0 "Continuous, drawn solid" (98)
+Colour indices used: 1 (98)
+Groups: none
+
+Text strings (39), in file order; x,y = insertion point:
+  x=74.0333    y=763        h=12.9706 w=9.3947  angle=0      font=LEROY_R  layer=PEN1     "NO "
+  x=109.9248   y=763        h=12.9706 w=9.3947  angle=0      font=LEROY_R  layer=PEN1     "ERROR"
+  x=182.7634   y=763        h=12.9706 w=9.3947  angle=0      font=LEROY_R  layer=PEN1     "ON "
+  x=217.9248   y=763        h=12.9706 w=9.3947  angle=0      font=LEROY_R  layer=PEN1     "DIAGNOSTIC "
+  x=129.8079   y=641        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "A"
+  x=118.2905   y=561        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "WON'T"
+  x=183.5933   y=561        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "YES"
+  x=237.4593   y=561        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "RUN"
+  x=261.3788   y=561        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "DISK "
+  x=99.4861    y=551        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "LOAD "
+  x=129.3788   y=551        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "DISK?"
+  x=225.3788   y=551        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "DIAGNOSTIC "
+  x=291.7933   y=551        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "OR "
+  x=225.4593   y=541        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "REPLACE"
+  x=273.3788   y=541        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "DISK "
+  x=135.4325   y=501        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "NO "
+  x=225.8079   y=451        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "TRACE"
+  x=261.4731   y=451        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "SIGNAL "
+  x=117.7006   y=441        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "VIDEO"
+  x=183.5933   y=441        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "YES"
+  x=231.3788   y=441        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "FROM "
+  x=261.7006   y=441        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "VIDEO"
+  x=105.5129   y=431        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "PROBLEM? "
+  x=231.4731   y=431        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "SHOFTER"
+  x=279.8079   y=431        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "TO "
+  x=243.7933   y=421        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "OUTPUT "
+  x=135.4325   y=381        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "NO "
+  x=255.4593   y=331        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "RUN"
+  x=111.5129   y=321        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "PROBLEM"
+  x=183.4325   y=321        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "NO "
+  x=231.8079   y=321        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "APPROPRIATE"
+  x=111.3788   y=311        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "FOUND? "
+  x=249.8079   y=311        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "TEST "
+  x=225.5188   y=301        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "CONTINUOUSLY "
+  x=135.5933   y=261        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "YES"
+  x=93.5188    y=211        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "CONTACT"
+  x=141.8079   y=211        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "ATARI"
+  x=93.8079    y=201        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "TECH "
+  x=123.4731   y=201        h=6.3626  w=4.6437  angle=0      font=LEROY_R  layer=PEN1     "SUPPORT"

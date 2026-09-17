@@ -1,0 +1,304 @@
+DXF drawing: DYNACADD/PARTS/DXF/401337D1.DXF
+Render: 401337D1.DXF.svg
+
+== Summary ==
+File:        123744 bytes, CR/LF line ends, ends with ^Z (0x1A)
+Dialect:     group codes right-aligned in 3 columns; full AutoCAD header with $ACADVER=AC1006 (R10), 112 header variables, tables VPORT/LTYPE/LAYER/STYLE/VIEW/UCS/DWGMGR
+Sections:    HEADER, TABLES, BLOCKS, ENTITIES
+Menu:        $MENU=FONT
+Dates:       created 1992-06-27 02:26, last saved 1992-07-15 20:51 ($TDCREATE/$TDUPDATE)
+Extents:     header (0, 2.03) - (420.5, 299.03)
+             rendered (0, 2.03) - (420.5, 299.03), size 420.5 x 297
+Limits:      (0, 0) - (420, 297)
+Units:       not stored in this DXF version; $LUNITS=2 (decimal); limits and extents suggest millimetres; a label says millimetres
+Header:      112 variables; $LTSCALE=12.7, $TEXTSIZE=3.0, $DIMSCALE=1.0, $FILLMODE=1
+Text styles: STANDARD (font txt), ROMAND (font romand), ROMANS (font romans), ROMAN (font roman)
+Linetypes:   CONTINUOUS, HIDDEN, CENTER
+Layers:      7 in table, 5 used
+  name      color  linetype      state         objects
+  0             7  CONTINUOUS    on            259
+  OBJ           4  CONTINUOUS    on            115
+  DIM           1  CONTINUOUS    on            45
+  BORDER        4  CONTINUOUS    on            122
+  TITLE         2  CONTINUOUS    on            187
+  unused: HIDDEN, CENTER
+Entities:    model space: LINE 145, TEXT 96, POLYLINE 42 (400 vertices), ARC 13, CIRCLE 8, SOLID 7, INSERT 3
+             in block definitions: LINE 331, TEXT 73, POLYLINE 6 (20 vertices), INSERT 3, CIRCLE 1
+Blocks:      4 defined
+  A3SH1: base (0, 0), TEXT 73, LINE 72, POLYLINE 6 (20 vertices), INSERT 3, CIRCLE 1; inserted 0 times
+  *X1: base (0, 0), LINE 127; inserted 1 time
+      at (-414.85, 13.87) scale 1,1 rotation 0 layer TITLE
+  *X2: base (0, 0), LINE 66; inserted 1 time
+      at (-414.6, 11.78) scale 1,1 rotation 0 layer TITLE
+  *X3: base (0, 0), LINE 66; inserted 1 time
+      at (-415.1, 11.78) scale 1,1 rotation 0 layer TITLE
+Notes:
+  - 13 polylines with constant width drawn as thick strokes
+  - 3 TEXT entities are empty or blank
+
+== Text in reading order (93 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (81 items) --
+  4  |  3  |  2  |  1
+  REV  |  REVISION DESCRIPTION  |  DATE  |  APPROVED
+  1  |  PRELIMINARY RELEASE
+  D  |  D
+  C
+  10
+  RED
+  "A"
+  SOLDER
+  C
+  10
+  BLACK
+  B  |  B
+  DETAIL "A"
+  UNLESS OTHERWISE SPECIFIED DRAWN BY:  |  DATE:
+  TOLERANCES  |  ATARI MICROSYSTEMS
+  SALEE
+  ON LINIER  |  ON ANGULAR
+  CORPORATION
+  DIMENSIONS  |  DIMENSIONS  |  R
+  CHECKED:  |  DATE:
+  4115 KELLER SPRING RD., SUITE 200
+  UNDER 30 ±0.1  |  ATARI  |  DALLAS, TEXAS  75244
+  30 THRU 300 ±0.2 ±1/4°
+  TITLE
+  1. SEE SEPARATE B.O.M FOR PARTS LIST.  |  ENGINEER:  |  DATE:
+  ±0.4
+  OVER 300
+  ASSY, SPEAKER
+  A  |  A
+  MATERIAL
+  APPROVED:  |  DATE:  |  SIZE DRAWING NO.  |  REV
+  A3  |  CA401337-001  |  1
+  USED ON
+  NEXT ASSY
+  ORIGINAL MODEL FINISH
+  APPROVED:  |  DATE:
+  NOTE: UNLESS OTHERWISE SPECIFIED
+  SCALE  |  NONE  |  SHEET     OF 1  |  1
+  APPLICATION
+  ALL DIMENSIONS ARE MILLIMETERS
+  4  |  3  |  2  |  1
+
+-- direction 90 deg (6 items) --
+  DRAWING NO.  |  SHEET  |  REV
+  CA401337  |  1  |  1
+
+-- direction 270 deg (6 items) --
+  DRAWING NO.  |  SHEET  |  REV
+  CA401337  |  1 1
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER   STYLE   TEXT
+ 53.34  293.59       3.5      0  left      BORDER  ROMAND  4
+159.13  293.59       3.5      0  left      BORDER  ROMAND  3
+264.08  293.59       3.5      0  left      BORDER  ROMAND  2
+338.22  293.59       3.5      0  left      BORDER  ROMAND  1
+240.94   285.4         2      0  middle    TITLE   ROMANS  REV
+306.25  285.53         2      0  middle    TITLE   ROMANS  REVISION DESCRIPTION
+365.84  285.53         2      0  middle    TITLE   ROMANS  DATE
+390.24  285.53         2      0  middle    TITLE   ROMANS  APPROVED
+238.54  276.87    2.6455      0  left      TITLE   ROMANS  1
+252.52  276.34    2.6455      0  left      TITLE   ROMANS  PRELIMINARY RELEASE
+   9.2  262.06       3.5      0  left      BORDER  ROMAND  D
+408.19  262.06       3.5      0  left      BORDER  ROMAND  D
+408.19  213.24       3.5      0  left      BORDER  ROMAND  C
+146.29  182.84         3      0  left      DIM     ROMANS  10
+ 263.6   178.9         3      0  left      DIM     ROMANS  RED
+189.76  174.01         3      0  left      DIM     ROMANS  "A"
+ 68.94  161.33         3      0  left      DIM     ROMANS  SOLDER
+   9.2  158.31       3.5      0  left      BORDER  ROMAND  C
+339.07   124.9         3      0  left      DIM     ROMANS  10
+172.54  119.27         3      0  left      DIM     ROMANS  BLACK
+   9.2  112.54       3.5      0  left      BORDER  ROMAND  B
+408.19  112.54       3.5      0  left      BORDER  ROMAND  B
+ 71.09   73.01         3      0  left      DIM     ROMANS  DETAIL "A"
+245.89   64.72       1.9      0  middle    TITLE   ROMAND  UNLESS OTHERWISE SPECIFIED
+270.05   63.83         2      0  left      TITLE   ROMAND  DRAWN BY:
+306.51    63.7         2      0  right     TITLE   ROMAND  DATE:
+245.89   60.52       1.9      0  middle    TITLE   ROMAND  TOLERANCES
+333.07   60.36         4      0  left      TITLE   ROMAND  ATARI MICROSYSTEMS
+270.39   58.46         3      0  left      TITLE   ROMANS  SALEE
+237.53   57.22       1.6      0  middle    TITLE   ROMAND  ON LINIER
+260.32   57.22       1.6      0  middle    TITLE   ROMAND  ON ANGULAR
+344.17   55.23         4      0  left      TITLE   ROMAND  CORPORATION
+237.53   54.24       1.6      0  middle    TITLE   ROMAND  DIMENSIONS
+260.32   54.24       1.6      0  middle    TITLE   ROMAND  DIMENSIONS
+327.81   53.74       0.5      0  middle    TITLE   ROMAND  R
+270.05   52.63         2      0  left      TITLE   ROMAND  CHECKED:
+306.51    52.7         2      0  right     TITLE   ROMAND  DATE:
+336.13   51.49         2      0  left      TITLE   ROMANS  4115 KELLER SPRING RD., SUITE 200
+232.07   49.81       1.5      0  middle    TITLE   ROMAND  UNDER 30
+246.52   49.79       2.5      0  middle    TITLE   ROMAND  ±0.1
+ 314.5   49.18         4      0  fit       TITLE   ROMAND  ATARI
+346.85   48.45         2      0  left      TITLE   ROMANS  DALLAS, TEXAS  75244
+232.11   44.82       1.5      0  middle    TITLE   ROMAND  30 THRU 300
+246.52   45.74       2.5      0  middle    TITLE   ROMAND  ±0.2
+259.27    44.7       2.5      0  middle    TITLE   ROMAND  ±1/4°
+310.36    43.4         2      0  left      TITLE   ROMAND  TITLE
+ 41.43   41.96         3      0  left      TITLE   ROMANS  1. SEE SEPARATE B.O.M FOR PARTS LIST.
+270.05   41.71         2      0  left      TITLE   ROMAND  ENGINEER:
+306.51    41.7         2      0  right     TITLE   ROMAND  DATE:
+246.52    41.7       2.5      0  middle    TITLE   ROMAND  ±0.4
+232.07   39.38       1.5      0  middle    TITLE   ROMAND  OVER 300
+331.94   37.83         4      0  left      TITLE   ROMAND  ASSY, SPEAKER
+   9.2   35.24       3.5      0  left      BORDER  ROMAND  A
+408.19   35.24       3.5      0  left      BORDER  ROMAND  A
+224.56   33.18         3      0  left      TITLE   ROMAND  MATERIAL
+270.05   30.78         2      0  left      TITLE   ROMAND  APPROVED:
+306.51    30.7         2      0  right     TITLE   ROMAND  DATE:
+ 314.9   31.88         2      0  middle    TITLE   ROMAND  SIZE
+ 321.8   31.29         2      0  left      TITLE   ROMAND  DRAWING NO.
+393.89   31.44         2      0  left      TITLE   ROMAND  REV
+ 314.9    26.8         3      0  middle    TITLE   ROMAND  A3
+330.57   25.31         4      0  left      TITLE   ROMAND  CA401337-001
+ 395.6   26.21         3      0  left      TITLE   ROMANS  1
+207.42   25.05         2      0  middle    TITLE   ROMAND  USED ON
+177.93   23.14         2      0  middle    TITLE   ROMAND  NEXT ASSY
+207.42   21.88         2      0  middle    TITLE   ROMAND  ORIGINAL MODEL
+224.56   20.73         3      0  left      TITLE   ROMAND  FINISH
+270.05   19.82         2      0  left      TITLE   ROMAND  APPROVED:
+306.51    19.7         2      0  right     TITLE   ROMAND  DATE:
+ 41.43   18.02         4      0  left      BORDER  ROMAND  NOTE: UNLESS OTHERWISE SPECIFIED
+311.27   16.91         2      0  left      TITLE   ROMAND  SCALE
+325.91   16.11         3      0  left      TITLE   ROMANS  NONE
+362.29   16.58         2      0  left      TITLE   ROMAND  SHEET     OF
+374.63   16.11         3      0  left      TITLE   ROMANS  1
+389.36    16.5         3      0  left      TITLE   ROMANS  1
+192.73   15.83         5      0  middle    TITLE   ROMAND  APPLICATION
+375.75    9.15         2      0  middle    TITLE   ROMAND  ALL DIMENSIONS ARE MILLIMETERS
+ 53.34    6.76       3.5      0  left      BORDER  ROMAND  4
+159.13    6.76       3.5      0  left      BORDER  ROMAND  3
+264.08    6.76       3.5      0  left      BORDER  ROMAND  2
+338.22    6.76       3.5      0  left      BORDER  ROMAND  1
+407.51  158.63         2     90  left      TITLE   ROMAND  DRAWING NO.
+407.23  185.58         2     90  left      TITLE   ROMAND  SHEET
+407.36  198.63         2     90  left      TITLE   ROMAND  REV
+413.64  156.14       3.5     90  left      BORDER  ROMAND  CA401337
+413.47  188.83       3.5     90  left      BORDER  ROMAND  1
+413.47  199.89       3.5     90  left      BORDER  ROMAND  1
+ 12.99  216.09         2    270  left      TITLE   ROMAND  DRAWING NO.
+ 13.27  189.14         2    270  left      TITLE   ROMAND  SHEET
+ 13.14   176.1         2    270  left      TITLE   ROMAND  REV
+  7.83  218.72       3.5    270  left      BORDER  ROMAND  CA401337
+  7.59  186.25       3.5    270  left      TITLE   ROMAND  1
+  7.83  176.41       3.5    270  left      BORDER  ROMAND  1
+
+== Text in block definitions that are never inserted (71 items, block coordinates) ==
+
+-- direction 0 deg (65 items) --
+  4  |  3  |  2  |  1
+  REV  |  REVISION DESCRIPTION  |  DATE  |  APPROVED
+  SEE SHEET 1
+  D  |  D
+  C
+  C
+  B  |  B
+  UNLESS OTHERWISE SPECIFIED DRAWN BY:  |  DATE:
+  TOLERANCES  |  ATARI MICROSYSTEMS
+  ON LINIER  |  ON ANGULAR
+  CORPORATION
+  DIMENSIONS  |  DIMENSIONS  |  R
+  CHECKED:  |  DATE:
+  4115 KELLER SPRING RD., SUITE 200
+  UNDER 30 ±0.1  |  ATARI  |  DALLAS, TEXAS  75244
+  30 THRU 300 ±0.2 ±1/4°
+  TITLE
+  ENGINEER:  |  DATE:
+  ±0.4
+  OVER 300
+  A  |  A
+  MATERIAL
+  APPROVED:  |  DATE:  |  SIZE DRAWING NO.  |  REV
+  A3
+  USED ON
+  NEXT ASSY
+  ORIGINAL MODEL FINISH
+  APPROVED:  |  DATE:
+  SCALE  |  NONE  |  SHEET     OF
+  APPLICATION
+  ALL DIMENSIONS ARE MILLIMETERS
+  4  |  3  |  2  |  1
+
+-- direction 90 deg (3 items) --
+  DRAWING NO.  |  SHEET  |  REV
+
+-- direction 270 deg (3 items) --
+  DRAWING NO.  |  SHEET  |  REV
+
+-- with coordinates --
+     X       Y    HEIGHT    ROT  JUST      LAYER   STYLE   BLOCK  TEXT
+ 53.34  291.56       3.5      0  left      BORDER  ROMAND  A3SH1  4
+159.13  291.56       3.5      0  left      BORDER  ROMAND  A3SH1  3
+264.08  291.56       3.5      0  left      BORDER  ROMAND  A3SH1  2
+338.22  291.56       3.5      0  left      BORDER  ROMAND  A3SH1  1
+240.94  283.38         2      0  middle    TITLE   ROMANS  A3SH1  REV
+306.25   283.5         2      0  middle    TITLE   ROMANS  A3SH1  REVISION DESCRIPTION
+365.84   283.5         2      0  middle    TITLE   ROMANS  A3SH1  DATE
+390.24   283.5         2      0  middle    TITLE   ROMANS  A3SH1  APPROVED
+252.52  274.31    2.6455      0  left      TITLE   ROMANS  A3SH1  SEE SHEET 1
+   9.2  260.03       3.5      0  left      BORDER  ROMAND  A3SH1  D
+408.19  260.03       3.5      0  left      BORDER  ROMAND  A3SH1  D
+408.19  211.21       3.5      0  left      BORDER  ROMAND  A3SH1  C
+   9.2  156.29       3.5      0  left      BORDER  ROMAND  A3SH1  C
+   9.2  110.52       3.5      0  left      BORDER  ROMAND  A3SH1  B
+408.19  110.52       3.5      0  left      BORDER  ROMAND  A3SH1  B
+245.89   62.69       1.9      0  middle    TITLE   ROMAND  A3SH1  UNLESS OTHERWISE SPECIFIED
+270.05    61.8         2      0  left      TITLE   ROMAND  A3SH1  DRAWN BY:
+306.51   61.67         2      0  right     TITLE   ROMAND  A3SH1  DATE:
+245.89   58.49       1.9      0  middle    TITLE   ROMAND  A3SH1  TOLERANCES
+333.07   58.34         4      0  left      TITLE   ROMAND  A3SH1  ATARI MICROSYSTEMS
+237.53   55.19       1.6      0  middle    TITLE   ROMAND  A3SH1  ON LINIER
+260.32   55.19       1.6      0  middle    TITLE   ROMAND  A3SH1  ON ANGULAR
+344.17    53.2         4      0  left      TITLE   ROMAND  A3SH1  CORPORATION
+237.53   52.22       1.6      0  middle    TITLE   ROMAND  A3SH1  DIMENSIONS
+260.32   52.22       1.6      0  middle    TITLE   ROMAND  A3SH1  DIMENSIONS
+327.81   51.71       0.5      0  middle    TITLE   ROMAND  A3SH1  R
+270.05   50.61         2      0  left      TITLE   ROMAND  A3SH1  CHECKED:
+306.51   50.67         2      0  right     TITLE   ROMAND  A3SH1  DATE:
+336.13   49.46         2      0  left      TITLE   ROMANS  A3SH1  4115 KELLER SPRING RD., SUITE 200
+232.07   47.79       1.5      0  middle    TITLE   ROMAND  A3SH1  UNDER 30
+246.52   47.76       2.5      0  middle    TITLE   ROMAND  A3SH1  ±0.1
+ 314.5   47.15         4      0  fit       TITLE   ROMAND  A3SH1  ATARI
+346.85   46.42         2      0  left      TITLE   ROMANS  A3SH1  DALLAS, TEXAS  75244
+232.11   42.79       1.5      0  middle    TITLE   ROMAND  A3SH1  30 THRU 300
+246.52   43.71       2.5      0  middle    TITLE   ROMAND  A3SH1  ±0.2
+259.27   42.67       2.5      0  middle    TITLE   ROMAND  A3SH1  ±1/4°
+310.36   41.37         2      0  left      TITLE   ROMAND  A3SH1  TITLE
+270.05   39.68         2      0  left      TITLE   ROMAND  A3SH1  ENGINEER:
+306.51   39.67         2      0  right     TITLE   ROMAND  A3SH1  DATE:
+246.52   39.67       2.5      0  middle    TITLE   ROMAND  A3SH1  ±0.4
+232.07   37.35       1.5      0  middle    TITLE   ROMAND  A3SH1  OVER 300
+   9.2   33.21       3.5      0  left      BORDER  ROMAND  A3SH1  A
+408.19   33.21       3.5      0  left      BORDER  ROMAND  A3SH1  A
+224.56   31.15         3      0  left      TITLE   ROMAND  A3SH1  MATERIAL
+270.05   28.75         2      0  left      TITLE   ROMAND  A3SH1  APPROVED:
+306.51   28.67         2      0  right     TITLE   ROMAND  A3SH1  DATE:
+ 314.9   29.86         2      0  middle    TITLE   ROMAND  A3SH1  SIZE
+ 321.8   29.26         2      0  left      TITLE   ROMAND  A3SH1  DRAWING NO.
+393.89   29.41         2      0  left      TITLE   ROMAND  A3SH1  REV
+ 314.9   24.77         3      0  middle    TITLE   ROMAND  A3SH1  A3
+207.42   23.02         2      0  middle    TITLE   ROMAND  A3SH1  USED ON
+177.93   21.11         2      0  middle    TITLE   ROMAND  A3SH1  NEXT ASSY
+207.42   19.85         2      0  middle    TITLE   ROMAND  A3SH1  ORIGINAL MODEL
+224.56   18.71         3      0  left      TITLE   ROMAND  A3SH1  FINISH
+270.05   17.79         2      0  left      TITLE   ROMAND  A3SH1  APPROVED:
+306.51   17.67         2      0  right     TITLE   ROMAND  A3SH1  DATE:
+311.27   14.88         2      0  left      TITLE   ROMAND  A3SH1  SCALE
+325.91   14.08         3      0  left      TITLE   ROMANS  A3SH1  NONE
+362.29   14.55         2      0  left      TITLE   ROMAND  A3SH1  SHEET     OF
+192.73    13.8         5      0  middle    TITLE   ROMAND  A3SH1  APPLICATION
+375.75    7.12         2      0  middle    TITLE   ROMAND  A3SH1  ALL DIMENSIONS ARE MILLIMETERS
+ 53.34    4.74       3.5      0  left      BORDER  ROMAND  A3SH1  4
+159.13    4.74       3.5      0  left      BORDER  ROMAND  A3SH1  3
+264.08    4.74       3.5      0  left      BORDER  ROMAND  A3SH1  2
+338.22    4.74       3.5      0  left      BORDER  ROMAND  A3SH1  1
+407.51   156.6         2     90  left      TITLE   ROMAND  A3SH1  DRAWING NO.
+407.23  183.56         2     90  left      TITLE   ROMAND  A3SH1  SHEET
+407.36   196.6         2     90  left      TITLE   ROMAND  A3SH1  REV
+ 12.99  214.07         2    270  left      TITLE   ROMAND  A3SH1  DRAWING NO.
+ 13.27  187.11         2    270  left      TITLE   ROMAND  A3SH1  SHEET
+ 13.14  174.07         2    270  left      TITLE   ROMAND  A3SH1  REV

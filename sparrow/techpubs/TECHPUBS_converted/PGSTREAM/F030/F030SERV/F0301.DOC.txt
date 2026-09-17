@@ -1,0 +1,312 @@
+[PageStream 2 document F0301.DOC: 8.50 x 11.00 in, 9161 objects]
+
+--- Page 1 ---
+
+SECTION ONE
+INTRODUCTION
+
+
+1.0 OVERVIEW
+
+The latest enhancement to the Atari® ST™ architecture is the Atari FALCON030™ system. The system is comprised of an integrated housing which contains the CPU, System RAM, Floppy Disk, Optional Hard Disk, modular keyboard, and Power supply. A detachable mouse is also included. The system is compatible with previous designs including the STE™, and MEGA STE™.
+
+The basic system is shipped with 1, 4, or 14 Mbytes of RAM, 512 Kbytes of ROM, 2 Mbyte (unformatted) Floppy Disk Drive, and high speed Motorola® MC68030FG™ CPU running at 16 MHz. FALCON030 also offers system expansion via an internal expansion connector.
+
+
+1.1 SYSTEM FEATURES
+
+Basic system features contained in the FALCON030 are as follows:
+
+•	 MC68030FG Microprocessor running at 16 MHz
+•	 Optional MC68881/MC68882 Coprocessor running at 16 MHz
+•	 1, 4, or 14 MB RAM
+•	 512 KB ROM
+•	 Graphics Coprocessor (Blitter)
+•	 ST™, VGA, True Color, and Programmable Video Modes
+•	 Digital stereo sound
+•	 Digital Signal Processor
+•	 Parallel Port
+•	 One RS232 Port
+•	 MIDI Interface
+•	 Cartridge Port
+•	 External SCSI II DMA Port
+•	 STE Compatible Joystick ports
+•	 LAN Port
+•	 3½" 2 Mbyte Floppy Drive (unformatted)
+• Internal Optional IDE Hard Disk
+•	 100 DPI Mouse
+•	 Real-Time Clock
+• Expansion Port
+
+--- Page 2 ---
+[7245 drawing objects, see F0301.DOC.p002.svg]
+
+1.2 CASE DESIGN
+
+
+1.2.1 FRONT VIEW
+
+The front of the FALCON030 system includes LEDs for power, floppy disk access, and if an optional hard disk is installed, hard disk access. See Figure 1.
+Figure 1
+
+
+1.2.2 REAR VIEW
+
+The rear of the FALCON030 system contains connectors for the digital audio interface, stereo jacks, SCSI II connector, monitor out/genlock, RF out, parallel port, serial port,  LAN, reset button, on/off switch, and AC input. See Figure 2.
+
+
+Figure 2
+
+Disk
+Activity
+LED
+
+Power
+LED
+
+On/Off
+Switch
+
+AC
+Input
+
+Serial
+Port
+
+LAN
+Port
+
+Digital
+Audio
+Interface
+
+SCSI II
+
+Monitor
+
+RF
+Out
+
+Parallel
+Port
+
+Reset
+Button
+
+Headphones
+
+Microphone
+
+--- Page 3 ---
+[1807 drawing objects, see F0301.DOC.p003.svg]
+
+1.2.3 LEFT SIDE VIEW
+
+The left side of the FALCON030 contains the cartridge port and game ports A and B. See Figure 3.
+
+
+Figure 3
+
+
+1.2.4 RIGHT SIDE VIEW
+
+The right side of the FALCON030 contains the Floppy Disk Drive. See Figure 4.
+
+
+Figure 4
+
+
+1.2.5 Bottom View
+
+The bottom of the FALCON030 contains the Mouse/Joystick and Joystick connectors. See Figure 5.
+
+
+Figure 5
+
+MIDI
+Out
+
+MIDI
+IN
+
+Cartridge
+Port
+
+Game
+Port A
+
+Game
+Port B
+
+Floppy
+Disk
+Drive
+
+Floppy
+Eject
+Button
+
+Fan
+
+Mouse/Joystick
+
+Joystick
+
+--- Page 4 ---
+
+1.3 POWER SUPPLY
+
+The system includes a switching power supply which is configured for 110 volt AC input US or 220/240 volt AC input European. The power supply provides 37.4 watts of power to the system. Voltages of +12V and +5V are provided to the main logic board as well as voltages for the floppy drive and optional hard disk.
+
+
+1.3.1 SPECIFICATIONS
+
+
+1.3.1.1 AC Input
+
+
+1.3.1.2 DC Output
+
+Input
+
+Country
+
+U.S.
+
+Europe
+
+Voltage:
+
+90 to 129 VAC (RMS) 117 VAC Nominal
+
+198 to 264 VAC (RMS) 230 VAC Nominal
+
+Frequency:
+
+55 to 65 Hz
+
+45 to 55 Hz
+
+0.45 Amperes (RMS)
+
+Current:
+
+ 0.9 Amperes (RMS)
+
+Maximum Inrush Current:
+
+ 35 Amperes
+
+ 35 Amperes
+
+Output
+
+Voltage
+
+Voltage:
+
++5 VDC
+
++12 VDC
+
+Minimum Load Current:
+
+ 1.5 Amp
+
+0.0 Amp
+
+Maximum Load Current:
+
+ 7.0 Amp
+
+0.2 Amp
+
+Line Regulation:
+
+5%
+
+10%
+
+Load Regulation:
+
+5%
+
+10%
+
+Cross Regulation:
+
+5%
+
+10%
+
+Ripple:
+
+100 millivolts p-p
+
+100 millivolts p-p
+
+Noise:
+
+100 millivolts p-p
+
+100 millivolts p-p
+
+--- Page 5 ---
+
+1.3.1.3 Operational Characteristics
+
+Output
+
+Characteristic
+
+Peak Current:
+
++5 VDC peak current of 10 amperes for not more than 10 seconds with +12 VDC output at full load.
+
++5 VDC Set Point:
+
+The +5 VDC output must be set to +5.05 0.1 VDC with a +5 VDC output having a load of 4.0 amperes.
+
+Total Output Power:
+
+37.4 watts
+
+Efficiency:
+
+55%  minimum  at full load, minimum frequency.
+
+Hold Up Time:
+
+10 milliseconds at 100% load and nominal input voltage.
+
+Switching Frequency:
+
+20 KHZ (minimum)
+
+Temperature Coefficient:
+
+0.04% per degree Centigrade
+
+Power On Delay Time:
+
+150 milliseconds (maximum)
+
+Short Circuit Protection:
+
+The power supply should switch off within 20 milliseconds
+
+Overshoot:
+
+(5% of the nominal output voltage) at turn on and off with the outputs not exceeding the limit.
+
+Operating Temperature:
+
+0 to +50 degrees Centigrade
+
+Operating Humidity:
+
+20% to 90% Relative Humidity
+
+Operating Altitude:
+
+0 to 3000 meters

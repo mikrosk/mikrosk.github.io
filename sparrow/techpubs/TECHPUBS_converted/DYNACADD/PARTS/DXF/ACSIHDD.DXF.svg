@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="602.68" height="2448" viewBox="0 0 602.68 2448">
+<title>DYNACADD/PARTS/DXF/ACSIHDD.DXF</title>
+<rect x="0" y="0" width="602.68" height="2448" fill="#ffffff"/>
+<g data-layer="1" fill="none" stroke="#000000" stroke-width="46.22" stroke-linecap="butt" stroke-linejoin="miter">
+<path d="M230.02 2387.35L426.47 2190.9A46.22 46.22 0 0 0 440.01 2158.21L440.01 289.79A46.22 46.22 0 0 0 426.47 257.1L230.02 60.65A46.22 46.22 0 0 0 151.11 93.34L151.11 2354.66A46.22 46.22 0 0 0 230.02 2387.35Z"/>
+</g>
+<g data-layer="1" fill="#000000" stroke="none">
+<circle cx="208.89" cy="1368.45" r="7.2"/>
+<circle cx="208.89" cy="2061.8" r="7.2"/>
+<circle cx="208.89" cy="2292.92" r="7.2"/>
+<circle cx="324.45" cy="2177.36" r="7.2"/>
+<circle cx="324.45" cy="1715.13" r="7.2"/>
+<circle cx="324.45" cy="1946.24" r="7.2"/>
+<circle cx="208.89" cy="1830.68" r="7.2"/>
+<circle cx="324.45" cy="1484.01" r="7.2"/>
+<circle cx="208.89" cy="1599.57" r="7.2"/>
+<circle cx="208.89" cy="675.1" r="7.2"/>
+<circle cx="324.45" cy="1021.77" r="7.2"/>
+<circle cx="324.45" cy="1252.89" r="7.2"/>
+<circle cx="208.89" cy="1137.33" r="7.2"/>
+<circle cx="208.89" cy="906.21" r="7.2"/>
+<circle cx="324.45" cy="790.65" r="7.2"/>
+<circle cx="324.45" cy="328.42" r="7.2"/>
+<circle cx="208.89" cy="443.98" r="7.2"/>
+<circle cx="324.45" cy="559.54" r="7.2"/>
+<circle cx="208.89" cy="212.86" r="7.2"/>
+</g>
+<g data-layer="1" fill="#000000" stroke="none" font-family="Helvetica, Arial, 'Liberation Sans', 'DejaVu Sans', sans-serif" xml:space="preserve">
+<text transform="translate(93.34 1368.45) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">6</text>
+<text transform="translate(93.34 2061.8) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">9</text>
+<text transform="translate(93.34 2292.92) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">10</text>
+<text transform="translate(93.34 1830.68) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">8</text>
+<text transform="translate(93.34 1599.57) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">7</text>
+<text transform="translate(93.34 675.1) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">3</text>
+<text transform="translate(93.34 1137.33) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">5</text>
+<text transform="translate(93.34 906.21) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">4</text>
+<text transform="translate(93.34 443.98) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">2</text>
+<text transform="translate(93.34 212.86) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">1</text>
+<text transform="translate(555.57 2119.58) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">19</text>
+<text transform="translate(555.57 1888.46) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">18</text>
+<text transform="translate(555.57 1426.23) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">16</text>
+<text transform="translate(555.57 1657.35) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">17</text>
+<text transform="translate(555.57 1195.11) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">15</text>
+<text transform="translate(555.57 963.99) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">14</text>
+<text transform="translate(555.57 732.87) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">13</text>
+<text transform="translate(555.57 501.76) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">12</text>
+<text transform="translate(555.57 270.64) rotate(-90)" y="0" font-size="63.79" text-anchor="middle">11</text>
+</g>
+</svg>

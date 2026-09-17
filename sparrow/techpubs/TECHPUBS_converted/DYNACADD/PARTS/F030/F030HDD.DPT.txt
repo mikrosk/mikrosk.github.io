@@ -1,0 +1,23 @@
+DynaCADD 2.0 entity file (.DPT)
+Source: DYNACADD/PARTS/F030/F030HDD.DPT (92801 bytes)
+Record stream: 1300 records, ends at offset 0x16a81 with FFFF terminator
+Drawing settings from: F030HDD.DWG
+Sheet: width 124.734, height 173.4645, scale 1
+Units: not recorded in a field identified so far; coordinates are listed as stored
+Entities: 1300 total (LINE 398, CIRCLE 6, ARC 881, TEXT 9, SOLID 6)
+Extents: x 10.3945 .. 113.2901, y 14.4554 .. 159.0091 (size 102.8956 x 144.5537)
+Layers used: 0 "L0" (1253), 1 "DIM" (32), 2 "TITLE" (1), 3 "MPHAN" (14)
+Line styles used: 0 "CONTINUOUS" (1286), 1 "MPHAN" (1), 2 "HIDDEN" (13)
+Colour indices used: 1 (46), 2 (1), 7 (1253)
+Groups (unnamed, numbered; 0 = not grouped): 1 (1300)
+
+Text strings (9), in file order; x,y = insertion point:
+  x=68.0655    y=17.6157    h=3       w=2.34    angle=0      font=LEROY_R  layer=DIM      "HDD/BRACKET ASSY"
+  x=57.3455    y=17.6764    h=3       w=2.34    angle=0      font=LEROY_R  layer=DIM      "REF"
+  x=66.3682    y=59.4247    h=3       w=2.34    angle=0      font=LEROY_R  layer=DIM      "7  6PLCS"
+  x=28.674     y=69.1714    h=3       w=2.34    angle=0      font=LEROY_R  layer=TITLE    " HDD/BRACKET ASSY "
+  x=87.5728    y=105.679    h=3       w=2.34    angle=0      font=LEROY_R  layer=DIM      "4PLCS"
+  x=67.175     y=153.6911   h=3       w=2.34    angle=0      font=LEROY_R  layer=DIM      "9"
+  x=9.7051     y=139.7627   h=3       w=2.34    angle=0      font=LEROY_R  layer=DIM      "11"
+  x=74.5192    y=118.0853   h=3       w=2.34    angle=0      font=LEROY_R  layer=DIM      "8"
+  x=78.3554    y=105.3967   h=3       w=2.34    angle=0      font=LEROY_R  layer=DIM      "10"

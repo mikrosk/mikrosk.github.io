@@ -1,0 +1,54 @@
+DynaCADD 2.0 entity file (.DPT)
+Source: DYNACADD/PARTS/F030/F030FLW4.DPT (11155 bytes)
+Record stream: 113 records, ends at offset 0x2b93 with FFFF terminator
+Drawing settings from: F030FLW4.DWG
+Sheet: width 432, height 792, scale 1
+Units: not recorded in a field identified so far; coordinates are listed as stored
+Entities: 113 total (LINE 61, ARC 12, TEXT 40)
+Extents: x 36 .. 388.9819, y 86.5 .. 720.7958 (size 352.9819 x 634.2958)
+Layers used: 0 "PEN1" (113)
+Line styles used: 0 "Continuous, drawn solid" (113)
+Colour indices used: 1 (113)
+Groups: none
+
+Text strings (40), in file order; x,y = insertion point:
+  x=33.265     y=708        h=12.7958 w=9.2871  angle=0      font=LEROY_R  layer=PEN1     "NO "
+  x=69.1578    y=708        h=12.7958 w=9.2871  angle=0      font=LEROY_R  layer=PEN1     "DISPLY "
+  x=33.265     y=688        h=12.7958 w=9.2871  angle=0      font=LEROY_R  layer=PEN1     "NO "
+  x=69.1578    y=688        h=12.7958 w=9.2871  angle=0      font=LEROY_R  layer=PEN1     "ERROR"
+  x=88.7188    y=646        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "C"
+  x=80.8202    y=576        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "16 "
+  x=65.0615    y=566        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "MHz"
+  x=88.7188    y=566        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "CLOCK"
+  x=142.6325   y=566        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "NO "
+  x=184.6593   y=566        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "REPLACE"
+  x=233.0079   y=566        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "THE"
+  x=64.7129    y=556        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "PRESENT? "
+  x=196.7188   y=556        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "CRYSTAL"
+  x=94.7934    y=506        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "YES"
+  x=196.6593   y=446        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "RESTART"
+  x=58.9933    y=356        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "OUTPUT "
+  x=100.5789   y=356        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "FROM "
+  x=142.6325   y=356        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "NO "
+  x=184.6593   y=356        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "REPLACE"
+  x=232.7188   y=356        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "GST"
+  x=64.7188    y=346        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "GST"
+  x=88.9006    y=346        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "VIDEO"
+  x=178.9006   y=346        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "VIDEO"
+  x=214.6731   y=346        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "SHIFTER"
+  x=64.6731    y=336        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "SHIFTER? "
+  x=94.7934    y=296        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "YES"
+  x=53.0079    y=246        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "TRACE"
+  x=88.9933    y=246        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "OUTPUT "
+  x=53.0079    y=236        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "TO "
+  x=70.7188    y=236        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "CONNECTOR, "
+  x=268.7934   y=236        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "YES"
+  x=58.6593    y=226        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "REPLACE"
+  x=107.0079   y=226        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "THE"
+  x=208.9933   y=226        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "OK?"
+  x=322.6593   y=226        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "RESTART"
+  x=52.5789    y=216        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "FAILING"
+  x=100.7129   y=216        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "PART "
+  x=220.6325   y=176        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "NO "
+  x=196.6593   y=126        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "REPLACE"
+  x=196.7188   y=116        h=6.3333  w=4.6436  angle=0      font=LEROY_R  layer=PEN1     "GSTMCU "

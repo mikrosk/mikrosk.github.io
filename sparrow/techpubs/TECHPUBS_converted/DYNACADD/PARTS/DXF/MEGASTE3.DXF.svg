@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2084.06" height="2448" viewBox="0 0 2084.06 2448">
+<title>DYNACADD/PARTS/DXF/MEGASTE3.DXF</title>
+<rect x="0" y="0" width="2084.06" height="2448" fill="#ffffff"/>
+<g data-layer="1" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M1221.36 1153.27L1110.51 1060.84M1110.49 1040.61A13.2 13.2 0 0 0 1110.49 1060.83M1110.51 1040.63L1221.36 948.19M1105.26 1294.78L1339.28 1294.78M1339.28 1453.6L1105.26 1453.6M1105.26 1453.6L1105.26 1294.78M1221.36 1800.19L1110.51 1707.77M1110.49 1687.57A13.2 13.2 0 0 0 1110.49 1707.78M1110.51 1687.56L1221.36 1595.14M744.87 1618.24L978.81 1618.24M978.81 1618.24L978.81 1777.08M978.81 1777.08L744.87 1777.08M1105.26 1941.69L1339.28 1941.69M1339.28 2100.55L1105.26 2100.55M1105.26 2100.55L1105.26 1941.69M1222 830.95L1222 946.47M1215.07 932.62L1222 946.47M1222 946.47L1228.89 932.62M1215.07 1279.17L1222 1293.03M1215.07 1579.53L1222 1593.39M1215.07 1926.12L1222 1939.96M501.13 1131.29L501.13 1269.92M494.17 1256.05L501.13 1269.92M501.13 1269.92L508.11 1256.05M500.58 1271.65L611.38 1364.09M611.38 1384.3L500.58 1476.7M384.48 1618.24L618.37 1618.24M618.37 1777.08L384.48 1777.08M500.58 1476.7L389.64 1384.3M389.64 1364.09L500.58 1271.65M384.48 1777.08L384.48 1618.24M389.62 1364.08A13.2 13.2 0 0 0 389.62 1384.3M501.13 1477.88L501.13 1616.51M494.17 1602.64L501.13 1616.51M501.13 1616.51L508.11 1602.64M618.9 1373.89L861.58 1373.89M618.37 1618.24L618.37 1777.08M744.87 1777.08L744.87 1618.24M611.41 1384.3A13.2 13.2 0 0 0 611.41 1364.08M861.58 1373.89L861.58 1616.51M854.63 1602.64L861.58 1616.51M861.58 1616.51L868.43 1602.64M384.48 971.29L618.37 971.29M618.37 1130.15L384.48 1130.15M384.48 1130.15L384.48 971.29M258.51 726.98L383.25 726.98M501.13 830.95L501.13 969.58M494.17 955.7L501.13 969.58M501.13 969.58L508.11 955.7M618.37 971.29L618.37 1130.15M24 647.84L257.9 647.84M257.9 806.68L24 806.68M24 806.68L24 647.84M257.9 647.84L257.9 806.68M272.39 733.91L258.51 726.98M258.51 726.98L272.39 720.03M861 301.27L971.83 393.69M971.83 413.92L861 506.32M744.87 647.84L978.81 647.84M978.81 806.68L744.87 806.68M909.53 78.87A51.79 51.79 0 0 0 861.01 24M861 24.02A50.99 50.99 0 0 0 814.21 78.89M500.58 624.74L611.38 717.16M611.38 737.37L500.58 829.77M501.13 403.51L743.69 403.51M389.64 717.16L500.58 624.74M500.58 829.77L389.64 737.37M389.62 717.15A13.2 13.2 0 0 0 389.62 737.36M501.13 622.99L501.13 403.51M494.17 609.11L501.13 622.99M501.13 622.99L508.11 609.11M744.87 806.68L744.87 647.84M611.41 737.36A13.2 13.2 0 0 0 611.41 717.15M750.05 393.69L861 301.27M861 506.32L750.05 413.92M750.04 393.7A13.2 13.2 0 0 0 750.04 413.92M860.93 136.65A53.34 53.34 0 0 0 909.45 78.89M814.18 78.89A52.56 52.56 0 0 0 860.97 136.65M861.58 137.79L861.58 299.54M854.63 285.67L861.58 299.54M861.58 299.54L868.43 285.67M971.85 413.92A13.2 13.2 0 0 0 971.85 393.7M1221.36 624.74L1332.31 717.16M1332.34 737.36A13.2 13.2 0 0 0 1332.34 717.15M1332.31 737.37L1221.36 829.77M1221.36 829.77L1110.51 737.37M1110.49 717.15A13.2 13.2 0 0 0 1110.49 737.36M1110.51 717.16L1221.36 624.74M978.81 647.84L978.81 806.68M979.37 403.51L1222 403.51M1222 403.51L1222 622.99M979.37 726.98L1104.16 726.98M1215.07 609.11L1222 622.99M1222 622.99L1228.89 609.11M993.29 733.91L979.37 726.98M979.37 726.98L993.29 720.03M1221.36 948.19L1332.31 1040.63M1332.34 1060.83A13.2 13.2 0 0 0 1332.34 1040.61M1332.31 1060.84L1221.36 1153.27M1339.28 1294.78L1339.28 1453.6M1465.73 1294.78L1699.72 1294.78M1699.72 1294.78L1699.72 1453.6M1699.72 1453.6L1465.73 1453.6M1465.73 1453.6L1465.73 1294.78M1221.36 1595.14L1332.31 1687.56M1332.34 1707.78A13.2 13.2 0 0 0 1332.34 1687.57M1332.31 1707.77L1221.36 1800.19M1581.82 1918.61L1692.76 2011.01M1692.78 2031.23A13.2 13.2 0 0 0 1692.78 2011.01M1692.76 2031.22L1581.82 2123.66M1581.82 2123.66L1470.96 2031.22M1470.95 2011.01A13.2 13.2 0 0 0 1470.95 2031.23M1470.96 2011.01L1581.82 1918.61M1339.28 1941.69L1339.28 2100.55M1826.17 2265.16L2060.06 2265.16M2060.06 2265.16L2060.06 2424M2060.06 2424L1826.17 2424M1826.17 2424L1826.17 2265.16M1630.29 2343.14A51.79 51.79 0 0 0 1581.77 2288.27M1581.84 2400.92A53.34 53.34 0 0 0 1630.36 2343.16M1535.11 2343.15A52.56 52.56 0 0 0 1581.9 2400.92M1581.81 2288.27A50.99 50.99 0 0 0 1535.03 2343.14M1339.81 1050.43L1582.39 1050.43M1582.39 1050.43L1582.39 1293.03M1222 1154.4L1222 1293.03M1222 1454.76L1222 1593.39M1339.81 1697.36L1582.39 1697.36M1582.39 1697.36L1582.39 1916.84M1222 1801.33L1222 1939.96M1700.27 2020.85L1942.84 2020.85M1942.84 2020.85L1942.84 2263.43M1582.39 2124.82L1582.39 2286.53M1222 1293.03L1228.89 1279.17M1575.5 1279.17L1582.39 1293.03M1582.39 1293.03L1589.34 1279.17M1222 1593.39L1228.89 1579.53M1575.5 1903.02L1582.39 1916.84M1582.39 1916.84L1589.34 1903.02M1222 1939.96L1228.89 1926.12M1935.95 2249.57L1942.84 2263.43M1942.84 2263.43L1949.8 2249.57M1575.5 2272.66L1582.39 2286.53M1582.39 2286.53L1589.34 2272.66"/>
+</g>
+<g data-layer="1" fill="#000000" stroke="none" font-family="Helvetica, Arial, 'Liberation Sans', 'DejaVu Sans', sans-serif" xml:space="preserve">
+<text transform="translate(1173.86 1043.96) scale(0.941 1)" y="0" font-size="20.19">MC68000</text>
+<text transform="translate(1179.55 1069.31) scale(0.941 1)" y="0" font-size="20.19">HALTED?</text>
+<text transform="translate(1181.6 1369.66) scale(0.941 1)" y="0" font-size="20.19">REPLACE</text>
+<text transform="translate(1182.83 1392.74) scale(0.941 1)" y="0" font-size="20.19">GSTMCU </text>
+<text transform="translate(877.86 1693.12) scale(0.941 1)" y="0" font-size="20.19">SHORT</text>
+<text transform="translate(841.77 1716.25) scale(0.941 1)" y="0" font-size="20.19">RECHECK</text>
+<text transform="translate(1182.83 1693.12) scale(0.941 1)" y="0" font-size="20.19">RS-232 </text>
+<text transform="translate(1172.05 1716.25) scale(0.941 1)" y="0" font-size="20.19">DISPLAY? </text>
+<text transform="translate(1178.5 1993.47) scale(0.941 1)" y="0" font-size="20.19">THEORY </text>
+<text transform="translate(1124.39 1993.47) scale(0.941 1)" y="0" font-size="20.19">SEE</text>
+<text transform="translate(1123.08 2016.61) scale(0.941 1)" y="0" font-size="20.19">OPERATION, </text>
+<text transform="translate(1196.93 2039.71) scale(0.941 1)" y="0" font-size="20.19">SUPPORT, </text>
+<text transform="translate(1132.02 2039.71) scale(0.941 1)" y="0" font-size="20.19">TECH </text>
+<text transform="translate(1153.39 2062.8) scale(0.941 1)" y="0" font-size="20.19">REPLACE</text>
+<text transform="translate(1118.18 2062.8) scale(0.941 1)" y="0" font-size="20.19">OR </text>
+<text transform="translate(1188.23 2085.92) scale(0.941 1)" y="0" font-size="20.19">PCB</text>
+<text transform="translate(407.13 1693.12) scale(0.941 1)" y="0" font-size="20.19">REPLACE</text>
+<text transform="translate(514.34 1693.12) scale(0.941 1)" y="0" font-size="20.19">MAIN </text>
+<text transform="translate(479.44 1716.25) scale(0.941 1)" y="0" font-size="20.19">PCB</text>
+<text transform="translate(460.93 1392.74) scale(0.941 1)" y="0" font-size="20.19">SHORT? </text>
+<text transform="translate(465.63 1369.66) scale(0.941 1)" y="0" font-size="20.19">FOUND</text>
+<text transform="translate(515.11 1506.07) scale(0.941 1)" y="0" font-size="20.19">NO </text>
+<text transform="translate(623.16 1367.45) scale(0.941 1)" y="0" font-size="20.19">YES</text>
+<text transform="translate(781.17 1693.12) scale(0.941 1)" y="0" font-size="20.19">REMOVE </text>
+<text transform="translate(780.69 1716.25) scale(0.941 1)" y="0" font-size="20.19">AND</text>
+<text transform="translate(516.37 1092.42) scale(0.941 1)" y="0" font-size="20.19">+5V</text>
+<text transform="translate(524 1046.21) scale(0.941 1)" y="0" font-size="20.19">MAIN </text>
+<text transform="translate(416.63 1046.21) scale(0.941 1)" y="0" font-size="20.19">INSPECT</text>
+<text transform="translate(509.86 1069.31) scale(0.941 1)" y="0" font-size="20.19">FOR</text>
+<text transform="translate(451.71 1069.31) scale(0.941 1)" y="0" font-size="20.19">PCB</text>
+<text transform="translate(414.28 1092.42) scale(0.941 1)" y="0" font-size="20.19">SHORTED</text>
+<text transform="translate(515.11 1161.71) scale(0.941 1)" y="0" font-size="20.19">NO </text>
+<text transform="translate(46.75 722.74) scale(0.941 1)" y="0" font-size="20.19">REPLACE</text>
+<text transform="translate(143.15 722.74) scale(0.941 1)" y="0" font-size="20.19">POWER</text>
+<text transform="translate(93.59 748.06) scale(0.941 1)" y="0" font-size="20.19">SUPPLY </text>
+<text transform="translate(343.45 722.74) scale(0.941 1)" y="0" font-size="20.19">NO </text>
+<text transform="translate(810.39 422.38) scale(0.941 1)" y="0" font-size="20.19">PRESENT? </text>
+<text transform="translate(796.31 745.83) scale(0.941 1)" y="0" font-size="20.19">OSCILLATOR </text>
+<text transform="translate(855.15 85.54) scale(0.941 1)" y="0" font-size="20.19">B</text>
+<text transform="translate(421.39 727.99) scale(0.941 1)" y="0" font-size="20.19">SHORTED</text>
+<text transform="translate(534.26 727.99) scale(0.941 1)" y="0" font-size="20.19">TO </text>
+<text transform="translate(449.63 753.34) scale(0.941 1)" y="0" font-size="20.19">GROUND?</text>
+<text transform="translate(477.82 704.89) scale(0.941 1)" y="0" font-size="20.19">+5V</text>
+<text transform="translate(514.67 861.39) scale(0.941 1)" y="0" font-size="20.19">YES</text>
+<text transform="translate(818.81 722.74) scale(0.941 1)" y="0" font-size="20.19">REPLACE</text>
+<text transform="translate(703.82 399.27) scale(0.941 1)" y="0" font-size="20.19">NO </text>
+<text transform="translate(838.19 397.04) scale(0.941 1)" y="0" font-size="20.19">+5V</text>
+<text transform="translate(1064.29 722.74) scale(0.941 1)" y="0" font-size="20.19">NO </text>
+<text transform="translate(986.04 397.04) scale(0.941 1)" y="0" font-size="20.19">YES</text>
+<text transform="translate(1201.18 697.39) scale(0.941 1)" y="0" font-size="20.19">MHz</text>
+<text transform="translate(1185.12 697.39) scale(0.941 1)" y="0" font-size="20.19">8</text>
+<text transform="translate(1182.28 722.74) scale(0.941 1)" y="0" font-size="20.19">CLOCK</text>
+<text transform="translate(1168.44 745.83) scale(0.941 1)" y="0" font-size="20.19">PRESENT? </text>
+<text transform="translate(1238 859.14) scale(0.941 1)" y="0" font-size="20.19">YES</text>
+<text transform="translate(1272.87 1993.47) scale(0.941 1)" y="0" font-size="20.19">OF </text>
+<text transform="translate(1247.26 2016.61) scale(0.941 1)" y="0" font-size="20.19">CALL </text>
+<text transform="translate(1248.57 2062.8) scale(0.941 1)" y="0" font-size="20.19">MAIN </text>
+<text transform="translate(1346.5 1046.21) scale(0.941 1)" y="0" font-size="20.19">YES</text>
+<text transform="translate(1238.36 1184.84) scale(0.941 1)" y="0" font-size="20.19">NO </text>
+<text transform="translate(1346.5 1693.12) scale(0.941 1)" y="0" font-size="20.19">YES</text>
+<text transform="translate(1534.91 1365.2) scale(0.941 1)" y="0" font-size="20.19">REPLACE</text>
+<text transform="translate(1505.43 1388.32) scale(0.941 1)" y="0" font-size="20.19">GSTMCU </text>
+<text transform="translate(1602.83 1388.32) scale(0.941 1)" y="0" font-size="20.19">OR </text>
+<text transform="translate(1524.74 1411.43) scale(0.941 1)" y="0" font-size="20.19">MC68000</text>
+<text transform="translate(1716.53 2014.38) scale(0.941 1)" y="0" font-size="20.19">YES</text>
+<text transform="translate(1596.47 2150.78) scale(0.941 1)" y="0" font-size="20.19">NO </text>
+<text transform="translate(1518.5 2019.63) scale(0.941 1)" y="0" font-size="20.19">DIAGNOSTIC </text>
+<text transform="translate(1540.16 2049.4) scale(0.941 1)" y="0" font-size="20.19">ERROR? </text>
+<text transform="translate(1575.41 2354.24) scale(0.941 1)" y="0" font-size="20.19">C</text>
+<text transform="translate(1958.15 2316.97) scale(0.941 1)" y="0" font-size="20.19">PARTS</text>
+<text transform="translate(1858.49 2316.97) scale(0.941 1)" y="0" font-size="20.19">REPLACE</text>
+<text transform="translate(1924.3 2340.06) scale(0.941 1)" y="0" font-size="20.19">PER</text>
+<text transform="translate(1876.51 2363.16) scale(0.941 1)" y="0" font-size="20.19">DIAGNOSTIC </text>
+<text transform="translate(1911.26 2386.28) scale(0.941 1)" y="0" font-size="20.19">GUIDE</text>
+<text transform="translate(1238.36 1827.29) scale(0.941 1)" y="0" font-size="20.19">NO </text>
+</g>
+</svg>

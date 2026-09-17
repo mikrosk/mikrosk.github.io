@@ -1,0 +1,64 @@
+[PageStream 2 document F030MEM.DOC: 8.50 x 11.00 in, 23073 objects]
+
+--- Page 1 ---
+[9091 drawing objects, see F030MEM.DOC.p001.svg]
+
+FALCON030
+Memory Board Installation Kit
+
+
+Kit Contents
+
+4 Megabyte Memory Board P/N CA401292-002
+or
+14 Megabyte Memory Board P/N CA401294-001
+
+
+Installation
+
+1.	Turn the unit over and remove the seven screws holding the top cover in place. Remove the top cover and keyboard assembly.
+
+Top
+Cover
+
+Keyboard
+Assembly
+
+Bottom
+Cover
+
+Screws
+
+Screws
+
+--- Page 2 ---
+[11129 drawing objects, see F030MEM.DOC.p002.svg]
+
+2.	Unplug the Speaker Assembly and remove the nine screws holding the Floppy Disk Shield. Remove the Floppy Disk Shield.
+
+Screws
+
+Speaker
+Assembly
+
+Floppy
+Disk
+Shield
+
+Bottom
+Cover
+
+3.	Remove the memory board that is currently installed in the unit. Set it aside for future use.
+
+Memory
+Board
+
+--- Page 3 ---
+[2828 drawing objects, see F030MEM.DOC.p003.svg]
+
+4.	Replace the memory board with the one contained in the kit. Be sure the connectors on the main PCB and the memory board are lined up before pressing the memory board on to the main PCB.
+
+Memory
+Board
+
+5.	Replace the Floppy Disk Shiel and speaker. Plug in the speaker and replace the top cover.

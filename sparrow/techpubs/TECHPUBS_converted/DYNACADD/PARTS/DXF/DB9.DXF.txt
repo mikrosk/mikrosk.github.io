@@ -1,0 +1,48 @@
+DXF drawing: DYNACADD/PARTS/DXF/DB9.DXF
+Render: DB9.DXF.svg
+
+== Summary ==
+File:        5412 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font txt
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (3.9, 1.1828) - (6.6, 6.8328)
+             rendered (3.8725, 1.2828) - (6.6275, 6.7328), size 2.755 x 5.45
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: STANDARD (font txt)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            19
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: POLYLINE 10 (26 vertices), TEXT 9
+Blocks:      0 defined
+Notes:
+  - 1 polylines with constant width drawn as thick strokes
+
+== Text in reading order (9 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (9 items) --
+  5
+  9
+  4
+  8
+  3
+  7
+  2
+  6
+  1
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE     TEXT
+     4       6       0.3      0  middle    1      STANDARD  5
+   6.5     5.5       0.3      0  middle    1      STANDARD  9
+     4       5       0.3      0  middle    1      STANDARD  4
+   6.5     4.5       0.3      0  middle    1      STANDARD  8
+     4       4       0.3      0  middle    1      STANDARD  3
+   6.5     3.5       0.3      0  middle    1      STANDARD  7
+     4       3       0.3      0  middle    1      STANDARD  2
+   6.5     2.5       0.3      0  middle    1      STANDARD  6
+     4       2       0.3      0  middle    1      STANDARD  1

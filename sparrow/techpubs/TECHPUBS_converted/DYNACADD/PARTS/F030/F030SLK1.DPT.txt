@@ -1,0 +1,14 @@
+DynaCADD 2.0 entity file (.DPT)
+Source: DYNACADD/PARTS/F030/F030SLK1.DPT (585127 bytes)
+Record stream: 10835 records, ends at offset 0x8eda7 with FFFF terminator
+Drawing settings from: F030SLK1.DWG
+Sheet: width 17, height 11, scale 1
+Units: not recorded in a field identified so far; coordinates are listed as stored
+Entities: 10835 total (LINE 10835)
+Extents: x 0.2653 .. 16.4482, y 1.0527 .. 10.5892 (size 16.1829 x 9.5365)
+Layers used: 2 "L1" (10835)
+Line styles used: 0 "CONTINUOUS" (10835)
+Colour indices used: 7 (10835)
+Groups (unnamed, numbered; 0 = not grouped): 1 (10835)
+
+Text strings (0), in file order; x,y = insertion point:

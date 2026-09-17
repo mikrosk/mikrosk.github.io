@@ -1,0 +1,58 @@
+[PageStream 2 document ARCMEM1.DOC: 8.50 x 11.00 in, 29 objects]
+
+--- Page 1 ---
+[23 drawing objects, see ARCMEM1.DOC.p001.svg]
+
+Dallas Office Memo
+
+
+To:		All Design, Layout, and Product Engineers
+From:	Marty Pennock
+Subject:	Confidential Document Archive Files
+
+Date:	August 5, 1992
+
+cc		Ira Goldstein - ATX
+		Tom Ulaszek - ATX
+		Richard Miller - SUVL
+
+
+In an effort to meet the requirements for a consistent method of archiving design documents it will be necessary for me to gather all information possible for each project being worked on at Atari Dallas. These documents will have to come from several different sources. Documents should be submitted in both hard copy, and on disk wherever possible. Documents should be received from ASIC Layout, PCB Design, Hardware Design, Testing, and Product Engineering. These documents and data files should contain the following information:
+
+
+	• Hardware Design (ASIC)
+		- At hand-off to layout:
+			- All files and sub-directories in the project directory (SCH, SYM, TEST VECTORS).
+	• The version number of Yaron's library.
+	• Any simulation data and information for Mega Cells (ie Blitter).
+	• The View Logic and Sun OS Version used.
+	• A hard copy of the schematics.
+
+	• ASIC Layout Criteria: (explained in "archive.spec")
+		- Netlists.
+		- GDS Files.
+		- DVP directories.
+		- Capacitance information.
+
+	• ASIC Testing
+		- Test Vectors
+		- Fault Simulation Reports
+		- Test Data
+		- Bonding Diagrams
+
+	• PCB Design
+		- Design Layout (PCB, Gerber Files, Input Netlists)
+		- Design Source and Compilation Data (Routing Information)
+		- Version of Software Used
+
+®
+
+--- Page 2 ---
+
+In order to compile a complete library archive on any one given project the above guidelines are only general rules to follow. The goal is to archive a set of information that will be complete in the event the part must be looked at here in detail. In other words, all design information residing anywhere will be stored in one central location for use by everyone. Also, in the event the data is needed at a later date for updates or changes by someone else who did not originally work on the project. Your help and cooperation in this would be greatly appreciated, and the completion of an archive library would speed up design and layout processes significantly.
+
+
+Sincerely
+
+
+Marty Pennock

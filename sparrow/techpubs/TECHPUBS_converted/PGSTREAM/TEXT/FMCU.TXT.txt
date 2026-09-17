@@ -1,0 +1,179 @@
+
+          DESIGN SPECIFICATION FOR THE TT FMCU
+
+Incarnations   Styra ST-4115 rev.s A & B
+
+1. Pin Description
+
+10   MAD0 hi current output   memory address output to the DRAMs
+6    MAD1
+4    MAD2
+2    MAD3
+84   MAD4
+82   MAD5
+80   MAD6
+78   MAD7
+76   MAD8
+74   MAD9
+73   MAD10
+
+13   MAD0X     hi current output   alternate mux outputs for
+anticipated
+8    MAD1X                    1M x 4 nybble parts
+
+14   A0   TTL input      bus address bus
+15   A1
+16   A2
+17   A3
+18   A4
+19   A5
+20   A6
+21   A7
+22   A8
+23   A9
+24   A10
+25   A11
+26   A12
+27   A13
+28   A14
+29   A15
+30   A16
+31   A17
+32   A18
+34   A19
+35   A20
+36   A21
+37   A22
+38   A23
+39   A24
+40   A25
+41   A26
+42   A27
+43   A28
+44   A29
+45   A30
+46   A31
+
+60   XAS  TTL input      bus address strobe
+56   XDS                 bus data strobe
+55   RXW                 bus read write line
+
+58   SIZ0 TTL input      bus data size codes
+57   SIZ1
+
+62   XSTERM    ts output      to bus synchronous terminate
+61   XCBRQ     TTL input      burst fill request, system requests
+                         for a nybble read cycle
+63   XCBACK    ts output      to acknowledge burst request
+
+53   XPOR TTL input      power on reset
+
+71   XWE  hi current output   to DRAM write enable
+69   XRAS                to DRAM row address stobe
+
+64   XCAS0     output              to DRAM column address strobe
+65   XCAS1                    (DRAMs grouped in 4 banks of
+66   XCAS2                     8 bits each. XCAS functions
+67   XCAS3                     as a byte select as well)
+
+50   SEL0 cmos input          ram address select strap
+51   SEL1                (see table)
+
+52   M4X1 cmos input          ram size select strap,
+                         high for 4M DRAMs, low for 1M DRAMs
+
+2. PACKAGE
+The circuit needs 64 signal pins. Package will be 84 pin PLCC.
+Bonding diagram to be supplied by STYRA.
+
+
+1  - VSS  22 - A8        43 - A28  64 - XCAS0
+2  - MAD3 23 - A9        44 - A29  65 - XCAS1
+3  - VDD  24 - A10  45 - A30  66 - XCAS2
+4  - MAD2 25 - A11  46 - A31  67 - XCAS3
+5  - VSS  26 - A12  47 - FC0  68 - VSS
+6  - MAD1 27 - A13  48 - FC1  69 - XRAS
+7  - VDD  28 - A14  49 - FC2  70 - VDD
+8  - MAD1X     29 - A15  50 - SEL0 71 - XWE
+9  - VSS  30 - A16  51 - SEL1 72 - VSS
+10 - MAD0 31 - A17  52 - M4X1 73 - MAD10
+11 - VSS  32 - A18  53 - XPOR 74 - MAD9
+12 - VDD  33 - VSS  54 - VDD  75 - VDD
+13 - MAD0X     34 - A19  55 - RXW  76 - MAD8
+14 - A0        35 - A20  56 - XDS  77 - VSS
+15 - A1        36 - A21  57 - SIZ1 78 - MAD7
+16 - A2        37 - A22  58 - SIZ0 79 - VDD
+17 - A3        38 - A23  59 - CLKIN     80 - MAD6
+18 - A4        39 - A24  60 - XAS  81 - VSS
+19 - A5        40 - A25  61 - XCBRQ     82 - MAD5
+20 - A6        41 - A26  62 - XSTERM    83 - VDD
+21 - A7        42 - A27  63 - XCBACK    84 - MAD4
+
+=================================================================
+===
+
+          TT FAST MCU FUNCTIONAL SPECIFICATION
+
+
+-----------------------------------------------------------------
+---
+STRAPPING OPTIONS
+
+     SEL1 SEL0 M4X1 DRAM SIZE ADDR RANGE
+       0    0    0    1 MEG        01000000-013FFFFF
+       0    1    0    1 MEG        01400000-017FFFFF
+       1    0    0    1 MEG        01800000-01BFFFFF
+       1    1    0    1 MEG        01C00000-01FFFFFF
+       X    X    1    4 MEG        01000000-01FFFFFF
+
+-----------------------------------------------------------------
+---
+REFRESH TIME CONSTANT
+
+A write to FFD000XX will set the number of clock cycles between
+refresh
+cycles. The lower 8 bits of the address are the number of clock
+cycles
+desired. The write will cause a bus error, but it should be
+ignored.
+For most DRAMs examined so far a 15 us refresh time constant is
+sufficient. At a clock speed of 16 Mhz, 241 clocks will yield
+about
+15 us so writing to FFD000F0 would set a reasonable time
+constant.
+When the XPOR pin is low, the time constant is forced to 20h
+clocks,
+much faster than is needed. This is done to expidite the DRAM
+requirement
+of eight RAS cycles before normal use after power-up. The system
+boot
+routine should set the time constant to a more reasonable value.
+Memory
+bandwidth is reduced by refresh.
+
+-----------------------------------------------------------------
+---
+DRAM Considerations
+
+In a system with CLKIN at 16 MHZ, 100ns access time DRAMs should
+be
+used. The DRAMs should have NYBBLE MODE capatabilty with MAD0
+connected
+to the DRAM address bit with is used by the DRAM's nybble mode
+circuitry.
+This bit is A9 for all 1Mx1 bit DRAMs so far examined.
+
+MAD0X and MAD1X are provided for possible future compatabilty
+problems
+with x4 nyble mode DRAMs. If the RAM uses COLn and COLn+1 for the
+two
+nybble bits, connect MAD0X to the An pin and MAD1X to the An+1
+pin.
+Do not connect MAD0 and MAD1.
+
+If the DRAM used a method otherthan the two mentioned above, then
+nybble
+mode cannot be supported. In this case, disconnect XCBRQ and tie
+it high.
+System performace will be degraded somewhat.
+

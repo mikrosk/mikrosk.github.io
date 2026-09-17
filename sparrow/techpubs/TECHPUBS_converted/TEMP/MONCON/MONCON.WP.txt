@@ -1,0 +1,14 @@
+MEGASTe Monitor Connector
+[Figure: moncon.wpg]
+
+
+Pin	Function				Pin	Function
+
+1	Audio Out				2	Composite Video
+3	External Clock Select		4	Monochrome Monitor Detect (When used for
+  	(Pull low for external clock on pin 4)	GENLOCK becomes clock)
+5	Audio Input				6	Green
+7	Red					8	Peritel Power
+9	HSYNC				10	Blue
+11	Monochrome Out			12	VSYNC
+13	Ground

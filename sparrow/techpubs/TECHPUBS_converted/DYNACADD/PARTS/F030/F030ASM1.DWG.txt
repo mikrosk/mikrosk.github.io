@@ -1,0 +1,10 @@
+DynaCADD 2.0 drawing settings file (.DWG)
+Source: DYNACADD/PARTS/F030/F030ASM1.DWG (21262 bytes)
+Holds no entity geometry. The drawing content is in F030ASM1.DPT (3657 entities, 6 text strings); see F030ASM1.DPT.txt and F030ASM1.DPT.svg.
+Sheet: width 8.5, height 11, scale 1, origin (0, 0)
+Saved view window: 14.1181 x 11
+Units: not recorded in a field identified so far
+Global line style scale: 10
+Named layers: 0 "L0" colour 7, 1 "L1" colour 7, 2 "TITLE" colour 2
+Line style table: 0 "CONTINUOUS" scale 0, 1 "HIDDEN" scale 0.375
+Construction planes: Top, Front, Right, Bottom, Rear, Left, Iso

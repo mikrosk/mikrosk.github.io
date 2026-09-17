@@ -1,0 +1,156 @@
+* 	Software designer: Tom Le
+*	Date: 3/30/92
+*	company: Atari Microsystem
+* 	68000 and 68030 exceptions for expansion port test
+
+	.text
+set_io:
+	movem.l d0-d1,-(sp)
+	clr.l   d1
+	move.b  intlev,d1
+	move.b  expandio,d0
+	and.l   #$3f,d0
+	bset    d1,d0	
+	move.b  d0,expandio     ;
+	movem.l (sp)+,d0-d1
+	rts
+
+clear_io:
+	movem.l d0-d1,-(sp)
+	move.b  expandio,d0
+	and.l   #$3f,d0
+	clr.l   d1
+	move.b  intlev,d1
+	bclr    d1,d0	
+	move.b  d0,expandio     ;
+	movem.l (sp)+,d0-d1
+	rts
+
+loadvect:
+	move.l  d0,-(sp)
+	move.w  #intvect,d0	;make vector address to a
+	lsr.w   #2,d0		;   vector number
+	lea	expandio,a0
+	move.b  d0,1(a0)	;
+	move.l  (sp)+,d0
+	rts
+
+excepbe:   			;bus error
+	movea.l #msgbe0,a5     
+excepbe1:
+        bsr     dspmsg
+        lea     msgaccadd,a5
+        bsr     dspmsg
+.if (C68K=1)
+        move.l  2(sp),a0        ;access address 68000
+.else
+        move.l  $10(sp),a0      ;access address 68030
+.endif	
+        bsr     puta0           ;display access address
+        lea     msgpc,a5
+        bsr     dspmsg
+.if (C68K=1)
+        move.l  $a(sp),a0       ; program counter 68000
+.else
+        move.l  $2(sp),a0       ; program counter 68030
+.endif
+        bsr     puta0           ;display pc
+.if (TOS=1)
+	bsr	dspspc
+	move.b  maphi,d0
+	bsr	dspd0b
+.endif
+	move.w  #$1234,flag
+	move.l  stacksave,sp
+	move.l  pcsave,a6
+	jmp    (a6)
+        rte
+
+excepae: movea.l #msgae0,a5	;address error      
+	bra	excepbe1
+
+excepii: movea.l #msgii0,a5     ;instruction error
+	bra	excepbe1	
+
+excepsp0: 			;spurious interrupt
+        movea.l #spurina0,a5     
+        bsr     dspmsg
+        rte
+
+exc_14:				;zero divide
+	lea	msgexc14,a5
+	bsr	dspmsg
+	move.l  stacksave,sp
+	move.l  pcsave,a6
+	jmp    (a6)
+        rte
+exc_18:				;CHK instruction
+	lea	msgexc18,a5
+	bsr	dspmsg
+	move.l  stacksave,sp
+	move.l  pcsave,a6
+	jmp    (a6)
+        rte
+exc_1c:				;TRAP instruction
+	lea	msgexc1c,a5
+	bsr	dspmsg
+	move.l  stacksave,sp
+	move.l  pcsave,a6
+	jmp    (a6)
+        rte
+exc_20:				;priviledge violation
+	lea	msgexc20,a5
+	bsr	dspmsg
+	move.l  stacksave,sp
+	move.l  pcsave,a6
+	jmp    (a6)
+        rte
+exc_24:				;trace exception
+	lea	msgexc24,a5
+	bsr	dspmsg
+	move.l  stacksave,sp
+	move.l  pcsave,a6
+	jmp    (a6)
+        rte
+
+saveexcep:
+        movea.l #excepsave,a1
+        movea.l #8,a0           ;point to start of vector ram
+        moveq   #7,d0
+saveexcep1:  
+	move.l  (a0)+,(a1)+     ;move 2-11
+        dbra    d0,saveexcep1
+	rts
+
+getexcep:
+        movea.l #vectexp,a0
+        movea.l #8,a1           ;point to start of vector ram
+        moveq   #7,d0
+getexcep1:  
+	move.l  (a0)+,(a1)+     ;move 2-11
+        dbra    d0,getexcep1
+	rts
+
+resexcep:
+        movea.l #excepsave,a0
+        movea.l #8,a1           ;point to start of vector ram
+        moveq   #7,d0
+resexcep1:  
+	move.l  (a0)+,(a1)+     ;move 2-11
+        dbra    d0,resexcep1
+	rts
+
+	.data
+vectexp: dc.l    excepbe
+        dc.l    excepae
+        dc.l    excepii
+        dc.l    exc_14
+        dc.l    exc_18
+        dc.l    exc_1c
+        dc.l    exc_20
+        dc.l    exc_24
+;        dc.l    excep10
+;        dc.l    excep11
+
+
+

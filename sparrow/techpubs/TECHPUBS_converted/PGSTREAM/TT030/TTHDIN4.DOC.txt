@@ -1,0 +1,123 @@
+[PageStream 2 document TTHDIN4.DOC: 5.50 x 8.50 in, 1125 objects]
+
+--- Page 5 ---
+[1104 drawing objects, see TTHDIN4.DOC.p005.svg]
+
+POWER SUPPLY
+
+J401
+
+PIN #1
+
+JA00
+
+PIN #1
+
+POWER
+SUPPLY
+CABLE
+
+MAIN PCB
+
+PIN #1
+
+MISSING PIN
+
+CONNECTOR PLUG
+
+SURFACE A
+
+HARD DISK
+CABLE
+
+RED STRIPE
+PIN #1
+
+Figure 4
+
+11.	Remove the top cover. Place the accessory cover with the hard disk sideways beside the computer. Install the hard disk cable by threading it through the opening in the top cover for the accessory cover. Make sure the connector plug in the cable lines up with the missing pin of JA00 on the main PCB as shown in Figure 4. Gently push the hard disk cable partially onto JA00. Make sure  the connector pins of JA00 are lined up with the socket connector on the hard disk cable. Now push firmly down on the hard disk cable until the connectors are fully engaged.
+
+12.	Locate the power supply cable as shown in Figure 4.  It may be tied or fastened. Untie it and pull it over to the right side of the computer far enough to clear the opening in the top cover for the accessory cover as shown in Figure 4.
+
+13.	Connect the power supply extension cable on the hard disk to the power supply cable in the computer. Make sure the colored wires in both connectors line up.
+
+14.	Install the accessory cover. Carefully fold the hard disk cable and the power supply cable so they fit neatly behind the hard disk drive. Lower the front of the accessory cover down onto the top cover until it fits flush against the top cover.
+
+15.	Re-connect the monitor, keyboard, and power cable.
+
+--- Page 6 ---
+
+Installing Software on the Hard Drive
+
+
+After you have installed the hard disk drive into the computer, you must install the software necessary for it to run.
+
+
+Load the Hard Disk Driver from Floppy
+
+
+The hard disk drive has been TOS formatted and partitioned at the
+factory, but it doesn't contain the software necessary to start the computer from the hard disk drive.
+
+16.	Make sure the computer is turned off, then insert the Advanced Hard Disk Utilities diskette, supplied with the hard disk installation kit, into the floppy disk drive.
+
+17.	Turn on power to the computer. Wait 90 seconds for the system to start up. Do not press any keys on the keyboard.
+
+18.	The screen will display "LOADING... ATARI HARD DISK DRIVER. Then the desktop will display floppy disk icons A and B, hard disk icon C, the trash icon, and the menu bar. If the hard disk icon C does not display, you cannot continue beyond this point. Check all the previous steps to make sure the kit was installed properly.
+
+NOTE: If the hard disk drive is revision "B" or higher, it is not necessary to run the HINSTALL program. You may skip the following steps 19 through 26.
+
+The revision letter is marked on the outside of the hard drive carton for revision "B" and higher drives. If you are unsure of the drive revision, DO NOT skip the following steps 19 through 26.
+
+
+Install the Hard Disk Driver on the Hard Disk
+
+
+The HINSTALL.PRG program installs the hard disk driver file. The hard disk driver allows the system to start from the hard drive.
+
+19.	Display the drive A directory window.
+
+20.	Display the directory of the HINSTALL folder.
+
+--- Page 7 ---
+
+21.	Run HINSTALL.PRG.
+
+22.	Select Install from the File menu.
+
+23.	Select logical drive C: from the Select the Logical Drive dialog box, then select OK.
+
+24.	From the Install Hard Disk Driver dialog box, select OK to install the driver.
+
+25.	Select Quit from the File menu after the driver has been installed.
+
+26.	Close all directory windows. The hard disk driver installation is now complete.
+
+--- Page 8 ---
+
+Copy the Language Disk to the Hard Disk Drive
+
+
+The files contained on the Language Disk supply additional startup information when you start the computer. These files must be copied to the hard disk drive.
+
+NOTE: Use Language Disk part number CA400958. Do not use the Language Disk marked (without hard disk drive). This Language Disk is a floppy startup disk only and should not be copied to the hard disk drive.
+
+27.	Remove the Advanced Hard Disk Utilities diskette and insert the Language Disk diskette, supplied with the computer, into the floppy disk drive.
+
+28.	Drag the drive A icon onto the drive C icon.
+
+29.	The Copy Files dialog box displays. Select OK to begin copying the Language Disk. The Copy Files dialog box will show the name of each file as it is copied.
+
+NOTE: Skip the following step 30 if you skipped the previous steps 19 through 26.
+
+30.	The Name Conflict dialog box will display when the file SHDRIVER.SYS is being copied. Select Copy to continue with the copy process.
+
+31.	When the copy process is complete, the display will return to the desktop. Start the System from the Hard Disk The hard disk now has all the information necessary to start the system from the hard disk drive.
+
+32.	Restart the computer.
+
+33.	When the desktop displays, you will see four hard disk icons. The hard disk is partitioned into four logical drives referred to by the letters C, D, E, and F.
+
+--- Page 9 ---
+
+NOTES

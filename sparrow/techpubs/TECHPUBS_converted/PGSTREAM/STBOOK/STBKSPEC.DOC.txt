@@ -1,0 +1,1297 @@
+[PageStream 2 document STBKSPEC.DOC: 8.50 x 11.00 in, 2498 objects]
+
+--- Page 1 ---
+
+1.0 Introduction
+
+
+The hardware architecture of the Atari® STBook™ Computer System consists of a main system, a graphics subsystem, and several device subsystems. The STBook is based on the 16-bit data / 24-bit address MC68HC000 microprocessor unit running at 8 MHz and is Atari STE compatible (except as described below).
+
+The major features of the Atari STBook Computer System include:
+
+MAIN SYSTEM
+
+• 16-Bit Data / 24-Bit Address Microprocessing Unit
+• 512 Kbyte System ROM
+• 1 or 4 Mbyte RAM, Battery-Backed
+• Programmable Memory Controller (Inside COMBO IC)
+• External Direct Memory Access
+• Battery-Backed Real-Time Clock
+• Hardware Bit Blitter (Inside COMBO)
+
+GRAPHICS SUBSYSTEM
+
+• 640x400 LCD, 0.27mm Dot Pitch LCD Panel
+
+DEVICE SUBSYSTEMS
+
+• IDE Interface for Internal Hard Drive
+• 6 Voice Sound Generator/Synthesizer
+• Intelligent Keyboard with "Joypad" Mouse Substitute
+• Parallel Interface
+• Serial Interface
+• Musical Instrument Digital Interface
+• External DMA/Hard Disk/Floppy Disk Interface
+
+--- Page 2 ---
+[1723 drawing objects, see STBKSPEC.DOC.p002.svg]
+
+The following is a simplified hardware system block diagram of the Atari STBook Computer System:
+
+ATARI STBook COMPUTER SYSTEM
+
+--- Page 3 ---
+
+2.0  Main System
+
+The main system includes the microprocessor unit, main memory, programmable memory controller, IDE drive interface, sound synthesizer, and real time clock.
+
+2.1.  Microprocessor Unit
+
+The STBook computer system is based on an 8 MHz MC68HC000 16 bit data/24 bit address microprocessor unit (with an internal 32 bit architecture).
+
+Some features of the MC68HC000 are:  eight 32 bit data registers, nine 32 bit address registers, a 16 Mbyte direct addressing range, 14 addressing modes, memory mapped I/O, five data types, and a 56 instruction set.  The MPU is directly supported by an TS68HC901 Multi Function Peripheral providing general purpose interrupt control and timers, among other things.
+
+2.2.  Memory Management
+
+2.2.1.  Memory Configuration
+
+The STBook is unlike other ST computers, in that its memory is not reconfigurable. It MUST be configured as if there were two banks of 2Mbyte each, even if there is actually only 1Mbyte in the system.  This is mostly due the high integration with the video sub-system, and the use of the video system to perform refresh of the Pseudo-static memory used.
+
+2.2.2.  Refresh Control
+
+The Pseudo-Static RAM (PS RAM) used in the STBook can be refreshed in two ways.
+The address lines to the memory are arranged such that the video accesses in
+Monochrome mode will fully cycle the memory. Thus, generally, no explicit action is
+needed.
+
+But, as these accesses represent about 300mW of power consumption, it is desirable to allow them to be stopped to reduce power. If this is done (see the Graphics Subsystem section), there is a refresh control system which may be enabled to maintain refresh of the RAMs. This is done using the "Auto" and "Self" refresh modes of the PS RAMs. This does, however, have the side effect of slowing the system clock by an average of ~0.5%. (Actually, it does it by "halfing" the system clock speed  for 2 full cycles about every 64 cycles, worst case). It is therefore not generally needed while the Video system is running, as it is (A) redundant and (B) slows the system.
+
+To maintain refresh of the PS RAMs while reducing power, the following sequences should be used:
+
+Stopping the video System:
+
+• Enable the Refresh Machine
+• Disable the Video System
+
+--- Page 4 ---
+
+Re-starting the Video system:
+
+• Enable the Video System
+• Ensure that video is fully running
+• Restart the Refresh Machine
+
+The "Refresh Machine" is controlled by bit 4 in the LCD Control register.
+
+2.3 IDE Drive Interface
+
+The Atari STBook uses an internal IDE-type hard disk drive; it is driven in what is called "AT" mode, and all accesses to control registers and data are through direct-mapped I/O. To increase performance, the registers are mapped such that the "BLiTTER" (described below) can be used to transfer the data  to/from the drive. Only the register map shall be shown here; for a working description of hardware and software, see separately "ATARI IDE-DRIVE INTERFACE SPECIFICATION."
+
+IDE DRIVE INTERFACE REGISTERS
+
+Address	R/W	Active Bits	Name
+
+F0 xx00	R/W	0-16	DATA REGISTER
+F0 xx04	R	1,2,4,6,7	ERROR REGISTER
+			Bit 1	BBK Bad BlocK Detected
+			Bit 2	UNC Uncorrectable Data Error
+			Bit 4	IDNF ID field Not Found
+			Bit 6	ABRT Command Aborted
+			Bit 7	TK0 Track 0 not found
+
+		W	0-7	WRITE PRECOMP REGISTER
+
+F0 xx08	R/W	0-7	SECTOR COUNT
+F0 xx0C	R/W	0-7	SECTOR NUMBER
+F0 xx10	R/W	0-7	CYLINDER LOW
+F0 xx14	R/W	0-7	CYLINDER HIGH
+F0 xx18	R/W	0-4,7	SDH REGISTER
+			Bits 0-3	Head Select Number
+			Bit 4	Drive Select (0=Master, 1=Slave)
+			Bit 7	(Reserved)
+
+F0 xx1C	R	0-7	STATUS REGISTER
+			Bit 7	ERROR
+			Bit 6	INDEX
+			Bit 5	CORRECTED DATA
+			Bit 4	DATA REQUEST
+			Bit 3	DRIVE WRITE FAULT
+			Bit 2	DRIVE SEEK COMPLETE
+			Bit 1	DRIVE READY
+			Bit 0	BUSY
+
+		W	0-7	COMMAND REGISTER
+
+--- Page 5 ---
+
+Address	R/W	Active Bits	Name
+
+F0 xx20	R/W	0-7	(UNUSED, RESERVED)
+F0 xx24	R/W	0-7	(UNUSED, RESERVED)
+F0 xx28	R/W	0-7	(UNUSED, RESERVED)
+F0 xx2C	R/W	0-7	(UNUSED, RESERVED)
+F0 xx30 	R/W	0-7	(UNUSED, RESERVED)
+F0 xx34	R/W	0-7	(UNUSED, RESERVED)
+F0 xx38	R	0-7	ALTERNATE STATUS REGISTER
+			Bit 7	ERROR
+			Bit 6	INDEX
+			Bit 5	CORRECTED DATA
+			Bit 4	DATA REQUEST
+			Bit 3	DRIVE WRITE FAULT
+			Bit 2	DRIVE SEEK COMPLETE
+			Bit 1	DRIVE READY
+			Bit 0	BUSY
+
+		W	1-2	DIGITAL OUTPUT REGISTER
+			Bit 2	INTERRUPT ENABLE
+			Bit 1	SOFTWARE RESET
+
+F0 xx3C	R	0-6	DRIVE ADDRESS REGISTER
+			Bit 0	(DRIVE SELECT 0)
+			Bit 1	(DRIVE SELECT 1)
+			Bits 2-5	(HEAD SELECT)
+			Bit 6	(WRITE GATE)
+
+		W	0-7	(UNUSED, RESERVED)
+
+2.4 Sound Synthesizer
+
+The YM-3439 Programmable Sound Generator produces music synthesis, sound effects, and audio feedback (eg alarms and key clicks).  With an applied clock input of 2 MHz, the PSG is capable of providing a frequency response range between 30 Hz (audible) and 125 KHz (post-audible). The generator places a minimal amount of processing burden on the main system (which acts as the sequencer) and has the ability to perform using three independent voice channels. The three sound channel outputs are mixed, along with Audio In, and sent to an internal speaker.
+
+The sound generator's internal registers are accessed via the PSG Register Select Register (write only, reset: registers all zeros). The tone generator registers control a basic square wave while the noise generator register controls a frequency modulated square wave of pseudo random pulse width. Tones and noise can be mixed over individual channels by using the mixer control register.
+
+The amplitude registers allow the specification of a fixed amplitude or of a variable amplitude when used with the envelope generator. The envelope generator registers permit the entry of a skewed attack-decay-sustain-release envelope in the form of a continue-attack-alternate-hold envelope.
+
+--- Page 6 ---
+
+2.5 Real Time Clock
+
+The STBook system includes a Ricoh RP5C15 Real Time Clock chip. This provides time of day (down to one second resolution) and date. The RTC is provided with a 32.768 kHz oscillator that is independent of all other system clocks.
+
+The chip is accessed through 32 4-bit registers accessed in two banks. Bank 0 allows reading and setting each digit of the date and time, and also allows access to test and control registers.  Bank 1 allows setting the digits of an alarm function, and controlling the mode of operation of the clock chip.
+
+2.6 Configuration Switch Register
+
+The STBook implements an 8-bit configuration switch register to indicate the presence or absence of options. Depending on printed circuit board layout, the register may be implemented using an 8-bit DIP switch, solder pads, or double "row of stakes" jumpers. A bit will read as a "1" if the circuit is open As of this writing, the following bits have been assigned meanings:
+
+Bit	Meaning
+
+7	0 =  No DMA sound hardware is installed.
+	1 =  DMA Sound hardware is available.
+
+6	0 = High speed (16 MHz) 1772 Floppy Disk controller is installed.
+	1 =  Only low speed (8 MHz) 1772 Floppy Disk controller is installed.
+
+5	0 = Bypass Self Test
+	1 = Self Test
+
+4-0	Undefined, reserved.
+
+3.0 Graphics Subsystem
+
+The basic components of the graphics subsystem are video display memory, video controller (Internal to COMBO IC), SHADOW LCD Controller, and a Bit-level Transfer controller (BLiTTER inside COMBO IC).
+
+3.1 Video Display Memory
+
+Video display memory is configured as 1 logical plane in one 32Kbyte (actually 0x7d00) physical plane starting at any 256 byte half page boundary (in RAM only).  The starting address of display memory is placed in the Video Base Address Register (read/write, reset: all zeros) which is then loaded into the Video Address Counter Register (read only, reset: all zeros) and incremented.
+
+The STBook possesses only one of the three ST modes of video configuration: 640 x 400 resolution with 1 plane. The mode is set through the Shift Mode Register (read/write, reset: all zeros). An inverter is provided for inverse video, controlled by bit 0 of palette color 0 (normal video is black 0, white 1). In monochrome mode the border color is always black.
+
+--- Page 7 ---
+[293 drawing objects, see STBKSPEC.DOC.p007.svg]
+
+3.2 Video Controller
+
+The video controller (a sub-section of the COMBO IC) controls the timing and memory transfers of the video system, including V/H Blank/Sync (which, in this LCD system, are relevant only as timing information).
+
+The general flow of the video controller is as follows:
+
+Bitmap data is taken from main memory one word at a time and presented to the SHADOW LCD Controller, along with synchronization information (i.e. Display Enable). It also presents enough data such that Horizontal Scrolling can be performed. The accesses to main memory are interleaved with the CPU accesses, such that the CPU can operate at virtually full speed.
+
+There is (intentionally) no source of External Sync in the STBook; if it is selected, then the video controller will stop passing data from main memory to the SHADOW LCD controller. The SHADOW LCD controller is independent enough to maintain the LCD image without these updates; see below.
+
+The following is a block diagram of the video controller:
+
+Video Controller Block Diagram
+
+3.3 SHADOW LCD Controller
+
+The LCD Controller acts as a buffer and multiplexer between the Video Controller and the LCD Panel. One reason this is necessary is that the LCD Panel is implemented (like most large-scale panels) as an upper and lower panel, driven in parallel. As such, it is scanned/loaded from Upper Left to Center Right, AND Center Left to Lower Right, simultaneously. As the Video controller transfers data corresponding to Upper Left to Lower Right, the LCD Controller must buffer the data so that it can be presented properly to the LCD Panel. It maintains a Local Static RAM to accomplish this.
+
+The timing of the transfer from main memory and transfer to LCD Panel are independent. If the transfers from main memory stop (if, for example, External Sync is selected), the LCD Controller will continue to send data from its local RAM to the LCD Panel, maintaining the image. This feature is what allows us to stop video transfers (to save power) invisibly to the user. Video "updates" need only be performed when the image changes.
+
+--- Page 8 ---
+[224 drawing objects, see STBKSPEC.DOC.p008.svg]
+
+The following is a block diagram of the LCD Controller:
+
+LCD Controller Block Diagram
+
+
+3.5.  Bit-Block Transfers
+
+The Atari STBook Bit-Block Transfer Processor (BLiTTER) is a hardware implementation of the bit-block transfer (BitBlt aka blit) algorithm.  Bit Blt can be simply described as a procedure that moves bit-aligned data from a source location to a destination location through a given logic operation. The BitBlt primitive can be used to perform such operations as:
+
+• Area seed filling
+• Rotation by recursive subdivision
+• Slice and smear magnification
+• Brush line drawing using Bresenham DDA
+• Text transformations eg bold, italic, outline
+• Text scrolling
+• Window updating
+• Pattern filling
+• General memory-to-memory block copying
+
+--- Page 9 ---
+
+There are sixteen logic combination rules associated with the merging of source and destination data. Note that this set contains all possible combinations between source and destination. The following table contains the valid BitBlt combination rules:
+
+3.5.1 Logic Operations
+
+OP		COMBINATION RULE
+
+0		All zeros
+1		Source AND destination
+2		Source AND NOT destination
+3		Source
+4		NOT source AND destination
+5		Destination
+6		Source XOR destination
+7		Source OR destination
+8		NOT source AND NOT destination
+9		NOT source XOR destination
+A		NOT destination
+B		Source OR NOT destination
+C		NOT source
+D		NOT source OR destination
+E		NOT source OR NOT destination
+F		All ones
+
+Adjustments, block extents, and several other transfer parameters are determined prior to the invocation of the actual block transfer. These adjustments and parameters include clipping, skew, end masks, and overlap.
+
+Clipping.          The source and destination block extents are adjusted to conform with a           specified clipping rectangle.  Since both source and destination blocks are of equal dimension, the destination block extent is clipped to the extent of the source block (or vice versa).  Note that the block transfer need not be performed if the resultant extent is zero.
+
+Skew.                  The source-to-destination horizontal bit skew is calculated.
+
+End Masks.     The left and right partial word masks are determined. The masks are                merged if the destination is one word in width.
+
+Overlap.            The block locations are checked for possible overlap in order to avoid the destruction of source data before it is transferred. In non-overlapping transfers the source block scanning direction is inconsequential and can by default be from upper left to lower right.  In overlapping transfers the source scanning direction is also from upper left to lower right if the source-to-destination transfer direction is up and/or to the left (ie source address is greater than or equal to destination address). However, if the overlapping source-to-destination transfer direction is down and/or to the right (ie source address is less than destination address), then the source data is scanned from lower right to upper left.
+
+--- Page 10 ---
+[212 drawing objects, see STBKSPEC.DOC.p010.svg]
+
+After the transfer parameters are determined the bit-block transfer operation can be invoked, transferring source to destination through the logic operation:
+
+BIT-BLOCK TRANSFER
+
+--- Page 11 ---
+
+4.0 External Interfaces
+
+The STBook supports five device subsystems:
+
+• An intelligent keyboard
+• Parallel interface
+• RS232 interface
+• MIDI interface
+• DMA interface("Pseudo-ACSI").
+
+Included with each device interface description is a port pin assignment chart with the STBook and programmable signals justified left [pins that are not connected are not shown].  The connector type on the STBook is shown above each pin list with an "S" designating a female socket and a "P" designating a male plug.
+
+4.1 Intelligent Keyboard
+
+The STBook has a socket to allow use an ST/Mega compatible keyboard. The Atari Intelligent Keyboard (ikbd) transmits encoded make/break key scancodes (with two key rollover), mouse/trackball data, joystick data, and time of day.  The ikbd receives commands as well, with bidirectional communication controlled on the STBook side by an HD6350 Asynchronous Communications Interface Adapter supplied with transmit and receive clock inputs of 500 KHz.  The data transfer rate is a constant 7812.5 bits/sec which can be generated by setting the ACIA Counter Divide Select to divide by 64. All ikbd functions such as key scanning, mouse tracking, command parsing, etc. are performed by a 1 MHz HD6301V1 8 bit Microcomputer Unit, in the keyboard.
+
+4.2 Parallel Interface
+
+The STBook parallel interface supports Centronics STROBE from the YM-3439 PSG for data synchronization and Centronics BUSY to the TS68HC901 MFP (ACKNLG is not supported) for handshaking. Eight bits of read/write data are handled through I/O Port B on the PSG at a typical data transfer rate of 4000 bytes/second.
+
+--- Page 12 ---
+
+Parallel Port Pin Assignments
+
+STBook		DB 25S
+
+PSG I/O A	1 Centronics STROBE
+PSG I/O B	2 Data 0
+PSG I/O B	3 Data 1
+PSG I/O B	4 Data 2
+PSG I/O B	5 Data 3
+PSG I/O B	6 Data 4
+PSG I/O B	7 Data 5
+PSG I/O B	8 Data 6
+PSG I/O B	9 Data 7
+MFP		11 Centronics BUSY
+			18-25 Ground
+
+Signal Characteristics
+
+Pin 1		TTL levels, active low.
+Pins 2-9		TTL levels.
+Pin 11		TTL levels, active high, 1 Kohm pullup resistor to +5 VDC.
+
+4.3 RS232 Interface
+
+The STBook RS232 interface provides voltage level synchronous or asynchronous serial communication.  Five EIA RS232C handshake control signals are supported:
+
+Request To Send and Data Terminal Ready are transmitted through the YM-3439 PSG I/O Port A
+
+Clear To Send, Data Carrier Detect, and Ring Indicator are received through the MK68901 MFP.
+
+The MFP USART transmit and receive clock inputs are controlled by the Baud Rate Generator MFP Timer D which is supplied with 2.4576 MHz and can support asynchronous data transfer rates from 50 to 19200 baud.  One byte transmit and receive data buffers are managed by the MFP USART, which provides monitoring of buffer conditions and communication errors.
+
+--- Page 13 ---
+
+RS232 Port Pin Assignments
+
+STBook		DB 9P
+
+MFP		1 Data Carrier Detect
+MFP		2 Received Data
+MFP		3 Transmitted Data
+PSG I/O A	4 Data Terminal Ready
+			5 Protective Ground
+			6
+PSG I/O A	7 Request To Send
+MFP		8 Clear To Send
+MFP		9 Ring Indicator
+
+Signal Characteristics
+
+Pins 1-5,7-9	RS232C levels.
+
+4.4 MIDI Interface
+
+The STBook MIDI interface provides current loop asynchronous serial communication controlled by an HD6350 ACIA supplied with transmit and receive clock inputs of 500 KHz.  The data transfer rate is a constant 31.25 Kbaud which can be generated by setting the ACIA Counter Divide Select to divide by 16. The MIDI specification calls for serial data to consist of eight data bits preceded by a start bit and followed by one stop bit.
+
+MIDI Port Pin Assignments
+
+MIDI OUT/THRU
+
+STBook		Circular Mini-DIN 5S
+
+MIDI IN		1 THRU Transmit Data
+			2 Shield Ground
+			3 THRU Loop Return
+MIDI ACIA	4 OUT Transmit Data
+			5 OUT Loop Return
+
+MIDI IN
+
+STBook		Circular Mini-DIN 5S
+
+MIDI ACIA	4 IN Receive Data
+			5 IN Loop Return
+
+Signal Characteristics
+
+Current Loop	5 ma, zero is current on.
+
+--- Page 14 ---
+
+4.5 DMA Interface (Pseudo-ACSI)
+
+The DMA interface on the STBook, while incorporating more signals than the Atari standard ACSI interface, is not intended to expand the existing definition of ACSI. The extra signals are, rather, added to allow the Floppy Disk controller chip (WD 1772) to be located external to the STBook; hence, the name Pseudo-ACSI. These include the "adapter voltage", which is just the power coming in from an external AC adapter, allowing the external floppy to be AC powered when the STBook is. Note that this means conversion from Pseudo-ACSI to ACSI is merely a cable which connects the ACSI signals to the appropriate points on the Pseudo-ACSI port; no active electronics are required.
+
+The new signals are, in no particular order: AVLTG, FDINT, D1SEL, D0SEL, S0SEL, FDRQ, /FDCS, FDD_DENSE_SEL. The first is, as mentioned before, the voltage from the AC adapter; the last is the only truly "new"signal. It was added so that an external floppy drive can use either normal or high density floppy disks, by changing the "CLK" signal into the WD 1772. By definition, FDD_DENSE_SEL "low" indicates use of an 8MHz clock into the 1772 (low density), and FDD_DENSE_SEL "high" indicates use of a 16MHz clock (high density).
+
+The other signals are simply those that were purely internal to previous STE designs: /FDCS is the chip select for the 1772; FDRQ is the data-request from the 1772; FDINT is the interrupt-request from the 1772. D0SEL selects the drive chosen to be the equivalent to the previously "internal" or "A" drive; D1SEL selects the drive chosen to be the equivalent to the previously "external" or "B" drive. S0SEL selects the active side for whichever drive is selected.
+
+--- Page 15 ---
+
+Pseudo-ACSI Port Pin Assignments
+
+STBook	Micro-D 28S	(ACSI Equivalent)
+
+AVLTG	1 adapter Voltage
+AVLTG	2 adapter Voltage
+AVLTG	3 adapter Voltage
+FDD_DENSE_SEL	4
+/RESET	5	12
+/HDINT	6	10
+FDINT	7
+D1SEL	8
+D0SEL	9
+S0SEL	10
+/HDRQ	11	19
+/HDCS	12	9
+FDRQ	13
+/FDCS	14
+CR/W	15	18
+/ACK	16	14
+CA2	17
+CA1	18	16
+CD7	19	8
+CD6	20	7
+CD5	21	6
+CD4	22	5
+CD3	23	4
+CD2	24	3
+CD1	25	2
+CD0	26	1
+GND	27 Ground	17,15,13,11
+GND	28 Ground	17,15,13,11
+
+--- Page 16 ---
+
+5.0 Components
+
+The standard configurations of the Atari STBook main system, graphics subsystem, music subsystem, and device subsystems are made up of the following major hardware components:
+
+Main
+
+• 8 MHz MC68HC000 Microprocessor Unit
+• TS68HC901 Multi Function Peripheral
+• 256 Kbyte System ROM
+• 1 or 4 Mbyte RAM
+• COMBO IC
+- Memory Controller
+- Control Logic
+- BLiTTER
+
+Graphics
+
+• 32 Kbyte Display Memory (from main RAM)
+• LCD SHADOW Controller Chip
+• 640x400 0.27mm pitch LCD panel
+
+Music
+
+• YM-3439 Programmable Sound Generator
+
+Device
+
+• Atari Intelligent Keyboard (ikbd) connector
+• 2 HD6350 Asynchronous Communications Interface Adapters
+
+6.0 STBook/STylus Expansion Bus
+
+6.1 Electrical Specification
+
+6.1.1 Power Available
+
+External devices must not draw more than 400mA total from VCC on the connector.
+
+6.1.2 Loading
+
+External devices must not present more than a total of 1 (one) LS-TTL load per line onto the signals; open-collector drivers should be prepared to sink 20mA, on those lines which require it, such as EXPANSION_WAKE-.
+
+--- Page 17 ---
+
+6.2 Signal Descriptions
+
+The Atari STBook can be expanded externally using the 120-pin expansion bus, which is new to the STylus and STBook machines. It essentially allows direct access to the 68HC000 address and data buses, and bus control signals to allow appropriate response. There are also the XROM3 and XROM4 signals to allow for conversion to the previous "ROM Cartridge" format without the need for active electronics (i.e. a 120-pin expansion to 40-pin ROM cartridge convertor would consist of two connectors and a PCB).
+
+The following signals are all direct from the 68HC000, and need no special description:
+
+A1-A23		Address Lines
+D0-D15		Data Lines
+AS-			Address Strobe
+LDS-/UDS-	Lower/Upper Data Strobes
+R/W		Read/Write Control
+FC0-FC2		Function Code 0-2
+VPA-		Valid Peripheral Address
+VMA-		Valid Memory Address
+E			"E" clock
+RESET-		Reset signal
+HALT-		Halt signal
+
+Two signals are also direct from the 68HC000, but require a bit more operational detail:
+
+DTACK-		Data Transfer Acknowledge
+BERR-		Bus Error
+
+The "Glue" chip uses DTACK- to acknowledge memory spaces it controls; it "Bus Errors" on other spaces (or "illegal" access to valid spaces) by not generating DTACK-. Other circuitry in the "Glue" chip times the length of the AS- signal; if it is longer than 8uS, than BERR- is asserted. What this means is that a device on the 120-pin expansion bus can be logically located in address spaces that the "Glue" chip considers "illegal"; all that is necessary is to generate a DTACK- early enough such that AS- does not extend to 8uS.
+
+Two signals are simply the outputs generated by the Glue chip for particular memory spaces, specifically those for the ROM cartridge space. Because the Glue assumes these are ROMs, only reads of this space are acknowledged or selected by the Glue chip. A third signal, DEV-, simply indicates when a peripheral address has been selected in supervisor mode; DTACK- is not necessarily asserted.
+
+There is also DMA-, which indicates that a Floppy or ACSI DMA cycle is occurring. It is included because the COMBO/Glue chip, while asserting AS- and L/UDS-, leaves the address bus in a high-impedance state. Because of the high value pull-up resistors used in the STBook and STylus, the address lines may rise quite slowly when the lines are left in high-impedance. Noise could couple in, and false addresses could be asserted (this problem arose, for example, in the IDE interface circuitry in the STBook). It is therefore recommended that any address decoding added to the STBook or STylus use DMA- as an additional (active HIGH) qualifier.
+
+ROM3-
+ROM4-
+DEV-
+DMA-
+
+--- Page 18 ---
+
+Use of the Bus Grant system is possible, with some limitations. While the Bus Request and Bus Grant Acknowledge are direct connections to the 68HC000, the Bus Grant signal is an output from the Glue chip. This means that the Glue chip (which includes the Blitter and DMA control) has priority for the gaining control of the Bus; Bus Grant is passed through only if no request is pending internal to the Glue.
+
+BR-			Bus Request
+BGACK-		Bus Grant Acknowledge
+MCUBG-	Bus Grant, out from the Glue chip.
+CPUBG-		Bus Grant, from the CPU to the Glue chip (this is for reference only)
+
+Some interrupt control is also possible, at two separate priority levels. One is a level 3 interrupt, for which an input into the Glue chip priority encoder is provided. For this level, it is the responsibility of the external circuit to respond to the interrupt acknowledge cycle, and to provide a method to clear the interrupt request. Both Auto-Vector and Vectored interrupts are possible.
+
+The external circuitry can also share the Level 6 interrupt with the 68HC901 MFP internal to the STylus and STBook.  The external interrupt source can have either higher or (preferably) lower priority than the internal MFP.  All of this is accomplished three signals:  MFPINT-, MFPIEI-, MFPIEO-.
+
+The first is a open-collector driven, wire-OR signal, indicating a level 6 interrupt. The next two establish the relative priority of the two interrupt sources.  MFPIEI- (MFP Interrupt Enable In) signals the MFP that no higher priority device is requesting the interrupt service (active LOW, internal pull-down). MFPIEO- signals that the MFP has no pending interrupts, and that MFPIEI-is active; i.e.  no higher priority interrupt is pending. Thus, a multi-level structure can be obtained.  Because many internal functions depend on the level 6 interrupts of the MFP, we recommend that external devices install themselves at a lower level, but do not require it.
+
+The relevant signals for interrupt control are:
+
+EINT3-
+MFPIEI-
+MFPIEO-
+MFPINT-
+IPL0-, IPL1-, IPL2-
+IACK-
+
+To help in synchronization of external circuits (particularly when the Refresh Machine described above is running), a small number of clock signals are provided. They are:
+
+CLK16		Main 16MHz clock
+CLK8		Above clock /2; CPU clock
+KHZ500		Above clock /16; Baud Rate Clock
+
+--- Page 19 ---
+
+Finally, some power and power control signals are provided to allow external devices to draw some power from the VCC supply of the STylus or STBook. Because of internal demands and limits, we require that external devices draw no more than 500mA from this port. To help distribute the power evenly, and to help maintain clean logic levels, there are 10 VCC signals, and 30 GROUND signals. 10 of the GROUND signals are located at the ends of the connector, opposite the VCC signals; the other 20 are distributed as every 5th pair of signals across the connector. This should aid in both maintaining a clean ground, and reducing EMI.
+
+Power Control is possible to some degree using the signal EXPANSION_WAKE-. This signal expects to be driven by an open-collector driver; when pulled to ground, this "powers on" the STylus/STBook. It is equivalent to pressing the "Power" button on either machine; it's current state can be read from the Configuration/Switch register.
+
+And finally, there is a pin which allows a peripheral plugged into the STBook or STylus to determine which it is connected to. Pin 94 is defined to be a no-connect on an STBook, and grounded on a STylus. The peripheral could, conceivably, determine the type of host without the host being powered; this is the responsibility of the peripheral, if it needs to know it.
+
+--- Page 20 ---
+
+The Expansion connector has the following pin assignments:
+
+Expansion Port Pin Assignments
+
+Micro-D 120S
+
+Pin	Signal	Pin	Signal	Pin	Signal	Pin	Signal
+
+1	VCC	2	VCC	3	VCC	4	VCC
+5	VCC	6	D0	7	D2	8	D4
+9	D6	10	GND	11	D8	12	D10
+13	D12	14	D14	15	GND	16	NC
+17	A2	18	A4	19	A6	20	GND
+21	A8	22	A10	23	A12	24	A14
+25	GND	26	A16	27	A18	28	A20
+29	A22	30	GND	31	/HALT	32	/VMA
+33	/BR	34	/BGACK	35	GND	36	FC0
+37	FC2	38	R/W	39	UDS	40	GND
+41	/RESET	42	/IPL0	43	/IPL2	44	EXPANSION_WAKE-
+45	GND	46	/MFPINT	47	/EINT3	48	/DMA
+49	/ROM3	50	GND	51	NC	52	NC
+53	CLK16	54	KHZ500	55	GND	56	VCC
+57	VCC	58	VCC	59	VCC	60	VCC
+61	GND	62	GND	63	GND	64	GND
+65	GND	66	D1	67	D3	68	D5
+69	D7	70	GND	71	D9	72	D11
+73	D13	74	D15	75	GND	76	A1
+77	A3	78	A5	79	A7	80	GND
+81	A9	82	A11	83	A13	84	A15
+85	GND	86	A17	87	A19	88	A21
+89	A23	90	GND	91	/STylus	92	/CPUBG
+93	/MCUBG	94	NC	95	GND	96	FC1
+97	/AS	98	/LDS	99	/DTACK	100	GND
+101	/VPA	102	/IPL1	103	/IACK	104	/BERR
+105	GND	106	/MFPIEI	107	/MFPIEO	108	/DEV
+109	/ROM4	110	GND	111	NC	112	NC
+113	CLK8	114	E	115	GND	116	GND
+117	GND	118	GND	119	GND	120	GND
+
+--- Page 21 ---
+
+7.0 Memory Map
+
+The first 2 Kbyte of STBook memory is reserved for the exception vector table and supervisor stack.  This area along with I/O space is protected for supervisor references only.  Accessing supervisor protected areas while in the user state will result in a bus error. A 4 word portion of ROM is shadowed at the start of RAM for the reset stack pointer and program counter.  Writing to this area or any ROM location will also result in a bus error. The following is a map of STBook memory:
+
+STBook Memory Map
+
+00 0000	ROM	Reset:  Supervisor Stack Pointer
+00 0004	ROM       Reset:  Program Counter
+00 0008-	RAM       1 Mbyte RAM
+0F FFFF
+10 0008-	RAM       1 Mbyte Shadow of 1st 1Mbyte
+1F FFFF		(in 1 MByte machine), or 2nd MByte
+20 0008-	RAM	3rd & 4th Mbyte, in 4MByte machine
+3F FFFF
+D4 0000-	ROM	256K system extension ROM
+D7 FFFF
+E0 0000	ROM	Reset:  Supervisor Stack Pointer
+E0 0004	ROM	Reset:  Program Counter
+E0 0008-	ROM	512K Base system ROM
+E7 FFFF
+E8 0000-	ROM	256K system extension ROM
+EB FFFF
+F0 XXXX	IDE	IDE Drive Interface
+FA XXXX	ROM	ROM Cartridge (128K total)
+FB XXXX	ROM
+FF 8000	I/O	Configuration Registers
+FF 8200	I/O	Display Registers
+FF 8400	I/O	Reserved
+FF 8600	I/O	DMA/Disk Registers
+FF 8800	I/O	Sound Registers
+FF 8A00	I/O	BLiTTER Registers
+FF FA00	I/O	MC68XXX Registers
+FF FC00	I/O	MC68XX Registers
+
+--- Page 22 ---
+
+8.0 I/O Map
+
+The STBook I/O space ranges from FF 0000 to FF FFFF, with MC68HC000 and MC6800 peripheral internal registers starting at FF FA00 and FFFC00 respectively.  Accessing reserved I/O addresses may result in a bus error. Bit values for various read and/or write registers are labeled as active One/_Zero (always mask out unused field bits).
+
+The following is a map of  STBook I/O space:
+
+
+Address	R/W	Active Bits	Name
+
+F0 xx00	R/W	0-16	DATA REGISTER
+F0 xx04	R	1,2,4,6,7	ERROR REGISTER
+		Bit 1	BBK Bad BlocK Detected
+		Bit 2	UNC Uncorrectable Data Error
+		Bit 4	IDNF ID field Not Found
+		Bit 6	ABRT Command Aborted
+		Bit 7	TK0 Track 0 not found
+	W	0-7	WRITE PRECOMP REGISTER
+
+F0 xx08	R/W	0-7	SECTOR COUNT
+F0 xx0C	R/W	0-7	SECTOR NUMBER
+F0 xx10	R/W	0-7	CYLINDER LOW
+F0 xx14	R/W	0-7	CYLINDER HIGH
+F0 xx18	R/W	0-4,7	SDH REGISTER
+		Bit 0-3	Head Select Number
+		Bit 4	Drive Select ("0"=Master, "1"=Slave)
+		Bit 7	(Reserved)
+
+F0 xx1C	R	0-7	STATUS REGISTER
+		Bit 0	ERROR
+		Bit 1	INDEX
+		Bit 2	CORRECTED DATA
+		Bit 3	DATA REQUEST
+		Bit 4	DRIVE WRITE FAULT
+		Bit 5	DRIVE SEEK COMPLETE
+		Bit 6	DRIVE READY
+		Bit 7	BUSY
+	W	0-7	COMMAND REGISTER
+
+
+F0 xx20	R/W	0-7	(UNUSED, RESERVED)
+F0 xx24	R/W	0-7	(UNUSED, RESERVED)
+F0 xx28	R/W	0-7	(UNUSED, RESERVED)
+F0 xx2C	R/W	0-7	(UNUSED, RESERVED)
+F0 xx30	R/W	0-7	(UNUSED, RESERVED)
+F0 xx34	R/W	0-7	(UNUSED, RESERVED)
+
+--- Page 23 ---
+
+Address	R/W	Active Bits	Name
+
+F0 xx38	R	0-7	ALTERNATE STATUS REGISTER
+		Bit 0	ERROR
+		Bit 1	INDEX
+		Bit 2	CORRECTED DATA
+		Bit 3	DATA REQUEST
+		Bit 4	DRIVE WRITE FAULT
+		Bit 5	DRIVE SEEK COMPLETE
+		Bit 6	DRIVE READY
+		Bit 7	BUSY
+	W	1-2	DIGITAL OUTPUT REGISTER
+		Bit 1	INTERRUPT ENABLE
+		Bit 2	SOFTWARE RESET
+
+F0 xx3C	R	0-6	DRIVE ADDRESS REGISTER
+		Bit 0	/(DRIVE SELECT 0)
+		Bit 1	/(DRIVE SELECT 1)
+		Bits 2-5	/(HEAD SELECT)
+		Bit 6	/(WRITE GATE)
+	W	0-7	(UNUSED, RESERVED)
+
+FF 8001	R/W	0-3	Memory Configuration
+		----	Bank0	Bank1	(4MBytes)
+		0000	Reserved
+		0001	Reserved
+		0010	Reserved
+		0011	Reserved
+		0100	Reserved
+		0101	Reserved
+		0110	Reserved
+		0111	Reserved
+		1000	Reserved
+		1001	Reserved
+		1010	2 Mbyte	2 Mbyte
+		1011	Reserved
+		11xx	Reserved
+		[ SEE STBook MEMORY SECTION ]
+
+FF 8200	R/W	0-7	Video Base High
+FF 8202	R/W	0-7	Video Base Low
+
+FF 8204	R/W	0-5	Video Address Counter High
+FF 8206	R/W		0-7  Video Address Counter Mid
+FF 820	R/W  1-7	Video Address Counter Low
+
+FF 820A	R/W	0-1	Sync Mode
+		Bit 0	External/_Internal Sync
+		Bit 	150 Hz/_60 Hz Field Rate
+
+FF 820C	R/W	1-7	Video Base (Low Byte)
+FF 820E	R/W	0-7	Offset to next Line(Words)
+
+--- Page 24 ---
+
+Address	R/W	Active Bits	Name
+
+FF 8240	R/W	0	Palette Color 0/0 (Border)
+		Bit 0	Inverted/Normal Monochrome
+
+FF 8260	R/W	0-1	Shift Mode
+		00	Reserved
+		01	Reserved
+		10	640 x 400, 1 Plane
+		11	Reserved [SEE STBook VIDEO SECTION]
+
+FF 8264	R/W	0-3	Horizontal Bit-Wise Scroll
+
+FF 827E	W	0-7	LCD Control
+		Bit 0	Shadow Chip OFF
+		Bit 1	*SHFT output (Unused in STBook)
+		Bit 2	POWER_OFF output (Turns off main VCC 				when HIGH)
+		Bit 3	*LAMP output (turns off LCD Bias when HIGH)
+		Bit 4	REFRESH_MACHINE output (turns on refresh 			controller)
+		Bit 5	RS-232_OFF output (turns off +/- 10 generator)
+		Bit 6	(Unused in STBook)
+		Bit 7	MTR_POWER_ON (turns on IDE drive motor 			supply)
+
+FF 8400		Reserved
+FF 8600		Reserved
+FF 8602		Reserved
+
+FF 8604	R/W	0-7	Disk Controller (Word Access)
+
+FF 8606	R	0-2	DMA Status (Word Access)
+		Bit 0	Error Status
+		Bit 1	Sector Count Zero Status
+		Bit 2	Data Request Inactive Status
+
+FF 8606	W	1-8	DMA Mode Control (Word Access)
+		Bit 1	A0
+		Bit 2	A1
+		Bit 3	HDC/_FDC Register Select
+		Bit 4	Sector Count Register Select
+		Bit 5	Reserved
+		Bit 6	Disable/_Enable DMA
+		Bit 7	FDC/_HDC
+		Bit 8	Write/_Read
+
+FF 8609	R/W	0-7	DMA Base and Counter High
+FF 860B	R/W	0-7	DMA Base and Counter Mid
+FF 860D	R/W	0-7	DMA Base and Counter Low
+
+FF 8800	R	0-7	PSG Read Data I/O Port B Parallel Interface Data
+
+--- Page 25 ---
+
+Address	R/W	Active Bits	Name
+
+FF 8800	W	0-7	PSG Register Select
+		Bits 0-3	Register Number
+		0000	Channel A Fine Tune
+		0001	Channel A Coarse Tune
+		0010	Channel B Fine Tune
+		0011	Channel B Coarse Tune
+		0100	Channel C Fine Tune
+		0101	Channel C Coarse Tune
+		0110	Noise Generator Control
+		0111	Mixer Control-I/O Enable
+		1000	Channel A Amplitude
+		1001	Channel B Amplitude
+		1010	Channel C Amplitude
+		1011	Envelope Period Fine Tune
+		1100	Envelope Period Coarse Tune
+		1101	I/O Port A (Output Only)
+		1111	I/O Port B
+
+FF 8802	W	0-7	PSG Write Data
+		0-7	I/O Port A
+		Bit 1	Floppy Side 0/_Side 1 Select
+		Bit 2	Floppy _Drive 0 Select
+		Bit 3	Floppy _Drive 1 Select
+		Bit 4	RS232 Request To Send
+		Bit 5	RS232 Data Terminal Ready
+		Bit 6	Centronics _STROBE
+		Bit 7	IDE RESET (Resets IDE drive interface; "wire-			ORed" with system RESET into the interface)
+
+			FDD_DENSE_SEL (selects High density [16MHZ 			clock] external Floppy)
+		0-7	I/O Port Parallel Interface Data
+
+FF 8A00		0-15	Halftone RAM
+       |
+FF 8A1E
+FF 8A20		1-15	Source X Increment
+FF 8A22		1-15	Source Y Increment
+FF 8A24		0-7	Source Address
+FF 8A26		1-15
+FF 8A28		0-15	Endmask 1
+FF 8A2A		0-15	Endmask 2
+FF 8A2C		0-15	Endmask 3
+FF 8A2E		1-15	Destination X Increment
+FF 8A30		1-15	Destination Y Increment
+FF 8A32		0-7	Destination Address
+FF 8A34		1-15
+FF 8A36		0-15	X Count
+FF 8A38		0-15	Y Count
+
+FF 8A3A		0-1	HOP
+
+--- Page 26 ---
+
+Address	R/W	Active Bits	Name
+
+FF 8A3B		0-3	OP
+
+FF 8A3C		0-3,5-7
+		Bits 0-3	Line Number
+		Bit 5	Smudge
+		Bit 6	Hog
+		Bit 7	Busy
+
+FF 8A3D		0-3,6-7
+		Bits 0-3	Skew
+		Bit 6	NFSR
+		Bit 7	FXSR
+
+FF 9200		8-15	Configuration Data
+		Bit 0	/(POWER_SWITCH)
+		Bit 1	/(TOP_CLOSED)
+		Bit 2	/(RTC_ALARM)
+		Bit 3	/(SOURCE_DEAD)
+		Bit 4	/(SOURCE_LOW)
+		Bit 5	/(MODEM_WAKE)
+		Bit 6	(Reserved)
+		Bit 7	/(EXPANSION_WAKE)
+		Bit 8
+		Bit 9	Reserved
+		Bit 10	Reserved
+		Bit 11	Reserved
+		Bit 12	Reserved
+		Bit 13	SELF TEST
+		Bit 14	LOW SPEED FLOPPY
+		Bit 15	DMA AVAILABLE
+
+FF 9210		0-7	Common Power Source Level
+			Power Source Voltage Level
+
+FF 9214		0-7	Reference Voltage Level
+
+FF 9202		0-7	LCD Contrast control (Reserved for future use)
+
+FF FA01		0-7	MFP General Purpose I/O
+FF FA03		0-7	MFP Active Edge
+FF FA05		0-7	MFP Data Direction
+FF FA07		0-7	MFP Interrupt Enable A
+FF FA09		0-7	MFP Interrupt Enable B
+FF FA0B		0-7	MFP Interrupt Pending A
+FF FA0D		0-7	MFP Interrupt Pending B
+FF FA0F		0-7	MFP Interrupt In-Service A
+FF FA11		0-7	MFP Interrupt In-Service B
+FF FA13		0-7	MFP Interrupt Mask
+FF FA15		0-7	MFP Interrupt Mask B
+FF FA17		0-7	MFP Vector
+FF FA19		0-7	MFP Timer A Control
+
+--- Page 27 ---
+
+Address	R/W	Active Bits	Name
+
+FF FA1B		0-7	MFP Timer B Control
+FF FA1D		0-7	MFP Timers C and D Control
+FF FA1F		0-7	MFP Timer A Data
+FF FA21		0-7	MFP Timer B Data
+FF FA23		0-7	MFP Timer C Data
+FF FA25		0-7	MFP Timer D Data
+FF FA27		0-7	MFP Sync Character
+FF FA29		0-7	MFP USART Control
+FF FA2B		0-7	MFP Receiver Status
+FF FA2D		0-7	MFP Transmitter Status
+FF FA2F		0-7	MFP USART Data
+
+FF FC00		0-7	Keyboard ACIA Control
+FF FC02		0-7	Keyboard ACIA Data
+
+FF FC04		0-7	MIDI ACIA Control
+FF FC06		0-7	MIDI ACIA Data
+
+FF FC20		0-3	Real Time Clock Seconds
+FF FC22		0-3	Tens of Seconds
+FF FC24		0-3	Minutes
+FF FC26		0-3	Tens of Minutes
+FF FC28		0-3	Hours
+FF FC2A		0-3	Tens of Hours
+FF FC2C		0-3	Day of Week
+FF FC2E		0-3	Days
+FF FC30		0-3	Tens of Days
+FF FC32		0-3	Months
+FF FC34		0-3	Tens of Month
+FF FC36		0-3	Years
+FF FC38		0-3	Tens of Years
+FF FC3A		0-3	Mode
+FF FC3C		0-3	Test
+FF FC3E		0-3	Reset
+
+The following tables list the STBook interrupt and signal priority assignments:
+
+MC68HC000 Interrupt Autovector
+
+Level	Definition
+
+7	(HIGHEST)/POWER FAIL (NMI)
+6	TS68HC901 MFP
+5	(unused)
+4	Vertical Sync (mid blanking)
+3	(optional external)
+2	Horizontal Sync (mid blanking)
+1	(LOWEST)/(unused)
+
+--- Page 28 ---
+
+TS68HC901 Interrupt Control
+
+Priority		Definition
+
+15			(HIGHEST)/POWER_ALARMS/I7
+14			RS232 Ring Indicator/I6
+13			System Clock (Timer A)/TA
+12			RS232 Receive Buffer Full/
+11			RS232 Receive Error/
+10			RS232 Transmit Buffer Empty/
+ 9			RS232 Transmit Error/
+ 8			Horizontal Blanking Counter (Timer B)/TB
+ 7			Disk Drive Controller/I5
+ 6			Keyboard and MIDI/I4
+ 5			Timer C/TC
+ 4			RS232 Baud Rate Generator (Timer D)/TD
+ 3			BLiT Operation Done/I3
+ 2			RS232 Clear To Send/I2
+ 1			RS232 Data Carrier Detect/I1
+ 0			(LOWEST)/Centronics BUSY/I0
+
+NOTE:  the HD6350 ACIA Interrupt Request status bit must be tested to differentiate between keyboard and MIDI interrupts.
+
+10.0 Power Supply
+
+10.1 Power Supply Specifications
+
+An internal DC power supply provides power to the main system board and LCD. All power levels are regulated for over-voltage and over-current protection. The following are minimal power supply specifications:
+
+VCC:
+
+Input 8 to 20V
+Output 5V +/-1%, 1A maximum steady-state; peaks to 3A
+
+MTR:
+
+Input 8 to 20V
+Output 5V +/-1%, 1A maximum steady-state; peaks to 3A
+
+LCD BIAS:
+
+Input 8 to 20V
+Output -12 to -17V (User adjustable), 50MA.
+
+--- Page 29 ---
+
+10.2 STBook Power Controls
+
+The STBook incorporates a number of new sub-systems to allow tight control of the power usage of the machine. The operating system uses all of these to extend battery life of the machine; these functions will also be directly available to developers, so that they may customize the functions for any particular application. The various functions/topics are grouped as follows:
+
+• Multiple Main Power Sources
+• Multiple Regulated Power Outputs
+• Software Control of the various Power Outputs
+• Hardware Source Level Detectors/Interrupts
+• User Input and Control Signals
+• Power Source Level Direct Read
+• Referenced Registers
+
+10.2.1 Multiple Main Power Sources
+
+The STBook can get its main power from various internal/external sources. These sources include:
+
+• Replaceable battery pack (either NiCad or Alkaline)
+• External AC adapter/charger, and internal rechargeable Lithium cells.
+
+The first two are designed to run the machine in normal operation, and when "off" (i.e. only retaining the RAM contents and the Real-Time Clock, referred to herein as "back-up"); the last is only for back-up.  The Battery Pack and AC Adapter supply power to a common point to feed to the various regulators; this point is henceforth referred to as the "Common Power Source."
+
+10.2.1.1 Battery Pack
+
+The battery packs available are an eight-cell Nicad pack, or a7-cell Alkaline pack.  The Nicad pack can be charged from the AC adapter/charger while in the unit, and while the machine is in operation.  A full charge should operate the machine for 5 to 10 hours, and should retain the RAM and Real-Time Clock for approximately 100 days; a new Alkaline pack, somewhat less.
+
+10.2.1.2 AC Adapter/Charger
+
+The supplied AC Adapter charger has input circuitry that automatically adjusts for 120/220V, 50/60Hz AC inputs, and both a Power and Recharge output.  It is capable of fully recharging the NiCad cells in under two hours,while the machine is in use.  It uses a "Delta-V Peak Detect" control circuit on the recharging output, to allow for the quick charge of the cells without overcharging them.
+
+--- Page 30 ---
+
+10.2.1.3 Lithium Cells
+
+Under normal conditions, the small amount of power needed to retain the data in the RAM and to run the Real-Time Clock is derived from Common Power Source. If, for some reason, there is no power available from this source, power for the Back-up system is derived from the internal Lithium cells, which can maintain the RAM and RTC integrity for approximately 40 hours. The Back-up system also takes power from the Lithium cells when the Battery pack is being changed.  When the Common Power Source is available, it recharges the Lithium cells.
+
+10.2.2 Multiple Regulated Power Outputs
+
+The STBook has various regulated power sources built in, all of which derive their power from the Common Power Source.  These are:
+
+• VCC (main 5V logic supply)
+• MTR (5V supply for Hard Disk Motor)
+• LCD BIAS (-15V generator for LCD contrast/bias)
+• VBAK (3V backup for RAM and Real-Time Clock)
+• Lithium Recharge
+
+10.2.2.1 VCC
+
+The main 5V logic supply comes from a switching regulator built-in to the STBook. It converts from the voltage level at the Common Power Source (AC adaptor, NiCad, or Alkaline) to the +5V needed for the logic. It is capable of supplying up to 1A @ 5V out with an input voltage as low as 8V. In includes current limiting on the input such that no more than 1.5A @ 5V is available at any input voltage, and short-circuit current is limited to 3A. The VCC regulator can be started by either the momentary-ON switch, or by the Real-Time Clock Alarm output. To stay on, the POWERGOOD level-detect circuit must be active before the turn-on signal is released. If at anytime the POWERGOOD signal fails, the VCC supply turns itself off.
+
+10.2.2.2 MTR
+
+The Hard Disk motor has a separate +5V supply, which also derives power from the Common Power Source.  It is capable of supplying 1A @ 5V steady-state, and short peaks up to 3A.  It does not have the level-detect circuitry that the VCC supply does; it is turned on/off by a software-controlled signal MTR_PWR_ON.
+
+10.2.2.3 LCD BIAS
+
+The LCD requires a bias voltage at a level between -12 and -16V. A third switching regulator creates this voltage, also from the Common Power Source. It has a user control (CONTRAST) that sets the actual voltage level. It can supply up to 50mA @ -16V. It does not have the level-detect circuitry of the VCC supply, and is turned on/off by a software-controlled switch, /22ON.
+
+--- Page 31 ---
+
+10.2.2.4 VBAK
+
+When the main VCC supply is off, the RAM and Real-Time Clock can be supplied a 3V data-retaining voltage from the VBAK regulator. It is a Linear (not switching) regulator, and derives power from either the Common Power Source, or from internal Lithium cells. If the voltage level of the Common Power Source is insufficient (for example, when the Battery pack is removed for replacement), then it derives power from the built-in rechargeable Lithium cells.  It is the only load on these cells.
+
+10.2.2.5 Lithium Charge
+
+The lithium cells are constantly trickle-charged (when necessary) from the Common Power Source.  The circuit is a Voltage-level Trickle charge circuit.
+
+10.2.3 Hardware Level Detectors/Interrupts
+
+To make battery level detection and warnings as automatic as possible, various fixed-voltage-level detectors are included. These are, specifically:
+
+• SOURCE LOW (/SRCLOW)
+• SOURCE DEAD (/SRCDEAD)
+• POWERGOOD
+
+There is also a two-color LED which is driven off these signals, to allow a visual indication of the power levels/warnings.
+
+10.2.3.1 SOURCE LOW
+
+SOURCE LOW is set to signal when the "common source" voltage level drops below 8.8V. It is wire-ORed with the real-time clock alarm and the "Power On" switch into the MFP Input 7, which is normally configured to generate an interrupt when the signal goes low. /SRCLOW, /RTC_ALARM, and /POWERON can all be read separately via the Configuration/Signal register; it is the only mechanism provided to distinguish the source of the interrupt.
+
+10.2.3.2 SOURCE DEAD
+
+SOURCE DEAD is set to signal when the "common source" voltage level drops below 7.2V.  It generates a Level 7 (NMI) Interrupt when the signal transitions from high-to-low; the interrupt request is cleared and re-enabled upon vector fetch. This signal can also be read directly through the Configuration/Signal register.
+
+10.2.3.3 POWERGOOD
+
+POWERGOOD is purely a hardware-level "safety-valve", and cannot be read or controlled by software.  It is set to trigger when the regulated VCC (+5V) signal drops to below 4.55V.  If this occurs, /RESET is asserted and the hardware is signalled to turn the system off.  If this occurs, the VCC, MOTOR, and LCD power convertors are all disabled, and the system automatically switches to low-voltage backup for the RAM and Real-Time Clock. The logic behind this "brute-force" approach is that system integrity cannot be guaranteed at VCC's below 4.55V, and protection of the RAMDISK (if present) is considered to be of highest priority.
+
+--- Page 32 ---
+
+10.2.3.4 Power LED
+
+Power LED The Power LED is a two-color LED (Green and Red) which visually indicates the source level state of the machine. The Green segment is lit when POWERGOOD is active and /SRCDEAD is not; the Red segment is lit when /SRCLOW is active.  Thus, the LED has four states:
+
+OFF		When the STBook is turned off
+
+GREEN		When the STBook is on and the Common Power Source is above 8.8V (i.e.           			power level is good)
+
+YELLOW	When the STBook is on and the Common Power Source is between 8.8V and 			7.2V (i.e. power level is low)
+
+RED		When the STBook is on and the Common Power Source is below 7.2V (i.e.  			power is about to expire).
+
+This last will rarely be actually seen, as it signals the operating system to do an emergency shutdown, which should take only a few milliseconds.
+
+10.2.4 Software Control of Power Sources
+
+Most of the power systems are under software control so that the operating system can keep power use as efficient as possible. These controls can also be used by applications to customize power usage for particular situations. While the exact registers and bits involved will be described later in this document, the system includes the ability to:
+
+• Turn off the main VCC supply
+• Turn on/off the Hard Disk motor supply
+• Turn on/off the LCD Bias supply
+• Turn on/off the RS-232 +/-9V generator
+• Program the Real-Time Clock to turn on the main VCC supply.
+
+10.2.4.1 Main VCC
+
+The main VCC supply is controlled, in part, by a signal that, on a low-to-high transition of POWEROFF, turns it off.  Since VCC drives all of the logic in the system, this also results in the  Hard Disk and LCD Bias supplies being turned off, as well. It is recommended, however, that at least the LCD Bias be turned off before the main VCC is.
+
+10.2.4.2 Hard Disk Motor Supply
+
+The Motor supply is controlled directly by a signal MTR_PWR_ON, which must be high for the motor supply to be on. This signal is directly controlled by software. The intent of this control is two-fold:
+
+To disable the switching regulator when it is known that the disk-drive motor is not spinning
+
+To disable the motor when an attempt to spin-up the motor results in the power source level dropping too far.
+
+--- Page 33 ---
+
+10.2.4.3 LCD Bias
+
+The LCD Bias supply is also controlled directly by software, in this case by the signal /22ON (the significance of this particular name is purely archaic). The intent of this control is, as previously stated, two-fold:
+
+To sequence the voltages into the LCD circuitry properly.
+To allow the system to save a bit of power when the system is not in use, by blanking the screen.
+
+10.2.4.4 RS232 Drive
+
+The RS232 drive level is not actually a separate power supply; rather, it is a pair of voltages generated by the RS232 interface IC. This generation can be disabled by software when it is known that the serial port is not in use, saving a small amount of power.
+
+10.2.4.5 Real-Time Clock Alarm
+
+The VCC supply can also be turned on by the Real-Time Clock Alarm, which is set under software control.  Thus, it can be used to schedule operations for a later time/date, and the system can be turned off until that time.
+
+10.2.5 User Input Signals and Controls
+
+The user controls and influences the power state of the STBook through a variety of controls and switches. Some of the controls have different functions, depending on the current state of the STBook. The switches/controls are:
+
+Power switch
+Reset
+"Top Closed"
+Contrast
+
+10.2.5.1 Power Switch
+
+The Power switch is a momentary, push-button switch, located on the lower part of the top half of the STBook, at the lower left of the LCD screen.  When the STBook is turned "off" (only the RAM and Real-Time Clock powered), it is used to turn the system on. Since the signal it generates is "wire-ORed" with the VCC POWERGOOD signal, one or the other must be present for the system to remain on. To the user, this means holding the Power Switch until the power LED turns either green or yellow, which indicates that VCC has reached its proper level; yellow indicates that the system is on, but the source level is low.
+
+Pushing the Power Switch when the STBook is already on sends a signal to the software, indicating that the user wishes the system to be turned off. If the function is enabled, the software with take a "snapshot" of the hardware state at that time and save it in the RAM.   Since all of the RAM contents are retained by the VBAK supply when the system is off, the "snapshot" can be used when the system is turned back on to return the system to exactly the state it was in when the system was turned off, even to the extent of returning to the application that was running at the time.
+
+--- Page 34 ---
+
+10.2.5.2 RESET
+
+The reset signal is not, of course, really a power control; it is mentioned here for completeness.  Its function is to reset the hardware and software state of the machine. It is also located at the lower left of the LCD display area, to the right of the Power Switch.  It is deliberately recessed, so that it is unlikely to be pressed accidently.
+
+10.2.5.3 Top Closed
+
+The Top Closed switch is also not directly a power control; it is located between the Power Switch and the Reset Switch.  The STBook housing is molded such that this switch is pressed when the top of the STBook is closed; this then generates a signal to the software, which can, for example, initiate the same power-down as the Power Switch.  It also is used when the Real-Time Clock alarms turns on the system; the STBook then knows the top is closed, and that spinning-up the Hard drive would be inappropriate.
+
+10.2.5.4 Contrast
+
+The Contrast control is a potentiometer which allows the user to adjust the LCD Bias voltage level.  Changing this level affects the LCD contrast; thus the user can set it to an appropriate level.
+
+10.2.6 Power Source Level Direct Read
+
+The current level of the Common Power Source can be read directly from an 8-bit A/D built into the STBook.  It is designed such that each LSB change corresponds to 1/10V (100mV).  Because of inaccuracies in the circuitry used, the built-in 2.5V reference level is converted at the same time as the Common Source level, and nominally converts to 1/2 full scale (i.e. 128 LSB's).  This reference can then be used to scale the Power Source value; this is valid since the inaccuracies are only in the voltage ramp used to measure the levels; the scaling of the Common Source is done by 1% parts, and the reference is un-scaled.  The level is read 2000 times/sec, and runs continuously while the VCC source is on.
+
+10.2.7 Referenced Registers
+
+This is a list of the specific registers and bits used to control all of the power system functions.
+
+Address	Bit Positions	Register Name	Bit Name
+
+FF 827E	0-5,7	LCD Control
+	Bit 0		Shadow Chip OFF
+	Bit 1		/(SHIFTER OFF)
+	Bit 2		POWEROFF
+	Bit 3		/22ON
+	Bit 4		RS-232_OFF
+	Bit 5		(Unused in STBook)
+	Bit 7		MTR_PWR_ON
+
+--- Page 35 ---
+
+Address	Bit Positions	Register Name	Bit Name
+
+FF 9200	0-15	Configuration/
+		Signals
+
+	Bit 0		/(POWER_SWITCH)
+	Bit 1		/(TOP_CLOSED)
+	Bit 2		/(RTC_ALARM)
+	Bit 3		/(SRCDEAD)
+	Bit 4		/(SRCLOW)
+	Bit 5		/(MODEM_WAKE)
+	Bit 6		Reserved
+	Bit 7		/(EXPANSION_WAKE)
+	Bit 8		Reserved
+	Bit 9		Reserved
+	Bit 10		Reserved
+	Bit 11		Reserved
+	Bit 12		Reserved
+	Bit 13		Self Test Bypass
+	Bit 14		Low Speed Floppy
+	Bit 15		DMA Available
+
+FF 9210	0-7		Common Power Source Level
+			Power Source Voltage Level
+
+FF 9214	0-7		Reference Voltage Level
+			Reference Voltage Level
+
+--- Page 36 ---
+
+Appendix A References
+
+
+General
+
+A Hitchhiker's Guide to the BIOS
+Digital Research GEM Software Documentation
+
+Main System
+
+Motorola MC68HC000 16-Bit Microprocessor User's Manual, Fourth Edition
+SGS-Thomson TS68HC901 Multi Function Peripheral Data Sheet
+
+Graphics Subsystem
+
+Adele Goldberg and David Robson, 'Smalltalk-80: The Language and Its Implementation', Addison-Wesley, Reading Massachusetts, 1983, Chapter 18.
+
+Music Subsystem
+
+General Instrument AY-3-8910 Programmable Sound Generator Data Sheet
+MIDI Musical Instrument Digital Interface Specification 1.0
+
+Device Subsystems
+
+Atari Intelligent Keyboard (ikbd) Protocol and Specification
+Hitachi HD6350 Asynchronous Communications Interface Adapter Data Sheet
+Centronics Parallel Interface Specification
+Electronic Industries Association RS232C Standard
+Western Digital WD1770/1772 Floppy Disk Controller Data Sheet
+Specification of the Atari Computer System Interface (ACSI)
+Specification of the Atari Hard Disk Interface (AHDI)
+
+--- Page 37 ---
+
+Appendix B Notes
+
+
+General
+
+An address error occurs when a word instruction is used on a byte address.
+
+Main System
+
+The DMA Base Address and Counter Register must be loaded in low, mid, high order.
+
+Graphics Subsystem
+
+None.
+
+Music Subsystem
+
+The YM-3439 PSG I/O space and registers should be set up as critical regions in software.
+
+Device Subsystems
+
+Poll or service the Disk Drive Controller interrupt on the MK68901 MFP General Purpose I/O Register to detect the completion of a WD1772 FDC command. Do not poll the FDC Busy or DMA Sector Count Zero status bits.
+
+Select the Sector Count Register before testing the DMA Status Register Error bit.
+
+Do not set the 30 ms Settling Delay bit on WD1772 FDC type 2 and 3 command executions.
+
+A force interrupt should be issued after a few seconds (ie timeout) on all commands sent to the WD1772 FDC.
+
+Wait until the WD1772 FDC Motor On status is low before deselecting a floppy drive.
+
+A floppy disk drive configuration table should be maintained in software to accommodate a diverse selection of 3.5 inch floppy disk drives. Two floppy disk drives currently under evaluation have the following characteristics:
+
+500 Kbyte unformatted, 80 cylinders, one head, 3 ms stepping rate.
+1 Mbyte unformatted, 80 cylinders, two heads, 3 ms stepping rate.
+
+--- Master page (repeated on pages; # = page number) ---
+
+ATARI STBook Hardware Specification
+
+September 10, 1992
+
+Atari Corporation Confidential

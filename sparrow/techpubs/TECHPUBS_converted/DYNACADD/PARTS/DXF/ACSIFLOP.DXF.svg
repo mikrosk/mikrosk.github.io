@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2448" height="2131.98" viewBox="0 0 2448 2131.98">
+<title>DYNACADD/PARTS/DXF/ACSIFLOP.DXF</title>
+<rect x="0" y="0" width="2448" height="2131.98" fill="#ffffff"/>
+<g data-layer="1" fill="none" stroke="#000000" stroke-width="91.12" stroke-linecap="butt" stroke-linejoin="miter">
+<path d="M595.76 329.05A885.94 885.94 0 0 0 1848.66 1581.95A885.94 885.94 0 0 0 595.76 329.05Z"/>
+</g>
+<g data-layer="1" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M1051.36 101.24L1051.36 329.05L1393.07 329.05L1393.07 101.24L1051.36 101.24Z"/>
+</g>
+<g data-layer="1" fill="#000000" stroke="none">
+<circle cx="1848.67" cy="898.55" r="7.2"/>
+<circle cx="709.66" cy="442.95" r="7.2"/>
+<circle cx="1620.87" cy="442.95" r="7.2"/>
+<circle cx="595.76" cy="1126.36" r="7.2"/>
+<circle cx="481.85" cy="898.55" r="7.2"/>
+<circle cx="564.85" cy="642.08" r="7.2"/>
+<circle cx="1165.26" cy="1468.06" r="7.2"/>
+<circle cx="1165.26" cy="1126.36" r="7.2"/>
+<circle cx="823.56" cy="1354.16" r="7.2"/>
+<circle cx="937.46" cy="898.55" r="7.2"/>
+<circle cx="1506.97" cy="1354.16" r="7.2"/>
+<circle cx="1734.77" cy="1126.36" r="7.2"/>
+<circle cx="1393.07" cy="898.55" r="7.2"/>
+<circle cx="1765.67" cy="642.08" r="7.2"/>
+</g>
+<g data-layer="1" fill="#000000" stroke="none" font-family="Helvetica, Arial, 'Liberation Sans', 'DejaVu Sans', sans-serif" xml:space="preserve">
+<text transform="translate(231.89 593.75)" y="45.56" font-size="125.75" text-anchor="middle">9</text>
+<text transform="translate(458.51 1747.11)" y="45.56" font-size="125.75" text-anchor="middle">3</text>
+<text transform="translate(231.89 1391.33)" y="45.56" font-size="125.75" text-anchor="middle">5</text>
+<text transform="translate(108.29 978.21)" y="45.56" font-size="125.75" text-anchor="middle">7</text>
+<text transform="translate(1220.75 2016.86)" y="45.56" font-size="125.75" text-anchor="middle">1</text>
+<text transform="translate(1231.05 970.77)" y="45.56" font-size="125.75" text-anchor="middle">14</text>
+<text transform="translate(1004.44 771.11)" y="45.56" font-size="125.75" text-anchor="middle">13</text>
+<text transform="translate(1467.96 781.73)" y="45.56" font-size="125.75" text-anchor="middle">12</text>
+<text transform="translate(324.6 285.77)" y="45.56" font-size="125.75" text-anchor="middle">11</text>
+<text transform="translate(2230.21 594.82)" y="45.56" font-size="125.75" text-anchor="middle">8</text>
+<text transform="translate(1993.29 1748.17)" y="45.56" font-size="125.75" text-anchor="middle">2</text>
+<text transform="translate(2230.21 1392.39)" y="45.56" font-size="125.75" text-anchor="middle">4</text>
+<text transform="translate(2339.71 943.95)" y="45.56" font-size="125.75" text-anchor="middle">6</text>
+<text transform="translate(2123.4 283.38)" y="45.56" font-size="125.75" text-anchor="middle">10</text>
+</g>
+</svg>

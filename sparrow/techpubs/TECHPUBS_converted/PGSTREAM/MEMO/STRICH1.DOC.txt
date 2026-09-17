@@ -1,0 +1,27 @@
+[PageStream 2 document STRICH1.DOC: 8.50 x 11.00 in, 28 objects]
+
+--- Page 1 ---
+[23 drawing objects, see STRICH1.DOC.p001.svg]
+
+Dallas Office Memo
+
+
+To:		Richard Miller
+From:	Marty Pennock
+Subject:	STBook Specification
+
+Date:	September 11, 1992
+
+cc		Ira Goldstein - ATX
+		Tom Ulaszek - ATX
+
+
+Enclosed please find a copy of the STBook Hardware Specification done by Tracy Hall and edited for Archive by me. Could you please review it and send back comments. Enclosed is also an electronic copy of the specification both in straight ASCII and in PageStream v2.2.
+
+
+Sincerely
+
+
+Marty Pennock
+
+®

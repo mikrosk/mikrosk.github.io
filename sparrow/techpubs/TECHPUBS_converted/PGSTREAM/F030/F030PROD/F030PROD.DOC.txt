@@ -1,0 +1,2323 @@
+[PageStream 2 document F030PROD.DOC: 8.50 x 11.00 in, 10373 objects]
+
+--- Page 1 ---
+
+1.0 INTRODUCTION
+
+The latest enhancement to the Atari® ST™ architecture is the Atari FALCON030™ system. The system is comprised of an integrated housing which contains the CPU, System RAM, Floppy Disk, Optional Hard Disk, modular keyboard, and Power supply. A detachable mouse is also included. The system is compatible with previous designs including the STE™, and MEGA STE™.
+
+The basic system is shipped with 1, 4, or 14 Mbytes of RAM, 512 Kbytes of ROM, 2 Mbyte (unformatted) Floppy Disk Drive, and high speed Motorola® MC68030FG™ CPU running at 16 MHz. FALCON030 also offers system expansion via an internal expansion connector.
+
+
+1.1 SYSTEM FEATURES
+
+Basic system features contained in the FALCON030 are as follows:
+
+•	 MC68030FG Microprocessor running at 16 MHz
+•	 Optional MC68881/MC68882 Coprocessor running at 16 MHz
+•	 1 MB RAM (expandable to 14 MB)
+•	 512 KB ROM
+•	 Graphics Coprocessor (Blitter)
+•	 ST™, VGA, True Color, and Programmable Video Modes
+•	 Digital stereo sound
+•	 Digital Signal Processor
+•	 Parallel Port
+•	 One RS232 Port
+•	 MIDI Interface
+•	 Cartridge Port
+•	 External SCSI II DMA Port
+•	 STE Compatible Joystick ports
+•	 LAN Port
+•	 3½" 2 Mbyte Floppy Drive (unformatted)
+• Internal Optional IDE Hard Disk
+•	 100 DPI Mouse
+•	 Real-Time Clock
+• Expansion Port
+
+--- Page 2 ---
+[7245 drawing objects, see F030PROD.DOC.p002.svg]
+
+1.2 CASE DESIGN
+
+
+1.2.1 FRONT VIEW
+
+The front of the FALCON030 system includes LEDs for power, floppy disk access, and if an optional hard disk is installed, hard disk access. See Figure 1.
+
+
+Figure 1
+
+
+1.2.2 REAR VIEW
+
+The rear of the FALCON030 system contains connectors for the digital audio interface, stereo jacks, SCSI II connector, monitor out/genlock, RF out, parallel port, serial port,  LAN, reset button, on/off switch, and AC input. See Figure 2.
+
+
+Figure 2
+
+Disk
+Activity
+LED
+
+Power
+LED
+
+On/Off
+Switch
+
+AC
+Input
+
+LAN
+Port
+
+Digital
+Audio
+Interface
+
+SCSI II
+
+RF
+Out
+
+Reset
+Button
+
+Headphones
+
+Monitor
+
+Serial
+Port
+
+Microphone
+
+Parallel
+Port
+
+--- Page 3 ---
+[1807 drawing objects, see F030PROD.DOC.p003.svg]
+
+1.2.3 LEFT SIDE VIEW
+
+The left side of the FALCON030 contains the cartridge port and game ports A and B. See Figure 3.
+
+
+Figure 3
+
+
+1.2.4 RIGHT SIDE VIEW
+
+The right side of the FALCON030 contains the Floppy Disk Drive. See Figure 4.
+
+
+Figure 4
+
+
+1.2.5 Bottom View
+
+The bottom of the FALCON030 contains the Mouse/Joystick and Joystick connectors. See Figure 5.
+
+
+Figure 5
+
+MIDI
+Out
+
+MIDI
+IN
+
+Cartridge
+Port
+
+Game
+Port A
+
+Game
+Port B
+
+Floppy
+Disk
+Drive
+
+Floppy
+Eject
+Button
+
+Joystick
+
+Fan
+
+Mouse/Joystick
+
+--- Page 4 ---
+
+2.0 BASIC HARDWARE ARCHITECTURE
+
+The section discusses in general the components which make up the FALCON030 system and how they interrelate with one another. This will give you a basic working knowledge of the system's architecture. The system is divided into three main categories. Main system, Audio/Video Subsystem, and I/O Subsystem. Each category will be covered separately along with any other components that may lie outside that section as it relates to that section's function within the system.
+
+
+2.1 MAIN SYSTEM
+
+The components which make up the main system are as follows:
+
+• Motorola  MC68030FG Microprocessor
+• Optional Motorola MC68881/MC68882 Coprocessor
+• 512 Kbyte ROM
+• 1, 4, or 14 Mbytes RAM
+• COMBO IC
+- Memory Control Unit (MCU)
+- Clock Dividers
+- Interrupt Priority and Illegal Condition Detection
+- Chip Selects
+- Paddle Circuitry
+- Joystick Circuitry
+- Light Gun Circuitry
+- BLITTER
+• DMA Support (SDMA IC)
+• Real-Time Clock (1287 IC)
+• System Timing and Bus Control (SDMA)
+
+
+2.1.1 MC68030 Microprocessor
+
+The Motorola MC68030FG is a 32-bit enhanced microprocessor which contains a central processing unit (CPU), enhanced bus controller, 256 byte instruction and data caches, and a memory management unit (MMU). The microprocessor is operated at 16 MHz.
+
+The MC68030FG implements sixteen 32-bit general purpose data registers, two 32-bit supervisor stack pointers, ten special purpose control registers, and separate 32-bit non multiplexed address and data bus.
+
+
+2.1.2 Optional MC68882 Coprocessor
+
+The FALCON030 system comes equipped with a socket for an optional Motorola MC68881/MC68882 coprocessor. The coprocessor interfaces to the MC68030 via standard MC68000 bus transfers and is clocked at the same rate as the MC68030. Both data transfers and exception processing are done at the request of the coprocessor, allowing memory management, address errors, bus errors, and bus arbitration to function as if the instructions were being executed by the MC68030.
+
+--- Page 5 ---
+
+2.1.3 ROM
+
+One socket is provided in the system for the installation of a ROM (read only memory) IC. The total amount of ROM shipped with the system is 512Kbytes. The ROM is accessed through an 18-bit bus path via the ADDR1-ADDR18 lines.
+
+The system ROM also provides a 16-bit data path via the DATA0-DATA15 lines. By default the system supports 125ns ROMs. An image of the first eight bytes of ROM resides in the first eight bytes of the system RAM area. The first eight bytes, located at 0x00000000-0x00000007, are accessible only in supervisor mode.
+
+Any attempt to write or attempt to read from this in user mode will cause a bus error. The full ROM memory map resides at addresses 0x00E00000-0x00EFFFFF.
+
+The tasks performed by the system ROM are as follows:
+
+• System Initialization
+• Boot from Floppy or Hard disk
+• TOS Operating System
+
+
+2.1.4 System RAM
+
+System RAM is physically made up of a daughter card containing 8 256K X 4, 8 1M X 4, or 32  4M X 1 DRAMs located in two banks. This architecture yields configurations of 1 Mbyte, 4 Mbytes, or 16 Mbytes of RAM used in a dual-purpose role for both system memory and video memory.
+
+The daughter board is plugged into the main logic card via a 30-pin and a 50-pin dual connector. This implementation also provides a full 32-bit data path to the Video chip via the D0-D31 data bus lines. The standard configuration shipped with the system is 1Mbyte. Even though a total of 16 Mbytes of RAM may be available with 4M X 1 DRAMs installed, for compatibility with the STE, only 14 Mbytes of RAM may be accessed.
+
+The RAM is addressed via eleven address lines (A0-A10). Row and Column selection is accomplished through the XRAS0, XRAS1, XCAS0L, XCAS0H, XCAS1L, and XCAS1H signals. Write enable for the RAM is provided by the XWE signal. On-board accesses to RAM are four clock cycles long, with no parity or ECC correction. Video data is accessed using fast page mode in bursts of 17 32-bit words. Data is fed to the FIFO buffer in the custom Video chip. The Memory Daughter Board identifies the amount of RAM present via two pins used on the Memory Daughter Card 50-pin Connector.
+
+The first 800 bytes, 0-0x800, are accessible only in supervisor mode. Any attempt to read or write to these locations in user mode will cause a bus error.
+
+--- Page 6 ---
+[51 drawing objects, see F030PROD.DOC.p006.svg]
+
+2.1.4.1 System RAM Connector Pin List
+
+2.1.4.1.1 50-Pin Connector J17
+
+25
+
+1
+
+26
+
+50
+
+Pin
+
+Signal
+
+Pin
+
+Signal
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+31
+33
+35
+37
+39
+41
+43
+45
+47
+49
+
+Ground
+Memory Data 15
+Memory Data 13
+Memory Data 11
+Ground
+Memory Data 9
+Memory Data 7
+Memory Data 5
+Vcc
+Memory Data 3
+Memory Data 1
+Memory Size 0
+Vcc
+Vcc
+Memory Data 17
+Memory Data 19
+Memory Data 21
+Vcc
+Memory Data 23
+Memory Data 25
+Ground
+Memory Data 27
+Memory Data 29
+Memory Data 31
+Ground
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+32
+34
+36
+38
+40
+42
+44
+46
+48
+50
+
+Vcc
+Memory Data 14
+Memory Data 12
+Memory Data 10
+Vcc
+Memory Data 8
+Memory Data 6
+Ground
+Memory Data 4
+Memory Data 2
+Memory Data 0
+Ground
+Ground
+Memory Data 16
+Memory Data 18
+Memory Data 20
+Ground
+Memory Data 22
+Memory Data 24
+Memory Data 26
+Vcc
+Memory Data 28
+Memory Data 30
+Memory Size 1
+Vcc
+
+--- Page 7 ---
+[31 drawing objects, see F030PROD.DOC.p007.svg]
+
+2.1.4.1.2 30-Pin Connector J6
+
+15
+
+1
+
+16
+
+30
+
+Pin
+
+Signal
+
+Pin
+
+Signal
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+
+Ground
+Ground
+Memory Address 7
+Memory Address 5
+Memory Address 3
+Memory Address 1
+Ground
+Vcc
+Ground
+Memory Address 10
+Write Enable
+Row Address Select 1
+Column Address Select 0 Low
+Column Address Select 1 Low
+Vcc
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+
+Ground
+Memory Address 8
+Memory Address 6
+Memory Address 4
+Memory Address 2
+Memory Address 0
+Vcc
+Ground
+Vcc
+Memory Address 9
+Row Address Select 0
+Column Address Select 0 High
+Column Address Select 1 High
+Ground
+Vcc
+
+--- Page 8 ---
+
+2.1.5 COMBO IC
+
+The COMBO IC contained in the FALCON030 system integrates several functions. These can be summarized as follows:
+
+• Memory Control Unit (MCU)
+• Interrupt Priority and Illegal Condition Detection
+• Clock Dividers
+• Chip Selects
+• Paddle Circuitry
+• Joystick Circuitry
+• Light Gun
+• Blitter (Graphics Coprocessor)
+
+
+2.1.5.1 Memory Control Unit (MCU)
+
+The Memory Controller portion of the COMBO IC takes addresses from the address bus (A1-A23) and converts them to Row and Column Addresses for DRAM, with RAS and CAS Strobes, chip selects for ROMand I/O Peripherals. All RAM accesses are controlled by the MCU, which is programmable for up to 14 Megabytes of memory.
+
+Memory size is configured in the hardware by two signals from the Memory Daughter Board.  The Memory Controller refreshes the dynamic RAMs and loads the VIDEL IC with display data. The Memory Controller produces all of the addresses for video, refresh, or CPU/DMA on the multiplexed address bus.
+
+
+2.1.5.2 Interrupt Mask and Status Control
+
+The COMBO IC in the FALCON030 system is used both for the masking of interrupts and the storing of current interrupt status. The interrupt priorities in the system are as follows:
+
+
+Hardware within the COMBO IC allows the enabling of interrupt levels 1 and 3 as external VPA positive edge interrupts. This allows the use of either interrupt level for devices such as the parallel port or IDE port. Hardware is also present allowing the use of interrupt level 5 as a external negative edge interrupt. The COMBO IC uses the output signals IPL0-IPL2 to tell the microprocessor the priority of the interrupt being requested.
+
+Interrupt Level
+
+Priority
+
+Open (Bus)
+MFP Interrupts and DSP
+85C30 LAN Port
+Vertical Blanking (VSYNC)
+Open (Bus)
+Horizontal Blanking (HSYNC)
+Open (Bus)
+
+7 (Highest)
+6
+5
+4
+3
+2
+1 (Lowest)
+
+--- Page 9 ---
+
+2.1.5.2.1 Interrupt Priority Level Signal Definition
+
+
+2.1.5.3 Bus Error Circuitry and Illegal Condition Detect
+
+Bus error circuitry is contained in the COMBO IC that causes a bus error signal (BERR) to be sent to the 68030 if certain conditions occur. These conditions are listed as follows:
+
+• A bus cycle is not concluded within 16 micro seconds (Programmable to 32 usec)
+• An attempt to write to ROM
+• Writing the wrong size data into a register
+• Writing system memory when in user mode
+
+
+2.1.5.4 Clock Dividers
+
+The COMBO IC takes the 32-MHz clock and outputs 16 MHz, 8 MHz, 4 MHz, and 500-kHz clocks.
+
+
+2.1.5.5 Chip Selects
+
+The COMBO IC decodes addresses to generate chip selects to the 6850s (N6850), MFP (MFPSC), VIDEL Video Chip (VCS), Real-Time Clock (RTCCS), Programmable Sound Generator (SNDCS), Coprocessor (FPUCS), Memory Controller, Cartridge ROM (ROM3, ROM4), IDE Hard Disk (HIDECS0, HIDECS1), and Operating System ROM (ROM2).
+
+
+2.1.5.6 Paddle Circuitry
+
+The COMBO IC contains the circuitry necessary to interface a pair of paddles through the joystick port. Input signals PAD0X, PAD1X, PAD0Y, and PAD1Y are used for direction control feed from the paddles themselves. The PADRST signal is used as a paddle reset.
+
+
+2.1.5.7 Light Gun Circuitry
+
+The light gun will cause a pulse on the XPEN signal which is used in the COMBO IC to latch the current values of the horizontal and vertical video address counters. This latched value can be read by the MC68030 and informs the microprocessor of the raster position of the light gun.
+
+IPL2
+
+IPL1
+
+IPL0
+
+Interrupt Level
+
+1
+1
+1
+0
+0
+0
+0
+
+0
+1
+0
+1
+0
+1
+0
+
+1
+0
+0
+1
+1
+0
+0
+
+Level 1
+Level 2
+Level 3
+Level 4
+Level 5
+Level 6
+Level 7
+
+--- Page 10 ---
+
+2.1.5.8 Joystick Circuitry
+
+The COMBO IC also contains the circuitry necessary to support the interface of a pair of joysticks to the system. Input signals JOYRH and JOYRL are read enables, while JOYWH and JOTWL are write enables. The BUTTON signal is used as a fire button enable signal.
+
+
+2.1.5.9 BLITTER
+
+The BLITTER contained inside the COMBO IC is a graphics coprocessor designed to handle the extra burden of graphics video generation on the microprocessor. This section performs bit aligned block transfers required in graphics generation, which adds to the capabilities of the microprocessor. The BLITTER section also contains a barrel shifter.
+
+
+2.1.6 DMA Support
+
+The FALCON030 system contains a DMA controller which provides three channels of DMA for the computer. The ACSI DMA channel from the ST product line is fully contained and has been modified slightly to accommodate a 5380 SCSI controller as well as the AJAX FDC. A record and playback DMA channel for digital sound data are also contained in this chip. The playback channel is compatible with the existing eight bit stereo and mono modes from the STE and TT products and has sixteen bit stereo added. For audio DMA to take place, the memory controller inside SDMA is programmed with the starting and ending address of the RAM buffer.
+
+The DMA controller is set up to select the source and the number of 512 byte blocks to transfer, and then the FDC or external peripheral is given the command to send or receive data. The entire block of data is then transferred to or from memory without intervention by the CPU. The FDC or peripheral generally asserts its interrupt line to signal the completion of the transfer (and the availability of status information).
+
+
+2.1.7 Real-Time Clock
+
+The FALCON030 system includes a Real-time Clock chip. When the system is powered on the real-time clock is powered by the main PCB power supply. In the event of a power failure, or when the system is powered off, the real-time clock is powered by a 3.6v lithium battery.
+
+This allows the date, time, and configuration data to be maintained even when there is no power to the unit. 50 bytes of battery backed-up RAM is also provided for storing diagnostic and configuration data.
+
+The real-time clock provides time of day (down to one second resolution) and date. The RTC contains an integrated battery and crystal. The chip is accessed through two consecutive word ports. The first word is a write-only port used to set the real-time clock chip address desired. The second word is the read-write data port.
+
+When doing a write to a clock chip register, a double word write can be performed. The first word would set the address, and the second word would load the data.
+
+--- Page 11 ---
+
+2.1.8 System Timing and Bus Control
+
+There are six system resources that use the system memory separate from the microprocessor. In order of highest to lowest priority these are:
+
+• Expansion Bus (optional - using CPUBGO)
+• Video
+• DMA
+• Refresh
+• Blitter (Graphics coprocessor inside COMBO IC)
+• Expansion Bus (using daisy chained BG)
+
+Only two of these arbitrate for the system bus in a normal manner. These are the DMA and Blitter. The DMA chip which resides in the FALCON030 system contains the bus arbitration logic which arbitrates for either DMA disk transfers or DMA sound accesses. DMA arbitration has a higher priority than does the Blitter.
+
+Video accesses in the system are done in Page Mode. Any video request for memory access will interrupt other DRAM access cycles, whether they are microprocessor, DMA, or Blitter, by inserting wait states into the current bus cycle. This is accomplished by holding off the DTACK signal. While the current cycle is in wait states, the memory bus is used for the video access. When the video cycle terminates, the DTACK signal is asserted and the current cycle is allowed to complete. Refresh cycles operate in the same manner.
+
+
+2.1.8.1 68000 Bus Decode PAL U68
+
+PAL U68 is used to generate Bus Grant for 68000 type devices. It also generates the BMODE signal used to inform the SDMA and COMBO IC that a 68000 type device is accessing the bus. 68000 type devices typically require an extra clock cycle, as opposed to 68030 devices, to complete strobe and handshaking signals. The DSP data strobe signal is also generated by this PAL.
+
+
+2.1.8.2 68000 Bus Decode PAL U63
+
+PAL U63 is used to generate the Expansion, Bus Error, and Data Transfer Acknowledge signals to the system. It also generates the Data Transfer Size and Acknowledge 1 signal.
+
+
+2.1.8.3 68000 Bus Decode PAL U62
+
+PAL U62 is used to generate 68000 compatible Upper and Lower Data Strobes (UDS, LDS), Valid Memory Address (VMA), Read/Write (RW), and Size 1 (SIZ1) bit.
+
+
+2.1.8.4 68000 Bus Decode PAL U67
+
+PAL U67 decodes the address for the DSP (56001) and generates a partial DSP decode.
+
+--- Page 12 ---
+
+2.1.8.5. 68000 Bus Decode GAL U44
+
+GAL U44 generates DSP chip select, hardware acknowledge, MFP interrupt enable out, interrupt acknowledge, MFP interrupt, and data size and transfer acknowledge 0.
+
+
+2.2 AUDIO/VIDEO SUBSYSTEM
+
+
+2.2.1 Video System Overview
+
+The video subsystem in FALCON030 is composed of five major components. These are as follows:
+
+• Video RAM (Dual-purpose System and Video)
+• Interrupt and Data Load Control (COMBO)
+• Video Shifter (VIDEL)
+• Digital to Analog Converter (DAC)
+• NTSC/PAL Encoder (1377)
+
+The FALCON030 Video Subsystem extends the existing STE video modes. Video can be generated in ST compatible modes as well as VGA, True Color, and Programmable modes. Functionality has been enhanced by the ability of the subsystem to access video memory on any even word boundary. There is an RF modulator on-board to facilitate the direct connection to TV. Video also has the capability of being GENLOCKed for sync to external video timing sources. The monitor connector supplied with the system allows for the connection of ST color and ST monochrome monitors in addition to VGA type monitors. The video modes supported by the system are as follows:
+
+ST Modes
+
+Resolution
+
+Bit Planes
+
+Colors
+
+Palette Colors
+
+320 X 200
+640 X 200
+640 X 400
+
+4
+2
+1
+
+16
+8
+2
+
+4096/262,144
+4096/262,144
+4096/262,144
+
+VGA Mode
+
+Resolution
+
+Bit Planes
+
+Colors
+
+Palette Colors
+
+640 X 480
+
+8
+
+256
+
+262,144
+
+True Color
+
+Resolution
+
+Bit Planes
+
+Colors
+
+Palette Colors
+
+320 X 200
+320 X 200
+
+15
+16
+
+32,768
+65,536
+
+1 Bit GENLOCK
+No GENLOCK
+
+Programmable
+
+Resolution
+
+Bit Planes
+
+Colors
+
+Palette Colors
+
+X x Y
+
+1,2,4,8
+
+2,4,16,256
+
+262,144
+
+--- Page 13 ---
+
+2.2.1.1 Video RAM
+
+Video RAM is shared as dual-purpose memory with the rest of the FALCON030 system. The physical screen origin located at the top left corner of the screen is the start of mapped display memory.
+
+Display memory is configured as 1, 2, 4, or 8 logical planes that are interwoven as 16-bit words into contiguous memory to form one physical plane starting at any even-word boundary.The size of this plane will depend on the video resolution and the number of colors selected. For example, 320 X 200 4 color mode would require a 32,000 byte plane.
+
+
+2.2.1.2 Interrupt and Data Load Control (COMBO)
+
+The COMBO IC is responsible for handling the interrupts generated by the VIDEL IC, and the loading of DRAM data into the video chip's input buffer. COMBO receives the interrupt signals VINT for VSYNC and HINT for HSYNC. A request for video data to be loaded into the video RAM buffer within the VIDEL IC is generated to the COMBO IC by the VREQ signal, and DRAM data is loaded into the video chip's input buffer via the VLD signal from the COMBO IC.
+
+The starting address of display memory is placed in the COMBO IC's Video Base High, Video Base Mid, or Video Base Low Address registers by the Operating System or application. This register is loaded into the Video Address Counter (High/Mid/Low) in the COMBO IC at the beginning of each frame. The Address Counter is incremented as the Bitmap planes are read. COMBO then loads the VIDEL IC with Bitmap info 32-bits at a time.
+
+
+2.2.1.3 Video Shifter (VIDEL)
+
+The COMBO IC will load Bitmap planes into the VIDEL IC video buffer 32-bits at a time, unless in XGA mode. The video shifter then loads the video shift register where one bit from each plane is shifted out and collectively used as the index to a specific STE or SP (FALCON030) palette register There are 16 word-wide color registers which comprise the STE palette and 256 double word-wide registers in the SP palette.
+
+Each palette is programmed for 12 bits of color in STE mode, four for each red, green, and blue, or 18 bits of color in SP mode, 6 for each red, green, and blue. Therefore there are 16 x
+16 x 16 or 4096 colors possible in STE mode, and 64 x 64 x 64 or 262,144 colors possible in SP mode. In monochrome mode, the color palettes are bypassed and instead provided with an inverter for inverse video controlled by bit 0 of palette register 0.
+
+The VIDEL IC also has the ability to accept external vertical sync and video clock. To inject a system clock ground pin 16 (EXT) on the monitor connector and then inject the clock into pin 15 (GENLOCK INPUT).The internal frequency of this clock is 32.215905 MHz (NTSC) and 32.084988 MHz (PAL). VIDEL also includes the circuitry necessary to interface a light gun or pen plugged into Joystick 0. The current position that the gun or pen is pointing to is reported by these registers.
+
+--- Page 14 ---
+[27 drawing objects, see F030PROD.DOC.p014.svg]
+
+The position is accurate to within (X direction only):
+
+• 4 Pixels in 320 x 200 Mode
+• 8 Pixels in 640 x 200 Mode
+• 16 Pixels in 640 x 400 Mode
+
+Accurate to 1 pixel in the Y direction in all modes. Accuracies do not account for the quality of the light gun or pen. Note that the X position is given in pixels for 320 x 200 only. In order to get correct results in 640 x 200 mode this number needs to be shifted left one bit and in 640 x 400 modes this number needs to be shifted left two bits.
+
+
+2.2.1.4 Video Digital to Analog Converter (DAC)
+
+The Video DAC is used to take digital TTL input data from the VIDEL IC and convert it to analog RGB output. Inputs of 6-bit color info from the VIDEL are supplied to the DAC via the R2-R7, G2-G7, and B2-B7 inputs. The DAC then outputs analog R, G, and B to the monitor connector.
+
+
+2.2.1.5 NTSC/PAL Encoder (1377)
+
+The 1377 encoder is used in the system to convert baseband RGB and sync signals into a composite TV signal.
+
+
+2.2.1.6 Monitor Connector Pin List
+
+10
+
+1
+
+19
+
+11
+
+Red
+Green
+Blue
+Mono Out
+Ground
+Red Return (GND)
+Green Return (GND)
+Blue Return (GND)
+Audio In
+Ground
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+11
+12
+13
+14
+15
+16
+17
+18
+19
+
+Ground
+Composite Sync
+Horizontal Sync
+Vertical Sync
+Externa Clock Input (GENLOCK)
+EVEN_ODD
++12 Volts for PERITEL
+Video Master Control Bit 1
+Video Master Control Bit 2
+
+--- Page 15 ---
+
+2.2.2 Audio Subsystem
+
+The FALCON030 architecture extends the music subsystem presently available on the ST/MEGA computers. The FALCON030 mixes the output of the existing ST PSG sound system with a new DMA-driven dual-channel A-to-D, D-to-A subsystem (Codec device). The FALCON030 combines these two sources for simple beeps, and can be connected to an external stereo amplifier for high-fidelity sound. In addition the resulting audio is sent to an on-board speaker which can be turned off by general purpose output from the PSG.
+
+
+2.2.2.1 Programmable Sound Generator
+
+The ST sound system using the General Instruments AY-3-8910/Yamaha YM-3439 Programmable Sound Generator is present in the FALCON030 system. The YM-3439 Programmable Sound Generator produces music synthesis, sound effects, and audio feedback.
+
+With an applied clock input of 2 MHz, the PSG is capable of providing a frequency response range between 30 Hz (audible) and 124 KHz (post-audible). The generator places minimal amount of processing burden on the main system (which acts as the sequencer) and has the ability to perform using three independent voice channels. The three sound channel outputs are mixed, along with Audio In, and sent to the CODEC IC for processing. The PSG also provides the speaker gate for the internal speaker.
+
+
+2.2.2.2 DMA Sound
+
+The FALCON030 also includes a new DMA-driven sound subsystem that allows the playback or synthesis of complex waveforms at a variety of sampling rates. This feature is supported by the new Codec device which is driven from the new DMA device (same IC that controls the disk DMA cycles).
+
+Sound in the form of digitized samples is stored in system memory. These samples are fetched from dual-purpose memory by the SDMA IC (transparent to the processor) and provided to digital-to-analog converters (DAC's) in the Codec device at a constant sample frequency specified by the user. The outputs of the DAC's are then low pass filtered into a walkman type, micro-stereo connector and to the on-board speaker.
+
+Two channels are provided. They are intended to be used as the left and right channels of a stereo system when using the raw audio outputs from the machine. They are mixed together when fed to the on board speaker or monitor speaker. A MONO mode is provided which will feed the same data to both channels simultaneously. The only restriction placed on MONO mode is that there must be an even number of samples.
+
+
+2.2.2.3 Codec IC
+
+The Codec IC in the FALCON030 system is connected through a serial protocol to provide both an Analog to Digital (ADC) and Digital to Analog (DAC) function in the 16-bit stereo sound system. The Codec is strapped so that the ADC operates as a conventional oversampling ADC producing stereo data at the output. The DAC operates as a conventional oversampling single bit DAC.
+
+--- Page 16 ---
+
+A serial interface is used to connect the Codec IC to the system. It is made up of a data line in,  a data line out, a clock line, and a syncchronization input. Serial data from the SDMA to the CODEC consists of interleaved volume and control data, with 16-bit stereo sound data. Volume control is achieved by changing the interleaved volume data values.
+
+
+2.3 I/O SUBSYSTEMS
+
+The FALCON030 architecture supports the following device subsystems:
+
+• IDE Hard Disk Interface.
+• External SCSI II Hard Disk Port.
+• Floppy disk interface sharing the ST ACSI DMA channel.
+• Serial port and an external LAN port connected to SCC controller.
+• A Centronics parallel printer port driven by the Yamaha YM-3439 sound chip.
+• An ST/MEGA compatible intelligent keyboard, mouse, and joystick interface.
+• Option for interfacing to the new Atari Universal Keyboard Controller.
+• A port supporting application and diagnostic cartridges.
+• Two controller ports for additional joysticks as well as light pen/gun and paddle controllers.
+
+
+2.3.1 SCSI II Interface
+
+The external hard disk drive interface is provided through a standard 5380 NCR SCSI Controller. Transfers can take place at up to 2.0 Mbytes/second. The controller interfaces to the system through the SDMA IC.
+
+--- Page 17 ---
+[164 drawing objects, see F030PROD.DOC.p017.svg]
+
+2.3.1.1 External SCSI Connector Pin List
+
+The SCSI interface uses a 50 pin connector with the following pin assignment:
+
+
+2.3.2 Floppy Disk (FDD)
+
+The FALCON030 floppy disk subsystem is designed around the AJAX Floppy Disk Controller supporting one floppy disk drive. It is a higher speed version of the 1772 and supports 1.44Mb (formatted) capacity drives.
+
+The subsystem interfaces to the dual-purpose RAM through the ACSI DMA controller, which is part of the SDMA IC. Commands and arguments are sent to the FDC by first writing to the DMA Mode Control Register to select the desired FDC register and then writing the data bytes. The standard floppy for the FALCON030 is the 3.5 inch floppy disk with the capacity of 1.44 Mbyte (formatted).
+
+25
+
+1
+
+26
+
+50
+
+Signal
+
+Pin
+
+Pin
+
+Signal
+
+Ground
++5 Volts
+No Connect
+Ground
+SCSI 0
+SCSI 1
+SCSI 2
+SCSI 3
+SCSI 4
+SCSI 5
+SCSI 6
+SCSI 7
+Parity
+Ground
+
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+
+1-10
+11
+12-14
+15-25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35-36
+
+No Connect
++5 Volts 1A Fuse
+No Connect
+Ground
+ATN
+Ground
+Busy
+Acknowledge
+Reset
+Message
+Select
+Code/Data (C/D)
+Request
+I/O
+
+--- Page 18 ---
+[42 drawing objects, see F030PROD.DOC.p018.svg]
+
+2.3.2.1 Internal Floppy Connector Pin List
+
+
+2.3.3 68901 MFP
+
+A 68901 Multi-Function Peripheral (MFP) controller is used to provide system timers and an interrupt controller. The MFP is used in a way that is compatible with the ST.
+
+
+2.3.3.1 Interrupt Control
+
+Interrupts handled by the 68901 MFP are as follows:
+
+• RS232 Ring Indicator Interrupt
+• Sound Interrupt
+• External SCSI Disk Interrupt
+• IDE Disk Interrupt
+• MIDI Interrupt
+• Keyboard Interrupt
+• DSP Interrupt
+• Printer Acknowledge Interrupt
+• Printer Busy Interrupt
+
+33
+
+1
+
+2
+
+34
+
+Signal
+
+Pin
+
+Pin
+
+Signal
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+31
+33
+
+Ground
+Ground
+Ground
+Ground
+Ground
+Ground
+Ground
+Ground
+Ground
+Ground
+Ground
+Ground
+Ground
+Ground
+Media Detect 2
+Ground
+Media Detect 1
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+32
+34
+
+Mode Select 1
+Not Connected
+Mode Select 2
+Index Pulse
+Drive Select 0
+Not Connected
+Not Connected
+Motor On
+Direction Select
+Step
+Write Data
+Write Gate
+Track 0
+Write Protect
+Read Data
+Side Select
+Disk Change
+
+--- Page 19 ---
+[29 drawing objects, see F030PROD.DOC.p019.svg]
+
+2.3.4 8530 Serial Communications Controller (SCC)
+
+The Falcon030 contains an 8530 Serial Communications Controller (SCC) that provides a dual channel, multi-protocol device that provides a serial port and network LAN port. The input/output of the serial port is routed to a 9-pin connector. The input/output of the LAN port is routed to a 8-pin connector.
+
+The PCLK input to the SCC is rated at 8 MHz. The RTXCA and RTXCB input is provided with a 3.672 MHz clock. The TRXCA input comes from the LAN connector, and the TRXCB input is rated at 2.4576 MHz.
+
+
+2.3.4.1 8530 Serial Port Pin and Signal List
+
+5
+
+1
+
+9
+
+6
+
+Pin
+
+Function
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Carrier Detect (In)
+Receive Data (In)
+Transmit Data (Out)
+Data Terminal Ready (Out)
+Ground
+Data Set Ready (In)
+Request to Send (Out)
+Clear to Send (In)
+No Connect
+
+2.3.4.2 SCC LAN Connector Pinout
+
+8
+
+6
+
+5
+
+3
+
+2
+
+1
+
+Pin
+
+Function
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Output Handshake
+Input Handshake
+Transmit Data-
+Ground
+Receive Data-
+Transmit Data+
+(Reserved)
+Receive Data+
+
+--- Page 20 ---
+[33 drawing objects, see F030PROD.DOC.p020.svg]
+
+2.3.5 Parallel Printer Port
+
+The FALCON030 architecture includes a bi-directional 8-bit parallel printer port that implements a subset of the Centronics standard.
+
+This interface is through the General Instruments AY-3-8910 or Yamaha YM-3439 Programmable Sound Generator (PSG) chip.  It is pinned out in a DB25S. The Centronics STROBE signal is generated from a PSG bit.
+
+The Centronics BUSY and Printer Acknowledge signals from the printer connects to one of the parallel input lines of the MFP to permit interrupt driven printing. Eight bits of read/write data are handled through I/O port B on the PSG at a typical data transfer rate exceeding 4000 bytes/second.
+
+
+2.3.5.1 Parallel Port Connector Pin List
+
+The parallel port uses a 25-pin connector with the following pin assignments:
+
+13
+
+1
+
+25
+
+14
+
+Pin
+
+Function
+
+Pin
+
+Function
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+
+Centronics Strobe
+Data 1
+Data 3
+Data 5
+Data 7
+Centronics Busy
+Not Connected
+Not Connected
+Select In
+Ground
+Ground
+Ground
+Ground
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+
+Data 0
+Data 2
+Data 4
+Data 6
+Acknowledge
+Not Connected
+Not Connected
+Not Connected
+Ground
+Ground
+Ground
+Ground
+
+--- Page 21 ---
+[19 drawing objects, see F030PROD.DOC.p021.svg]
+
+2.3.6 Keyboard Interface
+
+The keyboard interface is completely compatible with the ST/MEGA computers. The keyboard is equipped with a combination mouse/joystick port and a joystick only port. The keyboard transmits encoded make/break key scan codes (with two key rollover), mouse/trackball data, joystick data, and time-of-day.
+
+The keyboard receives commands and sends data via bidirectional communication implemented with a MC6850 Asynchronous Communications Interface Adapter (ACIA). All keyboard functions, such as key scanning, mouse tracking, command parsing, etc. are performed by a HD6301V1 8-bit microcomputer unit. (See the Atari, Intelligent Keyboard (ikbd) Protocol, February 26, 1985.)
+
+FALCON030 also has hooks to interface to the new Atari Universal Keyboard Controller. These hooks pevent data overrun both to and from the keyboard controller.
+
+
+2.3.7 Mouse and Joystick Interface
+
+The Atari two-button mouse is a mechanical, optomechanical, or optical mouse with the following minimal performance characteristics: a resolution of 100 counts/inch, a maximum
+velocity of 10 inches/second, and maximum pulse phase error of 50%. The joystick is a four direction switch-type joystick with one fire button.
+
+2.3.7.1 Mouse and Joystick Interface Connector Pin List
+
+Mouse/joystick0 uses a DB9 pin P connector with the following pin assignment:
+
+5
+
+1
+
+9
+
+6
+
+Pin
+
+Function
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Xb Pulse/ Up Switch
+Xa Pulse/ Down Switch
+Ya Pulse/ Left Switch
+Yb Pulse/ Right Switch
+Not Connected
+Left Button/ Fire Button
+Power
+Ground
+Right Button/ Joy1 Fire
+
+1
+
+--- Page 22 ---
+[44 drawing objects, see F030PROD.DOC.p022.svg]
+
+Joystick1 uses a DB 9 pin P connector with the following pin assignment:
+
+5
+
+1
+
+9
+
+6
+
+Pin
+
+Function
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Up Switch
+Down Switch
+Left Switch
+Right Switch
+Reserved
+Fire Button
+Power
+Ground
+Not Connected
+
+2.3.8 Game Controller Ports
+
+The FALCON030 system includes two STE compatible game controller ports which can be used for paddles, joysticks, or a light pen. These ports are enabled by the COMBO IC and interface directly to the data bus of the 68030.
+
+
+2.3.8.1 Game Controller Pinout
+
+Controller A
+
+5
+
+1
+
+10
+
+6
+
+15
+
+11
+
+Pin
+
+Function
+
+Pin
+
+Function
+
+1
+3
+5
+7
+9
+11
+13
+15
+
+Up 0
+LT 0
+Pad 0Y
++5 VDC
+Ground
+Up 1
+LT 1
+Pad 0X
+
+2
+4
+6
+8
+10
+12
+14
+
+Dn 0
+RT 0
+Fire 0/Light Gun Latch
+Not Connected
+Fire 1
+Dn 1
+RT 1
+
+--- Page 23 ---
+[25 drawing objects, see F030PROD.DOC.p023.svg]
+
+Controller B
+
+5
+
+1
+
+10
+
+6
+
+15
+
+11
+
+Pin
+
+Function
+
+Pin
+
+Function
+
+1
+3
+5
+7
+9
+11
+13
+15
+
+Up 2
+LT 2
+Pad 1X
++5 VDC
+Ground
+Up 3
+LT 3
+Pad 1Y
+
+2
+4
+6
+8
+10
+12
+14
+
+Dn 2
+RT 2
+Fire 2
+Not Connected
+Fire 3
+Dn 3
+RT 3
+
+--- Page 24 ---
+[4 drawing objects, see F030PROD.DOC.p024.svg]
+
+2.3.9 ROM Cartridge
+
+The FALCON030 cartridge port is fully compatible with ST cartridge. The cartridge is physically connected through a 40 pin card edge connector ROM cartridge slot. Cartridge ROMs are mapped to a 128K memory region starting at 0x00FA0000, extending to 0x00FBFFFF.
+
+
+2.3.9.1 ROM Cartridge Connector Pin List
+
+If not in a plastic housing, the cartridge must be installed with the chips facing down.The cartridge uses a 40 pin card edge S connector with the following pin assignment:
+
+39
+
+1
+
+40
+
+2
+
+Pin
+
+Function
+
+Pin
+
+Function
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+31
+33
+35
+37
+
++5VDC
+Data 14
+Data 12
+Data 10
+Data 8
+Data 6
+Data 4
+Data 2
+Data 0
+Address 13
+Address 8
+Address 7
+Address 6
+Address 5
+Address 11
+ROM3 Select
+ROM4 Select
+Upper Data Strobe
+Lower Data Strobe
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+32
+34
+36
+38-40
+
+Power +5Vdc
+Data 15
+Data 13
+Data 11
+Data 9
+Data 7
+Data 5
+Data 3
+Data 1
+Address 15
+Address 14
+Address 9
+Address 10
+Address 12
+Address 4
+Address 3
+Address 2
+Address 1
+Ground
+
+2.3.10 Musical Instrument Digital Interface (MIDI)
+
+The MIDI allows the integration of the FALCON030 series with music synthesizers, sequencers, drum boxes, and other devices possessing MIDI interfaces. High speed (31.25 Kbaud) serial communication of keyboard and program information is provided by two ports, MIDI OUT and MIDI IN (the MIDI OUT also includes MIDI THRU data).
+
+The MIDI communicates through the MC6850 Asynchronous Communications Interface Adapter (ACIA) to the system bus. The data transfer rate is a constant 31.25 Kbaud of 8-bit asynchronous data.
+
+--- Page 25 ---
+[14 drawing objects, see F030PROD.DOC.p025.svg]
+
+ 2.3.10.1 MIDI Connector Pin List
+
+The MIDI OUT/THRU uses a circular DIN 5 pin S connector with the following pin assignment:
+
+3
+
+1
+
+4
+
+5
+
+2
+
+Pin
+
+Function
+
+1
+2
+3
+4
+5
+
+Thru Transmit Data
+Shield Ground
+Thru Loop Return
+Out Transmit Data
+Out Loop Return
+
+The MIDI IN uses a circular DIN 5 pin S connector with the following pin assignment:
+
+3
+
+1
+
+4
+
+5
+
+2
+
+Pin
+
+Function
+
+1
+2
+3
+4
+5
+
+Not Connected
+Not Connected
+Not Connected
+In Receive Data
+In Loop Return
+
+--- Page 26 ---
+[60 drawing objects, see F030PROD.DOC.p026.svg]
+
+2.3.11 Digital Processor Interface (DSP)
+
+The FALCON030 system includes a Digital Signal Processor (DSP) which can be used for complex audio and video processing. The DSP is located across the data and address buses of the 68030, and also has access to 32K of 24-bit, zero wait-state static RAM. The RAM can be used for information storage. Some of the various uses for the DSP would be sound and music synthesis, special sound effects, and 3D graphics modeling.
+
+
+2.3.11.1 DSP Connector Pin List
+
+9
+
+1
+
+18
+
+10
+
+26
+
+19
+
+Pin
+
+Function
+
+Pin
+
+Function
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+
+GP0
+GP1
+SDMA Play Clock
+No Connect
++12V
+SYNC Serial I/F Control 0
+SYNC Serial I/F Control 2
+ Synchronous Serial Data In
++12V
+SDMA Record Data
+SDMA Record Synchronization
+SYNC Serial I/F Data Out
+Ground
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+
+GP2
+SDMA Play Data
+SDMA Play Synchronization
++12V
+Ground
+SYNC Serial I/F Control 1
+Ground
+Ground
+Ground
+SDMA Record Clock
+DSP Interrupt
+SYNC Serial I/F Clock
+External Clock (GENLOCK)
+
+2.3.12 IDE Interface
+
+The FALCON030 is equipped with an IDE interface. IDE drives can be connected through an internal 44-pin connector. Chip selects and direction control for the IDE interface are provided by the COMBEL IC. The interface resides across the data bus using data bits 0-16. Four address bits are used to control the IDE interface (A2-A4).
+
+1
+
+--- Page 27 ---
+[45 drawing objects, see F030PROD.DOC.p027.svg]
+
+2.3.12.1 IDE Connector Pin List
+
+43
+
+1
+
+44
+
+2
+
+Pin
+
+Function
+
+Pin
+
+Function
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+31
+33
+35
+37
+39
+41
+43
+
+RESET
+DATA 7
+DATA 6
+DATA 5
+DATA 4
+DATA 3
+DATA 2
+DATA 1
+DATA 0
+Ground
+N/C
+IOW
+IOR
+N/C
+N/C
+IRD
+ADDR 3
+ADDR 2
+CS0
+ACT
+VCC
+Ground
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+32
+34
+36
+38
+40
+42
+44
+
+Ground
+DATA 8
+DATA 9
+DATA 10
+DATA 11
+DADA 12
+DATA 13
+DATA 14
+DATA 15
+KEY
+Ground
+Ground
+Ground
+N/C
+Ground
+N/C
+N/C
+ADDR 4
+CS1
+Ground
+VCC
+N/C
+
+2.3.13 Expansion Connector
+
+The FALCON030 contains an expanxion port connector for use with expansion boards designed for the system. The expansion port is made up of one 50-pin connector and one 30-pin connector. The connectors interface to the system through the data and address bus. External interrupts numbers 1 and 3 are provided to the connector. External bus masters can also be plugged into the expansion connector, and signals are provided for bus control and synchronization.
+
+--- Page 28 ---
+[51 drawing objects, see F030PROD.DOC.p028.svg]
+
+2.3.13.1 Expansion Connector Pin List
+
+2.3.13.1.1 50-pin Connector J19
+
+49
+
+1
+
+50
+
+2
+
+Pin
+
+Function
+
+Pin
+
+Function
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+31
+33
+35
+37
+39
+41
+43
+45
+47
+49
+
+Ground
+Bus Grant Acknowledge
+Lower Data Strobe
+Read/Write
+Function Code 2
+Function Code 0
+No Connect
+Combel Bus Grant Acknowledge
+Reset
+Bus Error
+IPL1
+Clock
+Vcc
+Address 22
+Address 20
+Address 18
+Address 16
+Address 14
+Address 12
+Address 10
+Address 8
+Address 6
+Address 4
+Address 2
+Expand
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+32
+34
+36
+38
+40
+42
+44
+46
+48
+50
+
+Ground
+Address Strobe
+Upper Data Strobe
+Data Transmit Ack
+Function Code 1
+BMODE
+Interrupt Ack
+Bus Request
+Halt
+IPL0
+IPL2
+Vcc
+Address 23
+Address 21
+Address 19
+Address 17
+Address 15
+Address 13
+Address 11
+Address 9
+Address 7
+Address 5
+Address 3
+Address 1
+No Connect
+
+--- Page 29 ---
+[31 drawing objects, see F030PROD.DOC.p029.svg]
+
+2.3.13.1.2 30-pin Connector J20
+
+29
+
+1
+
+30
+
+2
+
+Pin
+
+Function
+
+Pin
+
+Function
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+
+Data 14
+Data 12
+Data 10
+Data 8
+Data 6
+Data 4
+Data 2
+Data 0
+Ground
+Ground
+Interrupt 1
+500 kHz Clock
+MFP Interrupt Enable In
+Interrupt 3
+Vcc
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+
+Data 13
+Data 11
+Data 9
+Data 7
+Data 5
+Data 3
+Data 1
+Data 15
+Ground
+Expansion Bus Grant
+External CPU Bus Grant
+No Connect
+MFP Interrupt
+Vcc
+Vcc
+
+--- Page 30 ---
+[121 drawing objects, see F030PROD.DOC.p030.svg]
+
+2.4 Overall Block Diagram
+
+32-Bit Data from VIDEL IC
+
+Data Bus 16
+
+MC68030FG
+Microprocessor
+
+Address Bus 24
+
+Control Bus
+
+COMBEL
+IC
+
+Address 10
+
+Memeory
+Daughter
+Card
+1/4/14
+Megabytes
+
+Control Bus
+
+Data 16
+
+Red 6
+
+Optional
+MC68881/
+MC68882
+Coprocessor
+
+Address 4
+
+Data 16
+
+Address 10
+
+VIDEL
+IC
+
+Blue 6
+
+Green 6
+
+Video
+DAC
+
+I/F Cable
+
+ST or VGA
+Monitor
+
+Modulator
+
+TV
+
+Control
+
+SYNC
+
+Data 16
+
+Color
+
+1377
+
+System
+ROM
+
+Address 16
+
+32-Bit Data to DRAM
+
+Control
+
+Ring Indicator
+
+Data 8
+
+ACSI/FDD/IDE Interrupt
+
+Data 8
+
+MC68901
+MFP
+
+MIDI Interrupt
+
+Address 5
+
+DSP Interrupt
+
+Keyboard
+
+MC6850
+Keyboard
+Controller
+
+Address 2
+
+Control
+
+Control
+
+Keyboard/MIDI Interrupt
+
+Printer Acknowledge
+
+Printer Busy
+
+Sound Interrupt
+
+Data 8
+
+Printer Data/Strobe
+
+Data 8
+
+DS1287
+Real-Time
+Clock
+
+Control
+
+YM-3439
+PSG
+
+Printer Select In
+
+IDE Reset
+
+Control
+
+Floppy Disk 0 Select
+
+Floppy Side 0 Select
+
+Data 8
+
+Speaker Gate
+
+MIDI In
+
+MIDI Out
+
+MC6850
+MIDI
+Controller
+
+Address 2
+
+MONO Out
+
+DSP Reset
+
+Control
+
+Data 15
+
+Serial Data
+
+MONO Out
+
+Data
+
+Data 8
+
+Address 23
+
+SDMA
+
+Master Clock
+
+Serial Clock
+
+CODEC
+ADC
+DAC
+
+AMP
+
+Stereo
+
+Internal
+Speaker
+
+Control
+
+Microphone
+
+Address 1
+
+Serial Port
+
+Handshake
+
+8530
+SCC
+
+Serial SYNC
+
+Stereo
+
+Headphones
+
+Control
+
+Data 8
+
+LAN Data
+
+LAN Port
+
+Address 3
+
+Control
+
+AJAX
+Floppy
+Controller
+
+Interal
+Floppy
+Disk
+
+5380
+SCSI
+Controller
+
+External
+SCSI
+Hard
+Disk
+
+Record Data
+
+Data 8
+
+Play Data
+
+Address 3
+
+Control
+
+DSP Connector
+
+Control
+
+56001
+Digital
+Signal
+Processor
+
+Serial Data
+
+Data 24
+
+Address 16
+
+32K SRAM

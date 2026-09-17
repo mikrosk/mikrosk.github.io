@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="310.2mm" height="428.04mm" viewBox="-6154.66 -8170.66 11113.32 15335.32">
+<title>EASYDRAW/SPARROWB.GEM</title>
+<rect x="-6154.66" y="-8170.66" width="11113.32" height="15335.32" fill="#FFFFFF"/>
+<path d="M-2366 -6825L-91 -6825" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-2366 -6825L-2108 -6915.3L-2108 -6734.7Z" fill="#000000"/>
+<path d="M-91 -6825L-349 -6734.7L-349 -6915.3Z" fill="#000000"/>
+<path d="M-2366 -6461L-91 -6461" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-2366 -6461L-2108 -6551.3L-2108 -6370.7Z" fill="#000000"/>
+<path d="M-91 -6461L-349 -6370.7L-349 -6551.3Z" fill="#000000"/>
+<path d="M-2366 -6097L-91 -6097" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-2366 -6097L-2108 -6187.3L-2108 -6006.7Z" fill="#000000"/>
+<path d="M-91 -6097L-349 -6006.7L-349 -6187.3Z" fill="#000000"/>
+<path d="M-3185 -1552L-2370 -1552L-2370 -2730L-3185 -2730Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-3185 -1552L-2370 -1552L-2370 -2730L-3185 -2730L-3185 -1552" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="-3095" y="-2345" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="490" lengthAdjust="spacingAndGlyphs">MC6850</text>
+<text xml:space="preserve" x="-3095" y="-2215" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="560" lengthAdjust="spacingAndGlyphs">Keyboard</text>
+<text xml:space="preserve" x="-3095" y="-2085" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="600" lengthAdjust="spacingAndGlyphs">Controller</text>
+<path d="M-3185 -182L-2366 -182L-2366 -1365L-3185 -1365Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-3185 -182L-2366 -182L-2366 -1365L-3185 -1365L-3185 -182" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="-3095" y="-915" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="470" lengthAdjust="spacingAndGlyphs">DS1287</text>
+<text xml:space="preserve" x="-3095" y="-785" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="590" lengthAdjust="spacingAndGlyphs">Real-Time</text>
+<text xml:space="preserve" x="-3095" y="-655" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="340" lengthAdjust="spacingAndGlyphs">Clock</text>
+<path d="M-910 6643L-910 -6825M-1183 6643L-1183 -6461M-1456 6643L-1456 -6097" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-3185 -2912L-2358 -2912L-2358 -4095L-3185 -4095Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-3185 -2912L-2358 -2912L-2358 -4095L-3185 -4095L-3185 -2912" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="-3095" y="-3665" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="420" lengthAdjust="spacingAndGlyphs">System</text>
+<text xml:space="preserve" x="-3095" y="-3535" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="300" lengthAdjust="spacingAndGlyphs">ROM</text>
+<path d="M-2639 -5278L-910 -5278" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-2639 -5278L-2381 -5368.3L-2381 -5187.7Z" fill="#000000"/>
+<path d="M-910 -5278L-1168 -5187.7L-1168 -5368.3Z" fill="#000000"/>
+<text xml:space="preserve" x="-2095" y="-6915" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="720" lengthAdjust="spacingAndGlyphs">Data Bus 32</text>
+<text xml:space="preserve" x="-2085" y="-6555" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="1000" lengthAdjust="spacingAndGlyphs">Address Bus 24</text>
+<text xml:space="preserve" x="-2095" y="-6185" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="710" lengthAdjust="spacingAndGlyphs">Control Bus</text>
+<path d="M-3549 -5820L-2366 -5820L-2366 -7007L-3549 -7007Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-3549 -5820L-2366 -5820L-2366 -7007L-3549 -7007L-3549 -5820" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="-3455" y="-6555" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="560" lengthAdjust="spacingAndGlyphs">MC68030</text>
+<text xml:space="preserve" x="-3455" y="-6425" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="1000" lengthAdjust="spacingAndGlyphs">Microprocessor</text>
+<path d="M-2639 -4914L-1183 -4914" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-2639 -4914L-2381 -5004.3L-2381 -4823.7Z" fill="#000000"/>
+<text xml:space="preserve" x="-2185" y="-5365" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="460" lengthAdjust="spacingAndGlyphs">Data 32</text>
+<text xml:space="preserve" x="-2185" y="-5005" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="580" lengthAdjust="spacingAndGlyphs">Address 4</text>
+<path d="M-2366 -3822L-910 -3822" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-2366 -3822L-2108 -3912.3L-2108 -3731.7Z" fill="#000000"/>
+<path d="M-910 -3822L-1168 -3731.7L-1168 -3912.3Z" fill="#000000"/>
+<path d="M-2366 -3458L-1183 -3458" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-2366 -3458L-2108 -3548.3L-2108 -3367.7Z" fill="#000000"/>
+<text xml:space="preserve" x="-2275" y="-3915" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="460" lengthAdjust="spacingAndGlyphs">Data 16</text>
+<text xml:space="preserve" x="-2275" y="-3545" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="650" lengthAdjust="spacingAndGlyphs">Address 16</text>
+<path d="M-2366 -3094L-1456 -3094" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-2366 -3094L-2108 -3184.3L-2108 -3003.7Z" fill="#000000"/>
+<text xml:space="preserve" x="-2275" y="-3185" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="450" lengthAdjust="spacingAndGlyphs">Control</text>
+<path d="M-2366 -2093L-1183 -2093" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-2366 -2093L-2108 -2183.3L-2108 -2002.7Z" fill="#000000"/>
+<text xml:space="preserve" x="-2275" y="-2545" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="390" lengthAdjust="spacingAndGlyphs">Data 8</text>
+<text xml:space="preserve" x="-2275" y="-2185" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="580" lengthAdjust="spacingAndGlyphs">Address 2</text>
+<path d="M-2366 -1729L-1456 -1729" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-2366 -1729L-2108 -1819.3L-2108 -1638.7Z" fill="#000000"/>
+<text xml:space="preserve" x="-2275" y="-1825" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="450" lengthAdjust="spacingAndGlyphs">Control</text>
+<path d="M-4368 -2093L-3549 -2093L-3549 -2457L-4368 -2457L-4368 -2093" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="-4275" y="-2275" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="640" lengthAdjust="spacingAndGlyphs">Keyboard</text>
+<path d="M-3549 -2275L-3185 -2275" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-3549 -2275L-3491.68 -2295.06L-3491.68 -2254.94Z" fill="#000000"/>
+<path d="M-3185 -2275L-3242.32 -2254.94L-3242.32 -2295.06Z" fill="#000000"/>
+<path d="M-2366 -2457L-910 -2457" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-2366 -2457L-2108 -2547.3L-2108 -2366.7Z" fill="#000000"/>
+<path d="M-910 -2457L-1168 -2366.7L-1168 -2547.3Z" fill="#000000"/>
+<path d="M-910 -5460L-91 -5460" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-910 -5460L-652 -5550.3L-652 -5369.7Z" fill="#000000"/>
+<path d="M-91 -5460L-349 -5369.7L-349 -5550.3Z" fill="#000000"/>
+<path d="M-1183 -5096L-91 -5096" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-91 -5096L-349 -5005.7L-349 -5186.3Z" fill="#000000"/>
+<path d="M-1456 -4732L-91 -4732" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-91 -4732L-349 -4641.7L-349 -4822.3Z" fill="#000000"/>
+<path d="M-91 -4275L732 -4275L732 -5551L-91 -5551Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-91 -4275L732 -4275L732 -5551L-91 -5551L-91 -4275" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="5" y="-4965" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="380" lengthAdjust="spacingAndGlyphs">VIDEL</text>
+<text xml:space="preserve" x="5" y="-4835" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="130" lengthAdjust="spacingAndGlyphs">IC</text>
+<path d="M-3675 -4298L-2604 -4298L-2604 -5551L-3675 -5551Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-3675 -4298L-2604 -4298L-2604 -5551L-3675 -5551L-3675 -4298" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="-3455" y="-5185" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="560" lengthAdjust="spacingAndGlyphs">MC68881</text>
+<text xml:space="preserve" x="-3455" y="-5055" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="560" lengthAdjust="spacingAndGlyphs">MC68882</text>
+<text xml:space="preserve" x="-3455" y="-4925" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="490" lengthAdjust="spacingAndGlyphs">Optional</text>
+<text xml:space="preserve" x="-3455" y="-4795" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="770" lengthAdjust="spacingAndGlyphs">Coprocessor</text>
+<path d="M-3913 -5642L-2364 -5642M-2369 -5642L-2369 -4183M-2364 -4183L-3913 -4183M-3913 -4183L-3913 -5642" fill="none" stroke="#000000" stroke-width="7.17" stroke-dasharray="107.48,35.83"/>
+<text xml:space="preserve" x="-2455" y="-7475" font-family="Arial,Helvetica,sans-serif" font-size="227.5" fill="#000000" font-weight="bold" textLength="4910" lengthAdjust="spacingAndGlyphs">Overall System Block Diagram</text>
+<text xml:space="preserve" x="-815" y="-5555" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="460" lengthAdjust="spacingAndGlyphs">Data 16</text>
+<text xml:space="preserve" x="-815" y="-5185" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="650" lengthAdjust="spacingAndGlyphs">Address 10</text>
+<text xml:space="preserve" x="-815" y="-4825" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="450" lengthAdjust="spacingAndGlyphs">Control</text>
+<path d="M1365 -4823L2002 -4823L2002 -5551L1365 -5551Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M1365 -4823L2002 -4823L2002 -5551L1365 -5551L1365 -4823" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="1455" y="-5365" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="370" lengthAdjust="spacingAndGlyphs">VIideo</text>
+<text xml:space="preserve" x="1455" y="-5235" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="290" lengthAdjust="spacingAndGlyphs">DAC</text>
+<path d="M728 -5460L1365 -5460" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M1365 -5460L1107 -5369.7L1107 -5550.3Z" fill="#000000"/>
+<path d="M728 -5187L1365 -5187" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M1365 -5187L1107 -5096.7L1107 -5277.3Z" fill="#000000"/>
+<path d="M728 -4914L1365 -4914" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M1365 -4914L1107 -4823.7L1107 -5004.3Z" fill="#000000"/>
+<text xml:space="preserve" x="815" y="-5555" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="340" lengthAdjust="spacingAndGlyphs">Red 6</text>
+<text xml:space="preserve" x="815" y="-5285" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="370" lengthAdjust="spacingAndGlyphs">Blue 6</text>
+<text xml:space="preserve" x="815" y="-5005" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="470" lengthAdjust="spacingAndGlyphs">Green 6</text>
+<path d="M2002 -5187L2821 -5187" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2821 -5187L2763.68 -5166.94L2763.68 -5207.06Z" fill="#000000"/>
+<text xml:space="preserve" x="2915" y="-5275" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="340" lengthAdjust="spacingAndGlyphs">ST or</text>
+<text xml:space="preserve" x="2915" y="-5145" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="280" lengthAdjust="spacingAndGlyphs">VGA</text>
+<text xml:space="preserve" x="2915" y="-5015" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="460" lengthAdjust="spacingAndGlyphs">Monitor</text>
+<text xml:space="preserve" x="2095" y="-5275" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="600" lengthAdjust="spacingAndGlyphs">I/F Cable </text>
+<path d="M819 -6825L1638 -6825" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M819 -6825L1077 -6915.3L1077 -6734.7Z" fill="#000000"/>
+<path d="M1638 -6825L1380 -6734.7L1380 -6915.3Z" fill="#000000"/>
+<text xml:space="preserve" x="815" y="-6915" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="720" lengthAdjust="spacingAndGlyphs">Data Bus 32</text>
+<path d="M728 -6461L1638 -6461" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M1638 -6461L1380 -6370.7L1380 -6551.3Z" fill="#000000"/>
+<text xml:space="preserve" x="815" y="-6555" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="650" lengthAdjust="spacingAndGlyphs">Address 10</text>
+<path d="M819 -6097L1638 -6097" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M1638 -6097L1380 -6006.7L1380 -6187.3Z" fill="#000000"/>
+<text xml:space="preserve" x="815" y="-6185" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="450" lengthAdjust="spacingAndGlyphs">Control</text>
+<path d="M-91 6651L720 6651L720 5460L-91 5460Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-91 6651L720 6651L720 5460L-91 5460L-91 6651" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="-5" y="5845" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" font-weight="bold" textLength="360" lengthAdjust="spacingAndGlyphs">8530</text>
+<text xml:space="preserve" x="-5" y="6005" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" font-weight="bold" textLength="320" lengthAdjust="spacingAndGlyphs">SCC</text>
+<path d="M728 -4641L2366 -4641" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2366 -4641L2308.68 -4620.94L2308.68 -4661.06Z" fill="#000000"/>
+<path d="M2184 -4641L2184 -5187" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2184 -5187L2204.06 -5129.68L2163.94 -5129.68Z" fill="#000000"/>
+<text xml:space="preserve" x="815" y="-4735" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="370" lengthAdjust="spacingAndGlyphs">SYNC</text>
+<path d="M728 -4368L2366 -4368" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2366 -4368L2308.68 -4347.94L2308.68 -4388.06Z" fill="#000000"/>
+<text xml:space="preserve" x="815" y="-4455" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="340" lengthAdjust="spacingAndGlyphs">Color</text>
+<path d="M2366 -4095L2821 -4095L2821 -4823L2366 -4823Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M2366 -4095L2821 -4095L2821 -4823L2366 -4823L2366 -4095" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="2455" y="-4455" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="280" lengthAdjust="spacingAndGlyphs">1377</text>
+<path d="M3094 -4277L3822 -4277L3822 -4641L3094 -4641Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M3094 -4277L3822 -4277L3822 -4641L3094 -4641L3094 -4277" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="3095" y="-4455" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="730" lengthAdjust="spacingAndGlyphs">Modulator</text>
+<path d="M2821 -4459L3094 -4459" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M3094 -4459L3036.68 -4438.94L3036.68 -4479.06Z" fill="#000000"/>
+<path d="M3822 -4459L4186 -4459" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M4186 -4459L4128.68 -4438.94L4128.68 -4479.06Z" fill="#000000"/>
+<text xml:space="preserve" x="4275" y="-4455" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="170" lengthAdjust="spacingAndGlyphs">TV</text>
+<path d="M-2366 -1001L-910 -1001" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-2366 -1001L-2108 -1091.3L-2108 -910.7Z" fill="#000000"/>
+<path d="M-910 -1001L-1168 -910.7L-1168 -1091.3Z" fill="#000000"/>
+<text xml:space="preserve" x="-2185" y="-1095" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="390" lengthAdjust="spacingAndGlyphs">Data 8</text>
+<path d="M-1456 -728L-2366 -728" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-2366 -728L-2108 -818.3L-2108 -637.7Z" fill="#000000"/>
+<text xml:space="preserve" x="-2185" y="-815" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="450" lengthAdjust="spacingAndGlyphs">Control</text>
+<path d="M-91 -182L728 -182L728 -1365L-91 -1365Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-91 -182L728 -182L728 -1365L-91 -1365L-91 -182" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="95" y="-815" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="390" lengthAdjust="spacingAndGlyphs">SDMA</text>
+<path d="M-910 -1183L-91 -1183" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-910 -1183L-652 -1273.3L-652 -1092.7Z" fill="#000000"/>
+<path d="M-91 -1183L-349 -1092.7L-349 -1273.3Z" fill="#000000"/>
+<path d="M-1183 -819L-91 -819" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-1183 -819L-925 -909.3L-925 -728.7Z" fill="#000000"/>
+<path d="M-91 -819L-349 -728.7L-349 -909.3Z" fill="#000000"/>
+<path d="M-1456 -455L-91 -455" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-1456 -455L-1198 -545.3L-1198 -364.7Z" fill="#000000"/>
+<path d="M-91 -455L-349 -364.7L-349 -545.3Z" fill="#000000"/>
+<text xml:space="preserve" x="-815" y="-1275" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="460" lengthAdjust="spacingAndGlyphs">Data 15</text>
+<text xml:space="preserve" x="-815" y="-915" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="650" lengthAdjust="spacingAndGlyphs">Address 23</text>
+<text xml:space="preserve" x="-815" y="-545" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="450" lengthAdjust="spacingAndGlyphs">Control</text>
+<path d="M-910 -2548L-91 -2548" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-910 -2548L-652 -2638.3L-652 -2457.7Z" fill="#000000"/>
+<path d="M-91 -2548L-349 -2457.7L-349 -2638.3Z" fill="#000000"/>
+<path d="M-1456 -2184L-91 -2184" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-91 -2184L-349 -2093.7L-349 -2274.3Z" fill="#000000"/>
+<path d="M-91 -1547L728 -1547L728 -2730L-91 -2730Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-91 -1547L728 -1547L728 -2730L-91 -2730L-91 -1547" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="5" y="-2185" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="530" lengthAdjust="spacingAndGlyphs">YM-3439</text>
+<text xml:space="preserve" x="5" y="-2055" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="280" lengthAdjust="spacingAndGlyphs">PSG</text>
+<text xml:space="preserve" x="-815" y="-2275" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="450" lengthAdjust="spacingAndGlyphs">Control</text>
+<text xml:space="preserve" x="-815" y="-2635" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="390" lengthAdjust="spacingAndGlyphs">Data 8</text>
+<path d="M728 -1911L1456 -1911" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1456 -1911L1398.68 -1890.94L1398.68 -1931.06Z" fill="#000000"/>
+<text xml:space="preserve" x="815" y="-2005" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="400" lengthAdjust="spacingAndGlyphs">Printer</text>
+<path d="M1546 -1643L1546 -2184M1547 -1642L1456 -1697M1456 -1696L1456 -2129M1547 -2184L1456 -2129" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-91 -2912L728 -2912L728 -4095L-91 -4095Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-91 -2912L728 -2912L728 -4095L-91 -4095L-91 -2912" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="5" y="-3645" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="560" lengthAdjust="spacingAndGlyphs">MC68901</text>
+<text xml:space="preserve" x="5" y="-3515" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="280" lengthAdjust="spacingAndGlyphs">MFP</text>
+<path d="M1546 -3013L1546 -3913M1547 -3011L1456 -3102M1456 -3102L1456 -3822M1547 -3913L1456 -3822" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M728 -3731L1456 -3731" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M728 -3731L785.32 -3751.06L785.32 -3710.94Z" fill="#000000"/>
+<path d="M1456 -3731L1398.68 -3710.94L1398.68 -3751.06Z" fill="#000000"/>
+<text xml:space="preserve" x="815" y="-3825" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="390" lengthAdjust="spacingAndGlyphs">RS232</text>
+<path d="M-1456 -3276L-91 -3276" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-91 -3276L-349 -3185.7L-349 -3366.3Z" fill="#000000"/>
+<text xml:space="preserve" x="-815" y="-3365" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="450" lengthAdjust="spacingAndGlyphs">Control</text>
+<path d="M-1183 -3549L-91 -3549" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-91 -3549L-349 -3458.7L-349 -3639.3Z" fill="#000000"/>
+<text xml:space="preserve" x="-815" y="-3645" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="580" lengthAdjust="spacingAndGlyphs">Address 5</text>
+<path d="M-910 -3913L-91 -3913" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-910 -3913L-652 -4003.3L-652 -3822.7Z" fill="#000000"/>
+<path d="M-91 -3913L-349 -3822.7L-349 -4003.3Z" fill="#000000"/>
+<text xml:space="preserve" x="-815" y="-4005" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="390" lengthAdjust="spacingAndGlyphs">Data 8</text>
+<path d="M2457 -1092L2821 -1092" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2821 -1092L2763.68 -1071.94L2763.68 -1112.06Z" fill="#000000"/>
+<path d="M728 -2639L910 -2639M910 -2639L910 -3458" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M910 -3458L1456 -3458" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1456 -3458L1398.68 -3437.94L1398.68 -3478.06Z" fill="#000000"/>
+<path d="M728 -2548L1001 -2548M1001 -2548L1001 -3185" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1001 -3185L1456 -3185" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1456 -3185L1398.68 -3164.94L1398.68 -3205.06Z" fill="#000000"/>
+<text xml:space="preserve" x="1005" y="-3545" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="270" lengthAdjust="spacingAndGlyphs">DTR</text>
+<text xml:space="preserve" x="1005" y="-3275" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="260" lengthAdjust="spacingAndGlyphs">RTS</text>
+<text xml:space="preserve" x="1635" y="-3455" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="640" lengthAdjust="spacingAndGlyphs">Serial Port</text>
+<path d="M-91 -5824L724 -5824L724 -7007L-91 -7007Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-91 -5824L724 -5824L724 -7007L-91 -7007L-91 -5824" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="5" y="-6555" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="560" lengthAdjust="spacingAndGlyphs">COMBEL</text>
+<text xml:space="preserve" x="5" y="-6425" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="130" lengthAdjust="spacingAndGlyphs">IC</text>
+<path d="M-910 4459L-91 4459" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-910 4459L-652 4368.7L-652 4549.3Z" fill="#000000"/>
+<path d="M-91 4459L-349 4549.3L-349 4368.7Z" fill="#000000"/>
+<text xml:space="preserve" x="-815" y="4365" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="390" lengthAdjust="spacingAndGlyphs">Data 8</text>
+<text xml:space="preserve" x="-815" y="4645" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="580" lengthAdjust="spacingAndGlyphs">Address 2</text>
+<text xml:space="preserve" x="-815" y="4915" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="450" lengthAdjust="spacingAndGlyphs">Control</text>
+<path d="M-1183 4732L-91 4732" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-91 4732L-349 4822.3L-349 4641.7Z" fill="#000000"/>
+<path d="M-1456 5005L-91 5005" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-91 5005L-349 5095.3L-349 4914.7Z" fill="#000000"/>
+<path d="M-91 5278L728 5278L728 4095L-91 4095Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-91 5278L728 5278L728 4095L-91 4095L-91 5278" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="5" y="4365" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="490" lengthAdjust="spacingAndGlyphs">MC6550</text>
+<text xml:space="preserve" x="5" y="4495" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="270" lengthAdjust="spacingAndGlyphs">MIDI</text>
+<text xml:space="preserve" x="5" y="4625" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="600" lengthAdjust="spacingAndGlyphs">Controller</text>
+<path d="M1547 4550A91 91 0 1 0 1365 4550A91 91 0 1 0 1547 4550Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M1547 4550A91 91 0 1 0 1365 4550A91 91 0 1 0 1547 4550Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1547 4277A91 91 0 1 0 1365 4277A91 91 0 1 0 1547 4277Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M1547 4277A91 91 0 1 0 1365 4277A91 91 0 1 0 1547 4277Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M728 4277L1365 4277" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1365 4277L1307.68 4297.06L1307.68 4256.94Z" fill="#000000"/>
+<path d="M728 4550L1365 4550" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M728 4550L785.32 4529.94L785.32 4570.06Z" fill="#000000"/>
+<text xml:space="preserve" x="815" y="4185" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="520" lengthAdjust="spacingAndGlyphs">MIDI Out</text>
+<text xml:space="preserve" x="815" y="4455" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="410" lengthAdjust="spacingAndGlyphs">MIDI In</text>
+<path d="M1760 4489A61 53 0 1 0 1638 4489A61 53 0 1 0 1760 4489Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1760 4489A61 53 0 1 0 1638 4489A61 53 0 1 0 1760 4489Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1721 4489L1721 4277M1721 4277L1783 4330M1721 4330L1783 4383" fill="none" stroke="#000000" stroke-width="23"/>
+<text xml:space="preserve" x="3095" y="-1095" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="1000" lengthAdjust="spacingAndGlyphs">Internal Speaker</text>
+<path d="M3003 -1365L2912 -1183M3003 -1365L3003 -819M3003 -819L2912 -1001M2912 -1183L2912 -1001M2912 -1001L2821 -1001M2821 -1001L2821 -1183M2821 -1183L2912 -1183" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-5641 -3731A364 364 0 0 0 -5277 -3367" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M1820 -935L2453 -935L2453 -1274L1820 -1274Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M1820 -935L2453 -935L2453 -1274L1820 -1274L1820 -935" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="2005" y="-1075" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="290" lengthAdjust="spacingAndGlyphs">AMP</text>
+<path d="M1274 -1092L1820 -1092" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1820 -1092L1762.68 -1071.94L1762.68 -1112.06Z" fill="#000000"/>
+<text xml:space="preserve" x="1275" y="-1185" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="400" lengthAdjust="spacingAndGlyphs">MONO</text>
+<path d="M728 -1638L1092 -1638" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1092 -1638L1092 -637" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1092 -637L1071.94 -694.32L1112.06 -694.32Z" fill="#000000"/>
+<text xml:space="preserve" x="815" y="-1725" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="400" lengthAdjust="spacingAndGlyphs">MONO</text>
+<path d="M728 -364L2730 -364" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M2730 -364L2672.68 -343.94L2672.68 -384.06Z" fill="#000000"/>
+<path d="M728 -637L2730 -637" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M728 -637L785.32 -657.06L785.32 -616.94Z" fill="#000000"/>
+<path d="M1274 -1092L1274 -364" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M1274 -1092L1294.06 -1034.68L1253.94 -1034.68Z" fill="#000000"/>
+<text xml:space="preserve" x="2855" y="-595" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="700" lengthAdjust="spacingAndGlyphs">Microphone</text>
+<text xml:space="preserve" x="2865" y="-295" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="730" lengthAdjust="spacingAndGlyphs">Headphones</text>
+<text xml:space="preserve" x="1725" y="-725" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="400" lengthAdjust="spacingAndGlyphs">Stereo</text>
+<text xml:space="preserve" x="1725" y="-455" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="400" lengthAdjust="spacingAndGlyphs">Stereo</text>
+<path d="M1638 -5826L2548 -5826L2548 -7007L1638 -7007Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M1638 -5826L2548 -5826L2548 -7007L1638 -7007L1638 -5826" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="1735" y="-6835" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="470" lengthAdjust="spacingAndGlyphs">Memory</text>
+<text xml:space="preserve" x="1735" y="-6705" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="540" lengthAdjust="spacingAndGlyphs">Daughter</text>
+<text xml:space="preserve" x="1735" y="-6575" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="290" lengthAdjust="spacingAndGlyphs">Card</text>
+<text xml:space="preserve" x="1735" y="-6445" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="420" lengthAdjust="spacingAndGlyphs">1/4/14</text>
+<text xml:space="preserve" x="1735" y="-6315" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="720" lengthAdjust="spacingAndGlyphs">MegaBytes</text>
+<path d="M3185 993L3094 902M3094 902L3094 182" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-1183 728L-91 728" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-91 728L-349 818.3L-349 637.7Z" fill="#000000"/>
+<path d="M-1456 1001L-91 1001" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-1456 1001L-1198 910.7L-1198 1091.3Z" fill="#000000"/>
+<path d="M-91 1001L-349 1091.3L-349 910.7Z" fill="#000000"/>
+<text xml:space="preserve" x="-815" y="905" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="450" lengthAdjust="spacingAndGlyphs">Control</text>
+<text xml:space="preserve" x="-815" y="635" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="580" lengthAdjust="spacingAndGlyphs">Address 3</text>
+<path d="M-910 455L-91 455" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M-910 455L-652 364.7L-652 545.3Z" fill="#000000"/>
+<path d="M-91 455L-349 545.3L-349 364.7Z" fill="#000000"/>
+<text xml:space="preserve" x="-815" y="365" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="390" lengthAdjust="spacingAndGlyphs">Data 8</text>
+<path d="M-91 1455L712 1455L712 273L-91 273Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-91 1455L712 1455L712 273L-91 273L-91 1455" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="5" y="585" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="350" lengthAdjust="spacingAndGlyphs">56001</text>
+<text xml:space="preserve" x="5" y="715" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="370" lengthAdjust="spacingAndGlyphs">Digital</text>
+<text xml:space="preserve" x="5" y="845" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="360" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="5" y="975" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="610" lengthAdjust="spacingAndGlyphs">Processor</text>
+<path d="M1547 1456L2457 1456L2457 1001L1547 1001Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M1547 1456L2457 1456L2457 1001L1547 1001L1547 1456" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="1635" y="1275" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="650" lengthAdjust="spacingAndGlyphs">32K SRAM</text>
+<path d="M728 1365L1547 1365" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M1547 1365L1289 1455.3L1289 1274.7Z" fill="#000000"/>
+<path d="M728 1092L1547 1092" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M728 1092L986 1001.7L986 1182.3Z" fill="#000000"/>
+<path d="M1547 1092L1289 1182.3L1289 1001.7Z" fill="#000000"/>
+<text xml:space="preserve" x="815" y="1275" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="650" lengthAdjust="spacingAndGlyphs">Address 16</text>
+<text xml:space="preserve" x="815" y="1005" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="460" lengthAdjust="spacingAndGlyphs">Data 24</text>
+<path d="M728 819L3094 819" fill="none" stroke="#000000" stroke-width="43"/>
+<path d="M728 819L986 728.7L986 909.3Z" fill="#000000"/>
+<path d="M3094 819L2836 909.3L2836 728.7Z" fill="#000000"/>
+<text xml:space="preserve" x="3275" y="635" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="950" lengthAdjust="spacingAndGlyphs">DSP Connector</text>
+<text xml:space="preserve" x="815" y="725" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="590" lengthAdjust="spacingAndGlyphs">SSI 8-Bits</text>
+<path d="M3184 991L3184 91M3185 91L3094 182" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M728 -273L910 -273L910 273L3094 273Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M728 -273L910 -273L910 273L3094 273" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M3094 273L3036.68 293.06L3036.68 252.94Z" fill="#000000"/>
+<text xml:space="preserve" x="1365" y="185" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="1140" lengthAdjust="spacingAndGlyphs">Microwire Interface</text>
+<path d="M-4004 3648L-3193 3648L-3193 2457L-4004 2457Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-4004 3648L-3193 3648L-3193 2457L-4004 2457L-4004 3648" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="-3915" y="2845" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" font-weight="bold" textLength="380" lengthAdjust="spacingAndGlyphs">AJAX</text>
+<text xml:space="preserve" x="-3915" y="3005" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" font-weight="bold" textLength="450" lengthAdjust="spacingAndGlyphs">Floppy</text>
+<text xml:space="preserve" x="-3915" y="3165" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" font-weight="bold" textLength="650" lengthAdjust="spacingAndGlyphs">Controller</text>
+<path d="M-3185 731L-2639 731L-2639 546L-3185 546L-3185 731" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-3143 705L-3100 705L-3100 684L-3143 684Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-3143 705L-3100 705L-3100 684L-3143 684L-3143 705" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-3143 593L-2674 593M-3143 606L-2674 606M-3143 618L-2674 618" fill="none" stroke="#000000" stroke-width="7.17"/>
+<path d="M-4641 1646L-3830 1646L-3830 455L-4641 455Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-4641 1646L-3830 1646L-3830 455L-4641 455L-4641 1646" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="-4545" y="835" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" font-weight="bold" textLength="360" lengthAdjust="spacingAndGlyphs">5380</text>
+<text xml:space="preserve" x="-4545" y="995" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" font-weight="bold" textLength="340" lengthAdjust="spacingAndGlyphs">SCSI</text>
+<text xml:space="preserve" x="-4545" y="1155" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" font-weight="bold" textLength="650" lengthAdjust="spacingAndGlyphs">Controller</text>
+<path d="M-3822 637L-3185 637" fill="none" stroke="#000000" stroke-width="23"/>
+<path d="M-3822 637L-3684 588.7L-3684 685.3Z" fill="#000000"/>
+<path d="M-3185 637L-3323 685.3L-3323 588.7Z" fill="#000000"/>
+<text xml:space="preserve" x="-3185" y="905" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="520" lengthAdjust="spacingAndGlyphs">External </text>
+<text xml:space="preserve" x="-3185" y="1035" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="310" lengthAdjust="spacingAndGlyphs">SCSI</text>
+<text xml:space="preserve" x="-3185" y="1165" font-family="Arial,Helvetica,sans-serif" font-size="126.39" fill="#000000" font-weight="bold" textLength="250" lengthAdjust="spacingAndGlyphs">Disk</text>
+</svg>

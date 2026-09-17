@@ -1,0 +1,91 @@
+File: EASYDRAW/SUNNYVAL/EXPAND30.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-3360,-4270)-(3081,450)
+Page size: 203.2 x 254.0 mm
+Coordinate window: lower-left (-3640,4550), upper-right (3640,-4550); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-3360,-4192.67)-(2990,320.33)
+Items: 331 (2775 words)
+Objects: polyline 4, ellipse 30, elliptical arc 30, justified text 70
+Other records (escapes, application data): write_meta 10 x4, write_meta 150 x1, write_meta 151 x4, write_meta 152 x10, write_meta 153 x10, write_meta 154 x69, write_meta 158 x1, write_meta 160 x1, write_meta 80 x34, write_meta 81 x34
+Text strings: 70
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+   1820   -3130  [font 7 12pt]   1
+
+   2790   -3130  [font 7 12pt]   2
+
+   2790      60  [font 7 12pt]   30
+
+   1760      60  [font 7 12pt]   29
+
+  -3360   -3950  [font 7 24pt]  SPARROW EXPANSION CONNECTOR
+
+  -3330   -3360  [font 7 12pt]  30 Pin Header - J20
+
+  -3010   -2430  [font 7 12pt]  Pin
+  -3010   -1950  [font 7 12pt]  1 
+  -3010   -1790  [font 7 12pt]  3
+  -3010   -1630  [font 7 12pt]  5
+  -3010   -1470  [font 7 12pt]  7
+  -3010   -1310  [font 7 12pt]  9
+  -3010   -1150  [font 7 12pt]  11
+  -3010    -990  [font 7 12pt]  13
+  -3010    -830  [font 7 12pt]  15
+  -3010    -670  [font 7 12pt]  17
+  -3010    -510  [font 7 12pt]  19
+  -3010    -350  [font 7 12pt]  21
+  -3010    -190  [font 7 12pt]  23
+  -3010     -30  [font 7 12pt]  25
+  -3010     130  [font 7 12pt]  27
+  -3010     290  [font 7 12pt]  29
+
+   -690   -2440  [font 7 12pt]  Pin
+   -690   -1960  [font 7 12pt]  2 
+   -690   -1800  [font 7 12pt]  4
+   -690   -1640  [font 7 12pt]  6
+   -690   -1480  [font 7 12pt]  8
+   -690   -1320  [font 7 12pt]  10
+   -690   -1160  [font 7 12pt]  12
+   -690   -1000  [font 7 12pt]  14
+   -690    -840  [font 7 12pt]  16
+   -690    -680  [font 7 12pt]  18
+   -690    -520  [font 7 12pt]  20
+   -690    -360  [font 7 12pt]  22
+   -690    -200  [font 7 12pt]  24
+   -690     -40  [font 7 12pt]  26
+   -690     120  [font 7 12pt]  28
+   -690     280  [font 7 12pt]  30
+
+    -60   -2450  [font 7 12pt]  Signal
+    -60   -1970  [font 7 12pt]  DATA 13
+    -60   -1810  [font 7 12pt]  DATA 11
+    -60   -1650  [font 7 12pt]  DATA 9
+    -60   -1490  [font 7 12pt]  DATA 7
+    -60   -1330  [font 7 12pt]  DATA 5
+    -60   -1170  [font 7 12pt]  DATA 3
+    -60   -1010  [font 7 12pt]  DATA 1
+    -60    -850  [font 7 12pt]  DATA 15
+    -60    -690  [font 7 12pt]  Ground
+    -60    -530  [font 7 12pt]  No Connect
+    -60    -370  [font 7 12pt]  EINT5
+    -60    -210  [font 7 12pt]  No Connect
+    -60     -50  [font 7 12pt]  MFP_INT
+    -60     110  [font 7 12pt]  VCC
+    -60     270  [font 7 12pt]  VCC
+
+  -2500   -2430  [font 7 12pt]  Signal
+  -2500   -1950  [font 7 12pt]  DATA 14
+  -2500   -1790  [font 7 12pt]  DATA 12
+  -2500   -1630  [font 7 12pt]  DATA 10
+  -2500   -1470  [font 7 12pt]  DATA 8
+  -2500   -1310  [font 7 12pt]  DATA 6
+  -2500   -1150  [font 7 12pt]  DATA 4
+  -2500    -990  [font 7 12pt]  DATA 2
+  -2500    -830  [font 7 12pt]  DATA 0
+  -2500    -670  [font 7 12pt]  Ground
+  -2500    -510  [font 7 12pt]  Ground
+  -2500    -350  [font 7 12pt]  EINT1
+  -2500    -190  [font 7 12pt]  500KHZ
+  -2500     -30  [font 7 12pt]  MFP_IEI
+  -2500     130  [font 7 12pt]  EINT3
+  -2500     290  [font 7 12pt]  VCC

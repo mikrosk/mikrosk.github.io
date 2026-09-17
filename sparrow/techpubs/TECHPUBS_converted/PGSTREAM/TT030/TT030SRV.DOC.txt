@@ -1,0 +1,2732 @@
+[PageStream 2 document TT030SRV.DOC: 8.50 x 11.00 in, 1194 objects, facing pages]
+
+--- Page 1 ---
+[306 drawing objects, see TT030SRV.DOC.p001.svg]
+
+SECTION ONE
+
+INTRODUCTION
+
+
+1.1 OVERVIEW
+
+
+The Atari® TT030™ is designed as an integrated unit with processor, memory, and I/O control in one package. The TT030 provides 2 Mbytes (2,097,142 bytes) of RAM memory and is expandable to 26 Mbytes (27,262,846 bytes) by installing daughter boards. The TT030 also provides 512 Kbytes (524,288 bytes) of ROM space. A 720 Kbyte or 1.44 Mbyte (formatted) floppy, power supply, and floating point coprocessor are also included in the system. An optional hard disk drive can also be added.
+
+
+1.2 MAIN COMPONENTS
+
+
+	•	Main Board
+	•	Separate Keyboard Assembly
+	•	Power Supply
+	•	Floppy Disk Drive
+	•	Plastic Case (upper and lower)
+	•	Mouse
+
+
+1.3 CASE DESIGN
+
+
+The front of the TT030 contains the floppy disk drive with an eject button and busy LED. An optional hard disk can also be installed and it also contains its own busy LED.
+
+
+Front View
+
+Optional Hard
+Disk
+
+Hard Disk
+Activity
+LED
+
+Power
+LED
+
+Floppy Eject
+Button
+
+Floppy
+Activity
+LED
+
+Nameplate
+
+--- Page 2 ---
+[317 drawing objects, see TT030SRV.DOC.p002.svg]
+
+The left side of the TT030 case contains the following items from left to right. Reset button, LAN connector, MIDI OUT jack, MIDI IN jack, ROM cartridge port, and keyboard jack.
+
+
+Left Side View
+
+
+The rear of the TT030 contains the following items. SCSI interface jack, External floppy jack, external ACSI interface connector, printer connector, monitor jack, VME slot,  modem 1 connector, on/off switch, power plug, modem 2 connector, fan, audio R connector, and audio L connector.
+
+
+Rear View
+
+Reset
+Button
+
+LAN
+Connector
+
+MIDI In
+
+Keyboard
+
+ROM
+Cartridge
+
+MIDI OUT
+
+VME
+Slot
+
+On/Off
+
+Power
+
+Fan
+
+Audio L
+
+Modem 1
+
+Audio R
+
+Monitor
+
+Printer
+
+SCSI
+
+External
+ACSI
+
+External
+Floppy
+
+Modem 2
+
+--- Page 3 ---
+
+1.4 POWER SUPPLY
+
+
+1.4.1 Power Supply Rating
+
+
+The TT030 has an integral switching power supply providing 64 watts of power. The supply can accept AC input of 100-240VAC at 2A, 50/60Hz. The power supply provides the following voltages and currents to the system:
+
+Voltage			Current
+
++5V				7A
++12V			2A
+-5V				0.4A
+-12V				0.3A
+
+--- Page 4 ---
+
+SECTION TWO
+
+THEORY OF OPERATION
+
+
+2.1 OVERVIEW
+
+
+The TT030 is a new series of Atari computers designed as an enhanced version of the Atari ST™ and Megar architecture. The TT030 uses the Motorolar 68030 microprocessor running at 32 MHz which provides enhanced graphics and sound capabilities. A VME bus has been included in the TT030 for expansion. The hardware is composed of a main system (central processing unit and support chips), audio/video subsystem, and several I/O subsystems.
+
+Main System
+
+	•	MC68030® processor running at 32 MHz
+	•	MC68882® coprocessor
+	•	512 Kbytes of ROM
+	•	2 Mbytes of RAM (expandable to 26 Mbytes)
+	•	Interrupt mask, status, and control
+	•	System timing and Bus control
+	•	DMA support
+	•	Battery backed-up Real-time clock
+
+I/O Subsystems
+
+	•	SCSI interface
+	•	ST compatible ACSI interface
+	•	Floppy disk interface
+	•	Four serial ports
+	•	LAN port
+	•	Parallel printer interface
+	•	Intelligent keyboard interface
+	•	Mouse and Joystick interface
+	•	Musical Instrument Digital Interface (MIDI)
+	•	VME Slot
+
+--- Page 5 ---
+
+Audio/Video Subsystem
+
+Bit Mapped video display using 32 Kbytes in ST mode and 153.6 Kbytes in TT mode of RAM relocatable anywhere in memory.
+
+	•	Six available display modes:
+
+		ST Mode:
+
+		320 X 200 16 out of 4096 colors
+		640 X 200 4 out of 4096 colors
+		640 X 400 monochrome
+
+		TT Mode:
+
+		320 X 200 16 out of 4096 colors
+		640 X 200 4 out of 4096 colors
+		640 X 400 2 out of 4096 colors
+		640 X 480 16 out of 4096 colors
+		1280 X 960 monochrome
+		320 X 480 256 out of 4096 colors
+
+	•	Monitor interfaces include:
+
+		RGB
+		ECL Monochrome
+
+	•	Audio outputs internally mixed together:
+
+		Programmable sound generator
+		Stereo DMA sound
+
+
+2.2 MAIN SYSTEM
+
+
+The hardware contained in the main system of the Atari TT030 are the processor, optional coprocessor, ROM, RAM, Interrupt control (SCU and MFP), Memory, Timing and Bus control (MCU), DMA support (DMAC), and Real-time clock (MC146818).
+
+
+2.2.1 Processor
+
+
+The processor used in the Atari TT030 system is a 32 MHz Motorolar MC68030r with a 32-bit internal architecture, 32-bit external data bus, and a 32-bit address bus. This single chip contains a 68020 superset processor, a paged memory management unit, and independent data and instruction caches. The processor is clocked at 32 MHz.
+
+--- Page 6 ---
+
+2.2.2 Coprocessor
+
+
+The TT030 provides a Motorolar high performance MC68882 floating point coprocessor. The MC68882 coprocessor is clocked at 32 MHz. The processor recognizes the coprocessor as the standard floating point coprocessor ID of 1 in the 68030 CPU address space.
+
+
+2.2.3 ROM
+
+
+The system contains four 1 Mbit ROMs for a total of 512 Kbyte of access space. Since system bus access is 32-bits wide, all four ROMs must be present for proper operation. Included in the tasks
+the ROM performs is system initialization and boot code. The ROM also contains the TOS operating system.
+
+
+2.2.4 RAM
+
+
+The TT030 includes 2 Mbytes of RAM used for both system and video. The RAM is implemented with 16 256 Kbit X 4 100 ns DRAMs set up to yield a 64-bit wide internal bus for high performance video access. Memory accesses to the RAM are interleaved between the Memory Controller and the Video Controller in 250ns time slices. During display cycles the processor is prevented from accessing the RAM. However, the processor will be allotted the next 250ns time slice.
+
+The processor accesses the RAM through a 32-bit bus, even though the video system accesses the bus through a 64-bit wide architecture. The TT video chip (TTVIDEO) has on-chip buffering to provide very high bus bandwidths.Additional memory can be installed in the system via dual purpose ST RAM daughter boards, single purpose TT RAM daughter boards,  or VME memory cards. 4 or 16 Mbytes of additional 32-bit wide TT RAM can be installed, or 2 or 8 Mbytes of dual purpose 64-bit wide ST RAM can be installed. Additional memory can also be installed in the system by plugging in VME memory cards. Either A24/D16 or A16/D16 cards can be used, however, VME memory will typically run slower than on-board system memory due to the fact that all accesses incur an additional wait state.
+
+Memory in the TT030 is overlapped and addressed in a unique fashion. When expansion RAM is added to the system the lower addresses are moved to an upper memory mapping scheme and the expansion RAM takes over the lower addresses. Refer to the map on the following page  for details.
+
+--- Page 7 ---
+
+RAM memory map:
+
+Base System
+
+Address				Function
+
+000008 - 000800		System memory (privileged access)
+000800 - 1FFFFF		First 2 Mbytes
+
+4 Megabyte system
+
+Address				Function
+
+1FFFFF - 3FFFFF		Expansion 2 Mbytes
+800000 - 9FFFFF		Main Board 2 Mbytes
+
+16 Megabyte system
+
+Address				Function
+
+000000 - 7FFFFF		Expansion board 8 Megabytes
+800000 - 9FFFFF		Main board 2 megabytes
+
+
+2.2.5 System Control Unit (SCU)
+
+
+The SCU provides several system support functions including interrupt masking and status reporting, interrupt generation, and bus time-out detection.
+
+
+2.2.5.1 Interrupt Mask and Current Status
+
+
+The SCU contains two registers used to mask interrupts to the processor. These registers, in effect, screen the interrupts from both main system devices and VME bus devices and present them, when enabled (not masked), to the processor. Masked interrupts (not enabled) are not presented and therefore not seen by the processor. These registers are cleared at power up or reset, disabling all interrupts.
+
+The SCU also contains a register which latches the current state of the seven interrupt request levels from each one of the sources. This register shows the state of the interrupt lines before they are ANDed with the mask registers.
+
+--- Page 8 ---
+
+2.2.5.2 Interrupt Generation
+
+
+The system can write to an I/O address to generate a level 1 autovectored interrupt to the processor. The SCU is hardwired to the following interrupt scheme:
+
+	•	Only interrupt levels 5 and 6 have external interrupt acknowledge (IACK) pins and are capable of generating vectored interrupts to the system.
+
+	•	SCU generated interrupts IRQ1 and IRQ3 are hardwired to the corresponding priorities and are always autovectored.
+
+	•	The VMEbus ACFAIL generates an IRQ7 interrupt to the processor. The only other source of IRQ7 interrupt is from a VMEbus card.
+
+
+2.2.5.3  Bus  Timer
+
+
+The SCU implements a bus timer so that if a bus cycle is not terminated within 16us, the SCU will generate a bus error signal.
+
+
+2.2.6 68901 MFPs
+
+
+2.2.6.1 MFP Interrupt Control
+
+
+Two 68901 MFPs are included in the TT030 system. Each 68901 MFP handles up to 16 interrupts. Currently all but one are used. Each interrupt can be masked off or disabled by programming the MFP. The interrupts controlled by the MFP are: monochrome monitor
+detect (XMONO), RS-232 (Including CTS, DCD, and RI), floppy and hard disk (FDINT and XHDINT respectively), parallel port BUSY, display enable (DE, which equals the start of the display line), 6850 IRQ's for keyboard and MIDI data, and MFP timers. Interrupts received by the MFPs are then sent on to the SCU for further masking.
+
+Not all I/O operations are interrupts. The CPU can also poll the MFP while waiting for an operation to complete. The MFP also contains four timers. These are used by the Operating System for event timing, RS-232 port for transmit and receive clocks, and by application software.
+
+--- Page 9 ---
+
+2.2.7 DMA Controllers
+
+
+The TT030 includes three independent DMA channels. Each channel has its own DMA controller associated with it. One channel is used for the SCC. Another is used for the SCSI port. The third DMA controller is used for the ST compatible ACSI/Floppy interface.Direct memory access is provided to support both low speed (250 to 500 kilobits/sec) and high speed (up to 8 Megabits/sec) 8-bit device controllers. The floppy disks transfer data via low speed DMA. The SCSI hard disk transfers data at high speed. For DMA to take place, the Memory Controller is given the address of where to take data from or put data in RAM, the DMA Controller is set up (with direction, base address, enable, and how many bytes) and the peripheral is given a command to send or receive data. The entire block of data (the size must be given to the DMA Controller and the peripheral before the operation starts) is then transferred to or from memory without intervention by the CPU.
+
+
+2.2.7.1 SCC and SCSI DMA Channels
+
+
+The SCC and SCSI DMA controllers assemble the bytes from the peripheral into double words for writing to the system bus. This is actually done with two independent double words so that when one has been filled and is waiting for access to the bus, the other can be filling. If the second word is filled before access to the bus is granted then both words will be written in the same bus transaction. DMA transfers can be done to any byte boundary of any double word memory space. This is accomplished in part by the DCU chip (Data Control Unit) which is used to latch the appropriate 8-bit data field  from the 32-bit data bus. A DCU is provided for both SCC and SCSI interface circuits.
+
+
+2.2.7.2 Floppy/ACSI Interface
+
+
+The ST compatible Floppy/ACSI subsystem interfaces between dual-purpose RAM and ACSI compatible peripherals. DMA between RAM and ACSI peripherals, and between RAM and floppy, can only be performed using dual-purpose RAM. If a transfer is required using
+single-purpose system RAM, a two stage transfer is required using the dual-purpose RAM as an intermediate buffer.
+
+
+2.2.8 System Timing and Bus Control MCU
+
+
+The MCU is an integral part of the system and is involved in almost every operation in the computer. The functions performed by the MCU include clock dividers, video timing, signal and bus arbitration, memory control, and chip selects.
+
+
+2.2.8.1 Clock Dividers
+
+
+The clock dividers within the MCU are used to take the 16 MHz input and divide it into 4 MHz, 8 MHz, and 500 kHz clocks for use by other devices in the system.
+
+--- Page 10 ---
+
+2.2.8.2 Video Timing
+
+
+MCU uses the input signals DE (Display Enable), VSYNC, and HSYNC from TTVIDEO to synchronize and control system video RAM refresh. There is also a read/write register within the MCU which is used to configure for 50, 60, or 71 Hz monitor operation (done by the Operating System).
+
+
+2.2.8.3 Signal and Bus Arbitration
+
+
+The MCU arbitrates the bus during DMA cycles to prevent the processor and DMA controller from interfering with each other.
+
+
+2.2.8.4 Memory Control
+
+
+The MCU takes addresses from the address bus and converts them to Row Address Strobe (RAS) and Column Address Strobe (CAS) signals to control all RAM accesses. The Memory Controller internal to this device is also responsible for refreshing the DRAM (dynamic RAM), loading the Video Shifter with display data, and sending or receiving data during DMA cycles.
+
+
+2.2.8.5 Chip Selects
+
+
+The MCU decodes addresses and generates chip selects to the 6850's, 68901 MFP, DMA Controller, Programmable Sound Generator, internal Memory Controller, and ROMs. It receives signals from the MFP, DMA, and Memory Controller to synchronize data transfers. The MCU also decodes the addresses necessary to enable the RAM and ROM.
+
+
+2.2.9 Real-time Clock
+
+
+The TT030 system includes a Real-time Clock chip. When the system is powered on the real-time clock is powered by the main PCB power supply. In the event of a power failure, or when the system is powered off, the real-time clock is powered by a 3.6v lithium battery. This allows the date, time, and configuration data to be maintained even when there is no power to the unit. 50 bytes of battery backed-up RAM is also provided for storing diagnostic and configuration data.
+
+--- Page 11 ---
+
+The real-time clock provides time of day (down to one second resolution) and date. The RTC is provided with a 32.760 kHz oscillator that is independent of all other system clocks. The chip is accessed through two consecutive word ports. The first word is a write-only port used to set the real-time clock chip address desired. The second word is the read-write data port. When doing a write to a clock chip register, a double word write can be performed. The first word would set the address, and the second word would load the data.
+
+
+2.3 AUDIO/VIDEO SUBSYSTEM
+
+
+2.3.1 Video Subsystem
+
+
+The video subsystem consists of the video display memory (an arbitrary block of RAM starting on any word boundary), the MCU, a graphics control chip TTVIDEO, and some discrete components to drive the video output. The role of the MCU has already been covered in section 2.2.8.2
+
+
+2.3.1.1 TTVIDEO
+
+
+A video shifter is provided internal to the TTVIDEO chip. ST and TT modes of operation can be selected through the respective ST or TT Shift Mode Register. In the ST mode there are 16 color palette registers used in the shifter. All 16 may be used in low resolution (320 X 200) or TT mode (640 X 480). Four may be used in medium resolution (640 X 200), and one may be used in monochrome (640 X 400) high resolution. Contained in each entry are twelve-bits of color; four-bits each for red, green, and blue. Therefore there are 16 X 16 X 16 or 4096 colors possible for each entry.
+
+In the TT mode there are 256 color palette registers used in the shifter. Contained in each entry are twelve-bits of color; four-bits each for red, green, and blue. Therefore there are 16 X 16 X 16 or 4096 colors possible for each entry. Through the ST palette bank (lowest four bits of the TT shift mode register) one of 16 banks may be selected from the TT color palette for use in ST modes.
+
+For a given pixel, the color which is displayed is taken from the palette referred to by getting information from each logical plane (see the description of video display in section 2.3.1.3).
+The shifter will output the red, blue, and green levels specified by that palette.
+
+--- Page 12 ---
+
+2.3.1.2 Video Display Memory
+
+
+Display memory is part of main memory with the physical screen origin located at the top left corner of the screen. Display memory is configured as 1, 2, 4, or 8 logical planes interwoven
+by 16-bit words into contiguous memory to form one 32,000 byte physical plane for ST modes or 153,600 byte physical plane starting at any 8-byte boundary. The starting address of display memory is placed in the Memory Controller's Video Base High, Video Base Mid, and Video Base Low registers by the Operating System or application. This register is loaded into the Video Address counter (high, mid, and low) at the beginning of each frame. The address counter is incremented as the Bit Map planes are read.
+
+The Memory Controller will load display information into the Video Shifter 64 bits at a time through two FUNNEL chips, and the Video Shifter will decode this information to generate a serial display stream. In monochrome mode, each bit represents one pixel on or off. In color, bits are combined from each plane to generate the correct level of red, green, and blue.For example, in low resolution ST mode (4 planes) four words are loaded into the Video Shifter for each word (16 pixels displayed on the screen). The Video Shifter combines bit 0 from each word to form a four bit number (0-15), and takes the color from the palette referenced by that number (e.g. 0101 = 5, use color from palette register 5) and outputs those levels, then takes bit 1 from each plane and outputs the color from the palette referenced by those four bits, etc.
+
+--- Page 13 ---
+[19 drawing objects, see TT030SRV.DOC.p013.svg]
+
+2.3.1.3 Monitor Connector
+
+
+The video output is provided on a 15-pin D type connector located on the back of the computer. Either VGA color or ECL monochrome monitors can be used. The pinout of this connector is as follows:
+
+Pin		Function
+
+1		Red
+2		Green
+3		Blue
+4		High Resolution Monochrome Out+
+5		Ground
+6		Red Return
+7		Green Return
+8		Blue Return14
+9		Monochrome Detect
+10		Ground
+11		Open
+12		Open
+13		Hsync
+14		Vsync
+15		High Resolution Monochrome Out-
+
+
+2.3.2 Audio Subsystem
+
+
+The TT030 extends the present audio subsystem of the Atari ST/Mega computers. It mixes the output of the existing ST programmable sound generator (PSG) with a new DMA-driven dual channel digital to analog subsystem. The TT030 combines these two sources for simple beeps and sends the resulting audio to an internal speaker provided with the system. In addition, the audio output can be connected to an external stereo amplifier for high-fidelity sound.
+
+
+2.3.2.1 Programmable Sound Generator (PSG)
+
+
+The programmable sound generator produces music synthesis, sound effects, and audio feedback. With an applied clock of 2 MHz, the PSG is capable of providing frequencies from 30 Hz to 124 kHz. The PSG has the ability to perform using three separate voice channels. The three sound channel outputs are mixed together and sent to the LMC1992 volume and tone control chip.
+
+11
+
+1
+
+6
+
+12
+
+2
+
+7
+
+13
+
+3
+
+8
+
+14
+
+4
+
+9
+
+15
+
+5
+
+10
+
+--- Page 14 ---
+[7 drawing objects, see TT030SRV.DOC.p014.svg]
+
+2.3.2.2 DMA Sound
+
+
+Sound in the form of digitized samples is stored in the system memory. These samples are fetched from dual purpose memory during horizontal blanking cycles and provided to a Digital to Analog Converter (DAC) at a constant sample frequency specified by the user. The output of the DAC is then low pass filtered to a frequency equal to forty percent of the sample frequency by a four pole switched capacitor low pass filter. The signal is further filtered by a two pole fixed frequency (15 kHz) low pass filter and sent to the LMC1992 Volume and Tone Control chip. The signal is then made available to two RCA type jacks at the back of the computer as well as the internal speaker.
+
+
+2.3.2.3 Microwire Interface
+
+
+The Microwire bus is a three wire serial interface and protocol designed to allow multiple devices to be individually addressed by the controller (SNDSHIFTER). The hardware interface which has been provided consists of two 16-bit read-write registers. One data register which contains the actual bit stream to be shifted out and one mask register which indicates which bits are valid.
+
+
+2.4 I/O SUBSYSTEMS
+
+
+2.4.1 Musical Instrument Digital Interface (MIDI)
+
+
+The Musical Instrument Digital Interface (MIDI) allows the integration of the TT030 with music synthesizers, sequencers, drum boxes, and other devices possessing MIDI interfaces. High speed (31.25 Kbaud) asynchronous current loop serial communication of keyboard and program information is provided by two ports, MIDI OUT and MIDI IN (MIDI OUT also supports the optional MIDI THRU port). MIDI specifies that data consist of eight data bits, one start bit, and one stop bit. The MIDI OUT and MIDI IN connector pinouts are as follows:
+
+
+2.4.1.1 MIDI OUT
+
+Pin			Function
+
+1			THRU Transmit Data
+2			Shield Ground
+3			THRU Loop Return
+4			OUT Transmit Data
+5			OUT Loop Return
+
+3
+
+1
+
+5
+
+4
+
+2
+
+--- Page 15 ---
+[7 drawing objects, see TT030SRV.DOC.p015.svg]
+
+2.4.1.2 MIDI IN
+
+
+Pin			Function
+
+1			Not Connected
+2			Not Connected
+3			Not Connected
+4			IN Receive Data
+5			IN Loop Return
+
+
+2.4.2 SCSI Interface
+
+
+The TT030 implements a single-ended (non-differential) SCSI bus using a 5380 SCSI controller. The controller can facilitate 8-bit data transfers at rates up to 4 Mbytes per second. The SCSI bus can support up to 7 major devices in addition to the TT030. The SCSI connector provides for connection of SCSI compatible devices through a 25-pin D type connector. Internally a full 50-pin flat cable is used. The default hard disk will be configured as SCSI Unit 0, device 0.
+
+3
+
+1
+
+5
+
+4
+
+2
+
+--- Page 16 ---
+[37 drawing objects, see TT030SRV.DOC.p016.svg]
+
+2.4.2.1 SCSI External Connector Pinout
+
+Pin			Function
+
+1			REQ (Request)
+2			MSG (Message)
+3			ID (Unit ID)
+4			RST (Reset)
+5			ACK (Acknowledge)
+6			BSY (Busy)
+7			Ground
+8			0 (Device 0)
+9			Ground
+10			3 (Device 3)
+11			5 (Device 5)
+12			6 (Device 6)
+13			7 (Device 7)
+14 			Ground
+15			CD (Control/Data)
+16			Ground
+17			ATN (Attention)
+18			Ground
+19			SEL (Select)
+20			P (Parity)
+21			1 (Device 1)
+22			2 (Device 2)
+23			3 (Device 4)
+24			Ground
+25			Open
+
+1
+
+14
+
+2
+
+15
+
+3
+
+16
+
+4
+
+17
+
+5
+
+18
+
+6
+
+19
+
+7
+
+20
+
+8
+
+21
+
+9
+
+22
+
+10
+
+23
+
+11
+
+24
+
+12
+
+25
+
+13
+
+--- Page 17 ---
+[54 drawing objects, see TT030SRV.DOC.p017.svg]
+
+2.4.2.2 SCSI Internal Connector Pinout
+
+Pin				Function
+
+1-19 ODD		Ground
+2				0 (Device 0)
+4				1 (Device 1
+6				2 (Device 2)
+8				3 (Device 3)
+10				4 (Device 4)
+12				5 (Device 5)
+14				6 (Device 6)
+16				7 (Device 7)
+18				P Parity)
+20-24			Ground
+25				Open
+26-27			Ground
+28				Open
+29-31			Ground
+32				ATN (Attention)
+33-35			Ground
+36				BSY (Busy)
+37-49 ODD		Ground
+38				ACK (Acknowledge)
+40				RST (Reset)
+42				MSG (Message)
+44				SEL (Select)
+46				CD (Control/Data)
+48				REQ (Request)
+50				ID (Unit ID)
+
+
+2.4.3 Floppy Disk Interface
+
+
+The floppy disk subsystem is designed around the Floppy Disk Controller supporting up to two daisy-chained disk drives. One internal and one external drive can be connected to the system.
+
+The subsystem interfaces to the RAM through the ACSI DMA controller. Commands and arguments are sent to the FDC by first writing to the DMA Mode Control Register to select the desired FDC register and then writing the data bytes.
+
+The standard drive for the system is a 720 Kbyte (capacity after formatting) 3 1/2-inch floppy disk. The internal drive cabling supports the Disk Change Line signal from the floppy drive and is read when the drive is selected, and is asserted when power is applied or a diskette is removed from the drive. The signal can be cleared by issuing a step command to the drive.
+
+50
+
+49
+
+48
+
+47
+
+46
+
+45
+
+44
+
+43
+
+42
+
+41
+
+40
+
+39
+
+38
+
+37
+
+36
+
+35
+
+34
+
+33
+
+32
+
+31
+
+30
+
+29
+
+28
+
+27
+
+26
+
+25
+
+24
+
+23
+
+22
+
+21
+
+20
+
+19
+
+18
+
+17
+
+16
+
+15
+
+14
+
+13
+
+12
+
+11
+
+10
+
+9
+
+8
+
+7
+
+6
+
+5
+
+4
+
+3
+
+2
+
+1
+
+--- Page 18 ---
+[16 drawing objects, see TT030SRV.DOC.p018.svg]
+
+2.4.3.1 Floppy Port Pinout
+
+
+Pin			Function
+
+1			Read Data
+2			Side 0 Select
+3			Logic Ground
+4			Index Pulse
+5			Drive 0 Select
+6			Drive 1 Select
+7			Logic Ground
+8			Motor On
+9			Direction In
+10			Step
+11			Write Data
+12			Write Gate
+13			Track 00
+14			Write Protect
+
+
+2.4.4 SCC Serial Ports UA04
+
+
+The TT030 contains an 85C30 Serial Communications Controller (SCC) that provides a dual channel, multi-protocol device that provides two serial ports. Port A can be used as either a network port or a standard slow speed RS-232C serial port. The input/output of port A is routed to the appropriate connector, either an 8-pin mini-DIN or DB-9P, by setting a bit in a register(user application or Operating System). The output pins on the unselected port remain inactive Port B is configured to be a low speed standard RS-232C serial port that can be used for connecting a modem or local mainframe.
+
+The input/output of Port B is connected to a DB-9P connector and modem control signals are derived directly from the 85C30 Port B control lines. Port B can also operate with split transmit and receive baud rates.
+
+The PCLK input to the SCC is rated at 8 MHz. The RTXCA and RTXCB input is provided with a 1.672 MHz clock. The TRXCA input comes from the LAN connector, and the TRXCB input is rated at 2.4576 MHz.
+
+11
+
+10
+
+13
+
+12
+
+9
+
+8
+
+14
+
+7
+
+6
+
+4
+
+5
+
+3
+
+2
+
+1
+
+--- Page 19 ---
+[36 drawing objects, see TT030SRV.DOC.p019.svg]
+
+2.4.4.1 SCC RS-232 Pinouts
+
+Port A
+
+Pin			Function
+
+1			Carrier Detect (In)
+2			Receive Data (In)
+3			Transmit Data (Out)
+4			Data Terminal Ready (Out)
+5			Ground
+6			Data Set Ready (In)
+7			Request to Send (Out)
+8			Clear to Send (In)
+9			No Connect
+
+Port B
+
+Pin			Function
+
+1			Carrier Detect (In)
+2			Receive Data (In)
+3			Transmit Data (Out)
+4			Data Terminal Ready (Out)
+5			Ground
+6			Data Set Ready (In)
+7			Request to Send (Out)
+8			Clear to Send (In)
+9			No Connect
+
+
+2.4.4.2 SCC LAN Connector Pinout
+
+Port A LAN Connector
+
+Pin			Function
+
+1			Output Handshake
+2			Input Handshake
+3			Transmit Data-
+4			Ground
+5			Receive Data-
+6			Transmit Data+
+7			(Reserved)
+8			Receive Data+
+
+1
+
+6
+
+2
+
+7
+
+3
+
+8
+
+4
+
+9
+
+5
+
+1
+
+6
+
+2
+
+7
+
+3
+
+8
+
+4
+
+9
+
+5
+
+3
+
+1
+
+6
+
+4
+
+5
+
+7
+
+--- Page 20 ---
+[50 drawing objects, see TT030SRV.DOC.p020.svg]
+
+2.4.5 MFP Serial Port
+
+
+The 68901 MFP also provides a slow speed RS-232C serial port to the system. The baud rate clock for the MFP serial port transmitter and receiver is derived from the timer D output of
+the MFP. Given the MFP's 2.4576 MHz clock, baud rates up to 19.2Kbaud can be supported.
+The MFP serial port is connected to a DB-9P connector and contains a complete complement of modem control lines.
+
+
+2.4.5.1 MFP Serial Port Pinout
+
+Pin			Function
+
+1			Carrier Detect (In)
+2			Receive Data (In)
+3			Transmit Data (Out)
+4			Data Terminal Ready (Out)
+5			Ground
+6			No Connect
+7			Request to Send (Out)
+8			Clear to Send (In)
+9			Ring Indicator (In)
+
+
+2.4.6 Parallel Interface
+
+
+The parallel interface is implemented through the programmable sound generator chip. It is a subset of the Centronics standard and is output to a DB25 connector. The Centronics STROBE signal is generated from the PSG bit. The Centronics BUSY signal is connected to one of the parallel input lines of the MFP to permit interrupt driven printing. Eight bits of read/write data are handled through I/O port B on the PSG at a typical transfer rate exceeding 4 Kbytes per second.
+
+
+2.4.6.1 Parallel Port Pinout
+
+Pin			Function
+
+1			STROBE
+2			Data 0
+3			Data 1
+4			Data 2
+5			Data 3
+6			Data 4
+7			Data 5
+8			Data 6
+9			Data 7
+10			Not Connected
+11			BUSY
+12-17		Not Connected
+18-25		Ground
+
+1
+
+6
+
+2
+
+7
+
+3
+
+8
+
+4
+
+9
+
+5
+
+1
+
+14
+
+2
+
+15
+
+3
+
+16
+
+4
+
+17
+
+5
+
+18
+
+6
+
+19
+
+7
+
+20
+
+8
+
+21
+
+9
+
+22
+
+10
+
+23
+
+11
+
+24
+
+12
+
+25
+
+13
+
+--- Page 21 ---
+[27 drawing objects, see TT030SRV.DOC.p021.svg]
+
+2.4.7 Keyboard Interface
+
+
+The keyboard transmits encoded make/break key scan codes (with two key rollover), mouse/trackball data, joystick data, and time-of-day.  The keyboard receives commands and sends data via bidirectional communication implemented with an MC6850 Asynchronous Communications Interface Adapter (ACIA) and an HD6301 8-bit microcomputer located in the keyboard. The data transfer rate is 7812.5 bits per second. The keyboard interfaces through a 6-pin telephone style jack.
+
+
+2.4.7.1 Keyboard Connector Pinout
+
+Pin			Function
+
+1			+5V
+2			+5V
+3			Transmit
+4			Receive
+5			Ground
+6			Ground
+
+
+2.4.8 Mouse and Joystick Interface
+
+
+The Atari two-button mouse is a mechanical, opto-mechanical, or optical mouse with the minimal performance characteristics of 100 counts/inch, maximum velocity of 10 inches per second, and
+maximum pulse phase error of 50 %. The joystick is a four direction switch-type joystick with one fire button. The mouse and joystick are connected via two DB-9P connectors located on
+either side of the keyboard. A mouse or joystick can be connected on the right side of the keyboard. The connector on the left side of the keyboard is for joystick only.
+
+
+2.4.8.1 Mouse/Joystick Connector Pinout
+
+Pin			Function
+
+1			Up XB
+2			Down XA
+3			Left YA
+4			Right YB
+5			Not Connected
+6			Fire/Left Button
+7			+5VDC
+8			Ground
+9			JOY1/Fire Right Button
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+1
+
+6
+
+2
+
+7
+
+3
+
+8
+
+4
+
+9
+
+5
+
+--- Page 22 ---
+[13 drawing objects, see TT030SRV.DOC.p022.svg]
+
+2.4.8.2 Joystick Connector Pinout
+
+Pin			Function
+
+1			Up
+2			Down
+3			Left
+4			Right
+5			Reserved
+6			Fire Button
+7			+5VDC
+8			Ground
+9			Not Connected
+
+
+2.4.9 ROM Cartridge
+
+
+The TT030 contains a ROM cartridge port that is fully compatible with the Atari ST cartridges. The cartridge is physically connected through a 40-pin edge connector located on the left side of the case. ROM cartridges are mapped to a 128 Kbyte area starting at address FA0000 and extending to FB8FFF.
+
+
+2.4.10 VMEbus
+
+
+The VME bus is provided to allow for system expansion and conforms to industry standard VME bus revision C.1. Interrupts IRQ1-IRQ7 are interfaced and arbitrated through the SCU chip. A global 16 MHz clock is provided to the VME bus via the TTVIDEO chip and a 74LS244 latch. This provides total independence of the clock from the processor speed. A 24-bit address bus, 16-bit data bus, and control signals are provided to the VMEbus via the MC68030r. This configuration causes the main system board to act as the VME bus controller when a card is installed in the bus slots.
+
+1
+
+6
+
+2
+
+7
+
+3
+
+8
+
+4
+
+9
+
+5
+
+--- Page 23 ---
+
+2.5 SYSTEM STARTUP
+
+
+After a RESET (power-up or reset button) the 68030 will start executing at the address pointed to by locations 4-7, which is ROM (MCU maps the first 8 bytes of ROM at E00000-7 into addresses 0-7). Location 000004 points to the start of the operating system code in ROM. The following sequence is then executed:
+
+1.	Perform a reset instruction (outputs a reset pulse).
+
+2.	Read the longword at cartridge address FA0000. If the data read is a "magic number", execute from the cartridge (ROM cartridge instructions take over here). If not, continue.
+
+3.	Check for a warm start (see if RAM locations were written), initialize the memory controller.
+
+4.	Initialize the PSG chip, deselect disk drives.
+
+5.	Initialize color palettes and set screen address.
+
+6.	If not a warm start, zero memory.
+
+7.	Set up operating system variables in RAM.
+
+8.	Set up exception vectors.
+
+9.	Initialize MFP.
+
+10.	Set screen resolution.
+
+11.	Attempt to boot floppy; attempt to boot hard disk; run program if succeeded.
+
+12.	If no boot disk, the 256K boot ROM will bring up the desktop.
+
+
+2.6 SYSTEM ERRORS
+
+
+The 68030 has a feature called exception processing, which takes place when an interrupt or bus error is indicated by external logic, when the CPU detects an error internally, or when certain types of instructions are executed. An exception will cause the CPU to fetch a vector (address to a routine) from RAM and start processing at the routine pointed to by the vector. Exception vectors are initialized by the operating system. Those exceptions which do not have legitimate occurrences (interrupts being legitimate) have vectors pointing to a general purpose routine which will display some number of bombs showing on the screen. The number of bombs equals the number of the exception which occurred.
+
+System errors may or may not be recoverable. Errors in loading files from disk may cause the system to crash, necessitating a reset. Verify the diskette and disk drive before attempting to
+repair the computer.
+
+--- Page 24 ---
+
+2.6.1 Number of Bombs and Meaning
+
+
+Bombs		Meaning
+
+2			Bus Error. MCU (U501) asserted bus error or CPU detected an error. This is due to the processor's HALT line being driven low stopping all operations. This condition can be due to a faulty MFP, RAM, ROM, PSG, or a short/open on the PCBA address/data lines.
+
+3			Address Error. Processor attempted to access word or long word sized data on an odd address.
+
+4			Illegal Instruction. Processor fetched an instruction from ROM or RAM which was not a legal instruction.
+
+5			Zero Divide. Processor was asked to perform a division by zero.
+
+6			Chk Instruction. This is a legal instruction, if software uses this, it must install a handler.
+
+7			Trapv Instruction. See Chk instruction.
+
+8			Privilege Violation. CPU was in user mode, tried to access a location in supervisor address space.
+
+9			Trace. If trace bit is set in the status register, the CPU will execute this exception after every instruction. Used to debug software.
+
+10			Line 1010 Emulator. CPU read pattern 1010 as an instruction. Provided to allow user to emulate his own instructions.
+
+11			Line 1111 Emulator. See Line 1010 Emulator.
+
+12-23		Unassigned, should be no occurrence.
+
+24			Spurious Interrupt. Bus error during interrupt processing.
+
+25-31		Autovector Interrupt. Even numbered vectors are used, others should have no occurrence.
+
+32-63		TRAP Instruction. CPU read instruction which forced exception processing.
+
+64-79		MFP interrupts.
+
+80-255		User interrupts.2.7 functional block diagram
+
+--- Page 25 ---
+
+SECTION THREE
+
+TESTING
+
+
+3.1 OVERVIEW/TEST EQUIPMENT
+
+
+3.1.1 Overview
+
+
+This section pertains to the test equipment, diagnostic software, and test procedures used to verify correct operation and repair of the TT030 computer. The diagnostic cartridge should be used if possible. If the unit gives no display or RS-232 output when running the cartridge, see "Troubleshooting a Dead Unit" below.
+
+Since the level of complexity in the TT030 system is high, it should not be expected that this document can cover all possible problems or pinpoint the causes; rather, the intent here is to
+give a systematic approach which a technician can use to narrow down a problem to its most likely source. Experience in troubleshooting computer systems is assumed. Knowledge of the
+68030 processor is helpful.
+
+Economics will be an important consideration; due to the low cost of the TT030 computer, little time can be justified in troubleshooting down to the component level when it may be
+cheaper to replace the functional subassembly. Many of the more expensive (and critical) components are socketed, making verification and replacement faster.
+
+
+3.1.2 TEST EQUIPMENT
+
+
+The following equipment will be needed to test the TT030 computer:
+
+	•	Atari TTC1434 VGA Monitor (or similar)
+	•	Atari TTM195 Monochrome Monitor (or similar)
+	•	High Density External Floppy Disk Drive
+	•	ST Port Test Fixture
+	•	RS-232 Loop-Back Connector DB-9 (4)
+	•	MIDI Loop-Back Cable
+	•	TT030 Test Diagnostic Cartridge (ROM REV 1.4)
+	•	Blank Double Sided 3 1/2-inch Diskettes (2)
+	•	LAN Port Loopback Connector
+	•	2 Megabyte ST RAM Daughter Board
+	•	4 Megabyte TT RAM Daughter Board
+	•	4 Port XYCOM VME Board
+	•	Greenspring VME RAM Board
+	•	SCSI Hard Drive
+
+Optional (for troubleshooting):
+
+	•	RS-232 terminal (or STE with VT52 emulator)
+
+--- Page 26 ---
+
+3.2 TEST CONFIGURATION
+
+
+With the power switch off, install the Diagnostic Cartridge with the label facing up.
+
+IMPORTANT--if the cartridge does not have the plastic enclosure, BE SURE THE CARTRIDGE IS INSTALLED WITH THE CHIPS FACING DOWN).
+
+Connect cables from the ST port test fixture into the acsi interface port, parallel port, and joystick/mouse ports. The joystick cables should be plugged in so that, if the fixture ports were directly facing the computer ports, the cables would not be crossed. Plug the LAN loopback connector and MIDI loopback cables into their ports. Plug the color monitor into the monitor output (a monochrome can be used instead). Plug the SCSI Hard disk into the SCSI port.
+
+Plug the 2 megabyte ST RAM daughter board into the ST RAM connector on the main board. Plug the 4 megabyte TT RAM daughter board into the TT RAM connector on the main board.
+
+NOTE: THE RS-232 LOOPBACK CONNECTOR SHOULD NOT BE INSTALLED UNTIL AFTER THE MAIN MENU IS DISPLAYED.
+
+Power on the unit. Some tests will be run automatically; in a few seconds the menu screen should appear. If the screen appears, skip down to "TT030 Diagnostic Cartridge", below. If the screen turns red with a ROM type failure check the ROM diagnostic section for details. If no screen appears, refer to the next section "Troubleshooting a Dead Unit".
+
+
+3.3 TROUBLESHOOTING A DEAD UNIT
+
+
+In the event that the system is correctly configured and powered on and no display appears, this is the procedure to use for determining the problem. This assumes elementary steps have been taken, such as checking the power LED to verify the unit is powered on and making sure the monitor is working. If the LED in the forward left corner is not illuminated, check the power supply voltages first. If voltages require adjusting, perform the adjustments. If the power supply is defective, replace the supply, then if the LED is still not illuminated, check to see if it is defective.
+
+1.	Connect a dumb terminal to the RS-232 port of the unit under test (U.U.T.). You can use an STE running the VT52 terminal emulator program. Please see the owner's manual for setting up VT52. The cable should connect pin 3 (serial out) of the U.U.T to pin 2 (serial in) of the terminal, and vice versa. Connect pin 7 (ground) to pin 7. The terminal should be set up for 9600 bps, 8 bits of data, 1 stop bit, no parity (this is the default condition for the VT52 emulator).
+
+2.	Insert the Diagnostic Cartridge into the U.U.T., and power on the unit. If the Diagnostic Cartridge messages appear on the display of the terminal, use the diagnostic to troubleshoot the computer. If not, the computer will have to be disassembled to troubleshoot. Refer to "TT030 Diagnostic Cartridge" below for information on using the cartridge. If no activity is seen on the RS-232 port or display, continue with (3) below.
+
+--- Page 27 ---
+
+3.	Disassemble the computer so that the printed circuit board is exposed (see Section 4, Disassembly). Power up the computer. Using an oscilloscope, verify the 32 MHz clock to the 68030 CPU (pin 6). Replace oscillator if necessary. Then check pin 74 (STATUS) of the 68030 CPU. It  should be a TTL high. If so, go on to 4 below. If not, the CPU is halted. The reasons may be: (1) bad reset circuit, (2) double bus error, (3) bad CPU.
+
+4.	Check (1) by observing signal input of the HALT line. It should be tied high. Check (2) by observing (BERR) signal as the unit is powered on. It should be high always. If there are logic low pulses, some component is malfunctioning and the PAL at location U112 is generating the error. Verify the clocks and replace these components to verify them (if socketed).
+
+5.	If still failing, the CPU is unable to read ROM or there is a component which is not responding to a read or write by the CPU, probably the MFP 68901 or DMA Controller. There is no way to check for a bad 68030 other than by elimination of the other two possibilities, although a hot CPU (too hot to touch for more than a second) strongly indicates a bad CPU.
+
+6.	If the CPU is not halted, it should be reading instructions from ROM cartridge, if installed, and data and address lines will be toggling. (If not, replace CPU.) At this point, there is the possibility that both the video and RS-232 subsystems are failing. Verify the output of the MFP chip while powering on the unit with the cartridge installed. If data is being sent, trace it through the 1488 driver. Note that + and - 12v. is required for RS-232. If all looks good, here may be something wrong with the connection to the terminal.
+
+7.	Also verify also the output of the TTVIDEO chip. If using a color monitor, check the R, G, and B outputs. Note that if DE is not going high, no picture will be possible. If using monochrome, check the input to the MFP, pin 32, XMONO. Note that if the CPU does not read a low on this signal on power-up, it will cause RGB output on the TTVIDEO chip.
+
+8.	If the TTVIDEO is outputting a signal, but the picture is unreadable, there is probably a problem with screen RAM. The cartridge should be used to diagnose this problem, with the RS-232 terminal as a display device.
+
+
+3.4 TT030 DIAGNOSTIC CARTRIDGE
+
+
+The TT030 Diagnostic Cartridge is used to detect and isolate component failures in the TT030 computers. This document refers to TT030 Diagnostic revision 1.4. Users of earlier versions
+should refer to the appropriate Troubleshooting Guide. This section gives a brief guide to use with a description of each test, error codes or pass/fail criteria, and recommendations on repair.
+
+
+3.4.1 Power-up
+
+
+With the power switch off, install the Diagnostic Cartridge with the label facing up.
+
+IMPORTANT--if the cartridge does not have the plastic enclosure, BE SURE THE CARTRIDGE IS INSTALLED WITH THE CHIPS FACING DOWN).
+
+--- Page 28 ---
+
+Power on the unit. The diagnostic program performs several tests on power-up. The screen will appear scrambled for a few seconds and several messages will be displayed before the menu is printed. These messages are provided to help troubleshooting in case the system crashes during initialization without displaying an error code. The messages are "Hello World", "ST RAM Size Checked", "Looking for VME RAM", "No VME RAM", "Looking for FPU", and "Checking Bus Error Handling". The screen will turn red (dark background in monochrome) if an error occurs in the initial testing, with a message indicating the failure.
+
+The lowest 2 Kbytes of RAM is tested on power-up; if a location fails, the error will be printed to the RS-232 device. It is assumed that if RAM is failing, the screen may not be readable and program execution will fail because there is no stack or system variables. The program will continue to test RAM and print errors, but no screen will be displayed (the screen may turn red). Repair RAM.
+
+TOS ROM wait states are tested at power up and during the ROM diagnostic. If the wait state test fails an error will be displayed and the screen will turn red. Three failures can occur at power up and during the ROM test. They are (1) the bit in MCU used to toggle wait states to zero could not be set, (2) the bit in MCU was set but the time to read the TOS ROM remained the same, and (3) the ROM failed the checksum before or after the wait states were changed. If any of these failures occur replace the MCU or TOS ROMs and power up the unit again.
+
+If the keyboard fails, it will be inactivated. The user must connect a terminal to the RS-232 port. The diagnostic program looks for keystrokes from the RS-232 device.  If the display is
+unreadable, the RS-232 terminal should be used. All messages are printed to the RS-232 port as well as the screen.
+
+--- Page 29 ---
+
+3.4.2 POWER-UP INITIALIZATION ERRORS
+
+
+INITIALIZATION (Errors occurring before the title and menu appear.)
+
+I1	RAM data line is stuck.
+
+I2	RAM disturbance. Location is altered by write to another location.
+
+I3	RAM addressing. Wrong location is being addressed.
+
+I4	MMU error. No DSACK after RAM access.
+
+I5	RAM sizing error. Uppermost address fails.
+
+I6	Bus Error handling failed. Bus Error occurred (on purpose), but caused a crash (e.g. system was unable to read the vector from RAM).
+
+I7	Bus Error not detected. PAL U112 not asserting Bus Error or the signal is not reaching the 68030.
+
+T0	MFP timers failed.
+
+T1	Vertical sync timing failed.
+
+T2	Horizontal sync timing failed.
+
+T3	Display Enable Interrupt failed.
+
+T4	Memory Controller video address counter failed.
+
+T5	PSG Bus test. PSG chip is causing a bus error by staying on the data bus too long.
+
+T6	Floppy Disk Controller Bus test. FDC chip is causing a bus error by staying on the data bus too long.
+
+K0	Stuck key
+
+K1	Keyboard controller is not responding.
+
+K2	Keyboard controller reports error.
+
+--- Page 30 ---
+
+3.4.3 TEST  MENU
+
+
+The normal screen will be dark blue with white letters. The test title and revision number are displayed at the top, with the amount of RAM and keyboard controller revision below, and a test menu below that. To select tests, the user types the keys corresponding to those tests, and then the RETURN key. After the operator selects a test, the program will not proceed until the key break is detected (when the operator releases the key).
+
+TT Field Service Diagnostic Test Rev. 1.4
+©1991, Atari Corp.
+
+	XXM ST RAM						XXM TT RAM
+	Keyboard revision 2					TOS Version 3.1 USA
+
+	R RAM Test			O O.S. ROM			C Color
+	K Keyboard			M MIDI			S Serial Port
+	A Audio				T  Timing			D DMA Port
+	F Floppy Disk		P Printer/Mouse/Joy Ports	H High Resolution
+	I SCSI Bus			J SCC				L  Real-Time Clock
+	V  VME
+
+	Q Run Auto Mode Long (R,O,L,T,F,I,V,M,D,P,S,J)
+	Z Run Unattended Internal tests (R,O,L,T,F,I,V)
+
+	E Examine/Modify memory
+	B Set RS-232 rate
+	? Help
+
+	Enter Letter(s), and Return
+
+
+The RAM size, keyboard revision, O.S. version, and country (or language) are shown. The 'Q' selection sequences through all the tests except for Audio, Keyboard, Color, and High resolution monitor. The 'Z' selection sequences through RAM, ROM, Real-Time Clock, Timing, Floppy, SCC, and VME. Selection 'E' enables the operator to examine or modify RAM or hardware registers. 'B' enables the operator to change the baud rate on the RS-232 port. Pressing the up arrow increases it, pressing the down arrow decreases it. Multiple tests can be run at one time by typing in the tests and number of passes to run.
+
+For example T M2 L3 V0 <ENTER> would result in the Timing test being run once, MIDI test twice, Real-Time Clock test three times, and VME indefinitely or until the <ESC> key is pressed.
+
+After a test or series of tests completes, the pass/fail status and error report, if any, will be displayed. When the selected test(s) have passed the screen will turn green accompanied by a
+short beep. If the selected test(s) fails the screen will turn red accompanied by an audible tone which oscillates. This allows the user to perform other troubleshooting functions while the
+running diagnostics without having to look directly at the screen for an indication of a Pass or Fail status. Press the space bar to return to the menu.
+
+--- Page 31 ---
+
+If multiple tests are selected, the sequence can be halted before completion by pressing the ESC key. At the completion of the current test, the sequence will halt, with the options of either continuing or returning to the menu. In some cases there will be a considerable delay before the current test completes and the keystroke is detected.
+
+
+3.4.4 SUMMARY OF TESTS
+
+
+RAM TEST (R)
+
+System RAM is tested in three stages: low 2 kbytes, middle (up to 64k), and from 64k to top. The test patterns used are: all 1s, all 0s, a counting pattern (data=low word of the address),
+reverse counting pattern (data=complement of address low word). The counting pattern is copied from the top and bottom of a 32 Kbyte buffer into the current 32 Kbytes of video RAM, then shifts video RAM to a new area, verifies the pattern, and repeats the test, until the top of RAM is reached. Finally, addressing at 64k boundaries is checked by writing unique pattern in last 256 bytes of each 64k block.
+
+If an error occurs, the display turns red accompanied by an oscillating tone and the error code is displayed, followed by the address, data written, data read, and the bits which did not agree.
+
+	For example: " R2 45603E W:603E R:613C bad bits: 1,8".
+
+The address as well as the bit position must be used to find the correct RAM chip. The following table gives a correspondence between the addresses and banks:
+
+ST RAM on Main PCB (First Megabyte):
+
+Address		Bad Bit(s)		RAM Chip
+
+0-0FFFFF	0-3				U500
+			4-7				U501
+			8-11				U502
+			12-15				U503
+			16-19			U504
+			20-23			U505
+			24-27			U506
+			28-31			U507
+
+ST RAM on Main PCB (Second Megabyte):
+
+Address			Bad Bit(s)		RAM Chip
+
+100000-1FFFFF	0-3		U508
+				4-7		U509
+				8-11		U510
+				12-15		U511
+				16-19		U512
+				20-23		U513
+				24-27		U514
+				28-31		U515
+
+--- Page 32 ---
+
+2/8 Megabyte ST RAM expansion Board:
+
+LSB OF Address	Bad Bit(s)	RAM Chip
+
+0 or B			0-3		U17
+				4-7		U18
+				8-11		U19
+				12-15		U20
+
+2 or A			0-3		U10
+				4-7		U11
+				8-11		U14
+				12-15		U15
+
+4 or C			0-3		U5
+				4-7		U6
+				8-11		U7
+				12-15		U8
+
+6 or E			0-3		U1
+				4-7		U2
+				8-11		U3
+				12-15		U4
+
+4/16 Megabyte TT RAM expansion Board
+
+LSB OF Address	Bad Bit(s)	RAM Chip
+
+0, 4, B,  or C		0-7		U104
+				8-15		U105
+
+2, 6, A, or E		0-7		U102
+				8-15		U103
+
+RAM ERROR CODES
+
+Except where noted, repair by replacing the chip corresponding to the indicated bit(s).
+
+R0	Error in low memory, possibly affecting program execution.
+
+R1	Error in chip.
+
+R2	Address error. Bad chip or memory controller. Address line not working.
+
+R3	Address error at 64k boundary.
+
+R4	Error during video RAM test. Bad chip.
+
+--- Page 33 ---
+
+ROM TEST (O)
+
+This test reads the configuration bytes of the operating system to determine the version and language/country. All bytes from operating system ROMs are then read and the checksums are calculated and displayed. A CRC is then calculated for each EPROM. The test also sets a bit in the MCU in order to change wait states on ROM reads from 1 to 0.
+
+The test fails if the CRC calculated does not match the CRC located in the last location for each EPROM (e.g. Version 2, French), the wait state bit in MCU could not be changed, or the
+wait state bit was changed b the time to read the ROM remained the same. Incorrect CRCs are indicated by the display turning red and an oscillating tone followed by a message. Wait state failures are indicated by one of two messages. Either "Bit 7 does not change" or "Time between reads did not change". If an error is displayed, replace the corresponding ROM or MCU.
+
+
+COLOR TEST (C)
+
+This test verifies the TTVIDEO chip. First, seven color bands are displayed: red, green, blue, cyan, magenta, yellow, and white. Each band consists of 8 levels of intensity. All 16 color
+palettes are represented, each palette is a vertical strip across the screen (strips should not be discernable, but each color should be a straight line across the screen). Because of the tight timing involved, keystroke interrupts will cause the display to jitter.
+
+Second, a dark gray V shape will be displayed in the center of the screen. The background of the screen should be solid black.
+
+Third, sixteen rows of sixteen color squares are displayed. Each row consists of 16 levels of intensity. All 256 color palettes are represented, each palette is a square on the screen.
+
+The operator should see that there are no gaps or missing scan lines in the display. If lines are missing, check the four outputs on the TTVIDEO chip for that color, and verify the output. Too low a brightness setting on the monitor will cause the monitor not to distinguish between fine levels, making it appear there are only four levels being output.
+
+The TTVIDEO chip has three color outputs. One for red (RED), green (GRN) and blue (BLU). Each of these outputs give 16 levels of intensity for each color, depending on which of the outputs are on.
+
+This allows us to get 16 equal steps on the outputs. These signals then passes through a transistor amplifier, and from there to the video monitor connector.
+
+--- Page 34 ---
+
+SYMPTOMS AND FIXES:
+
+1.	Missing primary color. Check the output of the transistor amplifier. Q203 is blue, Q202 is green, Q201 is red. Look for a staircase pattern (sixteen levels of intensity). If the signal is there, trace forward to the video connector, if not, trace backward to the TTVIDEO chip, until the faulty component is found.
+
+2.	Primary colors present, secondaries missing or incorrect. Replace the TTVIDEO chip (U204).
+
+3.	Coarse change in intensity (not a smooth dark to light transition). Replace TTVIDEO chip (U204) or look for a short on the output of one of the three color outputs for the appropriate color.
+
+4.	Specks or lines on the screen. This can be caused by bad RAM; if RAM has been tested and is good, replace the TTVIDEO chip (U204).
+
+5.	Wavering display, horizontal lines not occurring in the same place every time. The probable causes for this type of failure are MCU (U206), TTVIDEO (U204), MFP (U303), or SCU (U805).
+
+NOTE: if the keyboard is not connected, the input to the 6850 will be low, causing continual interrupts.
+
+
+KEYBOARD TEST (K)
+
+Two types of test are run. The keyboard self-test is done first, and if this passes, a screen is displayed representing the keyboard. The operator presses keys and observes that the corresponding character on the screen changes (reverses background color). The key will also be displayed in the lower half of the screen. The mouse buttons and four directions are also shown on the screen. Connect the mouse and move in any direction and the arrow will flicker. Any key clicks while the mouse is moving indicates a short.
+
+NOTE: it is possible, if pressing keys very rapidly, to leave the representation of the key on screen in a depressed state. This does not indicate a problem with the hardware.
+
+The self-test checks communication between the CPU and the keyboard microcomputer, and checks RAM and ROM in the keyboard microcomputer, and scans the keyboard for stuck keys.
+
+KEYBOARD ERROR CODES
+
+K0	Stuck key. A key closure was detected while the keyboard self test was executing.
+
+K1	Keyboard not responding. A command was sent to the keyboard processor and no status was returned within the allowed time. The keyboard needs to be replaced or the communication channel through the 6850 (U301) is not functional.
+
+K2	Keyboard status error. The self test command was sent to the keyboard, on completion of the test, the keyboard sent an error status. Replace the keyboard.
+
+--- Page 35 ---
+
+MIDI TESTS (M) (REQUIRES MIDI LOOPBACK CABLE)
+
+This test sends data out the MIDI port, (data loops back through the cable) and reads from the input and verifies the data is correct. This also tests the interrupt from the 6850 through the
+MFP chip. The LED in the loopback cable will blink as data is sent (not all cables have the LED).
+
+MIDI ERROR CODES
+
+M0	Data not received. Trace the signal from the output of the 6850 (U300), through the drivers (U206), loopback cable, and receivers to the input of the 6850 (U300). Replace the defective component.
+
+M1	Write/Read data mismatch. The data written was not the same as the data read. Replace 6850 (U300).
+
+M2	Input frame error. Bad 6850 (U300) or bad driver (U206) or receiver causing noisy signal.
+
+M3	Input parity error. Bad 6850 (U300) or bad driver (U206) or receiver causing noisy   signal.
+
+M4	Input data overrun. The 6850 received a byte before the previous byte was read. Probable bad 6850 (U300), also can be caused by the MFP (U303) not responding to the interrupt request.
+
+SERIAL PORT TEST (S) (REQUIRES RS-232 LOOPBACK CONNECTORS)
+
+NOTE: DO NOT INSTALL THE RS-232 LOOPBACK CONNECTOR UNTIL AFTER THE MAIN MENU IS DISPLAYED.
+
+First the RS-232 control lines are tested (which are tied together by the loopback connector), then the data loopback is tested. Data is checked transmitting/receiving using a polling method first, then using interrupts.
+
+Data is transmitted at 300, 600, 1200...19200 bps. Data transmission is performed by the MFP (U303) and the 1488 and 1489 driver and receiver chips (U307, U308). Interrupts are a function of the MFP (U303). Control lines are output by the PSG chip (U302) and input on the MFP. Note that this test does not thoroughly test the drive capability of the port. If the test passes, but the unit fails in use, it is likely that the 1488 (U307) or 1489 (U308) chips are bad.
+
+SERIAL PORT ERROR CODES
+
+Data  transmission  error:
+
+S0	Data not received. Check signal path: MFP (U303) pin 9 to 1488 (U307) pin 5 to J304 pin 3 to J304 pin 2 to 1489 (U308) pin 1 to MFP (U303) pin 10.
+
+S1	Data mismatch. Data read was not what was sent. Check integrity of the signal. May be bad driver (U307), receiver (U308), or MFP (U303).
+
+S2	Input frame error. Incorrect time between start and stop bits. Probable MFP failure (U303).
+
+--- Page 36 ---
+
+S3	Input parity error. Input data had incorrect parity. Probable MFP failure (U303).
+
+S4	Input data overrun. A byte was received before the CPU read the previous byte. MFP failure (U303) or, less likely, MCU (U206) failure.
+
+S5	No IRQ. CPU did not detect an interrupt by the MFP. MFP (U303) or MCU (U206) failure.
+
+S6	Transmit error. MFP (U303) transmitter failed.
+
+S7	Transmit error interrupt. An error condition was created intentionally to cause an interrupt, and the MFP did not respond.
+
+S8	Receive error interrupt. An error condition was created intentionally to cause an interrupt, and the MFP did not respond.
+
+S9	RI/DTR connection. Signal sent at DTR is not detected at RI.
+
+SA	DCD/DTR connection. Signal sent at DTR is not detected at DCD.
+
+SB	RTS/CTS connection. Signal sent at RTS is not detected at CTS.
+
+SC	RS-232 input shorted to output. The input and outputs of the MFP serial port are shorted together.
+
+
+SCC Test (j) (Requires loopback connectors)
+
+The SCC diagnostic tests the SCC chip for several functions. Internal loopback polled (asynch), break (test ext loopback), external loopback polled (asynch), modem control lines, and external loopback interrupt (asynch). Ports A, B, and D are tested in RS-232 mode, and the LAN at port A is also tested.
+
+SCC Error Codes
+
+Port A Errors:
+
+SCC A internal loopback: Transmitter time-out		Transmitter failed.
+
+SCC A internal loopback: Receiver time-out	Receiver failed.
+
+SCC A internal loopback: Overrun	A byte was received before the CPU read the previous byte.
+
+SCC A internal loopback: Framing error	Incorrect time between start and stop bits.
+
+SCC A internal loopback: Parity error	Input data had incorrect
+parity.
+
+SCC A internal loopback: Data compare	Data read was not what was sent.
+
+Port A has no loopback connector	The loopback connector is not installed on Port A.
+
+--- Page 37 ---
+
+LAN has no loopback connector	The loopback connector is not installed on the LAN Port.
+
+LAN ERROR: DCD IS ACTIVE WITHOUT RTS ON
+
+The Carrier detect signal is active without a request to send.
+
+LAN ERROR: RTS IS ACTIVE BUT DCD IS NOT RESPONDING
+
+The request to send signal is on but no carrier is active.
+
+Port A async mode: Transmitter time-out	Transmitter failed.
+
+Port A async mode: Receiver time-out	Receiver failed.
+
+Port A async mode: Overrun	A byte was received before the CPU read the previous byte.
+
+Port A async mode: Framing error	Incorrect time between start and stop bits.
+
+Port A async mode: Parity error	Input data had incorrect parity.
+
+Port A async mode: Data compare	Data read was not what was sent.
+
+Port A modem control error: DTR-DCD	Signal sent at DTR is not detected at DCD.
+
+Port A modem control error: DTR-DSR	Signal sent at DTR is not detected at DSR.
+
+Port A modem control error: RTS-CTS	Signal sent at RTS is not detected at CTS.
+
+Port B Errors:
+
+SCC B internal loopback: Transmitter time-out	Transmitter failed.
+
+SCC B internal loopback: Receiver time-out	Receiver failed.
+
+SCC B internal loopback: Overrun	A byte was received before the CPU read the previous byte.
+
+SCC B internal loopback: Framing error	Incorrect time between start and stop bits.
+
+SCC B internal loopback: Parity error	Input data had incorrect parity.
+
+SCC B internal loopback: Data compare	Data read was not what was sent.
+
+Port B has no loopback connector	The loopback connector is not installed on Port B.
+
+Port B async mode: Transmitter time-out	Transmitter failed.
+
+Port B async mode: Receiver time-out	Receiver failed.
+
+--- Page 38 ---
+
+Port B async mode: Overrun	A byte was received before the CPU read the previous byte.
+
+Port B async mode: Framing error	Incorrect time between start and stop bits.
+
+Port B async mode: Parity error	Input data had incorrect parity.
+
+Port B async mode: Data compare	Data read was not what was sent.
+
+Port B modem control error: DTR-DCD	Signal sent at DTR is not detected at DCD.
+
+Port B modem control error: DTR-DSR	Signal sent at DTR is not detected at DSR.
+
+Port B modem control error: RTS-CTS	Signal sent at RTS is not detected at CTS.
+
+Port D Error Codes:
+
+NOT ABLE TO CLEAR D  PORT REGISTERS	An attempt to clear the port registers for port D failed.
+
+Transmitter time out on D port	Transmitter failed.
+
+Port D has no loopback connecter	The loopback connector is not installed on Port B.
+
+RECEIVE STATUS ERROR ON D PORT	Receiver failed.
+
+DATA COMPARE ERROR ON D PORT	Data read was not what was sent.
+
+SCC Interrupt Errors:
+
+SCC interrupt error: Transmitter time-out	Transmitter failed.
+
+SCC interrupt error: Receiver time-out	Receiver failed.
+
+SCC interrupt error: Overrun	A byte was received before the CPU
+read the previous byte.
+
+SCC interrupt error:	Framing error Incorrect time between start and stop bits.
+
+SCC interrupt error:	Parity error  Input data had incorrect parity.
+
+SCC interrupt error: Data compare	Data read was not what was sent.
+
+No Tx interrupt		A transmit command was issued but no interrupt occurred.
+
+No Rx interrupt		A receive command was issued but no interrupt occurred.
+
+--- Page 39 ---
+
+AUDIO TEST (A)
+
+This test requires the operator to subjectively decide if the test passes or fails.
+
+PSG Sound
+
+A sound is output on each of the three sound generator channels. The 5/8 sound is a sweep from low to high frequency. Verify that the sound can be heard throughout the range with no drop in audio level.
+
+DMA Sound
+
+Connect an oscilloscope at the stereo output jacks. Set the oscilloscope to 1 ms/division and 5 volts/division. There are four parts to this test. After observing the signals in each part of the test, proceed to the next part of the test by pressing the space bar. In each case the output signal amplitude should go from 0 volts to maximum amplitude in steps. The four parts of
+this test are as follows:
+
+a.	Mono 1 kHz. Both channels will output the same signal and it should approximate a sine wave of 5-6 volts in amplitude.
+
+b.	Stereo 1 kHz/500 kHz. Verify that the right and left channels have the correct frequency. As one channel increases in amplitude, the other channel decreases. Maximum amplitude is 5-6 volts.
+
+c.	Treble. A 12.5 kHz signal is output on both channels. Maximum amplitude is about 6 volts.
+
+d.	Bass. a 50 kHz is output on both channels. Maximum amplitude is about 6 volts.
+
+
+TIMING TESTS (T)
+
+These tests are run at power-up as well as being selectable from the menu. The MFP timers, the MCU timing for VSYNC and HSYNC, and video display counters are tested. The video display test redirects display memory throughout RAM and verifies that the correct addresses are generated. Odd patterns may flash on screen as this test is run. There are two tests which check the bus timing for the Floppy Disk Controller and PSG chips. An error message is printed to the screen, then the test is run. If the test passes, the message is erased. If not, a Bus Error will occur and the message will remain. If a terminal is connected to the RS-232 port, the message will not be erased, but "Pass" will be printed.
+
+TIMING TEST ERROR CODES
+
+T0	MFP timer error. One or more of the four timers in the MFP (U303) did not generate an interrupt on counting down .
+
+T1	Vertical Sync. MCU (U206) is not generating vertical sync in the required time period.
+
+T2	Horizontal Sync. MCU (U206) is not generating horizontal sync in the required time period.
+
+--- Page 40 ---
+
+T3	Display Enable. MCU (U206) is not generating DE output or the MFP (U303) is not generating an interrupt.
+
+T4	Video Counter in Memory Controller. The MCU chip (U206) is not generating the correct addresses for the display. This will result in a broken-up display in some or all display modes.
+
+T5	PSG Bus Test. The PSG chip (U302) is defective.
+
+T6	1772 Bus Test. The Floppy Disk Controller chip (U409) is defective.
+
+
+DMA TESTS (D) (REQUIRES ST DMA PORT TEST FIXTURE)
+
+Four sectors (2048 bytes) of data are written to the RAM on the port test fixture via high speed DMA, then read back and verified. This test is repeated many times for RAM addresses
+throughout the range of RAM.
+
+DMA TEST ERROR CODES
+
+D0	DMA time-out. No DMA occurred due to faulty DMA Controller (U408), MCU (U206), or the XHDINT interrupt was not processed by the MFP (U303). The failure can be isolated by seeing if the DMA Controller responds to HDRQ from the test fixture with ACK. Verify the MFP by seeing that the XHDINT input causes an INTR output from the MFP.
+
+D1	DMA count error. the number of bytes transferred was incorrect. The MCU chip (U206) or DMA Controller (U408) is bad.
+
+D2	Data data mismatch. The data received from the DMA port was not the same as the data sent. Replace the DMA Controller (U408). If the problem persists, check the data lines to the port for opens and shorts. A third possibility is that a defective Floppy Disk Controller (U409) is loading the bus.
+
+D3	DMA not responding. Replace the DMA Controller (U408).
+
+
+FLOPPY DISK TESTS (F)
+
+In single test mode, a menu is displayed showing seven options:
+
+Quick test.			For each disk installed, formats, writes, and reads tracks 0, 1, and 79 of side 0. If double sided, formats and writes track 79 of side 1 and verifies that side 0 was not overwritten. If no disks are installed, checks to see what drives are on-line and if they are double or single sided. To assure that the drive are correctly tested, the operator should install (menu option 7) before calling the test. Once the test is run, the drives become installed, and will be displayed on the menu screen (below the RAM size).
+
+--- Page 41 ---
+
+Read Alignment Disk.	Continuously reads a track,  for checking alignment with an analog alignment  diskette. The track to be read may be input by the  operator. If "Return" is pressed without entering a number, the default is track 40.
+
+Disk Interchange Test.	Checks to see if diskettes from two disk drives each can be read by the other disk drive.
+
+Disk Exerciser.		A more thorough disk test; tests  all sectors on the disk for an indefinite  period of time.
+
+Copy Protect Tracks.	Tests tracks  80-82, which are used by some software companies  for copy protection). Not all manufacturers disk  drives will write these tracks. NOTE: this test is for information only and should not be used to reject a mechanism.
+
+Test Speed.			The rotational speed of the drive is tested and displayed on the screen as the period of rotation. The acceptable range is 196-204 milliseconds. The highest and lowest values measured are displayed. The test stops when any key is pressed.
+
+Install disk drives.		Specify how many and what type of disks to test.  Allows testing of 360K, 720K, and 1.44 MB drives.
+
+One additional test which can be performed is testing the write protect detection. Slide the write protect tab to the protected position, and run test #1. You should see "F5 Write protected" displayed if the drive has been installed, or "Unable to write disk" displayed if the drive has not been installed.
+
+If more than one test is selected from the main menu, the floppy menu will not appear, but the Quick Test will be selected automatically.
+
+FLOPPY TEST ERROR CODES
+
+No floppies connected	The controller cannot read index pulses. The cable may be improperly connected, or the drive has no power, or the drive is faulty.
+
+F0					Drive not selected. Drive was installed, but failed attempting restore (seek to track 0). Check connection of cables, power to drive. Verify the light on the front of the drive goes on. Listen for the sound of the head seeking (the slide on the diskette should open). If all this occurs, TR00 (pin 23 on the Floppy Disk Controller U409) should go low. If so, check for an interrupt on pin 28 of the Floppy Disk Controller. If none, replace the Floppy Disk Controller (U409). Else trace the  interrupt to the MFP (U303), verify that the MFP responds by asserting INTR. If the drive is not being selected (no light), check the PSG chip (U302). Pin 20 should go low when drive A is selected, and pin 19 should go low when drive B is selected. If not, replace the PSG (U302).
+
+--- Page 42 ---
+
+Error Writing, Error Reading, Error Formatting
+
+					Displays a more specific error message along with one of the above message such as "Error Writing F9 CRC error".
+
+F4					Seek error. Verify that the STEP, MO, and DIRC outputs from the Floppy Disk Controller are sent to the drive. Probable failure in the Floppy Disk Controller (U409), but the drive is also suspect.
+
+F5					Write protected. Check the write protect tab on the diskette. If OK, verify that the WP input (Floppy Disk Controller U409 pin 25) is going low during the test; if it is, then the Floppy Disk Controller is defective; if not, the problem is with the disk drive.
+
+F6					Read compare error. Data read from the disk was not what was supposed to be written. Check in the following order: diskette, disk drive, Floppy Disk Controller (U409), and DMA Controller (U408).
+
+F7					DMA error. DMA Controller could not respond to a request for DMA. Replace the DMA Controller (U408). If error persists, check FDRQ while running the test. It should normally be low and go high with each data byte transferred. If stuck high, push the reset button and verify that MR (Floppy Disk Controller U409 pin 13) goes low. If not, trace RESET to its source. If MR is OK, but FDRQ is still stuck, replace the Floppy Disk Controller (U409).
+
+F8					DMA count error. Replace the MCU (U206), if that does not fix it, replace the DMA Controller (U408).
+
+F9					CRC error. The diskette or disk drive may be bad, else replace the Floppy Disk  Controller (U409).
+
+FA					Record not found. The Floppy Disk Controller could not read a sector header. May be a bad diskette, drive or Floppy Disk Controller (U409). If the test fails drive A but not drive B, the Floppy Disk Controller is not at fault (likewise fails B not A).
+
+FB					Lost data. Data was transferred to the Floppy Disk Controller faster than the Floppy Disk Controller could transfer to the DMA Controller. If DMA Port test passes, the Floppy Disk Controller is probably bad (U409). The DMA Controller (U408) could also be at fault.
+
+FC					Side select error - single sided drive. The test tried to write both sides of the diskette, but writing side 1 caused side 0 to be overwritten.
+
+FD					Drive not ready. The format/write/read operation timed-out. Probably a bad disk drive. Verify by checking another drive. Could also be a faulty Floppy Disk Controller (U409).
+
+--- Page 43 ---
+
+PRINTER AND JOYSTICK PORT TESTS (P) (REQUIRES ST DMA PORT TEST
+FIXTURE)
+
+The port test fixture is used to test the parallel printer port and joystick ports. The parallel port test writes to a latch on the test fixture and reads back data. The joystick port test
+outputs data on the parallel port, which is directed through the test fixture to the joystick ports. The keyboard reads the joystick data in response to commands from the CPU. The cables connecting the joystick ports to the test fixture must not be reversed, or the printer and joystick tests will fail.
+
+PRINTER/JOYSTICK ERROR CODES
+
+P0	Printer port error. Data read from the printer port was not what was written. Verify that the data lines on the PSG chip (U302 pins 6-13) are toggling when the test is run. If not, run the RS-232 test. If the RI-DTR and DCD-DTR errors occur, the chip is probably not being selected. Check if the chip selects are being activated and the 2MHz clock is present. If the PSG is selected and not outputting signals, replace it (U302). If the data lines toggle, verify continuity. Also verify that J11 (Joystick 0) pin 3 is pulled up. Verify the test fixture is good by testing another computer. If it is OK, replace the PSG (U302).
+
+P1	Busy input error. The input to the MFP is not being read, or the STROBE output from the PSG is not functioning, or Joystick 0 pin 3 is not connected. If the P0 error also occurs, see handling for that. Otherwise, look for a signal arriving at MFP (U303) pin 25 from J304 pin 11. If no signal at J5, the test fixture may be bad. Verify with another computer.
+
+J0	Joystick Port 0. The keyboard input is not functioning. If the Busy input error occurs, fix that first. Otherwise, replace the keyboard. If error persists, check continuity from J11 pins 1,2,3,4 to J12 pins 12,10,9,8 respectively.
+
+J1	Joystick Port 1. The keyboard input is not functioning. If the Busy input error occurs, fix that first. Otherwise, replace the keyboard. If error persists, check continuity from J11 pins 1,2,3,4 to J12 pins 7,5,4,3 respectively.
+
+J2	Joystick time-out. Joystick inputs were simulated by outputting data on the printer port and routing it via the test fixture to the joystick ports. Joystick inputs are detected by the keyboard and sent to the CPU via the 6850. This error can be caused by printer port failure (code P0), keyboard failure, keyboard-CPU communication line, or a faulty test fixture. If the power-up keyboard test passes, this eliminates any problem with keyboard-CPU communication.
+
+J3	Left button input. If P1 error occurs, fix that first. Otherwise replace the keyboard.
+
+J4	Right button input. If P1 error occurs, fix that first. Otherwise replace the keyboard.
+
+
+REAL-TIME CLOCK (L)
+
+The test saves the current time and date, and writes a new time, waits one second, and verifies that hours, minutes, seconds, etc. have all rolled over. This procedure is repeated for another date to verify all registers.
+
+--- Page 44 ---
+
+VME CONNECTOR (V) (REQUIRES VME MEMORY AND SERIAL BOARDS)
+
+This test is performed in two parts. The test is designed to check the bus connected to VME option cards, not the VME cards themselves. One part of the test requires that a XYCOM 4-port serial adapter be installed. The test is run and then the system is powered down and the board removed. The other part of the test requires that a Greenspring VME memory card be installed. The switches on the card must be set to 2-8 on. The system is then powered up and the VME test run again. Failures during this test are most likely to show up as bad address or data errors.
+
+
+SCSI TEST (I) (REQUIRES SCSI DRIVE)
+
+This tests the hard disk interface by writing and reading one complete track of the hard disk. It is not intended to test the hard disk drive. It does test the computer DMA circuitry. The
+test has been found to be more effective than the DMA test for some types of failures. These failures normally show up as "Data Compare" errors.
+
+The test program will save the data on the cylinder used for testing and restore the data when the test has completed. (Quit or Park Heads is selected).
+
+The test will run until the operator presses the ESC key. There is no pass condition. A failure will normally show up within a few seconds if it is going to occur.
+
+SCSI TEST ERROR MESSAGES
+
+ERROR  - SCSI STATUS CODE -
+
+An error has been detected in the SCSI drive. The status code is returned by the diagnostic.
+
+ERROR  - CANNOT SELECT SCSI DISK-
+
+The diagnostic cannot select the SCSI disk for operations.
+
+ERROR DMA MODE -DMAC HAS ZERO COUNT-MFP2 SEES NO INTERRUPTS-
+
+The SCSI DMA controller has reached zero count but has not generated an interrupt. The DMA controller or SCSI controller may be bad. Another possibility is that the MFP2 chip is bad.
+
+ERROR DMA MODE -DMAC HAS ZERO COUNT-MFP2 SEES DMAC IRQ-
+
+Possible failure of DMA or SCSI chip.
+
+ERROR DMA MODE -DMAC HAS ZERO COUNT-MFP2 SEES SCSI IRQ-
+
+Possible failure of DMA or SCSI chip.
+
+ERROR DMA MODE -DMAC HAS NOT COUNTED TO ZERO-MFP2 SEES BOTH SCSI AND DMAC INTERRUPTS-
+
+DMA or SCSI chip have initiated another operation before the current DMA transfer was complete.
+
+--- Page 45 ---
+
+ERROR DMA MODE -DMAC HAS NOT COUNTED TO ZERO-MFP2 SEES DMAC
+INTERRUPT-
+
+DMA chip or MFP2 could be failing generating an interrupt before the current operation is complete.
+
+ERROR DMA MODE -DMAC HAS NOT COUNTED TO ZERO-MFP2 SEES SCSI
+INTERRUPT-
+
+     DMA chip or MFP2 could be failing generating an interrupt before the current operation is complete.
+
+ERROR DMA MODE -DMAC HAS NOT CLEARED COUNT ZERO-
+
+DMA chip should be at zero count but is not.
+
+ERROR DMA MODE -5380 OR SCSI DISK IS NOT RESPONDING-
+
+An attempt to poll the SCSI drive failed.
+
+ERROR DMA MODE -BUS ERROR-
+
+An attempt to access the bus by the DMA chip has failed.
+
+ERROR DMA MODE -READ AND WRITE BUFFERS DO NOT COMPARE-
+
+The data written in DMA mode to the SCSI drive buffers does not compare with the data read.
+
+ERROR PRG MODE -READ AND WRITE BUFFERS DO NOT COMPARE-
+
+The data written in DMA mode to the SCSI drive buffers does not compare with the data read.
+
+--- Page 46 ---
+
+3.5 ERROR CODES QUICK REFERENCE
+
+
+This is a brief summary of all error code which may occur when running the diagnostic.
+
+
+INITIALIZATION (Errors occurring before the title and menu appear.)
+
+I1	RAM data line is stuck.
+
+I2	RAM disturbance. Location is altered by write to another location.
+
+I3	RAM addressing. Wrong location is being addressed.
+
+I4	MMU error. No DSACK after RAM access.
+
+I5	RAM sizing error. Uppermost address fails.
+
+I6	Bus Error handling failed. Bus Error occurred (on purpose), but caused a crash (e.g. system was unable to read the vector from RAM).
+
+I7	Bus Error not detected. MCU not asserting Bus Error or the signal is not reaching the 68030.
+
+
+EXCEPTIONS (may occur at any time)
+
+
+E1-E5	not used
+
+E6	Autovector error. IPL0 is grounded or 68030 is bad.
+
+E7	Spurious interrupt. Bus error during exception processing. Device interrupted, but did not provide interrupt vector.
+
+E8	Internal Exception (generated by 68030).
+
+E9	Bad Instruction Fetch.
+
+EA	Address error. Tried to read an instruction from an odd address or read or write word or long word at an odd address. Usually this error is preceded by a bus error or bad instruction fetch.
+
+EB	Bus error. Generated internally by the 68030 or externally by MCU. Usually caused by device not responding. Displays the address of the device being accessed.
+
+--- Page 47 ---
+
+RAM
+
+
+R0	Error in low memory, possibly affecting program execution.
+
+R1	Error in RAM chip.
+
+R2	Address error. Bad RAM chip or memory controller. Address line not working.
+
+R3	Address error at 64k boundary.
+
+R4	Error during video RAM test. Bad RAM chip.
+
+
+KEYBOARD
+
+
+K0	Stuck key
+
+K1	Keyboard controller is not responding.
+
+K2	Keyboard controller reports error.
+
+
+MIDI
+
+
+M0	Data not received.
+
+M1	Data received is not what was sent.
+
+M2	Data input framing error.
+
+M3	Parity error.
+
+M4	Data overrun. Byte was not read from the 6850 before next byte arrived.
+
+
+RS-232
+
+
+S0	Data not received.
+
+S1	Data received is not what was sent.
+
+S2	Data input framing error.
+
+S3	Parity error.
+
+S4	Data overrun. Byte was not read from the MFP before the next byte arrived.
+
+S5	IRQ. The MFP is not generating interrupts for transmit or receive.
+
+--- Page 48 ---
+
+S6	Transmitter error - MFP.
+
+S7	No interrupt from transmit error (MFP).
+
+S8	No interrupt from receive error (MFP).
+
+S9	DTR - RI. These signals are connected by the loopback connector. Changing DTR does not cause change in RI.
+
+SA	DTR - DCD. Same as S9 for these signals.
+
+SB	RTS - CTS. Same as S9 for these signals.
+
+SC	RS-232 input shorted to output. The input and outputs of the MFP serial port are shorted together.
+
+
+SCC
+
+
+Port A Errors:
+
+SCC A internal loopback: Transmitter time-out	Transmitter failed.
+
+SCC A internal loopback: Receiver time-out	Receiver failed.
+
+SCC A internal loopback: Overrun	A byte was received before the CPU read the previous byte.
+
+SCC A internal loopback: Framing error	Incorrect time between start and stop bits.
+
+SCC A internal loopback: Parity error	Input data had incorrect
+parity.
+
+SCC A internal loopback: Data compare	Data read was not what
+was sent.
+
+Port A has no loopback connector	The loopback connector is not installed on Port A.
+
+LAN has no loopback connector	The loopback connector is not installed on the LAN Port.
+
+LAN ERROR: DCD IS ACTIVE WITHOUT RTS ON
+
+The Carrier detect signal is active without a request to send.
+
+LAN ERROR: RTS IS ACTIVE BUT DCD IS NOT RESPONDING
+
+The request to send signal is on but no carrier is active.
+
+Port A async mode: Transmitter time-out	Transmitter failed.
+
+--- Page 49 ---
+
+Port A async mode: Receiver time-out	Receiver failed.
+
+Port A async mode: Overrun	A byte was received before the CPU read the previous byte.
+
+Port A async mode: Framing error	Incorrect time between start and stop bits.
+
+Port A async mode: Parity error	Input data had incorrect parity.
+
+Port A async mode: Data compare	Data read was not what was sent.
+
+Port A modem control error: DTR-DCD	Signal sent at DTR is not detected at DCD.
+
+Port A modem control error: DTR-DSR	Signal sent at DTR is not detected at DSR.
+
+Port A modem control error: RTS-CTS	Signal sent at RTS is not detected at CTS.
+
+Port B Errors:
+
+SCC B internal loopback: Transmitter time-out	Transmitter failed.
+
+SCC B internal loopback: Receiver time-out	Receiver failed.
+
+SCC B internal loopback: Overrun	A byte was received before the CPU read the previous byte.
+
+SCC B internal loopback: Framing error	Incorrect time between start and stop bits.
+
+SCC B internal loopback: Parity error	Input data had incorrect parity.
+
+SCC B internal loopback: Data compare	Data read was not what was sent.
+
+Port B has no loopback connector	The loopback connector is not installed on Port B.
+
+Port B async mode: Transmitter time-out	Transmitter failed.
+
+Port B async mode: Receiver time-out	Receiver failed.
+
+Port B async mode: Overrun	A byte was received before the CPU read the previous byte.
+
+Port B async mode: Framing error	Incorrect time between start and stop bits.
+
+Port B async mode: Parity error		Input data had incorrect parity.
+
+Port B async mode: Data compare	Data read was not what was sent.
+
+Port B modem control error: DTR-DCD	Signal sent at DTR is not detected at DCD.
+
+Port B modem control error: DTR-DSR	Signal sent at DTR is not detected at DSR.
+
+Port B modem control error: RTS-CTS	Signal sent at RTS is not detected at CTS.
+
+--- Page 50 ---
+
+PORT D ERROR CODES:
+
+NOT ABLE TO CLEAR D  PORT REGISTERS	An attempt to clear the port registers for port D failed.
+
+Transmitter time out on D port	Transmitter failed.
+
+Port D has no loopback connecter	The loopback connector is not installed on Port B.
+
+RECEIVE STATUS ERROR ON D PORT	Receiver failed.
+
+DATA COMPARE ERROR ON D PORT	Data read was not what was sent.
+
+SCC Interrupt Errors:
+
+SCC interrupt error: Transmitter time-out	Transmitter failed.
+
+SCC interrupt error: Receiver time-out	Receiver failed.
+
+SCC interrupt error: Overrun	A byte was received before the CPU read the previous byte.
+
+SCC interrupt error: Framing error	Incorrect time between start and stop bits.
+
+SCC interrupt error: Parity error	Input data had incorrect parity.
+
+SCC interrupt error: Data compare	Data read was not what was sent.
+
+No Tx interrupt		A transmit command was issued but no interrupt occurred.
+
+No Rx interrupt		A receive command was issued but no interrupt occurred.
+
+
+DMA
+
+
+D0	Time-out. DMA did not take place, or interrupt not detected.
+
+D1	DMA count error. Not all bytes arrived. Possible MCU error.
+
+D3	DMA Controller not responding.
+
+--- Page 51 ---
+
+TIMING
+
+
+T0	MFP timers failed.
+
+T1	Vertical sync timing failed.
+
+T2	Horizontal sync timing failed.
+
+T3	Display Enable Interrupt failed.
+
+T4	Memory Controller video address counter failed.
+
+T5	PSG Bus test. PSG chip is causing a bus error by staying on the data bus too long.
+
+T6	Floppy Disk Controller Bus test. Floppy Disk Controller chip is causing a bus error by staying on the data bus too long.
+
+
+PRINTER AND JOYSTICK PORTS
+
+
+P0	Printer port error.
+
+P1	Busy (printer port input) failed.
+
+J0	Joystick port 0 failed.
+
+J1	Joystick port 1 failed.
+
+J2	Joystick (keyboard controller) timed-out.
+
+J3	Left button line failed.
+
+J4	Right button line failed.
+
+
+FLOPPY DISK DRIVE
+
+
+F0	Drive off-line. Not responding to restore (seek track 0).
+
+Former F1, F2, and F3 write and read errors are deleted. The message now will say "error writing", error reading, or error formatting and display the specific error found.)
+
+F4	Seek error.
+
+F5	Write protected.
+
+F6	Data compare. (Data read not equal to data written.)
+
+F7	DMA error.
+
+--- Page 52 ---
+
+F8	DMA count error (Memory Controller counter.)
+
+F9	CRC error.
+
+FA	Record not found.
+
+FB	Lost data.
+
+FC	Side select error.
+
+FD	Drive not ready. Timed-out performing the command.
+
+
+SCC
+
+
+Port A Errors:
+
+SCC A internal loopback: Transmitter time-out	Transmitter failed.
+
+SCC A internal loopback: Receiver time-out	Receiver failed.
+
+SCC A internal loopback: Overrun	A byte was received before the CPU read the previous byte.
+
+SCC A internal loopback: Framing error	Incorrect time between start and stop bits.
+
+SCC A internal loopback: Parity error	Input data had incorrect
+parity.
+
+SCC A internal loopback: Data compare	Data read was not what
+was sent.
+
+Port A has no loopback connector	The loopback connector is not installed on Port A.
+
+LAN has no loopback connector	The loopback connector is not installed on the LAN Port.
+
+LAN ERROR: DCD IS ACTIVE WITHOUT RTS ON
+
+The Carrier detect signal is active without a request to send.
+
+LAN ERROR: RTS IS ACTIVE BUT DCD IS NOT RESPONDING
+
+The request to send signal is on but no carrier is active.
+
+Port A async mode: Transmitter time-out	Transmitter failed.
+
+Port A async mode: Receiver time-out	Receiver failed.
+
+--- Page 53 ---
+
+Port A async mode: Overrun	A byte was received before the CPU read the previous byte.
+
+Port A async mode: Framing error	Incorrect time between start and stop bits.
+
+Port A async mode: Parity error	Input data had incorrect parity.
+
+Port A async mode: Data compare	Data read was not what was sent.
+
+Port A modem control error: DTR-DCD	Signal sent at DTR is not detected at DCD.
+
+Port A modem control error: DTR-DSR	Signal sent at DTR is not detected at DSR.
+
+Port A modem control error: RTS-CTS	Signal sent at RTS is not detected at CTS.
+
+Port B Errors:
+
+SCC B internal loopback: Transmitter time-out	Transmitter failed.
+
+SCC B internal loopback: Receiver time-out	Receiver failed.
+
+SCC B internal loopback: Overrun	A byte was received before the CPU read the previous byte.
+
+SCC B internal loopback: Framing error	Incorrect time between start and stop bits.
+
+SCC B internal loopback: Parity error	Input data had incorrect parity.
+
+SCC B internal loopback: Data compare	Data read was not what was sent.
+
+Port B has no loopback connector	The loopback connector is not installed on Port B.
+
+Port B async mode: Transmitter time-out	Transmitter failed.
+
+Port B async mode: Receiver time-out	Receiver failed.
+
+Port B async mode: Overrun	A byte was received before the CPU read the previous byte.
+
+Port B async mode: Framing error	Incorrect time between start and stop bits.
+
+Port B async mode: Parity error		Input data had incorrect parity.
+
+Port B async mode: Data compare	Data read was not what was sent.
+
+Port B modem control error: DTR-DCD	Signal sent at DTR is not detected at DCD.
+
+Port B modem control error: DTR-DSR	Signal sent at DTR is not detected at DSR.
+
+Port B modem control error: RTS-CTS	Signal sent at RTS is not detected at CTS.
+
+--- Page 54 ---
+
+PORT D ERROR CODES:
+
+NOT ABLE TO CLEAR D  PORT REGISTERS	An attempt to clear the port registers for port D failed.
+
+Transmitter time out on D port	Transmitter failed.
+
+Port D has no loopback connecter	The loopback connector is not installed on Port B.
+
+RECEIVE STATUS ERROR ON D PORT	Receiver failed.
+
+DATA COMPARE ERROR ON D PORT	Data read was not what was sent.
+
+SCC Interrupt Errors:
+
+SCC interrupt error: Transmitter time-out	Transmitter failed.
+
+SCC interrupt error: Receiver time-out	Receiver failed.
+
+SCC interrupt error: Overrun	A byte was received before the CPU read the previous byte.
+
+SCC interrupt error: Framing error	Incorrect time between start and stop bits.
+
+SCC interrupt error: Parity error	Input data had incorrect parity.
+
+SCC interrupt error: Data compare	Data read was not what was sent.
+
+No Tx interrupt		A transmit command was issued but no interrupt occurred.
+
+No Rx interrupt		A receive command was issued but no interrupt occurred.
+
+
+SCSI
+
+
+ERROR  - SCSI STATUS CODE -
+
+An error has been detected in the SCSI drive. The status code is returned by the diagnostic.
+
+ERROR  - CANNOT SELECT SCSI DISK-
+
+The diagnostic cannot select the SCSI disk for operations.
+
+ERROR DMA MODE -DMAC HAS ZERO COUNT-MFP2 SEES NO INTERRUPTS-
+
+The SCSI DMA controller has reached zero count but has not generated an interrupt. The DMA controller or SCSI controller may be bad. Another possibility is that the MFP2 chip is bad.
+
+--- Page 55 ---
+
+ERROR DMA MODE -DMAC HAS ZERO COUNT-MFP2 SEES DMAC IRQ-
+
+Possible failure of DMA or SCSI chip.
+
+ERROR DMA MODE -DMAC HAS ZERO COUNT-MFP2 SEES SCSI IRQ-
+
+Possible failure of DMA or SCSI chip.
+
+ERROR DMA MODE -DMAC HAS NOT COUNTED TO ZERO-MFP2 SEES BOTH SCSI AND DMAC INTERRUPTS-
+
+DMA or SCSI chip have initiated another operation before the current DMA transfer was complete.
+
+ERROR DMA MODE -DMAC HAS NOT COUNTED TO ZERO-MFP2 SEES DMAC
+INTERRUPT-
+
+DMA chip or MFP2 could be failing generating an interrupt before the current operation is complete.
+
+ERROR DMA MODE -DMAC HAS NOT COUNTED TO ZERO-MFP2 SEES SCSI INTERRUPT-
+
+DMA chip or MFP2 could be failing generating an interrupt before the current operation is complete.
+
+ERROR DMA MODE -DMAC HAS NOT CLEARED COUNT ZERO-
+
+DMA chip should be at zero count but is not.
+
+ERROR DMA MODE -5380 OR SCSI DISK IS NOT RESPONDING-
+
+An attempt to poll the SCSI drive failed.
+
+ERROR DMA MODE -BUS ERROR-
+
+An attempt to access the bus by the DMA chip has failed.
+
+ERROR DMA MODE -READ AND WRITE BUFFERS DO NOT COMPARE-
+
+The data written in DMA mode to the SCSI drive buffers does not compare with the data read.
+
+ERROR PRG MODE -READ AND WRITE BUFFERS DO NOT COMPARE-
+
+The data written in DMA mode to the SCSI drive buffers does not compare with the data read.
+
+--- Page 56 ---
+
+REAL-TIME CLOCK
+
+
+C0	no real-time clock
+
+C1	increment errorSECTION FOUR
+
+--- Page 57 ---
+
+DISASSEMBLY/ASSEMBLY
+
+
+4.1 TT030 DISASSEMBLY
+
+
+Use the following procedure to disassemble the TT030. Refer to Assembly Drawing, Section 6.
+
+
+Top Cover Removal:
+
+
+1.	Turn off your computer and disconnect all cables from the sides and back of the unit (for example keyboard, power cord, external disk drive, and so on.).
+
+2.	Turn your computer over and place it on its top. Remove the ten (10) screws located in the square holes on the bottom cover.
+
+3.	With a slotted screwdriver loosen the retaining screw holding the accessory cover in place.
+
+4.	While holding the computer's top cover and base together and holding the accessory cover in place turn the unit back over and set it on the bottom.
+
+5.	Lift up the front of the accessory cover and remove it from the computer. If a hard disk is present, set the hard disk on its side on the top cover. Disconnect the power and interface cables from the hard disk. Set the accessory cover aside.
+
+6.	Lift off the top cover and set it on its back behind the bottom case. Be sure to take care with the cables attached to the floppy disk drive and the power LED cable.
+
+7.	Disconnect the power, interface, and LED cables from the floppy drive.
+
+8.	Set the top cover aside.
+
+
+Floppy Disk Removal:
+
+
+1.	Remove the top cover.
+
+2.	Remove the 4 screws holding the floppy drive to the top cover.
+
+3.	Remove the 4 screws holding the floppy disk to the mounting plate.
+
+--- Page 58 ---
+
+Hard Disk Removal:
+
+
+1.	Turn off your computer and disconnect all cables from the sides and back of the unit (for example keyboard, power cord, external disk drive, and so on.).
+
+2.	Turn your computer over and place it on its top.
+
+3.	With a slotted screwdriver loosen the retaining screw holding the accessory cover in place.
+
+4.	While holding the computer's top cover and base together and holding the accessory cover in place turn the unit back over and set it on the bottom.
+
+5.	Lift up the front of the accessory cover and set the hard disk on its side on the top cover.
+
+6.	Disconnect the power and interface cables from the hard disk. Set the accessory cover aside.
+
+
+Power Supply Removal:
+
+
+1.	Remove the top cover.
+
+2.	Disconnect the power supply cables from the floppy disk drive and the hard disk drive if the hard disk is present.
+
+3.	Remove the two (2) screws holding the power supply in place and set them aside.
+
+4.	Remove the power supply and set it aside
+
+
+Hard Disk interface cable Removal:
+
+
+1.	Locate the hard disk controller interface connector on the main PCB.
+
+2.	Disconnect the hard disk cable from the hard disk interface connector on the main PCB.
+
+--- Page 59 ---
+
+Main PCB Removal:
+
+
+1.	Remove the top cover and set it aside.
+
+2.	Remove the three (3) screws from the main PCB and set them aside.
+
+3.	Remove the power supply and set it aside.
+
+4.	Remove the two (2) screws holding in any VME or serial connectors that are plugged into the VME slot and set them aside. Unplug the cable from the port serial board attached to the main printed circuit board.
+
+5.	Remove the board from the VME slot. Remove the reset button cap from the plunger on the reset switch.
+
+6.	Remove the main PCB.
+
+
+4.2 TT030 RE-ASSEMBLY
+
+
+Main PCB:
+
+
+1.	Replace the main PCB.
+
+2.	Replace the board from the VME slot. Replace the reset button cap from the plunger on the reset switch.
+
+3.	Replace the two (2) screws holding in any VME or serial connectors that were plugged into the VME slot. Plug the cable from the serial board back into the main printed circuit board.
+
+4.	Replace the three (3) screws from the main PCB.
+
+
+Power Supply:
+
+
+1.	Replace the power supply.
+
+2.	Replace the two (2) screws holding the power supply in place.
+
+3.	Reconnect the power supply cables from the floppy disk drive and the hard disk drive if the hard disk is present.
+
+--- Page 60 ---
+
+Hard Disk Interface Cable
+
+
+1.	Install the hard disk interface cable by lining up the hard disk controller connector on the main PCB with the main PCB connector on the hard disk interface cable.
+
+2.	Gently push the hard disk interface cable partially onto the hard disk controller connector on the main PCB. Make sure the connector pins of the main PCB connector are lined up with the socket connector on the hard disk interface cable. Now push firmly down on the hard disk interface cable until the connectors are fully engaged.
+
+
+Floppy Disk:
+
+
+1.	Replace the 4 screws holding the floppy disk to the mounting plate.
+
+2.	Replace the 4 screws holding the floppy drive to the top cover.
+
+
+Top Cover:
+
+
+1.	Set the top cover behind the base.
+
+2.	Reconnect the power, interface, and LED cables from the floppy drive.
+
+3.	Lift the top cover and set it back on the bottom case. Be sure to take care with the cables attached to the floppy disk drive, hard disk drive, and the power LED cable.
+
+4.	Install the back of the accessory cover to the accessory cover opening. Make sure the tabs on the back of the accessory cover line up with the slots in the accessory cover opening.
+
+5.	While holding the computer's top cover and base together and holding the accessory cover in place turn the unit over and set it on its top.
+
+6.	Replace the ten (10) screws located in the square holes on the bottom cover.
+
+7.	With a slotted screwdriver tighten the retaining screw holding the accessory cover in place.
+
+--- Page 61 ---
+
+Hard Disk:
+
+
+1.	Lift up the front of the accessory cover and set the hard disk on its side on the top cover. Reconnect the power and interface cables from the hard disk.
+
+2.	Place the accessory cover back into the top cover. While holding the computer's top cover and base together and holding the accessory cover in place turn the unit back over and set it on the bottom.
+
+3.	With a slotted screwdriver loosen the retaining screw holding the accessory cover in place.
+
+4.	Turn your computer over and place it on its top.
+
+--- Page 62 ---
+
+SECTION FIVE
+
+SYMPTOM CHECKLIST
+
+
+This section gives a brief summary of common problems and their most probable causes. For more detail, refer to the section on troubleshooting in this document, or the Diagnostic Cartridge Troubleshooting Guide.
+
+
+DISPLAY PROBLEMS:
+
+SYMPTOM			 PROBABLE CAUSE
+
+Black screen			 No power (check power supply), bad MCU chip, bad TTVIDEO. See TESTING section, "Troubleshooting a Dead Unit".
+
+White screen			TTVIDEO, MCU, DMA Controller, 68030. Use diagnostic cartridge with terminal connected via RS-232 port.
+
+Dots/bars on screen	RAM, MCU chip, TTVIDEO. Use diagnostic cartridge.
+
+One color missing		Check signals at video connector pins 3, 6, and 10. Check video cable, TTVIDEO. Check signals with oscilloscope.
+
+Monochrome Monitor Fails to Sync but Color Monitor Does
+
+Verify monochrome monitor detect bit is not open when monochrome monitor is connected. Check connection at monitor connector, check MFP XMONO pin, replace MFP.
+
+Scrambled screen		MCU chip. Use diagnostic cartridge.
+
+DISK DRIVE PROBLEMS
+
+SYMPTOM			PROBABLE CAUSE
+
+Disk won't boot		Power supply, Floppy disk controller, DMA Controller, PSG chip, disk drive. See if select light goes on, if not, check PSG outputs. Listen for motor spinning. If not, check power supply. Swap disk drive or try external drive. If not working, check DMA Controller, Floppy disk controller with diagnostic cart.
+
+Disk won't forma		Floppy disk controller, DMA Controller, disk drive.
+
+System crash after loading files
+
+Diskette, disk drive, Floppy disk controller, DMA, or MCU. Swap diskette, retry. Use diagnostic cartridge to check Floppy disk controller, DMA Controller, MCU, replace disk drive.
+
+--- Page 63 ---
+
+KEYBOARD PROBLEMS:
+
+Bad keyboard, 6850, MFP.
+
+MIDI PROBLEMS:
+
+Bad opto-isolator chip, 6850, inverter.
+
+RS-232 PROBLEMS:
+
+Bad MFP, receiver, driver, or PSG chip, power supply.
+
+PRINTER PORT PROBLEMS :
+
+Bad PSG, MFP chips.
+
+HARD DISK PORT PROBLEMS:
+
+Bad DMA Controller, MCU, Floppy disk controller loading the bus), or bad SCSI controller.
+
+--- Page 64 ---
+
+SECTION SIX
+
+DIAGNOSTIC FLOWCHARTS
+
+
+No  Error on Diagnostic
+
+--- Page 65 ---
+
+No Display
+No Monitor
+No Terminal
+No Display
+No Error

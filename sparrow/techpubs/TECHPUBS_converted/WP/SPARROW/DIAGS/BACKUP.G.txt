@@ -1,0 +1,4 @@
+cp *.s backup
+cp *.doc backup
+cp *.g* backup
+cp makefile backup

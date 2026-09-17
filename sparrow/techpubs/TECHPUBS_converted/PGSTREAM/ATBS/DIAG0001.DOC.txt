@@ -1,0 +1,46 @@
+[PageStream 2 document DIAG0001.DOC: 8.50 x 11.00 in, 1 objects]
+
+--- Page 1 ---
+
+Atari Technical Bulletin
+Number: DIAG-0001
+Date: January 7, 1992
+Page 1 of 1
+
+
+Product(s) Affected:	ST, STE, MEGASTE, TT30
+Model:			ALL
+Type of ATB:		Information Only
+ECO #:			N/A
+
+Reason for ATB:
+
+To inform the field as to the current level of cartridge diagnostics released by Atari. (as of January ,1992)
+
+Notes:
+
+Each of the following diagnostic set consists of two EPROMS per diagnostic. They are to be installed into the diagnostic PCB (part # C070208). Be sure to install the EPROM labeled "HI" into the U2 socket and "LO" into the U1 socket. See the appropriate service manual for general instructions on operating the diagnostics.
+
+IMPORTANT: If the diagnostic pcb is used with out it's case the pcb must be installed into the computer with it's component side down. The eproms will be destroyed if the chips are on the top side. It is recommended that the pcb be reinstalled into it's case before using to eliminate this possibility.
+
+Product		Part Numbers	Description
+
+ST			C302307-001	REV A IC DIAG FLD V4.4 HI
+				C302306-001	REV A IC DIAG FLD V4.4 LO
+
+STE			C302298-002	REV B IC DIAG V1.9 HI
+				C302299-002	REV B IC DIAG V1.9 LO
+
+MEGASTE	C302310-002	REV B IC DIAG V1.5 HI
+				C302311-002	REV B IC DIAG V1.5 LO
+
+TT030		C302226-003	REV C IC DIAG V1.5 HI
+				C302227-003	REV C IC DIAG V1.5 LO
+
+Symptoms of Problem:
+
+N/A
+
+Solution:
+
+N/A

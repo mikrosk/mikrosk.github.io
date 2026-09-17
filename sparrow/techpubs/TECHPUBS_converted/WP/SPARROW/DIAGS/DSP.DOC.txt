@@ -1,0 +1,76 @@
+DSP TEST NOTES
+
+Roy Stedman 08APR92
+
+These test the DSP, its SRAM and parts of the
+digital audio port
+
+==========
+
+DSP TEST 1 - SRAM
+
+	This test is run both by the 'R' Ram test and the
+DSP test. The test loads a program into the DSP and does a
+RAM test on the DSP's SRAM. A failiure code can be decoded
+as shown below.
+
+*------------------------------------
+* DSP RAM TEST (comments from RAM1.asm)
+;* When the program begins testing, it writes a MT_TESTING to the Host
+;* Interface data register, HTX.  If the test succeeds, MT_SUCCESS will 
+;* be put in the HTX register.  If it fails, the test ID will be ORed 
+;* with the 16 bit address of the memory that failed and put in the HTX
+;* register.  For example, if a $604E5F is returned, the $6 means the
+;* random value memory test (see Test IDs below) failed at address $4E5F.
+;* The test indicates memory failure if the host (68xxx CPU) does not 
+;* see a MT_SUCCESS flag in a few seconds (or the program has died from 
+;* a 56k failure.  The complete RAM test took 0.78 seconds on a 27 Mhz 
+;* 56001.  Most of the time is spent running the WalkingOnes test.
+
+;* Test IDs for RAM1 Test
+MT_TESTING		EQU	$111111	; test started, but not yet passed
+MT_SUCCESS		EQU	$123456	; Test passed
+MT_ALL_ONES		EQU	$200000 ; Leave the LS bits = 0 for OR ing with the address.
+MT_ALL_ZEROS		EQU	$300000
+MT_ALL_AA		EQU	$400000
+MT_ALL_55		EQU	$500000
+MT_RANDOM		EQU	$600000
+MT_WALK_ONES		EQU	$700000
+
+==========
+
+DSP TEST 2 - SSI Port
+
+	This test loads a program into the DSP and then sends
+it's internal sine wave table out a loopback connector on the
+DSP port. 
+
+NOTE: The loopback connector cannot have any long signal paths
+or the test will fail intermittently.
+
+*------------------------------------
+* SSI LOOPBACK TEST (comments from SSI.asm)
+* Test of DSP56k's SSI port by connecting it back to itself. 
+* To perform this test, connect:
+*	STD to SRD
+*	SCK to SC0	(SCK output, SC0 input, asynchronous mode clocks)
+*	SC1 to SC2	(mode to be defined)
+
+;*  The SSI loopback test will begin by writing LB_TESTING to the 56k's
+;*  Host Interface Data Register, HTX.  It will then try to send and
+;*  receive LB_NUM_WORDS via the SSI in loopback mode.  If the received
+;*  data does not match the transmitted data, it will return LB_NOT_EQUAL
+;*  to the HTX register.  If the test times-out while waiting for data to
+;*  be received, then it will send a LB_TIMEOUT to the HTX register.  If 
+;*  it sends and receives all of the words correctly, it will send a
+;*  LB_SUCCESS to the HTX register.  If the test fails completely, then
+;*  LB_TESTING will be left in the HTX register, so the host (your 68xxx
+;*  CPU) should give up after 2-3 seconds and consider the test hung (a
+;*  failure).  See the section, Initialize SSI Port (baud rate
+;*  determination by setting CRA_BITS), for timing information.
+
+* You can test this program by disconnecting wires in the loopback.
+* If you disconnect STD-SRD you should get a LB_NOT_EQUAL
+* If you disconnect SCK-SC0 you should get a LB_TIMEOUT
+* If you disconnect SC1-SC2 you should get a LB_TIMEOUT
+

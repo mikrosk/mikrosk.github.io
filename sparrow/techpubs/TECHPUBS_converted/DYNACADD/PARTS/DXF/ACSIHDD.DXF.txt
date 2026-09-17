@@ -1,0 +1,52 @@
+DXF drawing: DYNACADD/PARTS/DXF/ACSIHDD.DXF
+Render: ACSIHDD.DXF.svg
+
+== Summary ==
+File:        8026 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font txt
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (4.05, 1.4328) - (6.25, 11.8172)
+             rendered (4.05, 1.5328) - (6.25, 11.7172), size 2.2 x 10.1843
+Limits:      (0, 0) - (12, 12)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: STANDARD (font txt)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            39
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: POLYLINE 20 (46 vertices), TEXT 19
+Blocks:      0 defined
+Notes:
+  - 19 zero-length polylines (all vertices identical, e.g. pin dots) drawn as dots
+  - 1 polylines with constant width drawn as thick strokes
+
+== Text in reading order (19 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 90 deg (19 items) --
+  10  |  9  |  8  |  7  |  6  |  5  |  4  |  3  |  2  |  1
+  19  |  18  |  17  |  16  |  15  |  14  |  13  |  12  |  11
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE     TEXT
+  4.25       2       0.2     90  center    1      STANDARD  10
+  4.25       3       0.2     90  center    1      STANDARD  9
+  4.25       4       0.2     90  center    1      STANDARD  8
+  4.25       5       0.2     90  center    1      STANDARD  7
+  4.25       6       0.2     90  center    1      STANDARD  6
+  4.25       7       0.2     90  center    1      STANDARD  5
+  4.25       8       0.2     90  center    1      STANDARD  4
+  4.25       9       0.2     90  center    1      STANDARD  3
+  4.25      10       0.2     90  center    1      STANDARD  2
+  4.25      11       0.2     90  center    1      STANDARD  1
+  6.25    2.75       0.2     90  center    1      STANDARD  19
+  6.25    3.75       0.2     90  center    1      STANDARD  18
+  6.25    4.75       0.2     90  center    1      STANDARD  17
+  6.25    5.75       0.2     90  center    1      STANDARD  16
+  6.25    6.75       0.2     90  center    1      STANDARD  15
+  6.25    7.75       0.2     90  center    1      STANDARD  14
+  6.25    8.75       0.2     90  center    1      STANDARD  13
+  6.25    9.75       0.2     90  center    1      STANDARD  12
+  6.25   10.75       0.2     90  center    1      STANDARD  11

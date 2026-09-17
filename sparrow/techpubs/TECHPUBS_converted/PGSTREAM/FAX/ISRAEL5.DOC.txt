@@ -1,0 +1,28 @@
+[PageStream 2 document ISRAEL5.DOC: 8.50 x 11.00 in, 27 objects]
+
+--- Page 1 ---
+[23 drawing objects, see ISRAEL5.DOC.p001.svg]
+
+Dallas Office FAX
+
+
+To:		Eran Dariel, Segal Moshe - Israel
+From:	Marty Pennock
+Subject:	ASIC Documentation
+
+Date:	August 3, 1992
+
+cc		Ira Goldstein - ATX
+		Tom Ulaszek - ATX
+		Richard Miller - SUVL
+
+
+As directed by Richard Miller we are in the process of creating an Engineering Archive system at Atari Dallas. In keeping with this effort we will need information regarding the COMBEL, VIDEL, and AJAX ICs. If possible all information should be sent in both hard copy and electronic copy (on disk). We need all pertinent design information, including macro/mega cell schematics, test vectors (that have not been created here, if any), fault vectors (again any that have not been created here), layout information, and any manufacturing information. Especially needed for the Specifications are timing diagrams and AC/DC Electrical Specifications. The goal is to archive a set of information that will be complete in the event the part must be looked at here in detail. In other words, all design information residing anywhere will be stored in one central location for use by everyone. Your help and cooperation in this matter is greatly appreciated.
+
+
+Sincerely
+
+
+Marty Pennock
+
+®

@@ -1,0 +1,62 @@
+[PageStream 2 document MSTE0002.DOC: 8.50 x 11.00 in, 2 objects]
+
+--- Page 1 ---
+
+Atari Technical Bulletin
+Number: MSTE-0002
+Date: September 13, 1991
+Page 1 of 2
+
+
+Product(s) Affected:		MEGA STE, (STE)
+Model:					All models
+Type of ATB:				As Needed
+ECO #: 					N/A
+
+Reason for ATB:
+
+Audio distortion caused by shifter I.C. not installed correctly.
+
+
+Notes:
+
+Description			Part number	Location
+
+Shifter Revision B		C300588-001	U502
+Shifter Revision D		C301712-001	U502
+74LS02 IC				C101611-002	U699
+
+Symptoms of Problem:
+
+Audio distortion during DMA sound.
+
+
+Tests to Determine if Problem Exists:
+
+Check stereo sound port with oscilloscope using diagnostic cartridge to see if waveform is distorted.  (SEE AUDIO TEST IN FIELD SERVICE MANUAL)
+
+Solution:
+
+The revision B shifter (C300588-001) requires a 74LS02 at location U699. If the revision B is replaced with the revision D shifter (C301712-001), then U699 must be disabled. (See rework instructions)
+
+
+Shifter version				Solution
+
+C300588-001 Rev B		74LS02 enabled
+C301712-001 Rev D		74LS02 disabled
+
+--- Page 2 ---
+
+Atari Technical Bulletin
+Number: MSTE-0002
+Date: September 13, 1991
+Page 2 of 2
+
+
+Rework required to disable 74LS02 on MEGA STE (U699)
+
+Cut pins 1 and 13 of the 74LS02 at U699 (disconnect output)
+
+Add a jumper from pin 2 of the 74LS02 at U699 to pin 1 of U699 on the PCB (do not connect the jumper to the cut pin on the 74LS02)
+
+Add a jumper from pin 12 of the 74LS02 at U699 to pin 13 of U699 on the PCB (do not connect the jumper to the cut pin on the 74LS02)

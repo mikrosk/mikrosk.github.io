@@ -1,0 +1,100 @@
+[PageStream 2 document TOMSEP17.DOC: 8.50 x 11.00 in, 30 objects]
+
+--- Page 1 ---
+[23 drawing objects, see TOMSEP17.DOC.p001.svg]
+
+Weekly Report
+
+
+To:		Tom Ulaszek
+From:	Marty Pennock
+Subject:	Status Report
+Date:	September 17, 1992
+
+
+Accomplishments
+
+1.	Finished STBook System Specification in PageStream, Word Perfect 5.1, and Wordstar formats. Distributed hard and soft copy to Tom Ulaszek and Richard Miller.
+
+2.	Began scanning art for STBook Service Guide. Scanning all external views for connector locations.
+
+3.	Began Theory of Operation section of STBook Service Guide. Covered Motorola Processor Section.
+
+4.	Archived hard and soft copies of FALCON030 and FALCON040 System Specifications.
+
+5.	Began Vectorizing scanned images for STBook Service Guide.
+
+6.	Backed up TT030 and ABC386DXII.
+
+7.	Turned in copies of drawings for STBook needed to Document Control for reproduction as a backup. Will call Jim Campbell about possible archive copies in Sunnyvale.
+
+8.	Finished all text edits to Chapter One of the STBook Service Guide.
+
+9.	Contacted Richard Miller about comments on FALCON030 Service Guide Draft.
+
+10.	Received FALCON040 MCU ASIC Specification from Scott Lewis in both hard and soft formats.
+
+11.	Got part numbers assigned for STBook and FALCON040 System Specifications.
+
+12.	Made copy of JADEC FALCON030 PAL/GAL code for Scott Barrows
+
+13.	Incorporated Power Supply information into STBook Service Guide.
+
+
+Plans
+
+1.	Produce Service Guides for STBook, Portfolio, 2600, Falcon040, and 7800 products.
+
+2.	Complete specifications for archive of COMBEL, VIDEL, SDMA, ADMA, BDMA, VIO, and MCU ICs.
+
+3.	Produce FALCON030 Service Guide Final Draft and ship to subs.
+
+®
+
+--- Page 2 ---
+
+4.	Continue work on FALCON040 Service Guide once ASIC Specifications are available.
+
+5.	Get all latest material for FALCON030.
+
+6.	Use released version of PageStream v2.2 and convert existing documents to that format.
+
+7.	Complete Falcon040 Service Guide.
+
+8.	Complete conversion of MEGA STE Service Guide to PageStream.
+
+9.	Complete conversions of manuals from Ventura 4.0 to PageStream.
+
+10.	Complete printing of user documents for Windows 3.1.
+
+11.	Finish final copy of Falcon030 Power Supply Spec. for archives.
+
+12.	Continue set up of Engineering Document Control Center.
+
+13.	Create LYNX-II Service Guide.
+
+14.	Complete ATB's for MEGA STE and TT030.
+
+15.	Complete MEGA STE Addendum.
+
+16.	Compile new list of archive documents.
+
+17.	Compile list of ASIC specs in component engineering file.
+
+Problems
+
+1.	Upgrade disks for DynaCADD not fixed. Leonard Tramiel has copy of problem. Working. Leonard has new update which he will send that fixes problems. No word as yet from Leonard.
+
+2.	Need ASIC specifications for Falcon ICs. Have IO controller and MCU documentation for FALCON040. Need rest. SDMA done by J. Horton 7/15/92.
+
+3.	Need LYNX-II data for Service Guide.
+
+4.	Need ST-Book data for Service Guide.
+
+5.	Need 2600 and 7800 data for Service Guide.
+
+6.	Need fire-proof cabinet for engineering documents.
+
+7.	Need case drawings for STBook.
+
+8.	Need more solid information on STBook design. Have specification, need better ASIC specifications than what are in the archives.

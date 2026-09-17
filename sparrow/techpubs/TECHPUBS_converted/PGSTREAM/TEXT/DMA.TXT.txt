@@ -1,0 +1,628 @@
+          DESIGN SPECIFICATION FOR THE FALCON DMAC
+
+Incarnations:  
+
+1. Pin Description
+=================================================================
+=====
+
+=================================================================
+=====
+2. PACKAGE
+=================================================================
+=====
+=================================================================
+=====
+=================================================================
+=====
+3. FUNCTIONAL DESCRIPTION
+=================================================================
+=====
+a) SCSI channel
+   The SCSI channel provides an interface to the 5380
+
+   SCSI controller chip. 
+
+-----------------------------------------------------------------
+------
+REGISTER MAP, BASE = 00FF8700
+
+BASE+     TYPE D15      -       D0 FUNCTION
+
+0    rw   ---- ---- xxxx xxxx dma address pointer upper byte
+2    rw   ---- ---- xxxx xxxx dma address pointer upper-middle
+4    rw   ---- ---- xxxx xxxx dma address pointer lower-middle 
+6    rw   ---- ---- xxxx xxxx dma address pointer lower byte
+
+8    rw   ---- ---- xxxx xxxx byte counter upper byte
+A    rw   ---- ---- xxxx xxxx byte counter upper-middle
+C    rw   ---- ---- xxxx xxxx byte counter lower-middle 
+E    rw   ---- ---- xxxx xxxx byte counter lower byte
+
+10   ro   xxxx xxxx xxxx xxxx data residue high
+12   ro   xxxx xxxx xxxx xxxx data residue low
+
+14   rw   ---- ---- abc0 00de control register
+                         a - bus error during DMA
+                             (read only, cleared by read)
+                         b - byte count = 0
+                             (read only, cleared by read)
+                         c - overrun (DRQ after byte count=0)
+                             (read only, cleared by
+                              read or write)
+                         d - DMA enable
+                             0=off 1=on
+                         e - DMA direction
+                             0 = out to port
+                             1 = in from port
+
+80-8F     --   ---- ---- XXXX XXXX These addresses access the
+                         5380 chip directly.
+
+-----------------------------------------------------------------
+--------
+DMA OPERATION
+
+The DMA address pointer is set to the address of the first byte
+of data
+to be transfered. The byte counter is optional if the port
+controller
+can signal the end of the transfer. If used, the byte counter is
+decremented
+for each byte transfered. When the byte count reaches zero, bit 6
+in the
+control register is set and the XIRQ line is driven low.  Further
+DMA
+requests are inhibited. A read of the control register clears bit
+6
+and the interrupt. If a data request is received after the byte
+count
+has decremented to zero, bit 5 of the control register (overrun)
+is set.
+A read or write of the control register will clear bit 5.
+
+DMA into memory:
+
+The number of bytes transfered or the staring address are not
+restricted, however, if the transfer does not end at a longword
+boundary then one to three bytes of data will remain in the
+buffer.
+This occurs because the bus transfers are initiated at longword
+boundaries. For this reason the data residue register exists to
+allow
+the data to be manually placed.
+
+When DMA is initiated, the DMAC will not request the bus until
+###
+bytes have been assembled in the buffer. How many depends on the
+starting address. The first bus transfer is the only one which is
+not
+guarateed to be a longword. The DMAC transfers one to three bytes
+on
+the first transfer, then transfers longwords on longword
+boundaries
+thereafter. The byte counter is decremented after each byte at
+the
+port. When the byte counter reaches zero, bit 6 in the control
+register is set and the XIRQ line is driven low. No byte
+transfers
+can take place after the byte count is zero. The service routine
+should clear bit 1 of the control register.
+
+The DMAC will request the bus when the internal buffer is half
+full
+and attempt to empty the buffer.  If the DMAC is delayed in
+getting
+the bus and the buffer is subsequently filled, the the DMAC will
+not
+respond to DMA requests until the situation is resolved.
+
+DMA out to port:
+
+If the starting address is not a longword boundary, then the
+first
+bus transfer will be a one to three byte read. Otherwise all bus
+reads are longwords. When DMA is initiated, the DMAC will
+immediately
+request the bus and attempt to fill the buffer. Whenever the
+buffer
+becomes half full, the DMAC will request the bus and attempt to
+refill the buffer.  If the DMAC is delayed in getting the bus and
+the
+buffer is subsequently emptied, the DMAC will not respond to DMA
+requests until the situation is resolved.
+
+-----------------------------------------------------------------
+-----
+THRU MODE
+
+When the system accesses addresses in the range BASE+80 -
+BASE+8F,
+the DMAC operates in a transparent mode allowing access to the
+5380
+registers.
+
+=================================================================
+=====
+
+b) SCC channel
+   The SCC channel provides an interface to the 8530
+   serial communications controller.
+
+-----------------------------------------------------------------
+------
+REGISTER MAP, BASE = 00FF8C00
+
+BASE+     TYPE D15      -       D0 FUNCTION
+
+0    rw   ---- ---- xxxx xxxx dma address pointer upper byte
+2    rw   ---- ---- xxxx xxxx dma address pointer upper-middle
+4    rw   ---- ---- xxxx xxxx dma address pointer lower-middle 
+6    rw   ---- ---- xxxx xxxx dma address pointer lower byte
+
+8    rw   ---- ---- xxxx xxxx byte counter upper byte
+A    rw   ---- ---- xxxx xxxx byte counter upper-middle
+C    rw   ---- ---- xxxx xxxx byte counter lower-middle 
+E    rw   ---- ---- xxxx xxxx byte counter lower byte
+
+10   ro   xxxx xxxx xxxx xxxx data residue high
+12   ro   xxxx xxxx xxxx xxxx data residue low
+
+14   rw   ---- ---- abc0 00de control register
+                         a - bus error during DMA
+                             (read only, cleared by read)
+                         b - byte count = 0
+                             (read only, cleared by read)
+                         c - overrun (DRQ after byte count=0)
+                             (read only, cleared by
+                              read or write)
+                         d - DMA enable
+                             0=off 1=on
+                         e - DMA direction
+                             0 = out to port
+                             1 = in from port
+
+80-87     --   ---- ---- XXXX XXXX These addresses access the
+                         8530 chip directly.
+
+-----------------------------------------------------------------
+--------
+DMA OPERATION
+
+The DMA address pointer is set to the address of the first byte
+of data
+to be transfered. The byte counter is optional if the port
+controller
+can signal the end of the transfer. If used, the byte counter is
+decremented
+for each byte transfered. When the byte count reaches zero, bit 6
+in the
+control register is set and the XIRQ line is driven low.  Further
+DMA
+requests are inhibited. A read of the control register clears bit
+6
+and the interrupt. If a data request is received after the byte
+count
+has decremented to zero, bit 5 of the control register (overrun)
+is set.
+A read or write of the control register will clear bit 5.
+
+DMA into memory:
+
+The number of bytes transfered or the staring address are not
+restricted, however, if the transfer does not end at a longword
+boundary then one to three bytes of data will remain in the
+buffer.
+This occurs because the bus transfers are initiated at longword
+boundaries. For this reason the data residue register exists to
+allow
+the data to be manually placed.
+
+When DMA is initiated, the DMAC will not request the bus until
+###
+bytes have been assembled in the buffer. How many depends on the
+starting address. The first bus transfer is the only one which is
+not
+guarateed to be a longword. The DMAC transfers one to three bytes
+on
+the first transfer, then transfers longwords on longword
+boundaries
+thereafter. The byte counter is decremented after each byte at
+the
+port. When the byte counter reaches zero, bit 6 in the control
+register is set and the XIRQ line is driven low. No byte
+transfers
+can take place after the byte count is zero. The service routine
+should clear bit 1 of the control register.
+
+The DMAC will request the bus when the internal buffer is half
+full
+and attempt to empty the buffer.  If the DMAC is delayed in
+getting
+the bus and the buffer is subsequently filled, the the DMAC will
+not
+respond to DMA requests until the situation is resolved.
+
+DMA out to port:
+
+If the starting address is not a longword boundary, then the
+first
+bus transfer will be a one to three byte read. Otherwise all bus
+reads are longwords. When DMA is initiated, the DMAC will
+immediately
+request the bus and attempt to fill the buffer. Whenever the
+buffer
+becomes half full, the DMAC will request the bus and attempt to
+refill the buffer.  If the DMAC is delayed in getting the bus and
+the
+buffer is subsequently emptied, the DMAC will not respond to DMA
+requests until the situation is resolved.
+
+-----------------------------------------------------------------
+-----
+THRU MODE
+
+When the system accesses addresses in the range BASE+80 -
+BASE+87,
+the DMAC operates in a transparent mode allowing access to the
+8530
+registers.
+
+=================================================================
+=====
+
+c) ACSI channel
+
+The ACSI channel provides the ST compatible floppy and DMA
+interface.
+ACSI itself is a deformed kludge of the SCSI protocol. Access to
+the
+1772 FDC and the external ACSI DMA connector is through this
+channel.
+
+-----------------------------------------------------------------
+------
+REGISTER MAP, BASE = 00FF8600
+
+BASE+     TYPE D15      -       D0 FUNCTION
+
+0    rw   ---- ---- xxxx xxxx dma address upper upper byte
+8    rw   ---- ---- xxxx xxxx dma address upper middle byte
+A    rw   ---- ---- xxxx xxxx dma address lower middle byte
+C    rw   ---- ---- xxxx xxx0 dma address lower lower byte
+
+4    rw   ---- ---- xxxx xxxx dma data register (WDC)
+6    r    ---- ---- ---- -abc dma status register
+6    w    ---- ---d efgh ijkl dma mode control (WDL)
+
+     a - data request inactive status bit
+     b - block count 0 status bit
+     c - ERROR status bit
+     d - DMA direction (1 = out to port)
+     e - DRQ (1 = internal, 0 = external)
+     f - reserved
+     g - reserved
+     h - block count register select
+     i - CS (1 = external, 0 = internal)
+     j - A2
+     k - A1
+     l - reserved
+
+For a detailed description of the ACSI channel operation, see the
+ATARI/DMA INTEGRATION GUIDE.
+
+=================================================================
+=====
+
+c) Sound channel
+
+The digital sound DMA channel transfers data between memory and
+the
+RASCAL sound chip. The channel is compatible with the TT 8 bit
+digital sound system. In addition the FALCON digital sound
+supports
+16 bit stereo format and 44 khz and 48 khz sampling rates. The
+FALCON
+channel also supports DMA from the RASCAL aux output into memory.
+
+-----------------------------------------------------------------
+------
+REGISTER MAP, BASE = 00FF8900
+
+BASE+     TYPE D15      -       D0 FUNCTION
+
+output channel:
+
+0    rw   ---- ---- 0000 00ab control
+                    a - repeat (1 = on)
+                    b - enable (1 = on)
+
+2    rw   ---- ---- xxxx xxxx base address upper middle byte
+4    rw   ---- ---- xxxx xxxx base address lower middle byte
+6    rw   ---- ---- xxxx xxxx base address lower lower byte
+
+8    rw   ---- ---- xxxx xxxx address upper middle byte
+A    rw   ---- ---- xxxx xxxx address lower middle byte
+C    rw   ---- ---- xxxx xxxx address lower lower byte
+
+E    rw   ---- ---- xxxx xxxx end address upper middle byte
+10   rw   ---- ---- xxxx xxxx end address lower middle byte
+12   rw   ---- ---- xxxx xxxx end address lower lower byte
+
+14   rw   ---- ---- xxxx xxxx base address upper upper byte
+16   rw   ---- ---- xxxx xxxx address upper upper byte
+18   rw   ---- ---- xxxx xxxx end address upper upper byte
+
+1A   rw   xxxx xxxx xxxx xxxx FALCON control register
+                    x - mode (0=old 8 bit, 1=new 16 bit)
+                    xx - sample rate
+                         00 = TT mode
+                         01 = 44 khz
+                         10 = 48 khz
+
+20   rw   ---- ---- a000 00bb mode control
+                    a - mode (0=stereo, 1=mono)
+                    bb - sample rate
+                         00 = 6258 hz
+                         01 = 12517 hz
+                         10 = 25033 hz
+                         11 = 50066 hz
+
+22   rw   xxxx xxxx xxxx xxxx MicroWire data register
+24   rw   xxxx xxxx xxxx xxxx MicroWire mask register
+
+input channel:
+
+30   rw   xxxx xxxx xxxx xxxx base address upper word
+32   rw   xxxx xxxx xxxx xxxx base address lower word
+34   rw   xxxx xxxx xxxx xxxx count upper word
+36   rw   xxxx xxxx xxxx xxxx count lower word
+
+38   rw   xxxx xxxx xxxx xxxx control
+                    x - enable (1=on)
+
+DMA Sound description
+
+    The TT includes a new DMA-driven sound subsystem that allows
+the
+playback or synthesis of complex waveforms at a variety of
+sampling
+rates. FALCON enhances the TT system by adding 16 bit stereo, 44
+and
+48 khz sampling rates, and a DMA channel into memory from the
+RASCAL
+sound chip.
+
+Overview
+
+    Sound in the form of digitized  samples  is  stored  in
+system 
+memory.  These samples are fetched from memory via DMA
+(transparent
+to  the  processor)  and provided to the RASCAL sound chip at a
+sample frequency specified by the  user. Finally, the output of
+this
+device  is  available at  a pair of RCA jacks, an internal
+speaker
+with an associated volume control, and to the monitor connector.
+
+     Two channels are provided. They are  intended  to  be used 
+as
+the left and right channels of a stereo system when using the raw
+audio outputs from the machine. Of course, they  are mixed
+together
+when fed to the monitor and television. A mono 8 bit mode is
+provided
+which will feed the same data to both channels simultaneously.
+The
+only restriction placed on mono mode is that there must be an
+even
+number of samples (see data format section for details).
+
+Data Format
+
+16 bit mode - Each sample is stored as an sixteen bit quanity,
+the
+most significant bit is the sign and the other fifteen bits are
+magnitude.
+
+8 bit mode - Each sample is stored as an eight bit quantity, the
+most
+significant bit is the sign and the other seven bits are
+magnitude.
+In the stereo scheme there is one word per sample, the upper byte
+contains the left channel sample and the lower byte contains the
+right channel sample.  In the mono scheme bytes are accessed
+sequentially. However, they are still fetched a word at a time.
+Therefore, there must be an even number of samples.
+
+     A group of samples is called a frame.  A frame may be played
+once or can automatically be repeated forever.  Frames occupy a
+contiguous block of memory and are specified by their starting
+and
+ending addresses. The ending address is the address of the last
+sample + 2.  An external clock is provided to timer A of the ST
+MFP
+at the end of each frame.  This can be used as an interrupt. 
+This
+pulse is also exclusive OR'ed with the monochrome monitor detect
+bit,
+whose transistion can generate an interrupt on bit 7 of the
+MFP-ST
+General Purpose I/O Port.  Frames may be linked together by
+defining
+a new frame while the current frame is being played.  The new
+frame
+will begin at the end of the current frame.
+
+     As an example, suppose you have three frames (A, B, and C)
+and
+we want to play frame A once, then play frame B 5 times, and
+finally
+play frame C twice. To accomplish this you can do the following:
+
+
+1.  Setup frame A.
+
+2.  Write 3 to the sound DMA control register to start
+   playing with repeat.
+
+3.  Setup timer A to use an external clock, initialize its
+   count to 5, and have it interrupt when count = 0.
+
+4.  Setup frame B.
+
+5.  Go do something else until interrupted.
+
+6.  Setup frame C.
+
+7.  Setup timer A count to 2.
+
+8.  Go do something else until interrupted.
+
+9.  Write 1 to the sound DMA control register to cause
+   playing to stop at the end of the frame.
+
+     In this example no mention is made of setting the sam- ple
+rate, volume or tone controls.  It's assumed that all of these
+have
+been set up ahead of time. It should be obvi- ous how this
+example
+can be extended to allow volume or tone to be modified at
+specific
+points during playback.
+
+     Note If we had loaded the sound DMA control register with a
+1
+in step 2, frame A would have been played once and sound would
+have
+been disabled.  A zero can be written to the sound DMA control
+register at any time to stop playback immediately.
+
+MICROWIRE Interface
+
+     The MICROWIRE interface provided to talk to the registers of
+the RASCAL chip is a general purpose MICROWIRE interface to allow
+the
+future addition of other MICROWIRE devices. For this reason, the
+following description of its use will make no assumptions about
+the
+device being addressed.
+
+     The MICROWIRE bus is a three wire serial connection and
+protocol designed to allow multiple devices to be individu- ally
+addressed by the controller. The length of the serial data stream
+depends on the destination device.  In general, the stream
+consists
+of N bits of address, followed by zero or more don't care bits,
+followed by M bits of data. The hardware interface which has been
+provided consists of two 16 bit read/write registers. One data
+register which con- tains the actual bit stream to be shifted out
+and
+one mask register which indicates which bits are valid.
+
+     Let's consider a mythical device which requires two address
+bits and one data bit.  For this device the total bit stream is
+three
+bits (minimum).  Any contiguous three bits of the register pair
+may
+be used.  However, since the most significant bit is shifted
+first, 
+the command will be received by the device soonest if the three
+most
+significant bits are used. Let's assume: 01 is the device's
+address,
+D is the data to be written, and X's are don't cares. Then all of
+the
+following register combinations will provide the same information
+to
+the device.
+
+  1110 0000 0000 0000 Mask
+  01DX XXXX XXXX XXXX Data
+
+  0000 0000 0000 0111 Mask
+  XXXX XXXX XXXX X01D Data
+
+  0000 0001 1100 0000 Mask
+  XXXX XXX0 1DXX XXXX Data
+
+  0000 1111 1111 0000 Mask
+  XXXX 01XX XXXD 0000 Data
+
+  1111 1111 1111 1111 Mask
+  01XX XXXX XXXX XXXD Data
+
+
+     The mask register needs to be written before the data
+register. Sending commences when the data register is writ- ten
+and
+takes approximately 16uS. Subsequent writes to the data and mask
+registers are blocked until sending is com- plete.  Reading the
+registers while sending is in progress will return a snapshot of
+the
+shift register shifting the data and mask out.  This means that
+you
+know it is safe to send the next command when these registers (or
+either one) return to their original state.  Note that the mask
+regis- ter does not need to be rewritten if it is already
+correct.
+That is, when sending a series of commands the mask register only
+needs to be written once.
+
+Volume and Tone Control
+
+     The RASCAL provides volume, tone, and mixing control.  This
+part is accessed using the MICROWIRE inter- face. The device has
+a
+two bit address field,  address = %10, and a nine bit data field.
+There is no way of reading the current settings.
+
+     The input selector is used to enable and disable mixing the
+output of the GI PSG with the DMA sound. After reset, the input
+is
+grounded, and should be switched to either states  1  or 2 during
+initialization to avoid level mismatches during later switching.
+
+  Data Field
+
+  011 DDD DDD Set Master Volume
+    ||| |||
+    000 000 -80 dB
+    010 100 -40 dB
+    101 XXX  0 dB
+
+  101 XDD DDD Set Left Channel Volume
+     || |||
+     00 000 -40 dB
+     01 010 -20 dB
+     10 1XX  0 dB
+
+  100 XDD DDD Set Right Channel Volume
+     || |||
+     00 000 -40 dB
+     01 010 -20 dB
+     10 1XX  0 dB
+
+  010 XXD DDD Set Treble
+     | |||
+     0 000 -12 dB
+     0 110  0 dB (Flat)
+     1 100 +12 dB
+
+  001 XXD DDD Set Bass
+     | |||
+     0 000 -12 dB
+     0 110  0 dB (Flat)
+     1 100 +12 dB
+
+  000 000 0ss GI PSG Sound Enable
+       ||
+       00 disabled, unbiased
+         (reset state)
+       01 enabled
+       10 disabled, biased
+
+Note: The volume controls attenuate in 2 dB steps.  The
+tone controls attenuate in 2 dB steps at 50 Hz and 15 kHz.
+

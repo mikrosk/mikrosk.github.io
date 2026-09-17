@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="185.88mm" height="129.86mm" viewBox="-3439.73 -4722.4 6659.47 4652.47">
+<title>EASYDRAW/SUNNYVAL/DB9.GEM</title>
+<rect x="-3439.73" y="-4722.4" width="6659.47" height="4652.47" fill="#FFFFFF"/>
+<text xml:space="preserve" x="-3020" y="-4060" font-family="Arial,Helvetica,sans-serif" font-size="303.33" fill="#000000" textLength="2060" lengthAdjust="spacingAndGlyphs">SERIAL PORT </text>
+<text xml:space="preserve" x="-2960" y="-3410" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="640" lengthAdjust="spacingAndGlyphs">DB9 Male</text>
+<text xml:space="preserve" x="-2270" y="-2280" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="230" lengthAdjust="spacingAndGlyphs">Pin</text>
+<text xml:space="preserve" x="-2270" y="-1800" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">1</text>
+<text xml:space="preserve" x="-2270" y="-1640" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs">2 </text>
+<text xml:space="preserve" x="-2270" y="-1480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">3</text>
+<text xml:space="preserve" x="-2270" y="-1320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">4</text>
+<text xml:space="preserve" x="-2270" y="-1160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">5</text>
+<text xml:space="preserve" x="-2270" y="-1000" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">6</text>
+<text xml:space="preserve" x="-2270" y="-840" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">7</text>
+<text xml:space="preserve" x="-2270" y="-680" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="80" lengthAdjust="spacingAndGlyphs">8</text>
+<text xml:space="preserve" x="-2270" y="-520" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="450" lengthAdjust="spacingAndGlyphs">9</text>
+<text xml:space="preserve" x="-740" y="-2280" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="-740" y="-1800" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="930" lengthAdjust="spacingAndGlyphs">Carrier Detect</text>
+<text xml:space="preserve" x="-740" y="-1640" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="540" lengthAdjust="spacingAndGlyphs">Receive</text>
+<text xml:space="preserve" x="-740" y="-1480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="610" lengthAdjust="spacingAndGlyphs">Transmit</text>
+<text xml:space="preserve" x="-740" y="-1320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1420" lengthAdjust="spacingAndGlyphs">Data Terminal Ready</text>
+<text xml:space="preserve" x="-740" y="-1160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-740" y="-1000" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="810" lengthAdjust="spacingAndGlyphs">No Connect</text>
+<text xml:space="preserve" x="-740" y="-840" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1150" lengthAdjust="spacingAndGlyphs">Request to Send</text>
+<text xml:space="preserve" x="-740" y="-680" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="930" lengthAdjust="spacingAndGlyphs">Clear to Send</text>
+<text xml:space="preserve" x="-740" y="-520" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="970" lengthAdjust="spacingAndGlyphs">Ring Indicator</text>
+<text xml:space="preserve" x="2680" y="-3370" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 5</text>
+<text xml:space="preserve" x="2630" y="-3160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 9</text>
+<text xml:space="preserve" x="940" y="-3160" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 6</text>
+<text xml:space="preserve" x="910" y="-3370" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="120" lengthAdjust="spacingAndGlyphs"> 1</text>
+<path d="M1167 -3623L2608 -3623M1315 -3017L2438 -3017M1098 -3540L1225 -3110M2670 -3540L2543 -3099M1225 -3109A92 92 0 0 0 1317 -3017M2670 -3540A69 83 0 0 0 2601 -3623M2440 -3015A105 90 0 0 0 2545 -3105M1167 -3623A69 83 0 0 0 1098 -3540" fill="none" stroke="#000000" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1429 -3417A91 100 0 1 0 1247 -3417A91 100 0 1 0 1429 -3417Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1429 -3417A91 100 0 1 0 1247 -3417A91 100 0 1 0 1429 -3417Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1702 -3417A91 100 0 1 0 1520 -3417A91 100 0 1 0 1702 -3417Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1702 -3417A91 100 0 1 0 1520 -3417A91 100 0 1 0 1702 -3417Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1975 -3417A91 100 0 1 0 1793 -3417A91 100 0 1 0 1975 -3417Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1975 -3417A91 100 0 1 0 1793 -3417A91 100 0 1 0 1975 -3417Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2248 -3417A91 100 0 1 0 2066 -3417A91 100 0 1 0 2248 -3417Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2248 -3417A91 100 0 1 0 2066 -3417A91 100 0 1 0 2248 -3417Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2521 -3417A91 100 0 1 0 2339 -3417A91 100 0 1 0 2521 -3417Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2521 -3417A91 100 0 1 0 2339 -3417A91 100 0 1 0 2521 -3417Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1596 -3200A91 100 0 1 0 1414 -3200A91 100 0 1 0 1596 -3200Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1596 -3200A91 100 0 1 0 1414 -3200A91 100 0 1 0 1596 -3200Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1871 -3200A92 100 0 1 0 1687 -3200A92 100 0 1 0 1871 -3200Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M1871 -3200A92 100 0 1 0 1687 -3200A92 100 0 1 0 1871 -3200Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2142 -3200A91 100 0 1 0 1960 -3200A91 100 0 1 0 2142 -3200Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2142 -3200A91 100 0 1 0 1960 -3200A91 100 0 1 0 2142 -3200Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2415 -3200A91 100 0 1 0 2233 -3200A91 100 0 1 0 2415 -3200Z" fill="#000000" fill-rule="evenodd"/>
+<path d="M2415 -3200A91 100 0 1 0 2233 -3200A91 100 0 1 0 2415 -3200Z" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

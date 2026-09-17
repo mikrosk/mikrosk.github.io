@@ -1,0 +1,55 @@
+[PageStream 2 document JANET1.DOC: 8.50 x 11.00 in, 5 objects]
+
+--- Page 1 ---
+
+As per our phone conversation here is the way I see it.
+
+Left Field News Desk
+
+Weather Segment
+
+INT. - NEWS DESK - REPORTER SAM SKY - NIGHT
+
+MCU of NEWS STAND IN at news desk. NEWS STAND IN for TED pitches to WEATHER DESK after news.
+
+MCU SAM SKY is sitting in the chair looking exactly as he did the previous show. Still has charcoal on his face and a ripped shirt. NEWS STAND IN reacts to him as if he hasn't bathed in two weeks. SAM opens with a few words.
+
+SAM
+
+And now for the weather. It was partly sunny all this week in the D/FW area, but it's still raining in my heart.
+
+CU Weather Map as SAM points to the weather map.
+
+SAM
+
+But we'll fix that.
+
+MCU WA Sam reaches under table and pulls out wires with bare copper ends. He hands one end to the reporter.
+
+SAM
+
+Could you hold this for me?
+
+
+MCU as SAM pours some water into a LEFT FIELD COFFEE CUP and douses the NEWS STAND IN. Then SAM grabs the other end of the wire and both NEWS STAND IN and SAM begin to shake. In a shaky voice NEWS STAND IN (as if being electrocuted) pitches back to JANET.
+
+NEWS STAND IN
+
+ Well, that's all we have time for. So long for Left Field News....
+
+
+Sincerely Yours
+
+
+Marty Pennock
+
+--- Master page (repeated on pages; # = page number) ---
+[1 drawing objects, see JANET1.DOC.mR.svg]
+
+FAX
+
+
+To:		Janet Allison
+From:     Martin Pennock
+Subject:	Script for Weather on Left Field News Desk
+Date:	February 11, 1992

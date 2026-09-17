@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="265.22mm" height="163.68mm" viewBox="-4671.57 -3209.57 9502.13 5864.13">
+<title>EASYDRAW/SUNNYVAL/DSPBOARD.GEM</title>
+<rect x="-4671.57" y="-3209.57" width="9502.13" height="5864.13" fill="#FFFFFF"/>
+<path d="M-4343 2326L4502 2326L4502 -2881L-4343 -2881L-4343 2326" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-4222 1946L4312 1946L4312 -226L-4222 -226Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M-4222 1946L4312 1946L4312 -226L-4222 -226L-4222 1946" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="107.48,35.83"/>
+<path d="M174 2067L4450 2067L4450 -916L174 -916L174 2067" fill="none" stroke="#000000" stroke-width="7.17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2820 425L4070 425L4070 -755L2820 -755L2820 425" fill="none" stroke="#000000" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="3050" y="-480" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="560" lengthAdjust="spacingAndGlyphs">    56001</text>
+<text xml:space="preserve" x="3050" y="-320" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="790" lengthAdjust="spacingAndGlyphs">20MHz DSP</text>
+<text xml:space="preserve" x="3060" y="-10" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="690" lengthAdjust="spacingAndGlyphs">8k Words </text>
+<text xml:space="preserve" x="3060" y="150" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="500" lengthAdjust="spacingAndGlyphs">  SRAM</text>
+<path d="M346 0L1 49L50 5L0 2L99 154" fill="none" stroke="#000000" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="-3120" y="560" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="160" lengthAdjust="spacingAndGlyphs">13</text>
+<text xml:space="preserve" x="-2510" y="-1830" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="440" lengthAdjust="spacingAndGlyphs">Signal</text>
+<text xml:space="preserve" x="-2510" y="-1350" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1180" lengthAdjust="spacingAndGlyphs">Microwire Enable</text>
+<text xml:space="preserve" x="-2510" y="-1190" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1010" lengthAdjust="spacingAndGlyphs">Microwire Data</text>
+<text xml:space="preserve" x="-2510" y="-1030" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1090" lengthAdjust="spacingAndGlyphs">Microwire Clock</text>
+<text xml:space="preserve" x="-2510" y="-870" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1630" lengthAdjust="spacingAndGlyphs">DMA Sound Enable Out</text>
+<text xml:space="preserve" x="-2510" y="-710" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1540" lengthAdjust="spacingAndGlyphs">DMA Sound Clock Out</text>
+<text xml:space="preserve" x="-2510" y="-550" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1460" lengthAdjust="spacingAndGlyphs">DMA Sound Data Out</text>
+<text xml:space="preserve" x="-2510" y="-390" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="2170" lengthAdjust="spacingAndGlyphs">DMA Sound Channel Select out</text>
+<text xml:space="preserve" x="-2510" y="-230" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2510" y="-70" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="780" lengthAdjust="spacingAndGlyphs">Rate Select</text>
+<text xml:space="preserve" x="-2510" y="90" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="520" lengthAdjust="spacingAndGlyphs">Ground</text>
+<text xml:space="preserve" x="-2510" y="250" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1660" lengthAdjust="spacingAndGlyphs">Sync Serial I/F Control 0</text>
+<text xml:space="preserve" x="-2510" y="410" font-family="Arial,Helvetica,sans-serif" font-size="151.67" fill="#000000" textLength="1660" lengthAdjust="spacingAndGlyphs">Sync Serial I/F Control 1</text>
+</svg>

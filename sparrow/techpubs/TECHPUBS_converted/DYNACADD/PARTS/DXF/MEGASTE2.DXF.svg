@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1089.9" height="2448" viewBox="0 0 1089.9 2448">
+<title>DYNACADD/PARTS/DXF/MEGASTE2.DXF</title>
+<rect x="0" y="0" width="1089.9" height="2448" fill="#ffffff"/>
+<g data-layer="1" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M646.03 397.22L1065.9 397.22M1065.9 397.22L1065.9 682.32M1065.9 682.32L646.03 682.32M646.03 977.78L1065.9 977.78M1065.9 977.78L1065.9 1262.88M1065.9 1262.88L646.03 1262.88M646.03 1262.88L646.03 977.78M646.03 1558.34L1065.9 1558.34M1065.9 1558.34L1065.9 1843.44M1065.9 1843.44L646.03 1843.44M646.03 1843.44L646.03 1558.34M24 2138.9L443.87 2138.9M443.87 2138.9L443.87 2424M443.87 2424L24 2424M444.91 539.25L643.96 539.25M444.91 1119.81L643.96 1119.81M444.91 1700.37L643.96 1700.37M619.08 551.69L643.96 539.25M643.96 539.25L619.08 526.81M619.08 1132.25L643.96 1119.81M643.96 1119.81L619.08 1107.37M619.08 1712.81L643.96 1700.37M643.96 1700.37L619.08 1687.93M646.03 684.45L646.03 399.35M232.38 24A91.52 91.52 0 0 0 148.41 122.49M319.46 122.49A92.96 92.96 0 0 0 232.38 24M148.41 122.49A94.34 94.34 0 0 0 232.38 226.16M232.38 226.16A95.74 95.74 0 0 0 319.46 122.49M233.42 228.23L233.42 352.64M220.98 327.76L233.42 352.64M233.42 352.64L245.86 327.76M33.33 521.62L232.38 355.75M33.33 521.62A23.68 23.68 0 0 0 33.33 557.91M232.38 355.75L431.43 521.62M233.42 1306.42L233.42 1513.76M220.98 1488.88L233.42 1513.76M233.42 1513.76L245.86 1488.88M232.38 1884.91L33.33 1719.03M33.33 1682.75L232.38 1516.87M24 2424L24 2138.9M33.33 1682.75A23.68 23.68 0 0 0 33.33 1719.03M233.42 1886.98L233.42 2135.79M220.98 2110.91L233.42 2135.79M233.42 2135.79L245.86 2110.91M232.38 1516.87L431.43 1682.75M431.43 1719.03L232.38 1884.91M431.43 1719.03A23.68 23.68 0 0 0 431.43 1682.75M232.38 1304.35L33.33 1138.47M232.38 723.78L33.33 557.91M33.33 1102.19L232.38 936.31M33.33 1102.19A23.68 23.68 0 0 0 33.33 1138.47M232.38 936.31L431.43 1102.19M431.43 1138.47L232.38 1304.35M431.43 1138.47A23.68 23.68 0 0 0 431.43 1102.19M431.43 557.91L232.38 723.78M233.42 725.86L233.42 933.2M220.98 908.32L233.42 933.2M233.42 933.2L245.86 908.32M431.43 557.91A23.68 23.68 0 0 0 431.43 521.62"/>
+</g>
+<g data-layer="1" fill="#000000" stroke="none" font-family="Helvetica, Arial, 'Liberation Sans', 'DejaVu Sans', sans-serif" xml:space="preserve">
+<text transform="translate(946.25 573.11) scale(0.940 1)" y="0" font-size="36.24">OR </text>
+<text transform="translate(452.86 531.65) scale(0.940 1)" y="0" font-size="36.24">YES</text>
+<text transform="translate(705.89 573.11) scale(0.940 1)" y="0" font-size="36.24">DIAGNOSTIC </text>
+<text transform="translate(763.48 529.51) scale(0.940 1)" y="0" font-size="36.24">RUN</text>
+<text transform="translate(872.1 529.51) scale(0.940 1)" y="0" font-size="36.24">DISK </text>
+<text transform="translate(889.66 614.58) scale(0.940 1)" y="0" font-size="36.24">DISK </text>
+<text transform="translate(716.82 614.58) scale(0.940 1)" y="0" font-size="36.24">REPLACE</text>
+<text transform="translate(452.86 1112.21) scale(0.940 1)" y="0" font-size="36.24">YES</text>
+<text transform="translate(727.06 1070.74) scale(0.940 1)" y="0" font-size="36.24">TRACE</text>
+<text transform="translate(873.31 1070.74) scale(0.940 1)" y="0" font-size="36.24">SIGNAL </text>
+<text transform="translate(747.55 1114.34) scale(0.940 1)" y="0" font-size="36.24">FROM </text>
+<text transform="translate(448.47 1692.77) scale(0.940 1)" y="0" font-size="36.24">NO </text>
+<text transform="translate(808.22 1649.17) scale(0.940 1)" y="0" font-size="36.24">RUN</text>
+<text transform="translate(714.9 1692.77) scale(0.940 1)" y="0" font-size="36.24">APPROPRIATE</text>
+<text transform="translate(801 1734.24) scale(0.940 1)" y="0" font-size="36.24">TEST </text>
+<text transform="translate(712.67 1777.84) scale(0.940 1)" y="0" font-size="36.24">CONTINUOUSLY </text>
+<text transform="translate(218.47 134.95) scale(0.940 1)" y="0" font-size="36.24">A</text>
+<text transform="translate(879.88 1114.34) scale(0.940 1)" y="0" font-size="36.24">VIDEO</text>
+<text transform="translate(750.44 1202.77) scale(0.940 1)" y="0" font-size="36.24">TO </text>
+<text transform="translate(829.6 1201.55) scale(0.940 1)" y="0" font-size="36.24">OUTPUT </text>
+<text transform="translate(776.22 1159.73)" y="0" font-size="36.24">SHIFTER</text>
+<text transform="translate(173.48 531.65) scale(0.940 1)" y="0" font-size="36.24">WON'T</text>
+<text transform="translate(75.16 2273.33) scale(0.940 1)" y="0" font-size="36.24">CONTACT</text>
+<text transform="translate(148.09 1694.9) scale(0.940 1)" y="0" font-size="36.24">PROBLEM</text>
+<text transform="translate(155.78 1734.24) scale(0.940 1)" y="0" font-size="36.24">FOUND? </text>
+<text transform="translate(74.79 2314.8) scale(0.940 1)" y="0" font-size="36.24">TECH </text>
+<text transform="translate(253.63 2273.33) scale(0.940 1)" y="0" font-size="36.24">ATARI</text>
+<text transform="translate(194.38 2314.8) scale(0.940 1)" y="0" font-size="36.24">SUPPORT</text>
+<text transform="translate(258.42 1937.31) scale(0.940 1)" y="0" font-size="36.24">YES</text>
+<text transform="translate(125.26 1153.68) scale(0.940 1)" y="0" font-size="36.24">PROBLEM? </text>
+<text transform="translate(124.98 573.11) scale(0.940 1)" y="0" font-size="36.24">LOAD </text>
+<text transform="translate(258.62 1348.21) scale(0.940 1)" y="0" font-size="36.24">NO </text>
+<text transform="translate(175.88 1116.48) scale(0.940 1)" y="0" font-size="36.24">VIDEO</text>
+<text transform="translate(250.41 573.11) scale(0.940 1)" y="0" font-size="36.24">DISK?</text>
+<text transform="translate(251.72 761.25) scale(0.940 1)" y="0" font-size="36.24">NO </text>
+</g>
+</svg>

@@ -1,0 +1,747 @@
+File: EASYDRAW/SUNNYVAL/TTFLOW1.GEM
+Format: GEM Metafile version 1.01, 24-word header, RC coordinates (flag 2)
+Header extents: (-1890,-3375)-(1890,3375)
+Page size: 330.2 x 203.2 mm
+Coordinate window: lower-left (-5915,3640), upper-right (5915,-3640); rendered with y axis down, 35.83 units/mm
+Drawing bounding box (file units): (-4343,-4302.67)-(4502,3375)
+Items: 3493 (30749 words)
+Objects: polyline 163, fill area 49, bar 1, ellipse 235, elliptical arc 251, justified text 615
+Other records (escapes, application data): escape 80 x1, write_meta 10 x105, write_meta 150 x9, write_meta 151 x105, write_meta 152 x97, write_meta 153 x98, write_meta 154 x585, write_meta 155 x49, write_meta 157 x7, write_meta 158 x9, write_meta 160 x9, write_meta 80 x414, write_meta 81 x414
+Warning: premature end marker at word 5552 with 25196 words following
+Warning: premature end marker at word 6879 with 23869 words following
+Warning: premature end marker at word 8561 with 22187 words following
+Warning: premature end marker at word 11661 with 19087 words following
+Warning: premature end marker at word 12788 with 17960 words following
+Warning: premature end marker at word 15588 with 15160 words following
+Warning: premature end marker at word 20035 with 10713 words following
+Warning: premature end marker at word 23708 with 7040 words following
+Warning: premature end marker at word 26589 with 4159 words following
+Warning: premature end marker at word 30401 with 347 words following
+Warning: no end marker (file truncated or damaged)
+Warning: damaged file; data blocks belonging to other drawings may appear in the text list and the render
+Warning: damaged data skipped, words 514-521
+Warning: damaged data skipped, words 5552-5556
+Warning: damaged data skipped, words 6879-7206
+Warning: damaged data skipped, words 8561-8742
+Warning: damaged data skipped, words 11661-11814
+Warning: damaged data skipped, words 12788-12838
+Warning: damaged data skipped, words 15588-15910
+Warning: damaged data skipped, words 20035-20518
+Warning: damaged data skipped, words 23708-24102
+Warning: damaged data skipped, words 26589-26662
+Warning: damaged data skipped, words 30401-30749
+Text strings: 615
+
+TEXT (drawing order; x y = file units of the text start point; blank line between text blocks)
+   2990   -2810  [font 1 12pt]   1
+
+   2970   -2610  [font 1 12pt]   26
+
+  -2290   -2610  [font 1 12pt]   50
+
+  -2360   -2810  [font 1 12pt]   25
+
+  -2920    -830  [font 1 12pt]  Pin
+  -2920    -350  [font 1 12pt]  1-10
+  -2920    -190  [font 1 12pt]  11 
+  -2920     -30  [font 1 12pt]  12-14
+  -2920     130  [font 1 12pt]  15-25
+  -2920     290  [font 1 12pt]  26
+  -2920     450  [font 1 12pt]  27
+  -2920     610  [font 1 12pt]  28
+  -2920     770  [font 1 12pt]  29
+  -2920     930  [font 1 12pt]  30
+  -2920    1090  [font 1 12pt]  31
+  -2920    1250  [font 1 12pt]  32
+  -2920    1410  [font 1 12pt]  33
+  -2920    1570  [font 1 12pt]  34
+  -2920    1730  [font 1 12pt]  35-36
+
+  -2310    -820  [font 1 12pt]  Signal
+  -2310    -340  [font 1 12pt]  Ground
+  -2310    -180  [font 1 12pt]  + 5V
+  -2310     -20  [font 1 12pt]  No Connect
+  -2310     140  [font 1 12pt]  Ground
+  -2310     300  [font 1 12pt]  SCSI 0
+  -2310     460  [font 1 12pt]  SCSI 1
+  -2310     620  [font 1 12pt]  SCSI 2
+  -2310     780  [font 1 12pt]  SCSI 3
+  -2310     940  [font 1 12pt]  SCSI 4
+  -2310    1100  [font 1 12pt]  SCSI 5
+  -2310    1260  [font 1 12pt]  SCSI 6
+  -2310    1420  [font 1 12pt]  SCSI 7
+  -2310    1580  [font 1 12pt]  Parity
+  -2310    1740  [font 1 12pt]  Ground
+
+    220    -820  [font 1 12pt]  Pin
+    220    -340  [font 1 12pt]  37
+    220    -180  [font 1 12pt]  38
+    220     -20  [font 1 12pt]  39
+    220     140  [font 1 12pt]  40
+    220     300  [font 1 12pt]  41
+    220     460  [font 1 12pt]  42
+    220     620  [font 1 12pt]  43
+    220     780  [font 1 12pt]  44
+    220     940  [font 1 12pt]  45
+    220    1100  [font 1 12pt]  46
+    220    1260  [font 1 12pt]  47
+    220    1420  [font 1 12pt]  48
+    220    1580  [font 1 12pt]  49
+    220    1740  [font 1 12pt]  50
+
+    910    -830  [font 1 12pt]  Signal
+    910    -350  [font 1 12pt]  No Connect
+    910    -190  [font 1 12pt]  + 5V
+    910     -30  [font 1 12pt]  No Connect
+    910     130  [font 1 12pt]  Ground
+    910     290  [font 1 12pt]  ATN
+    910     450  [font 1 12pt]  Ground
+    910     610  [font 1 12pt]  BSY
+    910     770  [font 1 12pt]  ACK
+    910     930  [font 1 12pt]  RST
+    910    1090  [font 1 12pt]  MSG
+    910    1250  [font 1 12pt]  SEL
+    910    1410  [font 1 12pt]  C/D
+    910    1570  [font 1 12pt]  REQ
+    910    1730  [font 1 12pt]  I/O
+
+    900   -1970  [font 1 12pt]  Output
+    900   -1810  [font 1 12pt]  -- 
+    900   -1650  [font 1 12pt]  -- 
+    900   -1490  [font 1 12pt]  --  
+    900   -1330  [font 1 12pt]  -- 
+    900   -1170  [font 1 12pt]  -- 
+    900   -1010  [font 1 12pt]  -- 
+    900    -850  [font 1 12pt]  -- 
+    900    -690  [font 1 12pt]  -- 
+    900    -530  [font 1 12pt]  -- 
+    900    -370  [font 1 12pt]  Input
+    900    -210  [font 1 12pt]  -- 
+    900     -50  [font 1 12pt]  -- 
+
+   3150   -3380  [font 1 12pt]   1
+
+   3020   -3050  [font 1 12pt]   14
+
+  -1020   -3050  [font 1 12pt]   25
+
+  -1220   -3370  [font 1 12pt]   13
+
+  -3020   -4060  [font 7 24pt]  SERIAL PORT 
+
+  -2960   -3410  [font 7 12pt]  DB9 Male
+
+  -2270   -2280  [font 7 12pt]  Pin
+  -2270   -1800  [font 7 12pt]  1
+  -2270   -1640  [font 7 12pt]  2 
+  -2270   -1480  [font 7 12pt]  3
+  -2270   -1320  [font 7 12pt]  4
+  -2270   -1160  [font 7 12pt]  5
+  -2270   -1000  [font 7 12pt]  6
+  -2270    -840  [font 7 12pt]  7
+  -2270    -680  [font 7 12pt]  8
+  -2270    -520  [font 7 12pt]  9
+
+   -740   -2280  [font 7 12pt]  Signal
+   -740   -1800  [font 7 12pt]  Carrier Detect
+   -740   -1640  [font 7 12pt]  Receive
+   -740   -1480  [font 7 12pt]  Transmit
+   -740   -1320  [font 7 12pt]  Data Terminal Ready
+   -740   -1160  [font 7 12pt]  Ground
+   -740   -1000  [font 7 12pt]  No Connect
+   -740    -840  [font 7 12pt]  Request to Send
+   -740    -680  [font 7 12pt]  Clear to Send
+   -740    -520  [font 7 12pt]  Ring Indicator
+
+   2680   -3370  [font 7 12pt]   5
+
+   2630   -3160  [font 7 12pt]   9
+
+    940   -3160  [font 7 12pt]   6
+
+    910   -3370  [font 7 12pt]   1
+
+  -3380   -3950  [font 7 24pt]  DSP CONNECTOR
+
+  -3340   -3280  [font 7 12pt]  DB26 Female
+
+  -3120   -1840  [font 7 12pt]  Pin
+  -3120   -1360  [font 7 12pt]  1
+  -3120   -1200  [font 7 12pt]  2 
+  -3120   -1040  [font 7 12pt]  3
+  -3120    -880  [font 7 12pt]  4
+  -3120    -720  [font 7 12pt]  5
+  -3120    -560  [font 7 12pt]  6
+  -3120    -400  [font 7 12pt]  7
+  -3120    -240  [font 7 12pt]  8
+  -3120     -80  [font 7 12pt]  9
+  -3120      80  [font 7 12pt]  10
+  -3120     240  [font 7 12pt]  11
+  -3120     400  [font 7 12pt]  12
+  -3120     560  [font 7 12pt]  13
+
+  -2510   -1830  [font 7 12pt]  Signal
+  -2510   -1350  [font 7 12pt]  Microwire Enable
+  -2510   -1190  [font 7 12pt]  Microwire Data
+  -2510   -1030  [font 7 12pt]  Microwire Clock
+  -2510    -870  [font 7 12pt]  DMA Sound Enable Out
+  -2510    -710  [font 7 12pt]  DMA Sound Clock Out
+  -2510    -550  [font 7 12pt]  DMA Sound Data Out
+  -2510    -390  [font 7 12pt]  DMA Sound Channel Select out
+  -2510    -230  [font 7 12pt]  Ground
+  -2510     -70  [font 7 12pt]  Rate Select
+  -2510      90  [font 7 12pt]  Ground
+  -2510     250  [font 7 12pt]  Sync Serial I/F Control 0
+  -2510     410  [font 7 12pt]  Sync Serial I/F Control 1
+  -2510     570  [font 7 12pt]  Sync Serial I/F Control 2
+
+     20   -1830  [font 7 12pt]  Pin
+     20   -1350  [font 7 12pt]  14
+     20   -1190  [font 7 12pt]  15 
+     20   -1030  [font 7 12pt]  16
+     20    -870  [font 7 12pt]  17
+     20    -710  [font 7 12pt]  18
+     20    -550  [font 7 12pt]  19
+     20    -390  [font 7 12pt]  20
+     20    -230  [font 7 12pt]  21
+     20     -70  [font 7 12pt]  22
+     20      90  [font 7 12pt]  23
+     20     250  [font 7 12pt]  24
+     20     410  [font 7 12pt]  25
+     20     570  [font 7 12pt]  26
+
+    710   -1840  [font 7 12pt]  Signal
+    710   -1360  [font 7 12pt]  Ground
+    710   -1200  [font 7 12pt]  Sync Serial Data In
+    710   -1040  [font 7 12pt]  Ground
+    710    -880  [font 7 12pt]  + 12V
+    710    -720  [font 7 12pt]  Ground
+    710    -560  [font 7 12pt]  DMA Sound Data Enable In
+    710    -400  [font 7 12pt]  DMA Sound Clock In
+    710    -240  [font 7 12pt]  DMA Sound Data In
+    710     -80  [font 7 12pt]  DMA Sound Channel Select In
+    710      80  [font 7 12pt]  Sync Serial I/F Data Out 
+    710     240  [font 7 12pt]  Sync Serial I/F Clock
+    710     400  [font 7 12pt]  Ground
+    710     560  [font 7 12pt]  External Clock (Genlock)
+
+   -640   -2650  [font 7 12pt]   26
+
+   2710   -3240  [font 7 12pt]   1
+
+   -820   -3200  [font 7 12pt]   9
+
+   -730   -2920  [font 7 12pt]   18
+
+   2560   -2930  [font 7 12pt]   10
+
+   2440   -2650  [font 7 12pt]   19
+
+   3050    -480  [font 7 12pt]      56001
+   3050    -320  [font 7 12pt]  20MHz DSP
+
+   3060     -10  [font 7 12pt]  8k Words 
+   3060     150  [font 7 12pt]    SRAM
+
+    600    -340  [font 7 12pt]   68030
+
+    630     100  [font 7 12pt]  8MHz
+
+    930    1260  [font 7 12pt]  68882
+
+    970    1700  [font 7 12pt]  8MHz
+
+   1850    -480  [font 7 10pt]  DSP Board
+
+  -4100    1810  [font 7 10pt]  Keyboard
+
+    610    3050  [font 7 24pt]  DSP Board Orientation
+
+  -3410   -2080  [font 7 12pt]  Power 
+  -3410   -1920  [font 7 12pt]  Supply
+
+   2680   -1840  [font 7 12pt]  Floppy Drive
+
+   1820   -3130  [font 7 12pt]   1
+
+   2790   -3130  [font 7 12pt]   2
+
+   2790      60  [font 7 12pt]   30
+
+   1760      60  [font 7 12pt]   29
+
+  -3360   -3950  [font 7 24pt]  SPARROW EXPANSION CONNECTOR
+
+  -3330   -3360  [font 7 12pt]  30 Pin Header - J20
+
+  -3010   -2430  [font 7 12pt]  Pin
+  -3010   -1950  [font 7 12pt]  1 
+  -3010   -1790  [font 7 12pt]  3
+  -3010   -1630  [font 7 12pt]  5
+  -3010   -1470  [font 7 12pt]  7
+  -3010   -1310  [font 7 12pt]  9
+  -3010   -1150  [font 7 12pt]  11
+  -3010    -990  [font 7 12pt]  13
+  -3010    -830  [font 7 12pt]  15
+  -3010    -670  [font 7 12pt]  17
+  -3010    -510  [font 7 12pt]  19
+  -3010    -350  [font 7 12pt]  21
+  -3010    -190  [font 7 12pt]  23
+  -3010     -30  [font 7 12pt]  25
+  -3010     130  [font 7 12pt]  27
+  -3010     290  [font 7 12pt]  29
+
+   -690   -2440  [font 7 12pt]  Pin
+   -690   -1960  [font 7 12pt]  2 
+   -690   -1800  [font 7 12pt]  4
+   -690   -1640  [font 7 12pt]  6
+   -690   -1480  [font 7 12pt]  8
+   -690   -1320  [font 7 12pt]  10
+   -690   -1160  [font 7 12pt]  12
+   -690   -1000  [font 7 12pt]  14
+   -690    -840  [font 7 12pt]  16
+   -690    -680  [font 7 12pt]  18
+   -690    -520  [font 7 12pt]  20
+   -690    -360  [font 7 12pt]  22
+   -690    -200  [font 7 12pt]  24
+   -690     -40  [font 7 12pt]  26
+   -690     120  [font 7 12pt]  28
+   -690     280  [font 7 12pt]  30
+
+    -60   -2450  [font 7 12pt]  Signal
+    -60   -1970  [font 7 12pt]  DATA 13
+    -60   -1810  [font 7 12pt]  DATA 11
+    -60   -1650  [font 7 12pt]  DATA 9
+    -60   -1490  [font 7 12pt]  DATA 7
+    -60   -1330  [font 7 12pt]  DATA 5
+    -60   -1170  [font 7 12pt]  DATA 3
+    -60   -1010  [font 7 12pt]  DATA 1
+    -60    -850  [font 7 12pt]  DATA 15
+    -60    -690  [font 7 12pt]  Ground
+    -60    -530  [font 7 12pt]  No Connect
+    -60    -370  [font 7 12pt]  EINT5
+    -60    -210  [font 7 12pt]  No Connect
+    -60     -50  [font 7 12pt]  MFP_INT
+    -60     110  [font 7 12pt]  VCC
+    -60     270  [font 7 12pt]  VCC
+
+  -2500   -2430  [font 7 12pt]  Signal
+  -2500   -1950  [font 7 12pt]  DATA 14
+  -2500   -1790  [font 7 12pt]  DATA 12
+  -2500   -1630  [font 7 12pt]  DATA 10
+  -2500   -1470  [font 7 12pt]  DATA 8
+  -2500   -1310  [font 7 12pt]  DATA 6
+  -2500   -1150  [font 7 12pt]  DATA 4
+  -2500    -990  [font 7 12pt]  DATA 2
+  -2500    -830  [font 7 12pt]  DATA 0
+  -2500    -670  [font 7 12pt]  Ground
+  -2500    -510  [font 7 12pt]  Ground
+  -2500    -350  [font 7 12pt]  EINT1
+  -2500    -190  [font 7 12pt]  500KHZ
+  -2500     -30  [font 7 12pt]  MFP_IEI
+  -2500     130  [font 7 12pt]  EINT3
+  -2500     290  [font 7 12pt]  VCC
+
+   1930   -3410  [font 7 12pt]   1
+
+   2840   -3410  [font 7 12pt]   2
+
+   2840    2050  [font 7 12pt]   50
+
+   1820    2050  [font 7 12pt]   49
+
+  -3410   -2960  [font 7 12pt]  50 Pin Header - J19
+
+  -3470   -3950  [font 7 24pt]  SPARROW EXPANSION CONNECTOR
+
+  -3070   -2200  [font 7 12pt]  Pin
+  -3070   -1720  [font 7 12pt]  1 
+  -3070   -1560  [font 7 12pt]  3
+  -3070   -1400  [font 7 12pt]  5
+  -3070   -1240  [font 7 12pt]  7
+  -3070   -1080  [font 7 12pt]  9
+  -3070    -920  [font 7 12pt]  11
+  -3070    -760  [font 7 12pt]  13
+  -3070    -600  [font 7 12pt]  15
+  -3070    -440  [font 7 12pt]  17
+  -3070    -280  [font 7 12pt]  19
+  -3070    -120  [font 7 12pt]  21
+  -3070      40  [font 7 12pt]  23
+  -3070     200  [font 7 12pt]  25
+  -3070     360  [font 7 12pt]  27
+  -3070     520  [font 7 12pt]  29
+  -3070     680  [font 7 12pt]  31
+  -3070     840  [font 7 12pt]  33
+  -3070    1000  [font 7 12pt]  35
+  -3070    1160  [font 7 12pt]  37
+  -3070    1320  [font 7 12pt]  39
+  -3070    1480  [font 7 12pt]  41
+  -3070    1640  [font 7 12pt]  43
+  -3070    1800  [font 7 12pt]  45
+  -3070    1960  [font 7 12pt]  47
+  -3070    2120  [font 7 12pt]  49
+
+    -30   -2210  [font 7 12pt]  Signal
+    -30   -1730  [font 7 12pt]  Ground
+    -30   -1570  [font 7 12pt]  AS
+    -30   -1410  [font 7 12pt]  UDS
+    -30   -1250  [font 7 12pt]  DTACK
+    -30   -1090  [font 7 12pt]  FC1
+    -30    -930  [font 7 12pt]  No Connect
+    -30    -770  [font 7 12pt]  IACK
+    -30    -610  [font 7 12pt]  BR
+    -30    -450  [font 7 12pt]  Halt
+    -30    -290  [font 7 12pt]  IPL0
+    -30    -130  [font 7 12pt]  IPL2
+    -30      30  [font 7 12pt]  VCC
+    -30     190  [font 7 12pt]  ADDR 23
+    -30     350  [font 7 12pt]  ADDR 21
+    -30     510  [font 7 12pt]  ADDR 19
+    -30     670  [font 7 12pt]  ADDR 17
+    -30     830  [font 7 12pt]  ADDR 15
+    -30     990  [font 7 12pt]  ADDR 13
+    -30    1150  [font 7 12pt]  ADDR 11
+    -30    1310  [font 7 12pt]  ADDR 9
+    -30    1470  [font 7 12pt]  ADDR 7
+    -30    1630  [font 7 12pt]  ADDR 5
+    -30    1790  [font 7 12pt]  ADDR 3
+    -30    1950  [font 7 12pt]  ADDR 1
+    -30    2110  [font 7 12pt]  No Connect
+
+   -750   -2210  [font 7 12pt]  Pin
+   -750   -1730  [font 7 12pt]  2 
+   -750   -1570  [font 7 12pt]  4
+   -750   -1410  [font 7 12pt]  6
+   -750   -1250  [font 7 12pt]  8
+   -750   -1090  [font 7 12pt]  10
+   -750    -930  [font 7 12pt]  12
+   -750    -770  [font 7 12pt]  14
+   -750    -610  [font 7 12pt]  16
+   -750    -450  [font 7 12pt]  18
+   -750    -290  [font 7 12pt]  20
+   -750    -130  [font 7 12pt]  22
+   -750      30  [font 7 12pt]  24
+   -750     190  [font 7 12pt]  26
+   -750     350  [font 7 12pt]  28
+   -750     510  [font 7 12pt]  30
+   -750     670  [font 7 12pt]  32
+   -750     830  [font 7 12pt]  34
+   -750     990  [font 7 12pt]  36
+   -750    1150  [font 7 12pt]  38
+   -750    1310  [font 7 12pt]  40
+   -750    1470  [font 7 12pt]  42
+   -750    1630  [font 7 12pt]  44
+   -750    1790  [font 7 12pt]  46
+   -750    1950  [font 7 12pt]  48
+   -750    2110  [font 7 12pt]  50
+
+  -2310   -2200  [font 7 12pt]  Signal
+  -2310   -1720  [font 7 12pt]  Ground
+  -2310   -1560  [font 7 12pt]  BGK
+  -2310   -1400  [font 7 12pt]  LDS
+  -2310   -1240  [font 7 12pt]  RXW
+  -2310   -1080  [font 7 12pt]  FC2
+  -2310    -920  [font 7 12pt]  FC0
+  -2310    -760  [font 7 12pt]  No Connect
+  -2310    -600  [font 7 12pt]  BG
+  -2310    -440  [font 7 12pt]  Reset
+  -2310    -280  [font 7 12pt]  BERR
+  -2310    -120  [font 7 12pt]  IPL1
+  -2310      40  [font 7 12pt]  CPUCLK
+  -2310     200  [font 7 12pt]  VCC
+  -2310     360  [font 7 12pt]  ADDR 22
+  -2310     520  [font 7 12pt]  ADDR 20
+  -2310     680  [font 7 12pt]  ADDR 18
+  -2310     840  [font 7 12pt]  ADDR 16
+  -2310    1000  [font 7 12pt]  ADDR 14
+  -2310    1160  [font 7 12pt]  ADDR 12
+  -2310    1320  [font 7 12pt]  ADDR 10
+  -2310    1480  [font 7 12pt]  ADDR 8
+  -2310    1640  [font 7 12pt]  ADDR 6
+  -2310    1800  [font 7 12pt]  ADDR 4
+  -2310    1960  [font 7 12pt]  ADDR 2
+  -2310    2120  [font 7 12pt]  No Connect
+
+  -3110   -3900  [font 7 24pt]  FLOPPY CONNECTOR
+
+   1710   -3380  [font 7 12pt]   1
+
+   2730   -3380  [font 7 12pt]   2
+
+   2680     600  [font 7 12pt]   34
+
+   1710     600  [font 7 12pt]   33
+
+  -2900   -2600  [font 7 12pt]  Pin
+  -2900   -2120  [font 7 12pt]  1 
+  -2900   -1960  [font 7 12pt]  3
+  -2900   -1800  [font 7 12pt]  5
+  -2900   -1640  [font 7 12pt]  7
+  -2900   -1480  [font 7 12pt]  9
+  -2900   -1320  [font 7 12pt]  11
+  -2900   -1160  [font 7 12pt]  13
+  -2900   -1000  [font 7 12pt]  15
+  -2900    -840  [font 7 12pt]  17
+  -2900    -680  [font 7 12pt]  19
+  -2900    -520  [font 7 12pt]  21
+  -2900    -360  [font 7 12pt]  23
+  -2900    -200  [font 7 12pt]  25
+  -2900     -40  [font 7 12pt]  27
+  -2900     120  [font 7 12pt]  29
+  -2900     280  [font 7 12pt]  31
+  -2900     440  [font 7 12pt]  33
+
+  -2350   -2600  [font 7 12pt]  Signal
+  -2350   -2120  [font 7 12pt]  Ground
+  -2350   -1960  [font 7 12pt]  Ground
+  -2350   -1800  [font 7 12pt]  Ground
+  -2350   -1640  [font 7 12pt]  Ground
+  -2350   -1480  [font 7 12pt]  Ground
+  -2350   -1320  [font 7 12pt]  Ground
+  -2350   -1160  [font 7 12pt]  Ground
+  -2350   -1000  [font 7 12pt]  Ground
+  -2350    -840  [font 7 12pt]  Ground
+  -2350    -680  [font 7 12pt]  Ground
+  -2350    -520  [font 7 12pt]  Ground
+  -2350    -360  [font 7 12pt]  Ground
+  -2350    -200  [font 7 12pt]  Ground
+  -2350     -40  [font 7 12pt]  Ground
+  -2350     120  [font 7 12pt]  Media Detect 2
+  -2350     280  [font 7 12pt]  Ground
+  -2350     440  [font 7 12pt]  Media Detect 1
+
+    310   -2620  [font 7 12pt]  Signal
+    310   -2140  [font 7 12pt]  Mode Select 1
+    310   -1980  [font 7 12pt]  No Connect
+    310   -1820  [font 7 12pt]  Mode Select 2
+    310   -1660  [font 7 12pt]  Index Pulse
+    310   -1500  [font 7 12pt]  Drive Select 0
+    310   -1340  [font 7 12pt]  Drive Select 1
+    310   -1180  [font 7 12pt]  No Connect
+    310   -1020  [font 7 12pt]  Motor On
+    310    -860  [font 7 12pt]  Direction Select
+    310    -700  [font 7 12pt]  Step
+    310    -540  [font 7 12pt]  Write Data
+    310    -380  [font 7 12pt]  Write Gate
+    310    -220  [font 7 12pt]  Track 0
+    310     -60  [font 7 12pt]  Write Protect
+    310     100  [font 7 12pt]  Read Data
+    310     260  [font 7 12pt]  Side Select
+    310     420  [font 7 12pt]  Disk Change
+
+   -580   -2610  [font 7 12pt]  Pin
+   -580   -2130  [font 7 12pt]  2 
+   -580   -1970  [font 7 12pt]  4
+   -580   -1810  [font 7 12pt]  6
+   -580   -1650  [font 7 12pt]  8
+   -580   -1490  [font 7 12pt]  10
+   -580   -1330  [font 7 12pt]  12
+   -580   -1170  [font 7 12pt]  14
+   -580   -1010  [font 7 12pt]  16
+   -580    -850  [font 7 12pt]  18
+   -580    -690  [font 7 12pt]  20
+   -580    -530  [font 7 12pt]  22
+   -580    -370  [font 7 12pt]  24
+   -580    -210  [font 7 12pt]  26
+   -580     -50  [font 7 12pt]  28
+   -580     110  [font 7 12pt]  30
+   -580     270  [font 7 12pt]  32
+   -580     430  [font 7 12pt]  34
+
+  -3070   -3390  [font 7 12pt]  34 Pin Header - U76
+
+  -3240   -3950  [font 7 24pt]  ENHANCED JOYSTICK
+
+  -3250   -3300  [font 7 12pt]  DB15 Male
+
+  -3290   -1730  [font 7 12pt]  Pin
+  -3290   -1250  [font 7 12pt]  1
+  -3290   -1090  [font 7 12pt]  2 
+  -3290    -930  [font 7 12pt]  3
+  -3290    -770  [font 7 12pt]  4
+  -3290    -610  [font 7 12pt]  5
+  -3290    -450  [font 7 12pt]  6
+  -3290    -290  [font 7 12pt]  7
+  -3290    -130  [font 7 12pt]  8
+  -3290      30  [font 7 12pt]  9
+  -3290     190  [font 7 12pt]  10
+  -3290     350  [font 7 12pt]  11
+  -3290     510  [font 7 12pt]  12
+  -3290     670  [font 7 12pt]  13
+  -3290     830  [font 7 12pt]  14
+  -3290     990  [font 7 12pt]  15
+
+  -2680   -1720  [font 7 12pt]  Signal
+  -2680   -1240  [font 7 12pt]  UP 2
+  -2680   -1080  [font 7 12pt]  DN 2
+  -2680    -920  [font 7 12pt]  LT 2
+  -2680    -760  [font 7 12pt]  RT2
+  -2680    -600  [font 7 12pt]  PAD 2
+  -2680    -440  [font 7 12pt]  PR 2
+  -2680    -280  [font 7 12pt]  VCC
+  -2680    -120  [font 7 12pt]  No Connect
+  -2680      40  [font 7 12pt]  Ground
+  -2680     200  [font 7 12pt]  PR 3
+  -2680     360  [font 7 12pt]  UP 3
+  -2680     520  [font 7 12pt]  DN 3
+  -2680     680  [font 7 12pt]  LT 3
+  -2680     840  [font 7 12pt]  RT 3
+  -2680    1000  [font 7 12pt]  PAD 3
+
+   -210   -1730  [font 7 12pt]  Pin
+   -210   -1250  [font 7 12pt]  1
+   -210   -1090  [font 7 12pt]  2 
+   -210    -930  [font 7 12pt]  3
+   -210    -770  [font 7 12pt]  4
+   -210    -610  [font 7 12pt]  5
+   -210    -450  [font 7 12pt]  6
+   -210    -290  [font 7 12pt]  7
+   -210    -130  [font 7 12pt]  8
+   -210      30  [font 7 12pt]  9
+   -210     190  [font 7 12pt]  10
+   -210     350  [font 7 12pt]  11
+   -210     510  [font 7 12pt]  12
+   -210     670  [font 7 12pt]  13
+   -210     830  [font 7 12pt]  14
+   -210     990  [font 7 12pt]  15
+
+    440   -1720  [font 7 12pt]  Signal
+    440   -1240  [font 7 12pt]  UP 0
+    440   -1080  [font 7 12pt]  DN 0
+    440    -920  [font 7 12pt]  LT 0
+    440    -760  [font 7 12pt]  RT0
+    440    -600  [font 7 12pt]  PAD 0
+    440    -440  [font 7 12pt]  PR 0
+    440    -280  [font 7 12pt]  VCC
+    440    -120  [font 7 12pt]  No Connect
+    440      40  [font 7 12pt]  Ground
+    440     200  [font 7 12pt]  PR 1
+    440     360  [font 7 12pt]  UP 1
+    440     520  [font 7 12pt]  DN 1
+    440     680  [font 7 12pt]  LT 1
+    440     840  [font 7 12pt]  RT 1
+    440    1000  [font 7 12pt]  PAD 1
+
+  -2990   -2170  [font 7 12pt]  J15
+
+    180   -2160  [font 7 12pt]  J14
+
+   2960   -3240  [font 7 12pt]   1
+
+    170   -3010  [font 7 12pt]   10
+
+   2900   -3010  [font 7 12pt]   6
+
+   2840   -2790  [font 7 12pt]   11
+
+    230   -2790  [font 7 12pt]   15
+
+    170   -3240  [font 7 12pt]   5
+
+  -3120   -3890  [font 7 24pt]  IDE CONNECTOR
+
+   1950   -3330  [font 7 12pt]   1
+
+   2970   -3340  [font 7 12pt]   2
+
+   2980    1570  [font 7 12pt]   44
+
+   1840    1570  [font 7 12pt]   43
+
+  -3110   -3390  [font 7 12pt]  43 Pin Header - P7
+
+  -2960   -2880  [font 7 12pt]  Pin
+  -2960   -2400  [font 7 12pt]  1 
+  -2960   -2240  [font 7 12pt]  3
+  -2960   -2080  [font 7 12pt]  5
+  -2960   -1920  [font 7 12pt]  7
+  -2960   -1760  [font 7 12pt]  9
+  -2960   -1600  [font 7 12pt]  11
+  -2960   -1440  [font 7 12pt]  13
+  -2960   -1280  [font 7 12pt]  15
+  -2960   -1120  [font 7 12pt]  17
+  -2960    -960  [font 7 12pt]  19
+  -2960    -800  [font 7 12pt]  21
+  -2960    -640  [font 7 12pt]  23
+  -2960    -480  [font 7 12pt]  25
+  -2960    -320  [font 7 12pt]  27
+  -2960    -160  [font 7 12pt]  29
+  -2960       0  [font 7 12pt]  31
+  -2960     160  [font 7 12pt]  33
+  -2960     320  [font 7 12pt]  35
+  -2960     480  [font 7 12pt]  37
+  -2960     640  [font 7 12pt]  39
+  -2960     800  [font 7 12pt]  41
+  -2960     960  [font 7 12pt]  43
+
+  -2410   -2880  [font 7 12pt]  Signal
+  -2410   -2400  [font 7 12pt]  IDE Reset
+  -2410   -2240  [font 7 12pt]  Data 7
+  -2410   -2080  [font 7 12pt]  Data 6
+  -2410   -1920  [font 7 12pt]  Data 5
+  -2410   -1760  [font 7 12pt]  Data 4
+  -2410   -1600  [font 7 12pt]  Data 3
+  -2410   -1440  [font 7 12pt]  Data 2
+  -2410   -1280  [font 7 12pt]  Data 1
+  -2410   -1120  [font 7 12pt]  Data 0
+  -2410    -960  [font 7 12pt]  Ground
+  -2410    -800  [font 7 12pt]  No Connect
+  -2410    -640  [font 7 12pt]  IOW
+  -2410    -480  [font 7 12pt]  IOR
+  -2410    -320  [font 7 12pt]  No Connect
+  -2410    -160  [font 7 12pt]  No Connect
+  -2410       0  [font 7 12pt]  IRQ
+  -2410     160  [font 7 12pt]  ADDR3
+  -2410     320  [font 7 12pt]  ADDR2
+  -2410     480  [font 7 12pt]  CS0
+  -2410     640  [font 7 12pt]  IDE-ACT
+  -2410     800  [font 7 12pt]  VCC
+  -2410     960  [font 7 12pt]  Ground
+
+    250   -2880  [font 7 12pt]  Signal
+    250   -2400  [font 7 12pt]  Ground
+    250   -2240  [font 7 12pt]  Data 8
+    250   -2080  [font 7 12pt]  Data 9
+    250   -1920  [font 7 12pt]  Data 10
+    250   -1760  [font 7 12pt]  Data 11
+    250   -1600  [font 7 12pt]  Data 12
+    250   -1440  [font 7 12pt]  Data 13
+    250   -1280  [font 7 12pt]  Data 14
+    250   -1120  [font 7 12pt]  Data 15
+    250    -960  [font 7 12pt]  Key Pin
+    250    -800  [font 7 12pt]  Ground
+    250    -640  [font 7 12pt]  Ground
+    250    -480  [font 7 12pt]  Ground
+    250    -320  [font 7 12pt]  No Connect
+    250    -160  [font 7 12pt]  Ground
+    250       0  [font 7 12pt]  No Connect
+    250     160  [font 7 12pt]  No Connect
+    250     320  [font 7 12pt]  ADDR4
+    250     480  [font 7 12pt]  CSI
+    250     640  [font 7 12pt]  Ground
+    250     800  [font 7 12pt]  VCC
+    250     960  [font 7 12pt]  No Connect
+
+   -410   -2880  [font 7 12pt]  Pin
+   -410   -2400  [font 7 12pt]  2 
+   -410   -2240  [font 7 12pt]  4
+   -410   -2080  [font 7 12pt]  6
+   -410   -1920  [font 7 12pt]  8
+   -410   -1760  [font 7 12pt]  10
+   -410   -1600  [font 7 12pt]  12
+   -410   -1440  [font 7 12pt]  14
+   -410   -1280  [font 7 12pt]  16
+   -410   -1120  [font 7 12pt]  18
+   -410    -960  [font 7 12pt]  20
+   -410    -800  [font 7 12pt]  22
+   -410    -640  [font 7 12pt]  24
+   -410    -480  [font 7 12pt]  26
+   -410    -320  [font 7 12pt]  28
+   -410    -160  [font 7 12pt]  30
+   -410       0  [font 7 12pt]  32
+   -410     160  [font 7 12pt]  34
+   -410     320  [font 7 12pt]  36
+   -410     480  [font 7 12pt]  38
+   -410     640  [font 7 12pt]  40
+   -410     800  [font 7 12pt]  42
+   -410     960  [font 7 12pt]  44

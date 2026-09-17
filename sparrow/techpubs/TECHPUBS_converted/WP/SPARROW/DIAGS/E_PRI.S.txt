@@ -1,0 +1,94 @@
+* Test priority signal XIEO 
+* Software Designer: Tom Le
+* Atari Micro Electronic
+* Date: 2-24-1992
+
+	.text
+eint6p:				;
+	bsr	clear_io	;clear interrupt
+	lea	expandio,a0
+	move.b  #0,2(a0)	;negates XIEO to disable MFP int
+	move.w  #$789a,intword6
+	rte
+
+spurip:
+	move.w  #$1234,intword
+	rte
+
+buserrp:
+	move.w  #$bebe,intword
+	move.l  stacksave,sp
+	move.l  pcsave,a6
+	jmp     (a6)
+	rte
+
+testpri:
+	move.b  SPControl,d0
+	move.b  d0,savectl
+	bset    #7,d0
+	move.b  d0,SPControl
+
+	clr.w   intflg	        ;
+	clr.w   intword
+	clr.w   intword6
+	lea	mfp,a0
+	bsr	save_tmr
+	move.b  #0,imra(a0)
+	move.b  #0,imrb(a0)
+	move.b  #int6,intlev	;
+	move.l  $60,intsave0
+	move.l  8,besave0
+	move.l  timerint,inttmrsave ;save tmr interrupt
+	move.l  intvect,int6save	;save the OP int routine
+	move.l  #eint6p,intvect  ;
+	move.l	#timeria0,timerint ; Set interrupt vector
+	move.l  #spurip,$60
+	bsr	loadvect
+	move.l  #$f000,d1	;setup a sw timer
+	bsr	set_io		;
+
+testpril:
+	move.w  intword6,d0
+	cmp.w   #$789a,d0
+	beq     testpric	;continue testing	
+	sub.l   #1,d1
+	bne    testpril       
+
+testprif:
+.if (TOS=0)
+        move    #red,palette
+.endif
+	lea     primsg1,a5
+	bsr	dspmsg
+	bset    #eprif,flag
+
+testprir:
+	move.b  savectl,d0
+	move.b  d0,SPControl
+	move.l  intsave0,$60
+	move.l  inttmrsave,timerint 	;restore interrupt
+	move.l  int6save,intvect	;restore int
+	move.l  besave0,8	
+	bsr	res_tmr
+	btst    #eprif,flag
+        rts
+
+testprip:
+	bra	testprir
+
+testpric:
+	move.l  sp,stacksave
+	move.l  #testprif,pcsave
+	move.l  #buserrp,8
+	bsr	gotimer		;start timer A
+
+testpri3:
+	move.l  #$f000,d1	;setup a sw timer
+
+testpril1:
+	move.w  intword,d0
+	cmp.w   #$1234,d0	;spuri interrupt?
+	beq     testprip	;
+	sub.l   #1,d1
+	bne    testpril1
+	bra	testprif	;

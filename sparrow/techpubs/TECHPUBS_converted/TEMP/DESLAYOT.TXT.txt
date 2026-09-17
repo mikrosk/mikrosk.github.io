@@ -1,0 +1,137 @@
+
+TO:		Designers involved with Atari Layout
+FROM:		Brian St. Denis
+ORIG. DATE:	12-16-91
+CURR. DATE:	04-14-92
+SUBJ:		The design - layout interface, use of EHN software
+
+CC:	Ira Goldstein, Richard Miller, Doug Gallimore, Larry Layton
+
+
+This document describes the use and procedures of Atari Microsystems supplied
+EHN software.  This document is broken into two parts:  pre-layout and
+post-layout.  It is important to follow the procedures for both of the sections.
+
+For pre-layout, the EHN software can be used to:
+    - verify that the design does not violate any design rules
+    - check the loading on each net
+    - gather statistics about the design
+    - create estimated capacitance due to routing data
+    - load estimated capacitance data into the VIEWLogic simulation
+
+For post-layout, the EHN software can be use to:
+    - load actual capacitance due to routing data into the VIEWLogic simulation
+
+IT IS MANDATORY THAT THE DESIGNERS USE ESTIMATED CAPACITANCE DATA IN THEIR
+CIRCUIT SIMULATION BEFORE THEY HAND THE DESIGN OFF FOR LAYOUT.
+
+
+PRE-LAYOUT:
+
+
+VL2EHN:
+
+     When the design phase is nearing completion and probably near the
+beginning of simulating the circuit, a designer could and should use the
+program "vl2ehn" to convert the design to layout's Enhanced Hierarchical Netlist
+format (EHN).  vl2ehn not only converts the data to EHN format, but does quality
+control and error checking on the design to insure the design meets the Naming
+Conventions rules that have been issued to all designers.  It is useful to do
+this periodically to insure that new edits to the schematics have not violated
+any rules.
+     Vl2ehn is run from the VIEWLogic project directory.  The argument to
+vl2ehn is the name of the top level of the design, eg. combel.  The resulting
+file will have the .ehn file extension.
+
+
+EEXPLODE:
+
+     While still in the design phase and during simulations, the program
+"eexplode" may be used to do further design checking.  eexplode checks for
+some design problems and some library inconsistencies.  These checks include
+floating inputs on primitive devices, nets not connected to the output of any
+primitive device and library naming problems.  When a design passes eexplode
+without any error messages, the designer can feel comfortable that layout will
+be able to lay out this design.  eexplode's primary purpose, though, is to
+remove the hierarchy in the design and produce a "flat" netlist.
+
+
+ELODCHK:
+
+     Another tool that designers should use in parallel with simulation which
+will insure that their design will function properly is "elodchk".  elodchk
+produces a net-by-net listing of the design where the load and drive of each
+net is listed.  Also, the load/drive ratio is listed and can be evaluated to
+determine the nets which are overloaded.  Additionally, elodchk is capable of
+estimating the loading on each net due to routing.  This estimated data is
+included in the report so the designer can get a better idea of which nets will
+be overloaded after routing.  Finally, this estimated data can be output to
+a file which can then be read back in to a VIEWLogic simulation.  To specify
+saving the estimated data, answer "y" to the prompt:  "Do you want to save the
+estimated load data?".  This file will be in Silos format and can be converted
+to VIEWLogic's back annotation format with the program sil2baf.
+
+
+SIL2BAF:
+
+     To read capacitance data in to a simulation, the data must be in a BAF
+file.  To convert a Silos data file to BAF format, use "sil2baf".  After 
+converting the estimated data from a Silos file to BAF format, use the "-d"
+option of the "vsm" command in VIEWLogic to read the BAF file in to the
+simulation.
+
+
+ESTATS:
+
+     To determine the size (and other information) of a design, run "estats"
+on the flat EHN file (.fehn).  estats does some statistical calculations on a
+design and prints them to a file.
+     The results of estats can affect the design phase in two ways.  First,
+after knowing the exact size of a design, the designer can make a better
+selection for estimating the loading due to routing when running elodchk.  A
+larger array has more estimated loads due to routing.  The second is that now
+that the designer has chosen an array, the buffers that are used for this
+array may change and this can affect the simulations.
+
+
+
+POST-LAYOUT:
+
+ELODCHK:
+
+     Once a design has been laid out, the actual capacitance data for each
+net must be read back in to a simulation to see if routing the design has
+created any timing problems.  Layout will give to the designer a Silos format
+file which contains the actual routing capacitance data.  This data will
+have net names of a flat nature (corresponding to the exploded netlist)
+which need to be converted to hierarchical net names.  elodchk may be used to
+read in actual capacitance data (Silos format) where the net names are flat,
+and output an actual capacitance data file (Silos format) with hierarchical
+names.  To do this, read the instructions for elodchk by typing "elodchk".
+Also, elodchk includes this actual capacitance data in to the report.  Make
+sure to check it for overloaded nets.
+
+
+SIL2BAF:
+
+     Again, the Silos format file which has actual capacitance data with
+hierarchical net names (described above) must be converted to BAF format.  Use
+"sil2baf".  Then, use "vsm -d" to load the BAF file into the VIEWLogic
+simulation.
+
+
+USING ESTIMATED CAPACITANCE DATA VS ACTUAL CAPACITANCE DATA
+
+     After a design has been laid out, the actual capacitance data is given to
+the designer for further simulation.  Actual data should be used whenever
+possible.  Usually, when using this actual data, the designer will find a few
+nets with a timing problem.  Layout can either shorten the nets or the
+designer may want to "beef up" the nets by changing the output devices.
+Unfortunately, during the simulation with the actual capacitance data, the
+designer may find many nets or a critical macro (such as a fifo cell) which
+need to be re-laid out.  When this is the case and, after discussing this with
+layout, the current layout may be scrapped and a new one started.  When layout
+confirms with the designer that a new layout will be started, then the designer
+should go back to using the estimated capacitance data which is created by
+(re-)running elodchk.
+

@@ -1,0 +1,49 @@
+DXF drawing: DYNACADD/PARTS/DXF/TT30REAR.DXF
+Render: TT30REAR.DXF.svg
+
+== Summary ==
+File:        23797 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font ROMANC
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (0.3679, 3.9342) - (8.768, 6.7262)
+             rendered (0.3679, 3.9342) - (8.6949, 6.7068), size 8.3269 x 2.7727
+Limits:      (0, 0) - (9, 12)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: ROMANC (font ROMANC)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            252
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: LINE 181, ARC 38, SOLID 14, TEXT 13, CIRCLE 3, POLYLINE 3 (13 vertices)
+Blocks:      0 defined
+
+== Text in reading order (13 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (13 items) --
+  ON/OFF
+  FAN
+  FLOPPY
+  VME  |  POWER
+  SCSI
+  AUDIO L
+  MODEM 1  |  AUDIO R
+  ACSI  |  PRINTER  |  MONITOR  |  MODEM 2
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE   TEXT
+5.4091  6.6048     0.102      0  left      1      ROMANC  ON/OFF
+6.5645   6.497     0.102      0  left      1      ROMANC  FAN
+1.9083  6.4448     0.102      0  left      1      ROMANC  FLOPPY
+3.3739  6.3263     0.102      0  left      1      ROMANC  VME
+4.1916  6.3523     0.102      0  left      1      ROMANC  POWER
+0.3679  6.0156     0.102      0  left      1      ROMANC  SCSI
+7.9911  5.8778     0.102      0  left      1      ROMANC  AUDIO L
+6.6098  4.3437     0.102      0  left      1      ROMANC  MODEM 1
+ 8.088  4.3226     0.102      0  left      1      ROMANC  AUDIO R
+2.6674  3.9342     0.102      0  left      1      ROMANC  ACSI
+ 3.468  3.9377     0.102      0  left      1      ROMANC  PRINTER
+4.2982  3.9366     0.102      0  left      1      ROMANC  MONITOR
+5.1588  3.9379     0.102      0  left      1      ROMANC  MODEM 2

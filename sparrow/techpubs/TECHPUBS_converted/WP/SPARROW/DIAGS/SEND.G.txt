@@ -1,0 +1,5 @@
+echo Dumping to Memulators
+serdump sparrow.out 0000
+cksum sparrow.out
+echo Done.
+

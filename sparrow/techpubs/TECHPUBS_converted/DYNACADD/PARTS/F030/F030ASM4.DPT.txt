@@ -1,0 +1,21 @@
+DynaCADD 2.0 entity file (.DPT)
+Source: DYNACADD/PARTS/F030/F030ASM4.DPT (342701 bytes)
+Record stream: 4833 records, ends at offset 0x53aad with FFFF terminator
+Drawing settings from: F030ASM4.DWG
+Sheet: width 44, height 34, scale 1
+Units: not recorded in a field identified so far; coordinates are listed as stored
+Entities: 4833 total (LINE 1458, CIRCLE 6, ARC 3356, TEXT 7, SOLID 6)
+Extents: x 4.244 .. 36.443, y 3.9067 .. 29.8442 (size 32.199 x 25.9376)
+Layers used: 0 "L0" (216), 1 "L1" (4617)
+Line styles used: 0 "CONTINUOUS" (4823), 1 "HIDDEN" (10)
+Colour indices used: 7 (4833)
+Groups (unnamed, numbered; 0 = not grouped): 1 (4833)
+
+Text strings (7), in file order; x,y = insertion point:
+  x=23.3449    y=4.936      h=0.6     w=0.6     angle=0      font=LEROY_R  layer=L0       "REF"
+  x=30.0166    y=23.1376    h=0.6     w=0.6     angle=0      font=LEROY_R  layer=L0       "180"
+  x=28.3498    y=20.5539    h=0.6     w=0.6     angle=0      font=LEROY_R  layer=L0       "170"
+  x=33.8729    y=26.9167    h=0.6     w=0.6     angle=0      font=LEROY_R  layer=L0       "190"
+  x=25.1621    y=15.3094    h=0.6     w=0.6     angle=0      font=LEROY_R  layer=L0       "160"
+  x=9.3528     y=26.4926    h=0.6     w=0.6     angle=0      font=LEROY_R  layer=L0       "50"
+  x=4.0667     y=26.5311    h=0.6     w=0.6     angle=0      font=LEROY_R  layer=L0       "9 PLCS"

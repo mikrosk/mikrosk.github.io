@@ -1,0 +1,141 @@
+[PageStream 2 document TT300002.DOC: 8.50 x 11.00 in, 91 objects]
+
+--- Page 1 ---
+
+Atari Technical Bulletin
+Number: TT30-0002
+Date: February 28, 1992
+Page 1 of 3
+
+
+Product(s) Affected:	TT030
+Model:				TT030/2/4/8
+Type of ATB:			As Needed
+ECO #: 				1425
+
+
+Reason for ATB:
+
+Addresses the "HDX" Format problem reported by the field with TT030's and some versions of TOS.
+
+
+HOW TO IDENTIFY A TT030 PC ASSEMBLY NOT NEEDING THIS CHANGE:
+
+1.		Remove the Hard Disk/Accessory Cover.
+
+2.		Remove the ST RAM memory expansion board (if one is installed).
+
+3.		If the 4 TOS EPROMS are visible on the main PCB assembly, the PCB assembly DOES NOT need the change defined in this Technical Bulletin.
+
+
+Symptoms of Problem:
+
+When trying to format the hard disk with the HDX utility, the system locks up and never finishes. This is a hard failure and occurs on every attempt.
+
+Another indication of the problem is getting EB/E9 BUS ERRORS when repeatedly booting from the diagnostic cartridge.
+
+
+Test for Symptom:
+
+IF YOUR DISK HAS ALREADY BEEN FORMATTED AND PARTITIONED THEN GO NO FURTHER. YOU DO NOT HAVE THIS PARTICULAR PROBLEM. ONLY USE THE FOLLOWING PROCEDURE IF THIS IS AN INSTALLATION OF A NEW HARD DISK. (THIS PROCEDURE DESTROYS ALL DATA ON THE DISK).
+
+--- Page 2 ---
+
+Atari Technical Bulletin
+Number: TT30-0002
+Date: February 28, 1992
+Page 2 of 3
+
+
+Power up the system with the HDX utility floppy disk in the machine. Execute the HDX utility program. Select the format option. When HDX begins the Markbad portion of the program the system will lock up within a few seconds. Usually the floppy and hard disk lights are both on at the same time. The mouse ICON will be also be frozen on the screen.
+
+Solution:
+
+Use the following procedure to disassemble the TT030.
+
+1.		Turn off your computer and disconnect all cables from the sides and back of the unit (for example keyboard, power cord, external disk drive, and so on.).
+
+2.		Turn your computer over and place it on its top. Remove the ten (10) screws located in the square holes on the bottom cover.
+
+3.		With a slotted screwdriver loosen the retaining screw holding the accessory cover in place.
+
+4.		While holding the computer's top cover and base together and holding the accessory cover in place turn the unit back over and set it on the bottom.
+
+5.		Lift up the front of the accessory cover and remove it from the computer. If a hard disk is present, set the hard disk on its side on the top cover. Disconnect the power and interface cables from the hard disk. Set the accessory cover aside.
+
+6.		Lift off the top cover and set it on its back behind the bottom case. Be sure to take care with the cables attached to the floppy disk drive and the power LED cable.
+
+7.		Disconnect the power, interface, and LED cables from the floppy drive.
+
+8.		Set the top cover aside.
+
+9.		Remove the two (2) screws holding in any VME or serial connectors that are plugged into the VME slot and set them aside. Unplug the cable from the port serial board attached to the main printed circuit board if it is installed.
+
+10.	Remove the board from the VME slot if installed.
+
+--- Page 3 ---
+[68 drawing objects, see TT300002.DOC.p003.svg]
+
+Atari Technical Bulletin
+Number: TT30-0002
+Date: February 28, 1992
+Page 3 of 3
+
+
+11.	Remove the speaker connector from the main logic board.
+
+12.	Uncrimp the tabs holding the VME Card Guide in place.
+
+13.	Remove the (2) screws on each side of the VME Card Guide and remove the Card Guide.
+
+
+After disassembly:
+
+Reference Figure 1
+
+1.		Lift left side of R888 (side nearest U111).
+
+2.		Connect a jumper wire (as short as possible) from the left side of R997 to the left side of R888 (side nearest to U111). Insulate the connection at R888 with a piece of Heatshrink Tubing to prevent shorting to the solder pad under R888.
+
+3.		Test for the problem being corrected by rerunning the HDX program and reformat the hard disk.
+
+4.		Reassemble machine.
+
+Figure 1
+
+Heatshrink Tubing
+
+Wire From R997
+
+Left Side of R888
+
+U111
+
+R997
+
+R888
+
+C115
+
+U110
+
+U112
+
+U114
+
+C599
+
+C215
+
+R899
+
+R951
+
+VME
+Backplane
+
+U206
+
+U900
+
+UA00

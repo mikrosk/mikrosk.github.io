@@ -1,0 +1,12 @@
+[PageStream 2 document MONADAPT.DOC: 8.50 x 11.00 in, 1 objects]
+
+--- Page 1 ---
+
+FALCON030 Monitor Adapter Selection Guide
+
+
+Adapter Number		Monitor Type	Part Number
+
+
+C303033-001			VGA
+C303032-001			ST

@@ -1,0 +1,96 @@
+[PageStream 2 document TOMJUL09.DOC: 8.50 x 11.00 in, 30 objects]
+
+--- Page 1 ---
+[23 drawing objects, see TOMJUL09.DOC.p001.svg]
+
+Weekly Report
+
+
+To:		Tom Ulaszek
+From:	Marty Pennock
+Subject:	Status Report
+Date:	July 9, 1992
+
+
+Accomplishments
+
+1.	Began compiling LYNX-II Service Guide information.
+
+2.	Checked FALCON040 Document Schedule. COMPLETED February 3, 1992.
+
+3.	Finished preliminary draft of FALCON030 Service Guide. Turned in for comments on material applicable to Taiwan sub-contractors.
+
+4.	Backed up TT030.
+
+5.	Received new FALCON030 Diagnostics source code from Roy Stedman.
+
+6.	Began corrections to FALCON030 Service Guide Chapter 3 to include changes and latest enhancements for Diagnostics.
+
+7.	Started Table of Contents for FALCON030.
+
+8.	Got FAX from Hoenig and Hall on latest FALCON030 schematic changes.
+
+9.	Began adding latest FALCON030 schematic changes to Service Guide.
+
+10.	Backed up ABC386DXII.
+
+11.	Received new VIDEL and COMBEL specs from Scott Matson.
+
+12.	Started re-edit of specs for archives on COMBEL, VIDEL, and SDMA.
+
+
+Plans
+
+1.	Produce Service Guides for STBook, Portfolio, 2600, Falcon040, and 7800 products.
+
+2.	Complete specs for archive of COMBEL, VIDEL, and SDMA ICs.
+
+3.	Produce FALCON030 Service Guide Final Draft and ship to subs.
+
+4.	Continue work on Falcon040 Service Guide once ASIC Specifications are available.
+
+®
+
+--- Page 2 ---
+
+5.	Get all latest material for FALCON030.
+
+6.	Continue test of PageStream v2.2 beta and convert existing documents to that format.
+
+7.	Complete Falcon040 Service Guide.
+
+8.	Complete conversion of MEGA STE Service Guide to PageStream.
+
+9.	Complete conversions of manuals from Ventura 4.0 to PageStream.
+
+10.	Complete printing of user docs for Windows 3.1.
+
+11.	Finish final copy of Falcon030 Power Supply Spec. for archives.
+
+12.	Continue set up of Engineering Document Control Center.
+
+13.	Create LYNX-II Service Guide.
+
+14.	Complete ATB's for MEGA STE and TT030.
+
+15.	Complete MEGA STE Addendum.
+
+16.	Compile new Sparrow Product Spec for Taiwan trip.
+
+Problems
+
+1.	PageStream v2.2 beta works with GEM files now, however, some other problems still remain. Text search and replace causes failure. It is a simple work around and shouldn't cause great problems in document creation.
+
+2.	Upgrade disks for DynaCADD not fixed. Leonard Tramiel has copy of problem. Working. Leonard has new update which he will send that fixes problems. No word as yet from Leonard.
+
+3.	Need ASIC specifications for Falcon and Sparrow SDMA IC. Have IO controller documentation for FALCON040. Need rest. SDMA being done by J. Hoenig.
+
+4.	Need memory manager for system that will run concurrently with the NFS network. Have a shortage of memory. Some applications can only be run under Windows, although they are DOS applications. Have tried several. No fix can be found. Will have to live with memory as is.
+
+5.	Need LYNX-II data for Service Guide.
+
+6.	Need ST-Book data for Service Guide.
+
+7.	Need 2600 and 7800 data for Service Guide.
+
+8.	Need fire-proof cabinet for engineering documents.

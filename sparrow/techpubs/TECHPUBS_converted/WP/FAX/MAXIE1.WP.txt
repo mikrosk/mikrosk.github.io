@@ -1,0 +1,48 @@
+                       Dallas Office Memo
+
+
+
+To:       Maxie Smith
+From:     Marty Pennock
+Subject:  SLM 605 With SLM 804 Documents and Old Drivers
+Date:     October 31, 1991
+
+cc:       Sam Tramiel - SUVL
+          Leonard Tramiel - SUVL
+          Robert Shen - SUVL
+          Sam Chin - SUVL
+          Stephen Chan - SUVL
+          Ira Goldstein - ATX
+          Tom Ulaszek - ATX
+
+
+
+I recently received an Atari SLM605 printer which included
+documentation for an SLM804 printer. Putting the printer together
+was pure guesswork. Moreover, the drivers supplied with the
+printer were old SLM804 drivers which did not work on an Atari
+TT030 using Word Perfect. Toomey Freeman had a copy of the
+updated drivers he had received from Sunnyvale and I installed
+them. This allowed me to print files from Word Perfect and also
+to access the emulator. If our SLM605 printers are shipping this
+way it could cause serious problems in the field. One, with the
+lack of proper documentation, and two, with the installation of
+the old drivers on a TT030. We had tried for two days following
+every instruction according to the documentation on the
+installation of the drivers and emulator for the printer to get
+it to work with Word Perfect. Nothing short of using the new
+drivers seemed to fix the problem. Worse yet is that the
+existence of new drivers didn't seem to be documented anywhere.
+Hopefully bringing this to your attention will help in solving
+this problem.
+
+
+
+
+Sincerely
+
+
+
+
+
+Marty Pennock

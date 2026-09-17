@@ -1,0 +1,123 @@
+
+          DESIGN SPECIFICATION FOR TT DATA FUNNEL
+
+Incarnations:  National WXK
+          Styra ST-4131
+
+Pin Description
+
+11   XWDAT     cmos input     signal from MCU to enable the data
+path
+                    from the processor to the DRAM. 
+
+7    XVLTCH    cmos input     signal from MCU to control the
+first
+                    stage of the video data latch
+
+8    XVLTCH2   cmos input     signal from MCU to control the
+second
+                    stage of the video data latch
+
+41   SEL0 cmos input     signal from MCU to control the mux
+
+42   SEL1 cmos input     signal from MCU to control the mux
+
+44   XDLTCH    cmos input     signal from MCU to control the
+processor
+                    data latch
+
+45   XRDAT     cmos input     signal from MCU to enable the data
+path
+                    from the DRAM to the processor.
+
+10   XTSSD     cmos input     XSNDCS signal from MCU. Tri-states
+                    the SD outputs when low.
+
+18   A0   bi-directional memory data lines
+22   A1   (ttl input)
+27   A2
+31   A3
+52   A4
+56   A5
+61   A6
+63   A7
+
+19   B0
+23   B1
+28   B2
+32   B3
+53   B4
+57   B5
+62   B6
+66   B7
+
+20   C0
+24   C1
+29   C2
+33   C3
+54   C4
+58   C5
+63   C6
+67   C7
+
+21   D0
+25   D1
+30   D2
+34   D3
+55   D4
+59   D5
+64   D6
+68   D7
+
+16   SD0  TS output shifter data lines
+17   SD1
+35   SD2
+36   SD3
+50   SD4
+51   SD5
+1    SD6
+2    SD7
+
+12   PDH0 bi-dir         Processor data lines
+14   PDH1 (ttl input)
+37   PDH2
+39   PDH3
+47   PDH4
+49   PDH5
+4    PDH6
+6    PDH7
+
+13   PDL0 bi-dir         Processor data lines
+15   PDL1 (ttl input)
+38   PDL2
+40   PDL3
+46   PDL4
+48   PDL5
+3    PDL6
+5    PDL7
+
+PACKAGE
+The circuit needs 64 signal pins.
+Package to be 68 pin PLCC.
+Bonding diagram to be supplied by ASIC vendor.
+
+Pin Out
+1  - SD6  18 - A0        35 - SD2  52 - A4
+2  - SD7  19 - B0        36 - SD3  53 - B4
+3  - PDL6 20 - C0        37 - PDH2 54 - C4
+4  - PDH6 21 - D0        38 - PDL2 55 - D4
+5  - PDL7 22 - A1        39 - PDH3 56 - A5
+6  - PDH7 23 - B1        40 - PDL3 57 - B5
+7  - XVLTCH    24 - C1        41 - SEL0 58 - C5
+8  - XVLTCH2   25 - D1        42 - SEL1 59 - D5
+9  - VDD  26 - VSS  43 - VDD  60 - VSS
+10 - XTSSD     27 - A2        44 - XDLTCH    61 - A6
+11 - XWDAT     28 - B2        45 - XRDAT     62 - B6
+12 - PDH0 29 - C2        46 - PDL4 63 - C6
+13 - PDL0 30 - D2        47 - PDH4 64 - D6
+14 - PDH1 31 - A3        48 - PDL5 65 - A7
+15 - PDL1 32 - B3        49 - PDH5 66 - B7
+16 - SD0  33 - C3        50 - SD4  67 - C7
+17 - SD1  34 - D3        51 - SD5  68 - D7
+
+There are no internal registers in the data funnel.

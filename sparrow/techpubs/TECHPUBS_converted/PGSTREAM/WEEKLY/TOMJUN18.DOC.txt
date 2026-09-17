@@ -1,0 +1,90 @@
+[PageStream 2 document TOMJUN18.DOC: 8.50 x 11.00 in, 29 objects]
+
+--- Page 1 ---
+[23 drawing objects, see TOMJUN18.DOC.p001.svg]
+
+Weekly Report
+
+
+To:		Tom Ulaszek
+From:	Marty Pennock
+Subject:	Status Report
+Date:	June 18, 1992
+
+
+Accomplishments
+
+1.	Faxed Bob Brodie numbers to obtain Genie Account for myself and personal developer roundtable account for product engineering.
+
+2.	Printed copy of corrected Falcon030 Expansion connector drawing and turned in for review.
+
+3.	Gave Jerry Smith copies of all my GEM files to use in his documents.
+
+4.	Finished text edits of Sparrow Service Guide Chapter 2.
+
+5.	Started layout of Sparrow Service Guide in PageStream.
+
+6.	Received and installed coprocessor in ABC386DXII system.
+
+7.	Completed layout of Sparrow Service Guide Chapter 1 in PageStream.
+
+8.	Got partial ECO History for MEGA STE Addendum from MANMAN.
+
+9.	Broke apart and finished layout of Sparrow Service Guide Chapter two sections one and two.
+
+10.	Began installation of network hardware and software on TT030.
+
+11.	Got 2MB floppy and AJAX for home TT030.
+
+12.	Completed Sparrow Service Guide Chapter 2 section 3 layout.
+
+
+Plans
+
+1.	Produce Service Guides for STBook, Portfolio, 2600, Falcon040, and 7800 products.
+
+2.	Finish Sparrow Service Guide Chapters 2 and  3 with all diagnostic edits.
+
+3.	Finish Sparrow Service Guide Chapter 4 when Mechanical information code for field is available.
+
+®
+
+--- Page 2 ---
+
+4.	Continue work on Falcon040 Service Guide once ASIC Specifications are available.
+
+5.	Complete Sparrow Service Guide rough draft.
+
+6.	Continue test of PageStream v2.2 beta and convert existing documents to that format.
+
+7.	Complete Falcon040 Service Guide.
+
+8.	Complete conversion of MEGA STE Service Guide to PageStream.
+
+9.	Complete conversions of manuals to Ventura 4.0.
+
+10.	Complete printing of user docs for Windows 3.1.
+
+11.	Finish final copy of Falcon030 Power Supply Spec. for archives.
+
+12.	Set up Engineering Document Control Center.
+
+13.	Get Sparrow Diagnostics for Service Guide Chapter 3.
+
+14.	Complete ATB's for MEGA STE and TT030.
+
+15.	Complete MEGA STE Addendum.
+
+Problems
+
+1.	PageStream v2.2 beta works with GEM files now, however, some other problems still remain. Text search and replace causes failure. It is a simple work around and shouldn't cause great problems in document creation.
+
+2.	Upgrade disks for DynaCADD not fixed. Leonard Tramiel has copy of problem. Working. Leonard has new update which he will send that fixes problems.
+
+3.	Need ASIC specifications for Falcon and Sparrow. Have IO controller documentation.  Need rest.
+
+4.	Need memory manager for system that will run concurrently with the NFS network. Have a shortage of memory. Some applications can only be run under Windows, although they are DOS applications. Have tried several. No fix can be found. Will have to live with memory as is.
+
+5.	Need updated ASIC information on Sparrow changes regarding SDMA. Have rough draft from J. Hoenig that contains many errors. J. Horton working hard to resolve issues.
+
+6.	Need final copies of Sparrow Diagnostics when they are completed. Must add them to existing draft of service guide.

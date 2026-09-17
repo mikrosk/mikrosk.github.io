@@ -1,0 +1,51 @@
+[PageStream 2 document SP_MFG_5.DOC: 8.50 x 11.00 in, 55 objects]
+
+--- Page 25 ---
+
+5.0	PRODUCTION TEST
+
+5.1	PCBA In-circuit test
+
+5.2	PCBA initial test
+
+5.3	PCBA burn-in
+
+5.4	PCBA functional test
+
+5.5	System assembly test
+
+5.6	System agging
+
+5.7	System final test
+
+5.8	Outgoing QA inspection
+
+--- Master page (repeated on pages; # = page number) ---
+[32 drawing objects, see SP_MFG_5.DOC.mR.svg]
+
+SIZE
+
+DRAWING NO.
+
+REV
+
+®
+
+ATARI
+CORPORATION
+
+A
+
+SCALE
+
+NONE
+
+C302758-001
+
+SHEET
+
+OF
+
+1
+
+_

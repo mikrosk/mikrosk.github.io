@@ -1,0 +1,50 @@
+[PageStream 2 document TT305.DOC: 8.50 x 11.00 in, 3 objects]
+
+--- Page 97 ---
+
+SECTION NINE
+
+GLOSSARY OF PART NAMES AND TERMS
+
+
+BUS  ERROR	Logic has asserted BERR to inform the processor that there is a problem with the current cycle. This could be due to a device not responding (for example, CPU tries to read memory but the Memory Controller fails to assert DSACK), or an illegal access (attempting to write to ROM). A bus error causes exception processing.
+
+CPU			The 68030 microprocessor.
+
+DMA			Direct Memory Access. Process in which data is transferred from external storage device to RAM, or from RAM to external storage. Transfer is very fast, takes place independent of the CPU, so the CPU can be processing while DMA is taking place. MCU arbitrates the bus between the CPU and DMA.
+
+DMA CONTROLLER	Atari proprietary chip which controls the DMA process. All disk I/O goes through this device.
+
+EXCEPTION	A state in which the processor stops the current activity, saves what it will need to resume the activity later in RAM, fetches a vector (address) from RAM, and starts executing at the address vector. When the exception processing is done, the processor will continue what it was doing before the exception occurred. Exceptions can be caused by interrupts, instructions, or error conditions. See also Section Two, System Errors, or a 68030 reference for more detail.
+
+HALT			State in which the CPU is idle, all bus lines are in the high-impedence state, and can only be ended with a RESET input. This is a bi-directional pin on the CPU. It is driven externally by the RESET circuit on power-up or a reset button closure, and internally when a double bus fault occurs. A double bus fault is an error during a sequence which is run to handle a previous error. For example, if a bus error occurs, and during the exception processing for the bus error, another bus error occurs, then the CPU will assert STATUS.
+
+HSYNC			Timing signal for the video display. Determines when the horizontal scan is on the screen, and when it is blank (retracing). The synchronization (approx. every 63 microseconds) also is encoded onto IPL1,2 as an interrupt to the CPU.
+
+INTERRUPT	A request by a device for the processor to stop what it is doing and perform processing for the device. It is a type of exception. Interrupts are maskable in software, meaning they will be ignored if they do not meet the current priority level of the CPU. There are three priorities: the highest are MFP interrupts, then VSYNC interrupts, and lowest are HSYNC interrupts. Interrupts are signaled to the CPU on the Interrupt Priority Level inputs (IPL0-2). See Theory of Operation, Main System, MFP, and MCU.
+
+--- Page 98 ---
+
+MCU			Atari proprietary chip which handles all RAM accesses. See Theory of Operation, Main System and Video Subsystem for details.
+
+MIDI			Musical Instrument Digital Interface. An electrical standard by which electronic instruments communicate. Also, the logical system for such communication. In the TT030, consists of a 6850 communications chip, driver and receiver chips (74LS04, 74LS05, and PC-900 photocoupler), and an MFP interrupt channel.
+
+MFP			Multi-function Peripheral, also 68901. Interrupt control, timers, and USART for RS232 communication. See Theory of Operation, Main System.
+
+PSG				Programmable Sound Generator, also YM2149. Yamaha version of General Instruments AY-3-8910. Has two 8 bit I/O ports and three sound channels. Used in parallel port and audio.
+
+RS232C			Electical standard for serial digital communication. Also the physical and logical device which performs communication using this standard. In the ST computers, consists of the MFP, PSG, 1488, and 1489 chips.
+
+1772	 (AJAX)			Western Digital Floppy Disk Controller.
+
+6850				Also ACIA (Asynchronous Communication Interface Adapter). Interfaces between 8 bit parallel bus and serial communication bus. In the ST, there are two 6850s, one for keyboard communication, and one for MIDI communication.
+
+68901			see MFP.
+
+Supervisor Mode		State of the CPU in which it is allowed to access all hardware and RAM locations, and perform some privileged instructions. Determined by the state of a bit in the Status Register. The operating system operates in supervisor mode, and switches to user mode before passing control to an application (although the application can enter supervisor mode if it wishes).
+
+User Mode		State of the CPU in which certain instructions and areas in the memory map are disallowed (resulting in a privilege violation exception if attempted). See also SUPERVISOR MODE.
+
+VSYNC			Signal used for vertical synchronization of CRT display device. Occurs at 70 Hz (monochrome), or 50 or 60 Hz color.
+
+YM2149			See PSG.

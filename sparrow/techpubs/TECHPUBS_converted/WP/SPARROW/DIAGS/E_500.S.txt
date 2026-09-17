@@ -1,0 +1,41 @@
+* author: Tom Le
+* date: Feb 21, 1992
+
+	.text
+test500:
+	move.b   #khzhi,intlev
+	bsr	set_io
+	move.b  expandio,d2	;get latchen bit
+	bsr	clear_io
+	btst	#latchen,d2
+	beq	t500lo		;stuck low
+
+	move.b   #khzlo,intlev
+	bsr	set_io
+	move.b  expandio,d2	;get latchen bit
+	bsr	clear_io
+	btst	#latchen,d2
+	bne	t500hi		;stuck hi
+
+t500rt:
+	btst    #e500f,flag
+        rts
+
+t500lo:
+.if TOS=0
+        move    #red,palette
+.endif
+	lea	test500l,a5
+	bsr	dspmsg
+	bset    #e500f,flag
+	bra	t500rt
+
+t500hi:
+.if TOS=0
+        move    #red,palette
+.endif
+	lea	test500h,a5
+	bsr	dspmsg
+	bset    #e500f,flag
+	bra	t500rt
+

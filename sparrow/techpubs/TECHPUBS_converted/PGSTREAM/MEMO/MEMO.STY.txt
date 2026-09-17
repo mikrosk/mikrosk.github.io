@@ -1,0 +1,15 @@
+[PageStream style sheet, binary TAGS format: 2 tags]
+
+Tag 1: small cap e
+  font id:       0x02000B79
+  style:         normal
+  size:          12.00 pt / 10.00 pt
+  other attributes (raw): 0000 8000 0000 0000 05a0 05a0 0033 0901 0001 012c
+  record flags:  0x00000007
+
+Tag 2: small cap e log
+  font id:       0x02005674
+  style:         bold, underline
+  size:          12.00 pt / 10.00 pt
+  other attributes (raw): 0000 8000 0000 0000 05a0 05a0 6e33 0901 0001 012c
+  record flags:  0x00000007

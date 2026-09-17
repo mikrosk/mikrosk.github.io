@@ -1,0 +1,27 @@
+[PageStream 2 document TOMSPARQ.DOC: 8.50 x 11.00 in, 30 objects]
+
+--- Page 1 ---
+[23 drawing objects, see TOMSPARQ.DOC.p001.svg]
+
+Dallas Office Memo
+
+
+To:		Tom Ulaszek
+From:	Marty Pennock
+Subject:	FALCON030 Product Specification
+
+Date:	July 13, 1992
+
+cc		Ira Golstein
+		Richard Miller
+
+
+Well, here it is. Despite a problem with my air conditioning unit at home, which took all day Friday to repair, I have finished the preliminary release of the FALCON030 Product Specification. Please review it and pass it on to Jerry and Scott for additional comments. I have made several corrections based on the latest information received from John Hoenig and Tracy Hall. I am sure there are still some errors. I would like to make final corrections to it by the end of the week so we have a solid document to go with you to Taiwan.
+
+
+Sincerely
+
+
+Marty Pennock
+
+®

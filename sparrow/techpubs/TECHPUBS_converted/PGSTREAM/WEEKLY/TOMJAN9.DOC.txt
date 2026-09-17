@@ -1,0 +1,108 @@
+[PageStream 2 document TOMJAN9.DOC: 8.50 x 11.00 in, 6 objects]
+
+--- Page 1 ---
+[1 drawing objects, see TOMJAN9.DOC.p001.svg]
+
+Weekly Report
+
+
+To:		Tom Ulazsek
+From:	Marty Pennock
+Subject:	Status Report
+Date:	January 9, 1992
+
+
+Accomplishments
+
+1.	Got extra separators from Suzanne for ATB books.
+
+2.	Contacted Bill Rehbok on problems with DynaCADD.
+
+3.	Got Falcon product spec.
+
+4.	Got phone number from David Viogts for Western Digital and ordered chip specs for the ABC386SX WD build service information.
+
+5.	Sent corrupted TT030 GEM files to Bill Rehbok for evaluation.
+
+6.	Contacted DynaCADD on problems with GEM files being imported to PageStream.
+
+7.	Sent DynaCADD distribution disks to DITEK (DynaCADD) for fix of GEM file creation problem.
+
+8.	Finished Falcon Service Manual Chapter 1.
+
+9.	Set up ATB tracking log.
+
+10.	Went through MEGA STE ECO history and pulled all missing ECO's.
+
+11.	Started Sparrow Service Guide.
+
+12.	Completed Chapter 1 of Sparrow Service Guide.
+
+13.	Generated FAX to Israel requesting latest schematic and product spec for the Sparrow project.
+
+14.	Got Sparrow schematic copy from Rick Holman.
+
+15.	Converted MEGA STE Addendum text to PageStream.
+
+16.	Finished making copies of ATBs that need to be sent.
+
+17.	Converted all ATBs to ASCII format for BBS.
+
+18.	Talked to Jerry Smith on progress of release of new MEGA STE schematic and BOM for Addendum.
+
+--- Page 2 ---
+
+19.	Assembled all ATB books to be shipped to subs.
+
+20.	Updated ATB shipping log.
+
+21.	Installed second 80MB disk in ABC386DXII system.
+
+22.	Finished Sparrow Service Guide Chapter 1.
+
+23.	Started Sparrow Service Guide Chapter 2.
+
+Plans
+
+1.	Finish ABC386SX WD version Service info. and ship to Maria Barboza.
+
+2.	Ship ATB books to subs.
+
+3.	Continue work on Sparrow Service Guide.
+
+4.	Continue work on Falcon Service Guide.
+
+5.	Continue conversion of TT030 and MEGA STE Service Guides to Pagestream.
+
+6.	Continue evaluation of boards in ABC386DXII system.
+
+7.	Update TT030 with fixed copy of DynaCADD.
+
+8.	Get case drawings for Sparrow and Falcon Manuals.
+
+9.	Finish MEGA STE Addendum and ship to field.
+
+10.	ECO TT030 change pages.
+
+11.	Continue ATB tracking and shipment.
+
+
+ Problems
+
+1.	MEGA STE schematic and BOM for new version with AJAX and COMBO not done yet by Jerry Smith. Cannot complete MEGA STE addendum until these are completed.
+
+2.	Sparrow schematic changing too much to do a good service guide. Need to have time for spec to settle.
+
+3.	Do not have correct spec on Sparrow to use for Service Guide.
+
+4.	Do not have case drawings for Falcon or Sparrow. Cannot complete either Service Guide without them.
+
+5.	Need boxes for ATB books so they can be shipped.
+
+6.	Need new update of DynaCADD so I can complete TT030, MEGA STE, Falcon, and Sparrow Manuals.
+
+--- Page 3 ---
+
+7.	Need Western Digital Data Book to complete ABC386SX info package.
+
+8.	Need good ECO History to put together ECO for release of TT030 changed pages.

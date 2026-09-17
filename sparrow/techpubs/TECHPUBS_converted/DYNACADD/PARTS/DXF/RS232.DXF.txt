@@ -1,0 +1,81 @@
+DXF drawing: DYNACADD/PARTS/DXF/RS232.DXF
+Render: RS232.DXF.svg
+
+== Summary ==
+File:        10475 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font txt
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (0.3239, -0.082) - (4.0285, 14.3023)
+             rendered (0.2689, 0.018) - (4.0335, 14.2023), size 3.7647 x 14.1843
+Limits:      (0, 0) - (4.1, 15)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: STANDARD (font txt)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            52
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: POLYLINE 27 (60 vertices), TEXT 25
+Blocks:      0 defined
+Notes:
+  - 26 zero-length polylines (all vertices identical, e.g. pin dots) drawn as dots
+  - 1 polylines with constant width drawn as thick strokes
+
+== Text in reading order (25 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (25 items) --
+  13
+  25
+  12
+  24
+  11
+  23
+  10
+  22
+  9
+  21
+  8
+  20
+  7
+  19
+  6
+  18
+  5
+  17
+  4
+  16
+  3
+  15
+  2
+  14
+  1
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+      X        Y    HEIGHT    ROT  JUST      LAYER  STYLE     TEXT
+ 0.5239  13.0932       0.3      0  center    1      STANDARD  13
+ 3.7459  12.6387       0.3      0  center    1      STANDARD  25
+ 0.5262  12.1182       0.3      0  center    1      STANDARD  12
+ 3.7482  11.6137       0.3      0  center    1      STANDARD  24
+ 0.5285  11.1431       0.3      0  center    1      STANDARD  11
+ 3.7785   10.619       0.3      0  center    1      STANDARD  23
+ 0.5309  10.1077       0.3      0  center    1      STANDARD  10
+ 3.7529    9.594       0.3      0  center    1      STANDARD  22
+ 0.5355   9.1025       0.3      0  center    1      STANDARD  9
+ 3.7552   8.6294       0.3      0  center    1      STANDARD  21
+ 0.5378   8.0973       0.3      0  center    1      STANDARD  8
+ 3.7575   7.5744       0.3      0  center    1      STANDARD  20
+ 0.5402   7.1222       0.3      0  center    1      STANDARD  7
+ 3.7599   6.6399       0.3      0  center    1      STANDARD  19
+ 0.5425   6.0868       0.3      0  center    1      STANDARD  6
+ 3.7622   5.6149       0.3      0  center    1      STANDARD  18
+ 0.5518   5.0844       0.3      0  center    1      STANDARD  5
+ 3.7645   4.6202       0.3      0  center    1      STANDARD  17
+ 0.5518   4.1057       0.3      0  center    1      STANDARD  4
+ 3.7669   3.5953       0.3      0  center    1      STANDARD  16
+ 0.5518   3.1057       0.3      0  center    1      STANDARD  3
+ 3.7412   2.6005       0.3      0  center    1      STANDARD  15
+ 0.5518   2.0756       0.3      0  center    1      STANDARD  2
+ 3.7436   1.6358       0.3      0  center    1      STANDARD  14
+ 0.5863   0.8858       0.3      0  center    1      STANDARD  1

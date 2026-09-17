@@ -1,0 +1,25 @@
+[PageStream 2 document BILLR1.DOC: 8.50 x 11.00 in, 2 objects]
+
+--- Page 1 ---
+[1 drawing objects, see BILLR1.DOC.p001.svg]
+
+Dallas Office FAX
+
+
+To:		Bill Rehbok
+From:     Marty Pennock
+Subject:	Applications for DTP
+Date:	November 13, 1991
+
+cc:		Tom Ulaszek - ATX
+		Ira Goldstein - ATX
+		Richard Miller - SUVL
+
+
+As per our phone conversation I would like to request that you send me a list of the applications you had mentioned to me on the phone. I would like to request them via FGR from Richard Miller. The applications and hardware included a scanner, auto-trace application, several drawing applications, and a few other things I cannot bring back to mind that would work on a TT030 for the DTP environment. I am now using PageStream 2.1 and DynaCADD to do most of the work. Your help in this matter would be greatly appreciated.
+
+
+Sincerely Yours
+
+
+Marty Pennock

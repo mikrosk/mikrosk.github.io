@@ -1,0 +1,63 @@
+INIT.DOC
+-or-
+Things that happen before you see a diagnostic screen, and what they mean
+
+Last edited : 22JUL92 : RWS
+--------------------------------------------------------------------------
+First, after fetching the magic number from $FA0000 ($FA52235F)
+the TOS ROMs jump to $FA0004.
+
+Then:	RESET Instruction
+	CPU VBR set to 0
+	FF8006 is read twice.
+	The Video Master Control ($ff82c0, I think is written)
+	FF8007 is written with #$5
+	Palette+2 is set to 1 as a debug flag
+	
+	Next, RAM is sized by writing to just above where we think RAM
+	ends, and checking to see if the value written can be read back
+
+	If a 14MB RAM board is present, a quick address check is run to
+	be sure all address bits are there and not shorted. If this fails,
+	the screen should flash red and white.
+
+	Next, RAM is tested to see if there's a place to put the system stack
+	and variables. Failiures should be logged to the SCC serial port.
+	If the SCC doesn't work, we're stuck about here, RAM good or not.
+	
+	The vector table is copied from ROM to location 8 & up
+	
+	Palette+$a is set to 3 as a debug flag.
+
+	Video is enabled and initialized
+
+	Bit 5 of $ff8007 is set.
+
+	'Testing FPU' is printed to the screen
+	If the FPU is not installed and Bus Errors are not lengthened,	
+	the message 'Rev 1 COMBEL installed' will be printed.
+
+	The PSG is initialized. The DAC Record Control in SDMA is written.
+	in rev 3 versions of the test, bus errors are disabled before this
+	by writing $01 to $FF8007. If SDMA is bad, the test will probably
+	hang at this point.
+
+	Bus Errors are tested by writing to location 0.
+
+	$FF8007 is set to turn on 16 MHz (if not already) and set the
+	blitter clock = cpu clock.
+	
+	Interrupts of level 5 or above are enabled.
+
+	The IDE drive is reset (maybe, depends on bit definitions)
+	
+	The MFP and system/video timers and counters are tested. (Timing Test)
+
+	The keyboard is initialized. If it does not respond, or responds with an
+	error code, the message 'Use RS232 terminal' is printed and all I/O takes
+	place via the SCC channel.
+
+	Then the code jumps to the main menu. If a loopback plug is installed in
+	the SCC serial port, it will not be used for I/O.
+
+

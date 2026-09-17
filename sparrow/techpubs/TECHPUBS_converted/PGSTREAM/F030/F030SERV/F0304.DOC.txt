@@ -1,0 +1,127 @@
+[PageStream 2 document F0304.DOC: 8.50 x 11.00 in, 4 objects]
+
+--- Page 99 ---
+
+SECTION FOUR
+DISASSEMBLY/ASSEMBLY
+
+
+4.1 FALCON030 DISASSEMBLY
+
+Use the following procedure to disassemble the FALCON030. Refer to Assembly Drawings, Section 7.
+
+
+4.1.1 Top Cover/Keyboard Removal
+
+1.	Turn unit upside down.
+
+2.	Remove the 4 screws, item 220, from the square holes. Remove the 3 screws, item 240, from the round holes. These fasten the top case to the bottom.
+
+3.	Turn the unit upright and remove the top case, item 210.
+
+4.	Remove the keyboard, item 200, by unplugging the keyboard harness connector located in the right front corner.
+
+
+4.1.2 Shield and Speaker Removal
+
+1.	Remove the 9 screws, item 80, holding the shield, item 160, and speaker assembly, items 170, 180, 1nd 190, in place.
+
+2.	Remove the shield.
+
+
+4.1.3 Floppy Disk Removal
+
+
+1.	Turn the unit upside down.
+
+2.	Remove the 3 screws, item 150, in the round holes.
+
+3.	While holding the drive in place turn the unit back over.
+
+4.	Lift the disk drive, item 120, slightly and unplug the power harness connector and the ribbon cable.
+
+5.	Remove the drive, item 120, and standoffs, item 130.
+
+--- Page 100 ---
+
+4.1.4 Power Supply Removal
+
+
+1.	Unplug the wire harness connector in the right front corner of the power supply, item 90.
+
+2.	Remove the 4 screws, item 80, at corners of power supply.
+
+3.	Lift the power supply up out of the main assembly.
+
+
+4.1.5 Memory Board Removal
+
+1.	Lift the memory board, item 110, out of the unit.
+
+
+4.1.6 Removal of Main Assembly from Bottom Case
+
+1.	Remove three screws, item 80, from the front of the shield/printed circuit board assembly.
+
+2.	If power supply has not already been removed, remove the power supply.
+
+3.	Lift the assembly up from the front and pull forward.
+
+
+4.1.7 Removal of Upper Shield from Printed Circuit Board
+
+1.	Remove the 6 screws, item 50, from the upper shield, item 40.
+
+2.	Remove the upper shield, item 40.
+
+Note: Now that the major components are exposed, this is a convenient configuration for troubleshooting. The keyboard and disk drive may be re-connected and placed off to the side if those components are needed.
+
+3.	Lift printed circuit assembly, item 30, away from the PCB insulator, item 20, and bottom shield, item 10.
+
+
+4.2 FALCON030 RE-ASSEMBLY
+
+1.	Place insulation panel, item 20, on Bottom Shield, item 10.
+
+2.	Place Main Board, item 30, on top of Bottom Shield, item  10, over insulator panel item 20.
+
+3.	Replace the 6 screws, item 50, in the upper shield, item 40.
+
+4.	Place assembly in lower plastic case.
+
+--- Page 101 ---
+
+5.	Replace the three screws, item 80, in the front of the shield/printed circuit board assembly.
+
+6.	Replace the memory board, item 110, in the unit.
+
+7.	Replace the power supply in the main assembly.
+
+8.	Replace the 4 screws, item 80, at corners of power supply.
+
+9.	Plug the wire harness connector in the right front corner of the power supply, item 90, into the main PCB.
+
+10.	Replace the drive, item 120, and standoffs, item 130.
+
+11.	Lift the disk drive, item 120, slightly and plug in the power harness connector and the ribbon cable.
+
+12.	While holding the drive in place turn the unit over.
+
+13.	Replace the 3 screws, item 150, in the round holes.
+
+14.	Turn the unit back over.
+
+15.	Replace the shield.
+
+16.	Replace the 9 screws, item 80, holding the shield, item 160, and speaker assembly, items 170, 180, 1nd 190, in place.
+
+17.	Replace the keyboard, item 200, and plug the keyboard harness connector located in the right front corner.
+
+18.	Turn the unit upright and replace the top case, item 210.
+
+19.	Replace the 4 screws, item 220, in the square holes. Replace the 3 screws, item 240, in the round holes. These fasten the top case to the bottom.
+
+20.	Turn unit upside down.
+
+
+Warning: It is strongly recommended that the computer be retested once in plastic to make sure that the reassembly was done correctly and there are no shorts to the shield.

@@ -1,0 +1,61 @@
+[PageStream 2 document TOMU1212.DOC: 8.50 x 11.00 in, 4 objects]
+
+--- Page 1 ---
+[1 drawing objects, see TOMU1212.DOC.p001.svg]
+
+Weekly Report
+
+
+To:		Tom Ulaszek
+From:	Marty Pennock
+Subject:	Progress Report
+Date:	December 12, 1991
+
+
+Progress
+
+1.	Continued evaluation of Multi-I/O card for AUVA ABC386DXII.
+
+2.	Confirmed with Scott Barrows that the Service Information Kit for the ABC386SX Western Digital Build has been sent to Maria in Sunnyvale to be distributed to all subs.
+
+3.	Contacted Jim Campbell in Sunnzvale and ordered a copy of the ABC286 manual for Robert McGowan in Canada.
+
+4.	Started layout and test bed in PageStream for the TT030 Service Guide. Finished Chapter 1 and started chapter 2.
+
+5.	Delivered master copies of the TT030, MEGA STE, and STE Service Guides to Spinner Printing to produce manuals for Ted Mac. in Sunnyale.
+
+6.	Continued to work on TT030 and troubleshoot problems with Hardware and Software.
+
+7.	Got schematic for Falcon.
+
+
+Plans
+
+1.	Complete layout the TT030 Service guide  on the TT030 using PageStream.
+
+2.	Convert all drawings from PC based applications to the TT030.
+
+3.	Send switch settings for ABC286/60 to Robert PcGowan.
+
+4.	Develop schedule for Falcon Service Guide.
+
+5.	Develop Schedule for Sparrow Service Guide.
+
+6.	Get review copy back and make corrections to the MEGA STE Addendum.
+
+7.	Get Product Spec for Falcon from John Horton.
+
+8.	Start Falcon Service Guide on TT030.
+
+9.	Resolve all hardware and software problems pertaining to PageStream on the TT030.
+
+--- Page 2 ---
+
+Problems
+
+
+1.	TT030 based applications very slow and tedious.
+
+2.	PageStream still bombing out. Not much reliability with either to document size or type. Am investigating problems. Work halted due to problems.
+
+3.	Have no review copy of the MEGA STE Addendum.

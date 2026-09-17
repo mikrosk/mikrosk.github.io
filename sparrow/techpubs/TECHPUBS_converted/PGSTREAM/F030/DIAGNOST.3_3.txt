@@ -1,0 +1,2075 @@
+[Footer: centre=#]
+
+
+
+
+
+
+
+
+
+
+                              ****
+                              ****
+                              ****
+                             ******
+                            ** ** **
+                           **  **  **
+                          **   **   **
+
+                FALCON 030 DIAGNOSTIC SPECIFICATION
+                        PRELIMINARY VERSION 00
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Date         : 3-3-92
+          Written by   : Toomey Freeman
+
+
+
+
+
+
+
+
+
+
+
+                           TABLE OF CONTENTS
+
+1.0  INTRODUCTION  . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+     1.1  TEST EQUIPMENT . . . . . . . . . . . . . . . . . . . . . . .
+     1.2  POWER UP - INITIALIZATION  . . . . . . . . . . . . . . . . .
+
+          1.2.1  GENERAL   . . . . . . . . . . . . . . . . . . . . . .
+          1.2.2  INITIALIZATION AND CHECK SEQUENCE . . . . . . . . . .
+
+                 1.2.2.1  RAM  . . . . . . . . . . . . . . . . . . . .
+
+                          1.2.2.1-1  ALL ONES/ALL ZEROS  . . . . . . .
+                          1.2.2.1-2  WALKING ONES/WALKING ZEROS  . . .
+                          1.2.2.1-3  ADDRESS LINE SHORTING . . . . . .
+                          1.2.2.1-4  LOW 2K RAM ADDRESS CHECK  . . . .
+                          1.2.2.1-5  RAM STACK TEST  . . . . . . . . .
+
+                 1.2.2.2  SYSTEM INITIALIZATION  . . . . . . . . . . .
+                 1.2.2.3  CHECK MESSAGES . . . . . . . . . . . . . . .
+
+                          1.2.2.3-1  BUS ERROR . . . . . . . . . . . .
+                          1.2.2.3-2  FPU CHECK . . . . . . . . . . . .
+                          1.2.2.3-3  FALCON 30 SPECIFIC CHECKS . . . .
+                          1.2.2.3-4  PSG/PRINTER PORT INITIALIZATION
+                          1.2.2.3-5  TIMER TESTING - GENLOCK . . . . .
+
+                 1.2.2.4  CLEAN UP . . . . . . . . . . . . . . . . . .
+                 1.2.2.5  ERROR SUMMARY  . . . . . . . . . . . . . . .
+                 1.2.2.6  CHECK SUMMARY  . . . . . . . . . . . . . . .
+
+
+2.0  MAIN MENU TEST SELECTION  . . . . . . . . . . . . . . . . . . . .
+
+     2.1  UNATTENDED TESTS . . . . . . . . . . . . . . . . . . . . . .
+
+          2.1.1  (R) RAM TEST  . . . . . . . . . . . . . . . . . . . .
+          2.1.2  (O) O.S. ROMs . . . . . . . . . . . . . . . . . . . .
+          2.1.3  (M) MIDI  . . . . . . . . . . . . . . . . . . . . . .
+          2.1.4  (S) SERIAL PORT . . . . . . . . . . . . . . . . . . .
+          2.1.5  (T) TIMING  . . . . . . . . . . . . . . . . . . . . .
+          2.1.6  (D) SCSI DMA  . . . . . . . . . . . . . . . . . . . .
+          2.1.7  (F) FLOPPY DISK . . . . . . . . . . . . . . . . . . .
+          2.1.8  (P) PRINTER/JOY/GAME  . . . . . . . . . . . . . . . .
+          2.1.9  (L) REAL TIME CLK . . . . . . . . . . . . . . . . . .
+          2.1.10 (G) SHORT BLiT  . . . . . . . . . . . . . . . . . . .
+          2.1.11 (Y) LONG BLiT . . . . . . . . . . . . . . . . . . . .
+          2.1.12 (N) LAN PORT  . . . . . . . . . . . . . . . . . . . .
+          2.1.13 (X) EXPANSION BUS . . . . . . . . . . . . . . . . . .
+
+
+
+
+                              Page 1
+     2.2  OPERATOR TESTS . . . . . . . . . . . . . . . . . . . . . . .
+
+          2.2.1  (A) AUDIO . . . . . . . . . . . . . . . . . . . . . .
+
+                 2.2.1.1  PSG SOUND  . . . . . . . . . . . . . . . . .
+                 2.2.1.2  1KHZ MONO TONE . . . . . . . . . . . . . . .
+                 2.2.1.3  1KHZ/500HZ STEREO TONES  . . . . . . . . . .
+                 2.2.1.4  TREBLE ATTENUATION . . . . . . . . . . . . .
+                 2.2.1.5  BASS ATTENUATION . . . . . . . . . . . . . .
+                 2.2.1.6  FALCON 30 DMA SOUND  . . . . . . . . . . . .
+
+          2.2.2  (V) VIDEO . . . . . . . . . . . . . . . . . . . . . .
+
+                 2.2.2.1  STE COLOR MODE . . . . . . . . . . . . . . .
+
+                          2.2.2.1-1   COLOR BARS . . . . . . . . . . .
+                          2.2.2.1-2   VERTICAL SCROLL  . . . . . . . .
+                          2.2.2.1-3   HORIZONTAL SCROLL  . . . . . . .
+
+                 2.2.2.2  MONOCHROME MONITOR . . . . . . . . . . . . .
+                 2.2.2.3  FALCON 30 VGA MODES  . . . . . . . . . . . .
+
+          2.2.3  (K) KEYBOARD  . . . . . . . . . . . . . . . . . . . .
+          2.2.4  (J) IDE HARD DISK . . . . . . . . . . . . . . . . . .
+
+
+3.0  MAIN MENU - MISCELLANEOUS SELECTIONS  . . . . . . . . . . . . . .
+
+     3.1  (E) EXAMINE/MODIFY SYSTEM  . . . . . . . . . . . . . . . . .
+
+          3.1.1  MEMORY  . . . . . . . . . . . . . . . . . . . . . . .
+          3.1.2  SYSTEM CONFIGURATION  . . . . . . . . . . . . . . . .
+
+                 3.1.2.1  CLOCK SPEEDS . . . . . . . . . . . . . . . .
+                 3.1.2.2  TIMING SELECTION . . . . . . . . . . . . . .
+                 3.1.2.3  VIDEO 50/60 HZ . . . . . . . . . . . . . . .
+
+          3.1.3  SWITCHES SET/READ . . . . . . . . . . . . . . . . . .
+          3.1.4  RS232 BAUD RATE SELECTION . . . . . . . . . . . . . .
+          3.1.5  REAL TIME CLOCK SET/READ  . . . . . . . . . . . . . .
+          3.1.6  FLOPPY DENSITY SET  . . . . . . . . . . . . . . . . .
+
+     3.2  (?) HELP MENU  . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
+
+
+
+
+
+
+                              Page 2
+4.0  TEST BOARDS . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+     4.1  ST DMA TEST FIXTURE  . . . . . . . . . . . . . . . . . . . .
+     4.2  STE TEST FIXTURE . . . . . . . . . . . . . . . . . . . . . .
+
+          4.2.1  GENLOCK . . . . . . . . . . . . . . . . . . . . . . .
+          4.2.2  JOY/GAME PORTS  . . . . . . . . . . . . . . . . . . .
+
+     4.3  EXPANSION TEST FIXTURE SPECIFICATION . . . . . . . . . . . .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              Page 3
+     1.0  INTRODUCTION
+
+     The  FALCON 30  diagnostic cartridge is the latest in a  series of
+     test diagnostics designed for testing  the  ST,  STE, and MEGA STE
+     Atari  line  of computers. Although specific to the  new FALCON 30
+     computer it's  functions, operation, and menu set up were designed
+     for  ease  of transition  for  prior  users  of  Atari  diagnostic
+     cartridges as  well as accommodating new operators with it's "user
+     friendly" features.
+
+     As in previous versions  of Atari diagnostics they are menu driven
+     and are selectable in sequence,  number  of cycles, and particular
+     test/tests  executed.   By "shopping" in the  menu  the  user  can
+     create a unique test set  for a particular test environment or use
+     the canned sequences designed for manufacturing, field service, or
+     as part of a customer acceptance test.
+
+     The menu is divided into three  groups or tests.  The "unattended"
+     tests  are designed for minimal operator  interaction.   They  are
+     go/no go tests that indicate success with a green screen, a single
+     audio tone, and a pass message.  Failures are indicated with a red
+     screen,  multiple  tones  (in  a  different  pitch)  and a failure
+     message.
+
+     The next group require an operator to determine success or failure
+     based on observations or interactions with the diagnostics.   Some
+     of the tests in this category include the audio and video tests.
+
+     The  final  group are a set of tools or utilities that can be used
+     for reading/writing  memory, changing clock speeds, setting up the
+     real time clock etc.
+
+     On power up and  before  the  main  menu is displayed a short self
+     test is automatically  performed.  If  the machine fails this test
+     the red screen/multiple audio tones/failure message is presented.
+
+     NOTE:
+          The diagnostics will always attempt to echo  to and look  for
+          input  from  the standard  RS-232 port.  In case of screen or
+          keyboard failure,  an external terminal can  be connected  to
+          this port and a limited set of the diagnostics executed.
+
+     If  power up is normal then the main menu will be displayed on the
+     monitor. (see figure 1)
+
+
+
+
+
+
+
+
+
+                              Page 4
+     1.1  TEST EQUIPMENT
+
+     The following equipment is required for a complete exercise of the
+     diagnostic cartridge on the FALCON 30 computer:
+
+          FALCON 30 Diagnostic Cartridge Version X.X
+
+          Blank Double Sided 3 1/2-inch Diskette
+
+          Blank High Density 3 1/2-inch Diskette
+
+          IDE Hard Disk Drive
+
+          SCSI External Hard Disk Drive
+
+          Atari SC1224 RGB Monitor (or similar)
+
+          Atari SM124 Monochrome Monitor (or similar)
+
+          VGA Monitor
+
+          RS232 Loop-Back Connector
+
+          MIDI Loop-Back Cable
+
+          LAN Loop-Back Connector
+
+          Printer Port Test Cable
+
+          Mouse Port Test Cables (2)
+
+          Game Port Test Cables (2)
+
+          Monitor Test Cable
+
+          Monitor Adaptor Connectors
+
+          ST DMA Test Fixture
+
+          STE Test Fixture
+
+          Expansion Test Fixture
+
+          Audio Loopback cables (2)
+
+          DSP Loopback connector
+
+          Dual Channel oscilloscope
+
+
+
+
+
+                              Page 5
+     1.2  POWER UP - INITIALIZATION
+
+          1.2.1 General:
+
+          The  diagnostic program performs  system  initialization  and
+          testing  on  power-up.    As   devices  and  sub-systems  are
+          initialized and/or tested check messages will be displayed on
+          the monitor.  On  normal  power-up  these  messages  will  be
+          cleared before the main menu is displayed and  a single audio
+          tone   is  sounded.    This  first  display  contains  status
+          information as well as a test selection menu.
+
+          If the machine crashes before the menu is displayed, the last
+          check message on the monitor points to the trouble area. If a
+          recoverable failure occurs  the  screen will turn  red  (dark
+          background  in  monochrome)  with  a  message indicating  the
+          failure. In addition several rapid audio tones  (different in
+          pitch from the "PASS" tone)  will  be  sounded.   Before  the
+          main menu is displayed the user must press  the space bar  to
+          clear the error message/messages.
+
+          The  lowest  2  Kbytes  of  RAM  is tested on power-up.  If a
+          location fails,   the error will  be  printed  to  the RS-232
+          device.  It is assumed that if RAM is failing, the screen may
+          not be readable and program execution will fail because there
+          is  no stack  or  RAM for system variables.  The program will
+          continue to test RAM and print errors,  but no screen will be
+          displayed  (the screen may turn red).
+          If the keyboard fails, it  will be inactivated. The user must
+          connect a terminal to the RS-232 port. The diagnostic program
+          will look  for  keystrokes from  the RS-232 device.   If  the
+          display is  unreadable,  again the RS-232 terminal should  be
+          used. All messages  will always  be echoed to the RS-232 port
+          as well as displayed on the screen.
+
+          1.2.2 Initialization and check sequence:
+
+               1.2.2.1 RAM:
+
+               Memory will be  sized and saved for display later in the
+               main menu.  Pointers  to  data written,  data read,  and
+               address location shall be incremented  in  registers  in
+               the CPU and and (on error) dumped out the standard RS232
+               port for possibly display. The system RAM will be tested
+               as follows:
+
+
+
+
+
+
+
+
+                              Page 6
+                    1.2.2.1-1  All ones - all zeros: (I1)
+
+                    All ones are placed on the lower  16  bits  of  the
+                    data lines (at address 8), verified, rewritten with
+                    all zeros, and verified again.   This is  to ensure
+                    that at least the lower  16 data lines are not in a
+                    stuck condition and testing can continue.
+
+                    1.2.2.1-2  Walking ones - walking zeros: (I1)
+
+                    First a one bit is rotated through a field of zeros
+                    and verified. Then a  zero bit is rotated through a
+                    field  of  ones and verified. This is again done at
+                    address eight and is a quick check for shorted data
+                    lines.
+
+                    1.2.2.1-3  Address line shorting:  (I2)
+
+                    The  first 2K of RAM (8 - 7ff) is cleared. Then RAM
+                    from 800 to the top of  sized memory is filled with
+                    ones.   The low 2K  of  RAM   is  then  checked for
+                    disturbance.
+
+                    1.2.2.1-4  Low 2K RAM address check: (I3)
+
+                    Each word address location from 8 to 800 is  loaded
+                    with  its  least  significant  8  bit  address  and
+                    verified. Then  the  complement  8  bit address  is
+                    written and verified.  This is  a check for correct
+                    locations being addressed.
+
+                    1.2.2.1-5  RAM stack test:
+
+                    (See "tstblk" in main menu RAM test)
+
+                    This  test  will  cycle  back  to  the beginning of
+                    initialization until  a safe stack area is found or
+                    stopped by the user.  Errors will be dumped out  to
+                    the display as well the standard RS232 port showing
+                    data written, data read, and address location.
+
+               1.2.2.2  System initialization:
+
+               If  working RAM  is  found then 68030 exception handlers
+               are loaded,  MFP set  up, interrupts enabled,  video and
+               Rs232 display set up, etc. Finally screen memory will be
+               cleared and the first ok message "Hello world" displayed.
+
+
+
+
+
+
+                              Page 7
+               1.2.2.3  Check messages:
+
+               At  this point the system  is  functioning  enough  that
+               check messages should  be readable on either the monitor
+               or over the RS232 port.  As each sub-system test routine
+               is entered  a check/start message will be displayed.  As
+               each routine is completed an  exit message will be  sent
+               indicating status. Every effort will be made to  recover
+               from  a check but if a non-recoverable error occurs  the
+               last check message will indicate the testing location.
+
+                    1.2.2.3-1  Bus error check:
+
+                    A bus error is forced by writing to ROM. A check is
+                    then made  to verify that bus error occurred.  If a
+                    bus error  did  not occur the screen will turn  red
+                    and  a  message sent  to  the displays.  (RS232 and
+                    monitor).  If the  bus  error worked  then  only  a
+                    status message is sent.
+
+                    1.2.2.3-2  FPU check:
+
+                    A  check is made to see if a co-processor is in the
+                    system.  Status is sent  to the monitors and  saved
+                    for later recall by menu selection. "No FPU" is not
+                    considered  an  error  so  the screen will  not  be
+                    forced red.
+
+                    1.2.2.3-3  FALCON 30 specific checks:
+
+                    Do checks and report/save status.
+                        (See Roy Stedman for details)
+
+                    1.2.2.3-4  PSG and printer port initialization:
+
+                    PSG is initialized,  printer port set  up  to  make
+                    test fixture outputs high impedance  and  sound  is
+                    shut off.
+
+                    1.2.2.3-5  Timer testing - Genlock:
+
+                    The timing test is called.  (see timing test module
+                    in the main menu).  This module generates  it's own
+                    enter and status messages.  It tests the MFP timers
+                    and reports status to  the calling routine.  If  an
+                    error is sent then  no  further clock tests can  be
+                    executed and timer testing is  over. If  the MFP is
+                    ok then it's timers will be used as a reference for
+                    testing the main system  clock/clocks  as  well  as
+                    verification of an external "Genlock" clock.
+
+
+
+                              Page 8
+                    The usual enter message is  generated.  A MFP timer
+                    is  started  and  the   CPU is placed  in  a  tight
+                    instruction loop.  If  the MFP times out before the
+                    CPU quits  it's  instruction loop,  then the system
+                    clock  is  too  slow or an  external clock from the
+                    Genlock test board  is  now  the system clock.   In
+                    either case the  display will  be  disabled  and  a
+                    continuous tone generated until the system is reset.
+
+                    If  the MFP has not timed out then the system clock
+                    is  ok.  The usual status message  is  sent and the
+                    test ends.
+
+                    As part of the Genlock test,  the pixel control bit
+                    in the SP shift mode register is set.  The operator
+                    will use a scope to verify that the Genlock key pin
+                    on the test board  (STE test PCB)  is toggling at a
+                    video pixel rate. This part  of the test should  be
+                    done  during  the  XGA  video test  and  not  while
+                    operating  under  control  of  the external Genlock
+                    clock on the STE test board.
+
+               1.2.2.4  Clean up:
+
+               The keyboard is initialized, the clock speed is set, and
+               cache  is  turned off.  After  a  one second delay,  the
+               screen is cleared  of messages and then the main menu is
+               called.
+
+               1.2.2.5   Error message summary:
+
+               I1 RAM data line is stuck/shorted.
+               I2 RAM disturbance. Location is altered by write to
+                  another location.
+               I3 RAM addressing. Wrong location is being addressed.
+               I4 MMU error. **~ check for FALCON 30 ~**
+               I5 RAM sizing error. Uppermost address fails. **~  check
+                  for FALCON 30 ~**
+               I6 Bus  Error  not detected.   GSTMCU not asserting  Bus
+                  Error or the signal is not reaching the 68030.
+
+               T0 MFP timers failed.
+               T1 Vertical sync timing failed.
+               T2 Horizontal sync timing failed.
+               T3 Display Enable Interrupt failed.
+               T4 Memory Controller video address counter failed.
+               T5 PSG Bus test. PSG chip is causing a bus error by
+                  staying on the data bus too long.
+               T6 Floppy Disk Controller Bus test. AJAX chip is causing
+                  a bus error by staying on the data bus too long.
+
+
+
+                              Page 9
+               K0 Stuck key
+               K1 Keyboard controller is not responding.
+               K2 Keyboard controller reports error.
+
+               1.2.2.6   Check message summary:
+
+               Entering bus error check
+               Exit bus error check
+               Entering FPU check
+               Exit FPU check
+               Entering (FALCON 30 spec.) check/checks
+               Exit FALCON 30
+               Init PSG/ printer port
+               Entering Timer test
+               Testing MFP, Glue timing, Video
+               Return from Timer test
+               Init. kybd, set clocks, disable cache
+               Jump to main menu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              Page 10
+     1.3  TEST MENU:
+
+     The  normal screen will be dark blue with white letters.  The test
+     title and  revision number  are  displayed  at  the top,  with the
+     amount of RAM and keyboard controller revision below,  and  a test
+     menu below that. The menu will  be  divided into three main areas;
+     unattended tests, operator tests, and miscellaneous.
+
+
+
+
+
+                               FIGURE 1
+                Menu displayed on the diagnostic screen
+
+______________________________________________________________________
+                   FALCON 30 Field Service Diagnostic Test Rev. X.X
+                         (c)  1992, Atari Corp.
+                   X Mbytes  RAM       Keyboard revision 2   60 Hz
+                   O.S. Version X  USA NTSC
+
+     UNATTENDED
+     R  RAM Test        O  O.S. ROMs          M  MIDI
+     S  Serial Port     T  Timing             D SCSI DMA
+     F  Floppy Disk     P  Printer/Joy/Game   L  Real Time CLK
+     G  Short BLiT      Y  Long BLiT          N  LAN Port
+     X  Expansion bus
+
+     Q  Run all unattended tests (R,O,M,S,T,D,F,P,L,G,Y,N)
+     Z  Run unattended internal tests (R,O,T,F,L,G)
+
+     OPERATOR
+     A Audio             V Video              K Keyboard
+     H High resolution   J IDE Hard Disk
+
+     E  Examine/Modify system
+     ?  Help
+
+     Enter letter(s) and RETURN:
+______________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              Page 11
+     2.0  MAIN MENU TEST SELECTION
+
+     2.1  UNATTENDED TESTS:
+
+     A  single test  or any combination  of tests will  be selected  by
+     typing the corresponding letter or letters, then typing the RETURN
+     key.  To run repeated cycles of a test or (tests), the last letter
+     typed is followed with the number of cycles to run.
+
+     For example, "RSM25",  will run  RAM, Serial, and  MIDI  tests  25
+     times.  If 0 is entered,  testing will be continuous.  The ESC key
+     will quit a test cycle. In most cases control will  be returned to
+     the keyboard immediately.
+
+     An RS232 terminal may  be  used  for input and display.  Note, the
+     Serial RS232 test will not pass  if this terminal is  installed in
+     place of the loopback test plug.
+
+     If  an error occurs,  an error message will  be  displayed and the
+     screen will  turn  red.  When  the test completes,  Pass  or  Fail
+     will be displayed, and the screen will turn  green  or  red  ( red
+     = dark background in monochrome).
+
+     If  multiple tests are run and  an error occurs  on any test,  the
+     screen will remain red, even  if  successive tests pass.  Once the
+     test has halted, the SPACE BAR is used to return to the menu.
+
+     The last selections in the unattended tests are canned group tests
+     executed with  a  single letter and  a  C/R.  If an individual  or
+     custom sequence  is  not  required selecting  one  of  the  canned
+     versions will automate the testing procedure.
+
+
+          2.1.1  (R) RAM TEST
+
+          RAM  is  tested  in three stages: low 2 kbytes, middle (up to
+          64k), and from 64k  to  top.  The test patterns used are: all
+          1s,  all  0s,  a  counting  pattern  (data=low  word  of  the
+          address),  reverse  counting  pattern   (data=complement   of
+          address  low  word).  The counting pattern is copied from the
+          top and bottom  of  a  32  Kbyte  buffer  into the current 32
+          Kbytes of video RAM, then shifts video RAM  to  a  new  area,
+          verifies  the pattern, and repeats the test, until the top of
+          RAM is reached.   Finally,  addressing   at 64k boundaries is
+          checked by writing a unique pattern in the last  256 bytes of
+          each 64k block.
+
+          If an error occurs, the error code is displayed, followed  by
+          the  address, data written, data read, and the bits which did
+          not agree.  E.g.: " R2 45603E W:603E R:613C bad bits: 1,8".
+
+
+
+                              Page 12
+          RAM ERROR CODES
+
+          R0--low memory failed while setting up to run test.
+          R1--failed walking 1s or 0s.
+          R2--failed address (counting pattern).
+          R3--failed 64k boundary test.  Probable failure in Memory
+              Controller.
+          R4--failed while displaying area tested (video RAM).
+
+          2.1.2  (O) ROM TEST
+
+          This  test  reads  the  configuration  bytes of the operating
+          system  to determine the version, and language/country.   All
+          bytes from  the  operating  system ROMs are then read and the
+          checksums are calculated.  These  sums  are  then  displayed.
+          Finally,  for  each ROM a CRC is taken and compared with  the
+          word in the highest address location.
+
+          The test fails if  the  CRC calculated does not match the CRC
+          found in the high address word. Incorrect CRC's are indicated
+          by  a  message.   If  an  error  is  displayed,  replace  the
+          corresponding ROM.
+
+          NOTE:  New revisions of TOS  will not cause this test to fail
+          since the calculated CRC is compared  with  a  value found in
+          the  new  TOS  ROM's  and is independent of a fixed  look  up
+          table.
+
+          2.1.3  (M) MIDI TESTS
+
+          This test sends data out  the  MIDI  port,  (data  loops back
+          through the cable) and reads from the input and verifies  the
+          data is correct.  This also tests the interrupt from the 6850
+          through  the  MFP  chip.   The LED in the loopback cable will
+          blink as data is sent (not all cables have the LED).
+
+          MIDI ERROR CODES
+
+          M0--Data  not received.  Indicates a broken data path.
+          M1--Write/Read  data  mismatch.  The data written was not the
+              same as the data read.
+          M2--Input frame error.  Noisy signal.
+          M3--Input parity error. Noisy signal.
+          M4--Input data  overrun.  The 6850 received a byte before the
+              previous byte was read.  The MFP may not be responding to
+              the interrupt request.
+
+
+
+
+
+
+
+                              Page 13
+          2.1.4  (S) SERIAL PORT
+
+          First the RS232 control  lines  are  tested  (which  are tied
+          together by the loopback connector), then the  data  loopback
+          is  tested.   Data  is checked transmitting/receiving using a
+          polling method first, then using interrupts.
+
+          Data  is transmitted at 300,  600,  1200...19200  bps.   Data
+          transmission  is  performed  by the MFP and the 1488 and 1489
+          driver and receiver chips.  Interrupts  are a function of the
+          MFP.  Control lines are output by the PSG  chip  and input on
+          the  MFP.  Note that this test does not thoroughly  test  the
+          drive  capability  of  the port.  If the test passes, but the
+          unit fails in use, it is  likely  that the 1488 or 1489 chips
+          are bad.
+
+          SERIAL PORT ERROR CODES
+
+          Data transmission error:
+          S0--Data not received.  Data path broken.
+          S1--Data mismatch.  Data read was not  what  was sent.  Check
+              integrity of the signal.  May be bad driver, receiver, or
+              MFP.
+          S2--Input frame error. Incorrect time between  start and stop
+              bits. Probable MFP failure.
+          S3--Input  parity  error.   Input  data had incorrect parity.
+              Probable MFP failure.
+          S4--Input data overrun.  A byte was  received  before the CPU
+              read the previous byte.  MFP failure.
+          S5--No  IRQ.  CPU did not detect an interrupt by the MFP.
+          S6--Transmit error. MFP /transmitter failed.
+          S7--Transmit   error  interrupt.   An  error  condition   was
+              created intentionally  to cause an interrupt, and the MFP
+              did not respond.
+          S8--Receive error interrupt.   An error condition was created
+              intentionally to cause an interrupt,  and the MFP did not
+              respond.
+          S9--RI/DTR connection.  Signal sent at DTR is not detected at
+              RI.
+          SA--DCD/DTR connection.  Signal sent at DTR  is  not detected
+              at DCD.  SB--RTS/CTS connection.  Signal sent  at  RTS is
+              not detected at CTS.
+
+
+
+
+
+
+
+
+
+
+
+                              Page 14
+          2.1.5  (T) TIMING
+
+          These  tests  are run at power-up as well as being selectable
+          from the menu.  The MFP timers, the Glue timing for VSYNC and
+          HSYNC, and the  Memory  Controller video display counters are
+          tested.   The video display  test  redirects  display  memory
+          throughout  RAM  and  verifies that the correct addresses are
+          generated.  Odd patterns  may flash on screen as this test is
+          run.  There are two tests which  check the bus timing for the
+          1772  and  PSG chips.  An error message  is  printed  to  the
+          screen, then  the  test  is  run.   If  the  test passes, the
+          message  is erased.  If not, a Bus Error will occur  and  the
+          message will  remain.   If  a  terminal  is connected  to the
+          RS232 port, the message will not be erased,  but  "Pass" will
+          be printed.
+
+          TIMING TEST ERROR CODES
+
+          T0--MFP timer error.  One or more of the four timers  in  the
+              MFP did not generate an interrupt on counting down.
+          T1--Vertical  Sync.   Glue is not generating vertical sync in
+              the required time period.
+          T2--Horizontal Sync.  Glue  is not generating horizontal sync
+              in the required time period.
+          T3--Display Enable.  Glue is  not generating DE output or the
+              MFP is not generating an interrupt.
+          T4--Video  Counter  Error.   The  memory  controller  is  not
+              generating the correct addresses  for  the display.  This
+              will result in a broken-up display in some or all display
+              modes.
+          T5--PSG Bus Error. The PSG chip is defective.
+          T6--AJAX Bus Error. The AJAX chip is defective.
+
+          2.1.6 (D) SCSI DMA
+
+          The  SCSI port is tested by attaching a SCSI hard disk to the
+          external connector.  This disk must be set for unit 0, device
+          0 and have it's terminating resisters installed. No asumption
+          is made  about  the   number of  SCSI  masters on the bus, so
+          therefore all disk accesses will be done by arbitration.  The
+          SCSI interface is tested in DMA as well as CPU mode.  Testing
+          is  done  non-destructivly at block zero on  the   hard disk.
+          Reads and writes  are  executed using both the short and long
+          commands.  The test sequence is as follows:
+
+          1) Send the reset command
+
+          2) Read one 512 byte block  from  block zero on the hard disk
+             into RAM using the read short command.
+
+          3) Write the same 512 byte block back  to  block  zero on the
+             hard disk using the write short command.
+
+                              Page 15
+          4) Read the 512 byte block once more from block zero  on  the
+             hard  disk into a new memory location using the read short
+             command.
+
+          5) Compare the two RAM buffers for data integrity.
+
+          6) Read one  32  Kbyte block from block zero on the hard disk
+             into RAM using the read extended command.
+
+          7) Write the same  32  Kbyte  block back to block zero on the
+             hard disk using the write extended command.
+
+          8) Read the 32 Kbyte block once  more  from block zero on the
+             hard  disk  into  a  new memory location  using  the  read
+             extended command.
+
+          9) Compare the two RAM buffers for data integrity.
+
+          10) Using the DMA controller  read,  write, and read again 64
+             Kbytes  into two different RAM buffers  (as  above)  using
+             the SCSI extended commands.
+
+          11) Compare  memory for data integrity and DMA over and under
+             shoot outside the RAM buffers.
+
+          SCSI ERROR MESSAGES
+
+          ERROR - SCSI STATUS CODE - XX    SCSI controller has reported
+                                           error number XX
+
+          ERROR - CANNOT SELECT SCSI DISK  Can not  win arbitration for
+                                           SCSI bus
+
+          ERROR PRG MODE - READ AND WRITE  Data in the two RAM  buffers
+          BUFFERS DO NOT COMPARE           are not the same
+
+          ERROR DMA MODE - 5380 OR SCSI    An  attempt to poll the SCSI
+          DISK IS NOT RESPONDING           drive failed
+
+          ERROR DMA MODE - READ AND WRITE  Data  in the two RAM buffers
+          BUFFERS DO NOT COMPARE           are not the same
+
+          ERROR DMA ADDRESS - DATA         DMA address pointer directed
+          WRITTEN OUTSIDE DATA BUFFERS     data  4 bytes below or above
+                                           the actual RAM buffer
+
+          ERROR DMA COUNT                  The  number  of bytes passed
+                                           was incorrect
+
+          DMA TIME-OUT                     XHDINT interrupt not seen by
+                                           MFP
+
+
+                              Page 16
+          2.1.7  (F) FLOPPY DISK
+
+          In  single  test  mode,  a  menu  is  displayed showing seven
+          options:
+
+          1.) Quick test.  If the disk is installed,  formats,  writes,
+              and reads tracks 0, 1, and 79 of side 0. If double sided,
+              formats  and writes track 79 of side 1 and verifies  that
+              side  0 was  not  over  written.   If  the  disk  is  not
+              installed,  checks  to see if the drive is on-line and if
+              its double or single  sided.  To assure that the drive is
+              correctly  tested,  the  operator  should  install  (menu
+              option 6) before calling the test.  Once the test is run,
+              the drive becomes installed, and will be displayed on the
+              menu screen (below the RAM size).
+
+          2.) Read track.  Continuously  reads  a  track,  for checking
+              alignment with an analog alignment diskette. The track to
+              be  read  may  be input by the operator.  If "Return"  is
+              pressed without  entering  a number, the default is track
+              40.
+
+          3.) Interchangeability test.  Checks  to  see  if  a diskette
+              formated  on  another  drive can be read by the installed
+              disk drive.
+
+          4.) Disk  exerciser.  A more  thorough  disk  test; tests all
+              sectors on the disk for an indefinite period of time.
+
+          5.)  Copy Protect Tracks.  Tests tracks 80-82, which  are used
+              by some software companies for copy protection).  Not all
+              manufacturers disk drives will write these tracks.
+
+              NOTE: this test is for information only and should not be
+              used to reject a mechanism.
+
+          6.) Test  speed.  The rotational speed of the drive is tested
+              and displayed  on  the  screen as the period of rotation.
+              The  acceptable  range  is  196-204   milliseconds.   The
+              highest  and lowest values measured are  displayed.   The
+              test stops when any key is pressed.
+
+          7.)  Install disk. Specify what type of disk to test.
+
+          One additional  test  which  can  be performed is testing the
+          write protect detection.  Slide the  write protect tab to the
+          protected  position, and run test #1.   You  should  see  "F5
+          Write protected"  displayed  if the drive has been installed,
+          or "Unable to write disk" displayed if the drive has not been
+          installed.
+
+
+
+                              Page 17
+          If  more than one test cycle  is selected from the main menu,
+          the floppy menu will not appear,  but the Quick Test will  be
+          selected automatically.
+
+          FLOPPY TEST ERROR CODES
+
+          No floppy connected--the controller cannot read index pulses.
+               Indicates the cable may  be improperly connected, or the
+               drive has no power, or the drive is faulty.
+
+          F0-- Drive not selected.  Drive  was  installed,  but  failed
+               attempting restore (seek to track 0).
+
+               The  general  error messages "Error Writing" (or reading
+               or formatting),  are combined with a more specific error
+               message, e.g., "F9 CRC error".
+
+          F4-- Seek error.  Error occurred during a seek.
+
+          F5-- Write  protected.    Indicates   the  floppy   is  write
+               protected.
+
+          F6-- Read  compare  error.   Data  read from the disk was not
+               what was supposed to be written.
+
+          F7-- DMA error. DMA Controller could not respond to a request
+               for DMA.
+
+          F8-- DMA  count  error.   Amount  of bytes transferred is not
+               correct.
+
+          F9-- CRC error. The floppy controller has flaged a CRC error.
+
+          FA-- Record not found.  The floppy could  not  read  a sector
+               header.
+
+          FB-- Lost data.  Data was transferred to the AJAX chip faster
+               than the AJAX could transfer to the DMA Controller.
+
+          FC-- Side select error--single sided drive. The test tried to
+               write  both  sides  of the diskette, but writing side  1
+               caused side 0 to be overwritten.
+
+          FD-- Drive not ready.  The format/write/read operation timed-
+               out.
+
+
+
+
+
+
+
+
+                              Page 18
+          2.1.8 (P) PRINTER/JOY/GAME
+
+          The  port test fixture is used  to  test the parallel printer
+          port and joystick ports.  The parallel port  test writes to a
+          latch on the test fixture and reads back data.   The joystick
+          port  test  outputs  data  on  the  parallel  port, which  is
+          directed through the test fixture to the joystick ports.  The
+          keyboard reads the joystick data in response to commands from
+          the  CPU.
+
+          The  game  controller port test simulates joystick  direction
+          input, fire  button input, paddle controller input, and light
+          gun inputs.  The FALCON 30 (STE)  game port test fixture uses
+          the joystick outputs and control lines  from  the  port  test
+          fixture to generate the signals input to the FALCON 30.
+
+          PRINTER/JOYSTICK ERROR CODES
+
+          P0-- Printer port error.  Data read from the printer port was
+               not what was written.
+
+          P1-- Busy  input  error.   The  input to the MFP is not being
+               read,  or  the  STROBE  output  from   the   PSG is  not
+               functioning, or Joystick 0 pin 3 is not connected.
+
+          J0-- Joystick Port 0. The keyboard input is not functioning.
+
+          J1-- Joystick Port 1. The keyboard input is not functioning.
+
+          J2-- Joystick  time-out.   Joystick  inputs were simulated by
+               outputting data on the printer port  and  routing it via
+               the test fixture to the joystick ports.  Joystick inputs
+               are detected by the keyboard and sent to the CPU via the
+               6850.  This error  can be caused by printer port failure
+               (code   P0),   keyboard    failure,    or   keyboard-CPU
+               communication line.
+
+          J3-- Left button input.  Not seen by the test board.
+
+          J4-- Right button input.  Not seen by the test board.
+
+          J5-- Aux  Joystick  Direction.   Game  controller port (J500,
+               J501) direction bits.  U511 is used  to  drive the input
+               via  the  test fixture.  The hexadecimal data  following
+               corresponds  to  bits  read  from latches U510 and U512,
+               where  a  one  indicates an error.   For  example,  0002
+               indicates an error at J500 pin 3.
+
+          J6-- Aux   Fire Button.   Fire  buttons  are  read from U509.
+               Signal is driven via the test fixture from the output of
+               U511.
+
+
+                              Page 19
+          J7-- Paddle.   The inputs are driven by either 5V/100 ohms or
+               5V/1M on the  test fixture.  This current charges the RC
+               network on the  FALCON 30,  varying the output pulse  of
+               the LM556.
+
+          J8-- Light gun.  The light  gun  (XPEN)  input  is toggled at
+               three points on the screen (the video address counter is
+               used  to  find the position of the screen).  The  COMBEL
+               should  return   the   X/Y  coordinates  of  the  screen
+               position.
+
+          2.1.9  (L) REAL TIME CLK
+
+          The test saves the current time  and  date,  and writes a new
+          time,  waits  one  second, and verifies that hours,  minutes,
+          seconds,  etc.  have all  rolled  over.   This  procedure  is
+          repeated for another date to verify all registers.
+
+          REAL-TIME CLOCK ERROR CODES
+
+          C0      no real-time clock
+
+          C1      increment error
+
+          2.1.10  (G) SHORT BLiT
+
+          Two tests are available for this chip.  The "Short BLiT Test"
+          checks  the  ability  of the BliTTER to move blocks of memory
+          around  and  perform logical  operations  on  the  data.   No
+          patterns appear  on the screen.  If an error is detected, one
+          of the error codes (G1-G12) is displayed.
+
+          2.1.11  (Y) LONG BLiT
+
+          In the "Long BLiT  Test",  a  triangle is drawn on the screen
+          and rotated 180 degrees until a  rectangle  is formed.  If  a
+          color  monitor is used, two identical images will  be  drawn.
+          If an error occurs, the error code G14 will be displayed.
+
+          Corrective action for any error is the same:
+
+          a.  Verify the jumpers for the BLiT/COMBEL chip are installed
+              correctly.
+          b.  Replace the chip (and if that does not cure the  problem,
+              replace the 68030).
+
+
+
+
+
+
+
+
+                              Page 20
+          BLiTTER ERROR CODES:
+
+          G1  Halftone RAM (internal RAM in BLi* chip).
+          G2  Endmask.
+          G3  Operation.
+          G4  Halftone Op.
+          G5  Skew.
+          G6  Reverse Bit.
+          G7  Force Extra Source Read.
+          G8  Smudge.
+          G9  X Count.
+          GA  Y Count.
+          GB  Time-out.
+          GC  Address Count
+
+          BUS ERROR during BliT Test - Replace BLiTTER/COMBEL chip.
+
+          2.1.12 (N) LAN PORT
+
+          The LAN port requires a LAN loopback plug to be installed and
+          is tested as follows:
+
+          1) The  85c30  SCC  is placed in internal loopback mode and a
+             block of data (0-ff)  is  looped  through channel A.  This
+             will  verify  that the chip is functioning  internally  as
+             well  as talking  with  the  system.   The  data  will  be
+             compared (byte in/byte out); Transmitter and receiver time
+             outs  checked;   Overrun,   parity,   and  framing  errors
+             identified.  This will be executed in asyncronous  polling
+             mode.
+
+          2) The  SCC  is then taken out of internal loopback mode  and
+             the above is  repeated  (requires LAN loopback connector).
+             In addition the RTS and DTR are toggled while watching the
+             DSR and DCD lines.  This  test  verifies  the data/control
+             lines to and from the LAN port and the SCC.
+
+                  LAN port loopback configuration
+
+                    Request To Send------------
+                                               |
+                    Data Terminal Ready --     |
+                                          |    |
+                    Transmit Data ---     |    |
+                                     |    |    |
+                    Receive  Data <--     |    |
+                                          |    |
+                    Data Set Ready <------     |
+                                               |
+                    Data Carrier Detect <------
+
+          Note: The SCC is also tested in interrupt mode using EXTINT5
+                    (See "Jumper and Switch Test" section xx)
+                              Page 21
+          LAN ERROR MESSAGES
+
+
+          SCC A internal loopback: Transmitter time-out  Transmitter
+                                                         failed.
+
+          SCC A internal loopback: Receiver time-out     Receiver
+                                                         failed.
+
+          SCC A internal loopback: Overrun               A byte was
+                                                         received
+                                                         before the CPU
+                                                         read the
+                                                         previous byte.
+
+          SCC A internal loopback: Framing error         Incorrect time
+                                                         between start
+                                                         and stop bits.
+
+          SCC A internal loopback: Parity error          Input data had
+                                                         incorrect
+                                                         parity.
+
+          SCC A internal loopback: Data compare          Data read was
+                                                         not what was
+                                                         sent.
+
+          LAN Port has no loopback connector             The loopback
+                                                         connector is
+                                                         not installed.
+
+          LAN ERROR: DCD IS ACTIVE WITHOUT RTS ON        The Carrier
+                                                         Detect signal
+                                                         is active
+                                                         without a
+                                                         Request To
+                                                         Send.
+
+          LAN ERROR: RTS IS ACTIVE BUT DCD IS NOT        The Request To
+                     RESPONDING                          Send signal is
+                                                         on but no
+                                                         carrier is
+                                                         active.
+
+
+
+
+
+
+
+
+
+
+                              Page 22
+          2.1.13 (X) EXPANSION BUS
+
+          This test uses the FALCON 30 expansion test fixture to verify
+          all  address,  data,  and control lines brought  out  to  the
+          expansion connector.
+
+          The test fixture has  a minimum of 64k  of static RAM  and is
+          jumper selectable for 128k. This RAM on power up is addressed
+          at  $FC0000 to $FDffff  but  is  software  selectable  to  be
+          remapped to $FA0000  (cartridge ROM space).  This  means  the
+          board  can  be down loaded with the  diagnostic code and then
+          executed from the remapped static RAM for debug purposes. The
+          test  fixture  can  also  be  configured  for installing  the
+          diagnostic cartridge EPROMs directly on to the board.   Using
+          the ATARI Debug program it will  be possible to  single  step
+          through the diagnostic code to either debug the code itself or
+          for special test applications requiring  detailed  examination
+          of the FALCON 30 hardware as the code is executed.
+
+          In the normal configuration the expansion test fixture has on
+          board the following hardware:
+
+          1.) Control Registers         F70000-F70002
+
+          2.) External blitter          F78A00-F78A3F
+
+          3.) 64k 120 nsec. static RAM  FC0000-FCFFFF
+
+
+          The testing is done as follows:
+
+          1.) A  64k on board RAM test will be executed to test address
+              lines A0-A15 and all 32 data lines for shorts and opens.
+
+          2.) The address lines  (A16-A23)  will  be tested by  reading
+              from the upper 256 addresses and trapping one by one each
+              address read in the address latch register.
+
+          3.) The  on  board  blitter  will  with  little  modification
+              execute the  FALCON 30 blitter tests.  This exercises the
+              bus master handshaking lines.
+
+          4.) Single   line  tests  (see  4.3  Expansion  Test  Fixture)
+              include the following:
+
+                    Priority interrupt, interrupts 1,3,5,and 6.
+                    Bus Error, halt, reset and 500 kHz.
+
+
+
+
+
+
+                              Page 23
+     2.2  OPERATOR TESTS
+
+     The  Audio,  Video,  Keyboard, and Hard disk tests have  few error
+     messages.   The operator generally determines  if  the outputs are
+     acceptable.
+
+          2.2.1  (A) AUDIO
+
+          Audio   is   tested   in   several  stages  and  requires  an
+          oscilloscope,  a microphone in/speaker  out  loopback  cable,
+          and a digital sound loopback connector.
+
+               2.2.1.1  PSG SOUND
+
+               The  PSG chip is tested first.  A sound is generated one
+               at a time  on  each  of  the  three  programmable  sound
+               generator  channels.   This  PSG output is routed to the
+               RASCAL device where it is then  conditioned  by the Tone
+               and Volume controls sent via the MicroWire bus  from the
+               DMA  chip.   An  oscilloscope  attached to the Headphone
+               jacks can observe this audio output from the RASCAL. The
+               audio  sound  is  a low to high frequency  sweep.   (See
+               figure 2)  The sound  should  be audible through out the
+               sweep range without a drop off  in volume.  As one cycle
+               of  each  channel is performed a massage  will  identify
+               which channel is being exercised (A, B, or C).
+
+               DMA sound out  is  tested next.  A table  in ROM will be
+               used to generate a sine  wave  and  the  output  is then
+               varied  in  the RASCAL chip as to rate and volume level.
+               There are four  parts  in the test set.  At the start of
+               each test a message will  be  displayed;  the test cycle
+               started and repeated until the  space  bar is depressed.
+               The four tests are as follows:  (See figures  3,4,5, and
+               6)
+
+               2.2.1.2  1KHz MONO TONE
+
+               1)  Mono 1kHz at 4 sample rates, 5 volume levels
+
+               2.2.1.3  1KHz/500 Hz STEREO TONES
+
+               2)  Stereo 1k/500HZ at 4 sample rates, 5 volume levels
+
+               2.2.1.4  TREBLE ATTENUATION
+
+               3)  Mono 50 Hz from -12dB attenuation to +12dB
+
+               2.2.1.5  BASS ATTENUATION
+
+               4)  Mono 12 kHz from -12dB attenuation to +12dB
+
+
+                              Page 24
+               Using  the  space  bar, the operator should step through
+               the  1 kHz tests and  treble,  bass  attenuation  tests;
+               monitoring  both  output  connectors for 4 volts (+/- .2
+               volts) peak to peak with an oscilloscope.
+
+               The data paths and the remaining   untested portions  of
+               the Rascal and the sound DMA in/out are tested last.
+
+               Using  a  template in memory a sine wave is generated by
+               The DMA chip  and  routed  out it's four wire sound data
+               output bus to the digital sound  connector.  An external
+               loopback plug will reroute the digital  data back to the
+               four wire sound data input bus.  The DMA  chip  will  in
+               turn  store  this new data back into memory.  The output
+               data is then compared with the input data.  A percentile
+               correct message  will  then  be  displayed. This message
+               will be in 10 percent increments.  I.E. Less then 10% or
+               greater than 10,20,30...percent.
+
+               To  complete  the  testing  the digital  sound  loopback
+               connector must be removed and  two  microphone/headphone
+               loopback  cables installed.  The analogue  path  from/to
+               the RASCAL  chip and the four wire sound data in/out bus
+               connection will now be tested.
+
+               This is done in two stages.  First, using the above same
+               template in memory  a  sine wave is generated by the DMA
+               chip and routed out it's four wire sound data output bus
+               to the RASCAL 4 wire main  data  in  bus.   This data is
+               transferred internally in the RASCAL to it's  4 wire ADC
+               channel out bus.  The DMA chip will in turn receive this
+               data via it's 4 wire sound data input bus and then store
+               this new data back into memory.  The output data is then
+               compared  with  the  input  data.   A percentile correct
+               message will then be displayed.  This message will be in
+               10 percent increments.  I.E. Less then  10%  or  greater
+               than 10,20,30...percent.
+
+               The  last stage of the audio test uses the data template
+               again  and  the  same  4  wire  path to/from the DMA and
+               RASCAL chip.  However, the data will  be  routed out the
+               RASCAL through the external loopback cables  and back to
+               RASCAL  before  reaching the sound  DMA.  The percentile
+               check will be made  and  the  information  displayed  as
+               before.
+
+
+
+
+
+
+
+
+                              Page 25
+          2.2.2  (V) VIDEO
+
+               2.2.2.1  STE COLOR
+
+               There are four screens in this selection.  The first two
+               are  used  to  verify a part of the color circuitry, the
+               third verifies the  vertical  scrolling circuit, and the
+               fourth verifies horizontal scrolling.
+
+                    2.2.2.1-1  COLOR BARS
+
+                    Screen  One:   Red, green, blue,  and  white  color
+                    bands are shown.   Each  band consists of 16 levels
+                    of   intensity.    All   16  color   palettes   are
+                    represented,  each  palette  is  a  vertical  strip
+                    across   the   screen   (strips   should   not   be
+                    discernible, but each color  should  be  a straight
+                    line  across  the  screen).   Because  of the tight
+                    timing  involved,  keystroke interrupts will  cause
+                    the display to jitter.
+
+                    Screen Two:  This is  the same as screen one except
+                    cyan, magenta, yellow,  and  white  color bands are
+                    shown.  These colors are formed by adding  together
+                    two primary colors (blue + green, blue + red, red +
+                    green).  The operator should see that there  are no
+                    gaps or missing scan lines in the display.
+
+                    2.2.2.1-2  VERTICAL SCROLL
+
+                    Screen  Three:   This  tests the vertical scrolling
+                    function.  The screen is  divided diagonally, white
+                    on top/right, and black on  the  bottom/left.   The
+                    screen  is  scrolled,  making  more  of  the screen
+                    black,  until  the  entire  width of the screen  is
+                    black.  Then the reverse takes  place,  so that the
+                    black portion becomes smaller again.  Any  break in
+                    the  border  or  gaps or sudden shifts indicates  a
+                    problem.
+
+                    2.2.2.1-3  HORIZONTAL SCROLL
+
+                    Screen Four:  This  tests  horizontal scrolling.  A
+                    series of triangles moves across  the  screen  from
+                    right  to  left.    The border should be a straight
+                    line and there must be  no  gaps  or sudden shifts.
+                    EXCEPT THERE WILL BE SOME SHIFTING  ON  THE TOP TWO
+                    LINES.  Any other irregularity indicates a problem.
+
+
+
+
+
+                              Page 30
+               2.2.2.2  MONOCHROME MONITOR
+
+               A   message  is  displayed  to  connect  the  monochrome
+               monitor.   The CPU waits for an keyboard interrupt. When
+               received it  assumes that the operator has connected the
+               monochrome monitor,  and  changes  the  display  to high
+               resolution.   The  display  screen  shows horizontal and
+               vertical lines, each 2 pixels in width.  The screen will
+               reverse every two seconds.  When the operator  sees  the
+               display  is  correct,  he unplugs the monochrome monitor
+               and hits the space bar.   Then  he  reconnects  the  RGB
+               monitor and the display should have return to normal.
+
+
+
+                              FIGURE 9
+
+                         MONOCHROME SCREEN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              2.2.2.3  FALCON 30 VGA MODES
+
+      (Details to be worked out with Roy Stedman)
+
+
+
+                              Page 31
+          2.2.3  (K) KEYBOARD
+
+          Two  types  of tests are run.  The keyboard self-test is done
+          first, and if this passes, a screen is displayed representing
+          the keyboard.  The  operator  presses  keys and observes that
+          the corresponding character on  the  screen changes (reverses
+          background color).  The key will also  be  displayed  in  the
+          lower half  of  the  screen.   The  mouse  buttons  and  four
+          directions  are also shown on the screen.  Connect the  mouse
+          and move in any direction and the arrow will flicker. Any key
+          clicks while the mouse is moving indicates a short.  NOTE: It
+          is possible,  if  pressing  keys  very  rapidly, to leave the
+          representation  of  the key on screen in a  depressed  state.
+          This does not indicate a problem with the hardware.
+
+          The self-test checks  communication  between  the CPU and the
+          keyboard  microcomputer,  checks RAM and ROM in the  keyboard
+          microcomputer, and scans the keyboard for stuck keys.
+
+          KEYBOARD ERROR CODES
+
+          K0-- Stuck  key.   A  key  closure  was  detected  while  the
+               keyboard self test was executing.
+          K1-- Keyboard not responding.   A  command  was  sent  to the
+               keyboard processor and no status was returned within the
+               allowed time.
+          K2-- Keyboard  status  error.  The self test command was sent
+               to  the  keyboard,  on   completion  of  the  test,  the
+               keyboard sent an error status.
+
+          2.2.4  (J) IDE HARD DISK
+
+             1.)  read and save cylinder 0
+             2.)  check and display any controller errors
+      -----> 3.)  fill write buffer with test data
+     |       4.)  DMA the write buffer to cylinder 0
+     |       5.)  check and display any controller errors
+     |       6.)  clear read buffer
+     |       7.)  DMA cylinder 0 into read buffer
+     |       8.)  check and display any controller errors
+     |       9.)  check that DMA register counted to zero; no,  display
+     |            error
+     |       10.) compare buffers, ck buffer limits for spray,  display
+     |            errors
+      -----  11.) repeat until 'esc' key
+             12.) write the saved data back to cylinder 0; exit to main
+                  diagnostic
+
+
+
+
+
+
+                              Page 32
+     IDE ERROR MESSAGES
+
+     Read error on sector
+     Write error on sector
+     Data compare error (wrote, read, hex offset)
+     Controller not responding
+     Operation timed-out
+     Command error
+     Status =
+     DMA count error
+     Error restoring data
+     DMA address error -- Data written outside data buffers
+     error on command access of disk
+     reading buffer
+     failed read of original data from disk
+     read buffer full - start next cycle
+     failed writing test data to disk
+     failed reading test data to disk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              Page 33
+     ERROR CODES QUICK REFERENCE
+
+     This is a  brief summary of all error codes which may occur
+     when running the diagnostic.
+
+     INITIALIZATION (Errors occurring before the title and menu appear)
+
+     I1  RAM data line is stuck.
+     I2  RAM disturbance. Location is altered by write to another
+         location.
+     I3  RAM addressing. Wrong location is being addressed.
+     I4  MMU error. No DTACK after RAM access.
+     I5  RAM sizing error. Uppermost address fails.
+     I6  Bus Error handling failed.  Bus Error occurred (on  purpose),
+         but caused a crash (e.g.  system was unable to read the vector
+         from RAM).
+     I7   Bus Error not detected. COMBEL not asserting Bus Error or the
+         signal is not reaching the 68030.
+
+
+     EXCEPTIONS (may occur at any time)
+
+     E1--E5 not used
+     E6  Autovector error. IPL0 is grounded or 68000 is bad.
+     E7  Spurious interrupt. Bus error during exception processing.
+         Device interrupted, but did not provide interrupt vector.
+     E8  Internal Exception (generated by 68030).
+     E9  Bad Instruction Fetch.
+     EA  Address error.  Tried  to read  an  instruction  from  an  odd
+         address or read or write word  or long word at an odd address.
+         Usually this error is preceded by a bus error or bad
+         instruction fetch.
+     EB  Bus   error.    Generated   internally   by   the   68000   or
+         externally by Glue.   Usually caused by device not responding.
+         Displays the address of the device being accessed.
+
+     RAM
+
+     R0  Error in low memory, possibly affecting program execution.
+     R1  Error in RAM chip.
+     R2  Address error. Bad RAM chip or memory controller. Address line
+         not working.
+     R3  Address error at 64k boundary.
+     R4  Error during video RAM test. Bad RAM chip.
+
+     KEYBOARD
+
+     K0  Stuck key
+     K1  Keyboard controller is not responding.
+     K2  Keyboard controller reports error.
+
+
+
+                              Page 34
+     MIDI
+
+     M0  Data not received.
+     M1  Data received is not what was sent.
+     M2  Data input framing error.
+     M3  Parity error.
+     M4  Data  overrun.  Byte was  not read from the 6850  before  next
+         byte arrived.
+
+     RS232
+
+     S0  Data not received.
+     S1  Data received is not what was sent.
+     S2  Data input framing error.
+     S3  Parity error.
+     S4  Data overrun.  Byte was not read from  the MFP before the next
+         byte arrived.
+     S5  IRQ.  The  MFP  is not generating interrupts for  transmit  or
+         receive.
+     S6  Transmitter error--MFP.
+     S7  No interrupt from transmit error (MFP).
+     S8  No interrupt from receive error (MFP).
+     S9  DTR--RI.    These  signals  are  connected  by  the   loopback
+         connector. Changing DTR does not cause change in RI.
+     SA  DTR--DCD. Same as S9 for these signals.
+     SB  RTS--CTS. Same as S9 for these signals.
+
+     TIMING
+
+     T0  MFP timers failed.
+     T1  Vertical sync timing failed.
+     T2  Horizontal sync timing failed.
+     T3  Display Enable Interrupt failed.
+     T4  Memory Controller video address counter failed.
+     T5  PSG Bus test.  PSG chip is causing  a bus error by staying on
+         the data bus too long.
+     T6  AJAX Bus test. AJAX chip is causing a bus error by staying on
+         the data bus too long.
+
+     PRINTER AND JOYSTICK PORTS
+
+     P0  Printer port error.
+     P1  Busy (printer port input) failed.
+     J0  Joystick port 0 failed.
+     J1  Joystick port 1 failed.
+     J2  Joystick (keyboard controller) timed-out.
+     J3  Left button line failed.
+     J4  Right button line failed.
+
+
+
+
+
+                              Page 35
+     FLOPPY DISK DRIVE
+
+     F0  Drive offline. Not responding to restore (seek track 0).
+     F1  Format error. The message will say "error writing" [or reading]
+         and display the specific error found.)
+     F4  Seek error.
+     F5  Write protected.
+     F6  Data compare. (Data read not equal to data written.)
+     F7  DMA error.
+     F8  DMA count error (Memory Controller counter.)
+     F9  CRC error.
+     FA  Record not found.
+     FB  Lost data.
+     FC  Side select error.
+     FD  Drive not ready. Timed-out performing the command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              Page 36
+             FALCON 30 Expansion Test fixture Specification
+                               2/28/92
+                          Designed by Tom Le
+
+
+1.0      MEMORY I/O MAP
+
+000000-F6FFFF   See FALCON 30 Memory, I/O, and Interrupt Map
+F70000-F70002   Test fixture Control Registers
+F70003-F789FF   <reserved>
+F78A00-F78A3F   Test fixture BLiTTER
+F78A40-F9FFFF   <reserved>
+FA0000-FBFFFF   Cartridge ROM
+FC0000-FCFFFF   Test fixture RAM
+FD0000-FDFFFF   Test fixture RAM (optional)
+
+
+2.0     Test Fixture Control Register (byte, RW, RO, WO)
+
+F70000  BRW  --aa cdef       Control Bits 0-5
+F70000  BWO  gh-- ----       g = CPU Halt, h = interrupt level 5
+F70000  BRO  ij-- ----       i = Bus Error, j = 500 kHz high/low
+F70001  BWO  xxxx xxxx       Interrupt level 6 vector register
+F70001  BRO  xxxx xxxx       Address Latch (A16-A23)
+F70002  BWO  xxxx xxxx       Disable MFP interrupt (don't care data)
+F70002  BRO  xxxx xxxx       Clear Bus Error bit
+
+2.1     Control Bits 0-5 (F70000 Byte RW)
+
+On power up (cold start) the control bits 0-5 (aa cdef) are cleared. On
+warm start, the control bits 0-5 remain unchanged.
+
+        aa - address latch enable, 500kHz high/low
+             00 = enable address latch
+             01 = enable 500kHz latch low
+                = disable 500kHz latch high
+                = disable address latch
+             10 = enable 500kHz latch high
+                = disable 500kHz latch low
+                = disable address latch
+             11  <reserved>
+
+         c - interrupt level 6
+              0 = clear interrupt level 6
+              1 = set interrupt level 6
+
+         d - interrupt level 3
+              0 = clear interrupt 3
+              1 = set interrupt 3
+
+         e - interrupt level 1
+              0 = clear interrupt level 1
+              1 = set interrupt 1
+
+         f - RAM address remap bit
+              0 = clear remap
+              1 = remap RAM FC0000-FDXXXX to FA0000-FDXXXX
+
+2.2     CPU Halt (F70000 Byte Write only)
+
+A  byte write with data bit 7 (g) set,  will halt the  CPU.   Only  MFP
+interrupt (level 6) will remove the CPU from the halt state.
+
+        g = 1   halt the CPU
+        g = 0   do nothing (halt cleared by MFP interrupt 6)
+
+
+2.3     Interrupt Level 5 (F70000 Byte Write only)
+
+A byte write with data bit 6 (h) set, will set the interrupt level 5. A
+byte write with data bit 6 clear, will clear the interrupt level 5.
+
+        h = 1   set interrupt level 5
+        h = 0   clear interrupt level 5
+
+
+2.4     Control Bits 67 (F70000 byte Read only)
+
+        i = 1   Bus Error occurred
+        i = 0   Last Bus Error was cleared.
+
+        j = X   500 kHz high/low. See section 2.1. When aa = 00 in  the
+                control register, j is always clear. When aa = 01, j is
+                cleared on  the first low of  the 500 kHz clock.   When
+                aa = 10, j is set on the first high of the 500 kHz clock
+
+2.5     Interrupt level 6 Vector Register (F70001 Byte Write only)
+
+Before  sending an interrupt level 6 to the CPU, from the test fixture,
+an 8 - bit vector must be written to this register.
+
+2.6     Address Latch Register A16-A23 (F70001 Byte Read only)
+
+This register works only when aa = 00 in the Control register. When the
+Address Latch Enable is set,  the first data read or  write cycle  will
+cause the test fixture to latch the CPU address lines A16-A23 into this
+register.  After latching the address,  the hardware clears the Address
+Latch Enable bit, thus preventing further latching.
+   Note: The address lines are never latched during instruction cycles.
+
+2.7     Disable MFP interrupt (F70002 Byte Write only)
+
+A byte write with don't care data into address F70002  will disable the
+MFP interrupt until a bus error occurs.
+
+
+
+
+2.8     Clear Bus Error bit (F70002 Byte Read only)
+
+A byte read from address F70002 will clear the Bus Error bit. A CPU bus
+error will set the Bus Error bit in the test fixture. A software  reset
+will also clear the Bus Error bit.
+
+
+3.0     Address Latch Test Scenario
+
+        Perform steps 1 through 4 to verify CPU address lines  A16-A23:
+
+        NOTE:   During step  2,  a bus  error will  occur when  reading
+                from empty memory or  I/O space.  A  bus error handling
+                routine must be added to allow the CPU to recover.
+
+        1.      Write a $00 byte into F70000,  to set the Address Latch
+                Enable bit.
+
+        2.      Read a byte from the first test address (000000).   The
+                hardware   will latch  address lines  A16-A23  into the
+                latch register.
+
+        3.      Read the byte in the latch register at location $F70001.
+                Verify this byte with the test address A16-A23.
+
+        4.      Repeat   steps  1 through 3  with  255  different  test
+                addresses from $010000 to $FF0000.
+
+3.1     Bus Error test Scenario
+        Perform steps 1 - 3 to verify the Bus Error signal:
+
+        1.      Read  a byte from   address  $F70002, to  clear the Bus
+                Error bit.
+
+        2.      Generate a bus error by writing to  the cartridge  ROM.
+                The bus error causes the hardware to set Bus Error bit.
+
+        3.      Verify that the Bus Error bit is set by reading a  byte
+                from location $F70000, and checking data bit 7.
+
+3.2     500 KHZ test Scenario
+
+        Perform steps 1 and 2  to verify that the 500 KHZ clock is  not
+        stuck low.
+
+        1.      Write a  0010 0000  into address $F70000,  to latch the
+                first high on the 500kHZ clock line.
+
+        2.      Verify that the 500 kHz high/low register bit is set by
+                reading a byte from location $F70000, and checking data
+                bit 6.
+
+
+
+        Perform steps 3 and 4  to verify that the 500 KHZ clock is  not
+        stuck high.
+
+        3.      Write a  0001 0000  into address $F70000,  to latch the
+                first low on the 500 kHz clock line.
+
+        4.      Verify that the 500 kHz high/low register bit  is clear
+                by reading  a byte from location $F70000,  and checking
+                data bit 6.
+
+3.3     Blitter Test Scenario
+
+        The  same Blitter tests  as  specified  in  the  cartridge  ROM
+        specification will function on the test fixture blitter.
+
+           NOTE:
+                  The test fixture Blitter base address is $F78A00.
+
+3.4     Interrupt Levels 1, 3, and 5 test Scenario
+
+        Perform steps 1 and 2 to verify the interrupt level 1.
+
+        1.      Write  a  0000 0010  byte to address $F70000 to send an
+                interrupt  level 1  to the CPU.  The FALCON 30 does not
+                acknowledge  the  interrupt level 1, but sends   a  bus
+                error to  the CPU during the  CPU interrupt acknowledge
+                cycle.
+
+        2.      Verify that   the CPU  excecutes  a spurious  interrupt
+                routine. In  this routine,  write a  0000 0000  byte to
+                address $F70000 to clear the interrupt level 1.
+
+        3.      To verify the interrupt level 3,  perform the same test
+                as  specified for  interrupt level 1,  except writing a
+                0000 0100   byte to   address  $F70000  to generate  an
+                interrupt level 3.
+
+        4.      To verify the interrupt level 5,  perform the same test
+                as  specified for  interrupt level 1,  except writing a
+                0100 0000   byte to   address  $F70000  to generate  an
+                interrupt level 5.
+
+3.5     Interrupt Level 6 test Scenario
+
+        Perform steps 1 through 4 to verify the interrupt level 6:
+
+        1.      Define  a user interrupt  vector  from  $100  to  $3FC.
+                Create a vector byte by   logically shifting the vector
+                right twice.  Write  the  vector  byte into  the vector
+                register at address $F70001.
+
+
+
+
+        2.      Write  the address  of  the interrupt routine into  the
+                user  interrupt  vector  defined  in  step  1.  In  the
+                interrupt routine,  write a  0000 0000  byte to address
+                $F70000 to clear the interrupt level 6.
+
+        3.      Write a  0000 1000  byte to address  $F70000 to send an
+                interrupt level 6 to the CPU.
+
+        4.      Verify that  the  CPU  excecutes the interrupt level  6
+                routine.
+
+3.6     Interrupt Priority Test Scenario
+
+        Perform steps 1 through 4 to verify the interrupt priority
+        signal XIEI of the expansion connector.
+
+        1.      Mask  off  all  MFP interrupts,  by  clearing  the  MFP
+                interrupt mask registers.
+
+        2.      Disable the MFP interrupt by writing a $00 into address
+                $F70002.
+
+        3.      Program the MFP timer to send an interrupt to  the CPU.
+                Start the timer. When the timer reaches zero,  the  MFP
+                interrupts  the  CPU.  Since the  test fixture disabled
+                the MFP interrupt from step  2,  the spurious interrupt
+                takes place.  In  the spurious interrupt routine,  stop
+                the timer and clear the MFP interrupt.
+
+        4.      Verify that the  CPU executes the spurious routine.  If
+                the CPU executes the  MFP  timer interrupt,  the signal
+                XIEI must be open or shorted to ground.
+
+3.7     CPU Halt Test Scenario
+
+        Perform steps  1 through 8  to  verify the  HALT signal of  the
+        expansion connector.
+
+        1.      Mask  off  all  MFP interrupts,  by  clearing  the  MFP
+                interrupt mask registers.
+
+        2.      Program the MFP timer to send an interrupt to the  CPU.
+                Start the timer.
+
+        3.      Write a $80 byte to address $F70000 to halt the CPU.
+
+        4.      When  the  MFP  timer reaches zero,  the  MFP sends  an
+                interrupt to  the CPU.  This  causes  the  hardware  to
+                negate the HALT signal.
+
+        5.      The CPU awakes and  proceeds to  the next  instruction.
+                Set up a software counter of 2.
+
+
+        6.      Verify  that  the CPU  excecuted  the  timer  interrupt
+                routine.  If the  CPU did  not,  count down the counter
+                by 1.
+
+        7.      If the  software counter does  not reach  zero,  repeat
+                step 6.
+
+        8.      If the software counter reaches zero,  the HALT  signal
+                of  the expansion connector must  be open or shorted to
+                VCC.
+
+3.8     RESET signal test scenario
+
+        1.      Write a $0000 word into cartridge ROM to generate a bus
+                error.  This causes the test fixture to  set  it's  bus
+                error bit.
+
+        2.      Excecute a  CPU reset instruction.  A reset seen by the
+                test fixture will clear it's bus error bit.
+
+        3.      Verify that the  bus error bit is clear,  by reading  a
+                byte from $F70000, and checking bit 7.

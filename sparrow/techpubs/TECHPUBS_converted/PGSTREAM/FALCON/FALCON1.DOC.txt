@@ -1,0 +1,74 @@
+[PageStream 2 document FALCON1.DOC: 8.50 x 11.00 in, 7 objects, facing pages]
+
+--- Page 1 ---
+
+SECTION ONE
+
+INTRODUCTION
+
+
+1.0 Overview
+
+
+Falcon is the latest design in a series of Atari computers which extends the TOS compatible product line. Falcon provides enhanced video, graphics, and sound as well as greater bus bandwidth and operating speeds.
+
+The Falcon architecture revolves around the Motorola MC68040 microprocessor running at 33 MHz. The MC68040 supports on-chip data and instruction caches which can be filled with bursts of 32-bit data fetches. The MC68040 also includes an internal floating point coprocessor.
+
+The system includes a VME bus for expansion that conforms to the latest revision C.1 VMEbus specification.
+
+In order to function in a multi-system environment, the system contains an on-board LAN port, and an I/O port with DMA capability. The system also includes an internal modem port and two RS232 serial ports.
+
+
+1.1 System Features
+
+
+The Falcon system contains many basic features which include:
+
+
+Main System
+
+	•	Motorola MC68040 Microprocessor at 33 MHz
+	•	Up to 15MB od dual purpose (system/video) RAM
+	•	Up to 32 MB expansion RAM
+	•	512KB of 32-bit ROM
+
+
+Audio/Video Subsystem
+
+Video Modes include:
+
+Color
+
+	•	320X200 16 Color
+	•	320X480 256 Color
+	•	640X200 4 Color
+	•	640X480 16 Color
+
+--- Page 2 ---
+
+Duochrome
+
+	•	640X400 2 Color
+
+Monochrome
+
+	•	1280X960
+
+	•	New programmable video modes featuring Packed Pixel formats\
+	•	Programmable video timing
+	•	Powerful graphics coprocessor
+	•	Internal audio amp and speaker
+
+
+I/O Subsystems
+
+	•	Parallel I/O Port
+	•	Two aynchronous serial I/O ports (Up to 19.2Kbaud)
+	•	High-speed SDLC serial modem and LAN ports
+	•	Real-Time Clock with 50 bytes of non-volatile RAM
+	•	Floppy Disk Controller
+	•	Musical Instrument Digital Interface (MIDI)
+	•	Atari ST compatible cartridge port
+	•	SCSI interface
+	•	Expansion I/O port
+	•	Multi-slot VME bus

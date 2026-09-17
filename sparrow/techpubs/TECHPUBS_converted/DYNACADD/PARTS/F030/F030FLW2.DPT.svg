@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="859" height="2000" viewBox="64.7106 -788.06 270.0029 628.6494">
+<title>DYNACADD/PARTS/F030/F030FLW2.DPT</title>
+<rect x="64.7106" y="-788.06" width="270.0029" height="628.6494" fill="#ffffff"/>
+<g fill="none" stroke="#000000" stroke-width="0.2737" stroke-linecap="round" stroke-linejoin="round">
+<path data-layer="PEN1" data-style="Continuous, drawn solid" d="M154.55 -646.5A22.4172 22.4172 0 0 0 133.55 -670.25M133.55 -621.5A23.0868 23.0868 0 0 0 154.55 -646.5M113.3 -646.5A22.7493 22.7493 0 0 0 133.55 -621.5M133.55 -670.25A22.0695 22.0695 0 0 0 113.3 -646.5M133.55 -600.25L181.55 -560.25M181.55 -551.4999A5.7112 5.7112 0 0 0 181.55 -560.25M181.55 -551.5L133.55 -511.5M133.55 -511.5L85.55 -551.5M85.55 -560.2501A5.7112 5.7112 0 0 0 85.55 -551.5M85.55 -560.25L133.55 -600.25M215.3 -590.25L316.55 -590.25M316.55 -590.25L316.55 -521.5M316.55 -521.5L215.3 -521.5M215.3 -521.5L215.3 -590.25M133.55 -480.25L181.55 -440.25M181.55 -431.4999A5.7112 5.7112 0 0 0 181.55 -440.25M181.55 -431.5L133.55 -391.5M133.55 -391.5L85.55 -431.5M85.55 -440.2501A5.7112 5.7112 0 0 0 85.55 -431.5M85.55 -440.25L133.55 -480.25M215.3 -470.25L316.55 -470.25M316.55 -470.25L316.55 -401.5M316.55 -401.5L215.3 -401.5M215.3 -401.5L215.3 -470.25M133.55 -360.25L181.55 -320.25M181.55 -311.4999A5.7112 5.7112 0 0 0 181.55 -320.25M181.55 -311.5L133.55 -271.5M133.55 -271.5L85.55 -311.5M85.55 -320.2501A5.7112 5.7112 0 0 0 85.55 -311.5M85.55 -320.25L133.55 -360.25M215.3 -350.25L316.55 -350.25M316.55 -350.25L316.55 -281.5M316.55 -281.5L215.3 -281.5M215.3 -281.5L215.3 -350.25M83.3 -240.25L184.55 -240.25M184.55 -240.25L184.55 -171.5M184.55 -171.5L83.3 -171.5M83.3 -171.5L83.3 -240.25M130.8 -607L133.8 -601M133.8 -601L136.8 -607M133.8 -621L133.8 -601M184.8 -556L214.8 -556M208.8 -553L214.8 -556M214.8 -556L208.8 -559M133.8 -511L133.8 -481M130.8 -487L133.8 -481M133.8 -481L136.8 -487M184.8 -436L214.8 -436M208.8 -433L214.8 -436M214.8 -436L208.8 -439M133.8 -391L133.8 -361M130.8 -367L133.8 -361M133.8 -361L136.8 -367M184.8 -316L214.8 -316M208.8 -313L214.8 -316M214.8 -316L208.8 -319M133.8 -271L133.8 -241M130.8 -247L133.8 -241M133.8 -241L136.8 -247"/>
+</g>
+<g fill="#000000" font-family="DejaVu Sans Mono, Consolas, Courier New, monospace">
+<text x="76.8" y="-763" font-size="18.0147" textLength="22.5944" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="112.8" y="-763" font-size="18.0147" textLength="54.8451" lengthAdjust="spacingAndGlyphs">ERROR</text>
+<text x="184.8" y="-763" font-size="18.0147" textLength="23.7313" lengthAdjust="spacingAndGlyphs">ON</text>
+<text x="220.8" y="-763" font-size="18.0147" textLength="101.8241" lengthAdjust="spacingAndGlyphs">DIAGNOSTIC</text>
+<text x="130.8" y="-641" font-size="8.8369" textLength="4.6925" lengthAdjust="spacingAndGlyphs">A</text>
+<text x="118.8" y="-561" font-size="8.8369" textLength="25.7553" lengthAdjust="spacingAndGlyphs">WON'T</text>
+<text x="184.8" y="-561" font-size="8.8369" textLength="15.1394" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="238.8" y="-561" font-size="8.8369" textLength="15.4317" lengthAdjust="spacingAndGlyphs">RUN</text>
+<text x="262.8" y="-561" font-size="8.8369" textLength="18.2204" lengthAdjust="spacingAndGlyphs">DISK</text>
+<text x="100.8" y="-551" font-size="8.8369" textLength="23.6906" lengthAdjust="spacingAndGlyphs">LOAD</text>
+<text x="130.8" y="-551" font-size="8.8369" textLength="21.3011" lengthAdjust="spacingAndGlyphs">DISK?</text>
+<text x="226.8" y="-551" font-size="8.8369" textLength="50.3307" lengthAdjust="spacingAndGlyphs">DIAGNOSTIC</text>
+<text x="292.8" y="-551" font-size="8.8369" textLength="11.7972" lengthAdjust="spacingAndGlyphs">OR</text>
+<text x="226.8" y="-541" font-size="8.8369" textLength="38.2776" lengthAdjust="spacingAndGlyphs">REPLACE</text>
+<text x="274.8" y="-541" font-size="8.8369" textLength="18.2204" lengthAdjust="spacingAndGlyphs">DISK</text>
+<text x="136.8" y="-501" font-size="8.8369" textLength="11.1682" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="226.8" y="-451" font-size="8.8369" textLength="27.7664" lengthAdjust="spacingAndGlyphs">TRACE</text>
+<text x="262.8" y="-451" font-size="8.8369" textLength="30.113" lengthAdjust="spacingAndGlyphs">SIGNAL</text>
+<text x="118.8" y="-441" font-size="8.8369" textLength="23.6603" lengthAdjust="spacingAndGlyphs">VIDEO</text>
+<text x="184.8" y="-441" font-size="8.8369" textLength="15.1394" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="232.8" y="-441" font-size="8.8369" textLength="23.2481" lengthAdjust="spacingAndGlyphs">FROM</text>
+<text x="262.8" y="-441" font-size="8.8369" textLength="23.6603" lengthAdjust="spacingAndGlyphs">VIDEO</text>
+<text x="106.8" y="-431" font-size="8.8369" textLength="45.303" lengthAdjust="spacingAndGlyphs">PROBLEM?</text>
+<text x="232.8" y="-431" font-size="8.8369" textLength="38.7339" lengthAdjust="spacingAndGlyphs">SHOFTER</text>
+<text x="280.8" y="-431" font-size="8.8369" textLength="12.0129" lengthAdjust="spacingAndGlyphs">TO</text>
+<text x="244.8" y="-421" font-size="8.8369" textLength="36.1313" lengthAdjust="spacingAndGlyphs">OUTPUT</text>
+<text x="136.8" y="-381" font-size="8.8369" textLength="11.1682" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="256.8" y="-331" font-size="8.8369" textLength="15.4317" lengthAdjust="spacingAndGlyphs">RUN</text>
+<text x="112.8" y="-321" font-size="8.8369" textLength="39.1893" lengthAdjust="spacingAndGlyphs">PROBLEM</text>
+<text x="184.8" y="-321" font-size="8.8369" textLength="11.1682" lengthAdjust="spacingAndGlyphs">NO</text>
+<text x="232.8" y="-321" font-size="8.8369" textLength="59.6756" lengthAdjust="spacingAndGlyphs">APPROPRIATE</text>
+<text x="112.8" y="-311" font-size="8.8369" textLength="33.1695" lengthAdjust="spacingAndGlyphs">FOUND?</text>
+<text x="250.8" y="-311" font-size="8.8369" textLength="23.1409" lengthAdjust="spacingAndGlyphs">TEST</text>
+<text x="226.8" y="-301" font-size="8.8369" textLength="66.4253" lengthAdjust="spacingAndGlyphs">CONTINUOUSLY</text>
+<text x="136.8" y="-261" font-size="8.8369" textLength="15.1394" lengthAdjust="spacingAndGlyphs">YES</text>
+<text x="94.8" y="-211" font-size="8.8369" textLength="40.5359" lengthAdjust="spacingAndGlyphs">CONTACT</text>
+<text x="142.8" y="-211" font-size="8.8369" textLength="24.8144" lengthAdjust="spacingAndGlyphs">ATARI</text>
+<text x="94.8" y="-201" font-size="8.8369" textLength="22.7387" lengthAdjust="spacingAndGlyphs">TECH</text>
+<text x="124.8" y="-201" font-size="8.8369" textLength="39.8869" lengthAdjust="spacingAndGlyphs">SUPPORT</text>
+</g>
+</svg>

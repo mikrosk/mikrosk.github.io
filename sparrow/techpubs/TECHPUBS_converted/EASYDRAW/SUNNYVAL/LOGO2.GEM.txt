@@ -1,0 +1,14 @@
+File: EASYDRAW/SUNNYVAL/LOGO2.GEM
+Format: GEM Metafile version 1.01, 14-word header, RC coordinates (flag 2)
+Header extents: (871,-9017)-(7595,-853)
+Page size: 257.5 x 191.3 mm
+Coordinate window: lower-left (0,0), upper-right (10300,-7650); rendered with y axis down, 40.00 units/mm
+Drawing bounding box (file units): (874,-9014)-(7592,-856)
+Items: 5440 (43487 words)
+Objects: polyline 5423
+Text strings: 0
+
+No text objects in this file (any lettering is drawn as vector strokes or outlines).
+
+LABELS READ FROM THE RENDERED IMAGE (lettering here is vector graphics, not text data; transcribed visually in reading order, may contain reading errors)
+ATARI

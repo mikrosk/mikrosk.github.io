@@ -1,0 +1,1129 @@
+	.extern enabint,disint,setdsp,initint
+	.globl start	; used by excep
+init2 = 1
+*  ===================================
+*  Initialization for ST test
+* 31JAN92 : RWS : Added stuff for 030+DSP sparrow board
+* 03FEB92 : RWS : REMOVED GENLOCK TEST ON POWER UP - PUT THIS BACK!!!                
+* 01APR92 : RWS : REWROTE ENTIRE DIAGNOSTIC. PUT IN FPU MOD FOR REV 1 COMBEL
+*  Mar 14, 91: shut off mfp interrupt after gen lock left it on. 
+*       (RAM failure after floppy test)
+*  Aug 22, 89: shut off monomon int until CPU speed verified
+*  July 29, 89: init all palettes
+*  June 28, 89: new memory config algorithm for ST/STe
+*       tests for game controller ports, scroll, dma sound, genlock
+*  May 28, 87 rs232 flag: RSRATE. INITFLG for initialization complete (timtst). 
+*       Wait for vblank before setting resolution.
+*       Update for compatablity with both manufacturing and Field Service.
+*       FS rev. 3.61. Manufacturing next release (4.1?)
+*       Test for bus error.
+*  11/21/86 Mod FATAL: repeat walks 1 across 16 bits.
+*  1/15 Mod FATAL routine: print data written, data read. First RAM test 
+*       writes all low, all high. Entries to FATAL are identical.
+*  1/14 Split off menu from power-up sequence
+*  1/2 New menu screen, tests are no longer grouped together.
+*     Operator enters letter(s) of test(s), number of passes.
+*  1/1/86 Print address to RS232 if fatal RAM fail.
+*  Rev. 3.4
+*  11/8 Fix problem of mysterious keystroke which stops test in continuous 
+*       mode: now stops only on space bar.
+*  11/6 Final debug for 3.2(?) 
+*  10/28 checks for loopback connector on reset, avoids reading RS232 input.
+*       Fatal RAM failure does not display to screen; repeat test.
+*  Uses RS232 as alternate display and input device.
+*  Tests Vertical Sync, Horizontal Sync, and Display Enable.
+*  Checks for stuck key on power-up. 
+*  21 Feb, '86  Include Japan's patch to reset MIDI acia
+*  10 Apr       Add error codes.
+*  15 May 85 Final 1.0
+
+	
+*  1. test low memory
+*  2. establish exception vectors
+*  3. initialize display
+*  4. test timers
+*  5. initialize I/O
+*  6. reset keyboard and get status
+
+*  ====================================
+
+	.text
+
+LOWRAM  equ     $8      ;start of ram 
+SAFRAM  equ     $800    ;top of memory tested initially
+rs96    equ     2       ;timer d data for rs232=9600
+mfp2    equ     $fffffa81
+
+MFP2    =       0       ; only 1 MFP in sparrow
+
+*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+	dc.l    $fa52235f       ;magic number
+
+*******************************************
+***                                     ***
+***     START OF EXECUTABLE CODE        ***
+***                                     ***
+*******************************************
+
+*       ram config/sizing equates
+mpat0           equ     $a5a51234
+mpat1           equ     $5a5a8765
+sp512kloc       equ     $80000
+sp1MBloc        equ     $100000
+sp4MBloc        equ     $400000
+sp14MBloc       equ     $e00000         ; 14 mb
+
+;        bra.s   start
+
+*********************************** : FROM TRF : 09APR92
+*    TOS warm start entry point
+;setsup: clr.l   -(sp)           ; get into supervisor mode
+ ;       move.w  #$20,-(sp)
+  ;      trap    #1					; waste of space..
+   ;     addq    #6,sp
+    ;    lea.l   $e00064,a6      ; fake a cold boot, point a6 to TOS return
+***********************************
+
+start:
+********************* SWIPED FROM INIT.TT : 31JAN92 : RWS
+	move.w  #$2700,sr
+*RWS.T        reset             ; turns off 68030 caches.
+	clr.l   d0
+	vbrw                    ;set vbr to 0
+
+	move.b  SPConfig,d0     ; set video types & stuff
+	lsr.b   #6,d0
+	btst.b  #1,SPConfig
+	beq     setit
+	bset    #7,d0
+setit:  
+	move.w  d0,v_VMC
+
+	move.b	#$5,SPControl
+* ENDSPARROW
+********************** ENDSWIPE
+
+*       Determine memory configuration and size
+*       for sparrow, no need to config, just size
+ 
+	move.w  #$01,palette+2          ; breakpoint1
+
+* TEST SIZE...
+* possible: 512K (unlikely), 1MB, 4MB, 16(14)MB..
+* Writes to just above legal space, checks if it's still there if so, try
+* next size up.
+
+	move.l  #sp512kloc,a0           ; check 512K boundary
+	move.l  #mpat0,(a0)
+	move.l  #mpat1,sp512kloc-4
+	cmpi.l  #mpat0,(a0)
+	bne     .sized
+	move.l  #sp1MBloc,a0            ; check 1MB
+	move.l  #mpat0,(a0)
+	move.l  #mpat1,sp1MBloc-4
+	cmpi.l  #mpat0,(a0)
+	bne     .sized
+	move.l  #sp4MBloc,a0            ; check 4MB
+	move.l  #mpat0,(a0)
+	move.l  #mpat1,sp4MBloc-4
+	cmpi.l  #mpat0,(a0)
+	bne     .sized
+	move.l  #sp14MBloc,a0           ; if not, 16MB
+.sized: 
+	move.l  a0,d5                   ;save size 
+	move.w  #$02,palette+4          ; breakpoint2
+
+* Quick check all address bits are there and not shorted
+	
+.AddrTest:
+	cmp.l	#sp14MBloc,a0		; we need a0 later
+	bne	.bypass
+	
+	move.l	#$8,a1
+.floop:
+	move.l	a1,(a1)
+	adda.l	a1,a1			;same as lsl.l #1
+	bne	.floop    
+
+	move.l	#$8,a1
+.cloop:
+	cmpa.l	(a1),a1
+	bne	.err
+	adda.l	a1,a1			;same as lsl.l #1
+	bne	.cloop			; ne = not all shifted out...
+.bypass:
+	bra	tstdat
+
+.err:
+	move.w	#red,palette		; red the screen..
+	move.w	#$ffff,d0
+.lp:	nop
+	dbra	d0,.lp
+	move.w	#$ffff,palette
+.lp2:	nop
+	dbra	d0,.lp2
+	bra	.err         	
+
+*********************************
+*       Test system RAM         *
+*       If error, branch to FATAL routine with d0=data written,
+*       d1=data read, a0=location
+
+*       ========
+*       Test high and low
+tstdat: moveq   #0,d6
+tstd6:  move.w  d6,d0           ;d6=data for repeat
+	movea.l #8,a0
+tstd0:  move.w  d0,(a0)
+	nop
+	move.w  (a0),d1
+	cmp.w   d0,d1
+	bne     fatal0
+	tst     d0
+	beq.s   tstdl
+	moveq   #$ff,d0
+	bra.s   tstd0
+
+*       ========
+*       Test ram data lines
+tstdl:  moveq   #1,d0
+	movea.l #8,a0           ;test location 8
+datlin1:
+	move.w  d0,(a0)         ;shift 1 across a word
+	nop
+	move.w  (a0),d1         ;read and save
+	cmp.w   d0,d1           ;verify 
+	bne     fatal0
+	lsl.w   #1,d0
+	cmpi.w  #0,d0           ;until shift off end of word
+	bne.s   datlin1
+	move.w  #$fffe,d0
+datlin0:
+	move.w  d0,(a0)         ;rotate 0 across a word
+	nop
+	move.w  (a0),d1
+	cmp.w   d0,d1
+	bne     fatal0
+	rol.w   #1,d0
+	cmpi.w  #$fffe,d0       ;until rotate back to beginning
+	bne.s   datlin0
+	        
+*       ========
+*       Test disturbance for lowest 2k bytes of ram
+	movea.l #$40000,a3      ;top=256k 
+	
+*  fill with 0
+	movea.l #LOWRAM,a0      ;bottom
+	movea.l a0,a7
+	movea.l #SAFRAM,a1      ;top
+fill0:  move.l  #0,(a0)+        ;fill
+	cmpa.l  a0,a1
+	bgt.s   fill0
+
+*  fill rest of memory with 1s
+fill1:  move.l  #$ffffffff,(a1)+  ;fill with 1's        
+	cmpa.l  a1,a3           ;until at top
+	bgt.s   fill1
+
+*  verify writes to upper mem not affecting low mem
+	movea.l a7,a0           ;bottom
+	movea.l #SAFRAM,a1      ;top
+	moveq   #0,d0           ;for error display
+fill2:  move.w  (a0),d1
+	bne     fatal1
+	adda.l  #2,a0
+	cmpa.l  a0,a1
+	bgt.s   fill2           ;until a0=a1
+
+*       ========
+*       Test first 2k bytes of memory
+*       data=lsb of address
+	movea.l a7,a0           ;bottom
+wrtlow: move.w  a0,(a0)+        ;fill with low byte of address
+	cmpa.l  a0,a1
+	bgt.s   wrtlow
+
+	movea.l a7,a0           ;bottom
+verlow: move.w  (a0),d1         ;read
+	move.w  a0,d0
+	cmp.w   d0,d1
+	bne     fatal2
+	adda.l  #2,a0           ;would like to do postinc, but it alters Z
+	cmpa.l  a0,a1
+	bgt.s   verlow
+
+*       data=complement of lsb of address
+	movea.l a7,a0           ;bottom
+wrtcmp: move.w  a0,d0
+	eori.w  #$ffff,d0
+	move.w  d0,(a0)+        ;fill with complement of address
+	cmpa.l  a0,a1
+	bgt.s   wrtcmp
+
+	movea.l a7,a0           ;bottom
+vercmp: move.w  (a0),d1         ;read
+	eori.w  #$ffff,d1
+	move.w  a0,d0
+	cmp.w   d0,d1           ;verify data
+	bne     fatal2
+	adda.l  #2,a0           ;cannot do postinc, cause it alters Z
+	cmpa.l  a0,a1
+	bgt.s   vercmp
+
+	movea.l #8,a0
+	clr.l   d0
+clrlow: move.l  d0,(a0)+        ;clear low memory
+	cmpa.l  #$1000,a0
+	blt.s   clrlow
+
+*********************************
+*       save top of ram & TOS return address
+
+	move.w  #$03,palette+6          ; breakpoint1
+
+	move.l  d5,topram
+	move.l  a6,TOSreturn
+
+*       lea.l   DoneRAMmsg,a5
+*       lea.l   .ex,a0
+*       bra     ptmsg
+*.ex:
+
+*********************************
+*       Init. exceptions        *
+
+*       Set 68000 internal exceptions
+	movea.l #vectb1,a0
+	movea.l #8,a1           ;point to start of vector ram
+	moveq   #9,d0
+vect1:  move.l  (a0)+,(a1)+     ;move 2-11 (now 2-15)
+	dbra    d0,vect1
+	
+*       Set vectors for autovectored interrupts
+	movea.l #96,a1
+	movea.l #vectb2,a0
+	moveq   #7,d0
+vect2:  move.l  (a0)+,(a1)+     ;move 24-31
+	dbra    d0,vect2
+
+*       Set vectors for MFP interrupts
+	movea.l #vectb3,a0
+	movea.l #userint,a1
+	moveq   #15,d0
+vect3:  move.l  (a0)+,(a1)+     ;move 64-79
+	dbra    d0,vect3
+
+*       If low memory tests out, we have system stack at $200 (temp)
+*       and error stack at $800, and variables between
+	
+	movea.l #initstack,a7   ;temporary, until I verify ram
+	movea.l #$800,a6        ;error stack
+
+	move.w  #$03,palette+8          ; breakpoint1
+
+*****************************************
+*       Test 1k of ram for the stack    *
+*       Start at $20000 and test 1k blocks until good one found
+	movea.l #$1fc00,a0      ;bottom
+	movea.l #$20000,a1      ;top
+tststack: 
+	bsr     tstblk          ;test (a0)--(a1)
+	move.w  a6,d0
+	andi.w  #$3ff,d0        ;see if at top of error stack
+	beq.s   setstack        ;br if ok
+	suba.w  #$400,a0        ;if not, try 1k lower
+	suba.w  #$400,a1
+	cmpa.l  #$1f000,a0      ;4k from start
+	blt     fatal4          ;if can't find good ram by now, quit
+	bra.s   tststack        ;keep looking for good 1k
+
+setstack:
+	movea.l a1,a7           ;new, big stack, at $20000 or close
+
+*       Prepare for interrupts
+	bsr     initmfp         ;clear mfp interrupt registers
+
+	move.w  #$03,palette+$a         ; breakpoint1
+
+*********************************
+*       Display Initialization  *
+
+* turn on VGA video if installed
+	bclr    #FAKECOLOR,v_stat_R
+	move.b  SPConfig,d0
+	lsr.b   #6,d0
+	cmp.b   #2,d0   ; VGA MONITOR
+	bne     .contd
+	bset    #FAKECOLOR,v_stat_R
+	bsr     vVGAm3  ; turn on proper VGA video
+.contd:
+	move    #rs96,rsrate    ;set for 9600 bps (timer d data)
+	bsr     setdsp          ;set up video and RS232 for display
+	bsr     esc_init        ;init escape routines
+	bsr     clearsc         ;clear screen memory
+
+*********************************
+*FPU check
+fpuck:
+*	bset.b	#1,SPControl	; combel hack for quick F-LINES OFF!
+	bset.b	#5,SPControl
+*	bclr.b	#0,SPControl	; 8MHz
+
+	lea     fpumsg,a5       ;write message in case we crash here
+	bsr     dspmsg
+	move.l  sp,a6
+	move.l  #nofpu,$2c      ;redirect fpu trap
+	move.l  #nofpu2,$3c     ; redirect wrong exception for rev 1 combel
+	move.l  #nofpu2,$34
+	fnop                    ;trap line - f if no FPU
+	bsr     pOKmsg
+	bra.s   psgint          ;continue here if fpu found
+    
+nofpu:  movea.l #fpu,a5         ;1111 op code FPU error
+	move.l  a6,sp
+	move.l  #excep11,$2c    ;restore default trap error
+	move.l  #excep13,$34
+	move.l  #excep15,$3c    ; restore exception $f vector
+*       move.w  #red,palette    ; no fpu not an error.
+	bsr     dspmsg
+	bra     psgint
+
+* IF REV 1 COMBEL AND NO FPU, WE GET EXCEPTION #f or #d. : RWS
+nofpu2: 
+	movea.l #fpurev1,a5         ;exception # $f taken instead
+	move.l  a6,sp
+	move.l  #excep11,$2c    ;restore default trap error
+	move.l  #excep13,$34	; was #12
+	move.l  #excep15,$3c    ; restore exception $f vector
+*        move.w  #red,palette   ; no fpu not an error
+	bsr     dspmsg
+
+*********************************
+*       PSG initialization
+*       Set up printer port to make test fixture outputs hi imped.
+*       and shut off sound
+
+psgint: 
+	lea.l   initpsgmsg,a5
+	bsr     dspmsg
+	lea     psgsel,a0
+	lea     psgwr,a1
+	bsr     sndoff
+
+	move.b  #7,(a0)         ;I/O
+	move.b  #$c0,(a1)       ;A out, B out
+	move.b  #$f,(a0)        ;port B
+	move.b  #$c0,(a1)
+	move.b  #$e,(a0)        ;port A
+	move.b  #$66,(a1)       ;strobe, GPO high, deselect floppies
+
+*- Enable PSG to codec : 13JUL92 : RWS
+	move.w	#$01,SPControl	; RWS.T turn off berrs
+ 
+	move.w	#$0003,DACRECCTRL	; enable PSG sound
+	
+***~
+; RWS/X	move    #%011101000,d0  ;master volume = max
+;	bsr     voltone
+;	move    #lfvol+db0,d0   ;left volume = max 
+;	bsr     voltone
+;	move    #rtvol+db0,d0   ;right volume = max
+;	bsr     voltone
+;	move    #treble+flat,d0 ;treble = flat
+;	bsr     voltone
+;	move    #bass+flat,d0   ;bass = flat
+;	bsr     voltone
+;	move    #$1,d0          ;mix = dma + psg
+;	bsr     voltone
+
+	moveq   #0,d2           ;d2=0,1,2=>A,B,C
+	moveq   #freqhi,d7      ;starting freq.
+	moveq   #freqlo,d6
+
+	bsr     nxtsound1        ;start sound
+	bsr     pOKmsg
+********************************
+*       Do initial tests
+;        lea     bercvr,a5       ;write message in case we crash here
+;        bsr     dspmsg
+;       bset.b  #5,SPControl    ;turn on bus errors 
+;        move.l  #be_ret,a6      ;save the return pointer
+;        move.l  #obe_tst,8      ;install bus error vector
+;        clr.l   d7
+;        move    d0,0            ;cause bus error by writing to ROM
+
+;be_ret: nop
+;        tst     d7
+;        bne.s   be_don          ;branch if bus error worked, else..
+;        lea     betstm,a5       ;bus error did not occur, display error
+;        bsr     dspmsg
+;        move    #red,palette
+;       bra.s   be_don1
+;be_don:
+;       bsr     dspspc  
+;       bsr     pOKmsg
+;be_don1:
+;       bclr.b  #5,SPControl    ;turn bus errors back off???
+;       bsr     crlf
+;       move    #$2400,sr
+;*        move.b  #$14,sim      ;enable int mask vblank,hblank
+;*        move.b  #$40,svmeim     ;enable int mask mfp
+;        move.b  #2,consol       ;enable RS232 terminal display
+;        clr.b   initflg         ;no pass msg
+;       bra     SKIP
+* OLD STe TEST BELOW *************************
+	lea     bercvr,a5       ;write message in case we crash here
+	bsr     dspmsg
+	move.l  8,a4
+	move.l  #sbe_tst,8       ;install bus error vector
+	move.l	#be_ret,a6
+	bset.b  #5,SPControl    ; does crash system
+	clr     d7
+	move    d0,0            ;cause bus error by writing to ROM
+be_ret:
+	nop
+	move.l  a4,8            ;restore vector
+	tst     d7              ;test the bus error flag
+	bne     be_don
+	lea     betstm,a5       ;if bus error did not occur, display error
+	bsr     dspmsg
+	move    #red,palette
+be_don:
+	move.b  SPControl,d0
+	or      #5,d0           
+	move.b  d0,SPControl    ;power up to 16Mhz CPU and Blitter clocks, TLE
+	move    #$2400,sr
+	move.b  #2,consol	;enable RS232 terminal display
+	clr.b   initflg		;no pass msg
+*********************** END OF OLD STE *******
+SKIP:
+	lea.l   IDEMsg,a5
+	bsr     dspmsg
+	bsr     reset_ide
+
+	bsr     timtst          ;test MFP timers and glue timing
+	tst.b   erflg0
+	bne     endinit 
+	bsr     dspspc          ; RWS.T
+	bsr     pOKmsg
+endinit:
+	move.b  #$ea,initflg    ;flag init. complete
+
+wtmsgx: move    #100,d1         ;very brief delay so all msg readable
+wtmsg0x:                         ;dunno how fast anymore.. 68030 issues. 
+	bsr     wait
+	dbra    d1,wtmsg0x
+
+*       check system clock: Genlock?
+	tst.b   erflg0          ;check timer error flag
+	bne.s   keyint          ;don't get stuck here if failure
+	bsr     clearsc
+*        move.b  #1,tadr+mfp
+*        move    #13,d0
+*        move.l  #timerav,a2
+*        bsr     initint         ;enable timer A int
+*
+*        move.b  #6,tacr+mfp     ;start timer, /100 = 40.6 us
+*        move.b  #1,timflg
+*wtgen0: tst.b   timflg          ;wait for int to synchronize to timer
+*        bne.s   wtgen0
+*        move.b  #1,timflg
+*        move    #6,d7   
+*wtgen:  dbra    d7,wtgen        ;timer will elapse if 16 MHz ext clk
+*        move.b  #0,tacr+mfp
+*        tst.b   timflg          ;if timer has not expired,
+*        bne.s   keyint          ;then internal 32M clk
+
+*       slow clock = no screen; output sound to show we're alive
+*       move    #%011101000,d0  ;master volume = max
+*       bsr     voltone
+*       move    #lfvol+db0,d0   ;left volume = max 
+*        bsr     voltone
+*        move    #rtvol+db0,d0   ;right volume = max
+*        bsr     voltone
+*        move    #$1,d0          ;mix = dma + psg
+*        bsr     voltone
+*        moveq   #0,d2           ;channel A
+*genlck: bsr     sweep
+*        bra.s   genlck          ;loop forever
+	        
+*********************************
+*       Initialize keyboard
+keyint: 
+* RWS : NEEDED ? : bsr     disint          ;Bug-RAM R4 failure after floppy test run
+
+*RWS.T        moveq   #15,d0          ;enable mono monitor int
+*        bsr     enabint
+	lea     initkbmsg,a5
+	bsr     dspmsg
+	bsr     initkey         
+
+*********************************
+*       check configuration
+
+*       if color palette is 4 bits, its probably STE
+	clr.b   mega
+	movea.l #palette,a0
+	move    #$fff,(a0)
+	cmpi    #$fff,(a0)
+	bne.s   cnfst
+	move.b  #$80,mega
+
+cnfst:  bra     screen0
+.if init2 = 0
+*********************************
+*       bus error handler
+be_tst: move.l  #excep2,8
+	moveq   #$ff,d7
+	move.l  a6,$2(a7)       ;address of where to return to
+	move.w  $a(sp),d0       ;get ssw
+	and.w   #$ceff,d0       ;clear df, rc, and rb bits
+	move.w  d0,$a(sp)       ;save modified ssw on stack
+	rte
+
+* OLD STE HANDLER *
+obe_tst: moveq   #$ff,d7
+	 addq.l   #8,sp
+	 rte
+
+* SHORT SP HANDLER *
+sbe_tst:
+	moveq	#$ff,d7
+	move.l  a6,$2(a7)  ;new address (w/r routine)
+	move.w  $a(sp),d0       ;get ssw
+	and.w   #$ceff,d0       ;clear df, rc, and rb bits
+	move.w  d0,$a(sp)       ;save modified ssw on stack
+	rte
+
+*********************************
+*                               *
+*       FATAL ERROR HANDLING    *
+*                               *
+*********************************       
+
+*       Error occurred in system RAM or stack; we cannot continue
+*       On entry, d0=data written, (a0)=data
+
+*       Error during tstblk routine.
+*       Failed to find good place to put the stack,
+*       But temp stack is ok, display might be ok
+fatal4:
+	move.b  #2,consol       ;enable RS232 display out
+	moveq   #rs96,d0
+	bsr     setbps          ;init. RS232
+	bsr     chkstk          ;display normal RAM error, screen and RS232
+	bra     tstdat          ;repeat test
+	
+*       Failed during data line check
+*       d0=data written, d1=data read
+fatal0:
+	movea.l #datlin,a5
+	bra.s   fatal
+	
+*       Failed low memory 0 check
+*       d0=0, d1=data read      
+fatal1: 
+	movea.l #unique,a5
+	bra.s   fatal
+	
+*       Failed low memory address check
+*       d0=data written, d1=data read
+fatal2:
+	move.l  #addchk,a5
+
+*       Handle a fatal error
+*       Print out RS232; assume no RAM.
+*       Clear screen and turn red. Then repeat the test(s).
+*       d0=data written, d1=data read, a0=address, a5=message ptr
+
+fatal:  move.l  a0,d5           ;save address in d5
+
+*       Init. RS232 port
+	lea     mfp,a4
+	move.b  #$11,tcdcr(a4)  ;timer C&D prescale /4
+	move.b  #2,tddr(a4)
+	move.b  #$98,ucr(a4)    ;8 bit, 2 stop, no parity
+	move.b  #1,rsr(a4)      ;enable rcv
+	move.b  #1,tsr(a4)      ;enable xmt
+
+	move.l  #2000,d7
+wtinit: dbra    d7,wtinit       ;wait for port to sync
+
+*       Display error message
+	lea     ptwdat,a0
+	bra     ptmsg
+
+*       Display data written
+ptwdat: cmp.w   d0,d1           ;if equal, don't display
+	beq.s   fdsp    
+
+*       Print data written (binary) out RS232
+	lea     ptcr0,a0
+	bra     ptdat
+
+*       Print space
+ptcr0:  lea     ptrdat,a2
+	moveq   #$20,d3
+	bra     pout
+
+*       Print data read out RS232
+ptrdat: move.w  d1,d0
+	lea     ptcr1,a0
+	bra     ptdat
+
+*       Print space
+ptcr1:  lea     ptadd,a2
+	moveq   #$20,d3
+	bra     pout
+
+
+*       Print address (hex) out RS232
+ptadd:  move.l  d5,d1           ;move address
+	beq.s   fdsp            ;skip if 0
+	swap    d2
+	lea     pa1,a1          ;ret add
+	bra     pbyt            ;print ms byte (d2)
+pa1:    lea     fdsp,a0         ;ret addr
+	bra     pwrd            ;print low word (d1)
+
+*       Print crlf
+	lea     fdsp,a0
+	bra.s   ptcrlf
+	        
+*       Set up display 
+fdsp:   move.w  #red,palette    
+	move.b  #scrmemh,v_bas_h        ;direct hardware to screen memory
+	clr.b   v_bas_m
+	lea     scrmem,a0
+	moveq   #0,d0
+fdsp1:  move.w  d0,(a0)+
+	cmpa.l  #scrmem+$8000,a0
+	bne.s   fdsp1
+
+	lsl     #1,d6           ;shift bit 0-15
+	bra     tstd6           ;repeat the RAM tests endlessly
+
+
+*************************************************
+*                                               *
+*       SUBROUTINES FOR INIT SECTION            *
+*                                               *
+*************************************************
+
+
+*       Pseudo subroutines for fatal condition--do not use stack
+
+*------------------------------
+*       Print message out RS232
+*       Entry:  a5=msg ptr
+*               a0=ret addr
+
+ptmsg:  move.b  (a5)+,d2
+	cmpi.b  #eot,d2
+	beq.s   ptmsg1
+ptmsg2: tst.b   tsr(a4)         ;wait for transmit empty
+	bpl.s   ptmsg2
+	move.b  d2,udr(a4)      ;send
+	bra.s   ptmsg
+ptmsg1: jmp     (a0)    
+
+*-------------------------------
+*       Print crlf
+*       Exit:   a0=return address
+ptcrlf: tst.b   tsr(a4)         ;wait for transmit empty
+	bpl.s   ptcrlf
+	move.b  #cr,udr(a4)     ;send
+ptcrlf1:
+	tst.b   tsr(a4)         ;wait for transmit empty
+	bpl.s   ptcrlf1
+	move.b  #lf,udr(a4)     ;send
+	jmp     (a0)
+
+*---------------------------------
+*       Print binary data to RS232
+*       Entry:  d0=data
+*               a0=ret addr
+ptdat:  andi.b  #$fe,ccr        ;clear carry
+	moveq   #15,d2          ;for 16 bits
+ptdat1: tst.b   tsr(a4)
+	bpl.s   ptdat1
+	lsl.w   #1,d0
+	bcc.s   ptdat2
+	move.b  #'1',udr(a4)    
+	bra.s   ptdat3
+ptdat2: move.b  #'0',udr(a4)
+ptdat3: dbra    d2,ptdat1
+	jmp     (a0)
+
+*------------------------------
+*       Print word to RS232
+*       Entry:  d1=word
+*               a0=return address
+*       Uses:   d2,d3,a11<
+pwrd:   move.w  d1,d2
+	lsr     #8,d2   ;hi byte->lo
+	lea     pw1,a1
+	bra.s   pbyt    ;print hi (d2)
+pw1:    move.w  d1,d2
+	lea     pw2,a1
+	bra.s   pbyt    ;print lo (d2)
+pw2:    jmp     (a0)    ;return
+
+	        
+*       Print byte to RS232
+*       Entry:  d2=byte
+*               a1=return address
+*       Uses:   d3,a2
+pbyt:   move.b  d2,d3
+	lsr.b   #4,d3
+	lea     pw3,a2
+	bra.s   pasc    ;hi nib
+pw3:    move.b  d2,d3
+	lea     pw4,a2
+	bra.s   pasc    ;low nib
+pw4:    jmp     (a1)    ;return
+
+*-------------------------------
+*       Convert nibble ascii and print to RS232
+*       Entry:  d3=nibble
+*               a2=return address               
+pasc:   andi.b  #$f,d3
+	cmp.b   #9,d3   ;0-9=>30-39
+	bls.s   pdecml
+	and     #7,d3
+	subq    #1,d3
+	ori.b   #$40,d3 ;A-F=>41-47
+
+*       Print byte (d3)
+pout:   tst.b   tsr(a4)         ;wait for transmit empty
+	bpl.s   pout
+	move.b  d3,udr(a4)      ;send
+	jmp     (a2)            ;return
+
+pdecml: ori.b   #$30,d3
+	bra.s   pout
+
+*********************************
+*       Set time-out timer 
+*       d0=timer control register
+*       d1=timer data
+setout:
+	lea     mfp,a0
+	move.b  #0,tacr(a0)
+	move.b  d1,tadr(a0)
+	move.b  d0,tacr(a0)
+	move.b  #1,timout
+	rts
+
+*************************************************************************
+*       Set start address of display memory into video register,        *
+*       set resolution, and set colors of text and background           *
+*       Uses:   d0,a0,a1,a2
+
+setdsp:
+	movea.l #$ffff8200,a2
+	move.b  #scrmemh,1(a2)  ;direct hardware to screen memory
+	clr.b   3(a2)           ;v_bas
+wtvb:   cmpi.b  #scrmemh,5(a2)  ;wait for blank
+	bne     wtvb
+wtvb1:  cmpi.b  #scrmemm,7(a2)
+	bne     wtvb1
+wtvb2:  cmpi.b  #0,9(a2)
+	bne     wtvb2
+
+	move    #$fff,d0
+	lea     palette,a1
+	move    #$1e,d1
+wrtpal: move    d0,0(a1,d1)     ;write all palettes
+	sub     #2,d1
+	bpl.s   wrtpal
+
+*       Test monochrome monitor input
+*        lea     mfp,a0
+*        btst    #7,gpip(a0)
+*        bne.s   setdsp1
+
+*       Set monochrome mode
+*        move.b  #2,$60(a2)      ;v_shf_mod
+*        bra.s   setdsp2
+
+*       Set color (med. res.) mode
+setdsp1:
+	move.b  #1,$60(a2)      ;v_shf_mod
+	move.w  #$666,6(a1)     ;text color
+setdsp2:
+	move.w  #bgrnd,(a1)     ;background
+
+*       Init. RS232 as a terminal
+rsinit: move    rsrate,d0       ;get bps
+
+*       Entry to set bps from fatal (don't use RAM variable)
+*       d0.b=1,2,4,...64 for 19200,9600,...300 bps
+setbps: lea     mfp,a0
+	move.b  #$11,tcdcr(a0)  ;timer C&D prescale /4
+	move.b  d0,tddr(a0)     ;set data reg. for clock divide
+	move.b  #$98,ucr(a0)    ;/16, 8 bit, 2 stop, no parity
+	move.b  #1,rsr(a0)      ;enable rcv
+	move.b  #1,tsr(a0)      ;enable xmt
+	move.b  udr(a0),d0      ;read to clear
+	bsr     wait            ;let 68901 sync
+	rts
+
+*************************************************************************
+*                                                                       *
+*       routine to set up the general interrupt port registers          *
+*       Uses:   power-up sequence                                       *
+initmfp:
+	movea.l #mfp,a0         ;init mfp address pointer
+	move.b  #$48,d0         ; vector to $100, sw EOI : ADDED : 24JAN92 : RWS
+intmfp:
+	clr.b   imra(a0)        ;turn off all interrupt mask bits
+	clr.b   imrb(a0)        ;...
+	clr.b   iera(a0)        ;...and the enable bits
+	clr.b   ierb(a0)        ;...
+	clr.b   ipra(a0)        ;...and the pending bits
+	clr.b   iprb(a0)        ;...
+	clr.b   isra(a0)        ;...and the in-service bits
+	clr.b   isrb(a0)        ;...
+	clr.b   aer(a0)         ;active edge = rising
+	clr.b   ddr(a0)         ;data direction = inputs
+	clr.b   gpip(a0)
+	move.b  d0,vr(a0)     ;set mfp autovector and s-bit : CHGD : 24JAN92 : RWS
+genrts: rts
+
+*************************************************
+*       Initialize keyboard hard/soft-ware      *
+*       perform this routine once as part of    *
+*       power-up sequence                       *
+
+initkey:
+	clr.b   consol          ;set flag = enable all
+*                               bit0=RS232 output disable
+*                               bit1=RS232 input disable
+*                               bit2=keyboard disable
+*       zero keyboard variables
+	clr.b   kbshift         ;shift key
+	clr.w   kbctrl          ;ADDED 29JAN92 : RWS
+	clr.b   kstate          ;state=normal key mode
+	clr.b   kindex
+
+*       initialize the ikbd buffer record structure
+	movea.l #kbufrec,a0
+	movea.l #kinit,a1
+	moveq   #kssize,d0
+	bsr     lbmove          ;do block move and return
+	move.l  #brkbufh,brkptrh        ;init break key buffer
+	move.l  #brkbufh,brkptrt
+
+	move.l  #aciaexit,vkbderr.w     ;init keyboard error handler address
+
+*       init the acia next
+	bsr     midiptr
+	move.b  #rsetacia,comstat(a1)   ;reset MIDI acia
+
+	bsr     ikbdptr                 ;init address registers for ikbd
+	move.b  #rsetacia,comstat(a1)   ;init the acia via master reset
+
+*       init the KEYBOARD acia to /64 clock, 8 bit dat, 1 stop bit,
+*       no parity, rts low, tx interrupt disabled, rx interrupt enabled
+
+	move.b  #div64+protocol+rtsld+intron,comstat(a1)
+	
+*       enable MFP interrupt for keyboard
+
+	moveq   #6,d0           ;interrupt 6=keybd,midi
+	movea.l #midikey,a2     ;address of int routine
+	bsr     initint
+	rts
+
+*************************************************
+*       Table of initial keyboard buffer values *
+kinit:
+	dc.l    kibuffer
+	dc.w    kinsize
+	dc.w    0
+	dc.w    0
+	dc.w    kinsize/4
+	dc.w    kinsize*3/4
+
+	dc.l    kobuffer
+	dc.w    koutsize
+	dc.w    0
+	dc.w    0
+	dc.w    koutsize/4
+	dc.w    koutsize*3/4
+	dc.w    0
+kssize  equ     *-kinit-1
+
+***********************************************8
+* print 'OK' after testing messages
+pOKmsg:
+	move.l  a5,-(sp)
+	lea.l   okmsg,a5
+	bsr     dspmsg
+	move.l  (sp)+,a5
+	rts
+
+*************************************************************************
+*                                                                       *
+*       routine to init an mfp associated interrupt vector              *
+*                                                                       *
+*       algorithm                                                       *
+*                                                                       *
+*       1. block the interrupt via it's mask bit;                       *
+*       2. disable the interrupt's enable and pending bits;             *
+*       3. check the interrupt's in-service register and loop till      *
+*          clear;                                                       *
+*       4. init the interrupt's associated vector;                      *
+*       5. set the interrupt's enable bit;                              *
+*       6. set the interrupt's mask bit;                                *
+*                                                                       *
+*       entry                                                           *
+*               d0 - contains interrupt # to affect                     *
+*               a2 - contains new vector address                        *
+*************************************************************************
+	
+initint:
+	movem.l d0-d2/a0-a3,-(a7)       ;save affected registers
+	bsr     disint          ;disable the interrupts
+	move.l  d0,d2           ;get a copy so as to determine where to...
+	asl     #2,d2           ;place the a2 address into the int. vector
+	addi.l  #$100,d2        ;interrupt vector addr = (4 * int) + $000100
+	move.l  d2,a3           ;transfer the calculated address to a register
+	move.l  a2,(a3)         ;...that can act upon it thus!<--vector init'ed
+	bsr     enabint         ;enable interrupts
+	movem.l (a7)+,d0-d2/a0-a3       ;restore affected registers
+	rts
+
+
+*************************************************************************
+*               interrupt disable routine                               *
+*************************************************************************
+disint:
+	movem.l d0-d1/a0-a1,-(a7)       ;save affected registers
+	movea.l #mfp,a0         ;set mfp chip address pointer : MOVED : RWS
+disint0:
+	move    sr,-(sp)
+	move    #$2700,sr
+	lea     imra(a0),a1     ;set a1 for the mskoff routine
+	bsr     bselect         ;generate the appropriate bit to clear
+	bclr    d1,(a1)         ;and clear the bit...
+	lea     iera(a0),a1     ;set a1 for another mskoff call
+	bsr     bselect
+	bclr    d1,(a1)         ;and clear the bit...
+	lea     ipra(a0),a1     ;yet again...
+	bsr     bselect
+	bclr    d1,(a1)         ;and clear the bit...
+	lea     isra(a0),a1     ;now set up to check for interrupts in progress
+	bsr     bselect         ;get proper a/b version...
+	bclr    d1,(a1)
+	move    (sp)+,sr
+	movem.l (a7)+,d0-d1/a0-a1       ;restore affected registers
+	rts
+
+*************************************************************************
+*               enable interrupt routine                                *
+*************************************************************************
+enabint:
+	movem.l d0-d1/a0-a1,-(a7)       ;save affected registers
+	movea.l #mfp,a0         ;set mfp chip address pointer : MOVED : RWS
+enabin0:
+	move    sr,-(sp)
+	move    #$2700,sr
+	lea     iera(a0),a1     ;set up to enable the interrupt enable bit
+	bsr     bselect
+	bset    d1,(a1)         ;and set the bit...
+	lea     imra(a0),a1     ;set up to enable the interrupt enable bit
+	bsr     bselect
+	bset    d1,(a1)         ;and set the bit...
+	move    (sp)+,sr
+	movem.l (a7)+,d0-d1/a0-a1       ;restore affected registers
+	rts
+
+*************************************************************************
+*                                                                       *
+*       the following routine generates the appropriate bset/bclr #     *
+*       for the interrupt # specified in d0.  valid interrupt #'s are   *
+*       0 --> 15 as shown in the 68901 chip specification.  it also     *
+*       selects between the ixra and the ixrb version of the register   *
+*       as is appropriate.                                              *
+*                                                                       *
+*       entry   d0 - contains the interrupt number                      *
+*               a1 - contains the pointer to the "ixra" version of      *
+*                       the interrupt byte to mask                      *
+*       exit    d0 - same as upon entry                                 *
+*               d1 - contains the number of the bit t                   *
+*************************************************************************
+
+bselect:
+	move.b  d0,d1           ;copy d0 to d1 for scratch work
+	cmp.b   #$8,d0          ;see if desired int # >= 8...
+	blt.s   skip0           ;...and branch if it ain't...
+	subq    #$8,d1          ;adjust for using ixrb instead
+skip0:  cmp.b   #$8,d0          ;see if desired int # >= 8...
+	bge.s   skip1           ;...and branch if it is...
+	addq    #$2,a1          ;adjust for using ixrb instead
+skip1:  rts
+
+
+*********************************
+*       Wait a while (2.5 ms ?) *
+*********************************
+* MOVED TO WAIT.S : 09APR92 : RWS
+;* TRY TO GET THIS AS CLOSE AS POSSIBLE TO 2.5ms for those things
+;* that need it.
+;
+;wait:  bclr.b  #0,SPControl    ; 8MHz, cache off too   
+;       move.l  d0,-(a7)
+;       move.l  #1500,d0                
+;wait1:  
+;       nop
+;       subq.l  #1,d0
+;        bne.s   wait1
+;        move.l  (a7)+,d0
+;        rts     
+
+
+*****************************************************************
+*       Block move d0 bytes from (a1) to (a0)                   *
+lbmove: move.b  (a1)+,(a0)+
+	dbra    d0,lbmove
+	rts                     ;and return home
+.endif
+	.data
+
+**************
+*            *
+*  messages  *
+*            *
+**************
+
+*               '1234567890123456789012345678901234567890'
+
+datlin: dc.b    cr,lf,'I1 RAM/data line error ',eot
+unique: dc.b    cr,lf,'I2 RAM disturbance   ',eot
+addchk: dc.b    cr,lf,'I3 RAM address check ',eot
+*       stack error is now handled as normal RAM error (ramtst)
+mmufal: dc.b    cr,lf,'I4 Memory configuration error',cr,lf,eot
+*               should be preceded by bus error
+ramszer: dc.b   cr,lf,'I5 Ram sizing error',cr,lf,eot
+*               not seeing second bank or top location is bad
+
+fpumsg: dc.b    cr,lf,'Checking FPU...',eot
+fpu:    dc.b    cr,lf,'EF FPU not found',eot   
+fpurev1: dc.b    cr,lf,'EF FPU not found (Rev. 1 COMBEL installed)',eot   
+
+bercvr: dc.b    cr,lf,'I6 Checking exception handling...',eot
+betstm: dc.b    cr,lf,'I7 Bus error not detected',cr,lf,eot
+tpointm: dc.b   cr,lf,'TP TEST POINT REACHED',cr,lf,eot
+
+okmsg: dc.b     'Ok',eot
+initpsgmsg:     dc.b    cr,lf,'Initializing PSG...',eot
+
+initkbmsg:      dc.b    cr,lf,'Initializing Keyboard',eot
+
+DoneRAMmsg:     dc.b    cr,lf,'Done with RAM tests',cr,lf,eot                      
+	          
+IDEMsg:         dc.b    cr,lf,'Resetting IDE',cr,lf,eot
+

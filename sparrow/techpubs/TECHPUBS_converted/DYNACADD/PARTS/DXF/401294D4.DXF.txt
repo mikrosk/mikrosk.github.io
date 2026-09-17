@@ -1,0 +1,210 @@
+DXF drawing: DYNACADD/PARTS/DXF/401294D4.DXF
+Render: 401294D4.DXF.svg
+
+== Summary ==
+File:        222846 bytes, CR/LF line ends, ends with ^Z (0x1A)
+Dialect:     group codes right-aligned in 3 columns; full AutoCAD header with $ACADVER=AC1006 (R10), 124 header variables, tables VPORT/LTYPE/LAYER/STYLE/VIEW/UCS/DWGMGR
+Sections:    HEADER, TABLES, BLOCKS, ENTITIES
+Menu:        $MENU=ACAD
+Dates:       created 1992-03-31 22:35, last saved 1992-07-17 23:12 ($TDCREATE/$TDUPDATE)
+Extents:     header (0, 0) - (22, 17)
+             rendered (0, 0) - (22, 17), size 22 x 17
+Limits:      (0, 0) - (22, 17)
+Units:       not stored in this DXF version; $LUNITS=2 (decimal); limits and extents suggest inches
+Header:      124 variables; $LTSCALE=1.0, $TEXTSIZE=0.125, $DIMSCALE=1.0, $FILLMODE=1
+Text styles: STANDARD (font txt), ROMAND (font romand), ROMANS (font romans)
+Linetypes:   CONTINUOUS, HIDDEN
+Layers:      5 in table, 3 used
+  name      color  linetype      state         objects
+  0             7  CONTINUOUS    on            259
+  TITLE         2  CONTINUOUS    on            1
+  1             7  CONTINUOUS    on            2369
+  unused: DIM, BORDER
+Entities:    model space: LINE 2229, TEXT 120, SOLID 7, POLYLINE 6 (24 vertices), ARC 4, INSERT 3, CIRCLE 1
+             in block definitions: LINE 259
+Blocks:      3 defined
+  *X0: base (0, 0), LINE 127; inserted 1 time
+      at (-10.889, 0.466) scale 0.03937,0.03937 rotation 0 layer 1
+  *X1: base (0, 0), LINE 66; inserted 1 time
+      at (-10.879, 0.384) scale 0.03937,0.03937 rotation 0 layer 1
+  *X2: base (0, 0), LINE 66; inserted 1 time
+      at (-10.899, 0.384) scale 0.03937,0.03937 rotation 0 layer 1
+Notes:
+  - 1 TEXT entities are empty or blank
+
+== Text in reading order (119 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (107 items) --
+  6  |  5  |  4  |  3  |  2  |  1
+  REV  |  REVISION DESCRIPTION  |  DATE  |  APPROVED
+  1  |  PRELIMINARY RELEASE
+  2  |  ENGINEERING RELEASE  |  04/03/92  |  TJU
+  3  |  ENGINEERING RELEASE  |  04/23/92  |  TJU
+  4  |  ENGINEERING RELEASE  |  06/25/92 J.SMITH
+  D  |  D
+  SURFACE B  |  SURFACE A  |  SURFACE A
+  CONNECTORS MOUNTED ON
+  SURFACE B (SOLDER SIDE)
+  CONNECTOR  |  (J1 AND J2)
+  J1 REF
+  C  |  C
+  2
+  SOLDER SIDE OF BOARD  |  COMPONENT SIDE OF BOARD
+  SURFACE B
+  B  |  B
+  UNLESS OTHERWISE SPECIFIED DRAWN BY:  |  DATE:
+  TOLERANCES  |  ATARI MICROSYSTEMS
+  2   MARK CURRENT REVISION LEVEL OF ASSEMBLY  |  BELAND 2/14/92
+  ON LINIER  |  ON ANGULAR
+  A  |  CORPORATION  |  A
+  DIMENSIONS  |  DIMENSIONS  |  R
+  CHECKED:  |  DATE:
+  WITH WHITE EPOXY INK.  |  4115 KELLER SPRING RD., SUITE 200
+  ATARI  |  DALLAS, TEXAS  75244
+  .XX ±.01  |  BARROWS 2/14/92
+  ± 2°  |  TITLE  |  PCB ASSY DRAWING,
+  ENGINEER:  |  DATE:
+  1   SEE SEPARATE B.O.M. FOR PARTS LIST.  |  .XXX ±.005
+  J.SMITH 2/14/92  |  14 MEG EXPANSION
+  MATERIAL
+  APPROVED:  |  DATE:  |  SIZE DRAWING NO.  |  REV
+  NOTES: UNLESS OTHERWISE SPECIFIED;  |  CA401278  |  FALCON030
+  C  |  CA401294  |  4
+  USED ON
+  NEXT ASSY
+  ORIGINAL MODEL FINISH
+  APPROVED:  |  DATE:
+  SCALE  |  NONE  |  SHEET     OF 1 1
+  APPLICATION
+  6  |  5  |  4  |  3  |  2  |  1
+
+-- direction 90 deg (6 items) --
+  DRAWING NO.  |  SHEET  |  REV
+  CA401294  |  1  |  4
+
+-- direction 270 deg (6 items) --
+  DRAWING NO.  |  SHEET  |  REV
+  CA401294  |  1  |  4
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE   TEXT
+ 1.986  16.718    0.1772      0  left      1      ROMAND  6
+ 5.458  16.718    0.1772      0  left      1      ROMAND  5
+ 9.253  16.718    0.1772      0  left      1      ROMAND  4
+12.784  16.718    0.1772      0  left      1      ROMAND  3
+16.614  16.718    0.1772      0  left      1      ROMAND  2
+20.165  16.718    0.1772      0  left      1      ROMAND  1
+15.463  16.464    0.0787      0  middle    1      ROMANS  REV
+17.542  16.469    0.0787      0  middle    1      ROMANS  REVISION DESCRIPTION
+19.827  16.469    0.0787      0  middle    1      ROMANS  DATE
+20.868  16.469    0.0787      0  middle    1      ROMANS  APPROVED
+15.457  16.204    0.1181      0  middle    1      ROMAND  1
+15.828  16.151    0.1042      0  left      1      ROMAND  PRELIMINARY RELEASE
+15.457  15.926    0.1181      0  middle    1      ROMAND  2
+15.828  15.873    0.1042      0  left      1      ROMAND  ENGINEERING RELEASE
+ 19.86  15.926    0.1181      0  middle    1      ROMAND  04/03/92
+20.842  15.926    0.1181      0  middle    1      ROMAND  TJU
+15.457  15.652    0.1181      0  middle    1      ROMAND  3
+15.828  15.599    0.1042      0  left      1      ROMAND  ENGINEERING RELEASE
+ 19.86  15.653    0.1181      0  middle    1      ROMAND  04/23/92
+20.842  15.653    0.1181      0  middle    1      ROMAND  TJU
+15.457  15.379    0.1181      0  middle    1      ROMAND  4
+15.828  15.326    0.1042      0  left      1      ROMAND  ENGINEERING RELEASE
+ 19.86  15.354    0.1181      0  middle    1      ROMAND  06/25/92
+20.842  15.354    0.1181      0  middle    1      ROMAND  J.SMITH
+ 0.316  14.368    0.1772      0  left      1      ROMAND  D
+21.515  14.368    0.1772      0  left      1      ROMAND  D
+ 5.866  11.522     0.125      0  left      1      ROMAND  SURFACE B
+ 9.314  11.522     0.125      0  left      1      ROMAND  SURFACE A
+ 11.37  11.522     0.125      0  left      1      ROMAND  SURFACE A
+13.627   11.44     0.125      0  left      1      ROMAND  CONNECTORS MOUNTED ON
+13.627  11.238     0.125      0  left      1      ROMAND  SURFACE B (SOLDER SIDE)
+  6.97  11.034     0.125      0  left      1      ROMAND  CONNECTOR
+13.627  11.036     0.125      0  left      1      ROMAND  (J1 AND J2)
+  6.97  10.791     0.125      0  left      1      ROMAND  J1 REF
+ 0.316   9.391    0.1772      0  left      1      ROMAND  C
+21.515   9.391    0.1772      0  left      1      ROMAND  C
+15.862   8.957     0.125      0  left      1      ROMANS  2
+ 4.288   7.995      0.16      0  center    1      ROMAND  SOLDER SIDE OF BOARD
+12.537   8.051      0.16      0  center    1      ROMAND  COMPONENT SIDE OF BOARD
+ 7.317   7.702     0.125      0  left      1      ROMAND  SURFACE B
+ 0.316   6.173    0.1772      0  left      1      ROMAND  B
+21.515   6.173    0.1772      0  left      1      ROMAND  B
+15.126   2.468    0.0748      0  middle    1      ROMAND  UNLESS OTHERWISE SPECIFIED
+16.077   2.433    0.0787      0  left      1      ROMAND  DRAWN BY:
+17.512   2.428    0.0787      0  right     1      ROMAND  DATE:
+15.126   2.303    0.0748      0  middle    1      ROMAND  TOLERANCES
+18.558   2.297    0.1575      0  left      1      ROMAND  ATARI MICROSYSTEMS
+ 2.855   2.155     0.125      0  left      1      ROMANS  2   MARK CURRENT REVISION LEVEL OF ASSEMBLY
+16.093   2.195    0.1559      0  fit       1      ROMAND  BELAND
+ 16.96   2.195    0.1067      0  fit       1      ROMAND  2/14/92
+14.679   2.173     0.063      0  middle    1      ROMAND  ON LINIER
+15.694   2.173     0.063      0  middle    1      ROMAND  ON ANGULAR
+ 0.316    2.04    0.1772      0  left      1      ROMAND  A
+18.995   2.094    0.1575      0  left      1      ROMAND  CORPORATION
+21.515    2.04    0.1772      0  left      1      ROMAND  A
+14.679   2.056     0.063      0  middle    1      ROMAND  DIMENSIONS
+15.694   2.056     0.063      0  middle    1      ROMAND  DIMENSIONS
+18.351   2.036    0.0197      0  middle    1      ROMAND  R
+16.077   1.992    0.0787      0  left      1      ROMAND  CHECKED:
+17.512   1.995    0.0787      0  right     1      ROMAND  DATE:
+  3.35   1.943     0.125      0  left      1      ROMANS  WITH WHITE EPOXY INK.
+18.678   1.947    0.0787      0  left      1      ROMANS  4115 KELLER SPRING RD., SUITE 200
+17.827   1.856    0.1575      0  fit       1      ROMAND  ATARI
+  19.1   1.828    0.0787      0  left      1      ROMANS  DALLAS, TEXAS  75244
+14.655   1.765     0.094      0  middle    1      ROMAND  .XX ±.01
+16.093   1.757    0.1559      0  fit       1      ROMAND  BARROWS
+ 16.96   1.757    0.1067      0  fit       1      ROMAND  2/14/92
+15.652    1.68    0.0984      0  middle    1      ROMAND  ± 2°
+17.664   1.629    0.0787      0  left      1      ROMAND  TITLE
+18.537   1.583    0.1378      0  left      1      ROMANS  PCB ASSY DRAWING,
+16.077   1.562    0.0787      0  left      1      ROMAND  ENGINEER:
+17.512   1.562    0.0787      0  right     1      ROMAND  DATE:
+ 2.855   1.495     0.125      0  left      1      ROMANS  1   SEE SEPARATE B.O.M. FOR PARTS LIST.
+14.679   1.568     0.094      0  middle    1      ROMAND  .XXX ±.005
+16.093   1.345    0.1559      0  fit       1      ROMAND  J.SMITH
+ 16.96   1.345    0.1067      0  fit       1      ROMAND  2/14/92
+18.516   1.363    0.1378      0  left      1      ROMANS  14 MEG EXPANSION
+14.286   1.227    0.1181      0  left      1      ROMAND  MATERIAL
+16.077   1.132    0.0787      0  left      1      ROMAND  APPROVED:
+17.512   1.129    0.0787      0  right     1      ROMAND  DATE:
+17.842   1.175    0.0787      0  middle    1      ROMAND  SIZE
+18.114   1.152    0.0787      0  left      1      ROMAND  DRAWING NO.
+20.952   1.158    0.0787      0  left      1      ROMAND  REV
+ 2.193   1.048      0.15      0  left      1      ROMANS  NOTES: UNLESS OTHERWISE SPECIFIED;
+12.469   1.101    0.1181      0  middle    1      ROMAND  CA401278
+ 13.63   1.101    0.1181      0  middle    1      ROMAND  FALCON030
+17.842   0.975    0.1181      0  middle    1      ROMAND  C
+  19.2   0.933    0.1575      0  left      1      ROMANS  CA401294
+21.056   1.003    0.1575      0  middle    1      ROMANS  4
+13.611   0.906    0.0787      0  middle    1      ROMAND  USED ON
+ 12.45   0.831    0.0787      0  middle    1      ROMAND  NEXT ASSY
+13.611   0.781    0.0787      0  middle    1      ROMAND  ORIGINAL MODEL
+14.286   0.736    0.1181      0  left      1      ROMAND  FINISH
+16.077     0.7    0.0787      0  left      1      ROMAND  APPROVED:
+17.512   0.696    0.0787      0  right     1      ROMAND  DATE:
+17.699   0.586    0.0787      0  left      1      ROMAND  SCALE
+18.276   0.554    0.1181      0  left      1      ROMAND  NONE
+19.708   0.573    0.0787      0  left      1      ROMAND  SHEET     OF
+20.303   0.554    0.1181      0  left      1      ROMAND  1
+20.701   0.554    0.1181      0  left      1      ROMAND  1
+13.033   0.543    0.1968      0  middle    1      ROMAND  APPLICATION
+ 1.836   0.114    0.1772      0  left      1      ROMAND  6
+ 5.483   0.114    0.1772      0  left      1      ROMAND  5
+   9.1   0.114    0.1772      0  left      1      ROMAND  4
+12.864   0.114    0.1772      0  left      1      ROMAND  3
+16.565   0.114    0.1772      0  left      1      ROMAND  2
+20.165   0.125    0.1772      0  left      1      ROMAND  1
+21.489  10.484    0.0787     90  left      1      ROMAND  DRAWING NO.
+21.477  11.545    0.0787     90  left      1      ROMAND  SHEET
+21.483  12.059    0.0787     90  left      1      ROMAND  REV
+21.635  10.897    0.1358     90  middle    1      ROMAND  CA401294
+21.635  11.724    0.1358     90  middle    1      ROMAND  1
+21.626   12.16    0.1358     90  middle    1      ROMAND  4
+ 0.511  12.228    0.0787    270  left      1      ROMAND  DRAWING NO.
+ 0.523  11.166    0.0787    270  left      1      ROMAND  SHEET
+ 0.517  10.653    0.0787    270  left      1      ROMAND  REV
+ 0.365  11.814    0.1358    270  middle    1      ROMAND  CA401294
+ 0.365  10.988    0.1358    270  middle    1      ROMAND  1
+ 0.374  10.552    0.1358    270  middle    1      ROMAND  4

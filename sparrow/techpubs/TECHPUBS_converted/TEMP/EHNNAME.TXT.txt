@@ -1,0 +1,83 @@
+Naming Conventions, Version 1.6
+
+
+     This is an update to the naming conventions that have been
+issued. These rules replaces the old rules.  A "name" refers to a
+MACRO name, PIN name or SIGNAL name of your creation.
+
+1.)  Maximum name length is 20 characters.
+
+2.)  Legal characters are:  A through Z (caps only)
+                                 0 through 9
+                                 _ (underscore)
+
+3.)  Names must begin with an alpha.
+
+4.)  Top level SIGNAL names (tls) may not match "ERCnnn...",
+          where "nnn..." is trailing digits.
+
+5.)  A SIGNAL name (tls) may not be of the form "Zxnnn" where Z is
+the character 'Z', x is any character and n is any digit.
+
+6.)  SIGNAL names (tls) on the output of inverters should be less
+than 17           characters.
+
+7.)  MACRO names may not match DEVICE names, or "SAB" or "SABI".
+
+8.)  Pin names must contain at least one non-numeric character.
+
+9.)  Do not use an overbar on busses (neither signal nor pin
+busses.)
+
+10.)  If you use overbars you may NOT use trailing underscores.
+
+11.)  Do not use "__" (double underscore) in any name.
+
+12.)  Do not use the word "LONGN" in any MACRO's text attribute.
+
+13.)  Net names (excluding external pin names) beginning with "VSS"
+will be truncated to "VSS".
+
+14.)  Net names (excluding external pin names) beginning with "VDD"
+will be truncated to "VDD".
+
+15.)  The net name "PWR" will be converted to "VDD".
+
+16.)  The net name "GND" will be converted to "VSS".
+
+17.)  When declaring "VSS" ("VDD") as external pins to the design,
+make sure to use "VSSC" ("VDDC") and "VSSI" ("VDDI") as the pin
+name when the pin is connected to a "core" or "i/o" buffer.
+
+The following are reserved (mostly by third party software) words:
+
+ALIAS
+BI
+BIDIRECT
+CEND
+COMPSEGMENT
+END
+ENDC
+ENDCOMPS
+ENDIMPLS
+ENDMACRO
+ENDNETS
+END_OF_FILE
+EQUIVALENCE
+EXT
+EXTCONNECTOR
+FROM
+IMPLSEGMENT
+IN
+INPUTS
+LEVEL
+MACRO
+NETSEGMENT
+NULL
+OUT
+OUTPUTS
+PURPOSE
+TO
+TYPES
+USER
+USERNAME

@@ -1,0 +1,39 @@
+DXF drawing: DYNACADD/PARTS/DXF/MIDI.DXF
+Render: MIDI.DXF.svg
+
+== Summary ==
+File:        4349 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font txt
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (3.3817, 1.843) - (7.8226, 5.816)
+             rendered (3.3542, 1.843) - (7.9001, 5.75), size 4.5459 x 3.907
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: STANDARD (font txt)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            12
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: POLYLINE 7 (16 vertices), TEXT 5
+Blocks:      0 defined
+Notes:
+  - 5 zero-length polylines (all vertices identical, e.g. pin dots) drawn as dots
+  - 1 polylines with constant width drawn as thick strokes
+
+== Text in reading order (5 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (5 items) --
+  3  |  1
+  5  |  4
+  2
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE     TEXT
+3.4817  3.8811       0.3      0  middle    1      STANDARD  3
+7.7726  3.8689       0.3      0  middle    1      STANDARD  1
+4.0874  2.5927       0.3      0  middle    1      STANDARD  5
+7.2078  2.5874       0.3      0  middle    1      STANDARD  4
+5.6521   1.993       0.3      0  middle    1      STANDARD  2

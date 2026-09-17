@@ -1,0 +1,41 @@
+[PageStream 2 document BILLR2.DOC: 8.50 x 11.00 in, 2 objects]
+
+--- Page 1 ---
+[1 drawing objects, see BILLR2.DOC.p001.svg]
+
+Dallas Office FAX
+
+
+To:		Bill Rehbok
+From:	Marty Pennock
+Subject:	Applications  for DTP
+Date:	November 19, 1991
+
+cc		Tom Ulaszek - ATX
+		Ira Goldstein - ATX
+		Sam Tramiel - SUVL
+		Richard Miller - SUVL
+
+
+Here are some of the files and problems that I was telling you about on the phone the other day. I have sent three separate files, and a copy of the files on 1.44 Megabyte floppy will follow. The disk will also include the DXF, IMG, GEM, and base drawing files from DynaCADD. The files are split up into three different groups. They are as follows:
+
+
+TT030A
+
+This was a file generated trying to use the GEM plotter output of DynaCADD. PageStream seems to recognize it, but as you can see from the screen dumps, it does not show up on the screen, nor does it print.
+
+TT030B
+
+This is the same file created using the 150 DPI IMG format of DynaCADD. It seems by far to work the best, however, I can't explain why. Screen dumps of this file creation are also included.
+
+TT030C
+
+This is the third file created with a 300 DPI IMG graphics. It also does not display very well, nor does it print very well. I have also included screen dumps of this file. I will follow later with some files created with Postscript graphics, but if I can keep from having to use them and incorporate a lot of work arounds, I would prefer it.
+
+I hope that this will help us to solve some of the problems we are having generating complex documents.
+
+
+Sincerely Yours
+
+
+Marty Pennock

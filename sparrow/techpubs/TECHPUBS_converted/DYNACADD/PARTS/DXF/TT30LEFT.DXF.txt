@@ -1,0 +1,36 @@
+DXF drawing: DYNACADD/PARTS/DXF/TT30LEFT.DXF
+Render: TT30LEFT.DXF.svg
+
+== Summary ==
+File:        11139 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font ROMAND
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (2.0475, 2.9681) - (6.2551, 5.0067)
+             rendered (2.0269, 2.9681) - (6.2551, 5.0067), size 4.2282 x 2.0387
+Limits:      (0, 0) - (9, 12)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: ROMAND (font ROMAND)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 1 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            59
+  unused: 2, 3, 4, 5, 6, 7, 8, 9, 10
+Entities:    model space: LINE 35, ARC 8, SOLID 6, TEXT 6, CIRCLE 3, POLYLINE 1 (76 vertices)
+Blocks:      0 defined
+
+== Text in reading order (6 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (6 items) --
+  RESET  |  MIDI OUT  |  ROM CARTRIDGE
+  LAN  |  MIDI IN  |  KEYBOARD
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE   TEXT
+2.4591   4.894    0.1017      0  right     1      ROMAND  RESET
+3.9472  4.9051    0.1017      0  right     1      ROMAND  MIDI OUT
+5.3787  4.9051    0.1017      0  right     1      ROMAND  ROM CARTRIDGE
+2.8328  2.9759    0.1017      0  right     1      ROMAND  LAN
+ 4.053  2.9681    0.1017      0  right     1      ROMAND  MIDI IN
+5.6664  2.9869    0.1017      0  right     1      ROMAND  KEYBOARD

@@ -1,0 +1,63 @@
+[PageStream 2 document SP_MFG_1.DOC: 8.50 x 11.00 in, 51 objects]
+
+--- Page 4 ---
+
+1.0	Overview
+
+1.1	Purpose
+
+This procedure provides the basis for a production standard   intended to control the processes required to manufacture Falcon 030 systems of consistent quality.
+
+1.2	Scope
+
+This procedure covers the documentation, production standards, quality requirements, and assembly processes necessary to manufacture Falcon 030 finished goods.
+
+1.3	Applicable documents
+
+The following documents including any subordinate documents — assembly drawings, sub assembly drawings, bills of material, fabrication drawings, component specification drawings, test procedures, and schematics — of the revision currently in effect form a part of this procedure, and may provide details not covered by this procedure. Therefore, the following documents take precedence over this procedure in resolving any differences.
+
+C302768	FALCON 030 DRAWING TREE
+C302759	FALCON 030 TEST PROCEDURE
+CA401333-001	FALCON 030 FINAL ASEMBLY BOM, US
+CA401333-002	FALCON 030 FINAL ASEMBLY BOM, CAN
+CA401333-003	FALCON 030 FINAL ASEMBLY BOM, UK
+CA401333-004	FALCON 030 FINAL ASEMBLY BOM, FRA
+CA401333-005	FALCON 030 FINAL ASEMBLY BOM, GER
+CA401333-006	FALCON 030 FINAL ASEMBLY BOM, ITA
+CA401333-007	FALCON 030 FINAL ASEMBLY BOM, NET/UK
+CA401333-008	FALCON 030 FINAL ASEMBLY BOM, NET/FRA
+CA401333-009	FALCON 030 FINAL ASEMBLY BOM, SPA
+CA401333-010	FALCON 030 FINAL ASEMBLY BOM, SWG
+CA401333-012	FALCON 030 FINAL ASEMBLY BOM, SWD
+CA401333-014	FALCON 030 FINAL ASEMBLY BOM, AUS
+CA401333-020	FALCON 030 FINAL ASEMBLY BOM, SWF
+
+--- Master page (repeated on pages; # = page number) ---
+[32 drawing objects, see SP_MFG_1.DOC.mR.svg]
+
+SIZE
+
+DRAWING NO.
+
+REV
+
+®
+
+ATARI
+CORPORATION
+
+A
+
+SCALE
+
+NONE
+
+C302758-001
+
+SHEET
+
+OF
+
+1
+
+_

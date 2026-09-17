@@ -1,0 +1,61 @@
+DXF drawing: DYNACADD/PARTS/DXF/STEPREAR.DXF
+Render: STEPREAR.DXF.svg
+
+== Summary ==
+File:        51619 bytes, CR/LF line ends
+Dialect:     group codes left-aligned (no padding); short 24-variable header starting $LTSCALE, no $ACADVER; layers 1,2,3,...; style font ROMAND
+Sections:    HEADER, TABLES, ENTITIES
+Extents:     header (0.9036, 2.5551) - (10.2217, 5.1271)
+             rendered (0.9036, 2.5551) - (10.2217, 5.1271), size 9.3181 x 2.5719
+Limits:      (0, 0) - (12, 9)
+Units:       not stored in this DXF version; limits and extents suggest inches
+Header:      24 variables; $LTSCALE=0.5, $FILLMODE=1
+Text styles: ROMAND (font ROMAND)
+Linetypes:   DASHED, HIDDEN, CENTER, PHANTOM, DOT, DASHDOT, BORDER, DIVIDE, DOTS
+Layers:      10 in table, 2 used
+  name      color  linetype      state         objects
+  1             7  CONTINUOUS    on            32
+  10            7  CONTINUOUS    on            561
+  unused: 2, 3, 4, 5, 6, 7, 8, 9
+Entities:    model space: LINE 353, ARC 185, CIRCLE 32, TEXT 20, POLYLINE 3 (6 vertices)
+Blocks:      0 defined
+Notes:
+  - 3 polylines with constant width drawn as thick strokes
+
+== Text in reading order (20 text items) ==
+Rows from top to bottom per text direction; "|" separates items far apart on the same row.
+
+-- direction 0 deg (20 items) --
+  POWER  |  AC INPUT
+  SWITCH
+  EXTERNAL TELEVISION  |  STEREO  |  STEREO
+  RESET
+  ACSI HARD  |  FLOPPY  |  OUTPUT  |  RIGHT  |  LEFT
+  MODEM  |  BUTTON
+  PRINTER
+  DISK/DMA  |  DISK
+  (RS232)
+  MONITOR
+
+== Text entities with coordinates (same order; X/Y is the alignment point used) ==
+     X       Y    HEIGHT    ROT  JUST      LAYER  STYLE   TEXT
+7.3753  5.0771       0.1      0  middle    1      ROMAND  POWER
+8.6487  5.0378       0.1      0  middle    1      ROMAND  AC INPUT
+7.3753  4.9152       0.1      0  middle    1      ROMAND  SWITCH
+5.0083  3.0172       0.1      0  middle    1      ROMAND  EXTERNAL
+5.8922  3.0197       0.1      0  middle    1      ROMAND  TELEVISION
+7.1356  3.0614       0.1      0  middle    1      ROMAND  STEREO
+7.8847  3.0614       0.1      0  middle    1      ROMAND  STEREO
+9.5326  3.0058       0.1      0  middle    1      ROMAND  RESET
+4.0346  2.8946       0.1      0  middle    1      ROMAND  ACSI HARD
+5.0083  2.8553       0.1      0  middle    1      ROMAND  FLOPPY
+5.8922  2.8578       0.1      0  middle    1      ROMAND  OUTPUT
+7.1356  2.8995       0.1      0  middle    1      ROMAND  RIGHT
+7.8847  2.8995       0.1      0  middle    1      ROMAND  LEFT
+1.6826  2.8391       0.1      0  middle    1      ROMAND  MODEM
+9.5326  2.8439       0.1      0  middle    1      ROMAND  BUTTON
+2.9709  2.7859       0.1      0  middle    1      ROMAND  PRINTER
+4.0346  2.7327       0.1      0  middle    1      ROMAND  DISK/DMA
+5.0083  2.6934       0.1      0  middle    1      ROMAND  DISK
+1.6826  2.6772       0.1      0  middle    1      ROMAND  (RS232)
+6.7162  2.6051       0.1      0  middle    1      ROMAND  MONITOR

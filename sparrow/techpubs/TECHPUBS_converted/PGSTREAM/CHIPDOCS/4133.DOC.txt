@@ -1,0 +1,428 @@
+[PageStream 2 document 4133.DOC: 8.50 x 11.00 in, 13 objects]
+
+--- Page 1 ---
+
+TT MCU (rev B) Functional Description
+
+
+MCU functions
+
+
+xx indicates A24-A31 00 or FF
+
+
+DRAM size select via config. register.
+
+CONFIGURATION REGISTER
+
+ADDR		D10 - D0
+
+xxFF8000	a000 XXbX
+
+b=0 256K PARTS
+ b=1 1MEG PARTS
+
+a=0 XROM1 and XROM2 timing allows 200ns acc time
+a=1 XROM1 and XROM2 timing requires 120ns acc time
+
+This register can be overiden using the BNK5 pin. See table below.
+
+VALID STRAPPING CONDITIONS
+
+Responding RAM ADDR		CONFIG bit 1		SEL	BNK5
+
+xx800000-xx9FFFFF		0			0	0		ONBOARD 2MEG
+xx000000-xx1FFFFF		0			0	1	ONBOARD 2MEG
+						0			1	0	INVALID
+xx200000-xx3FFFFF		0			1	1	EXPANSION 2MEG
+
+xx800000-xx9FFFFF		1			0	0	ONBOARD 2MEG
+xx000000-xx7FFFFF		1			0	1	ONBOARD 8MEG
+xx000000-xx7FFFFF		1			1	0	EXPANSION 8MEG
+xx800000-xx9FFFFF		1			1	1	EXPANSION 2MEG
+
+A standard TT will have 2Meg of slow (dual purpose) memory using 256Kx1 or 256Kx4 DRAMs. An 8Meg system is obtained by using 1Mxn parts.
+
+A 2Meg bank can be added to a 2Meg system to make 4Meg. An 8Meg bank can be added to a 2Meg system only. 10Meg is the maximum amount of slow memory allowed in a TT.
+
+XDLTCH is used to control data latches in the funnels. 64 bits of data are available during a memory read eventhough the CPU can only use 32 bits. When the CPU performs a second read of a sequential address, the data is provided from the latches in the funnels speeding access.
+
+--- Page 2 ---
+
+Video control functions
+
+VIDEO BASE REGISTER
+
+ADDR		D10 - D0
+
+xxFF8200	XXXX XXXX	VIDEO BASE HIGH BYTE
+xxFF8202	XXXX XXXX	VIDEO BASE MID BYTE
+xxFF820C	XXXX X000	VIDEO BASE LOW BYTE
+
+The video base address is a 24 bit memory address defining the start of the video frame (ei. the address from which the first word of video data is fetched following a vertical sync pulse).
+
+VIDEO COUNTER REGISTER
+
+ADDR		D10 - D0
+
+xxFF8204	XXXX XXXX	VIDEO COUNTER HIGH BYTE
+xxFF8206	XXXX XXXX	VIDEO COUNTER MID BYTE
+xxFF8208	XXXX X000   	VIDEO COUNTER LOW BYTE
+
+The video counter register provides direct access to the video address counter. Note that when video refresh is active, the counter is being incremented quite often. Care should be taken to read and write this counter only during blanking. The counter contains the address of the next word of video data. It is loaded with the contents of the video base register when vertical sync is active.
+
+XCMPCS is a select signal to the video shifter. It is generated for the following address ranges:
+
+xxFF820A-xxFF820B	sync mode and shifter test registers
+xxFF8240-xxFF825E	ST color palette
+xxFF8260-xxFF827E 	shift mode registers
+xxFF8400-xxFF85FE	EST color palette
+
+XLOAD is a strobe generated for the video shifter. It is used to strobe the video data from the funnels into the shifter. It is generated only to transfer video data to the shifter.
+
+XVLTCH and XVLTCH2 are used to latch data into the funnels. XVLTCH is free running. XVLTCH2 is generated for video and DMA sound data transfers only. See the timing diagrams.
+
+RBSEL0 and RBSEL1 are used to control data steering in the funnels both for CPU access and video refresh. They act as word selects to the funnels indicating which word of the 64 bit memory data bus is to be selected.
+
+DE, HSYNC, and VSYNC are inputs from the video shifter to control the timing of video refresh.
+
+Writes to xxFF8260 and xxFF8262 are monitored to determine the current shift mode. See the TT spec. for a description of the various shift modes. The MCU varies the video refresh rate to match the shifter requirements in the different shift modes.
+
+The ST sync mode register xxFF820A is mimicked but not used. The TT shifter contains its own shift mode register.
+
+--- Page 3 ---
+
+DMA control functions
+
+The XFCS signal is generated for the ST DMA system for addresses xxFF8604-xxFF8607. It is used by the ST DMAC to access internal registers and the FCS.
+
+DMA ADDRESS REGISTER
+
+ADDR		D10 - D0
+
+xxFF8608	XXXX XXXX	DMA COUNTER HIGH BYTE
+xxFF860A	XXXX XXXX	DMA COUNTER MID BYTE
+xxFF860C	XXXX XXX0 	DMA COUNTER LOW BYTE
+
+The DMA counter is loaded with the address of the first word of the data for DMA. The counter is incremented after each transfer.
+
+FLOPPY DENSITY SELECT REGISTER
+
+ADDR		D10 - D0
+
+xxFF860E	0000 00XX	D0=0 FCCLK=8MHZ
+						D0=1 FCCLK=16MHZ
+						D1=0 FDDS PIN LOW (RESET)
+						D1=1 FDDS PIN HIGH
+
+The floppy density select register is used to control the frequency output on the FCCLK pin and the state of the FDDS pin as indicated.
+
+The RDY line is a bidirectional handshake between the ST DMAC and the bus controller logic in the MCU. It is used both as a data strobe to transfer data to and from the ST DMAC and FCS, and as a request/acknowledge line during DMA.
+
+The XBR, XBGACK, XBGI, and XBGO signals are used to request the bus for DMA. XBGI is passed thru to XBGO when the MCU is not requesting the bus.
+
+The GIBC1 and GIDIR lines control the ST sound chip as follows:
+
+ADDR				GIBC1	GIDIR
+
+xxFF8800	READ	1		0
+xxFF8800	WRITE	1		1
+
+xxFF8802	READ	0		0
+xxFF8802	WRITE	0		1
+
+An internal state machine times the signals to meet the requirements of the ST sound chip.
+
+--- Page 4 ---
+
+DMA SOUND CONTROL
+
+DMA SOUND CONTROL REGISTER
+
+ADDR		D10 - D0
+
+xxFF8900	0000 00XX	D0=0 SOUND OFF (RES)
+						D0=1 SOUND ENABLED
+						D1=0 SINGLE FRAME
+						D1=1 REPEAT FRAME
+
+DMA SOUND BASE ADDRESS REGISTER
+
+ADDR		D10 - D0
+
+xxFF8902	XXXX XXXX	DMA SOUND BASE HIGH BYTE
+xxFF8904	XXXX XXXX	    "           "            "      MID       "
+xxFF8906	XXXX XXX0 	    "           "            "      LOW      "
+
+DMA SOUND ADDRESS REGISTER
+
+ADDR		D10 - D0
+
+xxFF8908	XXXX XXXX	DMA SOUND COUNT HIGH BYTE
+xxFF890A	XXXX XXXX	DMA SOUND COUNT MID BYTE
+xxFF890C	XXXX XXX0 	DMA SOUND COUNT LOW BYTE
+
+DMA SOUND TOP ADDRESS REGISTER
+
+ADDR		D10 - D0
+
+xxFF890E	XXXX XXXX	DMA SOUND TOP HIGH BYTE
+xxFF8910	XXXX XXXX	DMA SOUND TOP MID BYTE
+xxFF8912	XXXX XXX0	DMA SOUND TOP LOW BYTE
+
+The DMA sound system is similar to the video system except that the top address register is used to determine the end of the frame. Sound refreshes come from the address contained in the sound address counter. The counter is loaded with the base address when sound is enabled and at the end of the frame. End of frame is detected when the address counter matches the top address. In single frame mode, sound is disabled at the end of the frame and the SINT pin changes state. In repeat frame mode the address is reset to the base and the frame repeated indefinately. The SINT pin is clocked at the end of each frame.
+
+Addresses xxFF8920-xxFF893E generate the XSNDCS signal to access the sound shifter. The signals XSRDAT and XSWDAT are also generated for the video shifter to cause it to pass thru data.
+
+The SRQ signal is a request input used by the sound shifter to request a sound refresh. Sound refreshes can only occur during video blanking. Sound refresh memory cycles are similar to video refresh cycles except that a single word of data is passed directly to the sound shifter. Where 64 bits of data are latched in the funnels for video refresh.
+
+--- Page 5 ---
+
+Real Time Clock
+
+The XRTC, RTCAS, and RTCDS pins control the clock chip as follows:
+
+ADDR					XRTC		RTCAS	RTCDS
+
+xxFF8960	READ		0		0		0		not used
+xxFF8960	WRITE		0		1		0		write address
+xxFF8962	READ/WRITE	0		0		1		data transfer
+
+A state machine times the signals to comply with the requirements of the clock chip.
+
+
+6800 Periferals
+
+Addresses xxFFFC0X will generated the KBDCS signal. This signal is synchronized with the E clock to confrom to 1mhz 6800 timing. The E clock is a free running 1mhz clock.
+
+
+Misc. Glue functions
+
+
+ROM selects
+
+xx000000-xx000007	GENERATES XROM1.
+xxE00000-xxE7FFFF	GENERATES XROM1.
+
+xxE80000-xxEFFFFF	GENERATES XROM2.
+
+CARTERIDGE PORT CONTROL REGISTER
+
+ADDR		D10 - D0
+
+xxFF9000	-0X ---- ----	D8= CART PORT FLAG
+
+
+ADDR				CART PORT FLAG
+
+xxFB0000-xxFBFFFF	0	GENERATES XROM3 (reset state,
+xxFA0000-xxFAFFFF	0	GENERATES XROM4  ST mode)
+
+xxDC0000-xxDFFFFF	1	GENERATES XROM3 (ST+, game mode)
+xxD80000-xxDBFFFF	1	GENERATES XROM4
+
+ROM cycles are timed to allow ROMs confroming to the ST timing to be used in the TT. XROM1 and XROM2 respond XDSACK0 and XDSACK1 (ei longword ports). XROM3 and XROM4 respond as word ports. Note that memory configuration register bit 7 can shorten XROM1 and XROM2 cycles.
+
+--- Page 6 ---
+
+CLOCKS
+
+CLK16			16MHZ INPUT
+CLK2			2MHZ  INPUT
+
+CLK8			FREE RUNNING 8MHZ OUTPUT (for ST DMAC)
+CLKX5			FREE RUNNING 500KHZ OUTPUT (for 6850s)
+CLKE			FREE RUNNING 1MHZ OUTPUT (for 6850s)
+FCCLK			FREE RUNNING SWITCHABLE 16/8 MHZ CLOCK (for FCS)
+
+
+MISC.
+
+XLDS and XUDS simulate the 68000 byte selects and are decoded for the shifter and cartridge port.
+
+The XCIIN line is used to disable caching (see TT spec memory map).
+
+The TEST pin should be tied low during all system operation.
+
+
+Pin Description
+
+Signal		Type		Description
+
+A0-A31		ttl input		CPU ADDRESS INPUT
+D0-D9		ttl bi-dir 8ma	CPU DATA BUS
+D10			ttl input		CPU DATA BUS
+
+XRDY		ttl bi-dir 4ma	HANDSHAKE TO ST DMAC
+XBR		ttl bi-dir 4ma	CPU BUS REQUEST
+XBGI		ttl input		CPU BUS GRANT
+XBGO		output 4ma		BUS GRANT DAISY CHAIN OUT
+XBGACK	ttl bi-dir 4ma	CPU BUS GRANT ACKNOWLEDGE
+
+RXW		ttl input		CPU READ/WRITE LINE
+XAS			ttl input		CPU ADDRESS STROBE
+XDS			ttl input		CPU DATA STROBE
+
+XDSACK1	ts output 4ma	CPU DATA SIZE ACKNOWLEDGE
+XDSACK0	ts output 4ma	CPU DATA SIZE ACKNOWLEDGE
+
+CLKX5		output 4ma		500 KHZ CLOCK OUTPUT
+CLK2		cmos input		2 MHZ CLOCK INPUT
+CLK16		cmos input		16 MHZ CLOCK INPUT
+E			output 4ma		1MHZ CLOCK OUTPUT
+XSLOAD	output 4ma		SOUND SHIFTER DATA STROBE
+FCCLK		output 4ma		8/16 MHZ FLOPPY CONTROLLER CLOCK
+CLK8		output 4ma		8 MHZ CLOCK OUTPUT
+XVLTCH	output 4ma		VIDEO/SOUND DATA STROBE
+XDLTCH	output 4ma		CPU RAM DATA STROBE
+
+BNK5		cmos input		EXPANSION SELECT
+
+--- Page 7 ---
+
+Pin Description
+
+Signal		Type		Description
+
+SEL			cmos input		EXPANSION SELECT
+XRESET		ttl input		SYSTEM RESET
+TEST		cmos input		TEST RESET ENABLE
+
+FC0			ttl input		CPU FUNCTION CODE IN
+FC1			ttl input		CPU FUNCTION CODE IN
+FC2			ttl input		CPU FUNCTION CODE IN
+
+GIBC1		output 4ma		GI SOUND CHIP SELECT
+GIDIR		output 4ma		GI SOUND CHIP SELECT
+
+XCIIN		ts output 4ma	CPU CACHE INPUT INHIBIT
+
+XROM1		output 4ma		ROM CHIP SELECT
+XROM2		output 4ma		ROM CHIP SELECT
+XROM3		output 4ma		ROM CHIP SELECT
+XROM4		output 4ma		ROM CHIP SELECT
+
+KBCS		output 4ma		KEYBOARD/MIDI UART CHIP SELECT
+XCCS		output 4ma		CONFIGURATION SWITCH READ SELECT
+
+DE			cmos input		DISPLAY ENABLE INPUT
+VSYNC					VERTICAL SYNC INPUT
+HSYNC					HORIZONTAL SYNC INPUT
+
+XUDS		output 4ma		UPPER DATA STROBE OUTPUT
+XLDS					LOWER DATA STROBE OUTPUT
+XRDAT					READ DATA ENABLE
+XWDAT					WRITE DATA ENABLE
+
+RBSEL0		output 4ma		RAM BANK SELECT
+RBSEL1		output 4ma		RAM BANK SELECT
+
+XWE		output 4ma		RAM WRITE ENABLE
+XRASA					RAS FOR RAM BANK A
+XRASB					RAS FOR RAM BANK B
+
+XCAS0		output 4ma		CAS FOR BYTE 0
+XCAS1					CAS FOR BYTE 1
+XCAS2					CAS FOR BYTE 2
+XCAS3					CAS FOR BYTE 3
+
+XLOAD		output 4ma		VIDEO DATA STROBE
+XVLTCH2	output 4ma		VIDEO DATA LATCH ENABLE
+
+XFCS		output 4ma		FLOPPY CONTROLLER CHIP SELECT
+FDDS					FLOPPY DENSITY SELECT
+
+--- Page 8 ---
+
+Pin Description
+
+Signal		Type		Description
+
+MAD0		output 4ma		RAM ADDRESS LINE
+MAD1		output 4ma		RAM ADDRESS LINE
+MAD2		output 4ma		RAM ADDRESS LINE
+MAD3		output 4ma		RAM ADDRESS LINE
+MAD4		output 4ma		RAM ADDRESS LINE
+MAD5		output 4ma		RAM ADDRESS LINE
+MAD6		output 4ma		RAM ADDRESS LINE
+MAD7		output 4ma		RAM ADDRESS LINE
+MAD8		output 4ma		RAM ADDRESS LINE
+MAD9		output 4ma		RAM ADDRESS LINE
+
+SRQ			cmos input		SOUND REFRESH REQUEST
+SINT		output 4ma		SOUND FRAME INTERRUPT
+
+SIZ1			ttl input		CPU SIZE CODE
+SIZ0			ttl input		CPU SIZE CODE
+
+XSRDAT		output 4ma		SOUND READ DATA ENABLE
+XSWDAT				SOUND WRITE DATA ENABLE
+XSNDCS					SOUND REGISTER SELECT
+XCMPCS				VIDEO SHIFTER SELCT
+
+XRTC		output 4ma		REAL TIME CLOCK CHIP SELECT
+RTCAS					REAL TIME CLOCK CHIP ADDR STROBE
+RTCDS					REAL TIME CLOCK CHIP DATA STROBE
+
+
+For DC, AC Limits, Max ratings, see Styra.
+
+Schematic, 19 pages see 4133P1.DWG - 4133P19.DWG plus LC0, LCL, LCN, RLC0, RLCL, and RLCN.DWG
+
+--- Page 9 ---
+
+PACKAGE
+
+The circuit needs 119 signal pins.
+Pin-out as listed. Package will be 144EIAJ. Bonding diagram to be supplied by Styra.
+
+PINOUT
+
+Pin		Signal		Pin	Signal		Pin	Signal		Pin	Signal
+
+1		A15			37	KBCS		73	DE		109	XSWDAT
+2		A16			38	RBSEL0	74	SEL		110	XSNDCS
+3		A17			39	RBSEL1	75	TEST		111	XSLOAD
+4		A18			40	VDD		76	XFCS		112	RTCAS
+5		A19			41	VSS		77	VDD		113	RTCDS
+6		A20			42	XBGI		78	VSS		114	XUDS
+7		A21			43	XBGO		79	GIDIR		115	VDD
+8		A22			44	FCCLK	80	GIBC1		116	VSS
+9		A23			45	FC0		81	SINT		117	XVLTCH
+10		A24			46	FC1		82	SIZ1		118	XVLTCH2
+11		A25			47	FC2		83	SIZ0		119	XWE
+12		A26			48	XCMPCS	84	CLKX5	120	XBR
+13		A27			49	XCCS		85	CLK2		121	XBGACK
+14		A28			50	XCAS0	86	CLK16		122	XRDY
+15		A29			51	XCAS1	87	CLK8		123	XRDAT
+16		A30			52	XCAS2	88	XLDS		124	XWDAT
+17		A31			53	VDD		89	XLOAD	125	XCIIN
+18		D10			54	VSS		90	VDD		126	XDSACK1
+19		VDD		55	XCAS3	91	VSS		127	XDSACK0
+20		VSS			56	FDDS		92	VSS		128	VSS
+21		E			57	D0		93	VDD		129	RXW
+22		MAD5		58	D1		94	BNK5		130	A0
+23		MAD0		59	D2		95	SRQ		131	A1
+24		MAD6		60	D3		96	XROM1	132	A2
+25		MAD1		61	D4		97	XROM2	133	A3
+26		MAD7		62	VDD		98	XROM3	134	A4
+27		MAD2		63	VSS		99	XROM4	135	A5
+28		VDD		64	VSS		100	RTC		136	A6
+29		VSS			65	VDD		101	XR ASA	137	A7
+30		VSS			66	D5		102	XRASB	138	A8
+31		VDD		67	D6		103	VDD		139	A9
+32		MAD8		68	D7		104	VSS		140	A10
+33		MAD3		69	D8		105	XRESET	141	A11
+34		MAD9		70	D9		106	HSYNC	142	A12
+35		MAD4		71	XDS		107	VSYNC	143	A13
+36		XAS			72	XDLTCH	108	XSRDAT	144	A14
+
+--- Page 10 ---
+
+REVISIONS
+
+This part has been built in two versions by National. Styra has done rev.s C,D,E, and F. The Styra rev. C was equivalent to the second National version. For rev. D, several logic fixes, mostly dealing with expansion modes, were implemented and most of the CPU bus input buffers were changed to TTL.
+
+Rev. E was a quick patch to fix an oversight in the rev. D which rendered ACSI IO impossible.
+
+Rev. F adds the ROM speed control.
