@@ -120,8 +120,9 @@ Final sum for decap: **$8,021 USD**.
 | Rui Lima | 20 EUR |
 | tOri | 40 EUR |
 | Donald Crothers | $100.00 |
+| John Sohn	| 41.81 EUR |
 
-Funds collected (conversion rate 1 EUR = 1.17 USD): **$6,983.21 USD**.
+Funds collected (conversion rate 1 EUR = 1.17 USD): **$7,032.12 USD**.
 
 ---
 
