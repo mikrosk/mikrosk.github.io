@@ -234,6 +234,14 @@ There are two aspects to it. The first one being, of course, that $8,021 USD is 
 
 ## Timeline
 
+### 16.10.2026
+
+Combel is [fully traced](https://www.atari-forum.com/viewtopic.php?p=502155#p502155)! According to ijor, this was by far the hardest Gate Array he has ever traced: about 60,000 wires and 150,000 vias, i.e. more than 200,000 objects on the picture below. And that's without the I/O periphery, which is usually trivial to trace in comparison.
+
+![Combel fully traced](Combel-FullyTraced.jpg)
+
+There is still a lot of work ahead though -- first some verification to catch possible tracing errors, then the netlist extraction. Only after that can any simulation or comprehensive high level analysis begin.
+
 ### 12.02.2026
 
 The lab provided the final invoice -- $2,795 USD. Phew. ;) In the meantime, ijor couldn't resist and started working on Combel, too.
