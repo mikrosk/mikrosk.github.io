@@ -12,14 +12,6 @@ Written by   : Moshe Segal, Eran Dariel        ****
 
 ## REV A10   10/22/91  changes:
 
-### [page 2](#1-introduction)
-
-- 68000 changed to 68030.
-
-### [page 3](#1-introduction)
-
-- 68881 FPU & 56001 DSP added.
-
 ### [page 3&10](#1-introduction)
 
 - added "hooks to connect to the new Atari Universal Keyboard Controller."
@@ -32,7 +24,7 @@ Written by   : Moshe Segal, Eran Dariel        ****
 
 ### [page 6](#242-bus-error-circuitry)
 
-- bus error timeout set to   for both 8MHz and 16MHz. programmable to 32us.
+- bus error timeout set to 16us for both 8MHz and 16MHz. programmable to 32us.
 
 ### [page 7](#26-configuration-switch-control)
 
@@ -44,10 +36,6 @@ Written by   : Moshe Segal, Eran Dariel        ****
 
 - omit external FDD.
 
-### [page 9](#35-parallel-printer-port)
-
-- Parallel port. ACK goes to COMBO device, not PSG IOA7.
-
 ### [page 11](#4-video-subsystem)
 
 - added "each line also starts on even-word boundary"
@@ -55,11 +43,6 @@ Written by   : Moshe Segal, Eran Dariel        ****
 ### [page 14](#421-horizontal-scrolling)
 
 - change Video connectors to a single VGA type connector. Audio is not sent out to the monitor. The Sparrow has an internal speaker.
-
-- I/O map
-    - vv bits in FF8006 changed.
-    - Bit R in FF8266 added.
-    - Bits vv in VMC changed.
 
 ### [page 15](#521-overview)
 
@@ -76,6 +59,30 @@ Memory map changes:
     8266 - VGA bit removed
     8288 - Vsync rise corrected to Hsync rise
     82C0 - bit assignments inverted, burst time option added
+
+## Further changes (a second list without heading or date in the original)
+
+### [page 2](#1-introduction)
+
+- 68000 changed to 68030.
+
+### [page 3](#1-introduction)
+
+- 68881 FPU & 56001 DSP added.
+
+### [page 9](#35-parallel-printer-port)
+
+- Parallel port. ACK goes to COMBO device, not PSG IOA7.
+
+### [page 14](#421-horizontal-scrolling)
+
+- Video connector changed.
+
+### I/O map
+
+- vv bits in FF8006 changed.
+- Bit R in FF8266 added.
+- Bits vv in VMC changed.
 
 # 1. INTRODUCTION
 
